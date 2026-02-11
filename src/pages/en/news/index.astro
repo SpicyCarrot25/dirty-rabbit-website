@@ -1,0 +1,64 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const posts = [
+  {
+    slug: "new-ceremonial-matcha",
+    title: "New Ceremonial Matcha from Uji",
+    excerpt: "We just received grade A ceremonial matcha directly from Uji, Japan. A deep umami flavor that transports you.",
+    date: "2026-02-10",
+    image: "https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=600&q=80"
+  },
+  {
+    slug: "running-club",
+    title: "Running Club: Every Tuesday 8am",
+    excerpt: "Join our running club. We leave every Tuesday at 8am from the café. 5km through the Born and post-run breakfast.",
+    date: "2026-02-05",
+    image: "https://images.unsplash.com/photo-1461896836934-bc06f0df52fb?w=600&q=80"
+  },
+  {
+    slug: "la-cabra-our-coffee",
+    title: "La Cabra: Our Coffee",
+    excerpt: "Why we chose La Cabra as our reference roaster. A story of precision, respect for origin, and obsession with detail.",
+    date: "2026-01-28",
+    image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80"
+  }
+];
+---
+
+<Layout title={`${t.news.title} — Dirty Rabbit`} lang={lang}>
+  <section class="py-16 md:py-24 bg-black text-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="reveal font-typewriter text-5xl md:text-7xl font-bold">{t.news.title}</h1>
+    </div>
+  </section>
+  
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-group">
+        {posts.map((post) => (
+          <article class="stagger-item group">
+            <a href={getLocalizedPath(`/news/${post.slug}`, lang)} class="block">
+              <div class="aspect-[4/3] overflow-hidden mb-4">
+                <img src={post.image} alt={post.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy"/>
+              </div>
+              <time class="font-mono text-sm text-black/50">
+                {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+              <h2 class="font-typewriter text-xl font-bold mt-2 mb-3 group-hover:text-red transition-colors">{post.title}</h2>
+              <p class="font-mono text-black/70 line-clamp-2">{post.excerpt}</p>
+              <span class="inline-flex items-center gap-2 font-typewriter text-red mt-4 group-hover:gap-3 transition-all">
+                {t.news.readMore}
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

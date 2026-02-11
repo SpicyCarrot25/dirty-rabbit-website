@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "menu": "MENU",
+    "about": "ABOUT US",
+    "order": "ORDER NOW",
+    "producers": "OUR PRODUCERS",
+    "news": "NEWS",
+    "contact": "CONTACT"
+  },
+  "hero": {
+    "tagline": "Specialty coffee & good vibes",
+    "subtitle": "An Australian corner in the heart of Barcelona",
+    "cta": "Order Now"
+  },
+  "sections": {
+    "menu": "Our Menu",
+    "about": "About Us",
+    "producers": "Our Producers",
+    "news": "Latest News",
+    "contact": "Find Us"
+  },
+  "footer": {
+    "address": "C/ Dels Carders, 33",
+    "city": "08003 Barcelona",
+    "hours": "Mon-Sun: 9:00-17:00",
+    "email": "hola@dirtyrabbit.es",
+    "newsletter": "Subscribe to our newsletter",
+    "placeholder": "Your email",
+    "subscribe": "Subscribe",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie Policy",
+    "copyright": "© 2026 The Rabbit Project SL"
+  },
+  "menu": {
+    "title": "Our Menu",
+    "orderOnline": "Order Online",
+    "categories": {
+      "coffee": "Coffee",
+      "drinks": "Drinks",
+      "food": "Food",
+      "pastries": "Pastries"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "whoWeAre": "Who We Are",
+    "ourStory": "Our Story",
+    "theSpace": "The Space"
+  },
+  "producers": {
+    "title": "Our Producers",
+    "intro": "We work only with the best local producers"
+  },
+  "contact": {
+    "title": "Contact",
+    "findUs": "Find Us",
+    "hours": "Hours",
+    "faq": "FAQ",
+    "questions": {
+      "reservation": "Can I make a reservation?",
+      "reservationAnswer": "We don't take reservations. We're a neighborhood café where you can come whenever you want.",
+      "wifi": "Is there wifi?",
+      "wifiAnswer": "Yes, free wifi for all our customers.",
+      "dogs": "Are dogs allowed?",
+      "dogsAnswer": "Absolutely! Dogs are welcome.",
+      "parking": "Is there parking nearby?",
+      "parkingAnswer": "There's public parking on Via Laietana, 5 minutes walk away.",
+      "events": "Do you host private events?",
+      "eventsAnswer": "Yes, contact us for more information.",
+      "dietary": "Do you have vegan/gluten-free options?",
+      "dietaryAnswer": "Yes, we have vegan and gluten-free options. Ask our team."
+    }
+  },
+  "news": {
+    "title": "News",
+    "readMore": "Read more"
+  },
+  "common": {
+    "viewAll": "View all",
+    "back": "Back",
+    "loading": "Loading..."
+  }
+}

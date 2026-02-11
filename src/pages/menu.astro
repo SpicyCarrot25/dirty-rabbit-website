@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getTranslations } from '../i18n';
+import menuData from '../data/menu.json';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+// Menu Schema for SEO
+const menuSchema = {
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "Dirty Rabbit Menu",
+  "hasMenuSection": menuData.categories.map(cat => ({
+    "@type": "MenuSection",
+    "name": cat.name[lang],
+    "hasMenuItem": cat.items.map(item => ({
+      "@type": "MenuItem",
+      "name": item.name,
+      "offers": {
+        "@type": "Offer",
+        "price": item.price,
+        "priceCurrency": "EUR"
+      }
+    }))
+  }))
+};
+---
+
+<Layout title={`${t.menu.title} — Dirty Rabbit`} lang={lang}>
+  <script type="application/ld+json" set:html={JSON.stringify(menuSchema)} />
+  
+  <!-- Hero -->
+  <section class="py-16 md:py-24 bg-black text-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="reveal font-typewriter text-5xl md:text-7xl font-bold mb-6">{t.menu.title}</h1>
+      <a 
+        href="https://order.dirtyrabbit.es"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="reveal inline-block bg-red text-white font-typewriter px-6 py-3 hover:bg-red/90 transition-colors"
+      >
+        {t.menu.orderOnline}
+      </a>
+    </div>
+  </section>
+  
+  <!-- Menu Categories -->
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      {menuData.categories.map((category, catIndex) => (
+        <div class="mb-16 last:mb-0 reveal" style={`--delay: ${catIndex * 0.1}s`}>
+          <h2 class="font-typewriter text-3xl md:text-4xl font-bold mb-8 pb-4 border-b-2 border-red">
+            {category.name[lang]}
+          </h2>
+          
+          <div class="stagger-group space-y-4">
+            {category.items.map((item) => (
+              <div class="stagger-item flex justify-between items-start gap-4 py-3 border-b border-black/10 last:border-0">
+                <div class="flex-1">
+                  <h3 class="font-typewriter text-lg font-bold">{item.name}</h3>
+                  {item.description && (
+                    <p class="font-mono text-sm text-black/60 mt-1">
+                      {typeof item.description === 'object' ? item.description[lang] : item.description}
+                    </p>
+                  )}
+                </div>
+                <span class="font-mono text-lg font-bold text-red whitespace-nowrap">
+                  {item.price}€
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+  
+  <!-- Order CTA -->
+  <section class="py-16 md:py-24 bg-red text-white text-center">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+      <h2 class="font-typewriter text-3xl md:text-4xl font-bold mb-6">¿Listo para pedir?</h2>
+      <p class="font-mono text-lg mb-8 text-white/80">
+        Pide online para recoger o disfruta en nuestro espacio.
+      </p>
+      <a 
+        href="https://order.dirtyrabbit.es"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block bg-white text-red font-typewriter text-lg px-8 py-4 hover:bg-cream transition-colors"
+      >
+        {t.menu.orderOnline}
+      </a>
+    </div>
+  </section>
+</Layout>

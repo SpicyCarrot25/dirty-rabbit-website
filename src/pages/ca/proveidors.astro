@@ -1,0 +1,72 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations } from '../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+
+const producers = [
+  {
+    name: "La Cabra",
+    type: "Cafè",
+    image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80",
+    description: "Des de Copenhaguen, La Cabra ens porta cafès d'origen únic torrats amb precisió. La seva filosofia: deixar que el cafè parli per si mateix. Notes netes, acidesa brillant, i aquell punt perfecte que només aconsegueixen els millors.",
+    link: "https://lacabra.dk"
+  },
+  {
+    name: "Morico",
+    type: "Pa",
+    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
+    description: "Pa de massa mare de debò. Fermentació lenta, farines locals, i aquell cruixit que et desperta pels matins. Porten des de 2015 fent les coses bé, sense dreceres.",
+    link: null
+  },
+  {
+    name: "Aomi",
+    type: "Bowls & Fresh Food",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80",
+    description: "Bowls frescos que són pura energia. Ingredients de temporada, combinacions que funcionen, i aquella sensació de menjar alguna cosa que et fa bé de debò.",
+    link: null
+  }
+];
+---
+
+<Layout title={`${t.producers.title} — Dirty Rabbit`} lang={lang}>
+  <section class="py-16 md:py-24 bg-black text-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="reveal font-typewriter text-5xl md:text-7xl font-bold mb-6">{t.producers.title}</h1>
+      <p class="reveal font-mono text-xl text-cream/70 max-w-2xl mx-auto">{t.producers.intro}</p>
+    </div>
+  </section>
+  
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+      <h2 class="font-typewriter text-3xl md:text-4xl font-bold mb-6">La Nostra Filosofia</h2>
+      <p class="font-mono text-lg text-black/70 leading-relaxed">No treballem amb qualsevol. Cada proveïdor que triem comparteix la nostra obsessió per la qualitat i el detall. Preferim pocs i bons. Relacions a llarg termini amb gent que fa les coses amb passió.</p>
+    </div>
+  </section>
+  
+  <section class="py-16 md:py-24 bg-cream border-t border-black/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-24">
+        {producers.map((producer, index) => (
+          <div class={`grid md:grid-cols-2 gap-12 items-center reveal`}>
+            <div class={index % 2 === 1 ? 'md:order-2' : ''}>
+              <img src={producer.image} alt={producer.name} class="w-full aspect-[4/3] object-cover" loading="lazy"/>
+            </div>
+            <div class={index % 2 === 1 ? 'md:order-1' : ''}>
+              <span class="font-mono text-sm text-red">{producer.type}</span>
+              <h2 class="font-typewriter text-3xl md:text-4xl font-bold mt-2 mb-6">{producer.name}</h2>
+              <p class="font-mono text-lg text-black/70 leading-relaxed mb-6">{producer.description}</p>
+              {producer.link && (
+                <a href={producer.link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group">
+                  Visitar web
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

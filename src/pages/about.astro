@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getTranslations } from '../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+---
+
+<Layout title={`${t.about.title} — Dirty Rabbit`} lang={lang}>
+  <!-- Hero -->
+  <section class="py-16 md:py-24 bg-black text-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="reveal font-typewriter text-5xl md:text-7xl font-bold">{t.about.title}</h1>
+    </div>
+  </section>
+  
+  <!-- Who We Are -->
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <h2 class="font-typewriter text-3xl md:text-4xl font-bold mb-6">{t.about.whoWeAre}</h2>
+          <div class="font-mono text-lg text-black/70 space-y-4 leading-relaxed">
+            <p>
+              Somos Iwonka y Franc. Ella, polaca de nacimiento pero australiana de corazón después de años 
+              en Melbourne trabajando en los mejores cafés de especialidad. Él, catalán con alma inquieta 
+              y obsesión por los detalles.
+            </p>
+            <p>
+              Dirty Rabbit nació de un sueño compartido: crear un espacio donde el café extraordinario 
+              se encuentra con la hospitalidad que hace que quieras quedarte un rato más.
+            </p>
+          </div>
+        </div>
+        <div class="reveal">
+          <img 
+            src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80" 
+            alt="Team"
+            class="w-full aspect-[4/3] object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Our Story -->
+  <section class="py-16 md:py-24 bg-black text-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal order-2 md:order-1">
+          <img 
+            src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800&q=80" 
+            alt="Coffee preparation"
+            class="w-full aspect-[4/3] object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div class="reveal order-1 md:order-2">
+          <h2 class="font-typewriter text-3xl md:text-4xl font-bold mb-6">{t.about.ourStory}</h2>
+          <div class="font-mono text-lg text-cream/70 space-y-4 leading-relaxed">
+            <p>
+              Todo empezó en 2023, cuando encontramos este local en el Born. Un barrio con historia, 
+              calles estrechas, y esa energía que solo tiene Barcelona.
+            </p>
+            <p>
+              Queríamos algo diferente. No otro café más. Un lugar donde el producto importa, 
+              donde cada taza cuenta una historia, donde venir a desayunar se convierte en un ritual.
+            </p>
+            <p>
+              El nombre? Un guiño a lo inesperado. Porque los mejores descubrimientos 
+              siempre tienen algo de salvaje.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- The Space -->
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="font-typewriter text-3xl md:text-4xl font-bold mb-6">{t.about.theSpace}</h2>
+        <p class="font-mono text-lg text-black/70 max-w-2xl mx-auto">
+          Un espacio diseñado para sentirse como en casa. Materiales naturales, luz que entra 
+          por todos lados, y ese sonido de fondo de café moliéndose y leche espumando.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 reveal">
+        <img 
+          src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80" 
+          alt="Interior"
+          class="w-full aspect-square object-cover"
+          loading="lazy"
+        />
+        <img 
+          src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&q=80" 
+          alt="Counter"
+          class="w-full aspect-square object-cover"
+          loading="lazy"
+        />
+        <img 
+          src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80" 
+          alt="Details"
+          class="w-full aspect-square object-cover"
+          loading="lazy"
+        />
+        <img 
+          src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=600&q=80" 
+          alt="Seating"
+          class="w-full aspect-square object-cover"
+          loading="lazy"
+        />
+        <img 
+          src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=600&q=80" 
+          alt="Coffee making"
+          class="w-full aspect-square object-cover"
+          loading="lazy"
+        />
+        <img 
+          src="https://images.unsplash.com/photo-1498804103079-a6351b050096?w=600&q=80" 
+          alt="Atmosphere"
+          class="w-full aspect-square object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+</Layout>

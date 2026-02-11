@@ -1,0 +1,128 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+---
+
+<Layout title="Dirty Rabbit — Specialty Coffee Barcelona" lang={lang}>
+  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80');" id="hero-bg">
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+    <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+      <h1 class="reveal font-typewriter text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">DIRTY RABBIT</h1>
+      <p class="reveal font-mono text-xl md:text-2xl mb-4 tracking-wide">{t.hero.tagline}</p>
+      <p class="reveal font-mono text-base md:text-lg text-white/80 mb-10">{t.hero.subtitle}</p>
+      <a href="https://order.dirtyrabbit.es" target="_blank" rel="noopener noreferrer" class="reveal inline-block bg-red text-white font-typewriter text-lg px-8 py-4 hover:bg-red/90 transition-colors">{t.hero.cta}</a>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white animate-bounce">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </div>
+  </section>
+  
+  <section class="py-20 md:py-32 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <h2 class="font-typewriter text-4xl md:text-5xl font-bold mb-6">{t.sections.menu}</h2>
+          <p class="font-mono text-lg text-black/70 mb-8 leading-relaxed">Cafè d'especialitat, brunch australià, i aquelles coses que no sabies que necessitaves. Tot preparat amb amor (i una mica d'obsessió).</p>
+          <a href={getLocalizedPath('/menu', lang)} class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group">
+            {t.common.viewAll}
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+        <div class="reveal grid grid-cols-2 gap-4">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80" alt="Coffee" class="w-full aspect-square object-cover" loading="lazy"/>
+          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80" alt="Food" class="w-full aspect-square object-cover mt-8" loading="lazy"/>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-20 md:py-32 bg-black text-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal order-2 md:order-1">
+          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&q=80" alt="Interior" class="w-full aspect-[4/3] object-cover" loading="lazy"/>
+        </div>
+        <div class="reveal order-1 md:order-2">
+          <h2 class="font-typewriter text-4xl md:text-5xl font-bold mb-6">{t.sections.about}</h2>
+          <p class="font-mono text-lg text-cream/70 mb-8 leading-relaxed">Dirty Rabbit va néixer d'un somni: crear un racó on el cafè d'especialitat es troba amb la calidesa australiana. Un lloc per desconnectar, connectar, i gaudir de les petites coses.</p>
+          <a href={getLocalizedPath('/about', lang)} class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group">
+            {t.common.viewAll}
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-20 md:py-32 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 reveal">
+        <h2 class="font-typewriter text-4xl md:text-5xl font-bold mb-6">{t.sections.producers}</h2>
+        <p class="font-mono text-lg text-black/70 max-w-2xl mx-auto">{t.producers.intro}</p>
+      </div>
+      <div class="stagger-group grid md:grid-cols-3 gap-8">
+        <div class="stagger-item text-center p-8 border border-black/10 hover:border-red/50 transition-colors">
+          <h3 class="font-typewriter text-2xl font-bold mb-2">La Cabra</h3>
+          <p class="font-mono text-sm text-black/60 mb-4">Cafè</p>
+          <p class="font-mono text-black/70">Copenhagen's finest, ara a Barcelona</p>
+        </div>
+        <div class="stagger-item text-center p-8 border border-black/10 hover:border-red/50 transition-colors">
+          <h3 class="font-typewriter text-2xl font-bold mb-2">Morico</h3>
+          <p class="font-mono text-sm text-black/60 mb-4">Pa</p>
+          <p class="font-mono text-black/70">Massa mare artesanal des de 2015</p>
+        </div>
+        <div class="stagger-item text-center p-8 border border-black/10 hover:border-red/50 transition-colors">
+          <h3 class="font-typewriter text-2xl font-bold mb-2">Aomi</h3>
+          <p class="font-mono text-sm text-black/60 mb-4">Bowls</p>
+          <p class="font-mono text-black/70">Fresh, healthy, delicious</p>
+        </div>
+      </div>
+      <div class="text-center mt-12 reveal">
+        <a href={getLocalizedPath('/proveidors', lang)} class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group">
+          {t.common.viewAll}
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <section class="py-20 md:py-32 bg-red text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="reveal">
+          <h2 class="font-typewriter text-4xl md:text-5xl font-bold mb-6">{t.sections.contact}</h2>
+          <div class="font-mono text-lg space-y-2 mb-8">
+            <p>{t.footer.address}</p>
+            <p>{t.footer.city}</p>
+            <p class="pt-4">{t.footer.hours}</p>
+            <p><a href="mailto:hola@dirtyrabbit.es" class="underline hover:no-underline">{t.footer.email}</a></p>
+          </div>
+          <a href={getLocalizedPath('/contacte', lang)} class="inline-flex items-center gap-2 font-typewriter text-white hover:text-white/80 transition-colors group">
+            {t.common.viewAll}
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+        <div class="reveal">
+          <div class="w-full aspect-square bg-white/10">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.416826583!2d2.1783!3d41.3872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIzJzE0LjAiTiAywrAxMCczMi4zIkU!5e0!3m2!1sen!2ses!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dirty Rabbit location"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  import gsap from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  gsap.registerPlugin(ScrollTrigger);
+  const heroBg = document.getElementById('hero-bg');
+  if (heroBg) {
+    gsap.to(heroBg, { yPercent: 30, ease: 'none', scrollTrigger: { trigger: heroBg, start: 'top top', end: 'bottom top', scrub: true } });
+  }
+</script>

@@ -1,0 +1,84 @@
+{
+  "nav": {
+    "menu": "CARTA",
+    "about": "SOBRE NOSALTRES",
+    "order": "DEMANA ARA",
+    "producers": "ELS NOSTRES PROVEÏDORS",
+    "news": "NOTÍCIES",
+    "contact": "CONTACTE"
+  },
+  "hero": {
+    "tagline": "Specialty coffee & good vibes",
+    "subtitle": "Un racó australià al cor de Barcelona",
+    "cta": "Demana Ara"
+  },
+  "sections": {
+    "menu": "La Nostra Carta",
+    "about": "Sobre Nosaltres",
+    "producers": "Els Nostres Proveïdors",
+    "news": "Últimes Notícies",
+    "contact": "Troba'ns"
+  },
+  "footer": {
+    "address": "C/ Dels Carders, 33",
+    "city": "08003 Barcelona",
+    "hours": "Dill-Diu: 9:00-17:00",
+    "email": "hola@dirtyrabbit.es",
+    "newsletter": "Subscriu-te a la nostra newsletter",
+    "placeholder": "El teu email",
+    "subscribe": "Subscriure's",
+    "legal": "Avís Legal",
+    "privacy": "Política de Privacitat",
+    "cookies": "Política de Cookies",
+    "copyright": "© 2026 The Rabbit Project SL"
+  },
+  "menu": {
+    "title": "La Nostra Carta",
+    "orderOnline": "Demanar Online",
+    "categories": {
+      "coffee": "Cafè",
+      "drinks": "Begudes",
+      "food": "Menjar",
+      "pastries": "Brioixeria"
+    }
+  },
+  "about": {
+    "title": "Sobre Nosaltres",
+    "whoWeAre": "Qui Som",
+    "ourStory": "La Nostra Història",
+    "theSpace": "L'Espai"
+  },
+  "producers": {
+    "title": "Els Nostres Proveïdors",
+    "intro": "Treballem només amb els millors productors locals"
+  },
+  "contact": {
+    "title": "Contacte",
+    "findUs": "Troba'ns",
+    "hours": "Horaris",
+    "faq": "Preguntes Freqüents",
+    "questions": {
+      "reservation": "Es pot reservar?",
+      "reservationAnswer": "No acceptem reserves. Som un cafè de barri on pots venir quan vulguis.",
+      "wifi": "Hi ha wifi?",
+      "wifiAnswer": "Sí, wifi gratuït per a tots els nostres clients.",
+      "dogs": "Es pot venir amb gos?",
+      "dogsAnswer": "Per descomptat! Els gossos són benvinguts.",
+      "parking": "Hi ha pàrquing a prop?",
+      "parkingAnswer": "Hi ha pàrquing públic a Via Laietana a 5 minuts caminant.",
+      "events": "Feu esdeveniments privats?",
+      "eventsAnswer": "Sí, contacta amb nosaltres per a més informació.",
+      "dietary": "Teniu opcions veganes/sense gluten?",
+      "dietaryAnswer": "Sí, tenim opcions veganes i sense gluten. Pregunta al nostre equip."
+    }
+  },
+  "news": {
+    "title": "Notícies",
+    "readMore": "Llegir més"
+  },
+  "common": {
+    "viewAll": "Veure tot",
+    "back": "Tornar",
+    "loading": "Carregant..."
+  }
+}

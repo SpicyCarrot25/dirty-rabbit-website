@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Custom fonts */
+@font-face {
+  font-family: 'NYC Typewriter';
+  src: url('/fonts/NYCTypewriter-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NYC Typewriter Mono';
+  src: url('/fonts/NYCTypewriter-Mono.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Theme tokens for Tailwind 4 */
+@theme {
+  --font-typewriter: 'NYC Typewriter', 'Courier New', Courier, monospace;
+  --font-mono: 'NYC Typewriter Mono', 'Courier New', Courier, monospace;
+  
+  --color-cream: #D9D9D9;
+  --color-red: #CD202C;
+  --color-black: #1A1A1A;
+  --color-white: #FFFFFF;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-typewriter);
+  background-color: var(--color-cream);
+  color: var(--color-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--color-red);
+  color: var(--color-white);
+}
+
+/* Smooth reveal animation base */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

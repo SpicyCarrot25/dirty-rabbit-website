@@ -1,0 +1,139 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { getLangFromUrl, getTranslations, getAlternateUrls, type Language } from '../i18n';
+
+interface Props {
+  title: string;
+  description?: string;
+  lang?: Language;
+}
+
+const { title, description = 'Specialty coffee & good vibes en el corazón de Barcelona', lang } = Astro.props;
+
+const currentLang = lang || getLangFromUrl(Astro.url);
+const t = getTranslations(currentLang);
+const alternates = getAlternateUrls(Astro.url.pathname, 'https://dirtyrabbit.es');
+
+// Schema.org LocalBusiness
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Dirty Rabbit",
+  "image": "https://dirtyrabbit.es/og-image.jpg",
+  "url": "https://dirtyrabbit.es",
+  "telephone": "",
+  "email": "hola@dirtyrabbit.es",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "C/ Dels Carders, 33",
+    "addressLocality": "Barcelona",
+    "postalCode": "08003",
+    "addressCountry": "ES"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "09:00",
+    "closes": "17:00"
+  },
+  "servesCuisine": ["Coffee", "Australian", "Brunch"],
+  "priceRange": "€€"
+};
+---
+
+<!doctype html>
+<html lang={currentLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Alternate languages -->
+    <link rel="alternate" hreflang="es" href={alternates.es} />
+    <link rel="alternate" hreflang="en" href={alternates.en} />
+    <link rel="alternate" hreflang="ca" href={alternates.ca} />
+    <link rel="alternate" hreflang="x-default" href={alternates.es} />
+    
+    <!-- OpenGraph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:image" content="https://dirtyrabbit.es/og-image.jpg" />
+    <meta property="og:locale" content={currentLang === 'es' ? 'es_ES' : currentLang === 'ca' ? 'ca_ES' : 'en_US'} />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <!-- Schema.org -->
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Header lang={currentLang} />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer lang={currentLang} />
+    
+    <!-- GSAP for animations -->
+    <script>
+      import gsap from 'gsap';
+      import { ScrollTrigger } from 'gsap/ScrollTrigger';
+      
+      gsap.registerPlugin(ScrollTrigger);
+      
+      // Animate elements with .reveal class
+      document.addEventListener('DOMContentLoaded', () => {
+        const reveals = document.querySelectorAll('.reveal');
+        
+        reveals.forEach((el, i) => {
+          gsap.fromTo(el, 
+            { opacity: 0, y: 30 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.8,
+              ease: 'power2.out',
+              scrollTrigger: {
+                trigger: el,
+                start: 'top 85%',
+                toggleActions: 'play none none reverse'
+              },
+              delay: i * 0.1
+            }
+          );
+        });
+        
+        // Staggered reveals for menu items
+        const staggerGroups = document.querySelectorAll('.stagger-group');
+        staggerGroups.forEach(group => {
+          const items = group.querySelectorAll('.stagger-item');
+          gsap.fromTo(items,
+            { opacity: 0, y: 20 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 0.5,
+              stagger: 0.1,
+              ease: 'power2.out',
+              scrollTrigger: {
+                trigger: group,
+                start: 'top 80%'
+              }
+            }
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
