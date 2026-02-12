@@ -1,46 +1,50 @@
 {
   "nav": {
-    "menu": "CARTA",
-    "about": "SOBRE NOSALTRES",
-    "order": "DEMANA ARA",
-    "producers": "ELS NOSTRES PROVEÏDORS",
-    "news": "NOTÍCIES",
-    "contact": "CONTACTE"
+    "menu": "Carta",
+    "about": "Sobre Nosaltres",
+    "order": "Demana Ara",
+    "producers": "Proveïdors",
+    "news": "News",
+    "contact": "Contacte"
   },
   "hero": {
-    "tagline": "Specialty coffee & good vibes",
-    "subtitle": "Un racó australià al cor de Barcelona",
+    "tagline": "A place to wake up. Or slow down. Ideally both.",
+    "taglineAlt": "Quiet mornings. Loud laughs. Coffee in between.",
+    "subtitle": "Specialty Coffee, Breakfast & Brunch — S'Agaró, Costa Brava",
     "cta": "Demana Ara"
   },
   "sections": {
     "menu": "La Nostra Carta",
     "about": "Sobre Nosaltres",
     "producers": "Els Nostres Proveïdors",
-    "news": "Últimes Notícies",
+    "news": "News",
     "contact": "Troba'ns"
   },
   "footer": {
-    "address": "C/ Dels Carders, 33",
-    "city": "08003 Barcelona",
-    "hours": "Dill-Diu: 9:00-17:00",
+    "address": "Avinguda de Platja d'Aro, 275",
+    "city": "17248 S'Agaró, Girona",
+    "hours": "Dm-Dg: 8:00–15:00 (cuina fins 14:00)",
+    "closed": "Dilluns tancat",
     "email": "hola@dirtyrabbit.es",
     "newsletter": "Subscriu-te a la nostra newsletter",
     "placeholder": "El teu email",
-    "subscribe": "Subscriure's",
+    "subscribe": "Subscriu-te",
     "legal": "Avís Legal",
     "privacy": "Política de Privacitat",
     "cookies": "Política de Cookies",
     "copyright": "© 2026 The Rabbit Project SL"
   },
   "menu": {
-    "title": "La Nostra Carta",
+    "title": "Carta",
     "orderOnline": "Demanar Online",
     "categories": {
       "coffee": "Cafè",
       "drinks": "Begudes",
-      "food": "Menjar",
+      "brunch": "Brunch",
+      "tostas": "Torrades",
       "pastries": "Brioixeria"
-    }
+    },
+    "note": "Llet de civada, soja o ametlla: +0.50€"
   },
   "about": {
     "title": "Sobre Nosaltres",
@@ -50,26 +54,27 @@
   },
   "producers": {
     "title": "Els Nostres Proveïdors",
-    "intro": "Treballem només amb els millors productors locals"
+    "intro": "Cafè, matcha, pa, ous — cada producte té una història. Només treballem amb qui comparteix la nostra obsessió per fer les coses bé."
   },
   "contact": {
     "title": "Contacte",
     "findUs": "Troba'ns",
     "hours": "Horaris",
     "faq": "Preguntes Freqüents",
+    "instagram": "Segueix-nos a Instagram",
     "questions": {
       "reservation": "Es pot reservar?",
-      "reservationAnswer": "No acceptem reserves. Som un cafè de barri on pots venir quan vulguis.",
+      "reservationAnswer": "No acceptem reserves — creiem en el brunch espontani. Però no et preocupis, la rotació és ràpida i sempre trobem un lloc. Els caps de setmana abans de les 10h sol estar més tranquil.",
       "wifi": "Hi ha wifi?",
-      "wifiAnswer": "Sí, wifi gratuït per a tots els nostres clients.",
+      "wifiAnswer": "Sí, gratuït i ràpid. Perfecte per treballar una estona. Però si véns a quedar-te tot el dia, et demanem que consumeixis alguna cosa cada parell d'hores — som un cafè petit i necessitem les taules.",
       "dogs": "Es pot venir amb gos?",
-      "dogsAnswer": "Per descomptat! Els gossos són benvinguts.",
+      "dogsAnswer": "És clar! Tenim terrassa on el teu amic pelut és benvingut. A dins no podem per normativa sanitària, però sempre tenim aigua fresca fora.",
       "parking": "Hi ha pàrquing a prop?",
-      "parkingAnswer": "Hi ha pàrquing públic a Via Laietana a 5 minuts caminant.",
+      "parkingAnswer": "Sí, pàrquing gratuït just al costat del local. També hi ha zona blava per la zona si ve ple.",
       "events": "Feu esdeveniments privats?",
-      "eventsAnswer": "Sí, contacta amb nosaltres per a més informació.",
+      "eventsAnswer": "Sí, per a grups petits fora d'horari. Escriu-nos a hola@dirtyrabbit.es amb la teva idea i veiem com fer màgia.",
       "dietary": "Teniu opcions veganes/sense gluten?",
-      "dietaryAnswer": "Sí, tenim opcions veganes i sense gluten. Pregunta al nostre equip."
+      "dietaryAnswer": "Sí. Opcions vegetarianes i veganes a la carta, llets vegetals disponibles. Per sense gluten, pregunta — tenim diverses opcions però la cuina no està 100% lliure de gluten."
     }
   },
   "news": {
@@ -77,7 +82,7 @@
     "readMore": "Llegir més"
   },
   "common": {
-    "viewAll": "Veure tot",
+    "viewAll": "Veure Tot",
     "back": "Tornar",
     "loading": "Carregant..."
   }

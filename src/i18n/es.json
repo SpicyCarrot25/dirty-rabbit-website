@@ -1,28 +1,30 @@
 {
   "nav": {
-    "menu": "MENÚ",
-    "about": "SOBRE NOSOTROS",
-    "order": "PIDE AHORA",
-    "producers": "NUESTROS PROVEEDORES",
-    "news": "NEWS",
-    "contact": "CONTACTO"
+    "menu": "Carta",
+    "about": "Sobre Nosotros",
+    "order": "Pide Ahora",
+    "producers": "Proveedores",
+    "news": "News",
+    "contact": "Contacto"
   },
   "hero": {
-    "tagline": "Specialty coffee & good vibes",
-    "subtitle": "Un rincón australiano en el corazón de Barcelona",
+    "tagline": "A place to wake up. Or slow down. Ideally both.",
+    "taglineAlt": "Quiet mornings. Loud laughs. Coffee in between.",
+    "subtitle": "Specialty Coffee, Breakfast & Brunch — S'Agaró, Costa Brava",
     "cta": "Pide Ahora"
   },
   "sections": {
     "menu": "Nuestra Carta",
     "about": "Sobre Nosotros",
     "producers": "Nuestros Proveedores",
-    "news": "Últimas Noticias",
+    "news": "News",
     "contact": "Encuéntranos"
   },
   "footer": {
-    "address": "C/ Dels Carders, 33",
-    "city": "08003 Barcelona",
-    "hours": "Lun-Dom: 9:00-17:00",
+    "address": "Avinguda de Platja d'Aro, 275",
+    "city": "17248 S'Agaró, Girona",
+    "hours": "Mar-Dom: 8:00–15:00 (cocina hasta 14:00)",
+    "closed": "Lunes cerrado",
     "email": "hola@dirtyrabbit.es",
     "newsletter": "Suscríbete a nuestra newsletter",
     "placeholder": "Tu email",
@@ -33,14 +35,16 @@
     "copyright": "© 2026 The Rabbit Project SL"
   },
   "menu": {
-    "title": "Nuestra Carta",
+    "title": "Carta",
     "orderOnline": "Pedir Online",
     "categories": {
       "coffee": "Café",
       "drinks": "Bebidas",
-      "food": "Comida",
+      "brunch": "Brunch",
+      "tostas": "Tostas",
       "pastries": "Bollería"
-    }
+    },
+    "note": "Leche de avena, soja o almendra: +0.50€"
   },
   "about": {
     "title": "Sobre Nosotros",
@@ -50,26 +54,27 @@
   },
   "producers": {
     "title": "Nuestros Proveedores",
-    "intro": "Trabajamos solo con los mejores productores locales"
+    "intro": "Café, matcha, pan, huevos — cada producto tiene una historia. Trabajamos solo con quienes comparten nuestra obsesión por hacer las cosas bien."
   },
   "contact": {
     "title": "Contacto",
     "findUs": "Encuéntranos",
     "hours": "Horarios",
     "faq": "Preguntas Frecuentes",
+    "instagram": "Síguenos en Instagram",
     "questions": {
       "reservation": "¿Se puede reservar?",
-      "reservationAnswer": "No aceptamos reservas. Somos un café de barrio donde puedes venir cuando quieras.",
+      "reservationAnswer": "No tomamos reservas — creemos en el brunch espontáneo. Pero no te preocupes, la rotación es rápida y siempre encontramos un hueco. Los fines de semana antes de las 10h suele estar más tranquilo.",
       "wifi": "¿Hay wifi?",
-      "wifiAnswer": "Sí, wifi gratis para todos nuestros clientes.",
+      "wifiAnswer": "Sí, gratis y rápido. Perfecta para trabajar un rato. Pero si vienes a quedarte todo el día, te pedimos que consumas algo cada par de horas — somos un café pequeño y necesitamos las mesas.",
       "dogs": "¿Se puede venir con perro?",
-      "dogsAnswer": "¡Por supuesto! Los perros son bienvenidos.",
+      "dogsAnswer": "¡Por supuesto! Tenemos terraza donde tu amigo peludo es bienvenido. Dentro no podemos por normativa sanitaria, pero siempre tenemos agua fresca fuera.",
       "parking": "¿Hay parking cerca?",
-      "parkingAnswer": "Hay parking público en Via Laietana a 5 minutos andando.",
+      "parkingAnswer": "Sí, parking gratuito justo al lado del local. También hay zona azul por la zona si viene lleno.",
       "events": "¿Hacéis eventos privados?",
-      "eventsAnswer": "Sí, contacta con nosotros para más información.",
+      "eventsAnswer": "Sí, para grupos pequeños fuera de horario. Escríbenos a hola@dirtyrabbit.es con tu idea y vemos cómo hacer magia.",
       "dietary": "¿Tenéis opciones veganas/sin gluten?",
-      "dietaryAnswer": "Sí, tenemos opciones veganas y sin gluten. Pregunta a nuestro equipo."
+      "dietaryAnswer": "Sí. Opciones vegetarianas y veganas en carta, leches vegetales disponibles. Para sin gluten, pregunta — tenemos varias opciones pero la cocina no está 100% libre de gluten."
     }
   },
   "news": {
@@ -77,7 +82,7 @@
     "readMore": "Leer más"
   },
   "common": {
-    "viewAll": "Ver todo",
+    "viewAll": "Ver Todo",
     "back": "Volver",
     "loading": "Cargando..."
   }

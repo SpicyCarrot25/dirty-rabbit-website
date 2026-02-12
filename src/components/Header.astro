@@ -8,142 +8,300 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = getTranslations(lang);
+
+const historyLabels: Record<Language, string> = {
+  es: 'Filosofía',
+  en: 'Philosophy',
+  ca: 'Filosofia'
+};
+
+const suppliersLabels: Record<Language, string> = {
+  es: 'Nuestros Proveedores',
+  en: 'Our Producers',
+  ca: 'Els Nostres Proveïdors'
+};
+
+const workLabels: Record<Language, string> = {
+  es: 'Únete a Nosotros',
+  en: 'Join Us',
+  ca: 'Uneix-te a Nosaltres'
+};
+
+const contactLabels: Record<Language, string> = {
+  es: 'FAQ y Contacto',
+  en: 'FAQ & Contact',
+  ca: 'FAQ i Contacte'
+};
+
+const orderLabels: Record<Language, string> = {
+  es: 'Pide Ahora',
+  en: 'Order Now',
+  ca: 'Demana Ara'
+};
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-cream/95 backdrop-blur-sm border-b border-black/10">
+<header id="main-header" class="fixed top-0 left-0 right-0 z-50 header-transparent header-transition border-b">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 md:h-20">
-      <!-- Logo -->
-      <a href={getLocalizedPath('/', lang)} class="flex items-center gap-2 hover:opacity-80 transition-opacity">
-        <svg class="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Rabbit ears icon -->
-          <path d="M12 8C12 4 14 2 16 2C18 2 19 4 19 6C19 8 18 12 18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <path d="M28 8C28 4 26 2 24 2C22 2 21 4 21 6C21 8 22 12 22 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="20" cy="24" r="10" stroke="currentColor" stroke-width="2"/>
-          <circle cx="16" cy="22" r="1.5" fill="currentColor"/>
-          <circle cx="24" cy="22" r="1.5" fill="currentColor"/>
-          <ellipse cx="20" cy="26" rx="2" ry="1.5" fill="currentColor"/>
-        </svg>
-        <span class="font-typewriter text-lg md:text-xl font-bold tracking-tight">DIRTY RABBIT</span>
-      </a>
       
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-8">
-        <!-- Primary Nav -->
-        <div class="flex items-center gap-6">
-          <a href={getLocalizedPath('/menu', lang)} class="font-typewriter text-sm tracking-wide hover:text-red transition-colors">
-            {t.nav.menu}
-          </a>
-          <a href={getLocalizedPath('/about', lang)} class="font-typewriter text-sm tracking-wide hover:text-red transition-colors">
-            {t.nav.about}
-          </a>
-          <a 
-            href="https://order.dirtyrabbit.es" 
-            target="_blank"
-            rel="noopener noreferrer"
-            class="font-typewriter text-sm tracking-wide bg-red text-white px-4 py-2 hover:bg-red/90 transition-colors"
-          >
-            {t.nav.order}
-          </a>
-        </div>
-        
-        <!-- Secondary Nav -->
-        <div class="flex items-center gap-4 text-xs border-l border-black/20 pl-6">
-          <a href={getLocalizedPath('/proveedores', lang)} class="font-mono hover:text-red transition-colors">
-            {t.nav.producers}
-          </a>
-          <a href={getLocalizedPath('/news', lang)} class="font-mono hover:text-red transition-colors">
-            {t.nav.news}
-          </a>
-          <a href={getLocalizedPath('/contacto', lang)} class="font-mono hover:text-red transition-colors">
-            {t.nav.contact}
-          </a>
-        </div>
-        
-        <!-- Social + Language -->
-        <div class="flex items-center gap-3 border-l border-black/20 pl-6">
-          <a href="https://instagram.com/dirtyrabbitbcn" target="_blank" rel="noopener noreferrer" class="hover:text-red transition-colors" aria-label="Instagram">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </a>
-          <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="hover:text-red transition-colors" aria-label="Spotify">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-            </svg>
-          </a>
-          <LanguageSelector lang={lang} />
-        </div>
+      <!-- Secondary Nav (left) - small text -->
+      <nav class="hidden md:flex items-center gap-6">
+        <a 
+          href={getLocalizedPath('/about', lang)} 
+          class="nav-link font-mono text-xs uppercase tracking-wider transition-colors"
+        >
+          {t.nav.about}
+        </a>
+        <a 
+          href={getLocalizedPath('/proveedores', lang)} 
+          class="nav-link font-mono text-xs uppercase tracking-wider transition-colors"
+        >
+          {t.nav.producers}
+        </a>
+        <a 
+          href={getLocalizedPath('/contacto', lang)} 
+          class="nav-link font-mono text-xs uppercase tracking-wider transition-colors"
+        >
+          {t.nav.contact}
+        </a>
       </nav>
       
-      <!-- Mobile Menu Button -->
+      <!-- Mobile Menu Button (left on mobile) -->
       <button 
         id="mobile-menu-btn"
-        class="md:hidden p-2 hover:bg-black/5 rounded-lg transition-colors"
-        aria-label="Open menu"
+        class="menu-btn md:hidden p-2 -ml-2 hover:opacity-80 rounded-lg transition-opacity"
+        aria-label="Abrir menú"
+        aria-expanded="false"
       >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
-    </div>
-  </div>
-  
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-cream border-t border-black/10">
-    <div class="px-4 py-6 space-y-4">
-      <a href={getLocalizedPath('/menu', lang)} class="block font-typewriter text-lg hover:text-red transition-colors">
-        {t.nav.menu}
+
+      <!-- Centered Logo -->
+      <a 
+        href={getLocalizedPath('/', lang)} 
+        class="absolute left-1/2 -translate-x-1/2 flex items-center hover:opacity-80 transition-opacity"
+      >
+        <img 
+          src="/logos/LOGO-HORIZONTAL-ROJO-DIRTYRABBIT.png" 
+          alt="Dirty Rabbit" 
+          class="logo-dark h-6 md:h-8 w-auto"
+        />
+        <img 
+          src="/logos/LOGO-HORIZONTAL-CREMA-DIRTYRABBIT.png" 
+          alt="Dirty Rabbit" 
+          class="logo-light h-6 md:h-8 w-auto hidden"
+        />
       </a>
-      <a href={getLocalizedPath('/about', lang)} class="block font-typewriter text-lg hover:text-red transition-colors">
-        {t.nav.about}
-      </a>
-      <a href={getLocalizedPath('/proveedores', lang)} class="block font-mono text-sm hover:text-red transition-colors">
-        {t.nav.producers}
-      </a>
-      <a href={getLocalizedPath('/news', lang)} class="block font-mono text-sm hover:text-red transition-colors">
-        {t.nav.news}
-      </a>
-      <a href={getLocalizedPath('/contacto', lang)} class="block font-mono text-sm hover:text-red transition-colors">
-        {t.nav.contact}
-      </a>
-      <div class="pt-4 border-t border-black/10">
+      
+      <!-- Primary Nav (right) - desktop -->
+      <nav class="hidden md:flex items-center gap-6">
+        <a 
+          href={getLocalizedPath('/menu', lang)} 
+          class="nav-link font-typewriter text-base tracking-normal transition-colors"
+        >
+          Carta
+        </a>
         <a 
           href="https://order.dirtyrabbit.es" 
           target="_blank"
           rel="noopener noreferrer"
-          class="block w-full text-center font-typewriter bg-red text-white px-4 py-3 hover:bg-red/90 transition-colors"
+          class="nav-cta font-typewriter text-base tracking-normal px-5 py-2.5 transition-colors"
         >
           {t.nav.order}
         </a>
-      </div>
-      <div class="flex items-center justify-between pt-4 border-t border-black/10">
-        <div class="flex gap-4">
-          <a href="https://instagram.com/dirtyrabbitbcn" target="_blank" rel="noopener noreferrer" class="hover:text-red transition-colors">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </a>
-          <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="hover:text-red transition-colors">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-            </svg>
-          </a>
-        </div>
         <LanguageSelector lang={lang} />
-      </div>
+      </nav>
+      
+      <!-- Mobile: Right side placeholder for balance -->
+      <div class="md:hidden w-10"></div>
     </div>
   </div>
 </header>
+
+<!-- Full-screen Mobile Menu Overlay (Big Mamma style) -->
+<div 
+  id="mobile-menu-overlay" 
+  class="mobile-menu-overlay hidden fixed inset-0 z-[100] bg-white flex flex-col"
+>
+  <!-- Overlay Header: X (left), Logo (center), Lang (right) -->
+  <div class="flex items-center justify-between px-4 h-16 border-b border-[#1A1A1A]/10">
+    <!-- Close button (LEFT) -->
+    <button 
+      id="mobile-menu-close"
+      class="p-2 -ml-2 hover:bg-black/5 rounded-lg transition-colors"
+      aria-label="Cerrar menú"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+    
+    <!-- Logo (CENTER) -->
+    <img 
+      src="/logos/LOGO-HORIZONTAL-ROJO-DIRTYRABBIT.png" 
+      alt="Dirty Rabbit" 
+      class="h-6 w-auto absolute left-1/2 -translate-x-1/2"
+    />
+    
+    <!-- Language selector (RIGHT) -->
+    <LanguageSelector lang={lang} />
+  </div>
+  
+  <!-- Overlay Content -->
+  <div class="flex-1 flex flex-col justify-center px-8">
+    
+    <!-- Mascot illustration - fully opaque -->
+    <div class="mb-10">
+      <img 
+        src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
+        alt="" 
+        class="h-16 w-auto"
+        aria-hidden="true"
+      />
+    </div>
+    
+    <!-- Primary Links (LARGE) - Left aligned, Title Case -->
+    <nav class="space-y-5 mb-8">
+      <a 
+        href={getLocalizedPath('/menu', lang)} 
+        class="block font-typewriter text-3xl tracking-normal hover:text-red transition-colors"
+      >
+        Carta
+      </a>
+      <a 
+        href={getLocalizedPath('/about', lang)} 
+        class="block font-typewriter text-3xl tracking-normal hover:text-red transition-colors"
+      >
+        {historyLabels[lang]}
+      </a>
+      <a 
+        href="https://order.dirtyrabbit.es" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block font-typewriter text-3xl tracking-normal hover:text-red transition-colors"
+      >
+        {orderLabels[lang]}
+      </a>
+    </nav>
+    
+    <!-- Solid divider line - RED -->
+    <div class="w-full max-w-xs border-t border-[#CD202C] mb-8"></div>
+    
+    <!-- Secondary Links (small) - Left aligned -->
+    <nav class="space-y-3">
+      <a 
+        href={getLocalizedPath('/proveedores', lang)} 
+        class="block font-mono text-base text-black/70 hover:text-red transition-colors"
+      >
+        {suppliersLabels[lang]}
+      </a>
+      <a 
+        href={getLocalizedPath('/contacto', lang)} 
+        class="block font-mono text-base text-black/70 hover:text-red transition-colors"
+      >
+        {workLabels[lang]}
+      </a>
+      <a 
+        href={getLocalizedPath('/contacto', lang)} 
+        class="block font-mono text-base text-black/70 hover:text-red transition-colors"
+      >
+        {contactLabels[lang]}
+      </a>
+    </nav>
+  </div>
+  
+  <!-- Overlay Footer: Stay in touch + social icons (no top border) -->
+  <div class="px-8 py-8">
+    <p class="font-mono text-sm text-black/60 mb-4">Stay in touch</p>
+    <div class="flex items-center gap-6">
+      <!-- Instagram - no circle border, Big Mamma style -->
+      <a 
+        href="https://instagram.com/dirtyrabbitsagaro" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="text-black/70 hover:text-red transition-colors"
+        aria-label="Instagram"
+      >
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <!-- Spotify - no circle border, Big Mamma style -->
+      <a 
+        href="#" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="text-black/70 hover:text-red transition-colors"
+        aria-label="Spotify"
+      >
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
 
 <!-- Spacer for fixed header -->
 <div class="h-16 md:h-20"></div>
 
 <script>
   const menuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const menuOverlay = document.getElementById('mobile-menu-overlay');
+  const menuClose = document.getElementById('mobile-menu-close');
   
-  menuBtn?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('hidden');
+  function openMenu() {
+    menuOverlay?.classList.remove('hidden');
+    requestAnimationFrame(() => {
+      menuOverlay?.classList.add('visible');
+    });
+    document.body.style.overflow = 'hidden';
+    menuBtn?.setAttribute('aria-expanded', 'true');
+  }
+  
+  function closeMenu() {
+    menuOverlay?.classList.remove('visible');
+    setTimeout(() => {
+      menuOverlay?.classList.add('hidden');
+    }, 300);
+    document.body.style.overflow = '';
+    menuBtn?.setAttribute('aria-expanded', 'false');
+  }
+  
+  menuBtn?.addEventListener('click', openMenu);
+  menuClose?.addEventListener('click', closeMenu);
+  
+  menuOverlay?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+  
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !menuOverlay?.classList.contains('hidden')) {
+      closeMenu();
+    }
+  });
+  
+  const header = document.getElementById('main-header');
+  
+  function updateHeader() {
+    const scrollY = window.scrollY;
+    if (scrollY > 50) {
+      header?.classList.remove('header-transparent');
+      header?.classList.add('header-solid');
+    } else {
+      header?.classList.remove('header-solid');
+      header?.classList.add('header-transparent');
+    }
+  }
+  
+  updateHeader();
+  
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateHeader();
+        ticking = false;
+      });
+      ticking = true;
+    }
   });
 </script>

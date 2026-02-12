@@ -7,106 +7,123 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = getTranslations(lang);
+
+// Localized footer labels
+const footerLabels = {
+  legal: { es: 'Aviso Legal', en: 'Legal Notice', ca: 'Avís Legal' },
+  faq: { es: 'FAQ y Contacto', en: 'FAQ & Contact', ca: 'FAQ i Contacte' },
+  join: { es: 'Únete a Nosotros', en: 'Join Us', ca: 'Uneix-te a Nosaltres' },
+  news: { es: 'Noticias y Momentos', en: 'News & Moments', ca: 'Notícies i Moments' },
+  newsletter: { 
+    es: 'La Newsletter\nNoticias, recetas y todo eso', 
+    en: 'Our Newsletter\nNews, recipes & everything rabbit', 
+    ca: 'La Newsletter\nNotícies, receptes i tot això' 
+  },
+  placeholder: { es: 'Tu Correo Electrónico', en: 'Your Email', ca: 'El Teu Correu Electrònic' },
+  submit: { es: '¡Vamos!', en: 'Go!', ca: 'Anem!' },
+  privacy: { 
+    es: 'Acepto la Política de Privacidad', 
+    en: 'I accept the Privacy Policy', 
+    ca: 'Accepto la Política de Privacitat' 
+  },
+  stayInTouch: { es: 'Síguenos', en: 'Stay in touch', ca: 'Segueix-nos' }
+};
 ---
 
-<footer class="bg-black text-cream">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8">
-      <!-- Column 1: Logo + Info -->
-      <div class="space-y-4">
-        <div class="flex items-center gap-2">
-          <svg class="w-8 h-8" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 8C12 4 14 2 16 2C18 2 19 4 19 6C19 8 18 12 18 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <path d="M28 8C28 4 26 2 24 2C22 2 21 4 21 6C21 8 22 12 22 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            <circle cx="20" cy="24" r="10" stroke="currentColor" stroke-width="2"/>
-            <circle cx="16" cy="22" r="1.5" fill="currentColor"/>
-            <circle cx="24" cy="22" r="1.5" fill="currentColor"/>
-            <ellipse cx="20" cy="26" rx="2" ry="1.5" fill="currentColor"/>
-          </svg>
-          <span class="font-typewriter text-xl font-bold tracking-tight">DIRTY RABBIT</span>
-        </div>
-        
-        <div class="font-mono text-sm space-y-1 text-cream/80">
-          <p>{t.footer.address}</p>
-          <p>{t.footer.city}</p>
-          <p class="pt-2">{t.footer.hours}</p>
-          <p>
-            <a href="mailto:hola@dirtyrabbit.es" class="hover:text-red transition-colors">
-              {t.footer.email}
-            </a>
-          </p>
-        </div>
+<!-- Newsletter Section (before footer, white bg) -->
+<section class="py-16 md:py-24 bg-white">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Top divider - RED -->
+    <div class="border-t border-[#CD202C] mb-12"></div>
+    
+    <!-- Left aligned newsletter text -->
+    <p class="font-typewriter text-2xl md:text-3xl leading-relaxed mb-10 whitespace-pre-line">
+      {footerLabels.newsletter[lang]}
+    </p>
+    
+    <!-- Box-style email input -->
+    <form class="max-w-md mb-6">
+      <div class="flex items-center border border-[#1A1A1A] rounded-lg px-4 py-3 gap-4">
+        <input 
+          type="email" 
+          placeholder={footerLabels.placeholder[lang]}
+          class="flex-1 bg-transparent font-mono text-base placeholder:text-black/40 focus:outline-none"
+        />
+        <button 
+          type="submit"
+          class="font-typewriter text-base text-red hover:text-red/70 transition-colors whitespace-nowrap"
+        >
+          {footerLabels.submit[lang]}
+        </button>
       </div>
       
-      <!-- Column 2: Nav + Newsletter -->
-      <div class="space-y-6">
-        <nav class="grid grid-cols-2 gap-2 font-mono text-sm">
-          <a href={getLocalizedPath('/menu', lang)} class="hover:text-red transition-colors">{t.nav.menu}</a>
-          <a href={getLocalizedPath('/about', lang)} class="hover:text-red transition-colors">{t.nav.about}</a>
-          <a href={getLocalizedPath('/proveedores', lang)} class="hover:text-red transition-colors">{t.nav.producers}</a>
-          <a href={getLocalizedPath('/news', lang)} class="hover:text-red transition-colors">{t.nav.news}</a>
-          <a href={getLocalizedPath('/contacto', lang)} class="hover:text-red transition-colors">{t.nav.contact}</a>
-        </nav>
-        
-        <div class="space-y-3">
-          <p class="font-typewriter text-sm">{t.footer.newsletter}</p>
-          <form class="flex gap-2">
-            <input 
-              type="email" 
-              placeholder={t.footer.placeholder}
-              class="flex-1 bg-transparent border border-cream/30 px-3 py-2 font-mono text-sm placeholder:text-cream/50 focus:outline-none focus:border-red transition-colors"
-            />
-            <button 
-              type="submit"
-              class="bg-red text-white px-4 py-2 font-mono text-sm hover:bg-red/80 transition-colors"
-            >
-              {t.footer.subscribe}
-            </button>
-          </form>
-        </div>
-      </div>
-      
-      <!-- Column 3: Social -->
-      <div class="space-y-4">
-        <div class="flex gap-4">
-          <a 
-            href="https://instagram.com/dirtyrabbitbcn" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="w-10 h-10 border border-cream/30 flex items-center justify-center hover:bg-red hover:border-red transition-colors"
-            aria-label="Instagram"
-          >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-          </a>
-          <a 
-            href="https://open.spotify.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="w-10 h-10 border border-cream/30 flex items-center justify-center hover:bg-red hover:border-red transition-colors"
-            aria-label="Spotify"
-          >
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
+      <!-- Privacy checkbox -->
+      <label class="flex items-center gap-2 mt-4 font-mono text-xs text-black/60 cursor-pointer">
+        <input type="checkbox" class="rounded border-[#1A1A1A]/30" required />
+        <span>{footerLabels.privacy[lang].split('Política')[0]}<a href="/privacidad" class="underline hover:text-red transition-colors">Política de Privacidad</a></span>
+      </label>
+    </form>
+    
   </div>
-  
-  <!-- Bottom bar -->
-  <div class="border-t border-cream/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-mono text-cream/60">
-        <p>{t.footer.copyright}</p>
-        <div class="flex gap-4">
-          <a href={getLocalizedPath('/legal', lang)} class="hover:text-cream transition-colors">{t.footer.legal}</a>
-          <a href={getLocalizedPath('/privacidad', lang)} class="hover:text-cream transition-colors">{t.footer.privacy}</a>
-          <a href={getLocalizedPath('/cookies', lang)} class="hover:text-cream transition-colors">{t.footer.cookies}</a>
-        </div>
+</section>
+
+<!-- Footer (white bg, Big Mamma style) -->
+<footer class="bg-white text-black">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    
+    <!-- Top divider - RED -->
+    <div class="border-t border-[#CD202C] mb-10"></div>
+    
+    <!-- Footer Menu Links - LEFT ALIGNED, Title Case -->
+    <nav class="flex flex-col items-start gap-3 mb-10 font-typewriter text-base tracking-normal">
+      <a href="/legal" class="text-black hover:text-red transition-colors">
+        {footerLabels.legal[lang]}
+      </a>
+      <a href={getLocalizedPath('/contacto', lang)} class="text-black hover:text-red transition-colors">
+        {footerLabels.faq[lang]}
+      </a>
+      <a href="mailto:hola@dirtyrabbit.es?subject=Work%20with%20us" class="text-black hover:text-black/70 transition-colors">
+        {footerLabels.join[lang]}
+      </a>
+      <a href={getLocalizedPath('/news', lang)} class="text-black hover:text-red transition-colors">
+        {footerLabels.news[lang]}
+      </a>
+    </nav>
+    
+    <!-- NO divider between links and Stay in touch -->
+    
+    <!-- Stay in touch + social - LEFT ALIGNED -->
+    <div class="mb-8">
+      <p class="font-typewriter text-lg mb-4">{footerLabels.stayInTouch[lang]}</p>
+      
+      <!-- Social icons WITHOUT circles (like menu) -->
+      <div class="flex items-center gap-6">
+        <!-- Instagram -->
+        <a 
+          href="https://instagram.com/dirtyrabbitsagaro" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-black/70 hover:text-red transition-colors"
+          aria-label="Instagram"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <!-- Spotify -->
+        <a 
+          href="#" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-black/70 hover:text-red transition-colors"
+          aria-label="Spotify"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+        </a>
       </div>
     </div>
+    
+    <!-- Copyright - LEFT ALIGNED -->
+    <p class="text-xs font-mono text-black/50">{t.footer.copyright}</p>
+    
   </div>
 </footer>

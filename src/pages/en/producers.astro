@@ -1,72 +1,59 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations } from '../../i18n';
+import proveedores from '../../data/proveedores.json';
 
 const lang = 'en';
 const t = getTranslations(lang);
-
-const producers = [
-  {
-    name: "La Cabra",
-    type: "Coffee",
-    image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80",
-    description: "From Copenhagen, La Cabra brings us single-origin coffees roasted with precision. Their philosophy: let the coffee speak for itself. Clean notes, bright acidity, and that perfect point only the best achieve.",
-    link: "https://lacabra.dk"
-  },
-  {
-    name: "Morico",
-    type: "Bread",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
-    description: "Real sourdough bread. Slow fermentation, local flours, and that crunch that wakes you up in the morning. They've been doing things right since 2015, no shortcuts.",
-    link: null
-  },
-  {
-    name: "Aomi",
-    type: "Bowls & Fresh Food",
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80",
-    description: "Fresh bowls that are pure energy. Seasonal ingredients, combinations that work, and that feeling of eating something that's genuinely good for you.",
-    link: null
-  }
-];
 ---
 
 <Layout title={`${t.producers.title} — Dirty Rabbit`} lang={lang}>
-  <section class="py-16 md:py-24 bg-black text-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="reveal font-typewriter text-5xl md:text-7xl font-bold mb-6">{t.producers.title}</h1>
-      <p class="reveal font-mono text-xl text-cream/70 max-w-2xl mx-auto">{t.producers.intro}</p>
+  <!-- Hero Section -->
+  <section class="py-20 md:py-32 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center reveal">
+        <h1 class="font-typewriter text-5xl md:text-7xl font-bold mb-6">{t.producers.title}</h1>
+        <div class="w-24 h-px bg-red mx-auto mb-8"></div>
+        <p class="font-mono text-lg md:text-xl text-black/70 max-w-2xl mx-auto leading-relaxed">
+          {t.producers.intro}
+        </p>
+      </div>
     </div>
   </section>
-  
+
+  <!-- Suppliers Grid -->
   <section class="py-16 md:py-24 bg-cream">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
-      <h2 class="font-typewriter text-3xl md:text-4xl font-bold mb-6">Our Philosophy</h2>
-      <p class="font-mono text-lg text-black/70 leading-relaxed">We don't work with just anyone. Every producer we choose shares our obsession for quality and detail. We prefer few and good. Long-term relationships with people who do things with passion.</p>
-    </div>
-  </section>
-  
-  <section class="py-16 md:py-24 bg-cream border-t border-black/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="space-y-24">
-        {producers.map((producer, index) => (
-          <div class={`grid md:grid-cols-2 gap-12 items-center reveal`}>
-            <div class={index % 2 === 1 ? 'md:order-2' : ''}>
-              <img src={producer.image} alt={producer.name} class="w-full aspect-[4/3] object-cover" loading="lazy"/>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="stagger-group grid md:grid-cols-2 gap-8 md:gap-12">
+        {proveedores.map((p) => (
+          <article class="stagger-item bg-white border border-black p-6 md:p-8 card-lift">
+            <!-- Photo placeholder with rabbit logo style -->
+            <div class="w-full aspect-[4/3] bg-cream flex items-center justify-center mb-6 relative overflow-hidden">
+              <div class="text-red/10 text-8xl font-typewriter font-bold">🐰</div>
+              <span class="absolute bottom-3 right-3 font-mono text-xs text-black/30">[PHOTO]</span>
             </div>
-            <div class={index % 2 === 1 ? 'md:order-1' : ''}>
-              <span class="font-mono text-sm text-red">{producer.type}</span>
-              <h2 class="font-typewriter text-3xl md:text-4xl font-bold mt-2 mb-6">{producer.name}</h2>
-              <p class="font-mono text-lg text-black/70 leading-relaxed mb-6">{producer.description}</p>
-              {producer.link && (
-                <a href={producer.link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group">
-                  Visit website
-                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                  </svg>
-                </a>
-              )}
-            </div>
-          </div>
+            
+            <!-- Supplier Info -->
+            <h2 class="font-typewriter text-2xl md:text-3xl font-bold mb-2">{p.name}</h2>
+            <p class="font-mono text-sm text-red mb-4 uppercase tracking-wide">
+              {(p.category as any)[lang]}{p.origin ? ` · ${p.origin}` : ''}
+            </p>
+            <p class="font-mono text-black/70 leading-relaxed">{(p.description as any)[lang]}</p>
+            
+            {p.url && (
+              <a 
+                href={p.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-2 mt-6 font-mono text-sm text-red hover:text-red/80 transition-colors group"
+              >
+                <span>Visit website</span>
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+            )}
+          </article>
         ))}
       </div>
     </div>

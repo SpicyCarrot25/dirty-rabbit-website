@@ -1,93 +1,59 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getTranslations } from '../i18n';
+import proveedores from '../data/proveedores.json';
 
 const lang = 'es';
 const t = getTranslations(lang);
-
-const producers = [
-  {
-    name: "La Cabra",
-    type: "Café",
-    image: "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80",
-    description: "Desde Copenhague, La Cabra nos trae cafés de origen único tostados con precisión. Su filosofía: dejar que el café hable por sí mismo. Notas limpias, acidez brillante, y ese punto perfecto que solo consiguen los mejores.",
-    link: "https://lacabra.dk"
-  },
-  {
-    name: "Morico",
-    type: "Pan",
-    image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=80",
-    description: "Pan de masa madre de verdad. Fermentación lenta, harinas locales, y ese crujido que te despierta por las mañanas. Llevan desde 2015 haciendo las cosas bien, sin atajos.",
-    link: null
-  },
-  {
-    name: "Aomi",
-    type: "Bowls & Fresh Food",
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80",
-    description: "Bowls frescos que son pura energía. Ingredientes de temporada, combinaciones que funcionan, y esa sensación de estar comiendo algo que te hace bien de verdad.",
-    link: null
-  }
-];
 ---
 
 <Layout title={`${t.producers.title} — Dirty Rabbit`} lang={lang}>
-  <!-- Hero -->
-  <section class="py-16 md:py-24 bg-black text-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="reveal font-typewriter text-5xl md:text-7xl font-bold mb-6">{t.producers.title}</h1>
-      <p class="reveal font-mono text-xl text-cream/70 max-w-2xl mx-auto">
-        {t.producers.intro}
-      </p>
+  <!-- Hero Section -->
+  <section class="py-20 md:py-32 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center reveal">
+        <h1 class="font-typewriter text-5xl md:text-7xl font-bold mb-6">{t.producers.title}</h1>
+        <div class="w-24 h-px bg-red mx-auto mb-8"></div>
+        <p class="font-mono text-lg md:text-xl text-black/70 max-w-2xl mx-auto leading-relaxed">
+          {t.producers.intro}
+        </p>
+      </div>
     </div>
   </section>
-  
-  <!-- Philosophy -->
+
+  <!-- Suppliers Grid -->
   <section class="py-16 md:py-24 bg-cream">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
-      <h2 class="font-typewriter text-3xl md:text-4xl font-bold mb-6">Nuestra Filosofía</h2>
-      <p class="font-mono text-lg text-black/70 leading-relaxed">
-        No trabajamos con cualquiera. Cada proveedor que elegimos comparte nuestra obsesión 
-        por la calidad y el detalle. Preferimos pocos y buenos. Relaciones a largo plazo con 
-        gente que hace las cosas con pasión.
-      </p>
-    </div>
-  </section>
-  
-  <!-- Producers List -->
-  <section class="py-16 md:py-24 bg-cream border-t border-black/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="space-y-24">
-        {producers.map((producer, index) => (
-          <div class={`grid md:grid-cols-2 gap-12 items-center reveal ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
-            <div class={index % 2 === 1 ? 'md:order-2' : ''}>
-              <img 
-                src={producer.image}
-                alt={producer.name}
-                class="w-full aspect-[4/3] object-cover"
-                loading="lazy"
-              />
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="stagger-group grid md:grid-cols-2 gap-8 md:gap-12">
+        {proveedores.map((p) => (
+          <article class="stagger-item bg-white border border-black p-6 md:p-8 card-lift">
+            <!-- Photo placeholder with rabbit logo style -->
+            <div class="w-full aspect-[4/3] bg-cream flex items-center justify-center mb-6 relative overflow-hidden">
+              <div class="text-red/10 text-8xl font-typewriter font-bold">🐰</div>
+              <span class="absolute bottom-3 right-3 font-mono text-xs text-black/30">[FOTO]</span>
             </div>
-            <div class={index % 2 === 1 ? 'md:order-1' : ''}>
-              <span class="font-mono text-sm text-red">{producer.type}</span>
-              <h2 class="font-typewriter text-3xl md:text-4xl font-bold mt-2 mb-6">{producer.name}</h2>
-              <p class="font-mono text-lg text-black/70 leading-relaxed mb-6">
-                {producer.description}
-              </p>
-              {producer.link && (
-                <a 
-                  href={producer.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
-                >
-                  Visitar web
-                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                  </svg>
-                </a>
-              )}
-            </div>
-          </div>
+            
+            <!-- Supplier Info -->
+            <h2 class="font-typewriter text-2xl md:text-3xl font-bold mb-2">{p.name}</h2>
+            <p class="font-mono text-sm text-red mb-4 uppercase tracking-wide">
+              {(p.category as any)[lang]}{p.origin ? ` · ${p.origin}` : ''}
+            </p>
+            <p class="font-mono text-black/70 leading-relaxed">{(p.description as any)[lang]}</p>
+            
+            {p.url && (
+              <a 
+                href={p.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-2 mt-6 font-mono text-sm text-red hover:text-red/80 transition-colors group"
+              >
+                <span>Visitar web</span>
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+            )}
+          </article>
         ))}
       </div>
     </div>

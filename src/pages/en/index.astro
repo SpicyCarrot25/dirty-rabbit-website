@@ -6,177 +6,283 @@ const lang = 'en';
 const t = getTranslations(lang);
 ---
 
-<Layout title="Dirty Rabbit — Specialty Coffee Barcelona" lang={lang}>
-  <!-- Hero Section -->
-  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-    <div 
-      class="absolute inset-0 bg-cover bg-center"
-      style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80');"
-      id="hero-bg"
-    >
+<Layout title="Dirty Rabbit — Specialty Coffee, Breakfast & Brunch · S'Agaró" lang={lang}>
+  
+  <!-- HERO SECTION: 100vh, full-bleed photo, centered tagline, NO scroll indicator -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden -mt-16 md:-mt-20">
+    <!-- Background: Full-bleed photo placeholder -->
+    <div class="absolute inset-0 bg-black" id="hero-bg">
+      <!-- TODO: Replace with real editorial-style photo -->
+      <div class="absolute inset-0 flex items-center justify-center">
+        <img 
+          src="/logos/SIMBOLO-CREMA-DIRTYRABBIT.png" 
+          alt="" 
+          class="w-48 md:w-64 opacity-10"
+          aria-hidden="true"
+        />
+      </div>
+      <!-- Dark overlay for text readability -->
       <div class="absolute inset-0 bg-black/40"></div>
+      <!-- Placeholder label -->
+      <div class="absolute top-4 left-4 font-mono text-xs text-white/30 uppercase tracking-wider">
+        [PHOTO TBD]
+      </div>
     </div>
     
-    <div class="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
-      <h1 class="reveal font-typewriter text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
-        DIRTY RABBIT
-      </h1>
-      <p class="reveal font-mono text-xl md:text-2xl mb-4 tracking-wide">
-        {t.hero.tagline}
+    <!-- Hero Content: Centered tagline only -->
+    <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+      <p class="reveal font-typewriter text-2xl md:text-4xl lg:text-5xl leading-relaxed hero-text-shadow">
+        A place to wake up.<br class="hidden sm:block" /> 
+        Or slow down.<br class="hidden sm:block" /> 
+        Ideally both.
       </p>
-      <p class="reveal font-mono text-base md:text-lg text-white/80 mb-10">
-        {t.hero.subtitle}
-      </p>
-      <a 
-        href="https://order.dirtyrabbit.es"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="reveal inline-block bg-red text-white font-typewriter text-lg px-8 py-4 hover:bg-red/90 transition-colors"
-      >
-        {t.hero.cta}
-      </a>
     </div>
     
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white animate-bounce">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
-      </svg>
+    <!-- No scroll indicator per design spec -->
+  </section>
+  
+  
+  <!-- COMMUNITY SECTION: Post-hero, no headline, elegant typography -->
+  <section class="py-20 md:py-32 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80">
+        The family with the noisy kid. The remote worker with the dying laptop. The retired couple who've been coming since week one. The expat who just moved and doesn't know anyone yet. Strangers become regulars become friends.
+      </p>
     </div>
   </section>
   
-  <!-- Menu Preview Section -->
+  
+  <!-- NEWS CARDS: Cream background, horizontal slider (Big Mamma style) -->
   <section class="py-20 md:py-32 bg-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="reveal">
-          <h2 class="font-typewriter text-4xl md:text-5xl font-bold mb-6">{t.sections.menu}</h2>
-          <p class="font-mono text-lg text-black/70 mb-8 leading-relaxed">
-            Specialty coffee, Australian brunch, and those things you didn't know you needed. 
-            Everything prepared with love (and a touch of obsession).
-          </p>
-          <a 
-            href={getLocalizedPath('/menu', lang)}
-            class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
-          >
-            {t.common.viewAll}
-            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-        </div>
-        <div class="reveal grid grid-cols-2 gap-4">
-          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80" alt="Coffee" class="w-full aspect-square object-cover" loading="lazy"/>
-          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80" alt="Food" class="w-full aspect-square object-cover mt-8" loading="lazy"/>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- About Preview Section -->
-  <section class="py-20 md:py-32 bg-black text-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="reveal order-2 md:order-1">
-          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800&q=80" alt="Interior" class="w-full aspect-[4/3] object-cover" loading="lazy"/>
-        </div>
-        <div class="reveal order-1 md:order-2">
-          <h2 class="font-typewriter text-4xl md:text-5xl font-bold mb-6">{t.sections.about}</h2>
-          <p class="font-mono text-lg text-cream/70 mb-8 leading-relaxed">
-            Dirty Rabbit was born from a dream: to create a corner where specialty coffee 
-            meets Australian warmth. A place to disconnect, connect, 
-            and enjoy the little things.
-          </p>
-          <a 
-            href={getLocalizedPath('/about', lang)}
-            class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
-          >
-            {t.common.viewAll}
-            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Producers Preview Section -->
-  <section class="py-20 md:py-32 bg-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 reveal">
-        <h2 class="font-typewriter text-4xl md:text-5xl font-bold mb-6">{t.sections.producers}</h2>
-        <p class="font-mono text-lg text-black/70 max-w-2xl mx-auto">{t.producers.intro}</p>
+      
+      <!-- Section Header -->
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <h2 class="font-typewriter text-3xl md:text-4xl lg:text-5xl mb-4 text-black">
+          News
+        </h2>
+        <p class="font-mono text-base text-black/60 max-w-xl mx-auto">
+          What's happening at the rabbit
+        </p>
       </div>
       
-      <div class="stagger-group grid md:grid-cols-3 gap-8">
-        <div class="stagger-item text-center p-8 border border-black/10 hover:border-red/50 transition-colors">
-          <h3 class="font-typewriter text-2xl font-bold mb-2">La Cabra</h3>
-          <p class="font-mono text-sm text-black/60 mb-4">Coffee</p>
-          <p class="font-mono text-black/70">Copenhagen's finest, now in Barcelona</p>
-        </div>
-        <div class="stagger-item text-center p-8 border border-black/10 hover:border-red/50 transition-colors">
-          <h3 class="font-typewriter text-2xl font-bold mb-2">Morico</h3>
-          <p class="font-mono text-sm text-black/60 mb-4">Bread</p>
-          <p class="font-mono text-black/70">Artisan sourdough since 2015</p>
-        </div>
-        <div class="stagger-item text-center p-8 border border-black/10 hover:border-red/50 transition-colors">
-          <h3 class="font-typewriter text-2xl font-bold mb-2">Aomi</h3>
-          <p class="font-mono text-sm text-black/60 mb-4">Bowls</p>
-          <p class="font-mono text-black/70">Fresh, healthy, delicious</p>
-        </div>
+      <!-- Horizontal Slider -->
+      <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
+        
+        <!-- Card 1 -->
+        <article class="reveal card-lift card-rounded bg-white border border-cream w-[75vw] md:w-[calc(33.333%-1rem)] max-w-[320px]">
+          <div class="aspect-[4/3] bg-cream relative overflow-hidden rounded-t-[1rem]">
+            <img 
+              src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
+              alt="" 
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 opacity-10"
+              aria-hidden="true"
+            />
+            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
+              [PHOTO TBD]
+            </span>
+          </div>
+          <div class="p-6">
+            <time class="font-mono text-xs text-black/50 uppercase tracking-wider">
+              Feb 2026
+            </time>
+            <h3 class="font-typewriter text-xl md:text-2xl mt-2 mb-3 text-black">
+              New spring menu
+            </h3>
+            <p class="font-mono text-sm text-black/60 line-clamp-2">
+              Fresh dishes with seasonal produce from our local suppliers.
+            </p>
+          </div>
+        </article>
+        
+        <!-- Card 2 -->
+        <article class="reveal card-lift card-rounded bg-white border border-cream w-[75vw] md:w-[calc(33.333%-1rem)] max-w-[320px]">
+          <div class="aspect-[4/3] bg-cream relative overflow-hidden rounded-t-[1rem]">
+            <img 
+              src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
+              alt="" 
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 opacity-10"
+              aria-hidden="true"
+            />
+            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
+              [PHOTO TBD]
+            </span>
+          </div>
+          <div class="p-6">
+            <time class="font-mono text-xs text-black/50 uppercase tracking-wider">
+              Jan 2026
+            </time>
+            <h3 class="font-typewriter text-xl md:text-2xl mt-2 mb-3 text-black">
+              La Cabra collaboration
+            </h3>
+            <p class="font-mono text-sm text-black/60 line-clamp-2">
+              Copenhagen roasters, now our house blend coffee.
+            </p>
+          </div>
+        </article>
+        
+        <!-- Card 3 -->
+        <article class="reveal card-lift card-rounded bg-white border border-cream w-[75vw] md:w-[calc(33.333%-1rem)] max-w-[320px]">
+          <div class="aspect-[4/3] bg-cream relative overflow-hidden rounded-t-[1rem]">
+            <img 
+              src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
+              alt="" 
+              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 opacity-10"
+              aria-hidden="true"
+            />
+            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
+              [PHOTO TBD]
+            </span>
+          </div>
+          <div class="p-6">
+            <time class="font-mono text-xs text-black/50 uppercase tracking-wider">
+              Dec 2025
+            </time>
+            <h3 class="font-typewriter text-xl md:text-2xl mt-2 mb-3 text-black">
+              Now open in S'Agaró
+            </h3>
+            <p class="font-mono text-sm text-black/60 line-clamp-2">
+              After months of work, the rabbit has found its burrow.
+            </p>
+          </div>
+        </article>
+        
       </div>
       
+      <!-- View All Link -->
       <div class="text-center mt-12 reveal">
-        <a href={getLocalizedPath('/producers', lang)} class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group">
-          {t.common.viewAll}
+        <a 
+          href={getLocalizedPath('/news', lang)}
+          class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
+        >
+          View all news
           <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
         </a>
       </div>
+      
     </div>
   </section>
   
-  <!-- Contact Section -->
-  <section class="py-20 md:py-32 bg-red text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+  
+  <!-- LOCATION: White background, info only (no map) -->
+  <section class="py-20 md:py-32 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <h2 class="font-typewriter text-3xl md:text-4xl lg:text-5xl mb-4 text-black">
+          {t.sections.contact}
+        </h2>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8 lg:gap-12 text-center">
+        
+        <!-- Address -->
         <div class="reveal">
-          <h2 class="font-typewriter text-4xl md:text-5xl font-bold mb-6">{t.sections.contact}</h2>
-          <div class="font-mono text-lg space-y-2 mb-8">
-            <p>{t.footer.address}</p>
-            <p>{t.footer.city}</p>
-            <p class="pt-4">{t.footer.hours}</p>
-            <p><a href="mailto:hola@dirtyrabbit.es" class="underline hover:no-underline">{t.footer.email}</a></p>
-          </div>
-          <a href={getLocalizedPath('/contact', lang)} class="inline-flex items-center gap-2 font-typewriter text-white hover:text-white/80 transition-colors group">
-            {t.common.viewAll}
-            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </a>
+          <h3 class="font-typewriter text-lg mb-3 text-black">
+            Address
+          </h3>
+          <address class="font-mono text-base text-black/70 not-italic leading-relaxed">
+            {t.footer.address}<br />
+            {t.footer.city}
+          </address>
         </div>
+        
+        <!-- Hours -->
         <div class="reveal">
-          <div class="w-full aspect-square bg-white/10">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.416826583!2d2.1783!3d41.3872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIzJzE0LjAiTiAywrAxMCczMi4zIkU!5e0!3m2!1sen!2ses!4v1234567890" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Dirty Rabbit location"></iframe>
+          <h3 class="font-typewriter text-lg mb-3 text-black">
+            Hours
+          </h3>
+          <div class="font-mono text-base text-black/70 space-y-1">
+            <p>{t.footer.hours}</p>
+            <p class="text-red">{t.footer.closed}</p>
           </div>
         </div>
+        
+        <!-- Contact -->
+        <div class="reveal">
+          <h3 class="font-typewriter text-lg mb-3 text-black">
+            Contact
+          </h3>
+          <div class="font-mono text-base space-y-2">
+            <p>
+              <a 
+                href="mailto:hola@dirtyrabbit.es" 
+                class="text-black/70 hover:text-red transition-colors"
+              >
+                {t.footer.email}
+              </a>
+            </p>
+            <p>
+              <a 
+                href="https://instagram.com/dirtyrabbitsagaro" 
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-black/70 hover:text-red transition-colors"
+              >
+                @dirtyrabbitsagaro
+              </a>
+            </p>
+          </div>
+        </div>
+        
       </div>
     </div>
   </section>
+  
 </Layout>
 
 <script>
-  import gsap from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
-  gsap.registerPlugin(ScrollTrigger);
-  
-  const heroBg = document.getElementById('hero-bg');
-  if (heroBg) {
-    gsap.to(heroBg, {
-      yPercent: 30,
-      ease: 'none',
-      scrollTrigger: { trigger: heroBg, start: 'top top', end: 'bottom top', scrub: true }
+  // Fade-in on scroll - Vanilla JS with IntersectionObserver
+  document.addEventListener('DOMContentLoaded', () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.reveal').forEach(el => {
+        el.classList.add('visible');
+      });
+      return;
+    }
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+    
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
     });
-  }
+    
+    // Simple parallax for hero background
+    const heroBg = document.getElementById('hero-bg');
+    if (heroBg) {
+      let ticking = false;
+      
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * 0.3;
+            heroBg.style.transform = `translateY(${rate}px)`;
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    }
+  });
 </script>

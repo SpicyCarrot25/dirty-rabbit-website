@@ -1,0 +1,74 @@
+[
+  {
+    "id": "la-cabra",
+    "name": "La Cabra",
+    "category": { "es": "Café de Especialidad", "en": "Specialty Coffee", "ca": "Cafè d'Especialitat" },
+    "origin": "Copenhagen",
+    "description": { 
+      "es": "Tostadores daneses que llevan más de una década definiendo lo que significa el café de especialidad en Europa. Su blend exclusivo para Dirty Rabbit combina notas de frutos rojos con un final achocolatado.",
+      "en": "Danish roasters who have spent over a decade defining what specialty coffee means in Europe. Their exclusive blend for Dirty Rabbit combines red fruit notes with a chocolatey finish.",
+      "ca": "Torrefactors danesos que porten més d'una dècada definint què significa el cafè d'especialitat a Europa. El seu blend exclusiu per Dirty Rabbit combina notes de fruits vermells amb un final axocolatat."
+    },
+    "url": "https://www.lacabra.dk"
+  },
+  {
+    "id": "req-matcha",
+    "name": "REQ Matcha",
+    "category": { "es": "Matcha Ceremonial", "en": "Ceremonial Matcha", "ca": "Matcha Cerimonial" },
+    "origin": "Barcelona",
+    "description": { 
+      "es": "Matcha de grado ceremonial cultivado en Uji, Japón. Seleccionado hoja a hoja, molido en piedra. El verde más vibrante que encontrarás en tu taza.",
+      "en": "Ceremonial grade matcha grown in Uji, Japan. Hand-picked leaf by leaf, stone-ground. The most vibrant green you'll find in your cup.",
+      "ca": "Matcha de grau cerimonial cultivat a Uji, Japó. Seleccionat fulla a fulla, mòlt en pedra. El verd més vibrant que trobaràs a la teva tassa."
+    },
+    "url": ""
+  },
+  {
+    "id": "awachai",
+    "name": "Awachai",
+    "category": { "es": "Chai Artesano", "en": "Artisan Chai", "ca": "Chai Artesà" },
+    "origin": "Francia",
+    "description": { 
+      "es": "Chai orgánico elaborado con especias frescas de origen directo. Sin concentrados, sin atajos. Cada taza cuenta una historia de cardamomo, jengibre y canela de verdad.",
+      "en": "Organic chai made with fresh, direct-sourced spices. No concentrates, no shortcuts. Every cup tells a story of real cardamom, ginger, and cinnamon.",
+      "ca": "Chai orgànic elaborat amb espècies fresques d'origen directe. Sense concentrats, sense dreceres. Cada tassa explica una història de cardamom, gingebre i canyella de veritat."
+    },
+    "url": ""
+  },
+  {
+    "id": "bioma",
+    "name": "Bioma",
+    "category": { "es": "Producto Local", "en": "Local Produce", "ca": "Producte Local" },
+    "origin": "Costa Brava",
+    "description": { 
+      "es": "Red de pequeños productores del Empordà. Huevos de gallinas que ven el sol, verduras que saben a verdura, aceite que huele a olivo. Kilómetro cero de verdad.",
+      "en": "Network of small Empordà producers. Eggs from sun-seeing hens, vegetables that taste like vegetables, oil that smells of olive trees. True zero-kilometer.",
+      "ca": "Xarxa de petits productors de l'Empordà. Ous de gallines que veuen el sol, verdures que saben a verdura, oli que fa olor d'olivera. Quilòmetre zero de debò."
+    },
+    "url": ""
+  },
+  {
+    "id": "la-puntual-girona",
+    "name": "La Puntual",
+    "category": { "es": "Panadería Artesana", "en": "Artisan Bakery", "ca": "Fleca Artesana" },
+    "origin": "Girona",
+    "description": { 
+      "es": "Obrador gironino donde el pan se hace como se hacía antes. Masa madre de 20 años, fermentaciones lentas, harinas ecológicas. Cada croissant es una pequeña obra de arte.",
+      "en": "Girona bakery where bread is made the old way. 20-year-old sourdough starter, slow fermentation, organic flours. Every croissant is a small work of art.",
+      "ca": "Obrador gironí on el pa es fa com es feia abans. Massa mare de 20 anys, fermentacions lentes, farines ecològiques. Cada croissant és una petita obra d'art."
+    },
+    "url": ""
+  },
+  {
+    "id": "origo-barcelona",
+    "name": "Origo",
+    "category": { "es": "Vinos Naturales", "en": "Natural Wines", "ca": "Vins Naturals" },
+    "origin": "Barcelona",
+    "description": { 
+      "es": "Selección de vinos naturales y biodinámicos de pequeños productores catalanes. Cero aditivos, máxima expresión del terroir. Perfectos para ese brunch que se alarga.",
+      "en": "Selection of natural and biodynamic wines from small Catalan producers. Zero additives, maximum terroir expression. Perfect for that brunch that runs long.",
+      "ca": "Selecció de vins naturals i biodinàmics de petits productors catalans. Zero additius, màxima expressió del terroir. Perfectes per aquell brunch que s'allarga."
+    },
+    "url": ""
+  }
+]

@@ -1,28 +1,30 @@
 {
   "nav": {
-    "menu": "MENU",
-    "about": "ABOUT US",
-    "order": "ORDER NOW",
-    "producers": "OUR PRODUCERS",
-    "news": "NEWS",
-    "contact": "CONTACT"
+    "menu": "Menu",
+    "about": "About Us",
+    "order": "Order Now",
+    "producers": "Producers",
+    "news": "News",
+    "contact": "Contact"
   },
   "hero": {
-    "tagline": "Specialty coffee & good vibes",
-    "subtitle": "An Australian corner in the heart of Barcelona",
+    "tagline": "A place to wake up. Or slow down. Ideally both.",
+    "taglineAlt": "Quiet mornings. Loud laughs. Coffee in between.",
+    "subtitle": "Specialty Coffee, Breakfast & Brunch — S'Agaró, Costa Brava",
     "cta": "Order Now"
   },
   "sections": {
     "menu": "Our Menu",
     "about": "About Us",
     "producers": "Our Producers",
-    "news": "Latest News",
+    "news": "News",
     "contact": "Find Us"
   },
   "footer": {
-    "address": "C/ Dels Carders, 33",
-    "city": "08003 Barcelona",
-    "hours": "Mon-Sun: 9:00-17:00",
+    "address": "Avinguda de Platja d'Aro, 275",
+    "city": "17248 S'Agaró, Girona",
+    "hours": "Tue–Sun: 8:00–15:00 (kitchen until 14:00)",
+    "closed": "Monday closed",
     "email": "hola@dirtyrabbit.es",
     "newsletter": "Subscribe to our newsletter",
     "placeholder": "Your email",
@@ -33,14 +35,16 @@
     "copyright": "© 2026 The Rabbit Project SL"
   },
   "menu": {
-    "title": "Our Menu",
+    "title": "Menu",
     "orderOnline": "Order Online",
     "categories": {
       "coffee": "Coffee",
       "drinks": "Drinks",
-      "food": "Food",
+      "brunch": "Brunch",
+      "tostas": "Toasts",
       "pastries": "Pastries"
-    }
+    },
+    "note": "Oat, soy, or almond milk: +€0.50"
   },
   "about": {
     "title": "About Us",
@@ -50,26 +54,27 @@
   },
   "producers": {
     "title": "Our Producers",
-    "intro": "We work only with the best local producers"
+    "intro": "Coffee, matcha, bread, eggs — every product has a story. We only work with those who share our obsession for doing things right."
   },
   "contact": {
     "title": "Contact",
     "findUs": "Find Us",
-    "hours": "Hours",
+    "hours": "Opening Hours",
     "faq": "FAQ",
+    "instagram": "Follow us on Instagram",
     "questions": {
       "reservation": "Can I make a reservation?",
-      "reservationAnswer": "We don't take reservations. We're a neighborhood café where you can come whenever you want.",
+      "reservationAnswer": "We don't take reservations — we believe in spontaneous brunch. But don't worry, turnover is quick and we always find a spot. Weekends before 10am are usually quieter.",
       "wifi": "Is there wifi?",
-      "wifiAnswer": "Yes, free wifi for all our customers.",
+      "wifiAnswer": "Yes, free and fast. Perfect for getting some work done. But if you're staying all day, we ask you to order something every couple of hours — we're a small café and need the tables.",
       "dogs": "Are dogs allowed?",
-      "dogsAnswer": "Absolutely! Dogs are welcome.",
+      "dogsAnswer": "Absolutely! We have a terrace where your furry friend is welcome. Inside we can't due to health regulations, but we always have fresh water outside.",
       "parking": "Is there parking nearby?",
-      "parkingAnswer": "There's public parking on Via Laietana, 5 minutes walk away.",
+      "parkingAnswer": "Yes, free parking right next to the venue. There's also blue zone parking nearby if it's full.",
       "events": "Do you host private events?",
-      "eventsAnswer": "Yes, contact us for more information.",
+      "eventsAnswer": "Yes, for small groups outside regular hours. Email us at hola@dirtyrabbit.es with your idea and let's see how we can make magic.",
       "dietary": "Do you have vegan/gluten-free options?",
-      "dietaryAnswer": "Yes, we have vegan and gluten-free options. Ask our team."
+      "dietaryAnswer": "Yes. Vegetarian and vegan options on the menu, plant-based milks available. For gluten-free, ask — we have several options but the kitchen isn't 100% gluten-free."
     }
   },
   "news": {
@@ -77,7 +82,7 @@
     "readMore": "Read more"
   },
   "common": {
-    "viewAll": "View all",
+    "viewAll": "View All",
     "back": "Back",
     "loading": "Loading..."
   }

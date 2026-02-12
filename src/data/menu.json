@@ -1,71 +1,44 @@
 {
-  "categories": [
-    {
-      "id": "coffee",
-      "name": {
-        "es": "Café",
-        "en": "Coffee",
-        "ca": "Cafè"
-      },
-      "items": [
-        { "name": "Espresso", "price": "2.00" },
-        { "name": "Americano", "price": "2.50" },
-        { "name": "Flat White", "price": "3.50" },
-        { "name": "Cappuccino", "price": "3.50" },
-        { "name": "Latte", "price": "3.50" },
-        { "name": "Cortado", "price": "2.50" },
-        { "name": "Batch Brew", "price": "2.50" },
-        { "name": "Pour Over", "price": "4.50" },
-        { "name": "Cold Brew", "price": "4.00" }
-      ]
-    },
-    {
-      "id": "drinks",
-      "name": {
-        "es": "Bebidas",
-        "en": "Drinks",
-        "ca": "Begudes"
-      },
-      "items": [
-        { "name": "Matcha Latte", "price": "4.50" },
-        { "name": "Chai Latte", "price": "4.00" },
-        { "name": "Hot Chocolate", "price": "3.50" },
-        { "name": "Fresh Orange Juice", "price": "4.50" },
-        { "name": "Kombucha", "price": "4.50" },
-        { "name": "Agua", "price": "2.00" }
-      ]
-    },
-    {
-      "id": "food",
-      "name": {
-        "es": "Comida",
-        "en": "Food",
-        "ca": "Menjar"
-      },
-      "items": [
-        { "name": "Avocado Toast", "description": { "es": "Con huevo pochado", "en": "With poached egg", "ca": "Amb ou escalfat" }, "price": "9.50" },
-        { "name": "Eggs Benedict", "description": { "es": "Clásico o con salmón", "en": "Classic or with salmon", "ca": "Clàssic o amb salmó" }, "price": "11.00" },
-        { "name": "Açaí Bowl", "price": "9.00" },
-        { "name": "Granola Bowl", "price": "7.50" },
-        { "name": "Tostada con Mantequilla", "description": { "es": "Pan de masa madre", "en": "Sourdough bread", "ca": "Pa de massa mare" }, "price": "3.50" },
-        { "name": "Sandwich del Día", "price": "8.50" }
-      ]
-    },
-    {
-      "id": "pastries",
-      "name": {
-        "es": "Bollería",
-        "en": "Pastries",
-        "ca": "Brioixeria"
-      },
-      "items": [
-        { "name": "Croissant", "price": "3.00" },
-        { "name": "Pain au Chocolat", "price": "3.50" },
-        { "name": "Carrot Cake", "price": "4.50" },
-        { "name": "Banana Bread", "price": "4.00" },
-        { "name": "Cookie", "price": "2.50" },
-        { "name": "Brownie", "price": "4.00" }
-      ]
-    }
+  "coffee": [
+    { "name": "Espresso", "price": "2.50", "desc": { "es": "La Cabra blend", "en": "La Cabra blend", "ca": "La Cabra blend" } },
+    { "name": "Doppio", "price": "3.00", "desc": { "es": "Doble shot", "en": "Double shot", "ca": "Doble shot" } },
+    { "name": "Americano", "price": "2.80", "desc": { "es": "Espresso + agua caliente", "en": "Espresso + hot water", "ca": "Espresso + aigua calenta" } },
+    { "name": "Flat White", "price": "3.50", "desc": { "es": "Terciopelo con kick", "en": "Velvet with a kick", "ca": "Vellut amb kick" } },
+    { "name": "Cappuccino", "price": "3.20", "desc": { "es": "Clásico italiano", "en": "Italian classic", "ca": "Clàssic italià" } },
+    { "name": "Cortado", "price": "2.80", "desc": { "es": "Espresso manchado", "en": "Espresso stained", "ca": "Espresso tacat" } },
+    { "name": "V60", "price": "4.50", "desc": { "es": "Café filtrado — pregunta por el origen del día", "en": "Filter coffee — ask for today's origin", "ca": "Cafè filtrat — pregunta per l'origen del dia" } },
+    { "name": "Cold Brew", "price": "4.00", "desc": { "es": "24h extracción en frío", "en": "24h cold extraction", "ca": "24h extracció en fred" } }
+  ],
+  "drinks": [
+    { "name": "Matcha Latte", "price": "4.50", "desc": { "es": "REQ ceremonial grade", "en": "REQ ceremonial grade", "ca": "REQ ceremonial grade" } },
+    { "name": "Chai Latte", "price": "4.00", "desc": { "es": "Awachai especias frescas", "en": "Awachai fresh spices", "ca": "Awachai espècies fresques" } },
+    { "name": "Chocolate Caliente", "price": "3.50", "desc": { "es": "70% cacao", "en": "70% cacao", "ca": "70% cacau" } },
+    { "name": "Golden Milk", "price": "4.00", "desc": { "es": "Cúrcuma + jengibre + leche de avena", "en": "Turmeric + ginger + oat milk", "ca": "Cúrcuma + gingebre + llet de civada" } },
+    { "name": "Zumo Natural", "price": "4.50", "desc": { "es": "Naranja / Zanahoria / Verde", "en": "Orange / Carrot / Green", "ca": "Taronja / Pastanaga / Verd" } },
+    { "name": "Smoothie", "price": "5.50", "desc": { "es": "Frutas del día + proteína", "en": "Daily fruits + protein", "ca": "Fruites del dia + proteïna" } },
+    { "name": "Kombucha", "price": "4.50", "desc": { "es": "Artesanal de barril", "en": "Artisanal on tap", "ca": "Artesanal de barril" } }
+  ],
+  "brunch": [
+    { "name": "Eggs Benedict", "price": "12.00", "desc": { "es": "Huevos poché, jamón ibérico, holandesa", "en": "Poached eggs, ibérico ham, hollandaise", "ca": "Ous escalfats, pernil ibèric, holandesa" } },
+    { "name": "Avocado Toast", "price": "10.00", "desc": { "es": "Pan de masa madre, aguacate, huevo poché, semillas", "en": "Sourdough, avocado, poached egg, seeds", "ca": "Pa de massa mare, alvocat, ou escalfat, llavors" } },
+    { "name": "Huevos Rotos", "price": "11.00", "desc": { "es": "Patatas, jamón ibérico, huevos de Bioma", "en": "Potatoes, ibérico ham, Bioma eggs", "ca": "Patates, pernil ibèric, ous de Bioma" } },
+    { "name": "Tortilla Española", "price": "8.00", "desc": { "es": "La de toda la vida, jugosa", "en": "Classic style, runny", "ca": "La de sempre, sucosa" } },
+    { "name": "Granola Bowl", "price": "8.00", "desc": { "es": "Yogur griego, granola casera, fruta de temporada", "en": "Greek yogurt, house granola, seasonal fruit", "ca": "Iogurt grec, granola de la casa, fruita de temporada" } },
+    { "name": "Shakshuka", "price": "10.00", "desc": { "es": "Huevos en salsa de tomate especiada", "en": "Eggs in spiced tomato sauce", "ca": "Ous en salsa de tomàquet especiada" } },
+    { "name": "Pancakes", "price": "9.00", "desc": { "es": "Stack de 3, sirope de arce, mantequilla", "en": "Stack of 3, maple syrup, butter", "ca": "Stack de 3, xarop d'auró, mantega" } }
+  ],
+  "tostas": [
+    { "name": "Tostada con Tomate", "price": "4.00", "desc": { "es": "Pan de masa madre, tomate rallado, AOVE", "en": "Sourdough, grated tomato, EVOO", "ca": "Pa de massa mare, tomàquet ratllat, AOVE" } },
+    { "name": "Tostada de Jamón", "price": "7.00", "desc": { "es": "Ibérico de bellota 36 meses", "en": "Bellota ibérico 36 months", "ca": "Ibèric de gla 36 mesos" } },
+    { "name": "Tostada de Salmón", "price": "8.00", "desc": { "es": "Salmón ahumado, queso crema, eneldo", "en": "Smoked salmon, cream cheese, dill", "ca": "Salmó fumat, formatge crema, anet" } },
+    { "name": "Tostada de Queso", "price": "6.00", "desc": { "es": "Brie fundido, nueces, miel", "en": "Melted brie, walnuts, honey", "ca": "Brie fos, nous, mel" } }
+  ],
+  "pastries": [
+    { "name": "Croissant", "price": "3.00", "desc": { "es": "La Puntual — mantequilla francesa", "en": "La Puntual — French butter", "ca": "La Puntual — mantega francesa" } },
+    { "name": "Pain au Chocolat", "price": "3.50", "desc": { "es": "Dos barritas de chocolate 70%", "en": "Two 70% chocolate sticks", "ca": "Dues barretes de xocolata 70%" } },
+    { "name": "Cinnamon Roll", "price": "4.00", "desc": { "es": "Canela de Ceylan, glaseado", "en": "Ceylon cinnamon, glazed", "ca": "Canyella de Ceilan, glacejat" } },
+    { "name": "Cookie", "price": "2.50", "desc": { "es": "Chocolate chips, flor de sal", "en": "Chocolate chips, fleur de sel", "ca": "Chocolate chips, flor de sal" } },
+    { "name": "Banana Bread", "price": "3.50", "desc": { "es": "Nueces, chocolate negro", "en": "Walnuts, dark chocolate", "ca": "Nous, xocolata negra" } },
+    { "name": "Carrot Cake", "price": "4.50", "desc": { "es": "Frosting de queso crema", "en": "Cream cheese frosting", "ca": "Frosting de formatge crema" } }
   ]
 }

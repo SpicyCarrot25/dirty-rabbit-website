@@ -5,174 +5,94 @@ import { getTranslations } from '../i18n';
 const lang = 'es';
 const t = getTranslations(lang);
 
-// FAQ Schema for SEO
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": t.contact.questions.reservation,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": t.contact.questions.reservationAnswer
-      }
-    },
-    {
-      "@type": "Question",
-      "name": t.contact.questions.wifi,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": t.contact.questions.wifiAnswer
-      }
-    },
-    {
-      "@type": "Question",
-      "name": t.contact.questions.dogs,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": t.contact.questions.dogsAnswer
-      }
-    },
-    {
-      "@type": "Question",
-      "name": t.contact.questions.parking,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": t.contact.questions.parkingAnswer
-      }
-    },
-    {
-      "@type": "Question",
-      "name": t.contact.questions.events,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": t.contact.questions.eventsAnswer
-      }
-    },
-    {
-      "@type": "Question",
-      "name": t.contact.questions.dietary,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": t.contact.questions.dietaryAnswer
-      }
-    }
-  ]
-};
+const faqs = [
+  { q: t.contact.questions.reservation, a: t.contact.questions.reservationAnswer },
+  { q: t.contact.questions.wifi, a: t.contact.questions.wifiAnswer },
+  { q: t.contact.questions.dogs, a: t.contact.questions.dogsAnswer },
+  { q: t.contact.questions.parking, a: t.contact.questions.parkingAnswer },
+  { q: t.contact.questions.events, a: t.contact.questions.eventsAnswer },
+  { q: t.contact.questions.dietary, a: t.contact.questions.dietaryAnswer },
+];
 ---
 
 <Layout title={`${t.contact.title} — Dirty Rabbit`} lang={lang}>
-  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
-  
-  <!-- Hero -->
-  <section class="py-16 md:py-24 bg-black text-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="reveal font-typewriter text-5xl md:text-7xl font-bold">{t.contact.title}</h1>
+  <!-- Hero Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="reveal font-typewriter text-5xl md:text-7xl font-bold mb-6 text-center">{t.contact.title}</h1>
+      <div class="w-24 h-px bg-red mx-auto"></div>
     </div>
   </section>
-  
-  <!-- Contact Info + Map -->
+
+  <!-- Content -->
   <section class="py-16 md:py-24 bg-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-12">
-        <div class="reveal">
-          <h2 class="font-typewriter text-3xl md:text-4xl font-bold mb-8">{t.contact.findUs}</h2>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16">
+        <!-- Info Column -->
+        <div class="reveal space-y-10">
+          <!-- Address -->
+          <div>
+            <h2 class="font-typewriter text-2xl md:text-3xl font-bold mb-4">{t.contact.findUs}</h2>
+            <div class="font-mono text-lg text-black/80 space-y-1">
+              <p class="font-bold">Dirty Rabbit</p>
+              <p>{t.footer.address}</p>
+              <p>{t.footer.city}</p>
+            </div>
+          </div>
           
-          <div class="space-y-6">
-            <div>
-              <h3 class="font-typewriter text-xl font-bold mb-2">Dirección</h3>
-              <p class="font-mono text-lg text-black/70">
-                {t.footer.address}<br/>
-                {t.footer.city}
-              </p>
-            </div>
-            
-            <div>
-              <h3 class="font-typewriter text-xl font-bold mb-2">{t.contact.hours}</h3>
-              <p class="font-mono text-lg text-black/70">
-                {t.footer.hours}
-              </p>
-            </div>
-            
-            <div>
-              <h3 class="font-typewriter text-xl font-bold mb-2">Email</h3>
-              <a 
-                href="mailto:hola@dirtyrabbit.es" 
-                class="font-mono text-lg text-red hover:text-red/80 transition-colors"
-              >
-                {t.footer.email}
-              </a>
-            </div>
-            
-            <div class="flex gap-4 pt-4">
-              <a 
-                href="https://instagram.com/dirtyrabbitbcn" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-red hover:border-red hover:text-white transition-colors"
-                aria-label="Instagram"
-              >
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-              </a>
+          <!-- Hours -->
+          <div>
+            <h2 class="font-typewriter text-2xl md:text-3xl font-bold mb-4">{t.contact.hours}</h2>
+            <div class="font-mono text-lg text-black/80 space-y-1">
+              <p>{t.footer.hours}</p>
+              <p class="text-red font-bold">{t.footer.closed}</p>
             </div>
           </div>
+
+          <!-- Contact Links -->
+          <div class="space-y-4">
+            <a 
+              href="mailto:hola@dirtyrabbit.es" 
+              class="flex items-center gap-3 font-mono text-lg text-red hover:text-red/80 transition-colors group"
+            >
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              <span class="group-hover:underline">hola@dirtyrabbit.es</span>
+            </a>
+            
+            <a 
+              href="https://instagram.com/dirtyrabbitsagaro" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center gap-3 font-mono text-lg text-red hover:text-red/80 transition-colors group"
+            >
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span class="group-hover:underline">@dirtyrabbitsagaro</span>
+            </a>
+          </div>
         </div>
-        
+
+        <!-- FAQ Column -->
         <div class="reveal">
-          <div class="w-full aspect-square bg-black/10">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.416826583!2d2.1783!3d41.3872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDIzJzE0LjAiTiAywrAxMCczMi4zIkU!5e0!3m2!1sen!2ses!4v1234567890"
-              width="100%" 
-              height="100%" 
-              style="border:0;" 
-              allowfullscreen="" 
-              loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"
-              title="Dirty Rabbit location"
-            ></iframe>
+          <h2 class="font-typewriter text-2xl md:text-3xl font-bold mb-8">{t.contact.faq}</h2>
+          <div class="space-y-4">
+            {faqs.map((faq) => (
+              <details class="group border border-black bg-white">
+                <summary class="font-typewriter text-lg cursor-pointer p-4 hover:bg-cream transition-colors list-none flex justify-between items-center">
+                  <span>{faq.q}</span>
+                  <svg class="w-5 h-5 text-red group-open:rotate-180 transition-transform shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="border-t border-black/10 p-4 bg-cream/50">
+                  <p class="font-mono text-black/70 leading-relaxed">{faq.a}</p>
+                </div>
+              </details>
+            ))}
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- FAQ Section -->
-  <section class="py-16 md:py-24 bg-black text-cream">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="font-typewriter text-3xl md:text-4xl font-bold mb-12 text-center reveal">{t.contact.faq}</h2>
-      
-      <div class="space-y-6 stagger-group">
-        <div class="stagger-item border-b border-cream/20 pb-6">
-          <h3 class="font-typewriter text-xl font-bold mb-2">{t.contact.questions.reservation}</h3>
-          <p class="font-mono text-cream/70">{t.contact.questions.reservationAnswer}</p>
-        </div>
-        
-        <div class="stagger-item border-b border-cream/20 pb-6">
-          <h3 class="font-typewriter text-xl font-bold mb-2">{t.contact.questions.wifi}</h3>
-          <p class="font-mono text-cream/70">{t.contact.questions.wifiAnswer}</p>
-        </div>
-        
-        <div class="stagger-item border-b border-cream/20 pb-6">
-          <h3 class="font-typewriter text-xl font-bold mb-2">{t.contact.questions.dogs}</h3>
-          <p class="font-mono text-cream/70">{t.contact.questions.dogsAnswer}</p>
-        </div>
-        
-        <div class="stagger-item border-b border-cream/20 pb-6">
-          <h3 class="font-typewriter text-xl font-bold mb-2">{t.contact.questions.parking}</h3>
-          <p class="font-mono text-cream/70">{t.contact.questions.parkingAnswer}</p>
-        </div>
-        
-        <div class="stagger-item border-b border-cream/20 pb-6">
-          <h3 class="font-typewriter text-xl font-bold mb-2">{t.contact.questions.events}</h3>
-          <p class="font-mono text-cream/70">{t.contact.questions.eventsAnswer}</p>
-        </div>
-        
-        <div class="stagger-item">
-          <h3 class="font-typewriter text-xl font-bold mb-2">{t.contact.questions.dietary}</h3>
-          <p class="font-mono text-cream/70">{t.contact.questions.dietaryAnswer}</p>
         </div>
       </div>
     </div>
