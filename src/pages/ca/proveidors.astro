@@ -8,28 +8,23 @@ const t = getTranslations(lang);
 ---
 
 <Layout title={`${t.producers.title} — Dirty Rabbit`} lang={lang}>
-  <!-- Hero Section -->
-  <section class="pt-12 pb-8 md:pt-16 md:pb-12 bg-white">
+  <!-- Hero Image with Title Overlay -->
+  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center reveal">
-        <h1 class="font-typewriter text-5xl md:text-7xl font-bold mb-6">{t.producers.title}</h1>
-        <div class="w-24 h-px bg-red mx-auto mb-8"></div>
-        <p class="font-mono text-lg md:text-xl text-black/70 max-w-2xl mx-auto leading-relaxed">
-          {t.producers.intro}
-        </p>
+      <div class="relative">
+        <img 
+          src="/images/heroes/proveedores.jpg" 
+          alt="Els nostres partners" 
+          class="w-full aspect-[16/9] object-cover rounded-lg"
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-black/30 rounded-lg flex items-center justify-center">
+          <h1 class="font-typewriter text-4xl md:text-6xl font-bold text-white text-center px-4">Els Nostres Partners</h1>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Hero Image -->
-  <section class="pb-12 md:pb-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <img 
-        src="/images/heroes/proveedores.jpg" 
-        alt="Els nostres proveïdors" 
-        class="w-full aspect-[16/9] object-cover rounded-lg"
-        loading="eager"
-      />
+      <p class="font-mono text-lg md:text-xl text-black/70 max-w-2xl mx-auto leading-relaxed text-center mt-8">
+        {t.producers.intro}
+      </p>
     </div>
   </section>
 
