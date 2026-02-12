@@ -30,9 +30,9 @@ const contactLabelsDesktop: Record<Language, string> = {
 
 // Mobile labels (full)
 const historyLabels: Record<Language, string> = {
-  es: 'Nuestra Manera',
+  es: 'Nosotros',
   en: 'Our Way',
-  ca: 'La Nostra Manera'
+  ca: 'Nosaltres'
 };
 
 const suppliersLabels: Record<Language, string> = {
@@ -190,7 +190,7 @@ const orderLabels: Record<Language, string> = {
         href={getLocalizedPath('/carta', lang)} 
         class="block font-typewriter text-4xl tracking-normal text-red hover:text-red/80 transition-colors"
       >
-        Carta
+        {t.nav.menu}
       </a>
       <a 
         href={getLocalizedPath('/about', lang)} 
