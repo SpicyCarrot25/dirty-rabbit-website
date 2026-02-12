@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getTranslations } from '../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const questions = t.contact.questions;
+---
+
+<Layout title={`${t.faq.title} — Dirty Rabbit`} lang={lang}>
+  <!-- Hero Section -->
+  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">{t.faq.title}</h1>
+      <div class="w-16 h-px bg-red mx-auto mb-8"></div>
+      <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed max-w-xl mx-auto">
+        {t.faq.intro}
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Content -->
+  <section class="py-8 md:py-12 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="space-y-8">
+        <!-- Reservation -->
+        <div class="border-b border-black/10 pb-8">
+          <h2 class="font-typewriter text-xl md:text-2xl font-bold text-red mb-4">
+            {questions.reservation}
+          </h2>
+          <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">
+            {questions.reservationAnswer}
+          </p>
+        </div>
+
+        <!-- WiFi -->
+        <div class="border-b border-black/10 pb-8">
+          <h2 class="font-typewriter text-xl md:text-2xl font-bold text-red mb-4">
+            {questions.wifi}
+          </h2>
+          <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">
+            {questions.wifiAnswer}
+          </p>
+        </div>
+
+        <!-- Dogs -->
+        <div class="border-b border-black/10 pb-8">
+          <h2 class="font-typewriter text-xl md:text-2xl font-bold text-red mb-4">
+            {questions.dogs}
+          </h2>
+          <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">
+            {questions.dogsAnswer}
+          </p>
+        </div>
+
+        <!-- Parking -->
+        <div class="border-b border-black/10 pb-8">
+          <h2 class="font-typewriter text-xl md:text-2xl font-bold text-red mb-4">
+            {questions.parking}
+          </h2>
+          <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">
+            {questions.parkingAnswer}
+          </p>
+        </div>
+
+        <!-- Dietary -->
+        <div class="border-b border-black/10 pb-8">
+          <h2 class="font-typewriter text-xl md:text-2xl font-bold text-red mb-4">
+            {questions.dietary}
+          </h2>
+          <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">
+            {questions.dietaryAnswer}
+          </p>
+        </div>
+
+        <!-- Events -->
+        <div class="pb-8">
+          <h2 class="font-typewriter text-xl md:text-2xl font-bold text-red mb-4">
+            {questions.events}
+          </h2>
+          <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">
+            {questions.eventsAnswer}
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact CTA -->
+      <div class="mt-16 pt-16 border-t border-red text-center">
+        <p class="font-mono text-sm md:text-base text-black/80 mb-6">
+          ¿No encuentras lo que buscas?
+        </p>
+        <a 
+          href="mailto:hola@dirtyrabbit.es" 
+          class="inline-block bg-red text-cream font-typewriter font-bold px-8 py-3 rounded-lg hover:bg-red/90 transition-colors"
+        >
+          Escríbenos
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -35,7 +35,7 @@ const t = getTranslations(lang);
             
             <!-- Supplier Info -->
             <h2 class="font-typewriter text-2xl md:text-3xl font-bold mb-2">{p.name}</h2>
-            <p class="font-mono text-sm text-red mb-4 uppercase tracking-wide">
+            <p class="font-mono text-sm text-red mb-4 tracking-wide">
               {(p.category as any)[lang]}{p.origin ? ` · ${p.origin}` : ''}
             </p>
             <p class="font-mono text-black/70 leading-relaxed">{(p.description as any)[lang]}</p>
