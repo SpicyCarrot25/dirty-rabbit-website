@@ -43,23 +43,19 @@ const footerLabels = {
     </p>
     
     <!-- Box-style email input -->
-    <form 
-      id="newsletter-form"
-      class="max-w-md mb-4"
-      action="https://buttondown.email/api/emails/embed-subscribe/dirtyrabbit"
-      method="post"
-      target="popupwindow"
-    >
-      <div class="flex items-center border border-[#1A1A1A] rounded-lg px-4 py-3 gap-4">
+    <form id="newsletter-form" class="max-w-md mb-4">
+      <div id="form-container" class="flex items-center border border-[#1A1A1A] rounded-lg px-4 py-3 gap-4">
         <input 
           type="email" 
           name="email"
+          id="newsletter-email"
           placeholder={footerLabels.placeholder[lang]}
           class="flex-1 bg-transparent font-mono text-base placeholder:text-black/40 focus:outline-none"
           required
         />
         <button 
           type="submit"
+          id="newsletter-btn"
           class="font-typewriter text-base text-red hover:text-red/70 transition-colors whitespace-nowrap"
         >
           {footerLabels.submit[lang]}
@@ -67,28 +63,79 @@ const footerLabels = {
       </div>
       
       <!-- Privacy checkbox -->
-      <label class="flex items-start gap-2 mt-2 font-mono text-[10px] text-black/50 cursor-pointer">
-        <input type="checkbox" class="rounded border-[#1A1A1A]/30 mt-0.5 shrink-0" required />
+      <label id="privacy-label" class="flex items-start gap-2 mt-2 font-mono text-[10px] text-black/50 cursor-pointer">
+        <input type="checkbox" id="privacy-check" class="rounded border-[#1A1A1A]/30 mt-0.5 shrink-0" required />
         <span>{footerLabels.privacy[lang].split('Política')[0]}<a href="/privacidad" class="underline hover:text-red transition-colors">Política de Privacidad</a></span>
       </label>
       
       <!-- Success message (hidden by default) -->
       <p id="newsletter-success" class="hidden mt-3 font-mono text-sm text-green-600">
-        ✓ ¡Gracias! Te has suscrito.
+        ✓ ¡Gracias! Te sorprenderemos pronto.
+      </p>
+      
+      <!-- Error message (hidden by default) -->
+      <p id="newsletter-error" class="hidden mt-3 font-mono text-sm text-red">
+        Algo salió mal. Inténtalo de nuevo.
       </p>
     </form>
     
-    <script>
-      // Simple form handling with localStorage fallback
+    <script define:vars={{ supabaseUrl: 'https://brgvscagofzftmbtakoa.supabase.co', supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJyZ3ZzY2Fnb2Z6ZnRtYnRha29hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNTAyNjEsImV4cCI6MjA2MzgyNjI2MX0.LgSfVNLbCRr7ZuLmSwvLJqi-fHbJF1XzrOd0qf7sKPk' }}>
       const form = document.getElementById('newsletter-form');
+      const emailInput = document.getElementById('newsletter-email');
+      const formContainer = document.getElementById('form-container');
+      const privacyLabel = document.getElementById('privacy-label');
+      const successMsg = document.getElementById('newsletter-success');
+      const errorMsg = document.getElementById('newsletter-error');
+      const btn = document.getElementById('newsletter-btn');
+      
       if (form) {
-        form.addEventListener('submit', (e) => {
-          const email = form.querySelector('input[type="email"]').value;
-          // Store locally as backup
-          const subs = JSON.parse(localStorage.getItem('dr_newsletter') || '[]');
-          if (!subs.includes(email)) {
-            subs.push(email);
-            localStorage.setItem('dr_newsletter', JSON.stringify(subs));
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          
+          const email = emailInput.value.trim();
+          if (!email) return;
+          
+          btn.textContent = '...';
+          btn.disabled = true;
+          
+          try {
+            // Save to Supabase
+            const res = await fetch(`${supabaseUrl}/rest/v1/newsletter_subscribers`, {
+              method: 'POST',
+              headers: {
+                'apikey': supabaseKey,
+                'Authorization': `Bearer ${supabaseKey}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+              },
+              body: JSON.stringify({ email, source: 'website', subscribed_at: new Date().toISOString() })
+            });
+            
+            if (res.ok || res.status === 201) {
+              // Success - hide form, show message
+              formContainer.classList.add('hidden');
+              privacyLabel.classList.add('hidden');
+              successMsg.classList.remove('hidden');
+            } else if (res.status === 409) {
+              // Already subscribed
+              formContainer.classList.add('hidden');
+              privacyLabel.classList.add('hidden');
+              successMsg.textContent = '✓ Ya estás suscrito. ¡Gracias!';
+              successMsg.classList.remove('hidden');
+            } else {
+              throw new Error('API error');
+            }
+          } catch (err) {
+            // Fallback to localStorage
+            const subs = JSON.parse(localStorage.getItem('dr_newsletter') || '[]');
+            if (!subs.includes(email)) {
+              subs.push(email);
+              localStorage.setItem('dr_newsletter', JSON.stringify(subs));
+            }
+            // Still show success (saved locally)
+            formContainer.classList.add('hidden');
+            privacyLabel.classList.add('hidden');
+            successMsg.classList.remove('hidden');
           }
         });
       }
