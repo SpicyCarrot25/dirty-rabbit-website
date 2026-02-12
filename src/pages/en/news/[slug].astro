@@ -1,10 +1,10 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { getTranslations } from '../../i18n';
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('news', ({ data }) => data.lang === 'es');
+  const posts = await getCollection('news', ({ data }) => data.lang === 'en');
   return posts.map(post => ({
     params: { slug: post.slug },
     props: { post },
@@ -14,7 +14,7 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await post.render();
 
-const lang = post.data.lang || 'es';
+const lang = 'en';
 const t = getTranslations(lang);
 ---
 
@@ -23,19 +23,19 @@ const t = getTranslations(lang);
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Back link -->
       <a 
-        href="/news" 
+        href="/en/news" 
         class="font-mono text-sm text-red hover:text-red/80 transition-colors inline-flex items-center gap-2 mb-8"
       >
         <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
         </svg>
-        Volver a noticias
+        Back to news
       </a>
       
       <!-- Header -->
       <header class="mb-8">
         <time class="font-mono text-sm text-red mb-4 block">
-          {post.data.date.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
+          {post.data.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
         </time>
         <h1 class="font-typewriter text-4xl md:text-5xl font-bold mb-4">{post.data.title}</h1>
         <p class="font-mono text-lg text-black/70">{post.data.description}</p>
@@ -43,7 +43,7 @@ const t = getTranslations(lang);
       
       <!-- Featured image placeholder -->
       <div class="aspect-[16/9] bg-black/10 rounded-xl flex items-center justify-center mb-12">
-        <span class="font-mono text-sm text-black/30">[FOTO]</span>
+        <span class="font-mono text-sm text-black/30">[PHOTO]</span>
       </div>
       
       <!-- Content -->
