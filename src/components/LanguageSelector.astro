@@ -17,52 +17,29 @@ const langNames: Record<Language, string> = {
 };
 ---
 
-<div class="relative" id="lang-selector">
-  <button 
-    class="flex items-center gap-1.5 font-mono text-sm px-3 py-2 hover:text-red transition-colors border border-transparent hover:border-red/20 rounded-lg"
-    aria-label="Select language"
-    id="lang-btn"
-  >
-    <span class="font-bold">{langNames[lang]}</span>
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-    </svg>
-  </button>
-  
-  <div 
-    id="lang-dropdown"
-    class="hidden absolute right-0 top-full mt-1 bg-white border border-black/20 rounded-lg shadow-lg min-w-[80px] z-[200] overflow-hidden"
-  >
-    {languages.map((l) => (
+<!-- Simple inline language switcher - no dropdown, all options visible -->
+<div class="flex items-center gap-1">
+  {languages.map((l, i) => (
+    <>
       <a 
         href={getLocalizedPath(currentPath, l)}
         class:list={[
-          "block px-4 py-3 font-mono text-sm hover:bg-cream transition-colors",
-          l === lang ? "text-red font-bold bg-cream/50" : "text-black"
+          "font-mono text-sm px-2 py-1 rounded transition-colors",
+          l === lang 
+            ? "text-red font-bold" 
+            : "text-black/60 hover:text-black active:text-red"
         ]}
         data-lang={l}
       >
         {langNames[l]}
       </a>
-    ))}
-  </div>
+      {i < languages.length - 1 && <span class="text-black/30">|</span>}
+    </>
+  ))}
 </div>
 
 <script>
-  const btn = document.getElementById('lang-btn');
-  const dropdown = document.getElementById('lang-dropdown');
-  
-  btn?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    dropdown?.classList.toggle('hidden');
-  });
-  
-  // Close on outside click
-  document.addEventListener('click', () => {
-    dropdown?.classList.add('hidden');
-  });
-  
-  // Save language preference
+  // Save language preference on click
   document.querySelectorAll('[data-lang]').forEach(link => {
     link.addEventListener('click', () => {
       const lang = link.getAttribute('data-lang');
