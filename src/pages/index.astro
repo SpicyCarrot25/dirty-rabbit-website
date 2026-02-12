@@ -49,9 +49,27 @@ const featuredProviders = proveedores.slice(0, 4);
   <!-- COMMUNITY SECTION: Post-hero, no headline, elegant typography -->
   <section class="py-20 md:py-32 bg-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80">
+      <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80 mb-10">
         The family with the noisy kid. The remote worker with the dying laptop. The retired couple who've been coming since week one. The expat who just moved and doesn't know anyone yet. Strangers become regulars become friends.
       </p>
+      
+      <!-- CTA Buttons -->
+      <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href={getLocalizedPath('/menu', lang)}
+          class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-red text-red hover:bg-red hover:text-white transition-colors rounded-lg"
+        >
+          Carta
+        </a>
+        <a 
+          href="https://order.dirtyrabbit.es"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-lg"
+        >
+          Pide Ahora
+        </a>
+      </div>
     </div>
   </section>
   
