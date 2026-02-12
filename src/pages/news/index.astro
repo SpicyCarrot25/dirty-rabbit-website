@@ -18,7 +18,8 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-12">
         <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">{t.news.title}</h1>
-        <div class="w-16 h-px bg-red mx-auto"></div>
+        <div class="w-16 h-px bg-red mx-auto mb-6"></div>
+        <p class="font-mono text-sm text-black/60">{t.news.subtitle}</p>
       </div>
       
       {posts.length === 0 ? (

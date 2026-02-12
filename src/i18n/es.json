@@ -99,7 +99,8 @@
     }
   },
   "news": {
-    "title": "Noticias",
+    "title": "News y Momentos",
+    "subtitle": "Lo último de Dirty Rabbit",
     "readMore": "Leer más"
   },
   "faq": {

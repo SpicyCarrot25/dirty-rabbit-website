@@ -99,7 +99,8 @@
     }
   },
   "news": {
-    "title": "News",
+    "title": "News & Moments",
+    "subtitle": "The latest from Dirty Rabbit",
     "readMore": "Read more"
   },
   "faq": {
