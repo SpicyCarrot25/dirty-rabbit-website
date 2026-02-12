@@ -90,19 +90,22 @@ const featuredProviders = proveedores.slice(0, 4);
       
       <!-- Horizontal Slider - Square cards with text overlay -->
       <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
-        {featuredProviders.map((p) => (
+        {featuredProviders.map((p, i) => {
+          const images = [
+            'https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&h=600&fit=crop', // La Cabra - coffee
+            'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=600&h=600&fit=crop', // REQ Matcha
+            'https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600&h=600&fit=crop', // Awachai - chai spices
+            'https://images.unsplash.com/photo-1488459716781-31db52582fe9?w=600&h=600&fit=crop', // Bioma - produce
+          ];
+          return (
           <article class="reveal card-lift relative aspect-square w-[70vw] md:w-[280px] rounded-xl overflow-hidden border border-[#1A1A1A]">
-            <!-- Background image placeholder -->
-            <div class="absolute inset-0 bg-cream">
+            <!-- Background image -->
+            <div class="absolute inset-0">
               <img 
-                src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
-                alt="" 
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 opacity-10"
-                aria-hidden="true"
+                src={images[i] || images[0]}
+                alt={p.name}
+                class="w-full h-full object-cover"
               />
-              <span class="absolute top-4 left-4 font-mono text-xs text-black/30 tracking-wider">
-                [Photo tbd]
-              </span>
             </div>
             <!-- Text overlay at bottom -->
             <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16">
@@ -117,7 +120,8 @@ const featuredProviders = proveedores.slice(0, 4);
               </p>
             </div>
           </article>
-        ))}
+          );
+        })}
       </div>
       
       <!-- View All Link -->
@@ -154,80 +158,90 @@ const featuredProviders = proveedores.slice(0, 4);
       <!-- Horizontal Slider -->
       <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
         
-        <!-- Card 1 -->
+        <!-- Card 1 - Running Club -->
         <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-          <div class="aspect-square bg-cream relative overflow-hidden">
+          <div class="aspect-square relative overflow-hidden">
             <img 
-              src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
-              alt="" 
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 opacity-10"
-              aria-hidden="true"
+              src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&h=600&fit=crop"
+              alt="Running club"
+              class="w-full h-full object-cover"
             />
-            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 tracking-wider">
-              [Photo tbd]
-            </span>
           </div>
           <div class="p-6">
             <time class="font-mono text-xs text-red tracking-wider">
-              Feb 2026
+              Ene 2025
             </time>
             <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
-              Nuevo menú de primavera
+              Running Club: ya somos 20
             </h3>
             <p class="font-mono text-sm text-black/60 line-clamp-2">
-              Platos frescos con producto de temporada de nuestros proveedores locales.
+              Cada martes a las 8am. 5km por la costa y café después. Ya se han hecho amistades.
             </p>
           </div>
         </article>
         
-        <!-- Card 2 -->
+        <!-- Card 2 - Primera temporada -->
         <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-          <div class="aspect-square bg-cream relative overflow-hidden">
+          <div class="aspect-square relative overflow-hidden">
             <img 
-              src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
-              alt="" 
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 opacity-10"
-              aria-hidden="true"
+              src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=600&fit=crop"
+              alt="Café interior"
+              class="w-full h-full object-cover"
             />
-            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 tracking-wider">
-              [Photo tbd]
-            </span>
           </div>
           <div class="p-6">
             <time class="font-mono text-xs text-red tracking-wider">
-              Ene 2026
+              Dic 2024
             </time>
             <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
-              Colaboración con La Cabra
+              Primera temporada: gracias
             </h3>
             <p class="font-mono text-sm text-black/60 line-clamp-2">
-              Tostadores de Copenhagen, ahora nuestro café house blend.
+              De desconocidos a amigos. La primera season fue más bonita de lo que imaginábamos.
             </p>
           </div>
         </article>
         
-        <!-- Card 3 -->
+        <!-- Card 3 - Apertura -->
         <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-          <div class="aspect-square bg-cream relative overflow-hidden">
+          <div class="aspect-square relative overflow-hidden">
             <img 
-              src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
-              alt="" 
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 opacity-10"
-              aria-hidden="true"
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=600&fit=crop"
+              alt="Coffee shop opening"
+              class="w-full h-full object-cover"
             />
-            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 tracking-wider">
-              [Photo tbd]
-            </span>
           </div>
           <div class="p-6">
             <time class="font-mono text-xs text-red tracking-wider">
-              Dic 2025
+              Nov 2024
             </time>
             <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
               Abrimos en S'Agaró
             </h3>
             <p class="font-mono text-sm text-black/60 line-clamp-2">
-              Después de meses de trabajo, el conejo ha encontrado su madriguera.
+              Después de meses de trabajo, el conejo ha encontrado su madriguera. Bienvenidos.
+            </p>
+          </div>
+        </article>
+        
+        <!-- Card 4 - La Cabra -->
+        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+          <div class="aspect-square relative overflow-hidden">
+            <img 
+              src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&h=600&fit=crop"
+              alt="La Cabra coffee"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-6">
+            <time class="font-mono text-xs text-red tracking-wider">
+              Nov 2024
+            </time>
+            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
+              Café de La Cabra
+            </h3>
+            <p class="font-mono text-sm text-black/60 line-clamp-2">
+              Copenhagen en tu taza. El mejor tostador de Europa ahora en Costa Brava.
             </p>
           </div>
         </article>
