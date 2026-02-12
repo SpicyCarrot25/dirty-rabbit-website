@@ -70,10 +70,10 @@ const featuredProviders = proveedores.slice(0, 4);
         </p>
       </div>
       
-      <!-- 4-Card Grid - BOLD, larger cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <!-- Horizontal Slider (same as News) -->
+      <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
         {featuredProviders.map((p) => (
-          <article class="reveal card-lift bg-cream border-2 border-[#1A1A1A] rounded-2xl overflow-hidden">
+          <article class="reveal card-lift bg-cream border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
             <div class="aspect-square bg-white relative overflow-hidden">
               <img 
                 src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
@@ -81,15 +81,15 @@ const featuredProviders = proveedores.slice(0, 4);
                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 opacity-10"
                 aria-hidden="true"
               />
-              <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
-                [PHOTO TBD]
+              <span class="absolute top-4 left-4 font-mono text-xs text-black/30 tracking-wider">
+                [Photo tbd]
               </span>
             </div>
             <div class="p-6">
-              <p class="font-mono text-xs text-red uppercase tracking-wider mb-2 font-bold">
+              <p class="font-mono text-xs text-red tracking-wider mb-2">
                 {(p.category as any)[lang]}
               </p>
-              <h3 class="font-typewriter text-xl md:text-2xl mb-2 text-black font-bold">
+              <h3 class="font-typewriter text-xl md:text-2xl mb-2 text-black">
                 {p.name}
               </h3>
               <p class="font-mono text-sm text-black/60">
@@ -134,8 +134,8 @@ const featuredProviders = proveedores.slice(0, 4);
       <!-- Horizontal Slider -->
       <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
         
-        <!-- Card 1 - BIGGER, BOLDER -->
-        <article class="reveal card-lift bg-white border-2 border-[#1A1A1A] rounded-2xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+        <!-- Card 1 -->
+        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
           <div class="aspect-square bg-cream relative overflow-hidden">
             <img 
               src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
@@ -143,15 +143,15 @@ const featuredProviders = proveedores.slice(0, 4);
               class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 opacity-10"
               aria-hidden="true"
             />
-            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
-              [PHOTO TBD]
+            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 tracking-wider">
+              [Photo tbd]
             </span>
           </div>
           <div class="p-6">
-            <time class="font-mono text-xs text-red uppercase tracking-wider font-bold">
+            <time class="font-mono text-xs text-red tracking-wider">
               Feb 2026
             </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black font-bold">
+            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
               Nuevo menú de primavera
             </h3>
             <p class="font-mono text-sm text-black/60 line-clamp-2">
@@ -161,7 +161,7 @@ const featuredProviders = proveedores.slice(0, 4);
         </article>
         
         <!-- Card 2 -->
-        <article class="reveal card-lift bg-white border-2 border-[#1A1A1A] rounded-2xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
           <div class="aspect-square bg-cream relative overflow-hidden">
             <img 
               src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
@@ -169,15 +169,15 @@ const featuredProviders = proveedores.slice(0, 4);
               class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 opacity-10"
               aria-hidden="true"
             />
-            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
-              [PHOTO TBD]
+            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 tracking-wider">
+              [Photo tbd]
             </span>
           </div>
           <div class="p-6">
-            <time class="font-mono text-xs text-red uppercase tracking-wider font-bold">
+            <time class="font-mono text-xs text-red tracking-wider">
               Ene 2026
             </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black font-bold">
+            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
               Colaboración con La Cabra
             </h3>
             <p class="font-mono text-sm text-black/60 line-clamp-2">
@@ -187,7 +187,7 @@ const featuredProviders = proveedores.slice(0, 4);
         </article>
         
         <!-- Card 3 -->
-        <article class="reveal card-lift bg-white border-2 border-[#1A1A1A] rounded-2xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
           <div class="aspect-square bg-cream relative overflow-hidden">
             <img 
               src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
@@ -195,15 +195,15 @@ const featuredProviders = proveedores.slice(0, 4);
               class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 opacity-10"
               aria-hidden="true"
             />
-            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
-              [PHOTO TBD]
+            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 tracking-wider">
+              [Photo tbd]
             </span>
           </div>
           <div class="p-6">
-            <time class="font-mono text-xs text-red uppercase tracking-wider font-bold">
+            <time class="font-mono text-xs text-red tracking-wider">
               Dic 2025
             </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black font-bold">
+            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
               Abrimos en S'Agaró
             </h3>
             <p class="font-mono text-sm text-black/60 line-clamp-2">

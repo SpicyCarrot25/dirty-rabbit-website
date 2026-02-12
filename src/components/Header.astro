@@ -162,17 +162,17 @@ const orderLabels: Record<Language, string> = {
       />
     </div>
     
-    <!-- Primary Links (LARGE) - Left aligned, Title Case -->
+    <!-- Primary Links (LARGE) - Left aligned, RED -->
     <nav class="space-y-5 mb-8">
       <a 
         href={getLocalizedPath('/menu', lang)} 
-        class="block font-typewriter text-3xl tracking-normal hover:text-red transition-colors"
+        class="block font-typewriter text-3xl tracking-normal text-red hover:text-red/80 transition-colors"
       >
         Carta
       </a>
       <a 
         href={getLocalizedPath('/about', lang)} 
-        class="block font-typewriter text-3xl tracking-normal hover:text-red transition-colors"
+        class="block font-typewriter text-3xl tracking-normal text-red hover:text-red/80 transition-colors"
       >
         {historyLabels[lang]}
       </a>
@@ -180,7 +180,7 @@ const orderLabels: Record<Language, string> = {
         href="https://order.dirtyrabbit.es" 
         target="_blank"
         rel="noopener noreferrer"
-        class="block font-typewriter text-3xl tracking-normal hover:text-red transition-colors"
+        class="block font-typewriter text-3xl tracking-normal text-red hover:text-red/80 transition-colors"
       >
         {orderLabels[lang]}
       </a>
@@ -189,23 +189,23 @@ const orderLabels: Record<Language, string> = {
     <!-- Solid divider line - RED -->
     <div class="w-full max-w-xs border-t border-[#CD202C] mb-8"></div>
     
-    <!-- Secondary Links (small) - Left aligned -->
+    <!-- Secondary Links (small) - Left aligned, RED -->
     <nav class="space-y-3">
       <a 
         href={getLocalizedPath('/proveedores', lang)} 
-        class="block font-mono text-base text-black/70 hover:text-red transition-colors"
+        class="block font-mono text-base text-red hover:text-red/80 transition-colors"
       >
         {suppliersLabels[lang]}
       </a>
       <a 
         href={getLocalizedPath('/contacto', lang)} 
-        class="block font-mono text-base text-black/70 hover:text-red transition-colors"
+        class="block font-mono text-base text-red hover:text-red/80 transition-colors"
       >
         {workLabels[lang]}
       </a>
       <a 
         href={getLocalizedPath('/contacto', lang)} 
-        class="block font-mono text-base text-black/70 hover:text-red transition-colors"
+        class="block font-mono text-base text-red hover:text-red/80 transition-colors"
       >
         {contactLabels[lang]}
       </a>
