@@ -50,19 +50,19 @@ const orderLabels: Record<Language, string> = {
           href={getLocalizedPath('/about', lang)} 
           class="nav-link font-mono text-sm tracking-wide transition-colors"
         >
-          {t.nav.about}
+          {historyLabels[lang]}
         </a>
         <a 
           href={getLocalizedPath('/proveedores', lang)} 
           class="nav-link font-mono text-sm tracking-wide transition-colors"
         >
-          {t.nav.producers}
+          {suppliersLabels[lang]}
         </a>
         <a 
-          href={getLocalizedPath('/contacto', lang)} 
+          href={getLocalizedPath('/faq', lang)} 
           class="nav-link font-mono text-sm tracking-wide transition-colors"
         >
-          {t.nav.contact}
+          {contactLabels[lang]}
         </a>
       </nav>
       
