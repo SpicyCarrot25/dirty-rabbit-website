@@ -6,7 +6,6 @@ import menuData from '../../data/menu.json';
 const lang = 'ca';
 const t = getTranslations(lang);
 
-// Reorganized sections
 const teaItems = menuData.drinks.filter(d => 
   d.name.toLowerCase().includes('matcha') || 
   d.name.toLowerCase().includes('chai')
@@ -26,169 +25,83 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
 ---
 
 <Layout title="Carta — Dirty Rabbit" lang={lang}>
-  <!-- Hero Section -->
   <section class="py-12 md:py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="font-typewriter text-5xl md:text-7xl font-bold mb-6">Carta</h1>
       <div class="w-24 h-px bg-red mx-auto mb-8"></div>
-      
-      <!-- Jump Navigation -->
-      <nav class="flex flex-wrap justify-center gap-4 md:gap-8 mb-8">
-        <a 
-          href="#coffee" 
-          class="font-typewriter text-lg md:text-xl text-red hover:text-red/70 transition-colors underline underline-offset-4"
-        >
-          Coffee & Cia
-        </a>
-        <a 
-          href="#bebidas" 
-          class="font-typewriter text-lg md:text-xl text-red hover:text-red/70 transition-colors underline underline-offset-4"
-        >
-          Begudes
-        </a>
-        <a 
-          href="#food" 
-          class="font-typewriter text-lg md:text-xl text-red hover:text-red/70 transition-colors underline underline-offset-4"
-        >
-          Menjar
-        </a>
-      </nav>
-
-      <a 
-        href="https://order.dirtyrabbit.es"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-block bg-red text-white font-typewriter text-lg px-8 py-4 hover:bg-red/90 transition-colors"
-      >
+      <a href="https://order.dirtyrabbit.es" target="_blank" rel="noopener noreferrer"
+        class="inline-block bg-red text-white font-typewriter text-lg px-8 py-4 hover:bg-red/90 transition-colors">
         Demana Online
       </a>
     </div>
   </section>
 
-  <!-- Menu Content -->
   <section class="py-8 md:py-16 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- COFFEE & CIA -->
       <div id="coffee" class="scroll-mt-24">
-        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">
-          Coffee & Cia
-        </h2>
-        <p class="font-mono text-sm text-black/70 text-center mb-8">
-          La Cabra blend · V60 orígens rotatius · Matcha REQ · Chai Awachai
-        </p>
-        
+        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">Coffee & Cia</h2>
+        <p class="font-mono text-sm text-black/70 text-center mb-8">La Cabra blend · V60 orígens rotatius · Matcha REQ · Chai Awachai</p>
         <div class="space-y-5">
           {coffeeAndTea.map((item) => (
             <div class="flex items-baseline justify-between gap-4 group">
               <div class="flex-1 min-w-0">
-                <div class="flex items-baseline gap-2">
-                  <h3 class="font-typewriter text-lg md:text-xl font-bold group-hover:text-red transition-colors">
-                    {item.name}
-                  </h3>
-                  <span class="flex-1 border-b border-dotted border-black/20"></span>
-                </div>
-                <p class="font-mono text-sm text-black/70 mt-1">
-                  {(item.desc as any)[lang]}
-                </p>
+                <h3 class="font-typewriter text-lg md:text-xl font-bold group-hover:text-red transition-colors">{item.name}</h3>
+                <p class="font-mono text-sm text-black/70 mt-1">{(item.desc as any)[lang]}</p>
               </div>
-              <span class="font-typewriter text-xl md:text-2xl font-bold text-red tabular-nums shrink-0">
-                €{item.price}
-              </span>
+              <span class="font-typewriter text-xl md:text-2xl font-bold text-red tabular-nums shrink-0">{item.price}</span>
             </div>
           ))}
         </div>
+        <p class="font-mono text-sm text-black/70 text-center mt-8 pt-4 border-t border-black/10">Llet de civada, soja o ametlla: +0.50€</p>
       </div>
 
-      <!-- BEGUDES -->
       <div id="bebidas" class="scroll-mt-24 mt-16 pt-16 border-t border-red">
-        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">
-          Begudes
-        </h2>
-        <p class="font-mono text-sm text-black/70 text-center mb-8">
-          Smoothies · Sucs naturals · Kombucha
-        </p>
-        
+        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">Begudes</h2>
+        <p class="font-mono text-sm text-black/70 text-center mb-8">Smoothies · Sucs naturals · Kombucha</p>
         <div class="space-y-5">
           {bebidas.map((item) => (
             <div class="flex items-baseline justify-between gap-4 group">
               <div class="flex-1 min-w-0">
-                <div class="flex items-baseline gap-2">
-                  <h3 class="font-typewriter text-lg md:text-xl font-bold group-hover:text-red transition-colors">
-                    {item.name}
-                  </h3>
-                  <span class="flex-1 border-b border-dotted border-black/20"></span>
-                </div>
-                <p class="font-mono text-sm text-black/70 mt-1">
-                  {(item.desc as any)[lang]}
-                </p>
+                <h3 class="font-typewriter text-lg md:text-xl font-bold group-hover:text-red transition-colors">{item.name}</h3>
+                <p class="font-mono text-sm text-black/70 mt-1">{(item.desc as any)[lang]}</p>
               </div>
-              <span class="font-typewriter text-xl md:text-2xl font-bold text-red tabular-nums shrink-0">
-                €{item.price}
-              </span>
+              <span class="font-typewriter text-xl md:text-2xl font-bold text-red tabular-nums shrink-0">{item.price}</span>
             </div>
           ))}
         </div>
       </div>
 
-      <!-- MENJAR -->
       <div id="food" class="scroll-mt-24 mt-16 pt-16 border-t border-red">
-        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">
-          Menjar
-        </h2>
-        <p class="font-mono text-sm text-black/70 text-center mb-8">
-          Ous de Bioma · Pa de massa mare · Brioixeria de La Puntual
-        </p>
-        
+        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">Menjar</h2>
+        <p class="font-mono text-sm text-black/70 text-center mb-8">Ous de Bioma · Pa de massa mare · Brioixeria de La Puntual</p>
         <div class="space-y-5">
           {food.map((item) => (
             <div class="flex items-baseline justify-between gap-4 group">
               <div class="flex-1 min-w-0">
-                <div class="flex items-baseline gap-2">
-                  <h3 class="font-typewriter text-lg md:text-xl font-bold group-hover:text-red transition-colors">
-                    {item.name}
-                  </h3>
-                  <span class="flex-1 border-b border-dotted border-black/20"></span>
-                </div>
-                <p class="font-mono text-sm text-black/70 mt-1">
-                  {(item.desc as any)[lang]}
-                </p>
+                <h3 class="font-typewriter text-lg md:text-xl font-bold group-hover:text-red transition-colors">{item.name}</h3>
+                <p class="font-mono text-sm text-black/70 mt-1">{(item.desc as any)[lang]}</p>
               </div>
-              <span class="font-typewriter text-xl md:text-2xl font-bold text-red tabular-nums shrink-0">
-                €{item.price}
-              </span>
+              <span class="font-typewriter text-xl md:text-2xl font-bold text-red tabular-nums shrink-0">{item.price}</span>
             </div>
           ))}
         </div>
       </div>
 
-      <!-- Notes -->
       <div class="mt-16 pt-8 border-t border-black/10">
-        <div class="space-y-2 font-mono text-sm text-black/70 text-center">
-          <p>Llet de civada, soja o ametlla: +0.50€</p>
-          <p>Pregunta per al·lèrgens — la cuina no és 100% lliure de gluten</p>
-        </div>
+        <p class="font-mono text-sm text-black/70 text-center">Pregunta per al·lèrgens — la cuina no és 100% lliure de gluten</p>
       </div>
 
-      <!-- Back to top -->
-      <div class="mt-12 text-center">
-        <a 
-          href="#coffee" 
-          class="font-typewriter text-red hover:text-red/70 transition-colors underline underline-offset-4"
-        >
-          ↑ Tornar a dalt
-        </a>
-      </div>
+      <nav class="mt-12 pt-8 border-t border-red flex flex-wrap justify-center gap-4 md:gap-8">
+        <a href="#coffee" class="font-typewriter text-lg text-red hover:text-red/70 transition-colors underline underline-offset-4">Coffee & Cia</a>
+        <a href="#bebidas" class="font-typewriter text-lg text-red hover:text-red/70 transition-colors underline underline-offset-4">Begudes</a>
+        <a href="#food" class="font-typewriter text-lg text-red hover:text-red/70 transition-colors underline underline-offset-4">Menjar</a>
+      </nav>
     </div>
   </section>
 </Layout>
 
 <style>
-  .tabular-nums {
-    font-variant-numeric: tabular-nums;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
+  .tabular-nums { font-variant-numeric: tabular-nums; }
+  html { scroll-behavior: smooth; }
 </style>
