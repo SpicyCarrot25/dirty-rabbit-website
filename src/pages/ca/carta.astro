@@ -1,27 +1,8 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { getTranslations } from '../../i18n';
 import menuData from '../../data/menu.json';
 
 const lang = 'ca';
-const t = getTranslations(lang);
-
-const teaItems = menuData.drinks.filter(d => 
-  d.name.toLowerCase().includes('matcha') || 
-  d.name.toLowerCase().includes('chai')
-);
-const coffeeAndTea = [...menuData.coffee, ...teaItems];
-
-const otherDrinks = menuData.drinks.filter(d => 
-  !d.name.toLowerCase().includes('matcha') && 
-  !d.name.toLowerCase().includes('chai')
-);
-const bebidas = [
-  ...otherDrinks.filter(d => d.name.toLowerCase().includes('smoothie')),
-  ...otherDrinks.filter(d => !d.name.toLowerCase().includes('smoothie'))
-];
-
-const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
 ---
 
 <Layout title="Carta — Dirty Rabbit" lang={lang}>
@@ -40,66 +21,166 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
   <section class="py-8 md:py-12 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       
+      <!-- CAFÈ & CIA -->
       <div id="coffee" class="scroll-mt-20">
-        <h2 class="font-typewriter text-4xl md:text-5xl font-bold text-red mb-2 text-center">Cafè & Cia</h2>
-        <p class="font-mono text-sm text-black/70 text-center mb-8">La Cabra blend · V60 orígens rotatius · Matcha REQ · Chai Awachai</p>
-        <div class="space-y-5">
-          {coffeeAndTea.map((item) => (
-            <div class="flex items-baseline justify-between gap-4 group">
+        <h2 class="font-typewriter text-4xl md:text-5xl font-bold text-red mb-8 text-center">Cafè & Cia</h2>
+        
+        <h3 class="font-typewriter text-xl font-bold text-black mb-4 mt-8">Cafè</h3>
+        <div class="space-y-4">
+          {menuData.coffee.map((item) => (
+            <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
-                <h3 class="font-typewriter text-lg md:text-xl font-bold group-hover:text-red transition-colors">{item.name}</h3>
-                <p class="font-mono text-sm text-black/70 mt-1">{(item.desc as any)[lang]}</p>
+                <span class="font-typewriter text-lg font-bold">{item.name}</span>
+                <span class="font-mono text-sm text-black/70 ml-2">{item.desc[lang]}</span>
               </div>
-              <span class="font-typewriter text-xl md:text-2xl font-bold text-red tabular-nums shrink-0">{item.price}</span>
+              <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
             </div>
           ))}
         </div>
-        <p class="font-mono text-sm text-black/70 text-center mt-8 pt-4 border-t border-black/10">Llet de civada, soja o ametlla: +0.50€</p>
+        
+        <h3 class="font-typewriter text-xl font-bold text-black mb-4 mt-10">No Cafè</h3>
+        <div class="space-y-4">
+          {menuData.notCoffee.map((item) => (
+            <div class="flex items-baseline justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <span class="font-typewriter text-lg font-bold">{item.name}</span>
+                <span class="font-mono text-sm text-black/70 ml-2">{item.desc[lang]}</span>
+              </div>
+              <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
+            </div>
+          ))}
+        </div>
+        
+        <h3 class="font-typewriter text-xl font-bold text-black mb-4 mt-10">Iced Drinks</h3>
+        <div class="space-y-4">
+          {menuData.icedDrinks.map((item) => (
+            <div class="flex items-baseline justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <span class="font-typewriter text-lg font-bold">{item.name}</span>
+                <span class="font-mono text-sm text-black/70 ml-2">{item.desc[lang]}</span>
+              </div>
+              <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
+            </div>
+          ))}
+        </div>
+        
+        <p class="font-mono text-sm text-black/70 text-center mt-8 pt-4 border-t border-black/10">
+          Llet de civada o pèsol: +0.30€ · Shot extra: +0.50€
+        </p>
       </div>
 
+      <!-- BEGUDES -->
       <div id="bebidas" class="scroll-mt-20 mt-16 pt-16 border-t border-red">
-        <h2 class="font-typewriter text-4xl md:text-5xl font-bold text-red mb-2 text-center">Begudes</h2>
-        <p class="font-mono text-sm text-black/70 text-center mb-8">Smoothies · Sucs naturals · Kombucha</p>
+        <h2 class="font-typewriter text-4xl md:text-5xl font-bold text-red mb-8 text-center">Begudes</h2>
+        
+        <h3 class="font-typewriter text-xl font-bold text-black mb-4 mt-8">Batuts / Smoothies</h3>
         <div class="space-y-5">
-          {bebidas.map((item) => (
-            <div class="flex items-baseline justify-between gap-4 group">
+          {menuData.smoothies.map((item) => (
+            <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
-                <h3 class="font-typewriter text-lg md:text-xl font-bold group-hover:text-red transition-colors">{item.name}</h3>
-                <p class="font-mono text-sm text-black/70 mt-1">{(item.desc as any)[lang]}</p>
+                <h4 class="font-typewriter text-lg font-bold">{item.name}</h4>
+                <p class="font-mono text-sm text-black/70 mt-1">{item.desc[lang]}</p>
               </div>
-              <span class="font-typewriter text-xl md:text-2xl font-bold text-red tabular-nums shrink-0">{item.price}</span>
+              <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
+            </div>
+          ))}
+        </div>
+        <p class="font-mono text-xs text-black/60 mt-4">
+          Extras: Proteïna +3 · Creatina +1 · Espirulina +1 · Col·lagen +1.50
+        </p>
+        
+        <h3 class="font-typewriter text-xl font-bold text-black mb-4 mt-10">Begudes</h3>
+        <div class="space-y-4">
+          {menuData.beverages.map((item) => (
+            <div class="flex items-baseline justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <span class="font-typewriter text-lg font-bold">{item.name}</span>
+                <span class="font-mono text-sm text-black/70 ml-2">{item.desc[lang]}</span>
+              </div>
+              <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
+            </div>
+          ))}
+        </div>
+        
+        <h3 class="font-typewriter text-xl font-bold text-black mb-4 mt-10">Adult Drinks</h3>
+        <div class="space-y-4">
+          {menuData.adultDrinks.map((item) => (
+            <div class="flex items-baseline justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <span class="font-typewriter text-lg font-bold">{item.name}</span>
+                <span class="font-mono text-sm text-black/70 ml-2">{item.desc[lang]}</span>
+              </div>
+              <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
             </div>
           ))}
         </div>
       </div>
 
+      <!-- MENJAR -->
       <div id="food" class="scroll-mt-20 mt-16 pt-16 border-t border-red">
-        <h2 class="font-typewriter text-4xl md:text-5xl font-bold text-red mb-2 text-center">Menjar</h2>
-        <p class="font-mono text-sm text-black/70 text-center mb-8">Ous de Bioma · Pa de massa mare · Brioixeria de La Puntual</p>
+        <h2 class="font-typewriter text-4xl md:text-5xl font-bold text-red mb-8 text-center">Menjar</h2>
+        
+        <h3 class="font-typewriter text-xl font-bold text-black mb-4 mt-8">Toasts & Toasties</h3>
         <div class="space-y-5">
-          {food.map((item) => (
-            <div class="flex items-baseline justify-between gap-4 group">
+          {menuData.toasts.map((item) => (
+            <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
-                <h3 class="font-typewriter text-lg md:text-xl font-bold group-hover:text-red transition-colors">{item.name}</h3>
-                <p class="font-mono text-sm text-black/70 mt-1">{(item.desc as any)[lang]}</p>
+                <h4 class="font-typewriter text-lg font-bold">{item.name}</h4>
+                <p class="font-mono text-sm text-black/70 mt-1">{item.desc[lang]}</p>
               </div>
-              <span class="font-typewriter text-xl md:text-2xl font-bold text-red tabular-nums shrink-0">{item.price}</span>
+              <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
             </div>
           ))}
         </div>
+        <p class="font-mono text-xs text-black/60 mt-4">
+          Extras: Pernil Ibèric +3 · Salmó +3 · Ou +2 · Manxec +2.50 · Alvocat +2.50
+        </p>
+        
+        <h3 class="font-typewriter text-xl font-bold text-black mb-4 mt-10">Bagels</h3>
+        <div class="space-y-5">
+          {menuData.bagels.map((item) => (
+            <div class="flex items-baseline justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <h4 class="font-typewriter text-lg font-bold">{item.name}</h4>
+                <p class="font-mono text-sm text-black/70 mt-1">{item.desc[lang]}</p>
+              </div>
+              <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
+            </div>
+          ))}
+        </div>
+        
+        <h3 class="font-typewriter text-xl font-bold text-black mb-4 mt-10">Bowls</h3>
+        <div class="space-y-5">
+          {menuData.bowls.map((item) => (
+            <div class="flex items-baseline justify-between gap-4">
+              <div class="flex-1 min-w-0">
+                <h4 class="font-typewriter text-lg font-bold">{item.name}</h4>
+                <p class="font-mono text-sm text-black/70 mt-1">{item.desc[lang]}</p>
+              </div>
+              <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
+            </div>
+          ))}
+        </div>
+        
+        <h3 class="font-typewriter text-xl font-bold text-black mb-4 mt-10">Dolç / Sweet Bites</h3>
+        <p class="font-mono text-sm text-black/70">
+          Mira la vitrina per veure la nostra selecció de galetes, croissants i pastissos.
+        </p>
       </div>
 
       <div class="mt-16 pt-8 border-t border-black/10">
-        <p class="font-mono text-sm text-black/70 text-center">Pregunta per al·lèrgens — la cuina no és 100% lliure de gluten</p>
+        <p class="font-mono text-sm text-black/70 text-center">
+          Pregunta per al·lèrgens — la cuina no és 100% lliure de gluten
+        </p>
       </div>
     </div>
   </section>
 
-  <nav class="fixed bottom-0 left-0 right-0 bg-cream border-t border-red py-6 z-50 md:hidden safe-area-bottom">
+  <nav class="fixed bottom-0 left-0 right-0 bg-cream border-t border-red py-4 z-50 md:hidden safe-area-bottom">
     <div class="flex justify-center items-center">
-      <a href="#coffee" class="flex-1 text-center font-typewriter text-xl font-bold text-red border-r border-red py-1">Cafè & Cia</a>
-      <a href="#bebidas" class="flex-1 text-center font-typewriter text-xl font-bold text-red border-r border-red py-1">Begudes</a>
-      <a href="#food" class="flex-1 text-center font-typewriter text-xl font-bold text-red py-1">Menjar</a>
+      <a href="#coffee" class="flex-1 flex items-center justify-center font-typewriter text-xl font-bold text-red border-r border-red h-10">Cafè & Cia</a>
+      <a href="#bebidas" class="flex-1 flex items-center justify-center font-typewriter text-xl font-bold text-red border-r border-red h-10">Begudes</a>
+      <a href="#food" class="flex-1 flex items-center justify-center font-typewriter text-xl font-bold text-red h-10">Menjar</a>
     </div>
   </nav>
   <div class="h-20 md:hidden"></div>
@@ -108,5 +189,5 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
 <style>
   .tabular-nums { font-variant-numeric: tabular-nums; }
   html { scroll-behavior: smooth; }
-  .safe-area-bottom { padding-bottom: max(1.25rem, env(safe-area-inset-bottom)); }
+  .safe-area-bottom { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
 </style>
