@@ -136,23 +136,6 @@
     "image": "/images/proveedores/dryk.jpg"
   },
   {
-    "id": "la-selvatana",
-    "name": "La Selvatana",
-    "category": {
-      "es": "Leche Ecológica",
-      "en": "Organic Milk",
-      "ca": "Llet Ecològica"
-    },
-    "origin": "Catalunya",
-    "description": {
-      "es": "Granja familiar, vacas que pastan, leche fresca y ecológica. Para los que prefieren lo de toda la vida, pero hecho bien.",
-      "en": "Family farm, grazing cows, fresh organic milk. For those who prefer the traditional way, done right.",
-      "ca": "Granja familiar, vaques que pasturen, llet fresca i ecològica. Per als que prefereixen el de sempre, però fet bé."
-    },
-    "url": "",
-    "image": "/images/proveedores/la-selvatana.jpg"
-  },
-  {
     "id": "origo-bakery",
     "name": "Origo Bakery",
     "category": {
