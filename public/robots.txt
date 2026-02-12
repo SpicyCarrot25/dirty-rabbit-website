@@ -1,0 +1,8 @@
+# Dirty Rabbit Coffee - S'Agaró
+# https://dirtyrabbit.es
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://dirtyrabbit.es/sitemap.xml

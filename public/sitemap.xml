@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Spanish (Default) -->
+  <url>
+    <loc>https://dirtyrabbit.es/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dirtyrabbit.es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dirtyrabbit.es/en/"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://dirtyrabbit.es/ca/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/nosotros</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dirtyrabbit.es/nosotros"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dirtyrabbit.es/en/about"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://dirtyrabbit.es/ca/nosaltres"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/proveedores</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dirtyrabbit.es/proveedores"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dirtyrabbit.es/en/producers"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://dirtyrabbit.es/ca/proveidors"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/carta</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dirtyrabbit.es/carta"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dirtyrabbit.es/en/carta"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://dirtyrabbit.es/ca/carta"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/faq</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dirtyrabbit.es/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dirtyrabbit.es/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://dirtyrabbit.es/ca/faq"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dirtyrabbit.es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dirtyrabbit.es/en/contact"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://dirtyrabbit.es/ca/contacte"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/trabajo</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dirtyrabbit.es/trabajo"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dirtyrabbit.es/en/jobs"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://dirtyrabbit.es/ca/feina"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/news</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dirtyrabbit.es/news"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dirtyrabbit.es/en/news"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://dirtyrabbit.es/ca/news"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- English -->
+  <url>
+    <loc>https://dirtyrabbit.es/en/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/en/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/en/producers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/en/carta</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/en/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/en/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/en/jobs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/en/news</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Catalan -->
+  <url>
+    <loc>https://dirtyrabbit.es/ca/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/ca/nosaltres</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/ca/proveidors</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/ca/carta</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/ca/faq</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/ca/contacte</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/ca/feina</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/ca/news</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Legal -->
+  <url>
+    <loc>https://dirtyrabbit.es/legal</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
