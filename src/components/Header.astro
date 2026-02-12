@@ -162,8 +162,8 @@ const orderLabels: Record<Language, string> = {
       />
     </div>
     
-    <!-- Primary Links (LARGER 1.4x, less spacing) - Left aligned, RED -->
-    <nav class="space-y-3 mb-6">
+    <!-- Primary Links - consistent spacing -->
+    <nav class="space-y-2 mb-8">
       <a 
         href={getLocalizedPath('/menu', lang)} 
         class="block font-typewriter text-4xl tracking-normal text-red hover:text-red/80 transition-colors"
@@ -176,10 +176,6 @@ const orderLabels: Record<Language, string> = {
       >
         {historyLabels[lang]}
       </a>
-    </nav>
-    
-    <!-- Pide Ahora - separated, lower -->
-    <div class="mb-8">
       <a 
         href="https://order.dirtyrabbit.es" 
         target="_blank"
@@ -188,7 +184,7 @@ const orderLabels: Record<Language, string> = {
       >
         {orderLabels[lang]}
       </a>
-    </div>
+    </nav>
     
     <!-- Solid divider line - RED -->
     <div class="w-full max-w-xs border-t border-[#CD202C] mb-8"></div>
