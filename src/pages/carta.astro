@@ -36,7 +36,7 @@ const lang = 'es';
           {menuData.coffee.map((item) => (
             <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
-                <span class="font-typewriter text-lg font-bold">{item.name}</span>
+                <span class="font-typewriter text-lg font-bold">{typeof item.name === "string" ? item.name : item.name[lang]}</span>
                 <span class="font-mono text-sm text-black/70 ml-2">{item.desc[lang]}</span>
               </div>
               <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
@@ -50,7 +50,7 @@ const lang = 'es';
           {menuData.notCoffee.map((item) => (
             <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
-                <span class="font-typewriter text-lg font-bold">{item.name}</span>
+                <span class="font-typewriter text-lg font-bold">{typeof item.name === "string" ? item.name : item.name[lang]}</span>
                 <span class="font-mono text-sm text-black/70 ml-2">{item.desc[lang]}</span>
               </div>
               <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
@@ -64,7 +64,7 @@ const lang = 'es';
           {menuData.icedDrinks.map((item) => (
             <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
-                <span class="font-typewriter text-lg font-bold">{item.name}</span>
+                <span class="font-typewriter text-lg font-bold">{typeof item.name === "string" ? item.name : item.name[lang]}</span>
                 <span class="font-mono text-sm text-black/70 ml-2">{item.desc[lang]}</span>
               </div>
               <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
@@ -90,7 +90,7 @@ const lang = 'es';
           {menuData.smoothies.map((item) => (
             <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
-                <h4 class="font-typewriter text-lg font-bold">{item.name}</h4>
+                <h4 class="font-typewriter text-lg font-bold">{typeof item.name === "string" ? item.name : item.name[lang]}</h4>
                 <p class="font-mono text-sm text-black/70 mt-1">{item.desc[lang]}</p>
               </div>
               <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
@@ -117,7 +117,7 @@ const lang = 'es';
           {menuData.beverages.map((item) => (
             <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
-                <span class="font-typewriter text-lg font-bold">{item.name}</span>
+                <span class="font-typewriter text-lg font-bold">{typeof item.name === "string" ? item.name : item.name[lang]}</span>
                 <span class="font-mono text-sm text-black/70 ml-2">{item.desc[lang]}</span>
               </div>
               <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
@@ -131,7 +131,7 @@ const lang = 'es';
           {menuData.adultDrinks.map((item) => (
             <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
-                <span class="font-typewriter text-lg font-bold">{item.name}</span>
+                <span class="font-typewriter text-lg font-bold">{typeof item.name === "string" ? item.name : item.name[lang]}</span>
                 <span class="font-mono text-sm text-black/70 ml-2">{item.desc[lang]}</span>
               </div>
               <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
@@ -176,7 +176,7 @@ const lang = 'es';
           {menuData.toasts.slice(1).map((item) => (
             <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
-                <h4 class="font-typewriter text-lg font-bold">{item.name}</h4>
+                <h4 class="font-typewriter text-lg font-bold">{typeof item.name === "string" ? item.name : item.name[lang]}</h4>
                 <p class="font-mono text-sm text-black/70 mt-1">{item.desc[lang]}</p>
               </div>
               <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
@@ -190,7 +190,7 @@ const lang = 'es';
           {menuData.bagels.map((item) => (
             <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
-                <h4 class="font-typewriter text-lg font-bold">{item.name}</h4>
+                <h4 class="font-typewriter text-lg font-bold">{typeof item.name === "string" ? item.name : item.name[lang]}</h4>
                 <p class="font-mono text-sm text-black/70 mt-1">{item.desc[lang]}</p>
               </div>
               <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
@@ -211,7 +211,7 @@ const lang = 'es';
           {menuData.bowls.map((item) => (
             <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
-                <h4 class="font-typewriter text-lg font-bold">{item.name}</h4>
+                <h4 class="font-typewriter text-lg font-bold">{typeof item.name === "string" ? item.name : item.name[lang]}</h4>
                 <p class="font-mono text-sm text-black/70 mt-1">{item.desc[lang]}</p>
               </div>
               <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>

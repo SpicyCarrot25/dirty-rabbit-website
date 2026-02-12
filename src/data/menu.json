@@ -15,8 +15,8 @@
     { "name": "Chai Latte", "price": "3.50", "desc": { "es": "Awachai Masala", "en": "Awachai Masala", "ca": "Awachai Masala" } },
     { "name": "Dirty Chai", "price": "4.00", "desc": { "es": "Awachai Masala + espresso", "en": "Awachai Masala + espresso", "ca": "Awachai Masala + espresso" } },
     { "name": "Hot Chocolate", "price": "4.00", "desc": { "es": "LOT Roasters", "en": "LOT Roasters", "ca": "LOT Roasters" } },
-    { "name": "Tés & Infusiones", "price": "2.50", "desc": { "es": "Sans & Sans", "en": "Sans & Sans", "ca": "Sans & Sans" } },
-    { "name": "Got de Llet", "price": "1.50", "desc": { "es": "La Selvatana", "en": "La Selvatana", "ca": "La Selvatana" } }
+    { "name": { "es": "Tés e Infusiones", "en": "Tea & Infusions", "ca": "Tès i Infusions" }, "price": "2.50", "desc": { "es": "Sans & Sans", "en": "Sans & Sans", "ca": "Sans & Sans" } },
+    { "name": { "es": "Vaso de Leche", "en": "Glass of Milk", "ca": "Got de Llet" }, "price": "1.50", "desc": { "es": "La Selvatana", "en": "La Selvatana", "ca": "La Selvatana" } }
   ],
   "icedDrinks": [
     { "name": "Iced Coffee", "price": "2.80", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
@@ -34,8 +34,8 @@
     { "name": "Carrot Kick", "price": "6.50", "desc": { "es": "Un golpe de jengibre — zanahoria, manzana, mango, jengibre", "en": "A ginger kick — carrot, apple, mango, ginger", "ca": "Un cop de gingebre — pastanaga, poma, mango, gingebre" } }
   ],
   "beverages": [
-    { "name": "Agua Sant Aniol", "price": "1.90", "desc": { "es": "Agua mineral", "en": "Mineral water", "ca": "Aigua mineral" } },
-    { "name": "Agua con Gas", "price": "2.20", "desc": { "es": "Sant Aniol con gas", "en": "Sant Aniol sparkling", "ca": "Sant Aniol amb gas" } },
+    { "name": { "es": "Agua Sant Aniol", "en": "Sant Aniol Water", "ca": "Aigua Sant Aniol" }, "price": "1.90", "desc": { "es": "Agua mineral", "en": "Mineral water", "ca": "Aigua mineral" } },
+    { "name": { "es": "Agua con Gas", "en": "Sparkling Water", "ca": "Aigua amb Gas" }, "price": "2.20", "desc": { "es": "Sant Aniol con gas", "en": "Sant Aniol sparkling", "ca": "Sant Aniol amb gas" } },
     { "name": "Vichy Catalán", "price": "2.20", "desc": { "es": "Lata", "en": "Can", "ca": "Llauna" } },
     { "name": "Fritz Kola", "price": "2.80", "desc": { "es": "Regular o Zero", "en": "Regular or Zero", "ca": "Regular o Zero" } },
     { "name": "Juno Soda", "price": "2.80", "desc": { "es": "Naranja o limón", "en": "Orange or lemon", "ca": "Taronja o llimona" } },
