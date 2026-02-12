@@ -1,0 +1,125 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'en';
+---
+
+<Layout title="Join the Team — Dirty Rabbit" lang={lang}>
+  <!-- Hero Section -->
+  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">Join Us</h1>
+      <div class="w-16 h-px bg-red mx-auto mb-8"></div>
+      <p class="font-mono text-lg text-black/70">
+        Passionate about coffee? Love quiet mornings and good people? 
+        We're always looking for folks who want to be part of the rabbit.
+      </p>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <form id="join-form" class="space-y-6">
+        <!-- Name -->
+        <div>
+          <label for="name" class="block font-typewriter text-lg font-bold mb-2">Your name</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name"
+            required
+            class="w-full border border-black/20 rounded-lg px-4 py-3 font-mono text-base focus:outline-none focus:border-red transition-colors"
+            placeholder="What should we call you?"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block font-typewriter text-lg font-bold mb-2">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email"
+            required
+            class="w-full border border-black/20 rounded-lg px-4 py-3 font-mono text-base focus:outline-none focus:border-red transition-colors"
+            placeholder="So we can get back to you"
+          />
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message" class="block font-typewriter text-lg font-bold mb-2">Tell us about yourself</label>
+          <textarea 
+            id="message" 
+            name="message"
+            rows="4"
+            required
+            class="w-full border border-black/20 rounded-lg px-4 py-3 font-mono text-base focus:outline-none focus:border-red transition-colors resize-none"
+            placeholder="What brings you here? Any experience? Coffee or tea person?"
+          ></textarea>
+        </div>
+
+        <!-- Fun question -->
+        <div>
+          <label for="superpower" class="block font-typewriter text-lg font-bold mb-2">
+            🐰 If you were a rabbit, what would your superpower be?
+          </label>
+          <input 
+            type="text" 
+            id="superpower" 
+            name="superpower"
+            class="w-full border border-black/20 rounded-lg px-4 py-3 font-mono text-base focus:outline-none focus:border-red transition-colors"
+            placeholder="Radar ears, extreme speed, unlimited carrot eating..."
+          />
+        </div>
+
+        <!-- Submit -->
+        <button 
+          type="submit"
+          class="w-full bg-red text-cream font-typewriter font-bold text-lg px-8 py-4 rounded-lg hover:bg-red/90 transition-colors"
+        >
+          Send Application
+        </button>
+        
+        <!-- Success message -->
+        <p id="form-success" class="hidden text-center font-mono text-green-600">
+          ✓ Got it! We'll be in touch soon.
+        </p>
+        
+        <!-- Error message -->
+        <p id="form-error" class="hidden text-center font-mono text-red">
+          Something went wrong. Email us at hola@dirtyrabbit.es
+        </p>
+      </form>
+      
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const form = document.getElementById('join-form');
+  const successMsg = document.getElementById('form-success');
+  const errorMsg = document.getElementById('form-error');
+  
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form as HTMLFormElement);
+      const data = Object.fromEntries(formData.entries());
+      
+      try {
+        const applications = JSON.parse(localStorage.getItem('dr_applications') || '[]');
+        applications.push({ ...data, submitted_at: new Date().toISOString() });
+        localStorage.setItem('dr_applications', JSON.stringify(applications));
+        
+        (form as HTMLFormElement).classList.add('hidden');
+        successMsg?.classList.remove('hidden');
+      } catch (err) {
+        errorMsg?.classList.remove('hidden');
+      }
+    });
+  }
+</script>

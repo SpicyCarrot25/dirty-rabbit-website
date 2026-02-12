@@ -21,14 +21,25 @@ export function getLangFromUrl(url: URL): Language {
   return defaultLang;
 }
 
+// Path mappings for pages with different names per language
+const pathMappings: Record<string, Record<Language, string>> = {
+  'trabajo': { es: 'trabajo', en: 'jobs', ca: 'feina' },
+  'nosotros': { es: 'nosotros', en: 'about', ca: 'nosaltres' },
+  'proveedores': { es: 'proveedores', en: 'suppliers', ca: 'proveidors' },
+  'about': { es: 'nosotros', en: 'about', ca: 'nosaltres' },
+};
+
 export function getLocalizedPath(path: string, lang: Language): string {
   // Remove leading slash and any existing language prefix
   const cleanPath = path.replace(/^\/?(en|ca)?\/?/, '');
   
+  // Check if we have a mapping for this path
+  const mappedPath = pathMappings[cleanPath]?.[lang] || cleanPath;
+  
   if (lang === defaultLang) {
-    return cleanPath ? `/${cleanPath}` : '/';
+    return mappedPath ? `/${mappedPath}` : '/';
   }
-  return cleanPath ? `/${lang}/${cleanPath}` : `/${lang}/`;
+  return mappedPath ? `/${lang}/${mappedPath}` : `/${lang}/`;
 }
 
 // Helper to get alternate language URLs for hreflang
