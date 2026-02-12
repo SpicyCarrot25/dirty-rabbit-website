@@ -7,7 +7,6 @@
     { "name": "Latte", "price": "2.50", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots" } },
     { "name": "Flat White", "price": "3.00", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots" } },
     { "name": "Batch Brew", "price": "2.50", "desc": { "es": "L/XL 2.50/3", "en": "L/XL 2.50/3", "ca": "L/XL 2.50/3" } },
-    { "name": "V60", "price": "6.00", "desc": { "es": "Orígenes rotativos", "en": "Rotating origins", "ca": "Orígens rotatius" } },
     { "name": "Decaf", "price": "+0.30", "desc": { "es": "Disponible en cualquier café", "en": "Available with any coffee", "ca": "Disponible amb qualsevol cafè" } }
   ],
   "notCoffee": [
