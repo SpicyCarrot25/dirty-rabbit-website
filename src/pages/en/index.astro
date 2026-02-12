@@ -1,40 +1,43 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../i18n';
+import proveedores from '../../data/proveedores.json';
 
 const lang = 'en';
 const t = getTranslations(lang);
+
+// First 4 providers for homepage
+const featuredProviders = proveedores.slice(0, 4);
 ---
 
 <Layout title="Dirty Rabbit — Specialty Coffee, Breakfast & Brunch · S'Agaró" lang={lang}>
   
   <!-- HERO SECTION: 100vh, full-bleed photo, centered tagline, NO scroll indicator -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden -mt-16 md:-mt-20">
-    <!-- Background: Full-bleed photo placeholder -->
+    <!-- Background: Video of La Marzocco (GIF-like behavior) -->
     <div class="absolute inset-0 bg-black" id="hero-bg">
-      <!-- TODO: Replace with real editorial-style photo -->
-      <div class="absolute inset-0 flex items-center justify-center">
-        <img 
-          src="/logos/SIMBOLO-CREMA-DIRTYRABBIT.png" 
-          alt="" 
-          class="w-48 md:w-64 opacity-10"
-          aria-hidden="true"
-        />
-      </div>
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        webkit-playsinline
+        disablePictureInPicture
+        preload="auto"
+        class="w-full h-full object-cover pointer-events-none"
+      >
+        <source src="/photos/hero-video.mp4" type="video/mp4" />
+      </video>
       <!-- Dark overlay for text readability -->
       <div class="absolute inset-0 bg-black/40"></div>
-      <!-- Placeholder label -->
-      <div class="absolute top-4 left-4 font-mono text-xs text-white/30 uppercase tracking-wider">
-        [PHOTO TBD]
-      </div>
     </div>
     
     <!-- Hero Content: Centered tagline only -->
     <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-      <p class="reveal font-typewriter text-2xl md:text-4xl lg:text-5xl leading-relaxed hero-text-shadow">
-        A place to wake up.<br class="hidden sm:block" /> 
-        Or slow down.<br class="hidden sm:block" /> 
-        Ideally both.
+      <p class="reveal font-typewriter text-3xl md:text-5xl lg:text-6xl leading-relaxed hero-text-shadow">
+        Quiet mornings.<br class="hidden sm:block" /> 
+        Easy laughs.<br class="hidden sm:block" /> 
+        Coffee in between.
       </p>
     </div>
     
@@ -43,107 +46,156 @@ const t = getTranslations(lang);
   
   
   <!-- COMMUNITY SECTION: Post-hero, no headline, elegant typography -->
-  <section class="py-20 md:py-32 bg-white">
+  <section class="py-16 md:py-24 bg-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80">
-        The family with the noisy kid. The remote worker with the dying laptop. The retired couple who've been coming since week one. The expat who just moved and doesn't know anyone yet. Strangers become regulars become friends.
+      <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80 mb-10">
+        The family with the kid who can't sit still. The couple who've been coming since day one. The one who just moved and doesn't know anyone yet. This is a place to have a proper breakfast, drink real coffee, and stay a while. Strangers who become regulars who become friends. Specialty coffee, brunch and yummy breakfasts in S'Agaró, in the heart of Costa Brava.
       </p>
+      
+      <!-- CTA Buttons -->
+      <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href={getLocalizedPath('/carta', lang)}
+          class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-red text-red hover:bg-red hover:text-white transition-colors rounded-lg"
+        >
+          Menu
+        </a>
+        <a 
+          href="https://order.dirtyrabbit.es"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-lg"
+        >
+          Order Now
+        </a>
+      </div>
     </div>
   </section>
   
   
-  <!-- NEWS CARDS: Cream background, horizontal slider (Big Mamma style) -->
+  <!-- PROVIDERS: 4 cards grid, same style as news cards -->
+  <section class="py-12 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <h2 class="font-typewriter text-5xl md:text-6xl lg:text-7xl mb-4 section-headline">
+          Producers
+        </h2>
+        <p class="font-mono text-sm text-black/60 max-w-xl mx-auto">
+          The people behind your cup
+        </p>
+      </div>
+      
+      <!-- Horizontal Slider - Square cards with text overlay -->
+      <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
+        {featuredProviders.map((p, i) => {
+          const images = [
+            '/photos/photo3.jpg',
+            '/photos/photo4.jpg',
+            '/photos/photo2.jpg',
+            '/photos/photo1.jpg',
+          ];
+          return (
+          <article class="reveal card-lift relative aspect-square w-[70vw] md:w-[280px] rounded-xl overflow-hidden border border-[#1A1A1A]">
+            <div class="absolute inset-0">
+              <img 
+                src={images[i] || images[0]}
+                alt={p.name}
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16">
+              <p class="font-mono text-xs text-white/80 tracking-wider mb-1">
+                {(p.category as any)[lang]}
+              </p>
+              <h3 class="font-typewriter text-lg text-white">
+                {p.name}
+              </h3>
+              <p class="font-mono text-xs text-white/70">
+                {p.origin ? `${p.origin}` : ''}
+              </p>
+            </div>
+          </article>
+          );
+        })}
+      </div>
+      
+      <!-- View All Link -->
+      <div class="text-center mt-12 reveal">
+        <a 
+          href={getLocalizedPath('/proveedores', lang)}
+          class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
+        >
+          See all producers
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+      
+    </div>
+  </section>
+  
+  
+  <!-- NEWS CARDS: Cream background, horizontal slider -->
   <section class="py-20 md:py-32 bg-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="text-center mb-12 md:mb-16 reveal">
-        <h2 class="font-typewriter text-3xl md:text-4xl lg:text-5xl mb-4 text-black">
-          News
+        <h2 class="font-typewriter text-5xl md:text-6xl lg:text-7xl mb-4 section-headline">
+          News & Moments
         </h2>
-        <p class="font-mono text-base text-black/60 max-w-xl mx-auto">
-          What's happening at the rabbit
+        <p class="font-mono text-sm text-black/60 max-w-xl mx-auto">
+          The latest from Dirty Rabbit
         </p>
       </div>
       
       <!-- Horizontal Slider -->
       <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
         
-        <!-- Card 1 -->
-        <article class="reveal card-lift card-rounded bg-white border border-cream w-[75vw] md:w-[calc(33.333%-1rem)] max-w-[320px]">
-          <div class="aspect-[4/3] bg-cream relative overflow-hidden rounded-t-[1rem]">
-            <img 
-              src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
-              alt="" 
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 opacity-10"
-              aria-hidden="true"
-            />
-            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
-              [PHOTO TBD]
-            </span>
+        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+          <div class="aspect-square relative overflow-hidden">
+            <img src="/photos/photo1.jpg" alt="Running club" class="w-full h-full object-cover" />
           </div>
           <div class="p-6">
-            <time class="font-mono text-xs text-black/50 uppercase tracking-wider">
-              Feb 2026
-            </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-2 mb-3 text-black">
-              New spring menu
-            </h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">
-              Fresh dishes with seasonal produce from our local suppliers.
-            </p>
+            <time class="font-mono text-xs text-red tracking-wider">Jan 2025</time>
+            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">Running Club: now 20 strong</h3>
+            <p class="font-mono text-sm text-black/60 line-clamp-2">Every Tuesday at 8am. 5km along the coast and coffee after. Friendships have been made.</p>
           </div>
         </article>
         
-        <!-- Card 2 -->
-        <article class="reveal card-lift card-rounded bg-white border border-cream w-[75vw] md:w-[calc(33.333%-1rem)] max-w-[320px]">
-          <div class="aspect-[4/3] bg-cream relative overflow-hidden rounded-t-[1rem]">
-            <img 
-              src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
-              alt="" 
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 opacity-10"
-              aria-hidden="true"
-            />
-            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
-              [PHOTO TBD]
-            </span>
+        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+          <div class="aspect-square relative overflow-hidden">
+            <img src="/photos/photo3.jpg" alt="Café interior" class="w-full h-full object-cover" />
           </div>
           <div class="p-6">
-            <time class="font-mono text-xs text-black/50 uppercase tracking-wider">
-              Jan 2026
-            </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-2 mb-3 text-black">
-              La Cabra collaboration
-            </h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">
-              Copenhagen roasters, now our house blend coffee.
-            </p>
+            <time class="font-mono text-xs text-red tracking-wider">Dec 2024</time>
+            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">First season: thank you</h3>
+            <p class="font-mono text-sm text-black/60 line-clamp-2">From strangers to friends. The first season was more beautiful than we imagined.</p>
           </div>
         </article>
         
-        <!-- Card 3 -->
-        <article class="reveal card-lift card-rounded bg-white border border-cream w-[75vw] md:w-[calc(33.333%-1rem)] max-w-[320px]">
-          <div class="aspect-[4/3] bg-cream relative overflow-hidden rounded-t-[1rem]">
-            <img 
-              src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
-              alt="" 
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 opacity-10"
-              aria-hidden="true"
-            />
-            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
-              [PHOTO TBD]
-            </span>
+        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+          <div class="aspect-square relative overflow-hidden">
+            <img src="/photos/photo2.jpg" alt="Coffee shop opening" class="w-full h-full object-cover" />
           </div>
           <div class="p-6">
-            <time class="font-mono text-xs text-black/50 uppercase tracking-wider">
-              Dec 2025
-            </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-2 mb-3 text-black">
-              Now open in S'Agaró
-            </h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">
-              After months of work, the rabbit has found its burrow.
-            </p>
+            <time class="font-mono text-xs text-red tracking-wider">Nov 2024</time>
+            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">We opened in S'Agaró</h3>
+            <p class="font-mono text-sm text-black/60 line-clamp-2">After months of work, the rabbit found its burrow. Welcome.</p>
+          </div>
+        </article>
+        
+        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+          <div class="aspect-square relative overflow-hidden">
+            <img src="/photos/photo4.jpg" alt="La Cabra coffee" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6">
+            <time class="font-mono text-xs text-red tracking-wider">Nov 2024</time>
+            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">Coffee from La Cabra</h3>
+            <p class="font-mono text-sm text-black/60 line-clamp-2">Copenhagen in your cup. Europe's best roaster now in Costa Brava.</p>
           </div>
         </article>
         
@@ -155,7 +207,7 @@ const t = getTranslations(lang);
           href={getLocalizedPath('/news', lang)}
           class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
         >
-          View all news
+          See all news
           <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
           </svg>
@@ -165,84 +217,14 @@ const t = getTranslations(lang);
     </div>
   </section>
   
-  
-  <!-- LOCATION: White background, info only (no map) -->
-  <section class="py-20 md:py-32 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Header -->
-      <div class="text-center mb-12 md:mb-16 reveal">
-        <h2 class="font-typewriter text-3xl md:text-4xl lg:text-5xl mb-4 text-black">
-          {t.sections.contact}
-        </h2>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-8 lg:gap-12 text-center">
-        
-        <!-- Address -->
-        <div class="reveal">
-          <h3 class="font-typewriter text-lg mb-3 text-black">
-            Address
-          </h3>
-          <address class="font-mono text-base text-black/70 not-italic leading-relaxed">
-            {t.footer.address}<br />
-            {t.footer.city}
-          </address>
-        </div>
-        
-        <!-- Hours -->
-        <div class="reveal">
-          <h3 class="font-typewriter text-lg mb-3 text-black">
-            Hours
-          </h3>
-          <div class="font-mono text-base text-black/70 space-y-1">
-            <p>{t.footer.hours}</p>
-            <p class="text-red">{t.footer.closed}</p>
-          </div>
-        </div>
-        
-        <!-- Contact -->
-        <div class="reveal">
-          <h3 class="font-typewriter text-lg mb-3 text-black">
-            Contact
-          </h3>
-          <div class="font-mono text-base space-y-2">
-            <p>
-              <a 
-                href="mailto:hola@dirtyrabbit.es" 
-                class="text-black/70 hover:text-red transition-colors"
-              >
-                {t.footer.email}
-              </a>
-            </p>
-            <p>
-              <a 
-                href="https://instagram.com/dirtyrabbitsagaro" 
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-black/70 hover:text-red transition-colors"
-              >
-                @dirtyrabbitsagaro
-              </a>
-            </p>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-  
 </Layout>
 
 <script>
-  // Fade-in on scroll - Vanilla JS with IntersectionObserver
   document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     if (prefersReducedMotion) {
-      document.querySelectorAll('.reveal').forEach(el => {
-        el.classList.add('visible');
-      });
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
       return;
     }
     
@@ -250,34 +232,24 @@ const t = getTranslations(lang);
       (entries) => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('visible');
-            }, index * 100);
+            setTimeout(() => entry.target.classList.add('visible'), index * 100);
             observer.unobserve(entry.target);
           }
         });
       },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      }
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     );
     
-    document.querySelectorAll('.reveal').forEach(el => {
-      observer.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     
-    // Simple parallax for hero background
     const heroBg = document.getElementById('hero-bg');
     if (heroBg) {
       let ticking = false;
-      
       window.addEventListener('scroll', () => {
         if (!ticking) {
           window.requestAnimationFrame(() => {
             const scrolled = window.pageYOffset;
-            const rate = scrolled * 0.3;
-            heroBg.style.transform = `translateY(${rate}px)`;
+            heroBg.style.transform = `translateY(${scrolled * 0.3}px)`;
             ticking = false;
           });
           ticking = true;

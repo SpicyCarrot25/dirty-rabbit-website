@@ -1,40 +1,43 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../i18n';
+import proveedores from '../../data/proveedores.json';
 
 const lang = 'ca';
 const t = getTranslations(lang);
+
+// First 4 providers for homepage
+const featuredProviders = proveedores.slice(0, 4);
 ---
 
-<Layout title="Dirty Rabbit — Specialty Coffee, Breakfast & Brunch · S'Agaró" lang={lang}>
+<Layout title="Dirty Rabbit — Cafè d'Especialitat, Esmorzars i Brunch · S'Agaró" lang={lang}>
   
   <!-- HERO SECTION: 100vh, full-bleed photo, centered tagline, NO scroll indicator -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden -mt-16 md:-mt-20">
-    <!-- Background: Full-bleed photo placeholder -->
+    <!-- Background: Video of La Marzocco (GIF-like behavior) -->
     <div class="absolute inset-0 bg-black" id="hero-bg">
-      <!-- TODO: Replace with real editorial-style photo -->
-      <div class="absolute inset-0 flex items-center justify-center">
-        <img 
-          src="/logos/SIMBOLO-CREMA-DIRTYRABBIT.png" 
-          alt="" 
-          class="w-48 md:w-64 opacity-10"
-          aria-hidden="true"
-        />
-      </div>
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        webkit-playsinline
+        disablePictureInPicture
+        preload="auto"
+        class="w-full h-full object-cover pointer-events-none"
+      >
+        <source src="/photos/hero-video.mp4" type="video/mp4" />
+      </video>
       <!-- Dark overlay for text readability -->
       <div class="absolute inset-0 bg-black/40"></div>
-      <!-- Placeholder label -->
-      <div class="absolute top-4 left-4 font-mono text-xs text-white/30 uppercase tracking-wider">
-        [PHOTO TBD]
-      </div>
     </div>
     
     <!-- Hero Content: Centered tagline only -->
     <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-      <p class="reveal font-typewriter text-2xl md:text-4xl lg:text-5xl leading-relaxed hero-text-shadow">
-        A place to wake up.<br class="hidden sm:block" /> 
-        Or slow down.<br class="hidden sm:block" /> 
-        Ideally both.
+      <p class="reveal font-typewriter text-3xl md:text-5xl lg:text-6xl leading-relaxed hero-text-shadow">
+        Matins tranquils.<br class="hidden sm:block" /> 
+        Riures fàcils.<br class="hidden sm:block" /> 
+        Coffee in between.
       </p>
     </div>
     
@@ -43,107 +46,156 @@ const t = getTranslations(lang);
   
   
   <!-- COMMUNITY SECTION: Post-hero, no headline, elegant typography -->
-  <section class="py-20 md:py-32 bg-white">
+  <section class="py-16 md:py-24 bg-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80">
-        The family with the noisy kid. The remote worker with the dying laptop. The retired couple who've been coming since week one. The expat who just moved and doesn't know anyone yet. Strangers become regulars become friends.
+      <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80 mb-10">
+        La família amb el nen que no para. La parella que ve des del primer dia. El que s'acaba de mudar i no coneix ningú encara. Aquí es ve a esmorzar bé, a prendre cafè de veritat, i a quedar-se una estona. Desconeguts que es tornen clients que es tornen amics. Cafè d'especialitat, brunch i esmorzars yummy a S'Agaró, al cor de la Costa Brava.
       </p>
+      
+      <!-- CTA Buttons -->
+      <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href={getLocalizedPath('/carta', lang)}
+          class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-red text-red hover:bg-red hover:text-white transition-colors rounded-lg"
+        >
+          Carta
+        </a>
+        <a 
+          href="https://order.dirtyrabbit.es"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-lg"
+        >
+          Demana Ara
+        </a>
+      </div>
     </div>
   </section>
   
   
-  <!-- NEWS CARDS: Cream background, horizontal slider (Big Mamma style) -->
+  <!-- PROVIDERS: 4 cards grid, same style as news cards -->
+  <section class="py-12 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <h2 class="font-typewriter text-5xl md:text-6xl lg:text-7xl mb-4 section-headline">
+          Proveïdors
+        </h2>
+        <p class="font-mono text-sm text-black/60 max-w-xl mx-auto">
+          La gent darrere la teva tassa
+        </p>
+      </div>
+      
+      <!-- Horizontal Slider - Square cards with text overlay -->
+      <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
+        {featuredProviders.map((p, i) => {
+          const images = [
+            '/photos/photo3.jpg',
+            '/photos/photo4.jpg',
+            '/photos/photo2.jpg',
+            '/photos/photo1.jpg',
+          ];
+          return (
+          <article class="reveal card-lift relative aspect-square w-[70vw] md:w-[280px] rounded-xl overflow-hidden border border-[#1A1A1A]">
+            <div class="absolute inset-0">
+              <img 
+                src={images[i] || images[0]}
+                alt={p.name}
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16">
+              <p class="font-mono text-xs text-white/80 tracking-wider mb-1">
+                {(p.category as any)[lang]}
+              </p>
+              <h3 class="font-typewriter text-lg text-white">
+                {p.name}
+              </h3>
+              <p class="font-mono text-xs text-white/70">
+                {p.origin ? `${p.origin}` : ''}
+              </p>
+            </div>
+          </article>
+          );
+        })}
+      </div>
+      
+      <!-- View All Link -->
+      <div class="text-center mt-12 reveal">
+        <a 
+          href={getLocalizedPath('/proveedores', lang)}
+          class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
+        >
+          Veure tots els proveïdors
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+      
+    </div>
+  </section>
+  
+  
+  <!-- NEWS CARDS: Cream background, horizontal slider -->
   <section class="py-20 md:py-32 bg-cream">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
       <div class="text-center mb-12 md:mb-16 reveal">
-        <h2 class="font-typewriter text-3xl md:text-4xl lg:text-5xl mb-4 text-black">
-          News
+        <h2 class="font-typewriter text-5xl md:text-6xl lg:text-7xl mb-4 section-headline">
+          News i Moments
         </h2>
-        <p class="font-mono text-base text-black/60 max-w-xl mx-auto">
-          El que està passant al conill
+        <p class="font-mono text-sm text-black/60 max-w-xl mx-auto">
+          L'últim de Dirty Rabbit
         </p>
       </div>
       
       <!-- Horizontal Slider -->
       <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
         
-        <!-- Card 1 -->
-        <article class="reveal card-lift card-rounded bg-white border border-cream w-[75vw] md:w-[calc(33.333%-1rem)] max-w-[320px]">
-          <div class="aspect-[4/3] bg-cream relative overflow-hidden rounded-t-[1rem]">
-            <img 
-              src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
-              alt="" 
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 opacity-10"
-              aria-hidden="true"
-            />
-            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
-              [PHOTO TBD]
-            </span>
+        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+          <div class="aspect-square relative overflow-hidden">
+            <img src="/photos/photo1.jpg" alt="Running club" class="w-full h-full object-cover" />
           </div>
           <div class="p-6">
-            <time class="font-mono text-xs text-black/50 uppercase tracking-wider">
-              Feb 2026
-            </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-2 mb-3 text-black">
-              Nou menú de primavera
-            </h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">
-              Plats frescos amb producte de temporada dels nostres proveïdors locals.
-            </p>
+            <time class="font-mono text-xs text-red tracking-wider">Gen 2025</time>
+            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">Running Club: ja som 20</h3>
+            <p class="font-mono text-sm text-black/60 line-clamp-2">Cada dimarts a les 8am. 5km per la costa i cafè després. Ja s'han fet amistats.</p>
           </div>
         </article>
         
-        <!-- Card 2 -->
-        <article class="reveal card-lift card-rounded bg-white border border-cream w-[75vw] md:w-[calc(33.333%-1rem)] max-w-[320px]">
-          <div class="aspect-[4/3] bg-cream relative overflow-hidden rounded-t-[1rem]">
-            <img 
-              src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
-              alt="" 
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 opacity-10"
-              aria-hidden="true"
-            />
-            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
-              [PHOTO TBD]
-            </span>
+        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+          <div class="aspect-square relative overflow-hidden">
+            <img src="/photos/photo3.jpg" alt="Cafè interior" class="w-full h-full object-cover" />
           </div>
           <div class="p-6">
-            <time class="font-mono text-xs text-black/50 uppercase tracking-wider">
-              Gen 2026
-            </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-2 mb-3 text-black">
-              Col·laboració amb La Cabra
-            </h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">
-              Torrefactors de Copenhagen, ara el nostre cafè house blend.
-            </p>
+            <time class="font-mono text-xs text-red tracking-wider">Des 2024</time>
+            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">Primera temporada: gràcies</h3>
+            <p class="font-mono text-sm text-black/60 line-clamp-2">De desconeguts a amics. La primera season va ser més bonica del que imaginàvem.</p>
           </div>
         </article>
         
-        <!-- Card 3 -->
-        <article class="reveal card-lift card-rounded bg-white border border-cream w-[75vw] md:w-[calc(33.333%-1rem)] max-w-[320px]">
-          <div class="aspect-[4/3] bg-cream relative overflow-hidden rounded-t-[1rem]">
-            <img 
-              src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
-              alt="" 
-              class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 opacity-10"
-              aria-hidden="true"
-            />
-            <span class="absolute top-4 left-4 font-mono text-xs text-black/30 uppercase tracking-wider">
-              [PHOTO TBD]
-            </span>
+        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+          <div class="aspect-square relative overflow-hidden">
+            <img src="/photos/photo2.jpg" alt="Coffee shop opening" class="w-full h-full object-cover" />
           </div>
           <div class="p-6">
-            <time class="font-mono text-xs text-black/50 uppercase tracking-wider">
-              Des 2025
-            </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-2 mb-3 text-black">
-              Obrim a S'Agaró
-            </h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">
-              Després de mesos de feina, el conill ha trobat el seu cau.
-            </p>
+            <time class="font-mono text-xs text-red tracking-wider">Nov 2024</time>
+            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">Obrim a S'Agaró</h3>
+            <p class="font-mono text-sm text-black/60 line-clamp-2">Després de mesos de treball, el conill ha trobat el seu cau. Benvinguts.</p>
+          </div>
+        </article>
+        
+        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+          <div class="aspect-square relative overflow-hidden">
+            <img src="/photos/photo4.jpg" alt="La Cabra coffee" class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6">
+            <time class="font-mono text-xs text-red tracking-wider">Nov 2024</time>
+            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">Cafè de La Cabra</h3>
+            <p class="font-mono text-sm text-black/60 line-clamp-2">Copenhaguen a la teva tassa. El millor torrefactor d'Europa ara a la Costa Brava.</p>
           </div>
         </article>
         
@@ -165,84 +217,14 @@ const t = getTranslations(lang);
     </div>
   </section>
   
-  
-  <!-- LOCATION: White background, info only (no map) -->
-  <section class="py-20 md:py-32 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Header -->
-      <div class="text-center mb-12 md:mb-16 reveal">
-        <h2 class="font-typewriter text-3xl md:text-4xl lg:text-5xl mb-4 text-black">
-          {t.sections.contact}
-        </h2>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-8 lg:gap-12 text-center">
-        
-        <!-- Address -->
-        <div class="reveal">
-          <h3 class="font-typewriter text-lg mb-3 text-black">
-            Adreça
-          </h3>
-          <address class="font-mono text-base text-black/70 not-italic leading-relaxed">
-            {t.footer.address}<br />
-            {t.footer.city}
-          </address>
-        </div>
-        
-        <!-- Hours -->
-        <div class="reveal">
-          <h3 class="font-typewriter text-lg mb-3 text-black">
-            Horari
-          </h3>
-          <div class="font-mono text-base text-black/70 space-y-1">
-            <p>{t.footer.hours}</p>
-            <p class="text-red">{t.footer.closed}</p>
-          </div>
-        </div>
-        
-        <!-- Contact -->
-        <div class="reveal">
-          <h3 class="font-typewriter text-lg mb-3 text-black">
-            Contacte
-          </h3>
-          <div class="font-mono text-base space-y-2">
-            <p>
-              <a 
-                href="mailto:hola@dirtyrabbit.es" 
-                class="text-black/70 hover:text-red transition-colors"
-              >
-                {t.footer.email}
-              </a>
-            </p>
-            <p>
-              <a 
-                href="https://instagram.com/dirtyrabbitsagaro" 
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-black/70 hover:text-red transition-colors"
-              >
-                @dirtyrabbitsagaro
-              </a>
-            </p>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-  
 </Layout>
 
 <script>
-  // Fade-in on scroll - Vanilla JS with IntersectionObserver
   document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     if (prefersReducedMotion) {
-      document.querySelectorAll('.reveal').forEach(el => {
-        el.classList.add('visible');
-      });
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
       return;
     }
     
@@ -250,34 +232,24 @@ const t = getTranslations(lang);
       (entries) => {
         entries.forEach((entry, index) => {
           if (entry.isIntersecting) {
-            setTimeout(() => {
-              entry.target.classList.add('visible');
-            }, index * 100);
+            setTimeout(() => entry.target.classList.add('visible'), index * 100);
             observer.unobserve(entry.target);
           }
         });
       },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      }
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
     );
     
-    document.querySelectorAll('.reveal').forEach(el => {
-      observer.observe(el);
-    });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     
-    // Simple parallax for hero background
     const heroBg = document.getElementById('hero-bg');
     if (heroBg) {
       let ticking = false;
-      
       window.addEventListener('scroll', () => {
         if (!ticking) {
           window.requestAnimationFrame(() => {
             const scrolled = window.pageYOffset;
-            const rate = scrolled * 0.3;
-            heroBg.style.transform = `translateY(${rate}px)`;
+            heroBg.style.transform = `translateY(${scrolled * 0.3}px)`;
             ticking = false;
           });
           ticking = true;
