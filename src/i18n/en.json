@@ -5,7 +5,8 @@
     "order": "Order Now",
     "producers": "Producers",
     "news": "News",
-    "contact": "Contact"
+    "contact": "Contact",
+    "faq": "FAQ"
   },
   "hero": {
     "tagline": "A place to wake up. Or slow down. Ideally both.",
@@ -80,6 +81,50 @@
   "news": {
     "title": "News",
     "readMore": "Read more"
+  },
+  "faq": {
+    "title": "FAQ",
+    "intro": "Everything you need to know before visiting. If you can't find your answer, get in touch.",
+    "categories": {
+      "general": "General",
+      "coffee": "Coffee",
+      "food": "Food",
+      "amenities": "Amenities"
+    }
+  },
+  "historia": {
+    "title": "Our Story",
+    "howItStarted": {
+      "title": "How It Started",
+      "text": "In 2024, Iwonka and Franc left behind years of working in luxury restaurants and startups to create something of their own. Something smaller. More honest. A place where people could start their day right — with good coffee, something delicious to eat, and no rush."
+    },
+    "whySagaro": {
+      "title": "Why S'Agaró",
+      "text": "We wanted a place with sun, sea, and a real community. S'Agaró won us over from the first walk along the coast. It's the perfect balance: quiet in winter, lively in summer, and always with that Mediterranean light that changes everything."
+    },
+    "philosophy": {
+      "title": "Our Philosophy",
+      "text": "We don't chase trends or try to reinvent anything. We simply do things with care. Good ingredients, honest technique, and the time each thing needs. That simple."
+    },
+    "theName": {
+      "title": "The Name",
+      "text": "Why Dirty Rabbit? Because rabbits are curious, quick, and a bit mischievous. And the 'dirty' part... because the best coffee always leaves a mark."
+    },
+    "pillars": {
+      "care": {
+        "title": "Care",
+        "text": "Every choice is deliberate. The coffee we serve, the bread we toast, the music playing. Care without pretension."
+      },
+      "connection": {
+        "title": "Connection",
+        "text": "Strangers → regulars → friends. That's the journey. Everyone fits here."
+      },
+      "rhythm": {
+        "title": "Rhythm",
+        "text": "Fast beats and slow moments. We match your tempo, not the other way around."
+      }
+    },
+    "tagline": "Home away from home"
   },
   "common": {
     "viewAll": "View All",

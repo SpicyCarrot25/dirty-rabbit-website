@@ -51,20 +51,20 @@
     { "name": "Descorche", "price": "+6.00", "desc": { "es": "Trae tu botella de la tienda", "en": "Bring a bottle from our shop", "ca": "Porta una ampolla de la botiga" } }
   ],
   "toasts": [
-    { "name": "Avo Good Day", "price": "7.50", "desc": { "es": "Pan de masa madre Origo, medio aguacate laminado, tomates cherry, AOVE", "en": "Origo sourdough, half sliced avocado, cherry tomatoes, EVOO", "ca": "Pa de massa mare Origo, mig alvocat laminat, tomàquets cherry, AOVE" } },
-    { "name": "Choco Toast", "price": "7.50", "desc": { "es": "Pan de masa madre Origo, plátano, crema de chocolate o cacahuete", "en": "Origo sourdough, banana, chocolate or peanut butter", "ca": "Pa de massa mare Origo, plàtan, crema de xocolata o cacauet" } },
-    { "name": "Butter Together", "price": "5.00", "desc": { "es": "Pan de masa madre Origo, mantequilla, mermelada BIO", "en": "Origo sourdough, butter, organic jam", "ca": "Pa de massa mare Origo, mantega, melmelada BIO" } },
-    { "name": "Bikini Super Classic", "price": "6.00", "desc": { "es": "Pan de molde de masa madre, jamón York 100% Duroc, queso Havarti", "en": "Sourdough sliced bread, York ham 100% Duroc, Havarti cheese", "ca": "Pa de motlle de massa mare, pernil York 100% Duroc, formatge Havarti" } },
-    { "name": "Mr. Croissant", "price": "6.00", "desc": { "es": "Croissant de Maison Marcel, jamón York, queso Havarti", "en": "Maison Marcel croissant, York ham, Havarti cheese", "ca": "Croissant de Maison Marcel, pernil York, formatge Havarti" } }
+    { "name": "Avo Good Day", "price": "7.50", "desc": { "es": "Buenos días garantizados — tostada de masa madre, aguacate, cherry y un buen chorro de aceite", "en": "Good morning guaranteed — sourdough toast, avocado, cherry tomatoes, generous olive oil", "ca": "Bon dia garantit — torrada de massa mare, alvocat, cherry i un bon raig d'oli" } },
+    { "name": "Choco Toast", "price": "7.50", "desc": { "es": "Para los golosos — tostada de masa madre, plátano caramelizado, chocolate o cacahuete", "en": "For the sweet tooth — sourdough toast, caramelized banana, chocolate or peanut butter", "ca": "Per als llamins — torrada de massa mare, plàtan caramel·litzat, xocolata o cacauet" } },
+    { "name": "Butter Together", "price": "5.00", "desc": { "es": "Simple y perfecto — tostada de masa madre, mantequilla francesa, mermelada casera", "en": "Simple and perfect — sourdough toast, French butter, homemade jam", "ca": "Simple i perfecte — torrada de massa mare, mantega francesa, melmelada casolana" } },
+    { "name": "Bikini Super Classic", "price": "6.00", "desc": { "es": "El clásico elevado — masa madre, Duroc 100%, Havarti derretido", "en": "The elevated classic — sourdough, 100% Duroc ham, melted Havarti", "ca": "El clàssic elevat — massa mare, Duroc 100%, Havarti fos" } },
+    { "name": "Mr. Croissant", "price": "6.00", "desc": { "es": "Crujiente por fuera, fundido por dentro — croissant, York, Havarti", "en": "Crispy outside, melted inside — croissant, York ham, Havarti", "ca": "Cruixent per fora, fos per dins — croissant, York, Havarti" } }
   ],
   "bagels": [
-    { "name": "Lord Salmon", "price": "8.50", "desc": { "es": "Queso crema, salmón ahumado, cebolla encurtida DR, tomates cherry", "en": "Cream cheese, smoked salmon, DR pickled onions, cherry tomatoes", "ca": "Formatge crema, salmó fumat, ceba encurtida DR, tomàquets cherry" } },
-    { "name": "Cherries Lady", "price": "7.90", "desc": { "es": "Queso crema, tomates cherry, cebollino", "en": "Cream cheese, cherry tomatoes, chives", "ca": "Formatge crema, tomàquets cherry, cibulet" } }
+    { "name": "Lord Salmon", "price": "8.50", "desc": { "es": "Nueva York versión Costa Brava — crema, salmón Benfumat, cebolla encurtida, cherry", "en": "New York meets Costa Brava — cream cheese, Benfumat salmon, pickled onions, cherry", "ca": "Nova York versió Costa Brava — crema, salmó Benfumat, ceba encurtida, cherry" } },
+    { "name": "Cherries Lady", "price": "7.90", "desc": { "es": "La vegetariana irresistible — crema, cherry, cebollino crujiente", "en": "The irresistible veggie — cream cheese, cherry tomatoes, crispy chives", "ca": "La vegetariana irresistible — crema, cherry, cibulet cruixent" } }
   ],
   "bowls": [
-    { "name": "Granola Yogurt Bowl", "price": "8.00", "desc": { "es": "Yogur griego, granola casera, fruta de temporada, crema de cacahuete", "en": "Greek yogurt, homemade granola, seasonal fruit, peanut butter", "ca": "Iogurt grec, granola casolana, fruita de temporada, crema de cacauet" } },
-    { "name": "Açaí Bowl", "price": "10.50", "desc": { "es": "Sorbete de açaí orgánico 14%, granola, fruta de temporada", "en": "Organic açaí sorbet 14%, granola, seasonal fruit", "ca": "Sorbet d'açaí orgànic 14%, granola, fruita de temporada" } },
-    { "name": "Fruit Bowl", "price": "5.50", "desc": { "es": "Frutas de temporada", "en": "Seasonal fruits", "ca": "Fruites de temporada" } }
+    { "name": "Granola Yogurt Bowl", "price": "8.00", "desc": { "es": "Crujiente y cremoso — yogur griego, granola casera, fruta del día, toque de cacahuete", "en": "Crunchy and creamy — Greek yogurt, homemade granola, daily fruit, peanut butter touch", "ca": "Cruixent i cremós — iogurt grec, granola casolana, fruita del dia, toc de cacauet" } },
+    { "name": "Açaí Bowl", "price": "10.50", "desc": { "es": "14% açaí puro (de verdad) — sorbete cremoso, granola, fruta fresca", "en": "14% pure açaí (for real) — creamy sorbet, granola, fresh fruit", "ca": "14% açaí pur (de debò) — sorbet cremós, granola, fruita fresca" } },
+    { "name": "Fruit Bowl", "price": "5.50", "desc": { "es": "Lo que el mercado trajo hoy", "en": "Whatever the market brought today", "ca": "El que el mercat ha portat avui" } }
   ],
   "sweets": [
     { "name": "Vitrina", "price": "", "desc": { "es": "Mira nuestra selección de galletas, croissants y pasteles", "en": "Check our selection of cookies, croissants and cakes", "ca": "Mira la nostra selecció de galetes, croissants i pastissos" } }

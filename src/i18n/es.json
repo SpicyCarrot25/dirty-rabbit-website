@@ -5,7 +5,8 @@
     "order": "Pide Ahora",
     "producers": "Proveedores",
     "news": "News",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "faq": "FAQ"
   },
   "hero": {
     "tagline": "A place to wake up. Or slow down. Ideally both.",
@@ -80,6 +81,50 @@
   "news": {
     "title": "Noticias",
     "readMore": "Leer más"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "intro": "Todo lo que necesitas saber antes de visitarnos. Si no encuentras tu respuesta, escríbenos.",
+    "categories": {
+      "general": "General",
+      "coffee": "Café",
+      "food": "Comida",
+      "amenities": "Servicios"
+    }
+  },
+  "historia": {
+    "title": "Nuestra Historia",
+    "howItStarted": {
+      "title": "Cómo Empezó Todo",
+      "text": "En 2024, Iwonka y Franc dejaron atrás años de trabajo en restaurantes de lujo y startups para crear algo propio. Algo más pequeño. Más honesto. Un lugar donde la gente pudiera empezar el día bien — con un buen café, algo rico de comer, y sin prisa."
+    },
+    "whySagaro": {
+      "title": "Por Qué S'Agaró",
+      "text": "Queríamos un sitio con sol, mar y una comunidad de verdad. S'Agaró nos conquistó desde el primer paseo por la costa. Es el equilibrio perfecto: tranquilo en invierno, animado en verano, y siempre con esa luz mediterránea que lo cambia todo."
+    },
+    "philosophy": {
+      "title": "Nuestra Filosofía",
+      "text": "No perseguimos tendencias ni pretendemos reinventar nada. Simplemente hacemos las cosas con cuidado. Buenos ingredientes, técnica honesta, y el tiempo que cada cosa necesita. Así de simple."
+    },
+    "theName": {
+      "title": "El Nombre",
+      "text": "¿Por qué Dirty Rabbit? Porque los conejos son curiosos, rápidos, y un poco traviesos. Y lo de 'dirty'... porque el mejor café siempre deja una mancha."
+    },
+    "pillars": {
+      "care": {
+        "title": "Cuidado",
+        "text": "Cada elección es deliberada. El café que servimos, el pan que tostamos, la música que suena. Cuidado sin pretensión."
+      },
+      "connection": {
+        "title": "Conexión",
+        "text": "Desconocidos → habituales → amigos. Ese es el viaje. Todo el mundo encaja aquí."
+      },
+      "rhythm": {
+        "title": "Ritmo",
+        "text": "Beats rápidos y momentos lentos. Nos adaptamos a tu tempo, no al revés."
+      }
+    },
+    "tagline": "Casa lejos de casa"
   },
   "common": {
     "viewAll": "Ver Todo",

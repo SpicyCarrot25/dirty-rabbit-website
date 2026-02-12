@@ -5,7 +5,8 @@
     "order": "Demana Ara",
     "producers": "Proveïdors",
     "news": "News",
-    "contact": "Contacte"
+    "contact": "Contacte",
+    "faq": "FAQ"
   },
   "hero": {
     "tagline": "A place to wake up. Or slow down. Ideally both.",
@@ -80,6 +81,50 @@
   "news": {
     "title": "Notícies",
     "readMore": "Llegir més"
+  },
+  "faq": {
+    "title": "Preguntes Freqüents",
+    "intro": "Tot el que necessites saber abans de visitar-nos. Si no trobes la teva resposta, escriu-nos.",
+    "categories": {
+      "general": "General",
+      "coffee": "Cafè",
+      "food": "Menjar",
+      "amenities": "Serveis"
+    }
+  },
+  "historia": {
+    "title": "La Nostra Història",
+    "howItStarted": {
+      "title": "Com Va Començar Tot",
+      "text": "El 2024, la Iwonka i en Franc van deixar enrere anys de feina en restaurants de luxe i startups per crear alguna cosa pròpia. Alguna cosa més petita. Més honesta. Un lloc on la gent pogués començar el dia bé — amb un bon cafè, alguna cosa bona per menjar, i sense presses."
+    },
+    "whySagaro": {
+      "title": "Per Què S'Agaró",
+      "text": "Volíem un lloc amb sol, mar i una comunitat de veritat. S'Agaró ens va conquistar des del primer passeig per la costa. És l'equilibri perfecte: tranquil a l'hivern, animat a l'estiu, i sempre amb aquella llum mediterrània que ho canvia tot."
+    },
+    "philosophy": {
+      "title": "La Nostra Filosofia",
+      "text": "No perseguim tendències ni pretenem reinventar res. Simplement fem les coses amb cura. Bons ingredients, tècnica honesta, i el temps que cada cosa necessita. Així de simple."
+    },
+    "theName": {
+      "title": "El Nom",
+      "text": "Per què Dirty Rabbit? Perquè els conills són curiosos, ràpids, i una mica entremaliats. I el de 'dirty'... perquè el millor cafè sempre deixa una taca."
+    },
+    "pillars": {
+      "care": {
+        "title": "Cura",
+        "text": "Cada elecció és deliberada. El cafè que servim, el pa que tostem, la música que sona. Cura sense pretensió."
+      },
+      "connection": {
+        "title": "Connexió",
+        "text": "Desconeguts → habituals → amics. Aquest és el viatge. Tothom encaixa aquí."
+      },
+      "rhythm": {
+        "title": "Ritme",
+        "text": "Beats ràpids i moments lents. Ens adaptem al teu tempo, no al revés."
+      }
+    },
+    "tagline": "Casa lluny de casa"
   },
   "common": {
     "viewAll": "Veure Tot",
