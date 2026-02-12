@@ -12,8 +12,8 @@
   "notCoffee": [
     { "name": "Matcha Pure", "price": "3.20", "desc": { "es": "REQ matcha (con agua)", "en": "REQ matcha (with water)", "ca": "REQ matcha (amb aigua)" } },
     { "name": "Matcha Latte", "price": "3.50", "desc": { "es": "REQ matcha", "en": "REQ matcha", "ca": "REQ matcha" } },
-    { "name": "Chai Latte", "price": "3.50", "desc": { "es": "Chalo Chai especias frescas", "en": "Chalo Chai fresh spices", "ca": "Chalo Chai espècies fresques" } },
-    { "name": "Dirty Chai", "price": "4.00", "desc": { "es": "Chai + shot de espresso", "en": "Chai + espresso shot", "ca": "Chai + shot d'espresso" } },
+    { "name": "Chai Latte", "price": "3.50", "desc": { "es": "Awachai Masala", "en": "Awachai Masala", "ca": "Awachai Masala" } },
+    { "name": "Dirty Chai", "price": "4.00", "desc": { "es": "Awachai Masala + espresso", "en": "Awachai Masala + espresso", "ca": "Awachai Masala + espresso" } },
     { "name": "Hot Chocolate", "price": "4.00", "desc": { "es": "LOT Roasters", "en": "LOT Roasters", "ca": "LOT Roasters" } },
     { "name": "Tés & Infusiones", "price": "2.50", "desc": { "es": "Sans & Sans", "en": "Sans & Sans", "ca": "Sans & Sans" } },
     { "name": "Got de Llet", "price": "1.50", "desc": { "es": "La Selvatana", "en": "La Selvatana", "ca": "La Selvatana" } }
