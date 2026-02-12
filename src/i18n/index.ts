@@ -22,11 +22,26 @@ export function getLangFromUrl(url: URL): Language {
 }
 
 // Path mappings for pages with different names per language
+// Include ALL language variants so switching works in any direction
 const pathMappings: Record<string, Record<Language, string>> = {
-  'trabajo': { es: 'trabajo', en: 'jobs', ca: 'feina' },
+  // About page
   'nosotros': { es: 'nosotros', en: 'about', ca: 'nosaltres' },
-  'proveedores': { es: 'proveedores', en: 'suppliers', ca: 'proveidors' },
   'about': { es: 'nosotros', en: 'about', ca: 'nosaltres' },
+  'nosaltres': { es: 'nosotros', en: 'about', ca: 'nosaltres' },
+  // Suppliers page
+  'proveedores': { es: 'proveedores', en: 'suppliers', ca: 'proveidors' },
+  'suppliers': { es: 'proveedores', en: 'suppliers', ca: 'proveidors' },
+  'proveidors': { es: 'proveedores', en: 'suppliers', ca: 'proveidors' },
+  // Jobs page
+  'trabajo': { es: 'trabajo', en: 'jobs', ca: 'feina' },
+  'jobs': { es: 'trabajo', en: 'jobs', ca: 'feina' },
+  'feina': { es: 'trabajo', en: 'jobs', ca: 'feina' },
+  // FAQ page (same in all languages but include for safety)
+  'faq': { es: 'faq', en: 'faq', ca: 'faq' },
+  // Carta/Menu
+  'carta': { es: 'carta', en: 'carta', ca: 'carta' },
+  // News
+  'news': { es: 'news', en: 'news', ca: 'news' },
 };
 
 export function getLocalizedPath(path: string, lang: Language): string {
