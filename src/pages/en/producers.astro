@@ -9,7 +9,7 @@ const t = getTranslations(lang);
 
 <Layout title={`${t.producers.title} — Dirty Rabbit`} lang={lang}>
   <!-- Hero Section -->
-  <section class="py-20 md:py-32 bg-white">
+  <section class="pt-12 pb-8 md:pt-16 md:pb-12 bg-white">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center reveal">
         <h1 class="font-typewriter text-5xl md:text-7xl font-bold mb-6">{t.producers.title}</h1>
@@ -18,6 +18,18 @@ const t = getTranslations(lang);
           {t.producers.intro}
         </p>
       </div>
+    </div>
+  </section>
+
+  <!-- Hero Image -->
+  <section class="pb-12 md:pb-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <img 
+        src="/images/heroes/proveedores.jpg" 
+        alt="Our suppliers" 
+        class="w-full aspect-[16/9] object-cover rounded-lg"
+        loading="eager"
+      />
     </div>
   </section>
 
