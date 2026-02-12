@@ -19,12 +19,12 @@
     { "name": "Got de Llet", "price": "1.50", "desc": { "es": "La Selvatana", "en": "La Selvatana", "ca": "La Selvatana" } }
   ],
   "icedDrinks": [
-    { "name": "Iced Coffee", "price": "2.80", "desc": { "es": "La Cabra", "en": "La Cabra", "ca": "La Cabra" } },
+    { "name": "Iced Coffee", "price": "2.80", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
     { "name": "Iced Latte", "price": "3.50", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots" } },
     { "name": "Espresso Tonic", "price": "4.50", "desc": { "es": "Espresso + tónica", "en": "Espresso + tonic", "ca": "Espresso + tònica" } },
-    { "name": "Iced Matcha Pure", "price": "3.70", "desc": { "es": "REQ Matcha", "en": "REQ Matcha", "ca": "REQ Matcha" } },
-    { "name": "Iced Matcha Latte", "price": "4.00", "desc": { "es": "REQ Matcha", "en": "REQ Matcha", "ca": "REQ Matcha" } },
-    { "name": "Iced Chai", "price": "4.00", "desc": { "es": "Chalo Chai", "en": "Chalo Chai", "ca": "Chalo Chai" } },
+    { "name": "Iced Matcha Pure", "price": "3.70", "desc": { "es": "REQ matcha", "en": "REQ matcha", "ca": "REQ matcha" } },
+    { "name": "Iced Matcha Latte", "price": "4.00", "desc": { "es": "REQ matcha", "en": "REQ matcha", "ca": "REQ matcha" } },
+    { "name": "Iced Chai", "price": "4.00", "desc": { "es": "Awachai Masala", "en": "Awachai Masala", "ca": "Awachai Masala" } },
     { "name": "Iced Chocolate", "price": "4.50", "desc": { "es": "LOT Roasters", "en": "LOT Roasters", "ca": "LOT Roasters" } },
     { "name": "Iced Tea", "price": "3.00", "desc": { "es": "Sans & Sans", "en": "Sans & Sans", "ca": "Sans & Sans" } }
   ],
