@@ -65,6 +65,19 @@
     "image": "/images/proveedores/awachai.jpg"
   },
   {
+    "id": "sans-sans",
+    "name": "Sans & Sans",
+    "category": { "es": "Tés de Especialidad", "en": "Specialty Teas", "ca": "Tès d'Especialitat" },
+    "origin": "Barcelona",
+    "description": { 
+      "es": "Tés de origen único seleccionados con mimo. Desde hojas enteras hasta infusiones florales. Para los momentos que piden algo más suave.",
+      "en": "Single-origin teas carefully selected. From whole leaves to floral infusions. For moments that call for something gentler.",
+      "ca": "Tès d'origen únic seleccionats amb cura. Des de fulles senceres fins a infusions florals. Per als moments que demanen alguna cosa més suau."
+    },
+    "url": "https://sansandsans.com",
+    "image": "/images/proveedores/sans-sans.jpg"
+  },
+  {
     "id": "bioma",
     "name": "Bioma",
     "category": { "es": "Kombucha Premium", "en": "Premium Kombucha", "ca": "Kombucha Premium" },
@@ -114,7 +127,7 @@
       "ca": "Pa de massa mare ecològic, fermentació lenta, ingredients de productors locals. Sense additius, sense conservants — només pa de veritat."
     },
     "url": "https://origobakery.com",
-    "image": "/images/proveedores/origo.jpg"
+    "image": "/images/proveedores/origo-bakery.jpg"
   },
   {
     "id": "bagelboy",
