@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations } from '../../i18n';
+import proveedores from '../../data/proveedores.json';
+
+const lang = 'en';
+const t = getTranslations(lang);
+---
+
+<Layout title={`${t.producers.title} — Dirty Rabbit`} lang={lang}>
+  <!-- Hero Section -->
+  <section class="py-20 md:py-32 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center reveal">
+        <h1 class="font-typewriter text-5xl md:text-7xl font-bold mb-6">{t.producers.title}</h1>
+        <div class="w-24 h-px bg-red mx-auto mb-8"></div>
+        <p class="font-mono text-lg md:text-xl text-black/70 max-w-2xl mx-auto leading-relaxed">
+          {t.producers.intro}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Suppliers Grid -->
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="stagger-group grid md:grid-cols-2 gap-8 md:gap-12">
+        {proveedores.map((p) => (
+          <article class="stagger-item bg-white border border-black p-6 md:p-8 card-lift">
+            <!-- Photo placeholder with rabbit logo style -->
+            <div class="w-full aspect-[4/3] bg-cream flex items-center justify-center mb-6 relative overflow-hidden">
+              <div class="text-red/10 text-8xl font-typewriter font-bold">🐰</div>
+              <span class="absolute bottom-3 right-3 font-mono text-xs text-black/30">[PHOTO]</span>
+            </div>
+            
+            <!-- Supplier Info -->
+            <h2 class="font-typewriter text-2xl md:text-3xl font-bold mb-2">{p.name}</h2>
+            <p class="font-mono text-sm text-red mb-4 tracking-wide">
+              {(p.category as any)[lang]}{p.origin ? ` · ${p.origin}` : ''}
+            </p>
+            <p class="font-mono text-black/70 leading-relaxed">{(p.description as any)[lang]}</p>
+            
+            {p.url && (
+              <a 
+                href={p.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-2 mt-6 font-mono text-sm text-red hover:text-red/80 transition-colors group"
+              >
+                <span>Visit website</span>
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                </svg>
+              </a>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
