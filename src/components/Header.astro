@@ -9,6 +9,26 @@ interface Props {
 const { lang } = Astro.props;
 const t = getTranslations(lang);
 
+// Desktop labels (short)
+const historyLabelsDesktop: Record<Language, string> = {
+  es: 'Nosotros',
+  en: 'About',
+  ca: 'Nosaltres'
+};
+
+const suppliersLabelsDesktop: Record<Language, string> = {
+  es: 'Proveedores',
+  en: 'Producers',
+  ca: 'Proveïdors'
+};
+
+const contactLabelsDesktop: Record<Language, string> = {
+  es: 'FAQ',
+  en: 'FAQ',
+  ca: 'FAQ'
+};
+
+// Mobile labels (full)
 const historyLabels: Record<Language, string> = {
   es: 'Nuestra Manera',
   en: 'Our Way',
@@ -45,24 +65,24 @@ const orderLabels: Record<Language, string> = {
     <div class="flex items-center justify-between h-16 md:h-20">
       
       <!-- Secondary Nav (left) - small text -->
-      <nav class="hidden md:flex items-center gap-6">
+      <nav class="hidden md:flex items-center gap-5">
         <a 
           href={getLocalizedPath('/about', lang)} 
           class="nav-link font-mono text-sm tracking-wide transition-colors"
         >
-          {historyLabels[lang]}
+          {historyLabelsDesktop[lang]}
         </a>
         <a 
           href={getLocalizedPath('/proveedores', lang)} 
           class="nav-link font-mono text-sm tracking-wide transition-colors"
         >
-          {suppliersLabels[lang]}
+          {suppliersLabelsDesktop[lang]}
         </a>
         <a 
           href={getLocalizedPath('/faq', lang)} 
           class="nav-link font-mono text-sm tracking-wide transition-colors"
         >
-          {contactLabels[lang]}
+          {contactLabelsDesktop[lang]}
         </a>
       </nav>
       
