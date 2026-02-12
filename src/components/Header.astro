@@ -43,7 +43,7 @@ const suppliersLabels: Record<Language, string> = {
 
 const workLabels: Record<Language, string> = {
   es: 'Únete a Nosotros',
-  en: 'Join Us',
+  en: 'Join Our Team',
   ca: 'Uneix-te a Nosaltres'
 };
 
@@ -121,7 +121,7 @@ const orderLabels: Record<Language, string> = {
           href={getLocalizedPath('/carta', lang)} 
           class="nav-link font-typewriter text-lg md:text-xl tracking-normal transition-colors font-bold"
         >
-          Carta
+          {t.nav.menu}
         </a>
         <a 
           href="https://order.dirtyrabbit.es" 
@@ -134,8 +134,10 @@ const orderLabels: Record<Language, string> = {
         <LanguageSelector lang={lang} />
       </nav>
       
-      <!-- Mobile: Right side placeholder for balance -->
-      <div class="md:hidden w-10"></div>
+      <!-- Mobile: Language selector always visible on right -->
+      <div class="md:hidden">
+        <LanguageSelector lang={lang} />
+      </div>
     </div>
   </div>
 </header>
