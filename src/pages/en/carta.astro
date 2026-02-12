@@ -6,17 +6,30 @@ import menuData from '../../data/menu.json';
 const lang = 'en';
 const t = getTranslations(lang);
 
-// Reorganized sections for new structure
-const coffeeAndCia = [...menuData.coffee, ...menuData.pastries];
-const bebidas = menuData.drinks;
-const food = [...menuData.brunch, ...menuData.tostas];
+// Reorganized sections
+const teaItems = menuData.drinks.filter(d => 
+  d.name.toLowerCase().includes('matcha') || 
+  d.name.toLowerCase().includes('chai')
+);
+const coffeeAndTea = [...menuData.coffee, ...teaItems];
+
+const otherDrinks = menuData.drinks.filter(d => 
+  !d.name.toLowerCase().includes('matcha') && 
+  !d.name.toLowerCase().includes('chai')
+);
+const bebidas = [
+  ...otherDrinks.filter(d => d.name.toLowerCase().includes('smoothie')),
+  ...otherDrinks.filter(d => !d.name.toLowerCase().includes('smoothie'))
+];
+
+const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
 ---
 
 <Layout title="Menu — Dirty Rabbit" lang={lang}>
   <!-- Hero Section -->
   <section class="py-12 md:py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="font-typewriter text-5xl md:text-7xl font-bold mb-6 reveal">Menu</h1>
+      <h1 class="font-typewriter text-5xl md:text-7xl font-bold mb-6">Menu</h1>
       <div class="w-24 h-px bg-red mx-auto mb-8"></div>
       
       <!-- Jump Navigation -->
@@ -57,16 +70,16 @@ const food = [...menuData.brunch, ...menuData.tostas];
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- COFFEE & CIA -->
-      <div id="coffee" class="scroll-mt-24 reveal">
+      <div id="coffee" class="scroll-mt-24">
         <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">
           Coffee & Cia
         </h2>
-        <p class="font-mono text-sm text-black/60 text-center mb-8">
-          La Cabra blend · V60 with rotating origins · La Puntual pastries
+        <p class="font-mono text-sm text-black/70 text-center mb-8">
+          La Cabra blend · V60 rotating origins · REQ Matcha · Awachai Chai
         </p>
         
         <div class="space-y-5">
-          {coffeeAndCia.map((item) => (
+          {coffeeAndTea.map((item) => (
             <div class="flex items-baseline justify-between gap-4 group">
               <div class="flex-1 min-w-0">
                 <div class="flex items-baseline gap-2">
@@ -88,12 +101,12 @@ const food = [...menuData.brunch, ...menuData.tostas];
       </div>
 
       <!-- DRINKS -->
-      <div id="bebidas" class="scroll-mt-24 mt-16 pt-16 border-t border-red reveal">
+      <div id="bebidas" class="scroll-mt-24 mt-16 pt-16 border-t border-red">
         <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">
           Drinks
         </h2>
-        <p class="font-mono text-sm text-black/60 text-center mb-8">
-          REQ matcha · Awachai chai · Fresh juices
+        <p class="font-mono text-sm text-black/70 text-center mb-8">
+          Smoothies · Fresh juices · Kombucha
         </p>
         
         <div class="space-y-5">
@@ -119,12 +132,12 @@ const food = [...menuData.brunch, ...menuData.tostas];
       </div>
 
       <!-- FOOD -->
-      <div id="food" class="scroll-mt-24 mt-16 pt-16 border-t border-red reveal">
+      <div id="food" class="scroll-mt-24 mt-16 pt-16 border-t border-red">
         <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">
           Food
         </h2>
-        <p class="font-mono text-sm text-black/60 text-center mb-8">
-          Bioma eggs · Sourdough bread · Ibérico bellota ham
+        <p class="font-mono text-sm text-black/70 text-center mb-8">
+          Bioma eggs · Sourdough bread · La Puntual pastries
         </p>
         
         <div class="space-y-5">
@@ -151,7 +164,7 @@ const food = [...menuData.brunch, ...menuData.tostas];
 
       <!-- Notes -->
       <div class="mt-16 pt-8 border-t border-black/10">
-        <div class="space-y-2 font-mono text-sm text-black/60 text-center">
+        <div class="space-y-2 font-mono text-sm text-black/70 text-center">
           <p>Oat, soy or almond milk: +€0.50</p>
           <p>Ask about allergens — kitchen is not 100% gluten-free</p>
         </div>
