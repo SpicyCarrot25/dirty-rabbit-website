@@ -1,13 +1,13 @@
 {
   "coffee": [
-    { "name": "Espresso", "price": "1.90", "desc": { "es": "La Cabra blend", "en": "La Cabra blend", "ca": "La Cabra blend" } },
-    { "name": "Americano", "price": "2.40", "desc": { "es": "La Cabra blend", "en": "La Cabra blend", "ca": "La Cabra blend" } },
-    { "name": "Cortado", "price": "2.10", "desc": { "es": "La Cabra blend", "en": "La Cabra blend", "ca": "La Cabra blend" } },
-    { "name": "Café con Leche", "price": "2.00", "desc": { "es": "La Cabra blend", "en": "La Cabra blend", "ca": "La Cabra blend" } },
+    { "name": "Espresso", "price": "1.90", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
+    { "name": "Americano", "price": "2.40", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
+    { "name": "Cortado", "price": "2.10", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
+    { "name": "Café con Leche", "price": "2.00", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
     { "name": "Latte", "price": "2.50", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots" } },
     { "name": "Flat White", "price": "3.00", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots" } },
-    { "name": "Batch Brew", "price": "2.50", "desc": { "es": "L/XL 2.50/3", "en": "L/XL 2.50/3", "ca": "L/XL 2.50/3" } },
-    { "name": "Decaf", "price": "+0.30", "desc": { "es": "Disponible en cualquier café", "en": "Available with any coffee", "ca": "Disponible amb qualsevol cafè" } }
+    { "name": "Batch Brew L / XL", "price": "2.5 / 3", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
+    { "name": "Puchero", "price": "+0", "desc": { "es": "Decaf disponible en cualquier café", "en": "Decaf available with any coffee", "ca": "Decaf disponible amb qualsevol cafè" } }
   ],
   "notCoffee": [
     { "name": "Matcha Pure", "price": "3.20", "desc": { "es": "REQ Matcha ceremonial grade", "en": "REQ Matcha ceremonial grade", "ca": "REQ Matcha ceremonial grade" } },
