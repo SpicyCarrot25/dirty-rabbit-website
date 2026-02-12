@@ -30,7 +30,7 @@
   ],
   "smoothies": [
     { "name": "Garden Thief", "price": "6.50", "desc": { "es": "Robamos lo mejor del huerto — espinacas, brócoli, manzana, plátano", "en": "We stole the best from the garden — spinach, broccoli, apple, banana", "ca": "Hem robat el millor de l'hort — espinacs, bròquil, poma, plàtan" } },
-    { "name": "Rabbit Power", "price": "6.50", "desc": { "es": "Energía de conejo — manzana, fresas, plátano", "en": "Bunny power boost — apple, strawberries, banana", "ca": "Energia de conill — poma, maduixes, plàtan" } },
+    { "name": "Rabbit Power", "price": "6.50", "desc": { "es": "Pilas alcalinas — manzana, fresas, plátano", "en": "Alkaline batteries — apple, strawberries, banana", "ca": "Piles alcalines — poma, maduixes, plàtan" } },
     { "name": "Carrot Kick", "price": "6.50", "desc": { "es": "Un golpe de jengibre — zanahoria, manzana, mango, jengibre", "en": "A ginger kick — carrot, apple, mango, ginger", "ca": "Un cop de gingebre — pastanaga, poma, mango, gingebre" } }
   ],
   "beverages": [
