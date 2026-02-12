@@ -34,11 +34,11 @@
     { "name": "Carrot Kick", "price": "6.50", "desc": { "es": "Un golpe de jengibre — zanahoria, manzana, mango, jengibre", "en": "A ginger kick — carrot, apple, mango, ginger", "ca": "Un cop de gingebre — pastanaga, poma, mango, gingebre" } }
   ],
   "beverages": [
-    { "name": "Aigua Sant Aniol", "price": "1.90", "desc": { "es": "Agua mineral", "en": "Mineral water", "ca": "Aigua mineral" } },
-    { "name": "Aigua amb Gas", "price": "2.20", "desc": { "es": "Sant Aniol con gas", "en": "Sant Aniol sparkling", "ca": "Sant Aniol amb gas" } },
-    { "name": "Vichy", "price": "2.20", "desc": { "es": "Lata", "en": "Can", "ca": "Llauna" } },
+    { "name": "Agua Sant Aniol", "price": "1.90", "desc": { "es": "Agua mineral", "en": "Mineral water", "ca": "Aigua mineral" } },
+    { "name": "Agua con Gas", "price": "2.20", "desc": { "es": "Sant Aniol con gas", "en": "Sant Aniol sparkling", "ca": "Sant Aniol amb gas" } },
+    { "name": "Vichy Catalán", "price": "2.20", "desc": { "es": "Lata", "en": "Can", "ca": "Llauna" } },
     { "name": "Fritz Kola", "price": "2.80", "desc": { "es": "Regular o Zero", "en": "Regular or Zero", "ca": "Regular o Zero" } },
-    { "name": "Caravelle Soda", "price": "2.80", "desc": { "es": "Naranja o limón", "en": "Orange or lemon", "ca": "Taronja o llimona" } },
+    { "name": "Juno Soda", "price": "2.80", "desc": { "es": "Naranja o limón", "en": "Orange or lemon", "ca": "Taronja o llimona" } },
     { "name": "Kombucha Bioma", "price": "4.50", "desc": { "es": "Orgánica", "en": "Organic", "ca": "Orgànica" } },
     { "name": "Linda Juice", "price": "2.80", "desc": { "es": "Mandarina o pera", "en": "Mandarin or pear", "ca": "Mandarina o pera" } },
     { "name": "Zumo de Naranja", "price": "4.00", "desc": { "es": "Natural, exprimido", "en": "Fresh squeezed", "ca": "Natural, espremut" } }
