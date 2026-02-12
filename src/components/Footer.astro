@@ -68,48 +68,6 @@ const footerLabels = {
   </div>
 </section>
 
-<!-- Encuéntranos Section -->
-<section class="py-12 md:py-16 bg-white">
-  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <!-- Horario -->
-    <div class="mb-8">
-      <h3 class="font-typewriter text-lg mb-2">Horas</h3>
-      <p class="font-mono text-base text-black/70">Mié-Dom de 8:00 a 16:00</p>
-    </div>
-    
-    <!-- Dirección -->
-    <div class="mb-8">
-      <h3 class="font-typewriter text-lg mb-2">Dirección</h3>
-      <p class="font-mono text-base text-black/70">
-        Carrer de la Conca, 27<br />
-        S'Agaró, Girona
-      </p>
-    </div>
-    
-    <!-- Links -->
-    <div class="space-y-2">
-      <a 
-        href="https://maps.app.goo.gl/dirtyrabbit" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="block font-mono text-base text-black hover:text-red transition-colors"
-      >
-        Google Maps
-      </a>
-      <a 
-        href="https://g.page/r/dirtyrabbit/review" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="block font-mono text-base text-black hover:text-red transition-colors"
-      >
-        Google Reviews
-      </a>
-    </div>
-    
-  </div>
-</section>
-
 <!-- Footer (white bg, Big Mamma style) -->
 <footer class="bg-white text-black">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
@@ -118,7 +76,7 @@ const footerLabels = {
     <div class="border-t border-[#CD202C] mb-10"></div>
     
     <!-- Footer Menu Links - LEFT ALIGNED, Title Case -->
-    <nav class="flex flex-col items-start gap-3 mb-10 font-typewriter text-base tracking-normal">
+    <nav class="flex flex-col items-start gap-2 mb-8 font-typewriter text-base tracking-normal">
       <a href="/legal" class="text-black hover:text-red transition-colors">
         {footerLabels.legal[lang]}
       </a>
@@ -132,6 +90,20 @@ const footerLabels = {
         {footerLabels.news[lang]}
       </a>
     </nav>
+    
+    <!-- Encuéntranos - compact, same style as links -->
+    <div class="mb-8 font-typewriter text-base">
+      <p class="text-black mb-1">Mié-Dom · 8:00–16:00</p>
+      <p class="text-black/70 mb-2">Carrer de la Conca, 27 · S'Agaró</p>
+      <a 
+        href="https://maps.app.goo.gl/dirtyrabbit" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="text-black hover:text-red transition-colors"
+      >
+        Google Maps
+      </a>
+    </div>
     
     <!-- NO divider between links and Stay in touch -->
     
