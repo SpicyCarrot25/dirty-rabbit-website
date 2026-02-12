@@ -7,7 +7,9 @@ const lang = 'en';
 const t = getTranslations(lang);
 
 // First 4 providers for homepage
-const featuredProviders = proveedores.slice(0, 4);
+// Featured providers for homepage (curated selection)
+const featuredIds = ['la-cabra', 'origo-bakery', 'la-puntual', 'buddy-buddy'];
+const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === id)).filter(Boolean);
 ---
 
 <Layout title="Dirty Rabbit — Specialty Coffee, Breakfast & Brunch · S'Agaró" lang={lang}>
