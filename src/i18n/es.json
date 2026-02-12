@@ -75,7 +75,27 @@
       "events": "¿Hacéis eventos privados?",
       "eventsAnswer": "Sí, para grupos pequeños fuera de horario. Escríbenos a hola@dirtyrabbit.es con tu idea y vemos cómo hacer magia.",
       "dietary": "¿Tenéis opciones veganas/sin gluten?",
-      "dietaryAnswer": "Sí. Opciones vegetarianas y veganas en carta, leches vegetales disponibles. Para sin gluten, pregunta — tenemos varias opciones pero la cocina no está 100% libre de gluten."
+      "dietaryAnswer": "Sí. Opciones vegetarianas y veganas en carta, leches vegetales disponibles. Para sin gluten, pregunta — tenemos varias opciones pero la cocina no está 100% libre de gluten.",
+      "specialty": "¿Qué hace que Dirty Rabbit sea un café de especialidad?",
+      "specialtyAnswer": "Trabajamos con La Cabra de Copenhague, uno de los mejores tostadores de Europa. Nuestro café es de origen único (actualmente Etiopía para espresso, Honduras para batch), tostado con precisión y preparado con cuidado. No es café de máquina automática — es artesanía.",
+      "coffeeOrigin": "¿De dónde viene vuestro café?",
+      "coffeeOriginAnswer": "Nuestro espresso es de La Cabra (Copenhague) con granos de Etiopía. El batch brew cambia según temporada — ahora Honduras. El decaf es de Puchero. Cada origen se elige por su perfil de sabor, no por precio.",
+      "decaf": "¿Tenéis café descafeinado?",
+      "decafAnswer": "Sí, de Puchero. Y lo mejor: es gratis. No cobramos extra por el decaf porque creemos que todos merecen buen café, con o sin cafeína.",
+      "kids": "¿Es adecuado para ir con niños?",
+      "kidsAnswer": "100%. Tenemos trona, cambiador, y una terraza donde los peques pueden moverse. El smoothie Rabbit Power es su favorito. Las familias son parte de nuestra comunidad.",
+      "terrace": "¿Tenéis terraza?",
+      "terraceAnswer": "Sí, terraza exterior con sombra. Perfecta para desayunar con vistas a S'Agaró. En verano es el lugar favorito.",
+      "location": "¿Cómo llego desde la playa de Sant Pol?",
+      "locationAnswer": "Estamos a 5 minutos andando desde Sant Pol, subiendo por la Avinguda de Platja d'Aro. Después de un baño, nada mejor que un flat white.",
+      "camiRonda": "¿Estáis cerca del Camí de Ronda?",
+      "camiRondaAnswer": "A 3 minutos del camino. Muchos senderistas paran aquí antes o después de su ruta. El batch brew grande es perfecto para recargar.",
+      "groups": "¿Tenéis espacio para grupos?",
+      "groupsAnswer": "Para grupos de hasta 8 personas, sí. Más grandes es difícil sin reserva. Para eventos privados fuera de horario, escríbenos.",
+      "takeaway": "¿Hacéis para llevar?",
+      "takeawayAnswer": "Sí, todo. Café, smoothies, tostadas... Usamos packaging sostenible. Perfecto para llevar a la playa.",
+      "payment": "¿Aceptáis tarjeta?",
+      "paymentAnswer": "Sí, tarjeta, efectivo, y pago móvil. Lo que te vaya mejor."
     }
   },
   "news": {

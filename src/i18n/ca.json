@@ -75,7 +75,27 @@
       "events": "Feu esdeveniments privats?",
       "eventsAnswer": "Sí, per a grups petits fora d'horari. Escriu-nos a hola@dirtyrabbit.es amb la teva idea i veiem com fer màgia.",
       "dietary": "Teniu opcions veganes/sense gluten?",
-      "dietaryAnswer": "Sí. Opcions vegetarianes i veganes a la carta, llets vegetals disponibles. Per sense gluten, pregunta — tenim diverses opcions però la cuina no està 100% lliure de gluten."
+      "dietaryAnswer": "Sí. Opcions vegetarianes i veganes a la carta, llets vegetals disponibles. Per sense gluten, pregunta — tenim diverses opcions però la cuina no està 100% lliure de gluten.",
+      "specialty": "Què fa que Dirty Rabbit sigui un cafè d'especialitat?",
+      "specialtyAnswer": "Treballem amb La Cabra de Copenhaguen, un dels millors torrefactors d'Europa. El nostre cafè és d'origen únic (ara Etiòpia per espresso, Hondures per batch), torrat amb precisió i preparat amb cura. No és cafè de màquina automàtica — és artesania.",
+      "coffeeOrigin": "D'on ve el vostre cafè?",
+      "coffeeOriginAnswer": "El nostre espresso és de La Cabra (Copenhaguen) amb grans d'Etiòpia. El batch brew canvia segons temporada — ara Hondures. El descafeïnat és de Puchero. Cada origen s'escull pel seu perfil de sabor, no per preu.",
+      "decaf": "Teniu cafè descafeïnat?",
+      "decafAnswer": "Sí, de Puchero. I el millor: és gratis. No cobrem extra pel descafeïnat perquè creiem que tothom mereix bon cafè, amb o sense cafeïna.",
+      "kids": "És adequat per anar amb nens?",
+      "kidsAnswer": "100%. Tenim trona, canviador, i una terrassa on els petits es poden moure. El smoothie Rabbit Power és el seu favorit. Les famílies són part de la nostra comunitat.",
+      "terrace": "Teniu terrassa?",
+      "terraceAnswer": "Sí, terrassa exterior amb ombra. Perfecta per esmorzar amb vistes a S'Agaró. A l'estiu és el lloc favorit.",
+      "location": "Com hi arribo des de la platja de Sant Pol?",
+      "locationAnswer": "Som a 5 minuts caminant des de Sant Pol, pujant per l'Avinguda de Platja d'Aro. Després d'un bany, res millor que un flat white.",
+      "camiRonda": "Esteu a prop del Camí de Ronda?",
+      "camiRondaAnswer": "A 3 minuts del camí. Molts senderistes paren aquí abans o després de la seva ruta. El batch brew gran és perfecte per recarregar.",
+      "groups": "Teniu espai per a grups?",
+      "groupsAnswer": "Per a grups de fins a 8 persones, sí. Més grans és difícil sense reserva. Per a esdeveniments privats fora d'horari, escriu-nos.",
+      "takeaway": "Feu per emportar?",
+      "takeawayAnswer": "Sí, tot. Cafè, smoothies, torrades... Fem servir packaging sostenible. Perfecte per portar a la platja.",
+      "payment": "Accepteu targeta?",
+      "paymentAnswer": "Sí, targeta, efectiu, i pagament mòbil. El que et vagi millor."
     }
   },
   "news": {
