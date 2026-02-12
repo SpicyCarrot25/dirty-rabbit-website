@@ -65,7 +65,7 @@ const footerLabels = {
       <!-- Privacy checkbox -->
       <label id="privacy-label" class="flex items-start gap-2 mt-2 font-mono text-[10px] text-black/50 cursor-pointer">
         <input type="checkbox" id="privacy-check" class="rounded border-[#1A1A1A]/30 mt-0.5 shrink-0" required />
-        <span>{footerLabels.privacy[lang].split('Política')[0]}<a href="/privacidad" class="underline hover:text-red transition-colors">Política de Privacidad</a></span>
+        <span>{footerLabels.privacy[lang].split('Política')[0]}<a href={lang === 'es' ? '/privacidad' : lang === 'en' ? '/en/privacy' : '/ca/privacitat'} class="underline hover:text-red transition-colors">{lang === 'es' ? 'Política de Privacidad' : lang === 'en' ? 'Privacy Policy' : 'Política de Privacitat'}</a></span>
       </label>
 
       <!-- Success message (hidden by default) -->
@@ -169,8 +169,11 @@ const footerLabels = {
 
     <!-- Footer Menu Links - LEFT ALIGNED, same size -->
     <nav class="flex flex-col items-start gap-2 mb-8 font-typewriter text-base tracking-normal">
-      <a href="/legal" class="text-black hover:text-red transition-colors">
+      <a href={lang === 'es' ? '/legal' : lang === 'en' ? '/en/legal' : '/ca/legal'} class="text-black hover:text-red transition-colors">
         {footerLabels.legal[lang]}
+      </a>
+      <a href={lang === 'es' ? '/privacidad' : lang === 'en' ? '/en/privacy' : '/ca/privacitat'} class="text-black hover:text-red transition-colors">
+        {lang === 'es' ? 'Privacidad' : lang === 'en' ? 'Privacy' : 'Privacitat'}
       </a>
       <a href={getLocalizedPath('/contacto', lang)} class="text-black hover:text-red transition-colors">
         {footerLabels.faq[lang]}

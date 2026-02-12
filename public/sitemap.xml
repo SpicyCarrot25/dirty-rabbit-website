@@ -173,11 +173,49 @@
     <priority>0.5</priority>
   </url>
   
-  <!-- Legal -->
+  <!-- Legal & Privacy - Spanish -->
   <url>
     <loc>https://dirtyrabbit.es/legal</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dirtyrabbit.es/legal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dirtyrabbit.es/en/legal"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://dirtyrabbit.es/ca/legal"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://dirtyrabbit.es/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://dirtyrabbit.es/en/privacy"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://dirtyrabbit.es/ca/privacitat"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Legal & Privacy - English -->
+  <url>
+    <loc>https://dirtyrabbit.es/en/legal</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/en/privacy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <!-- Legal & Privacy - Catalan -->
+  <url>
+    <loc>https://dirtyrabbit.es/ca/legal</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://dirtyrabbit.es/ca/privacitat</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 
 </urlset>
