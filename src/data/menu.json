@@ -6,8 +6,8 @@
     { "name": "Café con Leche", "price": "2.00", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
     { "name": "Latte", "price": "2.50", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots" } },
     { "name": "Flat White", "price": "3.00", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots" } },
-    { "name": "Batch Brew L / XL", "price": "2.5 / 3", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
-    { "name": "Puchero", "price": "+0", "desc": { "es": "Decaf disponible en cualquier café", "en": "Decaf available with any coffee", "ca": "Decaf disponible amb qualsevol cafè" } }
+    { "name": "Batch Brew L / XL", "price": "2.5 / 3", "desc": { "es": "Honduras", "en": "Honduras", "ca": "Hondures" } },
+    { "name": "Puchero", "price": "+0", "desc": { "es": "Decaf · tostado por Puchero", "en": "Decaf · roasted by Puchero", "ca": "Decaf · torrat per Puchero" } }
   ],
   "notCoffee": [
     { "name": "Matcha Pure", "price": "3.20", "desc": { "es": "REQ Matcha ceremonial grade", "en": "REQ Matcha ceremonial grade", "ca": "REQ Matcha ceremonial grade" } },
