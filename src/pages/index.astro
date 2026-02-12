@@ -14,15 +14,19 @@ const featuredProviders = proveedores.slice(0, 4);
   
   <!-- HERO SECTION: 100vh, full-bleed photo, centered tagline, NO scroll indicator -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden -mt-16 md:-mt-20">
-    <!-- Background: La Marzocco KB90 -->
+    <!-- Background: Video of La Marzocco -->
     <div class="absolute inset-0 bg-black" id="hero-bg">
-      <img 
-        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&h=1080&fit=crop"
-        alt="Coffee machine"
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline
         class="w-full h-full object-cover"
-      />
+      >
+        <source src="/photos/hero-video.mp4" type="video/mp4" />
+      </video>
       <!-- Dark overlay for text readability -->
-      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="absolute inset-0 bg-black/40"></div>
     </div>
     
     <!-- Hero Content: Centered tagline only -->
