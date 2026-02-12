@@ -27,10 +27,17 @@ const t = getTranslations(lang);
       <div class="stagger-group grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {proveedores.map((p) => (
           <article class="stagger-item bg-white border border-black rounded-2xl overflow-hidden card-lift">
-            <!-- Photo placeholder with rabbit logo style -->
-            <div class="w-full aspect-[4/3] bg-cream flex items-center justify-center relative overflow-hidden">
-              <div class="text-red/10 text-8xl font-typewriter font-bold">🐰</div>
-              <span class="absolute bottom-3 right-3 font-mono text-xs text-black/30">[PHOTO]</span>
+            <!-- Photo -->
+            <div class="w-full aspect-[4/3] bg-cream relative overflow-hidden">
+              <img 
+                src={p.image || `/images/proveedores/${p.id}.jpg`}
+                alt={p.name}
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="absolute inset-0 bg-cream flex items-center justify-center" style="display:none;">
+                <div class="text-red/10 text-6xl font-typewriter font-bold">🐰</div>
+              </div>
             </div>
             
             <div class="p-6 md:p-8">

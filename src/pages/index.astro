@@ -91,18 +91,12 @@ const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === i
       <!-- Horizontal Slider - Square cards with text overlay -->
       <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
         {featuredProviders.map((p, i) => {
-          const images = [
-            '/photos/photo3.jpg', // La Cabra - wine glasses + coffee bags
-            '/photos/photo4.jpg', // REQ Matcha - chocolate detail
-            '/photos/photo2.jpg', // Awachai - wine bottles
-            '/photos/photo1.jpg', // Bioma - flowers vase
-          ];
           return (
           <article class="reveal card-lift relative aspect-square w-[70vw] md:w-[280px] rounded-xl overflow-hidden border border-[#1A1A1A]">
             <!-- Background image -->
-            <div class="absolute inset-0">
+            <div class="absolute inset-0 bg-cream">
               <img 
-                src={images[i] || images[0]}
+                src={p.image || `/images/proveedores/${p.id}.jpg`}
                 alt={p.name}
                 class="w-full h-full object-cover"
               />
