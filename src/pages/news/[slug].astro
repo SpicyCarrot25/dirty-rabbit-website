@@ -1,0 +1,61 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations } from '../../i18n';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('news');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+
+const lang = post.data.lang || 'es';
+const t = getTranslations(lang);
+---
+
+<Layout title={`${post.data.title} — Dirty Rabbit`} lang={lang}>
+  <article class="py-12 md:py-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Back link -->
+      <a 
+        href="/news" 
+        class="font-mono text-sm text-red hover:text-red/80 transition-colors inline-flex items-center gap-2 mb-8"
+      >
+        <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+        </svg>
+        Volver a noticias
+      </a>
+      
+      <!-- Header -->
+      <header class="mb-8">
+        <time class="font-mono text-sm text-red mb-4 block">
+          {post.data.date.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
+        </time>
+        <h1 class="font-typewriter text-4xl md:text-5xl font-bold mb-4">{post.data.title}</h1>
+        <p class="font-mono text-lg text-black/70">{post.data.description}</p>
+      </header>
+      
+      <!-- Featured image placeholder -->
+      <div class="aspect-[16/9] bg-black/10 rounded-xl flex items-center justify-center mb-12">
+        <span class="font-mono text-sm text-black/30">[FOTO]</span>
+      </div>
+      
+      <!-- Content -->
+      <div class="prose prose-lg max-w-none font-mono text-black/80 leading-relaxed
+        prose-headings:font-typewriter prose-headings:text-black prose-headings:font-bold
+        prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4
+        prose-p:mb-4
+        prose-ul:list-disc prose-ul:pl-6
+        prose-strong:font-bold prose-strong:text-black
+      ">
+        <Content />
+      </div>
+    </div>
+  </article>
+</Layout>
