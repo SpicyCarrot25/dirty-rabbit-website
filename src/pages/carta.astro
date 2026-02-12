@@ -31,22 +31,29 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
 ---
 
 <Layout title="Carta — Dirty Rabbit" lang={lang}>
-  <!-- Hero Section - Clean -->
-  <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="font-typewriter text-5xl md:text-7xl font-bold mb-4">Carta</h1>
-      <div class="w-24 h-px bg-red mx-auto"></div>
+  <!-- Hero Section -->
+  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-typewriter text-5xl md:text-6xl font-bold mb-6">Carta</h1>
+      <div class="w-16 h-px bg-red mx-auto mb-8"></div>
+      
+      <!-- Intro paragraph -->
+      <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed max-w-xl mx-auto">
+        Curamos todo lo que servimos. Productos locales y orgánicos de nuestros vecinos, 
+        y también tesoros que amamos de fuera — café de Copenhague, mantequilla de Bélgica, 
+        matcha de Kioto. Este es nuestro hogar, y queremos compartirlo contigo.
+      </p>
     </div>
   </section>
 
   <!-- Menu Content -->
-  <section class="py-8 md:py-16 bg-cream">
+  <section class="py-8 md:py-12 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- COFFEE & CIA -->
-      <div id="coffee" class="scroll-mt-24">
-        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">
-          Coffee & Cia
+      <!-- CAFÉ & CIA -->
+      <div id="coffee" class="scroll-mt-20">
+        <h2 class="font-typewriter text-4xl md:text-5xl font-bold text-red mb-2 text-center">
+          Café & Cia
         </h2>
         <p class="font-mono text-sm text-black/70 text-center mb-8">
           La Cabra blend · V60 con orígenes rotativos · Matcha REQ · Chai Awachai
@@ -70,15 +77,15 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
           ))}
         </div>
         
-        <!-- Milk alternatives - right after Coffee & Cia -->
+        <!-- Milk alternatives -->
         <p class="font-mono text-sm text-black/70 text-center mt-8 pt-4 border-t border-black/10">
           Leche de avena, soja o almendra: +0.50€
         </p>
       </div>
 
       <!-- BEBIDAS -->
-      <div id="bebidas" class="scroll-mt-24 mt-20 pt-20 border-t-2 border-red">
-        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">
+      <div id="bebidas" class="scroll-mt-20 mt-16 pt-16 border-t border-red">
+        <h2 class="font-typewriter text-4xl md:text-5xl font-bold text-red mb-2 text-center">
           Bebidas
         </h2>
         <p class="font-mono text-sm text-black/70 text-center mb-8">
@@ -105,8 +112,8 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
       </div>
 
       <!-- COMIDA -->
-      <div id="food" class="scroll-mt-24 mt-20 pt-20 border-t-2 border-red">
-        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">
+      <div id="food" class="scroll-mt-20 mt-16 pt-16 border-t border-red">
+        <h2 class="font-typewriter text-4xl md:text-5xl font-bold text-red mb-2 text-center">
           Comida
         </h2>
         <p class="font-mono text-sm text-black/70 text-center mb-8">
@@ -138,12 +145,11 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
           Pregunta por alérgenos — la cocina no está 100% libre de gluten
         </p>
       </div>
-
     </div>
   </section>
 
-  <!-- Sticky Bottom Navigation - Simona style -->
-  <nav class="fixed bottom-0 left-0 right-0 bg-cream border-t border-red py-6 z-50 md:hidden">
+  <!-- Sticky Bottom Navigation -->
+  <nav class="fixed bottom-0 left-0 right-0 bg-cream border-t border-red py-5 z-50 md:hidden safe-area-bottom">
     <div class="flex justify-center items-center">
       <a href="#coffee" class="flex-1 text-center font-typewriter text-lg font-bold text-red border-r border-red">
         Café & Cia
@@ -168,5 +174,9 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
   
   html {
     scroll-behavior: smooth;
+  }
+  
+  .safe-area-bottom {
+    padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
   }
 </style>

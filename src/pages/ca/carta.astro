@@ -25,18 +25,23 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
 ---
 
 <Layout title="Carta — Dirty Rabbit" lang={lang}>
-  <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="font-typewriter text-5xl md:text-7xl font-bold mb-4">Carta</h1>
-      <div class="w-24 h-px bg-red mx-auto"></div>
+  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-typewriter text-5xl md:text-6xl font-bold mb-6">Carta</h1>
+      <div class="w-16 h-px bg-red mx-auto mb-8"></div>
+      <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed max-w-xl mx-auto">
+        Curem tot el que servim. Productes locals i orgànics dels nostres veïns, 
+        i també tresors que estimem de fora — cafè de Copenhaguen, mantega de Bèlgica, 
+        matcha de Kyoto. Aquesta és la nostra llar, i volem compartir-la amb tu.
+      </p>
     </div>
   </section>
 
-  <section class="py-8 md:py-16 bg-cream">
+  <section class="py-8 md:py-12 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div id="coffee" class="scroll-mt-24">
-        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">Coffee & Cia</h2>
+      <div id="coffee" class="scroll-mt-20">
+        <h2 class="font-typewriter text-4xl md:text-5xl font-bold text-red mb-2 text-center">Cafè & Cia</h2>
         <p class="font-mono text-sm text-black/70 text-center mb-8">La Cabra blend · V60 orígens rotatius · Matcha REQ · Chai Awachai</p>
         <div class="space-y-5">
           {coffeeAndTea.map((item) => (
@@ -52,8 +57,8 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
         <p class="font-mono text-sm text-black/70 text-center mt-8 pt-4 border-t border-black/10">Llet de civada, soja o ametlla: +0.50€</p>
       </div>
 
-      <div id="bebidas" class="scroll-mt-24 mt-20 pt-20 border-t-2 border-red">
-        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">Begudes</h2>
+      <div id="bebidas" class="scroll-mt-20 mt-16 pt-16 border-t border-red">
+        <h2 class="font-typewriter text-4xl md:text-5xl font-bold text-red mb-2 text-center">Begudes</h2>
         <p class="font-mono text-sm text-black/70 text-center mb-8">Smoothies · Sucs naturals · Kombucha</p>
         <div class="space-y-5">
           {bebidas.map((item) => (
@@ -68,8 +73,8 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
         </div>
       </div>
 
-      <div id="food" class="scroll-mt-24 mt-20 pt-20 border-t-2 border-red">
-        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-2 text-center">Menjar</h2>
+      <div id="food" class="scroll-mt-20 mt-16 pt-16 border-t border-red">
+        <h2 class="font-typewriter text-4xl md:text-5xl font-bold text-red mb-2 text-center">Menjar</h2>
         <p class="font-mono text-sm text-black/70 text-center mb-8">Ous de Bioma · Pa de massa mare · Brioixeria de La Puntual</p>
         <div class="space-y-5">
           {food.map((item) => (
@@ -87,11 +92,10 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
       <div class="mt-16 pt-8 border-t border-black/10">
         <p class="font-mono text-sm text-black/70 text-center">Pregunta per al·lèrgens — la cuina no és 100% lliure de gluten</p>
       </div>
-
     </div>
   </section>
 
-  <nav class="fixed bottom-0 left-0 right-0 bg-cream border-t border-red py-6 z-50 md:hidden">
+  <nav class="fixed bottom-0 left-0 right-0 bg-cream border-t border-red py-5 z-50 md:hidden safe-area-bottom">
     <div class="flex justify-center items-center">
       <a href="#coffee" class="flex-1 text-center font-typewriter text-lg font-bold text-red border-r border-red">Cafè & Cia</a>
       <a href="#bebidas" class="flex-1 text-center font-typewriter text-lg font-bold text-red border-r border-red">Begudes</a>
@@ -104,4 +108,5 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
 <style>
   .tabular-nums { font-variant-numeric: tabular-nums; }
   html { scroll-behavior: smooth; }
+  .safe-area-bottom { padding-bottom: max(1.25rem, env(safe-area-inset-bottom)); }
 </style>

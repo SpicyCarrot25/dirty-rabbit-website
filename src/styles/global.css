@@ -168,6 +168,11 @@ h1, h2, h3, h4, h5, h6,
   border-color: rgba(26, 26, 26, 0.1);
 }
 
+/* iOS safe area for header */
+#main-header {
+  padding-top: env(safe-area-inset-top);
+}
+
 .header-transition {
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
