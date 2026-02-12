@@ -111,17 +111,17 @@
       "text": "Per què Dirty Rabbit? Perquè els conills són curiosos, ràpids, i una mica entremaliats. I el de 'dirty'... perquè el millor cafè sempre deixa una taca."
     },
     "pillars": {
-      "care": {
-        "title": "Cura",
-        "text": "Cada elecció és deliberada. El cafè que servim, el pa que tostem, la música que sona. Cura sense pretensió."
+      "wildComfort": {
+        "title": "Wild Comfort",
+        "text": "L'equilibri entre energia i calma. No som un cafè silenciós ni caòtic. Som els dos."
       },
-      "connection": {
-        "title": "Connexió",
-        "text": "Desconeguts → habituals → amics. Aquest és el viatge. Tothom encaixa aquí."
+      "belonging": {
+        "title": "Belonging",
+        "text": "Clients que es fan amics. Un lloc on tothom encaixa sense forçar-ho."
       },
-      "rhythm": {
-        "title": "Ritme",
-        "text": "Beats ràpids i moments lents. Ens adaptem al teu tempo, no al revés."
+      "intentional": {
+        "title": "Intentional",
+        "text": "Cada elecció té propòsit. La Cabra, REQ, Awachai — escollits amb intenció."
       }
     },
     "tagline": "Casa lluny de casa"

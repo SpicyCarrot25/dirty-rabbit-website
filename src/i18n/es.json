@@ -111,17 +111,17 @@
       "text": "¿Por qué Dirty Rabbit? Porque los conejos son curiosos, rápidos, y un poco traviesos. Y lo de 'dirty'... porque el mejor café siempre deja una mancha."
     },
     "pillars": {
-      "care": {
-        "title": "Cuidado",
-        "text": "Cada elección es deliberada. El café que servimos, el pan que tostamos, la música que suena. Cuidado sin pretensión."
+      "wildComfort": {
+        "title": "Wild Comfort",
+        "text": "El balance entre energía y calma. No somos un café silencioso ni caótico. Somos ambos."
       },
-      "connection": {
-        "title": "Conexión",
-        "text": "Desconocidos → habituales → amigos. Ese es el viaje. Todo el mundo encaja aquí."
+      "belonging": {
+        "title": "Belonging",
+        "text": "Clientes que se vuelven amigos. Un lugar donde todos encajan sin forzarlo."
       },
-      "rhythm": {
-        "title": "Ritmo",
-        "text": "Beats rápidos y momentos lentos. Nos adaptamos a tu tempo, no al revés."
+      "intentional": {
+        "title": "Intentional",
+        "text": "Cada elección tiene propósito. La Cabra, REQ, Awachai — elegidos con intención."
       }
     },
     "tagline": "Casa lejos de casa"

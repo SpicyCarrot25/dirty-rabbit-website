@@ -111,17 +111,17 @@
       "text": "Why Dirty Rabbit? Because rabbits are curious, quick, and a bit mischievous. And the 'dirty' part... because the best coffee always leaves a mark."
     },
     "pillars": {
-      "care": {
-        "title": "Care",
-        "text": "Every choice is deliberate. The coffee we serve, the bread we toast, the music playing. Care without pretension."
+      "wildComfort": {
+        "title": "Wild Comfort",
+        "text": "The balance between energy and calm. We're not a quiet café or a chaotic one. We're both."
       },
-      "connection": {
-        "title": "Connection",
-        "text": "Strangers → regulars → friends. That's the journey. Everyone fits here."
+      "belonging": {
+        "title": "Belonging",
+        "text": "Customers who become friends. A place where everyone fits without forcing it."
       },
-      "rhythm": {
-        "title": "Rhythm",
-        "text": "Fast beats and slow moments. We match your tempo, not the other way around."
+      "intentional": {
+        "title": "Intentional",
+        "text": "Every choice has purpose. La Cabra, REQ, Awachai — chosen with intention."
       }
     },
     "tagline": "Home away from home"
