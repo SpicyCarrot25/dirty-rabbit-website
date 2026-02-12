@@ -43,12 +43,20 @@ const footerLabels = {
     </p>
     
     <!-- Box-style email input -->
-    <form class="max-w-md mb-4">
+    <form 
+      id="newsletter-form"
+      class="max-w-md mb-4"
+      action="https://buttondown.email/api/emails/embed-subscribe/dirtyrabbit"
+      method="post"
+      target="popupwindow"
+    >
       <div class="flex items-center border border-[#1A1A1A] rounded-lg px-4 py-3 gap-4">
         <input 
           type="email" 
+          name="email"
           placeholder={footerLabels.placeholder[lang]}
           class="flex-1 bg-transparent font-mono text-base placeholder:text-black/40 focus:outline-none"
+          required
         />
         <button 
           type="submit"
@@ -63,7 +71,28 @@ const footerLabels = {
         <input type="checkbox" class="rounded border-[#1A1A1A]/30 mt-0.5 shrink-0" required />
         <span>{footerLabels.privacy[lang].split('Política')[0]}<a href="/privacidad" class="underline hover:text-red transition-colors">Política de Privacidad</a></span>
       </label>
+      
+      <!-- Success message (hidden by default) -->
+      <p id="newsletter-success" class="hidden mt-3 font-mono text-sm text-green-600">
+        ✓ ¡Gracias! Te has suscrito.
+      </p>
     </form>
+    
+    <script>
+      // Simple form handling with localStorage fallback
+      const form = document.getElementById('newsletter-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          const email = form.querySelector('input[type="email"]').value;
+          // Store locally as backup
+          const subs = JSON.parse(localStorage.getItem('dr_newsletter') || '[]');
+          if (!subs.includes(email)) {
+            subs.push(email);
+            localStorage.setItem('dr_newsletter', JSON.stringify(subs));
+          }
+        });
+      }
+    </script>
   </div>
 </section>
 
