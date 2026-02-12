@@ -129,7 +129,31 @@ const lang = 'ca';
         
         <h3 class="font-typewriter text-2xl font-bold text-red mb-4 mt-8">Toasts & Toasties</h3>
         <div class="space-y-5">
-          {menuData.toasts.map((item) => (
+          {/* Avo Good Day - first */}
+          <div class="flex items-baseline justify-between gap-4">
+            <div class="flex-1 min-w-0">
+              <h4 class="font-typewriter text-lg font-bold">{menuData.toasts[0].name}</h4>
+              <p class="font-mono text-sm text-black/70 mt-1">{menuData.toasts[0].desc[lang]}</p>
+            </div>
+            <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{menuData.toasts[0].price}</span>
+          </div>
+        </div>
+        
+        {/* Extras box after Avo Good Day */}
+        <div class="mt-4 mx-4 bg-red rounded-lg px-4 py-3">
+          <p class="font-mono text-sm text-cream text-center">
+            +3 Pernil Ibèric, Salmó Benfumar<br/>
+            +2.50 Manxec, Alvocat<br/>
+            +2 Ou ecològic
+          </p>
+          <p class="font-mono text-xs text-cream/80 text-center mt-1">
+            Disponibles per a qualsevol plat
+          </p>
+        </div>
+        
+        {/* Rest of toasts */}
+        <div class="space-y-5 mt-5">
+          {menuData.toasts.slice(1).map((item) => (
             <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
                 <h4 class="font-typewriter text-lg font-bold">{item.name}</h4>
@@ -138,16 +162,6 @@ const lang = 'ca';
               <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
             </div>
           ))}
-        </div>
-        <div class="mt-6 mx-4 bg-red rounded-lg px-4 py-3">
-          <p class="font-mono text-sm text-cream text-center">
-            +3 Pernil Ibèric, Salmó<br/>
-            +2.50 Manxec, Alvocat<br/>
-            +2 Ou
-          </p>
-          <p class="font-mono text-xs text-cream/80 text-center mt-1">
-            Disponibles per a qualsevol plat
-          </p>
         </div>
         
         <h3 class="font-typewriter text-2xl font-bold text-red mb-4 mt-10">Bagels</h3>
@@ -164,7 +178,7 @@ const lang = 'ca';
         </div>
         <div class="mt-6 mx-4 bg-red rounded-lg px-4 py-3">
           <p class="font-mono text-sm text-cream text-center">
-            Extras: Salmó +3 · Ou +2 · Alvocat +2.50
+            +3 Salmó Benfumar · +2.50 Alvocat · +2 Ou ecològic
           </p>
         </div>
         

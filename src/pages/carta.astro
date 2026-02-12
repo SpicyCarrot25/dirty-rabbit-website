@@ -146,7 +146,31 @@ const lang = 'es';
         <!-- Toasts -->
         <h3 class="font-typewriter text-2xl font-bold text-red mb-4 mt-8">Toasts & Toasties</h3>
         <div class="space-y-5">
-          {menuData.toasts.map((item) => (
+          {/* Avo Good Day - first */}
+          <div class="flex items-baseline justify-between gap-4">
+            <div class="flex-1 min-w-0">
+              <h4 class="font-typewriter text-lg font-bold">{menuData.toasts[0].name}</h4>
+              <p class="font-mono text-sm text-black/70 mt-1">{menuData.toasts[0].desc[lang]}</p>
+            </div>
+            <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{menuData.toasts[0].price}</span>
+          </div>
+        </div>
+        
+        {/* Extras box after Avo Good Day */}
+        <div class="mt-4 mx-4 bg-red rounded-lg px-4 py-3">
+          <p class="font-mono text-sm text-cream text-center">
+            +3 Jamón Ibérico, Salmón Benfumar<br/>
+            +2.50 Manchego, Aguacate<br/>
+            +2 Huevo ecológico
+          </p>
+          <p class="font-mono text-xs text-cream/80 text-center mt-1">
+            Disponibles para cualquier plato
+          </p>
+        </div>
+        
+        {/* Rest of toasts */}
+        <div class="space-y-5 mt-5">
+          {menuData.toasts.slice(1).map((item) => (
             <div class="flex items-baseline justify-between gap-4">
               <div class="flex-1 min-w-0">
                 <h4 class="font-typewriter text-lg font-bold">{item.name}</h4>
@@ -155,16 +179,6 @@ const lang = 'es';
               <span class="font-typewriter text-lg font-bold text-red tabular-nums shrink-0">{item.price}</span>
             </div>
           ))}
-        </div>
-        <div class="mt-6 mx-4 bg-red rounded-lg px-4 py-3">
-          <p class="font-mono text-sm text-cream text-center">
-            +3 Jamón Ibérico, Salmón<br/>
-            +2.50 Manchego, Aguacate<br/>
-            +2 Huevo
-          </p>
-          <p class="font-mono text-xs text-cream/80 text-center mt-1">
-            Disponibles para cualquier plato
-          </p>
         </div>
         
         <!-- Bagels -->
@@ -182,7 +196,7 @@ const lang = 'es';
         </div>
         <div class="mt-6 mx-4 bg-red rounded-lg px-4 py-3">
           <p class="font-mono text-sm text-cream text-center">
-            Extras: Salmón +3 · Huevo +2 · Aguacate +2.50
+            +3 Salmón Benfumar · +2.50 Aguacate · +2 Huevo ecológico
           </p>
         </div>
         
