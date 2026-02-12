@@ -231,76 +231,7 @@ const featuredProviders = proveedores.slice(0, 4);
   </section>
   
   
-  <!-- LOCATION: White background, info only (no map) -->
-  <section class="py-20 md:py-32 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Top divider -->
-      <div class="border-t border-[#1A1A1A] mb-12 md:mb-16"></div>
-      
-      <!-- Section Header -->
-      <div class="text-center mb-12 md:mb-16 reveal">
-        <h2 class="font-typewriter text-3xl md:text-4xl lg:text-5xl mb-4 section-headline">
-          {t.sections.contact}
-        </h2>
-      </div>
-      
-      <div class="grid md:grid-cols-3 gap-8 lg:gap-12 text-center">
-        
-        <!-- Address -->
-        <div class="reveal">
-          <h3 class="font-typewriter text-lg mb-3 text-black">
-            Dirección
-          </h3>
-          <address class="font-mono text-base text-black/70 not-italic leading-relaxed">
-            {t.footer.address}<br />
-            {t.footer.city}
-          </address>
-        </div>
-        
-        <!-- Hours -->
-        <div class="reveal">
-          <h3 class="font-typewriter text-lg mb-3 text-black">
-            Horario
-          </h3>
-          <div class="font-mono text-base text-black/70 space-y-1">
-            <p>{t.footer.hours}</p>
-            <p class="text-red">{t.footer.closed}</p>
-          </div>
-        </div>
-        
-        <!-- Contact -->
-        <div class="reveal">
-          <h3 class="font-typewriter text-lg mb-3 text-black">
-            Contacto
-          </h3>
-          <div class="font-mono text-base space-y-2">
-            <p>
-              <a 
-                href="mailto:hola@dirtyrabbit.es" 
-                class="text-black/70 hover:text-red transition-colors"
-              >
-                {t.footer.email}
-              </a>
-            </p>
-            <p>
-              <a 
-                href="https://instagram.com/dirtyrabbitsagaro" 
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-black/70 hover:text-red transition-colors"
-              >
-                @dirtyrabbitsagaro
-              </a>
-            </p>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-  
-</Layout>
+  </Layout>
 
 <script>
   // Fade-in on scroll - Vanilla JS with IntersectionObserver

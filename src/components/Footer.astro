@@ -75,7 +75,22 @@ const footerLabels = {
     <!-- Top divider - RED -->
     <div class="border-t border-[#CD202C] mb-10"></div>
     
-    <!-- Footer Menu Links - LEFT ALIGNED, Title Case -->
+    <!-- Encuéntranos - same size as links -->
+    <div class="mb-8 font-typewriter text-base">
+      <p class="text-red mb-2">Encuéntranos</p>
+      <p class="text-black">Mar-Dom de 8:00 a 15:00</p>
+      <p class="text-black">Avenida Playa de Aro, 275 · S'Agaró</p>
+      <a 
+        href="https://maps.app.goo.gl/dirtyrabbit" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="text-black hover:text-red transition-colors"
+      >
+        Ven a Google Maps
+      </a>
+    </div>
+    
+    <!-- Footer Menu Links - LEFT ALIGNED, same size -->
     <nav class="flex flex-col items-start gap-2 mb-8 font-typewriter text-base tracking-normal">
       <a href="/legal" class="text-black hover:text-red transition-colors">
         {footerLabels.legal[lang]}
@@ -83,7 +98,7 @@ const footerLabels = {
       <a href={getLocalizedPath('/contacto', lang)} class="text-black hover:text-red transition-colors">
         {footerLabels.faq[lang]}
       </a>
-      <a href="mailto:hola@dirtyrabbit.es?subject=Work%20with%20us" class="text-black hover:text-black/70 transition-colors">
+      <a href="mailto:hola@dirtyrabbit.es?subject=Work%20with%20us" class="text-black hover:text-red transition-colors">
         {footerLabels.join[lang]}
       </a>
       <a href={getLocalizedPath('/news', lang)} class="text-black hover:text-red transition-colors">
@@ -91,28 +106,9 @@ const footerLabels = {
       </a>
     </nav>
     
-    <!-- Encuéntranos -->
+    <!-- Stay in touch + social - same size -->
     <div class="mb-8">
-      <h3 class="font-typewriter text-sm text-red mb-3">Encuéntranos</h3>
-      <p class="font-typewriter text-base text-black mb-1">Horario</p>
-      <p class="font-mono text-base text-black mb-4">Mar-Dom de 8:00 a 15:00</p>
-      <p class="font-typewriter text-base text-black mb-1">Dirección</p>
-      <p class="font-mono text-base text-black mb-2">Avenida Playa de Aro, 275<br />S'Agaró, Girona</p>
-      <a 
-        href="https://maps.app.goo.gl/dirtyrabbit" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="font-mono text-base text-black hover:text-red transition-colors"
-      >
-        Ven a Google Maps
-      </a>
-    </div>
-    
-    <!-- NO divider between links and Stay in touch -->
-    
-    <!-- Stay in touch + social - LEFT ALIGNED -->
-    <div class="mb-8">
-      <p class="font-typewriter text-lg mb-4">{footerLabels.stayInTouch[lang]}</p>
+      <p class="font-typewriter text-base mb-4">{footerLabels.stayInTouch[lang]}</p>
       
       <!-- Social icons WITHOUT circles (like menu) -->
       <div class="flex items-center gap-6">
