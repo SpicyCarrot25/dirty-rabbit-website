@@ -88,29 +88,31 @@ const featuredProviders = proveedores.slice(0, 4);
         </p>
       </div>
       
-      <!-- Horizontal Slider (same as News) -->
+      <!-- Horizontal Slider - Square cards with text overlay -->
       <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
         {featuredProviders.map((p) => (
-          <article class="reveal card-lift bg-cream border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-            <div class="aspect-square bg-white relative overflow-hidden">
+          <article class="reveal card-lift relative aspect-square w-[70vw] md:w-[280px] rounded-xl overflow-hidden border border-[#1A1A1A]">
+            <!-- Background image placeholder -->
+            <div class="absolute inset-0 bg-cream">
               <img 
                 src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
                 alt="" 
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 opacity-10"
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 opacity-10"
                 aria-hidden="true"
               />
               <span class="absolute top-4 left-4 font-mono text-xs text-black/30 tracking-wider">
                 [Photo tbd]
               </span>
             </div>
-            <div class="p-6">
-              <p class="font-mono text-xs text-red tracking-wider mb-2">
+            <!-- Text overlay at bottom -->
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16">
+              <p class="font-mono text-xs text-white/80 tracking-wider mb-1">
                 {(p.category as any)[lang]}
               </p>
-              <h3 class="font-typewriter text-xl md:text-2xl mb-2 text-black">
+              <h3 class="font-typewriter text-lg text-white">
                 {p.name}
               </h3>
-              <p class="font-mono text-sm text-black/60">
+              <p class="font-mono text-xs text-white/70">
                 {p.origin ? `${p.origin}` : ''}
               </p>
             </div>
