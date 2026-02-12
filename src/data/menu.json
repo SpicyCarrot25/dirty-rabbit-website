@@ -41,14 +41,14 @@
     { "name": "Juno Soda", "price": "2.80", "desc": { "es": "Naranja o limón", "en": "Orange or lemon", "ca": "Taronja o llimona" } },
     { "name": "Kombucha Bioma", "price": "4.50", "desc": { "es": "Orgánica", "en": "Organic", "ca": "Orgànica" } },
     { "name": "Linda Juice", "price": "2.80", "desc": { "es": "Mandarina o pera", "en": "Mandarin or pear", "ca": "Mandarina o pera" } },
-    { "name": "Zumo de Naranja", "price": "4.00", "desc": { "es": "Natural, exprimido", "en": "Fresh squeezed", "ca": "Natural, espremut" } }
+    { "name": { "es": "Zumo de Naranja", "en": "Orange Juice", "ca": "Suc de Taronja" }, "price": "4.00", "desc": { "es": "Natural, exprimido", "en": "Fresh squeezed", "ca": "Natural, espremut" } }
   ],
   "adultDrinks": [
-    { "name": "Cerveza Artesana", "price": "3.50-6.50", "desc": { "es": "Craft beers · Algunas sin gluten", "en": "Craft beers · Some gluten-free", "ca": "Cerveses artesanes · Algunes sense gluten" } },
-    { "name": "Cerveza Sin Alcohol", "price": "3.50", "desc": { "es": "Non-alcoholic options", "en": "Non-alcoholic options", "ca": "Opcions sense alcohol" } },
-    { "name": "Copa La Figa", "price": "4.50", "desc": { "es": "Vino natural tinto", "en": "Natural red wine", "ca": "Vi natural negre" } },
-    { "name": "Copa Curuba", "price": "4.50", "desc": { "es": "Vino natural blanco", "en": "Natural white wine", "ca": "Vi natural blanc" } },
-    { "name": "Descorche", "price": "+6.00", "desc": { "es": "Trae tu botella de la tienda", "en": "Bring a bottle from our shop", "ca": "Porta una ampolla de la botiga" } }
+    { "name": { "es": "Cerveza Artesana", "en": "Craft Beer", "ca": "Cervesa Artesana" }, "price": "3.50-6.50", "desc": { "es": "Craft beers · Algunas sin gluten", "en": "Some gluten-free options", "ca": "Algunes sense gluten" } },
+    { "name": { "es": "Cerveza Sin Alcohol", "en": "Non-Alcoholic Beer", "ca": "Cervesa Sense Alcohol" }, "price": "3.50", "desc": { "es": "Varias opciones", "en": "Various options", "ca": "Diverses opcions" } },
+    { "name": { "es": "Copa La Figa", "en": "La Figa (Red)", "ca": "Copa La Figa" }, "price": "4.50", "desc": { "es": "Vino natural tinto", "en": "Natural red wine", "ca": "Vi natural negre" } },
+    { "name": { "es": "Copa Curuba", "en": "Curuba (White)", "ca": "Copa Curuba" }, "price": "4.50", "desc": { "es": "Vino natural blanco", "en": "Natural white wine", "ca": "Vi natural blanc" } },
+    { "name": { "es": "Descorche", "en": "Corkage", "ca": "Descorxatge" }, "price": "+6.00", "desc": { "es": "Trae tu botella de la tienda", "en": "Bring a bottle from our shop", "ca": "Porta una ampolla de la botiga" } }
   ],
   "toasts": [
     { "name": "Avo Good Day", "price": "7.50", "desc": { "es": "Buenos días garantizados — tostada de masa madre, aguacate, cherry y un buen chorro de aceite", "en": "Good morning guaranteed — sourdough toast, avocado, cherry tomatoes, generous olive oil", "ca": "Bon dia garantit — torrada de massa mare, alvocat, cherry i un bon raig d'oli" } },
