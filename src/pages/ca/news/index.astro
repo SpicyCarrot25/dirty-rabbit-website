@@ -1,14 +1,60 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
 const lang = 'ca';
 const t = getTranslations(lang);
+
+const allPosts = await getCollection('news', ({ data }) => {
+  return data.lang === lang && !data.draft;
+});
+
+const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
+
 <Layout title={`${t.news.title} — Dirty Rabbit`} lang={lang}>
-  <section class="py-16 md:py-24 bg-cream">
+  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="reveal font-typewriter text-5xl md:text-6xl font-bold mb-16 text-center">{t.news.title}</h1>
-      <div class="text-center font-mono text-black/50 py-16">[NEWS POSTS TBD]</div>
+      <div class="text-center mb-12">
+        <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">{t.news.title}</h1>
+        <div class="w-16 h-px bg-red mx-auto mb-6"></div>
+        <p class="font-mono text-sm text-black/60">{t.news.subtitle}</p>
+      </div>
+      
+      {posts.length === 0 ? (
+        <div class="text-center font-mono text-black/50 py-16">
+          Encara no hi ha notícies. Torna aviat!
+        </div>
+      ) : (
+        <div class="grid md:grid-cols-2 gap-8">
+          {posts.map((post) => (
+            <article class="bg-white border border-black/10 rounded-2xl overflow-hidden card-lift">
+              <div class="aspect-[16/9] bg-cream flex items-center justify-center">
+                <span class="font-mono text-sm text-black/30">[FOTO]</span>
+              </div>
+              <div class="p-6">
+                <time class="font-mono text-xs text-red mb-2 block">
+                  {post.data.date.toLocaleDateString('ca-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
+                </time>
+                <h2 class="font-typewriter text-xl font-bold mb-3">{post.data.title}</h2>
+                <p class="font-mono text-sm text-black/70 leading-relaxed mb-4">
+                  {post.data.description}
+                </p>
+                <a 
+                  href={`/ca/news/${post.slug}`}
+                  class="font-mono text-sm text-red hover:text-red/80 transition-colors inline-flex items-center gap-2"
+                >
+                  {t.news.readMore}
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
     </div>
   </section>
 </Layout>
