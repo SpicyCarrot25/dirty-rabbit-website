@@ -30,8 +30,8 @@ const pathMappings: Record<string, Record<Language, string>> = {
 };
 
 export function getLocalizedPath(path: string, lang: Language): string {
-  // Remove leading slash and any existing language prefix
-  const cleanPath = path.replace(/^\/?(en|ca)?\/?/, '');
+  // Remove leading slash and any existing language prefix (only if followed by / or end)
+  const cleanPath = path.replace(/^\/(en|ca)(\/|$)/, '/').replace(/^\//, '');
   
   // Check if we have a mapping for this path
   const mappedPath = pathMappings[cleanPath]?.[lang] || cleanPath;
