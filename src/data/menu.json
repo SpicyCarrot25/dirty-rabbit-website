@@ -10,8 +10,8 @@
     { "name": "Puchero", "price": "+0", "desc": { "es": "Decaf · tostado por Puchero", "en": "Decaf · roasted by Puchero", "ca": "Decaf · torrat per Puchero" } }
   ],
   "notCoffee": [
-    { "name": "Matcha Pure", "price": "3.20", "desc": { "es": "REQ Matcha ceremonial grade", "en": "REQ Matcha ceremonial grade", "ca": "REQ Matcha ceremonial grade" } },
-    { "name": "Matcha Latte", "price": "3.50", "desc": { "es": "REQ Matcha", "en": "REQ Matcha", "ca": "REQ Matcha" } },
+    { "name": "Matcha Pure", "price": "3.20", "desc": { "es": "REQ matcha (con agua)", "en": "REQ matcha (with water)", "ca": "REQ matcha (amb aigua)" } },
+    { "name": "Matcha Latte", "price": "3.50", "desc": { "es": "REQ matcha", "en": "REQ matcha", "ca": "REQ matcha" } },
     { "name": "Chai Latte", "price": "3.50", "desc": { "es": "Chalo Chai especias frescas", "en": "Chalo Chai fresh spices", "ca": "Chalo Chai espècies fresques" } },
     { "name": "Dirty Chai", "price": "4.00", "desc": { "es": "Chai + shot de espresso", "en": "Chai + espresso shot", "ca": "Chai + shot d'espresso" } },
     { "name": "Hot Chocolate", "price": "4.00", "desc": { "es": "LOT Roasters", "en": "LOT Roasters", "ca": "LOT Roasters" } },
