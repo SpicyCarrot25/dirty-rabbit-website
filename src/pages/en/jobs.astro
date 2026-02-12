@@ -61,18 +61,37 @@ const lang = 'en';
           ></textarea>
         </div>
 
-        <!-- Fun question -->
+        <!-- Phone (optional) -->
         <div>
-          <label for="superpower" class="block font-typewriter text-lg font-bold mb-2">
-            🐰 If you were a rabbit, what would your superpower be?
+          <label for="phone" class="block font-typewriter text-lg font-bold mb-2">
+            Phone <span class="font-mono text-sm font-normal text-black/50">(optional)</span>
           </label>
-          <input 
-            type="text" 
-            id="superpower" 
-            name="superpower"
-            class="w-full border border-black/20 rounded-lg px-4 py-3 font-mono text-base focus:outline-none focus:border-red transition-colors"
-            placeholder="Radar ears, extreme speed, unlimited carrot eating..."
-          />
+          <div class="flex gap-2">
+            <select 
+              id="country" 
+              name="country"
+              class="w-28 border border-black/20 rounded-lg px-3 py-3 font-mono text-base focus:outline-none focus:border-red transition-colors bg-white"
+            >
+              <option value="+34">🇪🇸 +34</option>
+              <option value="+33">🇫🇷 +33</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+49">🇩🇪 +49</option>
+              <option value="+39">🇮🇹 +39</option>
+              <option value="+351">🇵🇹 +351</option>
+              <option value="+31">🇳🇱 +31</option>
+              <option value="+48">🇵🇱 +48</option>
+              <option value="+380">🇺🇦 +380</option>
+              <option value="+7">🇷🇺 +7</option>
+              <option value="+1">🇺🇸 +1</option>
+            </select>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone"
+              class="flex-1 border border-black/20 rounded-lg px-4 py-3 font-mono text-base focus:outline-none focus:border-red transition-colors"
+              placeholder="612 345 678"
+            />
+          </div>
         </div>
 
         <!-- Submit -->
