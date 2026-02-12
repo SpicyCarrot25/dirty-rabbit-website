@@ -74,51 +74,58 @@ const t = getTranslations(lang);
     </div>
   </section>
 
-  <!-- Pillars Section -->
-  <section class="py-12 md:py-16 bg-cream">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+  <!-- Manifesto / Pillars Section -->
+  <section class="py-16 md:py-24 bg-black text-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Manifesto Header -->
+      <div class="text-center mb-16">
+        <p class="font-mono text-sm tracking-widest text-cream/60 mb-4">LO QUE CREEMOS</p>
+        <div class="w-12 h-px bg-red mx-auto"></div>
+      </div>
+
+      <!-- Pillars as Manifesto -->
+      <div class="space-y-16">
         
-        <!-- Care -->
-        <div class="text-center">
-          <div class="w-16 h-16 mx-auto mb-6 bg-red rounded-full flex items-center justify-center">
-            <span class="text-cream text-2xl">❤️</span>
-          </div>
-          <h3 class="font-typewriter text-xl md:text-2xl font-bold text-red mb-4">
+        <!-- Wild Comfort -->
+        <div class="border-l-2 border-red pl-8">
+          <h3 class="font-typewriter text-3xl md:text-4xl font-bold mb-4">
             {t.historia.pillars.wildComfort.title}
           </h3>
-          <p class="font-mono text-sm text-black/70 leading-relaxed">
+          <p class="font-mono text-base md:text-lg text-cream/80 leading-relaxed max-w-2xl">
             {t.historia.pillars.wildComfort.text}
           </p>
         </div>
 
-        <!-- Connection -->
-        <div class="text-center">
-          <div class="w-16 h-16 mx-auto mb-6 bg-red rounded-full flex items-center justify-center">
-            <span class="text-cream text-2xl">🤝</span>
-          </div>
-          <h3 class="font-typewriter text-xl md:text-2xl font-bold text-red mb-4">
+        <!-- Belonging -->
+        <div class="border-l-2 border-red pl-8">
+          <h3 class="font-typewriter text-3xl md:text-4xl font-bold mb-4">
             {t.historia.pillars.belonging.title}
           </h3>
-          <p class="font-mono text-sm text-black/70 leading-relaxed">
+          <p class="font-mono text-base md:text-lg text-cream/80 leading-relaxed max-w-2xl">
             {t.historia.pillars.belonging.text}
           </p>
         </div>
 
-        <!-- Rhythm -->
-        <div class="text-center">
-          <div class="w-16 h-16 mx-auto mb-6 bg-red rounded-full flex items-center justify-center">
-            <span class="text-cream text-2xl">🎵</span>
-          </div>
-          <h3 class="font-typewriter text-xl md:text-2xl font-bold text-red mb-4">
+        <!-- Intentional -->
+        <div class="border-l-2 border-red pl-8">
+          <h3 class="font-typewriter text-3xl md:text-4xl font-bold mb-4">
             {t.historia.pillars.intentional.title}
           </h3>
-          <p class="font-mono text-sm text-black/70 leading-relaxed">
+          <p class="font-mono text-base md:text-lg text-cream/80 leading-relaxed max-w-2xl">
             {t.historia.pillars.intentional.text}
           </p>
         </div>
 
       </div>
+
+      <!-- Closing -->
+      <div class="mt-16 pt-12 border-t border-cream/20 text-center">
+        <p class="font-typewriter text-xl md:text-2xl text-cream/90 italic">
+          "Donde el café sabe a algo más."
+        </p>
+      </div>
+
     </div>
   </section>
 
