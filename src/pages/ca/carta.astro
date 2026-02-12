@@ -25,14 +25,10 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
 ---
 
 <Layout title="Carta — Dirty Rabbit" lang={lang}>
-  <section class="py-12 md:py-20 bg-white">
+  <section class="py-12 md:py-16 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="font-typewriter text-5xl md:text-7xl font-bold mb-6">Carta</h1>
-      <div class="w-24 h-px bg-red mx-auto mb-8"></div>
-      <a href="https://order.dirtyrabbit.es" target="_blank" rel="noopener noreferrer"
-        class="inline-block bg-red text-white font-typewriter text-lg px-8 py-4 hover:bg-red/90 transition-colors">
-        Demana Online
-      </a>
+      <h1 class="font-typewriter text-5xl md:text-7xl font-bold mb-4">Carta</h1>
+      <div class="w-24 h-px bg-red mx-auto"></div>
     </div>
   </section>
 
@@ -92,13 +88,17 @@ const food = [...menuData.brunch, ...menuData.tostas, ...menuData.pastries];
         <p class="font-mono text-sm text-black/70 text-center">Pregunta per al·lèrgens — la cuina no és 100% lliure de gluten</p>
       </div>
 
-      <nav class="mt-12 pt-8 border-t border-red flex flex-wrap justify-center gap-4 md:gap-8">
-        <a href="#coffee" class="font-typewriter text-lg text-red hover:text-red/70 transition-colors underline underline-offset-4">Coffee & Cia</a>
-        <a href="#bebidas" class="font-typewriter text-lg text-red hover:text-red/70 transition-colors underline underline-offset-4">Begudes</a>
-        <a href="#food" class="font-typewriter text-lg text-red hover:text-red/70 transition-colors underline underline-offset-4">Menjar</a>
-      </nav>
     </div>
   </section>
+
+  <nav class="fixed bottom-0 left-0 right-0 bg-cream border-t border-black/20 py-4 z-50 md:hidden">
+    <div class="flex justify-center items-center">
+      <a href="#coffee" class="flex-1 text-center font-typewriter text-sm font-bold text-black uppercase tracking-wide border-r border-black/20">Coffee</a>
+      <a href="#bebidas" class="flex-1 text-center font-typewriter text-sm font-bold text-black uppercase tracking-wide border-r border-black/20">Begudes</a>
+      <a href="#food" class="flex-1 text-center font-typewriter text-sm font-bold text-black uppercase tracking-wide">Menjar</a>
+    </div>
+  </nav>
+  <div class="h-16 md:hidden"></div>
 </Layout>
 
 <style>
