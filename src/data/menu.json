@@ -46,8 +46,8 @@
   "adultDrinks": [
     { "name": "Cerveza Artesana", "price": "3.50-6.50", "desc": { "es": "Craft beers · Algunas sin gluten", "en": "Craft beers · Some gluten-free", "ca": "Cerveses artesanes · Algunes sense gluten" } },
     { "name": "Cerveza Sin Alcohol", "price": "3.50", "desc": { "es": "Non-alcoholic options", "en": "Non-alcoholic options", "ca": "Opcions sense alcohol" } },
-    { "name": "Copa La Figa", "price": "4.50", "desc": { "es": "Vino tinto", "en": "Red wine", "ca": "Vi negre" } },
-    { "name": "Copa Curuba", "price": "4.50", "desc": { "es": "Vino blanco", "en": "White wine", "ca": "Vi blanc" } },
+    { "name": "Copa La Figa", "price": "4.50", "desc": { "es": "Vino natural tinto", "en": "Natural red wine", "ca": "Vi natural negre" } },
+    { "name": "Copa Curuba", "price": "4.50", "desc": { "es": "Vino natural blanco", "en": "Natural white wine", "ca": "Vi natural blanc" } },
     { "name": "Descorche", "price": "+6.00", "desc": { "es": "Trae tu botella de la tienda", "en": "Bring a bottle from our shop", "ca": "Porta una ampolla de la botiga" } }
   ],
   "toasts": [
