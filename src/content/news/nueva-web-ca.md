@@ -2,7 +2,7 @@
 title: "Per què fem el que fem"
 description: "Casa, cura, connexió — la filosofia darrere de Dirty Rabbit i per què cada detall importa."
 date: 2026-02-13
-image: "/images/news/philosophy.jpg"
+image: "/images/heroes/nosotros.jpg"
 lang: ca
 ---
 

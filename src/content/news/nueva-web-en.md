@@ -2,7 +2,7 @@
 title: "Why we do what we do"
 description: "Home, care, connection — the philosophy behind Dirty Rabbit and why every detail matters."
 date: 2026-02-13
-image: "/images/news/philosophy.jpg"
+image: "/images/heroes/nosotros.jpg"
 lang: en
 ---
 

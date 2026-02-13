@@ -2,7 +2,7 @@
 title: "Por qué hacemos lo que hacemos"
 description: "Casa, cuidado, conexión — la filosofía detrás de Dirty Rabbit y por qué cada detalle importa."
 date: 2026-02-13
-image: "/images/news/philosophy.jpg"
+image: "/images/heroes/nosotros.jpg"
 lang: es
 ---
 
