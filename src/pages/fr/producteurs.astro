@@ -8,62 +8,73 @@ const t = getTranslations(lang);
 ---
 
 <Layout 
-  title={`${t.producers.title} — Dirty Rabbit`}
+  title={`${t.producers.title} — Dirty Rabbit`} 
   description="Nos producteurs : La Cabra (café de spécialité), REQ (matcha), Origo (pain au levain), et plus. Produits artisanaux sélectionnés avec soin pour votre petit-déjeuner."
   lang={lang}>
-  
-  <!-- Hero Section -->
-  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">{t.producers.title}</h1>
-      <div class="w-16 h-px bg-red mx-auto mb-8"></div>
-      <p class="font-mono text-sm md:text-base text-black/70">
+  <!-- Hero Image with Title Overlay -->
+  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative">
+        <img 
+          src="/images/heroes/proveedores.jpg" 
+          alt="Nos producteurs" 
+          class="w-full aspect-[16/9] object-cover rounded-lg"
+          loading="eager"
+        />
+        <div class="absolute inset-0 bg-black/30 rounded-lg flex items-center justify-center">
+          <h1 class="font-typewriter text-4xl md:text-6xl font-bold text-white text-center px-4">Nos Partenaires</h1>
+        </div>
+      </div>
+      <p class="font-mono text-lg md:text-xl text-black/70 max-w-2xl mx-auto leading-relaxed text-center mt-8">
         {t.producers.intro}
       </p>
     </div>
   </section>
 
-  <!-- Providers Grid -->
-  <section class="py-12 md:py-16 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <!-- Suppliers Grid -->
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="stagger-group grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {proveedores.map((p) => (
-          <article class="group">
-            <div class="aspect-square rounded-lg overflow-hidden mb-4 border border-black/10">
+          <article class="stagger-item bg-white border border-black rounded-2xl overflow-hidden card-lift">
+            <!-- Photo -->
+            <div class="w-full aspect-[4/3] bg-cream relative overflow-hidden">
               <img 
                 src={p.image || `/images/proveedores/${p.id}.jpg`}
                 alt={p.name}
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                loading="lazy"
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
               />
+              <div class="absolute inset-0 bg-cream flex items-center justify-center" style="display:none;">
+                <div class="text-red/10 text-6xl font-typewriter font-bold">🐰</div>
+              </div>
             </div>
-            <p class="font-mono text-xs text-red tracking-wider mb-1">
-              {(p.category as any)[lang]}
+            <div class="p-6 md:p-8">
+            
+            <!-- Supplier Info -->
+            <h2 class="font-typewriter text-2xl md:text-3xl font-bold mb-2">{p.name}</h2>
+            <p class="font-mono text-sm text-red mb-4 tracking-wide">
+              {(p.category as any)[lang]}{p.origin ? ` · ${p.origin}` : ''}
             </p>
-            <h3 class="font-typewriter text-xl font-bold mb-1">{p.name}</h3>
-            <p class="font-mono text-xs text-black/60 mb-3">{p.origin}</p>
-            <p class="font-mono text-sm text-black/70 leading-relaxed">
-              {(p.description as any)[lang]}
-            </p>
+            <p class="font-mono text-black/70 leading-relaxed">{(p.description as any)[lang]}</p>
+            
             {p.url && (
               <a 
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-1 font-mono text-xs text-red hover:text-red/80 mt-3"
+                href={p.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center gap-2 mt-6 font-mono text-sm text-red hover:text-red/80 transition-colors group"
               >
-                Visiter
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                <span>Visiter le site</span>
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                 </svg>
               </a>
             )}
+            </div>
           </article>
         ))}
       </div>
-      
     </div>
   </section>
-
 </Layout>
