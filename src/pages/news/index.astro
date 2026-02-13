@@ -30,8 +30,14 @@ const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueO
         <div class="grid md:grid-cols-2 gap-8">
           {posts.map((post) => (
             <article class="bg-white border border-black/10 rounded-2xl overflow-hidden card-lift">
-              <div class="aspect-[16/9] bg-cream flex items-center justify-center">
-                <span class="font-mono text-sm text-black/30">[FOTO]</span>
+              <div class="aspect-[16/9] bg-cream overflow-hidden">
+                {post.data.image ? (
+                  <img src={post.data.image} alt={post.data.title} class="w-full h-full object-cover" />
+                ) : (
+                  <div class="w-full h-full flex items-center justify-center">
+                    <span class="font-mono text-sm text-black/30">[FOTO]</span>
+                  </div>
+                )}
               </div>
               <div class="p-6">
                 <time class="font-mono text-xs text-red mb-2 block">

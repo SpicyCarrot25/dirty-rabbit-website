@@ -1,0 +1,143 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'fr';
+---
+
+<Layout title="Rejoignez l'Équipe — Dirty Rabbit" lang={lang}>
+  <!-- Hero Section -->
+  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">Rejoignez-Nous</h1>
+      <div class="w-16 h-px bg-red mx-auto mb-8"></div>
+      <p class="font-mono text-lg text-black/70">
+        Passionné par le café ? Vous aimez les matins calmes et les gens sympas ? 
+        Nous recherchons toujours des personnes qui veulent faire partie de DR.
+      </p>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <form id="join-form" class="space-y-6">
+        <!-- Name -->
+        <div>
+          <label for="name" class="block font-typewriter text-lg font-bold mb-2">Votre nom</label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name"
+            required
+            class="w-full border border-black/20 rounded-lg px-4 py-3 font-mono text-base focus:outline-none focus:border-red transition-colors"
+            placeholder="Comment vous appeler ?"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="block font-typewriter text-lg font-bold mb-2">Email</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email"
+            required
+            class="w-full border border-black/20 rounded-lg px-4 py-3 font-mono text-base focus:outline-none focus:border-red transition-colors"
+            placeholder="Pour vous recontacter"
+          />
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message" class="block font-typewriter text-lg font-bold mb-2">Parlez-nous de vous</label>
+          <textarea 
+            id="message" 
+            name="message"
+            rows="4"
+            required
+            class="w-full border border-black/20 rounded-lg px-4 py-3 font-mono text-base focus:outline-none focus:border-red transition-colors resize-none"
+            placeholder="Qu'est-ce qui vous amène ? De l'expérience ? Plutôt café ou thé ?"
+          ></textarea>
+        </div>
+
+        <!-- Phone (optional) -->
+        <div>
+          <label for="phone" class="block font-typewriter text-lg font-bold mb-2">
+            Téléphone <span class="font-mono text-sm font-normal text-black/50">(facultatif)</span>
+          </label>
+          <div class="flex gap-2">
+            <select 
+              id="country" 
+              name="country"
+              class="w-28 border border-black/20 rounded-lg px-3 py-3 font-mono text-base focus:outline-none focus:border-red transition-colors bg-white"
+            >
+              <option value="+33">🇫🇷 +33</option>
+              <option value="+34">🇪🇸 +34</option>
+              <option value="+32">🇧🇪 +32</option>
+              <option value="+41">🇨🇭 +41</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+49">🇩🇪 +49</option>
+              <option value="+39">🇮🇹 +39</option>
+              <option value="+351">🇵🇹 +351</option>
+              <option value="+31">🇳🇱 +31</option>
+              <option value="+1">🇺🇸 +1</option>
+            </select>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone"
+              class="flex-1 border border-black/20 rounded-lg px-4 py-3 font-mono text-base focus:outline-none focus:border-red transition-colors"
+              placeholder="06 12 34 56 78"
+            />
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button 
+          type="submit"
+          class="w-full bg-red text-cream font-typewriter font-bold text-lg px-8 py-4 rounded-lg hover:bg-red/90 transition-colors"
+        >
+          Envoyer ma Candidature
+        </button>
+        
+        <!-- Success message -->
+        <p id="form-success" class="hidden text-center font-mono text-green-600">
+          ✓ C'est reçu ! Nous vous recontacterons bientôt.
+        </p>
+        
+        <!-- Error message -->
+        <p id="form-error" class="hidden text-center font-mono text-red">
+          Un problème est survenu. Écrivez-nous à hola@dirtyrabbit.es
+        </p>
+      </form>
+      
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const form = document.getElementById('join-form');
+  const successMsg = document.getElementById('form-success');
+  const errorMsg = document.getElementById('form-error');
+  
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form as HTMLFormElement);
+      const data = Object.fromEntries(formData.entries());
+      
+      try {
+        const applications = JSON.parse(localStorage.getItem('dr_applications') || '[]');
+        applications.push({ ...data, submitted_at: new Date().toISOString() });
+        localStorage.setItem('dr_applications', JSON.stringify(applications));
+        
+        (form as HTMLFormElement).classList.add('hidden');
+        successMsg?.classList.remove('hidden');
+      } catch (err) {
+        errorMsg?.classList.remove('hidden');
+      }
+    });
+  }
+</script>

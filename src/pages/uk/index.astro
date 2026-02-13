@@ -1,0 +1,222 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+import { getCollection } from 'astro:content';
+import proveedores from '../../data/proveedores.json';
+
+const lang = 'uk';
+const t = getTranslations(lang);
+
+// Featured providers for homepage (curated selection)
+const featuredIds = ['la-cabra', 'origo-bakery', 'la-puntual', 'buddy-buddy'];
+const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === id)).filter(Boolean);
+
+// Get latest news posts (fallback to English content for these languages)
+const allNews = await getCollection('news', ({ data }) => data.lang === 'en');
+const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
+---
+
+<Layout 
+  title="Dirty Rabbit — Спешелті кава, сніданки та бранчі · С'Агаро" 
+  description="Спешелті кава в С'Агаро, Коста Брава. Еспресо третьої хвилі, бранчі та рослинні опції. Меню українською. Сімейний заклад."
+  lang={lang}>
+  
+  <!-- HERO SECTION -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden -mt-16 md:-mt-20">
+    <div class="absolute inset-0 bg-black" id="hero-bg">
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        webkit-playsinline
+        disablePictureInPicture
+        preload="auto"
+        class="w-full h-full object-cover pointer-events-none"
+      >
+        <source src="/photos/hero-video.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+    
+    <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+      <p class="reveal font-typewriter text-3xl md:text-5xl lg:text-6xl leading-relaxed hero-text-shadow">
+        Тихі ранки.<br class="hidden sm:block" /> 
+        Гучний сміх.<br class="hidden sm:block" /> 
+        Кава між ними.
+      </p>
+    </div>
+  </section>
+  
+  <!-- COMMUNITY SECTION -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80 mb-10">
+        Сім'я з дитиною, яка не може всидіти на місці. Пара, яка ходить до нас з першого дня. Той, хто щойно переїхав і нікого не знає. Це місце для справжнього сніданку, хорошої кави і часу без поспіху. Незнайомці, які стають постійними гостями, а потім — друзями. Спешелті кава, бранчі та смачні сніданки в С'Агаро, в серці Коста Брава.
+      </p>
+      
+      <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href={getLocalizedPath('/carta', lang)}
+          class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-red text-red hover:bg-red hover:text-white transition-colors rounded-lg"
+        >
+          {t.nav.menu}
+        </a>
+        <a 
+          href="https://order.dirtyrabbit.es"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-lg"
+        >
+          {t.nav.order}
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- PROVIDERS -->
+  <section class="py-12 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <h2 class="font-typewriter text-5xl md:text-6xl lg:text-7xl mb-4 section-headline">
+          {t.producers.title}
+        </h2>
+        <p class="font-mono text-sm text-black/60 max-w-xl mx-auto">
+          Люди за вашою чашкою
+        </p>
+      </div>
+      
+      <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
+        {featuredProviders.map((p) => (
+          <article class="reveal card-lift relative aspect-square w-[70vw] md:w-[280px] rounded-xl overflow-hidden border border-[#1A1A1A]">
+            <div class="absolute inset-0 bg-cream">
+              <img 
+                src={p.image || `/images/proveedores/${p.id}.jpg`}
+                alt={p.name}
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16">
+              <p class="font-mono text-xs text-white/80 tracking-wider mb-1">
+                {(p.category as any).en}
+              </p>
+              <h3 class="font-typewriter text-lg text-white">
+                {p.name}
+              </h3>
+              <p class="font-mono text-xs text-white/70">
+                {p.origin ? `${p.origin}` : ''}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+      
+      <div class="text-center mt-12 reveal">
+        <a 
+          href={getLocalizedPath('/proveedores', lang)}
+          class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
+        >
+          {t.common.viewAll}
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- NEWS CARDS -->
+  <section class="py-20 md:py-32 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <h2 class="font-typewriter text-5xl md:text-6xl lg:text-7xl mb-4 section-headline">
+          {t.news.title}
+        </h2>
+        <p class="font-mono text-sm text-black/60 max-w-xl mx-auto">
+          {t.news.subtitle}
+        </p>
+      </div>
+      
+      <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
+        {latestNews.map((post) => (
+          <a href={`/en/news/${post.slug}/`} class="block">
+            <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+              <div class="aspect-square relative overflow-hidden">
+                {post.data.image && (
+                  <img 
+                    src={post.data.image}
+                    alt={post.data.title}
+                    class="w-full h-full object-cover"
+                  />
+                )}
+              </div>
+              <div class="p-6">
+                <time class="font-mono text-xs text-red tracking-wider">
+                  {post.data.date.toLocaleDateString('uk-UA', { month: 'short', year: 'numeric' })}
+                </time>
+                <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
+                  {post.data.title}
+                </h3>
+                <p class="font-mono text-sm text-black/60 line-clamp-2">
+                  {post.data.description}
+                </p>
+              </div>
+            </article>
+          </a>
+        ))}
+      </div>
+      
+      <div class="text-center mt-12 reveal">
+        <a 
+          href={getLocalizedPath('/news', lang)}
+          class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
+        >
+          {t.common.viewAll}
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      return;
+    }
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('visible'), index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    
+    const heroBg = document.getElementById('hero-bg');
+    if (heroBg) {
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const scrolled = window.pageYOffset;
+            heroBg.style.transform = `translateY(${scrolled * 0.3}px)`;
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    }
+  });
+</script>

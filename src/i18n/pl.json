@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "menu": "Menu",
+    "about": "O nas",
+    "order": "Zamów",
+    "producers": "Dostawcy",
+    "news": "Aktualności",
+    "contact": "Kontakt",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "tagline": "Miejsce, żeby się obudzić. Albo zwolnić. Najlepiej jedno i drugie.",
+    "taglineAlt": "Ciche poranki. Głośny śmiech. Kawa pomiędzy.",
+    "subtitle": "Specialty Coffee, śniadania i brunche — S'Agaró, Costa Brava",
+    "cta": "Zamów"
+  },
+  "sections": {
+    "menu": "Nasze menu",
+    "about": "O nas",
+    "producers": "Nasi dostawcy",
+    "news": "Aktualności",
+    "contact": "Jak nas znaleźć"
+  },
+  "footer": {
+    "address": "Avinguda de Platja d'Aro, 275",
+    "city": "17248 S'Agaró, Girona",
+    "hours": "Wt–Nd: 8:00–15:00 (kuchnia do 14:00)",
+    "closed": "Poniedziałek — zamknięte",
+    "email": "hola@dirtyrabbit.es",
+    "newsletter": "Zapisz się do newslettera",
+    "placeholder": "Twój email",
+    "subscribe": "Zapisz się",
+    "legal": "Informacje prawne",
+    "privacy": "Polityka prywatności",
+    "cookies": "Polityka cookies",
+    "copyright": "© 2026 The Rabbit Project SL"
+  },
+  "menu": {
+    "title": "Menu",
+    "orderOnline": "Zamów online",
+    "categories": {
+      "coffee": "Kawa",
+      "drinks": "Napoje",
+      "brunch": "Brunch",
+      "tostas": "Tosty",
+      "pastries": "Wypieki"
+    },
+    "note": "Mleko owsiane, sojowe lub migdałowe: +€0.50"
+  },
+  "about": {
+    "title": "O nas",
+    "whoWeAre": "Kim jesteśmy",
+    "ourStory": "Nasza historia",
+    "theSpace": "Przestrzeń"
+  },
+  "producers": {
+    "title": "Nasi dostawcy",
+    "intro": "Kawa, matcha, chleb, jajka — każdy produkt ma swoją historię. Pracujemy tylko z tymi, którzy dzielą naszą obsesję na punkcie jakości."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "findUs": "Jak nas znaleźć",
+    "hours": "Godziny otwarcia",
+    "faq": "Często zadawane pytania",
+    "instagram": "Śledź nas na Instagramie",
+    "questions": {
+      "reservation": "Czy mogę zarezerwować stolik?",
+      "reservationAnswer": "Nie przyjmujemy rezerwacji — wierzymy w spontaniczne brunche. Ale nie martw się, stoliki zwalniają się szybko. W weekendy przed 10 rano jest zwykle spokojniej.",
+      "wifi": "Jest wifi?",
+      "wifiAnswer": "Tak, darmowe i szybkie. Idealne do pracy — ale do laptopa należy się kawa, prawda? 😉",
+      "dogs": "Czy mogę przyjść z psem?",
+      "dogsAnswer": "Oczywiście! Psy mile widziane i w środku, i na tarasie. Zawsze mamy dla nich świeżą wodę.",
+      "parking": "Jest parking w pobliżu?",
+      "parkingAnswer": "Tak, darmowy parking tuż przy wejściu. Jest też strefa niebieska w pobliżu, jeśli główny jest pełny.",
+      "events": "Organizujecie prywatne imprezy?",
+      "eventsAnswer": "Tak, dla małych grup poza zwykłymi godzinami. Napisz do nas na hola@dirtyrabbit.es z Twoim pomysłem.",
+      "dietary": "Macie opcje wegańskie/bezglutenowe?",
+      "dietaryAnswer": "Tak. W menu są dania wegetariańskie i wegańskie, dostępne mleko roślinne. Co do bezglutenowych — pytaj, mamy opcje, ale kuchnia nie jest w 100% bezglutenowa.",
+      "specialty": "Co to jest specialty coffee?",
+      "specialtyAnswer": "To naprawdę dobra kawa — uprawiana z troską, palona w małych partiach. Nuty owoców, czekolady, kwiatów... Pracujemy z La Cabra z Kopenhagi. Rezultat? Kawa, która smakuje bez cukru.",
+      "coffeeOrigin": "Skąd jest Wasza kawa?",
+      "coffeeOriginAnswer": "Espresso od La Cabra (Kopenhaga) z ziaren z Etiopii. Batch brew zmienia się sezonowo — teraz Honduras. Decaf od Puchero.",
+      "decaf": "Macie decaf?",
+      "decafAnswer": "Tak, od Puchero. I co najlepsze — jest bezpłatny. Nie doliczamy za decaf, bo każdy zasługuje na dobrą kawę.",
+      "kids": "Czy jest przyjazne dla dzieci?",
+      "kidsAnswer": "W 100%. Mamy krzesełko dla dziecka, przewijak i taras, gdzie można pobiegać. Smoothie Rabbit Power to ulubione dzieci.",
+      "terrace": "Macie taras?",
+      "terraceAnswer": "Tak, przytulny taras z cieniem. Wychodzi na ulicę, bez widoków — ale cicho i idealnie na śniadanie. Latem to ulubione miejsce.",
+      "location": "Jak dojść od plaży Sant Pol?",
+      "locationAnswer": "5 minut piechotą od Sant Pol, w górę Avinguda de Platja d'Aro. Po kąpieli idealnie sprawdzi się ice latte.",
+      "camiRonda": "Jesteście blisko Camí de Ronda?",
+      "camiRondaAnswer": "3 minuty od nadmorskiej ścieżki. Wielu wędrowców wpada do nas przed lub po trasie.",
+      "groups": "Macie miejsce dla grup?",
+      "groupsAnswer": "Dla grup do 8 osób — tak. Więcej jest trudne bez rezerwacji. Na prywatne imprezy pisz do nas.",
+      "takeaway": "Jest takeaway?",
+      "takeawayAnswer": "Tak, wszystko. Kawa, smoothie, tosty... Używamy eko-opakowań. Idealne na plażę.",
+      "payment": "Przyjmujecie karty?",
+      "paymentAnswer": "Tak, karty, gotówkę i płatności mobilne."
+    }
+  },
+  "news": {
+    "title": "Aktualności",
+    "subtitle": "Najnowsze z Dirty Rabbit",
+    "readMore": "Czytaj więcej"
+  },
+  "faq": {
+    "title": "FAQ",
+    "intro": "Wszystko, co musisz wiedzieć przed wizytą. Nie znalazłeś odpowiedzi — skontaktuj się z nami.",
+    "categories": {
+      "general": "Ogólne",
+      "coffee": "Kawa",
+      "food": "Jedzenie",
+      "amenities": "Udogodnienia"
+    }
+  },
+  "historia": {
+    "title": "Nasza historia",
+    "howItStarted": {
+      "title": "Jak to się zaczęło",
+      "text": "Szukaliśmy miejsca na porządne śniadanie w S'Agaró — nie znaleźliśmy. Więc Iwonka postanowiła otworzyć własne. Kawiarnia, gdzie kawa jest naprawdę dobra, jedzenie przygotowane z sercem, i można siedzieć ile się chce."
+    },
+    "whySagaro": {
+      "title": "Dlaczego S'Agaró",
+      "text": "Chcieliśmy miejsca ze słońcem, morzem i prawdziwą społecznością. S'Agaró podbiło nas od pierwszego spaceru wzdłuż wybrzeża. Idealny balans: spokojnie zimą, tętniące życiem latem, i zawsze to śródziemnomorskie światło."
+    },
+    "philosophy": {
+      "title": "Nasza filozofia",
+      "text": "Nie gonimy za trendami. Po prostu robimy z troską. Dobre składniki, uczciwa technika, czas dla każdego detalu. Takie proste."
+    },
+    "theName": {
+      "title": "Nazwa",
+      "text": "Dlaczego Dirty Rabbit? Bo króliki są ciekawe, szybkie i trochę psotne. A 'dirty'... bo najlepsza kawa zawsze zostawia ślad."
+    },
+    "pillars": {
+      "wildComfort": {
+        "title": "Dziki komfort",
+        "text": "Balans między energią a spokojem. Nie jesteśmy cichą kawiarnią ani chaotyczną. Jesteśmy jednym i drugim."
+      },
+      "belonging": {
+        "title": "Przynależność",
+        "text": "Goście stają się przyjaciółmi. Miejsce, gdzie każdy pasuje."
+      },
+      "intentional": {
+        "title": "Świadomość",
+        "text": "Każdy wybór ma sens. La Cabra, REQ, Awachai — wybrane z intencją."
+      }
+    },
+    "tagline": "Dom z dala od domu"
+  },
+  "common": {
+    "viewAll": "Zobacz wszystko",
+    "back": "Wstecz",
+    "loading": "Ładowanie..."
+  }
+}
