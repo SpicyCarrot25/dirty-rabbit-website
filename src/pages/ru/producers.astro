@@ -9,7 +9,7 @@ const t = getTranslations(lang);
 
 <Layout 
   title={`${t.producers.title} — Dirty Rabbit`} 
-  description="Наши поставщики: La Cabra (Копенгаген), Origo Bakery (Барселона), La Puntual (Жирона). Каждый продукт выбран с намерением."
+  description="Наши поставщики: La Cabra (Копенгаген), Origo Bakery (Барселона), La Puntual (Жирона). Каждый продукт выбран с заботой."
   lang={lang}>
   <!-- Hero Image with Title Overlay -->
   <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-white">
@@ -17,12 +17,12 @@ const t = getTranslations(lang);
       <div class="relative">
         <img 
           src="/images/heroes/proveedores.jpg" 
-          alt="Our partners" 
+          alt="Наши партнёры" 
           class="w-full aspect-[16/9] object-cover rounded-lg"
           loading="eager"
         />
         <div class="absolute inset-0 bg-black/30 rounded-lg flex items-center justify-center">
-          <h1 class="font-typewriter text-4xl md:text-6xl font-bold text-white text-center px-4">{t.producers.title}</h1>
+          <h1 class="font-typewriter text-4xl md:text-6xl font-bold text-white text-center px-4">Наши Партнёры</h1>
         </div>
       </div>
       <p class="font-mono text-lg md:text-xl text-black/70 max-w-2xl mx-auto leading-relaxed text-center mt-8">
@@ -34,17 +34,24 @@ const t = getTranslations(lang);
   <!-- Suppliers Grid -->
   <section class="py-16 md:py-24 bg-cream">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="stagger-group grid md:grid-cols-2 gap-8 md:gap-12">
+      <div class="stagger-group grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {proveedores.map((p) => (
-          <article class="stagger-item bg-white border border-black p-6 md:p-8 card-lift">
-            <div class="w-full aspect-[4/3] bg-cream flex items-center justify-center mb-6 relative overflow-hidden">
+          <article class="stagger-item bg-white border border-black rounded-2xl overflow-hidden card-lift">
+            <!-- Photo -->
+            <div class="w-full aspect-[4/3] bg-cream relative overflow-hidden">
               <img 
                 src={p.image || `/images/proveedores/${p.id}.jpg`}
                 alt={p.name}
                 class="w-full h-full object-cover"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
               />
+              <div class="absolute inset-0 bg-cream flex items-center justify-center" style="display:none;">
+                <div class="text-red/10 text-6xl font-typewriter font-bold">🐰</div>
+              </div>
             </div>
+            <div class="p-6 md:p-8">
             
+            <!-- Supplier Info -->
             <h2 class="font-typewriter text-2xl md:text-3xl font-bold mb-2">{p.name}</h2>
             <p class="font-mono text-sm text-red mb-4 tracking-wide">
               {(p.category as any).en}{p.origin ? ` · ${p.origin}` : ''}
@@ -64,6 +71,7 @@ const t = getTranslations(lang);
                 </svg>
               </a>
             )}
+            </div>
           </article>
         ))}
       </div>
