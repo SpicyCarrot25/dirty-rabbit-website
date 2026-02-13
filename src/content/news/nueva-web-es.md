@@ -14,7 +14,7 @@ No somos un café de ciclistas — aunque algunos vienen después de rodar. No s
 
 Hay mañanas de rush total — niños corriendo, pedidos volando, la máquina sin parar. Y hay tardes donde el mismo espacio se convierte en un refugio silencioso. Un libro, un flat white, nada más.
 
-Nos gusta ese contraste. El espresso que te despierta a las 8am y el cortado tranquilo de las 2pm. Energía cuando la necesitas, calma cuando la buscas.
+Nos gusta ese contraste. El rush de las 10am con pedidos volando, y el cortado tranquilo de las 2pm cuando todo se calma. Energía cuando la necesitas, calma cuando la buscas.
 
 ## Belonging
 

@@ -14,7 +14,7 @@ No som un cafè de ciclistes — tot i que alguns venen després de rodar. No so
 
 Hi ha matins de rush total — nens corrent, comandes volant, la màquina sense parar. I hi ha tardes on el mateix espai es converteix en un refugi silenciós. Un llibre, un flat white, res més.
 
-Ens agrada aquest contrast. L'espresso que et desperta a les 8am i el tallat tranquil de les 2pm. Energia quan la necessites, calma quan la busques.
+Ens agrada aquest contrast. El rush de les 10am amb comandes volant, i el tallat tranquil de les 2pm quan tot es calma. Energia quan la necessites, calma quan la busques.
 
 ## Belonging
 

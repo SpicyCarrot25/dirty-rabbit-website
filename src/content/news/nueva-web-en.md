@@ -14,7 +14,7 @@ We're not a cycling café — though some come after their rides. We're not just
 
 There are mornings of total rush — kids running around, orders flying, the machine non-stop. And there are afternoons where the same space becomes a quiet refuge. A book, a flat white, nothing else.
 
-We like that contrast. The espresso that wakes you up at 8am and the quiet cortado at 2pm. Energy when you need it, calm when you're looking for it.
+We like that contrast. The 10am rush with orders flying, and the quiet cortado at 2pm when everything calms down. Energy when you need it, calm when you're looking for it.
 
 ## Belonging
 
