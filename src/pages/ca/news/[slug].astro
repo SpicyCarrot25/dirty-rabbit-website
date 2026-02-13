@@ -43,11 +43,11 @@ const t = getTranslations(lang);
       
       <!-- Featured image -->
       {post.data.image && (
-        <div class="aspect-[16/9] rounded-xl overflow-hidden mb-12">
+        <div class="aspect-square rounded-xl overflow-hidden mb-12">
           <img 
             src={post.data.image} 
             alt={post.data.title}
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover object-top"
           />
         </div>
       )}
