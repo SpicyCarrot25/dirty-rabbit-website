@@ -1,16 +1,17 @@
 import es from './es.json';
 import en from './en.json';
 import ca from './ca.json';
+import fr from './fr.json';
 import ru from './ru.json';
 import uk from './uk.json';
 import pl from './pl.json';
 
-export const languages = ['es', 'en', 'ca', 'ru', 'uk', 'pl'] as const;
+export const languages = ['es', 'en', 'ca', 'fr', 'ru', 'uk', 'pl'] as const;
 export type Language = (typeof languages)[number];
 
 export const defaultLang: Language = 'es';
 
-const translations = { es, en, ca, ru, uk, pl };
+const translations = { es, en, ca, fr, ru, uk, pl };
 
 export function getTranslations(lang: Language) {
   return translations[lang] || translations[defaultLang];

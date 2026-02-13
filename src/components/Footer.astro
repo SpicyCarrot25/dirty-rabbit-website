@@ -10,25 +10,62 @@ const t = getTranslations(lang);
 
 // Localized footer labels
 const footerLabels = {
-  legal: { es: 'Aviso Legal', en: 'Legal Notice', ca: 'Avís Legal', fr: 'Mentions Légales' },
-  faq: { es: 'FAQ y Contacto', en: 'FAQ & Contact', ca: 'FAQ i Contacte', fr: 'FAQ & Contact' },
-  join: { es: 'Únete a Nosotros', en: 'Join Us', ca: 'Uneix-te a Nosaltres', fr: 'Rejoignez-Nous' },
-  news: { es: 'Noticias y Momentos', en: 'News & Moments', ca: 'Notícies i Moments', fr: 'Actualités & Moments' },
+  legal: { es: 'Aviso Legal', en: 'Legal Notice', ca: 'Avís Legal', fr: 'Mentions Légales', ru: 'Правовая информация', uk: 'Правова інформація', pl: 'Informacje prawne' },
+  faq: { es: 'FAQ y Contacto', en: 'FAQ & Contact', ca: 'FAQ i Contacte', fr: 'FAQ & Contact', ru: 'FAQ и Контакты', uk: 'FAQ та Контакти', pl: 'FAQ i Kontakt' },
+  join: { es: 'Únete a Nosotros', en: 'Join Us', ca: 'Uneix-te a Nosaltres', fr: 'Rejoignez-Nous', ru: 'Присоединяйтесь', uk: 'Приєднуйтесь', pl: 'Dołącz do nas' },
+  news: { es: 'Noticias y Momentos', en: 'News & Moments', ca: 'Notícies i Moments', fr: 'Actualités & Moments', ru: 'Новости', uk: 'Новини', pl: 'Aktualności' },
   newsletter: {
     es: 'La Newsletter\nNoticias, recetas y todo eso',
     en: 'Our Newsletter\nNews, recipes & everything rabbit',
     ca: 'La Newsletter\nNotícies, receptes i tot això',
-    fr: 'Notre Newsletter\nActualités, recettes et tout le reste'
+    fr: 'Notre Newsletter\nActualités, recettes et tout le reste',
+    ru: 'Рассылка\nНовости, рецепты и всё остальное',
+    uk: 'Розсилка\nНовини, рецепти та все інше',
+    pl: 'Newsletter\nAktualności, przepisy i wszystko inne'
   },
-  placeholder: { es: 'Tu Correo Electrónico', en: 'Your Email', ca: 'El Teu Correu Electrònic', fr: 'Votre Email' },
-  submit: { es: '¡Vamos!', en: 'Go!', ca: 'Anem!', fr: 'C\'est parti !' },
+  placeholder: { es: 'Tu Correo Electrónico', en: 'Your Email', ca: 'El Teu Correu Electrònic', fr: 'Votre Email', ru: 'Ваш Email', uk: 'Ваш Email', pl: 'Twój Email' },
+  submit: { es: '¡Vamos!', en: 'Go!', ca: 'Anem!', fr: 'C\'est parti !', ru: 'Поехали!', uk: 'Поїхали!', pl: 'Dalej!' },
   privacy: {
     es: 'Acepto la Política de Privacidad',
     en: 'I accept the Privacy Policy',
     ca: 'Accepto la Política de Privacitat',
-    fr: 'J\'accepte la Politique de Confidentialité'
+    fr: 'J\'accepte la Politique de Confidentialité',
+    ru: 'Принимаю Политику конфиденциальности',
+    uk: 'Приймаю Політику конфіденційності',
+    pl: 'Akceptuję Politykę prywatności'
   },
-  stayInTouch: { es: 'Síguenos', en: 'Stay in touch', ca: 'Segueix-nos', fr: 'Restez connectés' }
+  stayInTouch: { es: 'Síguenos', en: 'Stay in touch', ca: 'Segueix-nos', fr: 'Restez connectés', ru: 'Следите за нами', uk: 'Слідкуйте за нами', pl: 'Śledź nas' }
+};
+
+// Privacy link and text by language
+const privacyLinks: Record<string, string> = {
+  es: '/privacidad',
+  en: '/en/privacy',
+  ca: '/ca/privacitat',
+  fr: '/fr/confidentialite',
+  ru: '/ru/privacy',
+  uk: '/uk/privacy',
+  pl: '/pl/privacy'
+};
+
+const privacyLinkText: Record<string, string> = {
+  es: 'Política de Privacidad',
+  en: 'Privacy Policy',
+  ca: 'Política de Privacitat',
+  fr: 'Politique de Confidentialité',
+  ru: 'Политику конфиденциальности',
+  uk: 'Політику конфіденційності',
+  pl: 'Politykę prywatności'
+};
+
+const privacyPrefix: Record<string, string> = {
+  es: 'Acepto la ',
+  en: 'I accept the ',
+  ca: 'Accepto la ',
+  fr: 'J\'accepte la ',
+  ru: 'Принимаю ',
+  uk: 'Приймаю ',
+  pl: 'Akceptuję '
 };
 ---
 
@@ -67,7 +104,7 @@ const footerLabels = {
       <!-- Privacy checkbox -->
       <label id="privacy-label" class="flex items-start gap-2 mt-2 font-mono text-[10px] text-black/50 cursor-pointer">
         <input type="checkbox" id="privacy-check" class="rounded border-[#1A1A1A]/30 mt-0.5 shrink-0" required />
-        <span>{footerLabels.privacy[lang].split('Política')[0]}<a href={lang === 'es' ? '/privacidad' : lang === 'en' ? '/en/privacy' : lang === 'ca' ? '/ca/privacitat' : '/fr/confidentialite'} class="underline hover:text-red transition-colors">{lang === 'es' ? 'Política de Privacidad' : lang === 'en' ? 'Privacy Policy' : lang === 'ca' ? 'Política de Privacitat' : 'Politique de Confidentialité'}</a></span>
+        <span>{privacyPrefix[lang] || privacyPrefix.en}<a href={privacyLinks[lang] || privacyLinks.en} class="underline hover:text-red transition-colors">{privacyLinkText[lang] || privacyLinkText.en}</a></span>
       </label>
 
       <!-- Success message (hidden by default) -->
@@ -171,11 +208,11 @@ const footerLabels = {
 
     <!-- Footer Menu Links - LEFT ALIGNED, same size -->
     <nav class="flex flex-col items-start gap-2 mb-8 font-typewriter text-base tracking-normal">
-      <a href={lang === 'es' ? '/legal' : lang === 'en' ? '/en/legal' : lang === 'ca' ? '/ca/legal' : '/fr/legal'} class="text-black hover:text-red transition-colors">
-        {footerLabels.legal[lang]}
+      <a href={getLocalizedPath('/legal', lang)} class="text-black hover:text-red transition-colors">
+        {footerLabels.legal[lang] || footerLabels.legal.en}
       </a>
-      <a href={lang === 'es' ? '/privacidad' : lang === 'en' ? '/en/privacy' : lang === 'ca' ? '/ca/privacitat' : '/fr/confidentialite'} class="text-black hover:text-red transition-colors">
-        {lang === 'es' ? 'Privacidad' : lang === 'en' ? 'Privacy' : lang === 'ca' ? 'Privacitat' : 'Confidentialité'}
+      <a href={privacyLinks[lang] || privacyLinks.en} class="text-black hover:text-red transition-colors">
+        {privacyLinkText[lang] || privacyLinkText.en}
       </a>
       <a href={getLocalizedPath('/contacto', lang)} class="text-black hover:text-red transition-colors">
         {footerLabels.faq[lang]}
