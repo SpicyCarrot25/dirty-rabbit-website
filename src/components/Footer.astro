@@ -10,23 +10,25 @@ const t = getTranslations(lang);
 
 // Localized footer labels
 const footerLabels = {
-  legal: { es: 'Aviso Legal', en: 'Legal Notice', ca: 'Avís Legal' },
-  faq: { es: 'FAQ y Contacto', en: 'FAQ & Contact', ca: 'FAQ i Contacte' },
-  join: { es: 'Únete a Nosotros', en: 'Join Us', ca: 'Uneix-te a Nosaltres' },
-  news: { es: 'Noticias y Momentos', en: 'News & Moments', ca: 'Notícies i Moments' },
+  legal: { es: 'Aviso Legal', en: 'Legal Notice', ca: 'Avís Legal', fr: 'Mentions Légales' },
+  faq: { es: 'FAQ y Contacto', en: 'FAQ & Contact', ca: 'FAQ i Contacte', fr: 'FAQ & Contact' },
+  join: { es: 'Únete a Nosotros', en: 'Join Us', ca: 'Uneix-te a Nosaltres', fr: 'Rejoignez-Nous' },
+  news: { es: 'Noticias y Momentos', en: 'News & Moments', ca: 'Notícies i Moments', fr: 'Actualités & Moments' },
   newsletter: {
     es: 'La Newsletter\nNoticias, recetas y todo eso',
     en: 'Our Newsletter\nNews, recipes & everything rabbit',
-    ca: 'La Newsletter\nNotícies, receptes i tot això'
+    ca: 'La Newsletter\nNotícies, receptes i tot això',
+    fr: 'Notre Newsletter\nActualités, recettes et tout le reste'
   },
-  placeholder: { es: 'Tu Correo Electrónico', en: 'Your Email', ca: 'El Teu Correu Electrònic' },
-  submit: { es: '¡Vamos!', en: 'Go!', ca: 'Anem!' },
+  placeholder: { es: 'Tu Correo Electrónico', en: 'Your Email', ca: 'El Teu Correu Electrònic', fr: 'Votre Email' },
+  submit: { es: '¡Vamos!', en: 'Go!', ca: 'Anem!', fr: 'C\'est parti !' },
   privacy: {
     es: 'Acepto la Política de Privacidad',
     en: 'I accept the Privacy Policy',
-    ca: 'Accepto la Política de Privacitat'
+    ca: 'Accepto la Política de Privacitat',
+    fr: 'J\'accepte la Politique de Confidentialité'
   },
-  stayInTouch: { es: 'Síguenos', en: 'Stay in touch', ca: 'Segueix-nos' }
+  stayInTouch: { es: 'Síguenos', en: 'Stay in touch', ca: 'Segueix-nos', fr: 'Restez connectés' }
 };
 ---
 
@@ -65,7 +67,7 @@ const footerLabels = {
       <!-- Privacy checkbox -->
       <label id="privacy-label" class="flex items-start gap-2 mt-2 font-mono text-[10px] text-black/50 cursor-pointer">
         <input type="checkbox" id="privacy-check" class="rounded border-[#1A1A1A]/30 mt-0.5 shrink-0" required />
-        <span>{footerLabels.privacy[lang].split('Política')[0]}<a href={lang === 'es' ? '/privacidad' : lang === 'en' ? '/en/privacy' : '/ca/privacitat'} class="underline hover:text-red transition-colors">{lang === 'es' ? 'Política de Privacidad' : lang === 'en' ? 'Privacy Policy' : 'Política de Privacitat'}</a></span>
+        <span>{footerLabels.privacy[lang].split('Política')[0]}<a href={lang === 'es' ? '/privacidad' : lang === 'en' ? '/en/privacy' : lang === 'ca' ? '/ca/privacitat' : '/fr/confidentialite'} class="underline hover:text-red transition-colors">{lang === 'es' ? 'Política de Privacidad' : lang === 'en' ? 'Privacy Policy' : lang === 'ca' ? 'Política de Privacitat' : 'Politique de Confidentialité'}</a></span>
       </label>
 
       <!-- Success message (hidden by default) -->
@@ -169,11 +171,11 @@ const footerLabels = {
 
     <!-- Footer Menu Links - LEFT ALIGNED, same size -->
     <nav class="flex flex-col items-start gap-2 mb-8 font-typewriter text-base tracking-normal">
-      <a href={lang === 'es' ? '/legal' : lang === 'en' ? '/en/legal' : '/ca/legal'} class="text-black hover:text-red transition-colors">
+      <a href={lang === 'es' ? '/legal' : lang === 'en' ? '/en/legal' : lang === 'ca' ? '/ca/legal' : '/fr/legal'} class="text-black hover:text-red transition-colors">
         {footerLabels.legal[lang]}
       </a>
-      <a href={lang === 'es' ? '/privacidad' : lang === 'en' ? '/en/privacy' : '/ca/privacitat'} class="text-black hover:text-red transition-colors">
-        {lang === 'es' ? 'Privacidad' : lang === 'en' ? 'Privacy' : 'Privacitat'}
+      <a href={lang === 'es' ? '/privacidad' : lang === 'en' ? '/en/privacy' : lang === 'ca' ? '/ca/privacitat' : '/fr/confidentialite'} class="text-black hover:text-red transition-colors">
+        {lang === 'es' ? 'Privacidad' : lang === 'en' ? 'Privacy' : lang === 'ca' ? 'Privacitat' : 'Confidentialité'}
       </a>
       <a href={getLocalizedPath('/contacto', lang)} class="text-black hover:text-red transition-colors">
         {footerLabels.faq[lang]}

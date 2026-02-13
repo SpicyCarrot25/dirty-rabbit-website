@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations } from '../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+---
+
+<Layout 
+  title={`${t.historia.title} — Dirty Rabbit`} 
+  description="Destination café de spécialité de la Costa Brava. Grains de qualité, brunch frais & ambiance chaleureuse pour familles et voyageurs. Notre histoire à S'Agaró."
+  lang={lang}>
+  <!-- Hero Section -->
+  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">{t.historia.title}</h1>
+      <div class="w-16 h-px bg-red mx-auto mb-8"></div>
+      <p class="font-mono text-lg md:text-xl text-black/70 italic">
+        {t.historia.tagline}
+      </p>
+    </div>
+  </section>
+
+  <!-- Hero Photo -->
+  <section class="bg-cream pb-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <img 
+        src="/images/heroes/iwonka-coffee.jpg" 
+        alt="L'équipe Dirty Rabbit" 
+        class="w-full aspect-[4/3] object-cover object-top rounded-lg"
+        loading="eager"
+      />
+    </div>
+  </section>
+
+  <!-- Story Sections -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- How It Started -->
+      <div class="mb-16">
+        <h2 class="font-typewriter text-2xl md:text-3xl font-bold text-red mb-6">
+          {t.historia.howItStarted.title}
+        </h2>
+        <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">
+          {t.historia.howItStarted.text}
+        </p>
+      </div>
+
+      <!-- Why S'Agaró -->
+      <div class="mb-16">
+        <h2 class="font-typewriter text-2xl md:text-3xl font-bold text-red mb-6">
+          {t.historia.whySagaro.title}
+        </h2>
+        <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">
+          {t.historia.whySagaro.text}
+        </p>
+      </div>
+
+      <!-- Philosophy -->
+      <div class="mb-16">
+        <h2 class="font-typewriter text-2xl md:text-3xl font-bold text-red mb-6">
+          {t.historia.philosophy.title}
+        </h2>
+        <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">
+          {t.historia.philosophy.text}
+        </p>
+      </div>
+
+      <!-- The Name -->
+      <div class="mb-16">
+        <h2 class="font-typewriter text-2xl md:text-3xl font-bold text-red mb-6">
+          {t.historia.theName.title}
+        </h2>
+        <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">
+          {t.historia.theName.text}
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Manifesto / Pillars Section -->
+  <section class="py-16 md:py-24 bg-black text-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Manifesto Header -->
+      <div class="text-center mb-16">
+        <p class="font-mono text-sm tracking-widest text-cream/60 mb-4">Ce en quoi nous croyons</p>
+        <div class="w-12 h-px bg-red mx-auto"></div>
+      </div>
+
+      <!-- Pillars as Manifesto -->
+      <div class="space-y-16">
+        
+        <!-- Wild Comfort -->
+        <div class="border-l-2 border-red pl-8">
+          <h3 class="font-typewriter text-3xl md:text-4xl font-bold mb-4">
+            {t.historia.pillars.wildComfort.title}
+          </h3>
+          <p class="font-mono text-base md:text-lg text-cream/80 leading-relaxed max-w-2xl">
+            {t.historia.pillars.wildComfort.text}
+          </p>
+        </div>
+
+        <!-- Belonging -->
+        <div class="border-l-2 border-red pl-8">
+          <h3 class="font-typewriter text-3xl md:text-4xl font-bold mb-4">
+            {t.historia.pillars.belonging.title}
+          </h3>
+          <p class="font-mono text-base md:text-lg text-cream/80 leading-relaxed max-w-2xl">
+            {t.historia.pillars.belonging.text}
+          </p>
+        </div>
+
+        <!-- Intentional -->
+        <div class="border-l-2 border-red pl-8">
+          <h3 class="font-typewriter text-3xl md:text-4xl font-bold mb-4">
+            {t.historia.pillars.intentional.title}
+          </h3>
+          <p class="font-mono text-base md:text-lg text-cream/80 leading-relaxed max-w-2xl">
+            {t.historia.pillars.intentional.text}
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Closing -->
+      <div class="mt-16 pt-12 border-t border-cream/20 text-center">
+        <p class="font-typewriter text-xl md:text-2xl text-cream/90 italic">
+          "Là où le café a un goût de quelque chose de plus."
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

@@ -5,13 +5,15 @@
     "category": {
       "es": "Café de Especialidad",
       "en": "Specialty Coffee",
-      "ca": "Cafè d'Especialitat"
+      "ca": "Cafè d'Especialitat",
+      "fr": "Café de Spécialité"
     },
     "origin": "Copenhagen",
     "description": {
       "es": "Tostadores daneses que llevan más de una década definiendo el café de especialidad en Europa. Tueste ligero que respeta el grano y deja que cada origen brille.",
       "en": "Danish roasters who have spent over a decade defining specialty coffee in Europe. Light roast that respects the bean and lets each origin shine.",
-      "ca": "Tostadors danesos que porten més d'una dècada definint el cafè d'especialitat a Europa. Torrat lleuger que respecta el gra i deixa que cada origen brilli."
+      "ca": "Tostadors danesos que porten més d'una dècada definint el cafè d'especialitat a Europa. Torrat lleuger que respecta el gra i deixa que cada origen brilli.",
+      "fr": "Torréfacteurs danois qui définissent le café de spécialité en Europe depuis plus d'une décennie. Torréfaction légère qui respecte le grain et laisse chaque origine briller."
     },
     "url": "https://lacabra.com",
     "image": "/images/proveedores/la-cabra.jpg"
@@ -22,13 +24,15 @@
     "category": {
       "es": "Matcha Ceremonial",
       "en": "Ceremonial Matcha",
-      "ca": "Matcha Cerimonial"
+      "ca": "Matcha Cerimonial",
+      "fr": "Matcha Cérémonial"
     },
     "origin": "Barcelona / Uji, Japan",
     "description": {
       "es": "Tetsuya trae matcha de grado ceremonial desde Uji, Japón. Molido en piedra, verde vibrante, umami puro. El matcha que los japoneses guardan para ellos.",
       "en": "Tetsuya brings ceremonial grade matcha from Uji, Japan. Stone-ground, vibrant green, pure umami. The matcha the Japanese keep for themselves.",
-      "ca": "Tetsuya porta matcha de grau cerimonial des d'Uji, Japó. Mòlt en pedra, verd vibrant, umami pur. El matcha que els japonesos guarden per a ells."
+      "ca": "Tetsuya porta matcha de grau cerimonial des d'Uji, Japó. Mòlt en pedra, verd vibrant, umami pur. El matcha que els japonesos guarden per a ells.",
+      "fr": "Tetsuya apporte du matcha de grade cérémonial depuis Uji, au Japon. Moulu à la pierre, vert vibrant, umami pur. Le matcha que les Japonais gardent pour eux."
     },
     "url": "",
     "image": "/images/proveedores/req-matcha.jpg"
@@ -39,13 +43,15 @@
     "category": {
       "es": "Café Descafeinado",
       "en": "Decaf Coffee",
-      "ca": "Cafè Descafeïnat"
+      "ca": "Cafè Descafeïnat",
+      "fr": "Café Décaféiné"
     },
     "origin": "Valladolid",
     "description": {
       "es": "Decaf que sabe a café de verdad. Descafeinado con agua de montaña, sin químicos. Porque a las 5 de la tarde también te mereces algo bueno.",
       "en": "Decaf that actually tastes like coffee. Decaffeinated with mountain water, no chemicals. Because at 5pm you also deserve something good.",
-      "ca": "Descafeïnat que sap a cafè de veritat. Descafeïnat amb aigua de muntanya, sense químics. Perquè a les 5 de la tarda també et mereixes alguna cosa bona."
+      "ca": "Descafeïnat que sap a cafè de veritat. Descafeïnat amb aigua de muntanya, sense químics. Perquè a les 5 de la tarda també et mereixes alguna cosa bona.",
+      "fr": "Un décaféiné qui a vraiment le goût du café. Décaféiné à l'eau de montagne, sans produits chimiques. Parce qu'à 17h vous méritez aussi quelque chose de bon."
     },
     "url": "https://puchero.coffee",
     "image": "/images/proveedores/puchero.jpg"
@@ -56,13 +62,15 @@
     "category": {
       "es": "Chocolate Bean-to-Bar",
       "en": "Bean-to-Bar Chocolate",
-      "ca": "Xocolata Bean-to-Bar"
+      "ca": "Xocolata Bean-to-Bar",
+      "fr": "Chocolat Bean-to-Bar"
     },
     "origin": "Barcelona",
     "description": {
       "es": "Micro-tostadores de cacao de origen único. Del grano a la taza, todo hecho en Barcelona. Nuestro chocolate caliente favorito del mundo.",
       "en": "Micro-roasters of single origin cacao. From bean to cup, all made in Barcelona. Our favorite hot chocolate in the world.",
-      "ca": "Micro-tostadors de cacau d'origen únic. Del gra a la tassa, tot fet a Barcelona. La nostra xocolata calenta preferida del món."
+      "ca": "Micro-tostadors de cacau d'origen únic. Del gra a la tassa, tot fet a Barcelona. La nostra xocolata calenta preferida del món.",
+      "fr": "Micro-torréfacteurs de cacao d'origine unique. De la fève à la tasse, tout est fait à Barcelone. Notre chocolat chaud préféré au monde."
     },
     "url": "https://lotroasters.com",
     "image": "/images/proveedores/lot-roasters.jpg"
@@ -73,13 +81,15 @@
     "category": {
       "es": "Chai Masala",
       "en": "Masala Chai",
-      "ca": "Chai Masala"
+      "ca": "Chai Masala",
+      "fr": "Chai Masala"
     },
     "origin": "Barcelona",
     "description": {
       "es": "Chai orgánico con especias de verdad. Sin concentrados, sin atajos. Cardamomo, jengibre, canela — cada taza es un viaje.",
       "en": "Organic chai with real spices. No concentrates, no shortcuts. Cardamom, ginger, cinnamon — every cup is a journey.",
-      "ca": "Chai orgànic amb espècies de veritat. Sense concentrats, sense dreceres. Cardamom, gingebre, canyella — cada tassa és un viatge."
+      "ca": "Chai orgànic amb espècies de veritat. Sense concentrats, sense dreceres. Cardamom, gingebre, canyella — cada tassa és un viatge.",
+      "fr": "Chai bio avec de vraies épices. Sans concentrés, sans raccourcis. Cardamome, gingembre, cannelle — chaque tasse est un voyage."
     },
     "url": "",
     "image": "/images/proveedores/awachai.jpg"
@@ -90,13 +100,15 @@
     "category": {
       "es": "Tés de Especialidad",
       "en": "Specialty Teas",
-      "ca": "Tès d'Especialitat"
+      "ca": "Tès d'Especialitat",
+      "fr": "Thés de Spécialité"
     },
     "origin": "Barcelona",
     "description": {
       "es": "Tés de origen único seleccionados con mimo. Desde hojas enteras hasta infusiones florales. Para los momentos que piden algo más suave.",
       "en": "Single-origin teas carefully selected. From whole leaves to floral infusions. For moments that call for something gentler.",
-      "ca": "Tès d'origen únic seleccionats amb cura. Des de fulles senceres fins a infusions florals. Per als moments que demanen alguna cosa més suau."
+      "ca": "Tès d'origen únic seleccionats amb cura. Des de fulles senceres fins a infusions florals. Per als moments que demanen alguna cosa més suau.",
+      "fr": "Thés d'origine unique soigneusement sélectionnés. Des feuilles entières aux infusions florales. Pour les moments qui appellent quelque chose de plus doux."
     },
     "url": "https://sansandsans.com",
     "image": "/images/proveedores/sans-sans.jpg"
@@ -107,13 +119,15 @@
     "category": {
       "es": "Kombucha Premium",
       "en": "Premium Kombucha",
-      "ca": "Kombucha Premium"
+      "ca": "Kombucha Premium",
+      "fr": "Kombucha Premium"
     },
     "origin": "Barcelona",
     "description": {
       "es": "Kombucha #1 en España. Fermentación tradicional, ingredientes ecológicos, scoby vivo. Probióticos de verdad, no marketing.",
       "en": "Spain's #1 kombucha. Traditional fermentation, organic ingredients, live scoby. Real probiotics, not marketing.",
-      "ca": "Kombutxa #1 a Espanya. Fermentació tradicional, ingredients ecològics, scoby viu. Probiòtics de veritat, no màrqueting."
+      "ca": "Kombutxa #1 a Espanya. Fermentació tradicional, ingredients ecològics, scoby viu. Probiòtics de veritat, no màrqueting.",
+      "fr": "Kombucha n°1 en Espagne. Fermentation traditionnelle, ingrédients bio, scoby vivant. De vrais probiotiques, pas du marketing."
     },
     "url": "https://bioma.bio",
     "image": "/images/proveedores/bioma.jpg"
@@ -124,13 +138,15 @@
     "category": {
       "es": "Leches Vegetales",
       "en": "Plant-Based Milk",
-      "ca": "Llets Vegetals"
+      "ca": "Llets Vegetals",
+      "fr": "Laits Végétaux"
     },
     "origin": "Dinamarca",
     "description": {
       "es": "Leches vegetales que funcionan de verdad con el café. 70% menos CO2, seleccionadas por los mejores baristas de Europa.",
       "en": "Plant milks that actually work with coffee. 70% less CO2, chosen by Europe's best baristas.",
-      "ca": "Llets vegetals que funcionen de veritat amb el cafè. 70% menys CO2, seleccionades pels millors baristes d'Europa."
+      "ca": "Llets vegetals que funcionen de veritat amb el cafè. 70% menys CO2, seleccionades pels millors baristes d'Europa.",
+      "fr": "Laits végétaux qui fonctionnent vraiment avec le café. 70% de CO2 en moins, choisis par les meilleurs baristas d'Europe."
     },
     "url": "https://dryk.dk",
     "image": "/images/proveedores/dryk.jpg"
@@ -141,13 +157,15 @@
     "category": {
       "es": "Pan de Masa Madre",
       "en": "Sourdough Bread",
-      "ca": "Pa de Massa Mare"
+      "ca": "Pa de Massa Mare",
+      "fr": "Pain au Levain"
     },
     "origin": "Barcelona",
     "description": {
       "es": "Pan de masa madre ecológico, fermentación lenta, ingredientes de productores locales. Sin aditivos, sin conservantes — solo pan de verdad.",
       "en": "Organic sourdough, slow fermentation, ingredients from local producers. No additives, no preservatives — just real bread.",
-      "ca": "Pa de massa mare ecològic, fermentació lenta, ingredients de productors locals. Sense additius, sense conservants — només pa de veritat."
+      "ca": "Pa de massa mare ecològic, fermentació lenta, ingredients de productors locals. Sense additius, sense conservants — només pa de veritat.",
+      "fr": "Pain au levain bio, fermentation lente, ingrédients de producteurs locaux. Sans additifs, sans conservateurs — juste du vrai pain."
     },
     "url": "https://origobakery.com",
     "image": "/images/proveedores/origo-bakery.jpg"
@@ -158,13 +176,15 @@
     "category": {
       "es": "Bagels Americanos",
       "en": "American Bagels",
-      "ca": "Bagels Americans"
+      "ca": "Bagels Americans",
+      "fr": "Bagels Américains"
     },
     "origin": "Barcelona",
     "description": {
       "es": "Un americano en Barcelona haciendo bagels de verdad. Hervidos, horneados, auténticos. Los mejores bagels fuera de Nueva York.",
       "en": "An American in Barcelona making real bagels. Boiled, baked, authentic. The best bagels outside New York.",
-      "ca": "Un americà a Barcelona fent bagels de veritat. Bullits, fornejats, autèntics. Els millors bagels fora de Nova York."
+      "ca": "Un americà a Barcelona fent bagels de veritat. Bullits, fornejats, autèntics. Els millors bagels fora de Nova York.",
+      "fr": "Un Américain à Barcelone qui fait de vrais bagels. Pochés, cuits au four, authentiques. Les meilleurs bagels hors de New York."
     },
     "url": "",
     "image": "/images/proveedores/bagelboy.jpg"
@@ -175,13 +195,15 @@
     "category": {
       "es": "Bollería Francesa",
       "en": "French Pastry",
-      "ca": "Brioxeria Francesa"
+      "ca": "Brioxeria Francesa",
+      "fr": "Viennoiseries Françaises"
     },
     "origin": "Sant Feliu de Guíxols",
     "description": {
       "es": "Los mejores croissants de la Costa Brava. Mantequilla francesa, laminado a mano, horneados cada mañana. Crujientes por fuera, tiernos por dentro.",
       "en": "The best croissants on the Costa Brava. French butter, hand-laminated, baked fresh every morning. Crispy outside, tender inside.",
-      "ca": "Els millors croissants de la Costa Brava. Mantega francesa, laminat a mà, fornejats cada matí. Cruixents per fora, tendres per dins."
+      "ca": "Els millors croissants de la Costa Brava. Mantega francesa, laminat a mà, fornejats cada matí. Cruixents per fora, tendres per dins.",
+      "fr": "Les meilleurs croissants de la Costa Brava. Beurre français, feuilletage à la main, cuits frais chaque matin. Croustillants dehors, moelleux dedans."
     },
     "url": "",
     "image": "/images/proveedores/maison-marcel.jpg"
@@ -192,13 +214,15 @@
     "category": {
       "es": "Pasteles Artesanos",
       "en": "Artisan Pastries",
-      "ca": "Pastissos Artesans"
+      "ca": "Pastissos Artesans",
+      "fr": "Pâtisseries Artisanales"
     },
     "origin": "Girona",
     "description": {
       "es": "Obrador gironí con pasteles y galletas hechos como se hacía antes. Sin prisas, con buenos ingredientes, con cariño.",
       "en": "Girona workshop with cakes and cookies made the old way. No rush, good ingredients, made with care.",
-      "ca": "Obrador gironí amb pastissos i galetes fets com es feia abans. Sense presses, amb bons ingredients, amb afecte."
+      "ca": "Obrador gironí amb pastissos i galetes fets com es feia abans. Sense presses, amb bons ingredients, amb afecte.",
+      "fr": "Atelier de Gérone avec gâteaux et biscuits faits à l'ancienne. Sans précipitation, avec de bons ingrédients, avec amour."
     },
     "url": "https://lapuntual.cat",
     "image": "/images/proveedores/la-puntual.jpg"
@@ -209,13 +233,15 @@
     "category": {
       "es": "Cerveza Artesana",
       "en": "Craft Beer",
-      "ca": "Cervesa Artesana"
+      "ca": "Cervesa Artesana",
+      "fr": "Bière Artisanale"
     },
     "origin": "Rupià, Baix Empordà",
     "description": {
       "es": "Una neozelandesa y un catalán haciendo cerveza artesana en el Empordà. Lúpulos del pacífico, agua del Ter, amor por el oficio.",
       "en": "A New Zealander and a Catalan making craft beer in Empordà. Pacific hops, Ter river water, love for the craft.",
-      "ca": "Una neozelandesa i un català fent cervesa artesana a l'Empordà. Llúpols del pacífic, aigua del Ter, amor per l'ofici."
+      "ca": "Una neozelandesa i un català fent cervesa artesana a l'Empordà. Llúpols del pacífic, aigua del Ter, amor per l'ofici.",
+      "fr": "Une Néo-Zélandaise et un Catalan brassant de la bière artisanale en Empordà. Houblons du Pacifique, eau du Ter, amour du métier."
     },
     "url": "",
     "image": "/images/proveedores/dos-kiwis.jpg"
@@ -226,13 +252,15 @@
     "category": {
       "es": "Cerámica Artesanal",
       "en": "Handcrafted Ceramics",
-      "ca": "Ceràmica Artesanal"
+      "ca": "Ceràmica Artesanal",
+      "fr": "Céramique Artisanale"
     },
     "origin": "Polonia",
     "description": {
       "es": "Cerámica polaca hecha a mano. Cada taza, plato y bol cuenta una historia. Porque lo que tocas también importa.",
       "en": "Handmade Polish ceramics. Every cup, plate and bowl tells a story. Because what you touch also matters.",
-      "ca": "Ceràmica polonesa feta a mà. Cada tassa, plat i bol explica una història. Perquè el que toques també importa."
+      "ca": "Ceràmica polonesa feta a mà. Cada tassa, plat i bol explica una història. Perquè el que toques també importa.",
+      "fr": "Céramique polonaise faite main. Chaque tasse, assiette et bol raconte une histoire. Parce que ce que vous touchez compte aussi."
     },
     "url": "",
     "image": "/images/proveedores/aoomi.jpg"
@@ -243,13 +271,15 @@
     "category": {
       "es": "Mantequilla de Frutos Secos",
       "en": "Nut Butter",
-      "ca": "Mantega de Fruits Secs"
+      "ca": "Mantega de Fruits Secs",
+      "fr": "Beurre de Cacahuète"
     },
     "origin": "Bélgica",
     "description": {
       "es": "Mantequilla de cacahuete belga que eleva cualquier tostada. Ingredientes simples, textura perfecta. Próximamente en nuestras bebidas.",
       "en": "Belgian peanut butter that elevates any toast. Simple ingredients, perfect texture. Coming soon to our drinks.",
-      "ca": "Mantega de cacauet belga que eleva qualsevol torrada. Ingredients simples, textura perfecta. Properament a les nostres begudes."
+      "ca": "Mantega de cacauet belga que eleva qualsevol torrada. Ingredients simples, textura perfecta. Properament a les nostres begudes.",
+      "fr": "Beurre de cacahuète belge qui sublime n'importe quelle tartine. Ingrédients simples, texture parfaite. Bientôt dans nos boissons."
     },
     "url": "",
     "image": "/images/proveedores/buddy-buddy.jpg"

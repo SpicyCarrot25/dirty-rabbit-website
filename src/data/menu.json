@@ -1,82 +1,82 @@
 {
   "coffee": [
-    { "name": "Espresso", "price": "1.90", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
-    { "name": "Americano", "price": "2.40", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
-    { "name": "Cortado", "price": "2.10", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
-    { "name": "Café con Leche", "price": "2.00", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
-    { "name": "Latte", "price": "2.50", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots" } },
-    { "name": "Flat White", "price": "3.00", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots" } },
-    { "name": "Batch Brew L / XL", "price": "2.5 / 3", "desc": { "es": "Honduras", "en": "Honduras", "ca": "Hondures" } },
-    { "name": "Puchero", "price": "+0", "desc": { "es": "Decaf · tostado por Puchero", "en": "Decaf · roasted by Puchero", "ca": "Decaf · torrat per Puchero" } }
+    { "name": "Espresso", "price": "1.90", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
+    { "name": "Americano", "price": "2.40", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
+    { "name": "Cortado", "price": "2.10", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
+    { "name": "Café con Leche", "price": "2.00", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
+    { "name": "Latte", "price": "2.50", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots", "fr": "2 shots" } },
+    { "name": "Flat White", "price": "3.00", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots", "fr": "2 shots" } },
+    { "name": "Batch Brew L / XL", "price": "2.5 / 3", "desc": { "es": "Honduras", "en": "Honduras", "ca": "Hondures", "fr": "Honduras" } },
+    { "name": "Puchero", "price": "+0", "desc": { "es": "Decaf · tostado por Puchero", "en": "Decaf · roasted by Puchero", "ca": "Decaf · torrat per Puchero", "fr": "Décaféiné · torréfié par Puchero" } }
   ],
   "notCoffee": [
-    { "name": "Matcha Pure", "price": "3.20", "desc": { "es": "REQ matcha (con agua)", "en": "REQ matcha (with water)", "ca": "REQ matcha (amb aigua)" } },
-    { "name": "Matcha Latte", "price": "3.50", "desc": { "es": "REQ matcha", "en": "REQ matcha", "ca": "REQ matcha" } },
-    { "name": "Chai Latte", "price": "3.50", "desc": { "es": "Awachai Masala", "en": "Awachai Masala", "ca": "Awachai Masala" } },
-    { "name": "Dirty Chai", "price": "4.00", "desc": { "es": "Awachai Masala + espresso", "en": "Awachai Masala + espresso", "ca": "Awachai Masala + espresso" } },
-    { "name": "Hot Chocolate", "price": "4.00", "desc": { "es": "LOT Roasters", "en": "LOT Roasters", "ca": "LOT Roasters" } },
-    { "name": { "es": "Tés e Infusiones", "en": "Tea & Infusions", "ca": "Tès i Infusions" }, "price": "2.50", "desc": { "es": "Sans & Sans", "en": "Sans & Sans", "ca": "Sans & Sans" } },
-    { "name": { "es": "Vaso de Leche", "en": "Glass of Milk", "ca": "Got de Llet" }, "price": "1.50", "desc": { "es": "La Selvatana", "en": "La Selvatana", "ca": "La Selvatana" } }
+    { "name": "Matcha Pure", "price": "3.20", "desc": { "es": "REQ matcha (con agua)", "en": "REQ matcha (with water)", "ca": "REQ matcha (amb aigua)", "fr": "REQ matcha (avec eau)" } },
+    { "name": "Matcha Latte", "price": "3.50", "desc": { "es": "REQ matcha", "en": "REQ matcha", "ca": "REQ matcha", "fr": "REQ matcha" } },
+    { "name": "Chai Latte", "price": "3.50", "desc": { "es": "Awachai Masala", "en": "Awachai Masala", "ca": "Awachai Masala", "fr": "Awachai Masala" } },
+    { "name": "Dirty Chai", "price": "4.00", "desc": { "es": "Awachai Masala + espresso", "en": "Awachai Masala + espresso", "ca": "Awachai Masala + espresso", "fr": "Awachai Masala + espresso" } },
+    { "name": "Hot Chocolate", "price": "4.00", "desc": { "es": "LOT Roasters", "en": "LOT Roasters", "ca": "LOT Roasters", "fr": "LOT Roasters" } },
+    { "name": { "es": "Tés e Infusiones", "en": "Tea & Infusions", "ca": "Tès i Infusions", "fr": "Thés & Infusions" }, "price": "2.50", "desc": { "es": "Sans & Sans", "en": "Sans & Sans", "ca": "Sans & Sans", "fr": "Sans & Sans" } },
+    { "name": { "es": "Vaso de Leche", "en": "Glass of Milk", "ca": "Got de Llet", "fr": "Verre de Lait" }, "price": "1.50", "desc": { "es": "La Selvatana", "en": "La Selvatana", "ca": "La Selvatana", "fr": "La Selvatana" } }
   ],
   "icedDrinks": [
-    { "name": "Iced Coffee", "price": "2.80", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia" } },
-    { "name": "Iced Latte", "price": "3.50", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots" } },
-    { "name": "Espresso Tonic", "price": "4.50", "desc": { "es": "Espresso + tónica", "en": "Espresso + tonic", "ca": "Espresso + tònica" } },
-    { "name": "Iced Matcha Pure", "price": "3.70", "desc": { "es": "REQ matcha", "en": "REQ matcha", "ca": "REQ matcha" } },
-    { "name": "Iced Matcha Latte", "price": "4.00", "desc": { "es": "REQ matcha", "en": "REQ matcha", "ca": "REQ matcha" } },
-    { "name": "Iced Chai", "price": "4.00", "desc": { "es": "Awachai Masala", "en": "Awachai Masala", "ca": "Awachai Masala" } },
-    { "name": "Iced Chocolate", "price": "4.50", "desc": { "es": "LOT Roasters", "en": "LOT Roasters", "ca": "LOT Roasters" } },
-    { "name": "Iced Tea", "price": "3.00", "desc": { "es": "Sans & Sans", "en": "Sans & Sans", "ca": "Sans & Sans" } }
+    { "name": "Iced Coffee", "price": "2.80", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
+    { "name": "Iced Latte", "price": "3.50", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots", "fr": "2 shots" } },
+    { "name": "Espresso Tonic", "price": "4.50", "desc": { "es": "Espresso + tónica", "en": "Espresso + tonic", "ca": "Espresso + tònica", "fr": "Espresso + tonic" } },
+    { "name": "Iced Matcha Pure", "price": "3.70", "desc": { "es": "REQ matcha", "en": "REQ matcha", "ca": "REQ matcha", "fr": "REQ matcha" } },
+    { "name": "Iced Matcha Latte", "price": "4.00", "desc": { "es": "REQ matcha", "en": "REQ matcha", "ca": "REQ matcha", "fr": "REQ matcha" } },
+    { "name": "Iced Chai", "price": "4.00", "desc": { "es": "Awachai Masala", "en": "Awachai Masala", "ca": "Awachai Masala", "fr": "Awachai Masala" } },
+    { "name": "Iced Chocolate", "price": "4.50", "desc": { "es": "LOT Roasters", "en": "LOT Roasters", "ca": "LOT Roasters", "fr": "LOT Roasters" } },
+    { "name": "Iced Tea", "price": "3.00", "desc": { "es": "Sans & Sans", "en": "Sans & Sans", "ca": "Sans & Sans", "fr": "Sans & Sans" } }
   ],
   "smoothies": [
-    { "name": "Garden Thief", "price": "6.50", "desc": { "es": "Robamos lo mejor del huerto — espinacas, brócoli, manzana, plátano", "en": "We stole the best from the garden — spinach, broccoli, apple, banana", "ca": "Hem robat el millor de l'hort — espinacs, bròquil, poma, plàtan" } },
-    { "name": "Rabbit Power", "price": "6.50", "desc": { "es": "Pilas alcalinas — manzana, fresas, plátano", "en": "Alkaline batteries — apple, strawberries, banana", "ca": "Piles alcalines — poma, maduixes, plàtan" } },
-    { "name": "Carrot Kick", "price": "6.50", "desc": { "es": "Un golpe de jengibre — zanahoria, manzana, mango, jengibre", "en": "A ginger kick — carrot, apple, mango, ginger", "ca": "Un cop de gingebre — pastanaga, poma, mango, gingebre" } }
+    { "name": "Garden Thief", "price": "6.50", "desc": { "es": "Robamos lo mejor del huerto — espinacas, brócoli, manzana, plátano", "en": "We stole the best from the garden — spinach, broccoli, apple, banana", "ca": "Hem robat el millor de l'hort — espinacs, bròquil, poma, plàtan", "fr": "On a volé le meilleur du jardin — épinards, brocoli, pomme, banane" } },
+    { "name": "Rabbit Power", "price": "6.50", "desc": { "es": "Pilas alcalinas — manzana, fresas, plátano", "en": "Alkaline batteries — apple, strawberries, banana", "ca": "Piles alcalines — poma, maduixes, plàtan", "fr": "Piles alcalines — pomme, fraises, banane" } },
+    { "name": "Carrot Kick", "price": "6.50", "desc": { "es": "Un golpe de jengibre — zanahoria, manzana, mango, jengibre", "en": "A ginger kick — carrot, apple, mango, ginger", "ca": "Un cop de gingebre — pastanaga, poma, mango, gingebre", "fr": "Un coup de gingembre — carotte, pomme, mangue, gingembre" } }
   ],
   "beverages": [
-    { "name": { "es": "Agua Sant Aniol", "en": "Sant Aniol Water", "ca": "Aigua Sant Aniol" }, "price": "1.90", "desc": { "es": "Agua mineral", "en": "Mineral water", "ca": "Aigua mineral" } },
-    { "name": { "es": "Agua con Gas", "en": "Sparkling Water", "ca": "Aigua amb Gas" }, "price": "2.20", "desc": { "es": "Sant Aniol con gas", "en": "Sant Aniol sparkling", "ca": "Sant Aniol amb gas" } },
-    { "name": "Vichy Catalán", "price": "2.20", "desc": { "es": "Lata", "en": "Can", "ca": "Llauna" } },
-    { "name": "Fritz Kola", "price": "2.80", "desc": { "es": "Regular o Zero", "en": "Regular or Zero", "ca": "Regular o Zero" } },
-    { "name": "Juno Soda", "price": "2.80", "desc": { "es": "Naranja o limón", "en": "Orange or lemon", "ca": "Taronja o llimona" } },
-    { "name": "Kombucha Bioma", "price": "4.50", "desc": { "es": "Orgánica", "en": "Organic", "ca": "Orgànica" } },
-    { "name": "Linda Juice", "price": "2.80", "desc": { "es": "Mandarina o pera", "en": "Mandarin or pear", "ca": "Mandarina o pera" } },
-    { "name": { "es": "Zumo de Naranja", "en": "Orange Juice", "ca": "Suc de Taronja" }, "price": "4.00", "desc": { "es": "Natural, exprimido", "en": "Fresh squeezed", "ca": "Natural, espremut" } }
+    { "name": { "es": "Agua Sant Aniol", "en": "Sant Aniol Water", "ca": "Aigua Sant Aniol", "fr": "Eau Sant Aniol" }, "price": "1.90", "desc": { "es": "Agua mineral", "en": "Mineral water", "ca": "Aigua mineral", "fr": "Eau minérale" } },
+    { "name": { "es": "Agua con Gas", "en": "Sparkling Water", "ca": "Aigua amb Gas", "fr": "Eau Gazeuse" }, "price": "2.20", "desc": { "es": "Sant Aniol con gas", "en": "Sant Aniol sparkling", "ca": "Sant Aniol amb gas", "fr": "Sant Aniol pétillante" } },
+    { "name": "Vichy Catalán", "price": "2.20", "desc": { "es": "Lata", "en": "Can", "ca": "Llauna", "fr": "Canette" } },
+    { "name": "Fritz Kola", "price": "2.80", "desc": { "es": "Regular o Zero", "en": "Regular or Zero", "ca": "Regular o Zero", "fr": "Normal ou Zero" } },
+    { "name": "Juno Soda", "price": "2.80", "desc": { "es": "Naranja o limón", "en": "Orange or lemon", "ca": "Taronja o llimona", "fr": "Orange ou citron" } },
+    { "name": "Kombucha Bioma", "price": "4.50", "desc": { "es": "Orgánica", "en": "Organic", "ca": "Orgànica", "fr": "Bio" } },
+    { "name": "Linda Juice", "price": "2.80", "desc": { "es": "Mandarina o pera", "en": "Mandarin or pear", "ca": "Mandarina o pera", "fr": "Mandarine ou poire" } },
+    { "name": { "es": "Zumo de Naranja", "en": "Orange Juice", "ca": "Suc de Taronja", "fr": "Jus d'Orange" }, "price": "4.00", "desc": { "es": "Natural, exprimido", "en": "Fresh squeezed", "ca": "Natural, espremut", "fr": "Fraîchement pressé" } }
   ],
   "adultDrinks": [
-    { "name": { "es": "Cerveza Artesana", "en": "Craft Beer", "ca": "Cervesa Artesana" }, "price": "3.50-6.50", "desc": { "es": "Craft beers · Algunas sin gluten", "en": "Some gluten-free options", "ca": "Algunes sense gluten" } },
-    { "name": { "es": "Cerveza Sin Alcohol", "en": "Non-Alcoholic Beer", "ca": "Cervesa Sense Alcohol" }, "price": "3.50", "desc": { "es": "Varias opciones", "en": "Various options", "ca": "Diverses opcions" } },
-    { "name": { "es": "Copa La Figa", "en": "La Figa (Red)", "ca": "Copa La Figa" }, "price": "4.50", "desc": { "es": "Vino natural tinto", "en": "Natural red wine", "ca": "Vi natural negre" } },
-    { "name": { "es": "Copa Curuba", "en": "Curuba (White)", "ca": "Copa Curuba" }, "price": "4.50", "desc": { "es": "Vino natural blanco", "en": "Natural white wine", "ca": "Vi natural blanc" } },
-    { "name": { "es": "Descorche", "en": "Corkage", "ca": "Descorxatge" }, "price": "+6.00", "desc": { "es": "Trae tu botella de la tienda", "en": "Bring a bottle from our shop", "ca": "Porta una ampolla de la botiga" } }
+    { "name": { "es": "Cerveza Artesana", "en": "Craft Beer", "ca": "Cervesa Artesana", "fr": "Bière Artisanale" }, "price": "3.50-6.50", "desc": { "es": "Craft beers · Algunas sin gluten", "en": "Some gluten-free options", "ca": "Algunes sense gluten", "fr": "Options sans gluten disponibles" } },
+    { "name": { "es": "Cerveza Sin Alcohol", "en": "Non-Alcoholic Beer", "ca": "Cervesa Sense Alcohol", "fr": "Bière Sans Alcool" }, "price": "3.50", "desc": { "es": "Varias opciones", "en": "Various options", "ca": "Diverses opcions", "fr": "Plusieurs choix" } },
+    { "name": { "es": "Copa La Figa", "en": "La Figa (Red)", "ca": "Copa La Figa", "fr": "La Figa (Rouge)" }, "price": "4.50", "desc": { "es": "Vino natural tinto", "en": "Natural red wine", "ca": "Vi natural negre", "fr": "Vin nature rouge" } },
+    { "name": { "es": "Copa Curuba", "en": "Curuba (White)", "ca": "Copa Curuba", "fr": "Curuba (Blanc)" }, "price": "4.50", "desc": { "es": "Vino natural blanco", "en": "Natural white wine", "ca": "Vi natural blanc", "fr": "Vin nature blanc" } },
+    { "name": { "es": "Descorche", "en": "Corkage", "ca": "Descorxatge", "fr": "Droit de Bouchon" }, "price": "+6.00", "desc": { "es": "Trae tu botella de la tienda", "en": "Bring a bottle from our shop", "ca": "Porta una ampolla de la botiga", "fr": "Apportez une bouteille de notre boutique" } }
   ],
   "toasts": [
-    { "name": "Avo Good Day", "price": "7.50", "desc": { "es": "Buenos días garantizados — tostada de masa madre, aguacate, cherry y un buen chorro de aceite", "en": "Good morning guaranteed — sourdough toast, avocado, cherry tomatoes, generous olive oil", "ca": "Bon dia garantit — torrada de massa mare, alvocat, cherry i un bon raig d'oli" } },
-    { "name": "Choco Toast", "price": "7.50", "desc": { "es": "Para los golosos — tostada de masa madre, plátano caramelizado. Elige: chocolate o crema de cacahuete", "en": "For the sweet tooth — sourdough toast, caramelized banana. Choose: chocolate or peanut butter", "ca": "Per als llamins — torrada de massa mare, plàtan caramel·litzat. Tria: xocolata o crema de cacauet" } },
-    { "name": "Butter Together", "price": "5.00", "desc": { "es": "Simple y perfecto — tostada de masa madre, mantequilla francesa, mermelada casera", "en": "Simple and perfect — sourdough toast, French butter, homemade jam", "ca": "Simple i perfecte — torrada de massa mare, mantega francesa, melmelada casolana" } },
-    { "name": "Bikini Super Classic", "price": "6.00", "desc": { "es": "El clásico elevado — masa madre, Duroc 100%, Havarti derretido", "en": "The elevated classic — sourdough, 100% Duroc ham, melted Havarti", "ca": "El clàssic elevat — massa mare, Duroc 100%, Havarti fos" } },
-    { "name": "Mr. Croissant", "price": "6.00", "desc": { "es": "Crujiente por fuera, fundido por dentro — croissant, York, Havarti", "en": "Crispy outside, melted inside — croissant, York ham, Havarti", "ca": "Cruixent per fora, fos per dins — croissant, York, Havarti" } }
+    { "name": "Avo Good Day", "price": "7.50", "desc": { "es": "Buenos días garantizados — tostada de masa madre, aguacate, cherry y un buen chorro de aceite", "en": "Good morning guaranteed — sourdough toast, avocado, cherry tomatoes, generous olive oil", "ca": "Bon dia garantit — torrada de massa mare, alvocat, cherry i un bon raig d'oli", "fr": "Bonjour garanti — tartine au levain, avocat, tomates cerises, généreux filet d'huile d'olive" } },
+    { "name": "Choco Toast", "price": "7.50", "desc": { "es": "Para los golosos — tostada de masa madre, plátano caramelizado. Elige: chocolate o crema de cacahuete", "en": "For the sweet tooth — sourdough toast, caramelized banana. Choose: chocolate or peanut butter", "ca": "Per als llamins — torrada de massa mare, plàtan caramel·litzat. Tria: xocolata o crema de cacauet", "fr": "Pour les gourmands — tartine au levain, banane caramélisée. Au choix : chocolat ou beurre de cacahuète" } },
+    { "name": "Butter Together", "price": "5.00", "desc": { "es": "Simple y perfecto — tostada de masa madre, mantequilla francesa, mermelada casera", "en": "Simple and perfect — sourdough toast, French butter, homemade jam", "ca": "Simple i perfecte — torrada de massa mare, mantega francesa, melmelada casolana", "fr": "Simple et parfait — tartine au levain, beurre français, confiture maison" } },
+    { "name": "Bikini Super Classic", "price": "6.00", "desc": { "es": "El clásico elevado — masa madre, Duroc 100%, Havarti derretido", "en": "The elevated classic — sourdough, 100% Duroc ham, melted Havarti", "ca": "El clàssic elevat — massa mare, Duroc 100%, Havarti fos", "fr": "Le classique revisité — levain, jambon Duroc 100%, Havarti fondu" } },
+    { "name": "Mr. Croissant", "price": "6.00", "desc": { "es": "Crujiente por fuera, fundido por dentro — croissant, York, Havarti", "en": "Crispy outside, melted inside — croissant, York ham, Havarti", "ca": "Cruixent per fora, fos per dins — croissant, York, Havarti", "fr": "Croustillant dehors, fondant dedans — croissant, jambon, Havarti" } }
   ],
   "bagels": [
-    { "name": "Lord Salmon", "price": "8.50", "desc": { "es": "Nueva York versión Costa Brava — crema, salmón Benfumat, cebolla encurtida, cherry", "en": "New York meets Costa Brava — cream cheese, Benfumat salmon, pickled onions, cherry", "ca": "Nova York versió Costa Brava — crema, salmó Benfumat, ceba encurtida, cherry" } },
-    { "name": "Cherries Lady", "price": "7.90", "desc": { "es": "La vegetariana irresistible — crema, cherry, cebollino crujiente", "en": "The irresistible veggie — cream cheese, cherry tomatoes, crispy chives", "ca": "La vegetariana irresistible — crema, cherry, cibulet cruixent" } }
+    { "name": "Lord Salmon", "price": "8.50", "desc": { "es": "Nueva York versión Costa Brava — crema, salmón Benfumat, cebolla encurtida, cherry", "en": "New York meets Costa Brava — cream cheese, Benfumat salmon, pickled onions, cherry", "ca": "Nova York versió Costa Brava — crema, salmó Benfumat, ceba encurtida, cherry", "fr": "New York rencontre la Costa Brava — cream cheese, saumon Benfumat, oignons marinés, tomates cerises" } },
+    { "name": "Cherries Lady", "price": "7.90", "desc": { "es": "La vegetariana irresistible — crema, cherry, cebollino crujiente", "en": "The irresistible veggie — cream cheese, cherry tomatoes, crispy chives", "ca": "La vegetariana irresistible — crema, cherry, cibulet cruixent", "fr": "L'irrésistible végétarienne — cream cheese, tomates cerises, ciboulette croustillante" } }
   ],
   "bowls": [
-    { "name": "Granola Yogurt Bowl", "price": "8.00", "desc": { "es": "Crujiente y cremoso — yogur griego, granola casera, fruta del día, toque de cacahuete", "en": "Crunchy and creamy — Greek yogurt, homemade granola, daily fruit, peanut butter touch", "ca": "Cruixent i cremós — iogurt grec, granola casolana, fruita del dia, toc de cacauet" } },
-    { "name": "Açaí Bowl", "price": "10.50", "desc": { "es": "14% açaí puro (de verdad) — sorbete cremoso, granola, fruta fresca", "en": "14% pure açaí (for real) — creamy sorbet, granola, fresh fruit", "ca": "14% açaí pur (de debò) — sorbet cremós, granola, fruita fresca" } },
-    { "name": "Fruit Bowl", "price": "5.50", "desc": { "es": "Lo que el mercado trajo hoy", "en": "Whatever the market brought today", "ca": "El que el mercat ha portat avui" } }
+    { "name": "Granola Yogurt Bowl", "price": "8.00", "desc": { "es": "Crujiente y cremoso — yogur griego, granola casera, fruta del día, toque de cacahuete", "en": "Crunchy and creamy — Greek yogurt, homemade granola, daily fruit, peanut butter touch", "ca": "Cruixent i cremós — iogurt grec, granola casolana, fruita del dia, toc de cacauet", "fr": "Croustillant et crémeux — yaourt grec, granola maison, fruits du jour, touche de beurre de cacahuète" } },
+    { "name": "Açaí Bowl", "price": "10.50", "desc": { "es": "14% açaí puro (de verdad) — sorbete cremoso, granola, fruta fresca", "en": "14% pure açaí (for real) — creamy sorbet, granola, fresh fruit", "ca": "14% açaí pur (de debò) — sorbet cremós, granola, fruita fresca", "fr": "14% d'açaí pur (vraiment) — sorbet crémeux, granola, fruits frais" } },
+    { "name": "Fruit Bowl", "price": "5.50", "desc": { "es": "Lo que el mercado trajo hoy", "en": "Whatever the market brought today", "ca": "El que el mercat ha portat avui", "fr": "Ce que le marché a apporté aujourd'hui" } }
   ],
   "sweets": [
-    { "name": "Vitrina", "price": "", "desc": { "es": "Mira nuestra selección de galletas, croissants y pasteles", "en": "Check our selection of cookies, croissants and cakes", "ca": "Mira la nostra selecció de galetes, croissants i pastissos" } }
+    { "name": "Vitrina", "price": "", "desc": { "es": "Mira nuestra selección de galletas, croissants y pasteles", "en": "Check our selection of cookies, croissants and cakes", "ca": "Mira la nostra selecció de galetes, croissants i pastissos", "fr": "Découvrez notre sélection de cookies, croissants et gâteaux" } }
   ],
   "extras": {
-    "milk": { "price": "+0.30", "desc": { "es": "Leche de avena o guisante", "en": "Oat or pea milk", "ca": "Llet de civada o pèsol" } },
-    "extraShot": { "price": "+0.50", "desc": { "es": "Shot extra", "en": "Extra shot", "ca": "Shot extra" } },
+    "milk": { "price": "+0.30", "desc": { "es": "Leche de avena o guisante", "en": "Oat or pea milk", "ca": "Llet de civada o pèsol", "fr": "Lait d'avoine ou de pois" } },
+    "extraShot": { "price": "+0.50", "desc": { "es": "Shot extra", "en": "Extra shot", "ca": "Shot extra", "fr": "Shot supplémentaire" } },
     "smoothieAddons": [
-      { "name": "Proteína", "price": "+3.00", "desc": { "es": "Grass-fed whey 25g", "en": "Grass-fed whey 25g", "ca": "Grass-fed whey 25g" } },
-      { "name": "Creatina", "price": "+1.00", "desc": { "es": "5g", "en": "5g", "ca": "5g" } },
-      { "name": "Espirulina", "price": "+1.00", "desc": { "es": "", "en": "", "ca": "" } },
-      { "name": "Colágeno", "price": "+1.50", "desc": { "es": "", "en": "", "ca": "" } }
+      { "name": "Proteína", "price": "+3.00", "desc": { "es": "Grass-fed whey 25g", "en": "Grass-fed whey 25g", "ca": "Grass-fed whey 25g", "fr": "Whey grass-fed 25g" } },
+      { "name": "Creatina", "price": "+1.00", "desc": { "es": "5g", "en": "5g", "ca": "5g", "fr": "5g" } },
+      { "name": "Espirulina", "price": "+1.00", "desc": { "es": "", "en": "", "ca": "", "fr": "" } },
+      { "name": "Colágeno", "price": "+1.50", "desc": { "es": "", "en": "", "ca": "", "fr": "" } }
     ],
     "toastExtras": [
       { "name": "Jamón Ibérico", "price": "+3.00" },

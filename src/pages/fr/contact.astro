@@ -1,0 +1,160 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations } from '../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+---
+
+<Layout 
+  title={`${t.contact.title} — Dirty Rabbit`}
+  description="Trouvez Dirty Rabbit à S'Agaró, Costa Brava. Horaires d'ouverture, adresse, parking et comment nous joindre. À 5 minutes de la plage Sant Pol."
+  lang={lang}>
+  
+  <!-- Hero Section -->
+  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">{t.contact.title}</h1>
+      <div class="w-16 h-px bg-red mx-auto"></div>
+    </div>
+  </section>
+
+  <!-- Contact Info Grid -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16">
+        
+        <!-- Location -->
+        <div>
+          <h2 class="font-typewriter text-2xl font-bold text-red mb-6">{t.contact.findUs}</h2>
+          <div class="font-mono text-sm md:text-base text-black/80 space-y-2">
+            <p>{t.footer.address}</p>
+            <p>{t.footer.city}</p>
+          </div>
+          
+          <!-- Map -->
+          <div class="mt-6 aspect-square md:aspect-video rounded-lg overflow-hidden border border-black/10">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.9654578374!2d3.0619444!3d41.7986111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb1b9c8c8c8c8c%3A0x0!2sAvinguda%20de%20Platja%20d&#39;Aro%2C%20275%2C%2017248%20S&#39;Agar%C3%B3%2C%20Girona!5e0!3m2!1sen!2ses!4v1234567890"
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+        
+        <!-- Hours & Contact -->
+        <div>
+          <h2 class="font-typewriter text-2xl font-bold text-red mb-6">{t.contact.hours}</h2>
+          <div class="font-mono text-sm md:text-base text-black/80 space-y-2 mb-8">
+            <p>{t.footer.hours}</p>
+            <p class="text-red font-bold">{t.footer.closed}</p>
+          </div>
+          
+          <h2 class="font-typewriter text-2xl font-bold text-red mb-6 mt-10">Email</h2>
+          <a 
+            href="mailto:hola@dirtyrabbit.es" 
+            class="font-mono text-sm md:text-base text-black/80 hover:text-red transition-colors"
+          >
+            {t.footer.email}
+          </a>
+          
+          <h2 class="font-typewriter text-2xl font-bold text-red mb-6 mt-10">Instagram</h2>
+          <a 
+            href="https://instagram.com/dirtyrabbit.es" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-mono text-sm md:text-base text-black/80 hover:text-red transition-colors inline-flex items-center gap-2"
+          >
+            @dirtyrabbit.es
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+        </div>
+        
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Quick FAQ Preview -->
+  <section class="py-12 md:py-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-8 text-center">{t.contact.faq}</h2>
+      
+      <div class="space-y-6">
+        <!-- Reservation -->
+        <details class="group">
+          <summary class="flex justify-between items-center cursor-pointer font-typewriter text-lg font-bold">
+            {t.contact.questions.reservation}
+            <svg class="w-5 h-5 text-red group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <p class="mt-3 font-mono text-sm text-black/70 pl-0">
+            {t.contact.questions.reservationAnswer}
+          </p>
+        </details>
+        
+        <!-- Dogs -->
+        <details class="group">
+          <summary class="flex justify-between items-center cursor-pointer font-typewriter text-lg font-bold">
+            {t.contact.questions.dogs}
+            <svg class="w-5 h-5 text-red group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <p class="mt-3 font-mono text-sm text-black/70 pl-0">
+            {t.contact.questions.dogsAnswer}
+          </p>
+        </details>
+        
+        <!-- Parking -->
+        <details class="group">
+          <summary class="flex justify-between items-center cursor-pointer font-typewriter text-lg font-bold">
+            {t.contact.questions.parking}
+            <svg class="w-5 h-5 text-red group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <p class="mt-3 font-mono text-sm text-black/70 pl-0">
+            {t.contact.questions.parkingAnswer}
+          </p>
+        </details>
+        
+        <!-- Kids -->
+        <details class="group">
+          <summary class="flex justify-between items-center cursor-pointer font-typewriter text-lg font-bold">
+            {t.contact.questions.kids}
+            <svg class="w-5 h-5 text-red group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <p class="mt-3 font-mono text-sm text-black/70 pl-0">
+            {t.contact.questions.kidsAnswer}
+          </p>
+        </details>
+      </div>
+      
+      <!-- Link to full FAQ -->
+      <div class="text-center mt-10">
+        <a 
+          href="/fr/faq"
+          class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors"
+        >
+          Voir toutes les questions
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+      
+    </div>
+  </section>
+
+</Layout>

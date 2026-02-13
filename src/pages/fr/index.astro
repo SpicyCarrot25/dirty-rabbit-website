@@ -1,0 +1,246 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+import { getCollection } from 'astro:content';
+import proveedores from '../../data/proveedores.json';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+// Featured providers for homepage (curated selection)
+const featuredIds = ['la-cabra', 'origo-bakery', 'la-puntual', 'buddy-buddy'];
+const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === id)).filter(Boolean);
+
+// Get latest news posts for this language
+const allNews = await getCollection('news', ({ data }) => data.lang === lang);
+const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
+---
+
+<Layout 
+  title="Dirty Rabbit — Café de Spécialité, Petit-déjeuner & Brunch · S'Agaró" 
+  description="Meilleur café de spécialité à S'Agaró, Costa Brava. Espresso troisième vague, brunch toute la journée & options végétales. Menu en français. Familial. Près de la plage Sant Pol."
+  lang={lang}>
+  
+  <!-- HERO SECTION: 100vh, full-bleed photo, centered tagline, NO scroll indicator -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden -mt-16 md:-mt-20">
+    <!-- Background: Video of La Marzocco (GIF-like behavior) -->
+    <div class="absolute inset-0 bg-black" id="hero-bg">
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        webkit-playsinline
+        disablePictureInPicture
+        preload="auto"
+        class="w-full h-full object-cover pointer-events-none"
+      >
+        <source src="/photos/hero-video.mp4" type="video/mp4" />
+      </video>
+      <!-- Dark overlay for text readability -->
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+    
+    <!-- Hero Content: Centered tagline only -->
+    <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+      <p class="reveal font-typewriter text-3xl md:text-5xl lg:text-6xl leading-relaxed hero-text-shadow">
+        Matins paisibles.<br class="hidden sm:block" /> 
+        Rires faciles.<br class="hidden sm:block" /> 
+        Un café entre les deux.
+      </p>
+    </div>
+    
+    <!-- No scroll indicator per design spec -->
+  </section>
+  
+  
+  <!-- COMMUNITY SECTION: Post-hero, no headline, elegant typography -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80 mb-10">
+        La famille avec l'enfant qui ne tient pas en place. Le couple qui vient depuis le premier jour. Celui qui vient d'arriver et ne connaît encore personne. C'est un endroit pour prendre un vrai petit-déjeuner, boire du bon café, et rester un moment. Des inconnus qui deviennent des habitués qui deviennent des amis. Café de spécialité, brunch et petits-déjeuners savoureux à S'Agaró, au cœur de la Costa Brava.
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href={getLocalizedPath('/carta', lang)}
+          class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-red text-red hover:bg-red hover:text-white transition-colors rounded-lg"
+        >
+          Carte
+        </a>
+        <a 
+          href="https://order.dirtyrabbit.es"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-lg"
+        >
+          Commander
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- PROVIDERS: 4 cards grid, same style as news cards -->
+  <section class="py-12 md:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <h2 class="font-typewriter text-5xl md:text-6xl lg:text-7xl mb-4 section-headline">
+          Producteurs
+        </h2>
+        <p class="font-mono text-sm text-black/60 max-w-xl mx-auto">
+          Les artisans derrière votre tasse
+        </p>
+      </div>
+      
+      <!-- Horizontal Slider - Square cards with text overlay -->
+      <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
+        {featuredProviders.map((p, i) => {
+          return (
+          <article class="reveal card-lift relative aspect-square w-[70vw] md:w-[280px] rounded-xl overflow-hidden border border-[#1A1A1A]">
+            <div class="absolute inset-0 bg-cream">
+              <img 
+                src={p.image || `/images/proveedores/${p.id}.jpg`}
+                alt={p.name}
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16">
+              <p class="font-mono text-xs text-white/80 tracking-wider mb-1">
+                {(p.category as any)[lang]}
+              </p>
+              <h3 class="font-typewriter text-lg text-white">
+                {p.name}
+              </h3>
+              <p class="font-mono text-xs text-white/70">
+                {p.origin ? `${p.origin}` : ''}
+              </p>
+            </div>
+          </article>
+          );
+        })}
+      </div>
+      
+      <!-- View All Link -->
+      <div class="text-center mt-12 reveal">
+        <a 
+          href={getLocalizedPath('/proveedores', lang)}
+          class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
+        >
+          Voir tous les producteurs
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+      
+    </div>
+  </section>
+  
+  
+  <!-- NEWS CARDS: Cream background, horizontal slider -->
+  <section class="py-20 md:py-32 bg-cream">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-12 md:mb-16 reveal">
+        <h2 class="font-typewriter text-5xl md:text-6xl lg:text-7xl mb-4 section-headline">
+          Actualités & Moments
+        </h2>
+        <p class="font-mono text-sm text-black/60 max-w-xl mx-auto">
+          Les dernières nouvelles de Dirty Rabbit
+        </p>
+      </div>
+      
+      <!-- Horizontal Slider -->
+      <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
+        
+        {latestNews.map((post) => (
+          <a href={`/fr/actualites/${post.slug}/`} class="block">
+            <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+              <div class="aspect-square relative overflow-hidden">
+                {post.data.image && (
+                  <img 
+                    src={post.data.image}
+                    alt={post.data.title}
+                    class="w-full h-full object-cover"
+                  />
+                )}
+              </div>
+              <div class="p-6">
+                <time class="font-mono text-xs text-red tracking-wider">
+                  {post.data.date.toLocaleDateString('fr-FR', { month: 'short', year: 'numeric' })}
+                </time>
+                <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
+                  {post.data.title}
+                </h3>
+                <p class="font-mono text-sm text-black/60 line-clamp-2">
+                  {post.data.description}
+                </p>
+              </div>
+            </article>
+          </a>
+        ))}
+        
+      </div>
+      
+      <!-- View All Link -->
+      <div class="text-center mt-12 reveal">
+        <a 
+          href={getLocalizedPath('/news', lang)}
+          class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
+        >
+          Voir toutes les actualités
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+      
+    </div>
+  </section>
+  
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    
+    if (prefersReducedMotion) {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+      return;
+    }
+    
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('visible'), index * 100);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+    
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    
+    const heroBg = document.getElementById('hero-bg');
+    if (heroBg) {
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            const scrolled = window.pageYOffset;
+            heroBg.style.transform = `translateY(${scrolled * 0.3}px)`;
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+    }
+  });
+</script>

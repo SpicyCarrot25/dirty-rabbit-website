@@ -1,0 +1,155 @@
+{
+  "nav": {
+    "menu": "Carte",
+    "about": "À Propos",
+    "order": "Commander",
+    "producers": "Producteurs",
+    "news": "Actualités",
+    "contact": "Contact",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "tagline": "Un endroit pour se réveiller. Ou ralentir. Idéalement les deux.",
+    "taglineAlt": "Matins paisibles. Rires sonores. Un café entre les deux.",
+    "subtitle": "Café de Spécialité, Petit-déjeuner & Brunch — S'Agaró, Costa Brava",
+    "cta": "Commander"
+  },
+  "sections": {
+    "menu": "Notre Carte",
+    "about": "À Propos",
+    "producers": "Nos Producteurs",
+    "news": "Actualités",
+    "contact": "Nous Trouver"
+  },
+  "footer": {
+    "address": "Avinguda de Platja d'Aro, 275",
+    "city": "17248 S'Agaró, Girona",
+    "hours": "Mar-Dim : 8h00–15h00 (cuisine jusqu'à 14h00)",
+    "closed": "Fermé le lundi",
+    "email": "hola@dirtyrabbit.es",
+    "newsletter": "Inscrivez-vous à notre newsletter",
+    "placeholder": "Votre email",
+    "subscribe": "S'inscrire",
+    "legal": "Mentions Légales",
+    "privacy": "Politique de Confidentialité",
+    "cookies": "Politique des Cookies",
+    "copyright": "© 2026 The Rabbit Project SL"
+  },
+  "menu": {
+    "title": "Carte",
+    "orderOnline": "Commander en Ligne",
+    "categories": {
+      "coffee": "Café",
+      "drinks": "Boissons",
+      "brunch": "Brunch",
+      "tostas": "Tartines",
+      "pastries": "Viennoiseries"
+    },
+    "note": "Lait d'avoine, soja ou amande : +0,50€"
+  },
+  "about": {
+    "title": "À Propos",
+    "whoWeAre": "Qui Sommes-Nous",
+    "ourStory": "Notre Histoire",
+    "theSpace": "L'Espace"
+  },
+  "producers": {
+    "title": "Nos Producteurs",
+    "intro": "Café, matcha, pain, œufs — chaque produit a une histoire. Nous travaillons uniquement avec ceux qui partagent notre obsession de bien faire les choses."
+  },
+  "contact": {
+    "title": "Contact",
+    "findUs": "Nous Trouver",
+    "hours": "Horaires",
+    "faq": "Questions Fréquentes",
+    "instagram": "Suivez-nous sur Instagram",
+    "questions": {
+      "reservation": "Peut-on réserver ?",
+      "reservationAnswer": "Nous ne prenons pas de réservations — nous croyons au brunch spontané. Mais ne vous inquiétez pas, la rotation est rapide et nous trouvons toujours une place. Les week-ends avant 10h sont généralement plus calmes.",
+      "wifi": "Y a-t-il le wifi ?",
+      "wifiAnswer": "Oui, gratuit et rapide. Parfait pour travailler un peu — mais votre ordinateur vient avec un café, non ? 😉",
+      "dogs": "Les chiens sont-ils acceptés ?",
+      "dogsAnswer": "Absolument ! Les chiens sont les bienvenus à l'intérieur comme en terrasse. Nous avons toujours de l'eau fraîche pour eux.",
+      "parking": "Y a-t-il un parking à proximité ?",
+      "parkingAnswer": "Oui, parking gratuit juste à côté du local. Il y a aussi une zone bleue à proximité si c'est complet.",
+      "events": "Organisez-vous des événements privés ?",
+      "eventsAnswer": "Oui, pour de petits groupes en dehors des heures d'ouverture. Écrivez-nous à hola@dirtyrabbit.es avec votre idée et voyons comment créer quelque chose de spécial.",
+      "dietary": "Avez-vous des options véganes/sans gluten ?",
+      "dietaryAnswer": "Oui. Options végétariennes et véganes à la carte, laits végétaux disponibles. Pour le sans gluten, demandez — nous avons plusieurs options mais la cuisine n'est pas 100% sans gluten.",
+      "specialty": "Qu'est-ce que le café de spécialité et pourquoi l'utilisez-vous ?",
+      "specialtyAnswer": "C'est du café vraiment excellent — cultivé avec soin, torréfié en petits lots, et qui a un goût bien au-delà du simple 'café'. Des notes de fruits, chocolat, fleurs... des choses auxquelles vous ne vous attendriez pas. Nous travaillons avec La Cabra de Copenhague car ils torréfient léger et respectent le grain. Le résultat ? Un café qui n'a pas besoin de sucre pour être délicieux. Essayez et dites-nous ce que vous en pensez.",
+      "coffeeOrigin": "D'où vient votre café ?",
+      "coffeeOriginAnswer": "Notre espresso vient de La Cabra (Copenhague) avec des grains d'Éthiopie. Le batch brew change selon la saison — actuellement Honduras. Le décaféiné vient de Puchero. Chaque origine est choisie pour son profil gustatif, pas pour son prix.",
+      "decaf": "Avez-vous du café décaféiné ?",
+      "decafAnswer": "Oui, de Puchero. Et le meilleur : c'est gratuit. Nous ne facturons pas de supplément pour le décaféiné car nous croyons que tout le monde mérite un bon café, avec ou sans caféine.",
+      "kids": "Est-ce adapté aux enfants ?",
+      "kidsAnswer": "100%. Nous avons une chaise haute, une table à langer, et une terrasse où les enfants peuvent bouger. Le smoothie Rabbit Power est leur préféré. Les familles font partie de notre communauté.",
+      "terrace": "Avez-vous une terrasse ?",
+      "terraceAnswer": "Oui, une terrasse extérieure confortable avec de l'ombre. Elle donne sur la rue, pas sur une vue — mais c'est calme et parfait pour le petit-déjeuner. En été, c'est l'endroit préféré.",
+      "location": "Comment y aller depuis la plage de Sant Pol ?",
+      "locationAnswer": "Nous sommes à 5 minutes à pied de Sant Pol, en remontant l'Avinguda de Platja d'Aro. Après une baignade, une glace ou un iced latte, c'est exactement ce qu'il vous faut.",
+      "camiRonda": "Êtes-vous proche du Camí de Ronda ?",
+      "camiRondaAnswer": "À 3 minutes du sentier côtier. Beaucoup de randonneurs s'arrêtent ici avant ou après leur parcours. Le grand batch brew est parfait pour se recharger.",
+      "groups": "Avez-vous de la place pour les groupes ?",
+      "groupsAnswer": "Pour les groupes jusqu'à 8 personnes, oui. Plus grands, c'est difficile sans réservation. Pour les événements privés en dehors des heures d'ouverture, écrivez-nous.",
+      "takeaway": "Faites-vous de la vente à emporter ?",
+      "takeawayAnswer": "Oui, tout. Café, smoothies, tartines... Nous utilisons des emballages durables. Parfait pour emmener à la plage.",
+      "payment": "Acceptez-vous la carte ?",
+      "paymentAnswer": "Oui, carte, espèces, et paiement mobile. Ce qui vous convient le mieux."
+    }
+  },
+  "news": {
+    "title": "Actualités & Moments",
+    "subtitle": "Les dernières nouvelles de Dirty Rabbit",
+    "readMore": "Lire la suite"
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "intro": "Tout ce que vous devez savoir avant de nous rendre visite. Si vous ne trouvez pas votre réponse, contactez-nous.",
+    "categories": {
+      "general": "Général",
+      "coffee": "Café",
+      "food": "Nourriture",
+      "amenities": "Services"
+    }
+  },
+  "historia": {
+    "title": "Notre Histoire",
+    "howItStarted": {
+      "title": "Comment Tout a Commencé",
+      "text": "En cherchant un endroit où nous aurions vraiment envie de prendre le petit-déjeuner à S'Agaró, nous n'en avons trouvé aucun. Alors Iwonka a décidé d'ouvrir cet endroit. Un café où le café est vraiment bon, où la nourriture est préparée avec amour, et où vous pouvez rester aussi longtemps que vous le souhaitez sans que personne ne regarde sa montre."
+    },
+    "whySagaro": {
+      "title": "Pourquoi S'Agaró",
+      "text": "Nous voulions un endroit avec du soleil, la mer et une vraie communauté. S'Agaró nous a conquis dès la première promenade le long de la côte. C'est l'équilibre parfait : calme en hiver, animé en été, et toujours avec cette lumière méditerranéenne qui change tout."
+    },
+    "philosophy": {
+      "title": "Notre Philosophie",
+      "text": "Nous ne suivons pas les tendances et ne prétendons pas réinventer quoi que ce soit. Nous faisons simplement les choses avec soin. De bons ingrédients, une technique honnête, et le temps que chaque chose nécessite. C'est aussi simple que ça."
+    },
+    "theName": {
+      "title": "Le Nom",
+      "text": "Pourquoi Dirty Rabbit ? Parce que les lapins sont curieux, rapides et un peu espiègles. Et le 'dirty'... parce que le meilleur café laisse toujours une trace."
+    },
+    "pillars": {
+      "wildComfort": {
+        "title": "Wild Comfort",
+        "text": "L'équilibre entre énergie et calme. Nous ne sommes ni un café silencieux ni chaotique. Nous sommes les deux."
+      },
+      "belonging": {
+        "title": "Belonging",
+        "text": "Des clients qui deviennent des amis. Un endroit où chacun trouve sa place naturellement."
+      },
+      "intentional": {
+        "title": "Intentional",
+        "text": "Chaque choix a un but. La Cabra, REQ, Awachai — choisis avec intention."
+      }
+    },
+    "tagline": "Un chez-soi loin de chez soi"
+  },
+  "common": {
+    "viewAll": "Voir Tout",
+    "back": "Retour",
+    "loading": "Chargement..."
+  }
+}

@@ -1,0 +1,124 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations } from '../../i18n';
+
+const lang = 'ru';
+const t = getTranslations(lang);
+
+const q = t.contact.questions;
+
+const faqSections = [
+  {
+    title: "Кофе и напитки",
+    questions: [
+      { q: q.specialty, a: q.specialtyAnswer },
+      { q: q.coffeeOrigin, a: q.coffeeOriginAnswer },
+      { q: q.decaf, a: q.decafAnswer },
+    ]
+  },
+  {
+    title: "Расположение и доступ",
+    questions: [
+      { q: q.location, a: q.locationAnswer },
+      { q: q.camiRonda, a: q.camiRondaAnswer },
+      { q: q.parking, a: q.parkingAnswer },
+      { q: q.terrace, a: q.terraceAnswer },
+    ]
+  },
+  {
+    title: "Семьи и группы",
+    questions: [
+      { q: q.kids, a: q.kidsAnswer },
+      { q: q.dogs, a: q.dogsAnswer },
+      { q: q.groups, a: q.groupsAnswer },
+    ]
+  },
+  {
+    title: "Сервис",
+    questions: [
+      { q: q.reservation, a: q.reservationAnswer },
+      { q: q.wifi, a: q.wifiAnswer },
+      { q: q.dietary, a: q.dietaryAnswer },
+      { q: q.takeaway, a: q.takeawayAnswer },
+      { q: q.payment, a: q.paymentAnswer },
+      { q: q.events, a: q.eventsAnswer },
+    ]
+  }
+];
+---
+
+<Layout 
+  title={`${t.faq.title} — Dirty Rabbit`} 
+  description="FAQ о Dirty Rabbit: часы работы, веганские опции, семейное пространство, WiFi и как нас найти в С'Агаро, Коста Брава."
+  lang={lang}>
+  <!-- Hero Section -->
+  <section class="pt-8 pb-8 md:pt-12 md:pb-12 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">{t.faq.title}</h1>
+      <div class="w-16 h-px bg-red mx-auto mb-6"></div>
+      <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed max-w-xl mx-auto">
+        {t.faq.intro}
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section class="py-8 md:py-12 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      {faqSections.map((section) => (
+        <div class="mb-12">
+          <h2 class="font-typewriter text-2xl font-bold text-red mb-6">{section.title}</h2>
+          <div class="space-y-3">
+            {section.questions.map((item) => (
+              <details class="group bg-white border border-black/10 rounded-lg overflow-hidden">
+                <summary class="flex items-center justify-between cursor-pointer px-6 py-4 font-typewriter text-lg font-bold hover:bg-cream/50 transition-colors list-none">
+                  <span>{item.q}</span>
+                  <svg class="w-5 h-5 text-red shrink-0 ml-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+                </summary>
+                <div class="px-6 pb-4 pt-2">
+                  <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">
+                    {item.a}
+                  </p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <!-- Contact CTA -->
+      <div class="mt-12 pt-12 border-t border-red text-center">
+        <p class="font-mono text-sm md:text-base text-black/80 mb-6">
+          Не нашли ответ?
+        </p>
+        <a 
+          href="mailto:hola@dirtyrabbit.es" 
+          class="inline-block bg-red text-cream font-typewriter font-bold px-8 py-3 rounded-lg hover:bg-red/90 transition-colors"
+        >
+          Связаться с нами
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqSections.flatMap(s => s.questions).map(item => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  })} />
+</Layout>
+
+<style>
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
