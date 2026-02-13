@@ -16,7 +16,10 @@ const allNews = await getCollection('news', ({ data }) => data.lang === lang);
 const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
 ---
 
-<Layout title="Dirty Rabbit — Specialty Coffee, Breakfast & Brunch · S'Agaró" lang={lang}>
+<Layout 
+  title="Dirty Rabbit — Specialty Coffee, Breakfast & Brunch · S'Agaró" 
+  description="Best specialty coffee in S'Agaró, Costa Brava. Third-wave espresso, all-day brunch & plant-based options. English menu. Family-friendly. Near Sant Pol Beach."
+  lang={lang}>
   
   <!-- HERO SECTION: 100vh, full-bleed photo, centered tagline, NO scroll indicator -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden -mt-16 md:-mt-20">

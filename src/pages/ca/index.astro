@@ -16,7 +16,10 @@ const allNews = await getCollection('news', ({ data }) => data.lang === lang);
 const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
 ---
 
-<Layout title="Dirty Rabbit — Cafè d'Especialitat, Esmorzars i Brunch · S'Agaró" lang={lang}>
+<Layout 
+  title="Dirty Rabbit — Cafè d'Especialitat, Esmorzars i Brunch · S'Agaró" 
+  description="Dirty Rabbit - Cafè d'especialitat i brunch a S'Agaró. Espai familiar, esmorzars saludables i el millor cafè de la Costa Brava. Obert tot l'any."
+  lang={lang}>
   
   <!-- HERO SECTION: 100vh, full-bleed photo, centered tagline, NO scroll indicator -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden -mt-16 md:-mt-20">
