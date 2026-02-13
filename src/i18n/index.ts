@@ -28,10 +28,11 @@ const pathMappings: Record<string, Record<Language, string>> = {
   'nosotros': { es: 'nosotros', en: 'about', ca: 'nosaltres' },
   'about': { es: 'nosotros', en: 'about', ca: 'nosaltres' },
   'nosaltres': { es: 'nosotros', en: 'about', ca: 'nosaltres' },
-  // Suppliers page
-  'proveedores': { es: 'proveedores', en: 'suppliers', ca: 'proveidors' },
-  'suppliers': { es: 'proveedores', en: 'suppliers', ca: 'proveidors' },
-  'proveidors': { es: 'proveedores', en: 'suppliers', ca: 'proveidors' },
+  // Suppliers/Producers page
+  'proveedores': { es: 'proveedores', en: 'producers', ca: 'proveidors' },
+  'suppliers': { es: 'proveedores', en: 'producers', ca: 'proveidors' },
+  'producers': { es: 'proveedores', en: 'producers', ca: 'proveidors' },
+  'proveidors': { es: 'proveedores', en: 'producers', ca: 'proveidors' },
   // Jobs page
   'trabajo': { es: 'trabajo', en: 'jobs', ca: 'feina' },
   'jobs': { es: 'trabajo', en: 'jobs', ca: 'feina' },
