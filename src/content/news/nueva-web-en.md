@@ -28,7 +28,7 @@ The family with the noisy kid. The digital nomad with the laptop. The older coup
 
 The coffee is from La Cabra in Copenhagen. Not because it sounds impressive — but because it's what we drink at home. The bread comes from Origo Bakery because we tried twenty bakeries and this one made us stop looking.
 
-There's nothing on the menu that Franc and Iwonka wouldn't eat in their own kitchen. That's the rule.
+There's nothing on the menu that we wouldn't eat in our own kitchen. That's the rule.
 
 ---
 

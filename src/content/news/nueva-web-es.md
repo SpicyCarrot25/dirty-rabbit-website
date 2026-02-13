@@ -28,7 +28,7 @@ La familia con el niño ruidoso. El nómada digital con el portátil. La pareja 
 
 El café es de La Cabra en Copenhague. No porque suene impresionante — sino porque es lo que bebemos en casa. El pan viene de Origo Bakery porque probamos veinte panaderías y esta nos hizo dejar de buscar.
 
-No hay nada en la carta que Franc e Iwonka no comerían en su propia cocina. Esa es la regla.
+No hay nada en la carta que no comeríamos en nuestra propia cocina. Esa es la regla.
 
 ---
 
