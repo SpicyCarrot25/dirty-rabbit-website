@@ -1,27 +1,35 @@
 ---
 title: "Per què fem el que fem"
-description: "Casa, cura, connexió — la filosofia darrere de Dirty Rabbit i per què cada detall importa."
+description: "Wild comfort, belonging, intentional — la filosofia darrere de Dirty Rabbit."
 date: 2026-02-13
 image: "/images/heroes/nosotros.jpg"
 lang: ca
 ---
 
-Dirty Rabbit no va començar sent un cafè. Va començar sent una idea: i si hi hagués un lloc a S'Agaró on sentir-se com a casa?
+Quan vam obrir Dirty Rabbit, la gent ens preguntava: "Quin tipus de cafeteria sou?" I la veritat és que no teníem una resposta fàcil.
 
-## Casa
+No som un cafè de ciclistes — tot i que alguns venen després de rodar. No som només per a turistes — encara que ens encanta quan tornen any rere any. Som una mica de tot, la veritat. I això és exactament el que volíem.
 
-Aquí no ets client, ets convidat. La teva taula t'espera. El teu cafè es prepara com a tu t'agrada. Volem que entris com a desconegut i surtis com a amic.
+## Wild Comfort
 
-## Cura
+Hi ha matins de rush total — nens corrent, comandes volant, la màquina sense parar. I hi ha tardes on el mateix espai es converteix en un refugi silenciós. Un llibre, un flat white, res més.
 
-Cada producte que servim està escollit amb intenció. El cafè ve de La Cabra a Copenhaguen — un dels millors torradors d'Europa. El pa el fa Origo Bakery a Barcelona. Els pastissos arriben de La Puntual a Girona. Res és aquí per casualitat.
+Ens agrada aquest contrast. L'espresso que et desperta a les 7am i el tallat que et calma a les 4pm. Energia quan la necessites, calma quan la busques.
 
-## Connexió
+## Belonging
 
-El millor d'una cafeteria no és el cafè. Són les converses que comencen a la barra. Els nens que juguen mentre els pares esmorzen tranquils. Els estrangers que es converteixen en locals. Volem ser el lloc on la gent es troba.
+La María ve cada dimarts. Mateixa taula del racó. Mateix tallat. Ja ni preguntem.
+
+Això és el que passa quan un espai és genuïnament acollidor. Els desconeguts es converteixen en regulars. Els regulars en amics. No perquè hàgim "construït una comunitat" — sinó perquè això és el que passa naturalment quan et sents benvingut.
+
+La família amb el nen sorollós. El nòmada digital amb el portàtil. La parella gran que ve des de la primera setmana. Tothom hi cap.
+
+## Intentional
+
+El cafè és de La Cabra a Copenhaguen. No perquè soni impressionant — sinó perquè és el que bevem a casa. El pa ve d'Origo Bakery perquè vam provar vint fleques i aquesta ens va fer deixar de buscar.
+
+No hi ha res a la carta que Franc i Iwonka no menjarien a la seva pròpia cuina. Aquesta és la regla.
 
 ---
 
-Això és Dirty Rabbit. Specialty coffee, esmorzars i brunch a S'Agaró, Costa Brava.
-
-Vine a conèixer-nos.
+Specialty coffee, brunch i esmorzars a S'Agaró. Vine quan vulguis.

@@ -1,27 +1,35 @@
 ---
 title: "Why we do what we do"
-description: "Home, care, connection — the philosophy behind Dirty Rabbit and why every detail matters."
+description: "Wild comfort, belonging, intentional — the philosophy behind Dirty Rabbit."
 date: 2026-02-13
 image: "/images/heroes/nosotros.jpg"
 lang: en
 ---
 
-Dirty Rabbit didn't start as a coffee shop. It started as an idea: what if there was a place in S'Agaró where you could feel at home?
+When we opened Dirty Rabbit, people kept asking: "What kind of café are you?" And honestly, we didn't have an easy answer.
 
-## Home
+We're not a cycling café — though some come after their rides. We're not just for tourists — though we love it when they come back year after year. We're a bit of everything, really. And that's exactly what we wanted.
 
-Here you're not a customer, you're a guest. Your table is waiting. Your coffee is made just how you like it. We want you to walk in as a stranger and leave as a friend.
+## Wild Comfort
 
-## Care
+There are mornings of total rush — kids running around, orders flying, the machine non-stop. And there are afternoons where the same space becomes a quiet refuge. A book, a flat white, nothing else.
 
-Every product we serve is chosen with intention. Our coffee comes from La Cabra in Copenhagen — one of Europe's best roasters. Our bread is baked by Origo Bakery in Barcelona. Our pastries arrive from La Puntual in Girona. Nothing is here by accident.
+We like that contrast. The espresso that wakes you up at 7am and the cortado that calms you down at 4pm. Energy when you need it, calm when you're looking for it.
 
-## Connection
+## Belonging
 
-The best thing about a café isn't the coffee. It's the conversations that start at the bar. The kids playing while parents enjoy a quiet breakfast. The foreigners who become locals. We want to be the place where people find each other.
+María comes every Tuesday. Same corner table. Same cortado. We don't even ask anymore.
+
+That's what happens when a space is genuinely welcoming. Strangers become regulars. Regulars become friends. Not because we "built a community" — but because this is what naturally happens when you feel welcome.
+
+The family with the noisy kid. The digital nomad with the laptop. The older couple who've been coming since week one. Everyone fits.
+
+## Intentional
+
+The coffee is from La Cabra in Copenhagen. Not because it sounds impressive — but because it's what we drink at home. The bread comes from Origo Bakery because we tried twenty bakeries and this one made us stop looking.
+
+There's nothing on the menu that Franc and Iwonka wouldn't eat in their own kitchen. That's the rule.
 
 ---
 
-This is Dirty Rabbit. Specialty coffee, breakfast and brunch in S'Agaró, Costa Brava.
-
-Come meet us.
+Specialty coffee, brunch and breakfast in S'Agaró. Come whenever you like.
