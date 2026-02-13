@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getLangFromUrl, getTranslations } from '../i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = getTranslations(lang);
+---
+
+<Layout title="Nuestro Café — Dirty Rabbit" description="Café de especialidad en S'Agaró. Trabajamos con tostadores que solo usan granos puntuados 86+ por catadores certificados.">
+  
+  <!-- Hero -->
+  <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center">
+    <div class="absolute inset-0 bg-[#1a1a1a]">
+      <!-- TODO: Añadir foto St Pol / Sa Conca -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50"></div>
+    </div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="text-4xl md:text-6xl font-display mb-4">Nuestro Café</h1>
+      <p class="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto">
+        No es solo café. Es el mejor café que hemos encontrado.
+      </p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-display mb-8 text-center">
+        ¿Por qué specialty?
+      </h2>
+      <div class="prose prose-lg mx-auto">
+        <p>
+          El café de especialidad representa menos del 3% de todo el café que se produce en el mundo. 
+          Son granos seleccionados a mano, tostados con cuidado, y puntuados <strong>86 o más puntos</strong> 
+          por catadores certificados.
+        </p>
+        <p>
+          La diferencia se nota. En serio.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tostador -->
+  <section class="py-16 md:py-24 px-4 bg-[#f2ece1]">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-sm uppercase tracking-wider text-black/60 mb-2">Nuestro tostador</p>
+          <h2 class="text-3xl md:text-4xl font-display mb-6">La Cabra</h2>
+          <p class="text-lg mb-4">
+            Tostadores daneses obsesionados con la calidad. Solo trabajan con cafés 
+            puntuados 86+ y tuestan en pequeños lotes para mantener la frescura.
+          </p>
+          <p class="text-lg">
+            El origen cambia según la temporada — pregúntanos qué tenemos hoy.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+          <p class="text-sm uppercase tracking-wider text-black/60 mb-4">Ahora mismo</p>
+          <p class="text-2xl font-display mb-2">Etiopía</p>
+          <p class="text-black/70">Notas de bergamota, melocotón y té negro</p>
+          <p class="text-sm text-black/50 mt-4">*El origen rota según disponibilidad</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preparación -->
+  <section class="py-16 md:py-24 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-display mb-8">
+        Cómo lo preparamos
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-4xl mb-4">☕</div>
+          <h3 class="font-display text-xl mb-2">La Marzocco KB90</h3>
+          <p class="text-black/70">La máquina que usan los mejores baristas del mundo</p>
+        </div>
+        <div>
+          <div class="text-4xl mb-4">💧</div>
+          <h3 class="font-display text-xl mb-2">Agua filtrada</h3>
+          <p class="text-black/70">Ósmosis inversa para una extracción perfecta</p>
+        </div>
+        <div>
+          <div class="text-4xl mb-4">⏱️</div>
+          <h3 class="font-display text-xl mb-2">Tiempo exacto</h3>
+          <p class="text-black/70">25-30 segundos de extracción, ni más ni menos</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24 px-4 bg-[#CD202C] text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-display mb-6">
+        Ven a probarlo
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Avinguda de Platja d'Aro, 275 · S'Agaró
+      </p>
+      <a 
+        href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaró" 
+        target="_blank"
+        class="inline-block bg-white text-[#CD202C] px-8 py-4 rounded-full font-medium hover:bg-opacity-90 transition"
+      >
+        Cómo llegar →
+      </a>
+    </div>
+  </section>
+
+</Layout>

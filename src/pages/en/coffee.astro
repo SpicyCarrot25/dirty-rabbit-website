@@ -1,0 +1,112 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'en';
+---
+
+<Layout title="Our Coffee — Dirty Rabbit" description="Specialty coffee in S'Agaró. We work with roasters who only use beans scored 86+ by certified cuppers." lang={lang}>
+  
+  <!-- Hero -->
+  <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center">
+    <div class="absolute inset-0 bg-[#1a1a1a]">
+      <!-- TODO: Add St Pol / Sa Conca photo -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50"></div>
+    </div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="text-4xl md:text-6xl font-display mb-4">Our Coffee</h1>
+      <p class="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto">
+        It's not just coffee. It's the best coffee we could find.
+      </p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-display mb-8 text-center">
+        Why specialty?
+      </h2>
+      <div class="prose prose-lg mx-auto">
+        <p>
+          Specialty coffee represents less than 3% of all coffee produced worldwide. 
+          These are hand-selected beans, carefully roasted, and scored <strong>86 or above</strong> 
+          by certified cuppers.
+        </p>
+        <p>
+          You can taste the difference. Seriously.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roaster -->
+  <section class="py-16 md:py-24 px-4 bg-[#f2ece1]">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-sm uppercase tracking-wider text-black/60 mb-2">Our roaster</p>
+          <h2 class="text-3xl md:text-4xl font-display mb-6">La Cabra</h2>
+          <p class="text-lg mb-4">
+            Danish roasters obsessed with quality. They only work with coffees 
+            scored 86+ and roast in small batches to maintain freshness.
+          </p>
+          <p class="text-lg">
+            The origin changes with the season — ask us what we have today.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+          <p class="text-sm uppercase tracking-wider text-black/60 mb-4">Right now</p>
+          <p class="text-2xl font-display mb-2">Ethiopia</p>
+          <p class="text-black/70">Notes of bergamot, peach and black tea</p>
+          <p class="text-sm text-black/50 mt-4">*Origin rotates based on availability</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preparation -->
+  <section class="py-16 md:py-24 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-display mb-8">
+        How we make it
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-4xl mb-4">☕</div>
+          <h3 class="font-display text-xl mb-2">La Marzocco KB90</h3>
+          <p class="text-black/70">The machine used by the world's best baristas</p>
+        </div>
+        <div>
+          <div class="text-4xl mb-4">💧</div>
+          <h3 class="font-display text-xl mb-2">Filtered water</h3>
+          <p class="text-black/70">Reverse osmosis for perfect extraction</p>
+        </div>
+        <div>
+          <div class="text-4xl mb-4">⏱️</div>
+          <h3 class="font-display text-xl mb-2">Precise timing</h3>
+          <p class="text-black/70">25-30 seconds extraction, no more, no less</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24 px-4 bg-[#CD202C] text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-display mb-6">
+        Come try it
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Avinguda de Platja d'Aro, 275 · S'Agaró
+      </p>
+      <a 
+        href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaró" 
+        target="_blank"
+        class="inline-block bg-white text-[#CD202C] px-8 py-4 rounded-full font-medium hover:bg-opacity-90 transition"
+      >
+        Get directions →
+      </a>
+    </div>
+  </section>
+
+</Layout>

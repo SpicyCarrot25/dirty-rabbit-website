@@ -1,0 +1,112 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'ca';
+---
+
+<Layout title="El Nostre Cafè — Dirty Rabbit" description="Cafè d'especialitat a S'Agaró. Treballem amb torrefactors que només utilitzen grans puntuats 86+ per catadors certificats." lang={lang}>
+  
+  <!-- Hero -->
+  <section class="relative h-[60vh] min-h-[400px] flex items-center justify-center">
+    <div class="absolute inset-0 bg-[#1a1a1a]">
+      <!-- TODO: Afegir foto St Pol / Sa Conca -->
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/50"></div>
+    </div>
+    <div class="relative z-10 text-center text-white px-4">
+      <h1 class="text-4xl md:text-6xl font-display mb-4">El Nostre Cafè</h1>
+      <p class="text-xl md:text-2xl opacity-90 max-w-2xl mx-auto">
+        No és només cafè. És el millor cafè que hem trobat.
+      </p>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-16 md:py-24 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-display mb-8 text-center">
+        Per què specialty?
+      </h2>
+      <div class="prose prose-lg mx-auto">
+        <p>
+          El cafè d'especialitat representa menys del 3% de tot el cafè que es produeix al món. 
+          Són grans seleccionats a mà, torrats amb cura, i puntuats <strong>86 o més punts</strong> 
+          per catadors certificats.
+        </p>
+        <p>
+          La diferència es nota. De debò.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Torrefactor -->
+  <section class="py-16 md:py-24 px-4 bg-[#f2ece1]">
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-sm uppercase tracking-wider text-black/60 mb-2">El nostre torrefactor</p>
+          <h2 class="text-3xl md:text-4xl font-display mb-6">La Cabra</h2>
+          <p class="text-lg mb-4">
+            Torrefactors danesos obsessionats amb la qualitat. Només treballen amb cafès 
+            puntuats 86+ i torren en petits lots per mantenir la frescor.
+          </p>
+          <p class="text-lg">
+            L'origen canvia segons la temporada — pregunta'ns què tenim avui.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+          <p class="text-sm uppercase tracking-wider text-black/60 mb-4">Ara mateix</p>
+          <p class="text-2xl font-display mb-2">Etiòpia</p>
+          <p class="text-black/70">Notes de bergamota, préssec i te negre</p>
+          <p class="text-sm text-black/50 mt-4">*L'origen rota segons disponibilitat</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preparació -->
+  <section class="py-16 md:py-24 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-display mb-8">
+        Com el preparem
+      </h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-4xl mb-4">☕</div>
+          <h3 class="font-display text-xl mb-2">La Marzocco KB90</h3>
+          <p class="text-black/70">La màquina que fan servir els millors baristes del món</p>
+        </div>
+        <div>
+          <div class="text-4xl mb-4">💧</div>
+          <h3 class="font-display text-xl mb-2">Aigua filtrada</h3>
+          <p class="text-black/70">Osmosi inversa per una extracció perfecta</p>
+        </div>
+        <div>
+          <div class="text-4xl mb-4">⏱️</div>
+          <h3 class="font-display text-xl mb-2">Temps exacte</h3>
+          <p class="text-black/70">25-30 segons d'extracció, ni més ni menys</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 md:py-24 px-4 bg-[#CD202C] text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-display mb-6">
+        Vine a provar-lo
+      </h2>
+      <p class="text-xl mb-8 opacity-90">
+        Avinguda de Platja d'Aro, 275 · S'Agaró
+      </p>
+      <a 
+        href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaró" 
+        target="_blank"
+        class="inline-block bg-white text-[#CD202C] px-8 py-4 rounded-full font-medium hover:bg-opacity-90 transition"
+      >
+        Com arribar →
+      </a>
+    </div>
+  </section>
+
+</Layout>
