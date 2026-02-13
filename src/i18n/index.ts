@@ -41,13 +41,22 @@ const pathMappings: Record<string, Record<Language, string>> = {
   'faq': { es: 'faq', en: 'faq', ca: 'faq' },
   // Carta/Menu
   'carta': { es: 'carta', en: 'carta', ca: 'carta' },
-  // News
+  // Contact page
+  'contacto': { es: 'contacto', en: 'contact', ca: 'contacte' },
+  'contact': { es: 'contacto', en: 'contact', ca: 'contacte' },
+  'contacte': { es: 'contacto', en: 'contact', ca: 'contacte' },
+  // News index
   'news': { es: 'news', en: 'news', ca: 'news' },
+  // News articles - map all variants
+  'news/nueva-web-es': { es: 'news/nueva-web-es', en: 'news/nueva-web-en', ca: 'news/nueva-web-ca' },
+  'news/nueva-web-en': { es: 'news/nueva-web-es', en: 'news/nueva-web-en', ca: 'news/nueva-web-ca' },
+  'news/nueva-web-ca': { es: 'news/nueva-web-es', en: 'news/nueva-web-en', ca: 'news/nueva-web-ca' },
 };
 
 export function getLocalizedPath(path: string, lang: Language): string {
   // Remove leading slash and any existing language prefix (only if followed by / or end)
-  const cleanPath = path.replace(/^\/(en|ca)(\/|$)/, '/').replace(/^\//, '');
+  // Also remove trailing slash for consistent lookup
+  const cleanPath = path.replace(/^\/(en|ca)(\/|$)/, '/').replace(/^\//, '').replace(/\/$/, '');
   
   // Check if we have a mapping for this path
   const mappedPath = pathMappings[cleanPath]?.[lang] || cleanPath;
