@@ -37,15 +37,48 @@ const footerLabels = {
   stayInTouch: { es: 'Síguenos', en: 'Stay in touch', ca: 'Segueix-nos', fr: 'Restez connectés', ru: 'Следите за нами', uk: 'Слідкуйте за нами', pl: 'Śledź nas' }
 };
 
-// Privacy link and text by language
+// Privacy link and text by language (RU/UK/PL → EN fallback)
 const privacyLinks: Record<string, string> = {
   es: '/privacidad',
   en: '/en/privacy',
   ca: '/ca/privacitat',
   fr: '/fr/confidentialite',
-  ru: '/ru/privacy',
-  uk: '/uk/privacy',
-  pl: '/pl/privacy'
+  ru: '/en/privacy',
+  uk: '/en/privacy',
+  pl: '/en/privacy'
+};
+
+// Legal links (RU/UK/PL → EN fallback)
+const legalLinks: Record<string, string> = {
+  es: '/legal',
+  en: '/en/legal',
+  ca: '/ca/legal',
+  fr: '/fr/legal',
+  ru: '/en/legal',
+  uk: '/en/legal',
+  pl: '/en/legal'
+};
+
+// Jobs links (RU/UK/PL → EN fallback)
+const jobsLinks: Record<string, string> = {
+  es: '/trabajo',
+  en: '/en/jobs',
+  ca: '/ca/feina',
+  fr: '/fr/emplois',
+  ru: '/en/jobs',
+  uk: '/en/jobs',
+  pl: '/en/jobs'
+};
+
+// News links (RU/UK/PL → EN fallback)
+const newsLinks: Record<string, string> = {
+  es: '/news',
+  en: '/en/news',
+  ca: '/ca/news',
+  fr: '/fr/actualites',
+  ru: '/en/news',
+  uk: '/en/news',
+  pl: '/en/news'
 };
 
 const privacyLinkText: Record<string, string> = {
@@ -208,7 +241,7 @@ const privacyPrefix: Record<string, string> = {
 
     <!-- Footer Menu Links - LEFT ALIGNED, same size -->
     <nav class="flex flex-col items-start gap-2 mb-8 font-typewriter text-base tracking-normal">
-      <a href={getLocalizedPath('/legal', lang)} class="text-black hover:text-red transition-colors">
+      <a href={legalLinks[lang] || legalLinks.en} class="text-black hover:text-red transition-colors">
         {footerLabels.legal[lang] || footerLabels.legal.en}
       </a>
       <a href={privacyLinks[lang] || privacyLinks.en} class="text-black hover:text-red transition-colors">
@@ -217,10 +250,10 @@ const privacyPrefix: Record<string, string> = {
       <a href={getLocalizedPath('/contacto', lang)} class="text-black hover:text-red transition-colors">
         {footerLabels.faq[lang]}
       </a>
-      <a href={getLocalizedPath('/trabajo', lang)} class="text-black hover:text-red transition-colors">
+      <a href={jobsLinks[lang] || jobsLinks.en} class="text-black hover:text-red transition-colors">
         {footerLabels.join[lang]}
       </a>
-      <a href={getLocalizedPath('/news', lang)} class="text-black hover:text-red transition-colors">
+      <a href={newsLinks[lang] || newsLinks.en} class="text-black hover:text-red transition-colors">
         {footerLabels.news[lang]}
       </a>
     </nav>
