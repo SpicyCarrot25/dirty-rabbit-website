@@ -1,15 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../i18n';
+import { getCollection } from 'astro:content';
 import proveedores from '../../data/proveedores.json';
 
 const lang = 'en';
 const t = getTranslations(lang);
 
-// First 4 providers for homepage
 // Featured providers for homepage (curated selection)
 const featuredIds = ['la-cabra', 'origo-bakery', 'la-puntual', 'buddy-buddy'];
 const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === id)).filter(Boolean);
+
+// Get latest news posts for this language
+const allNews = await getCollection('news', ({ data }) => data.lang === lang);
+const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
 ---
 
 <Layout title="Dirty Rabbit — Specialty Coffee, Breakfast & Brunch · S'Agaró" lang={lang}>
@@ -151,49 +155,32 @@ const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === i
       <!-- Horizontal Slider -->
       <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
         
-        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-          <div class="aspect-square relative overflow-hidden">
-            <img src="/photos/photo1.jpg" alt="Running club" class="w-full h-full object-cover" />
-          </div>
-          <div class="p-6">
-            <time class="font-mono text-xs text-red tracking-wider">Jan 2025</time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">Running Club: now 20 strong</h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">Every Tuesday at 8am. 5km along the coast and coffee after. Friendships have been made.</p>
-          </div>
-        </article>
-        
-        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-          <div class="aspect-square relative overflow-hidden">
-            <img src="/photos/photo3.jpg" alt="Café interior" class="w-full h-full object-cover" />
-          </div>
-          <div class="p-6">
-            <time class="font-mono text-xs text-red tracking-wider">Dec 2024</time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">First season: thank you</h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">From strangers to friends. The first season was more beautiful than we imagined.</p>
-          </div>
-        </article>
-        
-        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-          <div class="aspect-square relative overflow-hidden">
-            <img src="/photos/photo2.jpg" alt="Coffee shop opening" class="w-full h-full object-cover" />
-          </div>
-          <div class="p-6">
-            <time class="font-mono text-xs text-red tracking-wider">Nov 2024</time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">We opened in S'Agaró</h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">After months of work, the rabbit found its burrow. Welcome.</p>
-          </div>
-        </article>
-        
-        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-          <div class="aspect-square relative overflow-hidden">
-            <img src="/photos/photo4.jpg" alt="La Cabra coffee" class="w-full h-full object-cover" />
-          </div>
-          <div class="p-6">
-            <time class="font-mono text-xs text-red tracking-wider">Nov 2024</time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">Coffee from La Cabra</h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">Copenhagen in your cup. Europe's best roaster now in Costa Brava.</p>
-          </div>
-        </article>
+        {latestNews.map((post) => (
+          <a href={`/en/news/${post.slug}/`} class="block">
+            <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+              <div class="aspect-square relative overflow-hidden">
+                {post.data.image && (
+                  <img 
+                    src={post.data.image}
+                    alt={post.data.title}
+                    class="w-full h-full object-cover"
+                  />
+                )}
+              </div>
+              <div class="p-6">
+                <time class="font-mono text-xs text-red tracking-wider">
+                  {post.data.date.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' })}
+                </time>
+                <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
+                  {post.data.title}
+                </h3>
+                <p class="font-mono text-sm text-black/60 line-clamp-2">
+                  {post.data.description}
+                </p>
+              </div>
+            </article>
+          </a>
+        ))}
         
       </div>
       

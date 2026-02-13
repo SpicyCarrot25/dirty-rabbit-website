@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../i18n';
+import { getCollection } from 'astro:content';
 import proveedores from '../data/proveedores.json';
 
 const lang = 'es';
@@ -9,6 +10,10 @@ const t = getTranslations(lang);
 // Featured providers for homepage (curated selection)
 const featuredIds = ['la-cabra', 'origo-bakery', 'la-puntual', 'buddy-buddy'];
 const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === id)).filter(Boolean);
+
+// Get latest news posts for this language
+const allNews = await getCollection('news', ({ data }) => data.lang === lang);
+const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
 ---
 
 <Layout title="Dirty Rabbit — Specialty Coffee, Breakfast & Brunch · S'Agaró" lang={lang}>
@@ -152,93 +157,32 @@ const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === i
       <!-- Horizontal Slider -->
       <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
         
-        <!-- Card 1 - Running Club -->
-        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-          <div class="aspect-square relative overflow-hidden">
-            <img 
-              src="/photos/photo1.jpg"
-              alt="Running club"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-6">
-            <time class="font-mono text-xs text-red tracking-wider">
-              Ene 2025
-            </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
-              Running Club: ya somos 20
-            </h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">
-              Cada martes a las 8am. 5km por la costa y café después. Ya se han hecho amistades.
-            </p>
-          </div>
-        </article>
-        
-        <!-- Card 2 - Primera temporada -->
-        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-          <div class="aspect-square relative overflow-hidden">
-            <img 
-              src="/photos/photo3.jpg"
-              alt="Café interior"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-6">
-            <time class="font-mono text-xs text-red tracking-wider">
-              Dic 2024
-            </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
-              Primera temporada: gracias
-            </h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">
-              De desconocidos a amigos. La primera season fue más bonita de lo que imaginábamos.
-            </p>
-          </div>
-        </article>
-        
-        <!-- Card 3 - Apertura -->
-        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-          <div class="aspect-square relative overflow-hidden">
-            <img 
-              src="/photos/photo2.jpg"
-              alt="Coffee shop opening"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-6">
-            <time class="font-mono text-xs text-red tracking-wider">
-              Nov 2024
-            </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
-              Abrimos en S'Agaró
-            </h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">
-              Después de meses de trabajo, el conejo ha encontrado su madriguera. Bienvenidos.
-            </p>
-          </div>
-        </article>
-        
-        <!-- Card 4 - La Cabra -->
-        <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-          <div class="aspect-square relative overflow-hidden">
-            <img 
-              src="/photos/photo4.jpg"
-              alt="La Cabra coffee"
-              class="w-full h-full object-cover"
-            />
-          </div>
-          <div class="p-6">
-            <time class="font-mono text-xs text-red tracking-wider">
-              Nov 2024
-            </time>
-            <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
-              Café de La Cabra
-            </h3>
-            <p class="font-mono text-sm text-black/60 line-clamp-2">
-              Copenhagen en tu taza. El mejor tostador de Europa ahora en Costa Brava.
-            </p>
-          </div>
-        </article>
+        {latestNews.map((post) => (
+          <a href={`/news/${post.slug}/`} class="block">
+            <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
+              <div class="aspect-square relative overflow-hidden">
+                {post.data.image && (
+                  <img 
+                    src={post.data.image}
+                    alt={post.data.title}
+                    class="w-full h-full object-cover"
+                  />
+                )}
+              </div>
+              <div class="p-6">
+                <time class="font-mono text-xs text-red tracking-wider">
+                  {post.data.date.toLocaleDateString('es-ES', { month: 'short', year: 'numeric' })}
+                </time>
+                <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
+                  {post.data.title}
+                </h3>
+                <p class="font-mono text-sm text-black/60 line-clamp-2">
+                  {post.data.description}
+                </p>
+              </div>
+            </article>
+          </a>
+        ))}
         
       </div>
       
