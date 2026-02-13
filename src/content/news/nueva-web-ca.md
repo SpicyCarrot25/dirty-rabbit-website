@@ -1,23 +1,27 @@
 ---
-title: "Estrenem web"
-description: "El teu nou punt de trobada digital. Specialty coffee, esmorzars i brunch a S'Agaró, Costa Brava."
+title: "Per què fem el que fem"
+description: "Casa, cura, connexió — la filosofia darrere de Dirty Rabbit i per què cada detall importa."
 date: 2026-02-13
-image: "/images/news/website-launch.jpg"
+image: "/images/news/philosophy.jpg"
 lang: ca
 ---
 
-Per fi tenim casa digital.
+Dirty Rabbit no va començar sent un cafè. Va començar sent una idea: i si hi hagués un lloc a S'Agaró on sentir-se com a casa?
 
-Després de mesos servint cafè i construint comunitat a S'Agaró, ara també ens pots trobar online. Aquí descobriràs qui som, què servim i per què ho fem amb tanta estima.
+## Casa
 
-## El que hi trobaràs
+Aquí no ets client, ets convidat. La teva taula t'espera. El teu cafè es prepara com a tu t'agrada. Volem que entris com a desconegut i surtis com a amic.
 
-- **La nostra carta** — Specialty coffee de La Cabra, esmorzars i brunch amb ingredients de proveïdors locals
-- **Qui som** — La història darrere del conill
-- **Els nostres proveïdors** — La gent que fa possible cada tassa
+## Cura
 
-## Specialty coffee a la Costa Brava
+Cada producte que servim està escollit amb intenció. El cafè ve de La Cabra a Copenhaguen — un dels millors torradors d'Europa. El pa el fa Origo Bakery a Barcelona. Els pastissos arriben de La Puntual a Girona. Res és aquí per casualitat.
 
-Som l'únic cafè d'especialitat a S'Agaró. Cafè de La Cabra (Copenhaguen), pa de massa mare d'Origo Bakery (Barcelona), i pastissos artesans de La Puntual (Girona).
+## Connexió
 
-Vine a conèixer-nos. La teva taula t'espera.
+El millor d'una cafeteria no és el cafè. Són les converses que comencen a la barra. Els nens que juguen mentre els pares esmorzen tranquils. Els estrangers que es converteixen en locals. Volem ser el lloc on la gent es troba.
+
+---
+
+Això és Dirty Rabbit. Specialty coffee, esmorzars i brunch a S'Agaró, Costa Brava.
+
+Vine a conèixer-nos.

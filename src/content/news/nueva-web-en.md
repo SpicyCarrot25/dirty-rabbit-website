@@ -1,23 +1,27 @@
 ---
-title: "Our new website is live"
-description: "Your new digital meeting point. Specialty coffee, breakfast and brunch in S'Agaró, Costa Brava."
+title: "Why we do what we do"
+description: "Home, care, connection — the philosophy behind Dirty Rabbit and why every detail matters."
 date: 2026-02-13
-image: "/images/news/website-launch.jpg"
+image: "/images/news/philosophy.jpg"
 lang: en
 ---
 
-We finally have a digital home.
+Dirty Rabbit didn't start as a coffee shop. It started as an idea: what if there was a place in S'Agaró where you could feel at home?
 
-After months of serving coffee and building community in S'Agaró, you can now find us online too. Here you'll discover who we are, what we serve, and why we do it with so much care.
+## Home
 
-## What you'll find
+Here you're not a customer, you're a guest. Your table is waiting. Your coffee is made just how you like it. We want you to walk in as a stranger and leave as a friend.
 
-- **Our menu** — Specialty coffee from La Cabra, breakfast and brunch with ingredients from local suppliers
-- **About us** — The story behind the rabbit
-- **Our producers** — The people who make every cup possible
+## Care
 
-## Specialty coffee on the Costa Brava
+Every product we serve is chosen with intention. Our coffee comes from La Cabra in Copenhagen — one of Europe's best roasters. Our bread is baked by Origo Bakery in Barcelona. Our pastries arrive from La Puntual in Girona. Nothing is here by accident.
 
-We're the only specialty coffee shop in S'Agaró. Coffee from La Cabra (Copenhagen), sourdough bread from Origo Bakery (Barcelona), and artisan pastries from La Puntual (Girona).
+## Connection
 
-Come meet us. Your table is waiting.
+The best thing about a café isn't the coffee. It's the conversations that start at the bar. The kids playing while parents enjoy a quiet breakfast. The foreigners who become locals. We want to be the place where people find each other.
+
+---
+
+This is Dirty Rabbit. Specialty coffee, breakfast and brunch in S'Agaró, Costa Brava.
+
+Come meet us.
