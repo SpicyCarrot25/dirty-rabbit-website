@@ -28,7 +28,7 @@ La família amb el nen sorollós. El nòmada digital amb el portàtil. La parell
 
 El cafè és de La Cabra a Copenhaguen. No perquè soni impressionant — sinó perquè és el que bevem a casa. El pa ve d'Origo Bakery perquè vam provar vint fleques i aquesta ens va fer deixar de buscar.
 
-No hi ha res a la carta que no menjaríem a la nostra pròpia cuina. Aquesta és la regla.
+No hi ha res a la carta que l'Iwonka no serviria a la seva pròpia cuina. Aquesta és la regla.
 
 ---
 
