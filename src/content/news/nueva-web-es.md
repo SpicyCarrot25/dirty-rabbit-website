@@ -2,7 +2,7 @@
 title: "Por qué hacemos lo que hacemos"
 description: "Wild comfort, belonging, intentional — la filosofía detrás de Dirty Rabbit."
 date: 2026-02-13
-image: "/images/heroes/nosotros.jpg"
+image: "/images/heroes/iwonka-coffee.jpg"
 lang: es
 ---
 

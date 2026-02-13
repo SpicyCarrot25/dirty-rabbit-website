@@ -2,7 +2,7 @@
 title: "Per què fem el que fem"
 description: "Wild comfort, belonging, intentional — la filosofia darrere de Dirty Rabbit."
 date: 2026-02-13
-image: "/images/heroes/nosotros.jpg"
+image: "/images/heroes/iwonka-coffee.jpg"
 lang: ca
 ---
 

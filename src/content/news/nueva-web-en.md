@@ -2,7 +2,7 @@
 title: "Why we do what we do"
 description: "Wild comfort, belonging, intentional — the philosophy behind Dirty Rabbit."
 date: 2026-02-13
-image: "/images/heroes/nosotros.jpg"
+image: "/images/heroes/iwonka-coffee.jpg"
 lang: en
 ---
 
