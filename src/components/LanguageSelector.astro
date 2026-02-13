@@ -8,14 +8,17 @@ interface Props {
 const { lang } = Astro.props;
 
 // Get current path without language prefix
-const cleanPath = Astro.url.pathname.replace(/^\/(en|ca|fr)(\/|$)/, '/').replace(/^\//, '');
+const cleanPath = Astro.url.pathname.replace(/^\/(en|ca|fr|ru|uk|pl)(\/|$)/, '/').replace(/^\//, '');
 const currentPath = cleanPath || '/';
 
 const langNames: Record<Language, string> = {
   es: 'ES',
   en: 'EN',
   ca: 'CA',
-  fr: 'FR'
+  fr: 'FR',
+  ru: 'RU',
+  uk: 'UK',
+  pl: 'PL'
 };
 ---
 
