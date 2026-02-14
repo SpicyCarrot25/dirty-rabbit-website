@@ -117,7 +117,7 @@
     "title": "Notre Histoire",
     "howItStarted": {
       "title": "Comment Tout a Commencé",
-      "text": "En cherchant un endroit où nous aurions vraiment envie de prendre le petit-déjeuner à S'Agaró, nous n'en avons trouvé aucun. Alors Iwonka a décidé d'ouvrir cet endroit. Un café où le café est vraiment bon, où la nourriture est préparée avec amour, et où vous pouvez rester aussi longtemps que vous le souhaitez sans que personne ne regarde sa montre."
+      "text": "En cherchant un endroit où nous aimerions vraiment prendre le petit-déjeuner à S'Agaró, nous n'en avons trouvé aucun. Alors Iwonka a décidé d'ouvrir cet endroit. Café de La Cabra (torréfié au Danemark), pain au levain d'Origo Bakery (Barcelone), matcha bio de REQ. Tout réfléchi, rien au hasard. Un endroit où vous pouvez rester aussi longtemps que vous le souhaitez sans que personne ne regarde l'heure."
     },
     "whySagaro": {
       "title": "Pourquoi S'Agaró",
@@ -125,7 +125,7 @@
     },
     "philosophy": {
       "title": "Notre Philosophie",
-      "text": "Nous ne suivons pas les tendances et ne prétendons pas réinventer quoi que ce soit. Nous faisons simplement les choses avec soin. De bons ingrédients, une technique honnête, et le temps que chaque chose nécessite. C'est aussi simple que ça."
+      "text": "Nous ne suivons pas les tendances et ne prétendons pas réinventer quoi que ce soit. Nous faisons simplement les choses avec soin. Café de spécialité sur une La Marzocco KB90, viennoiseries de La Puntual (Gérone), eau filtrée par osmose inverse. De bons ingrédients, une technique honnête, et le temps que chaque chose nécessite."
     },
     "theName": {
       "title": "Le Nom",
@@ -145,7 +145,12 @@
         "text": "Chaque choix a un but. La Cabra, REQ, Awachai — choisis avec intention."
       }
     },
-    "tagline": "Un chez-soi loin de chez soi"
+    "tagline": "Un chez-soi loin de chez soi",
+    "cta": {
+      "title": "Vous venez pour le petit-déjeuner ?",
+      "carta": "Voir la Carte",
+      "visit": "Comment Venir"
+    }
   },
   "common": {
     "viewAll": "Voir Tout",

@@ -117,7 +117,7 @@
     "title": "La Nostra Història",
     "howItStarted": {
       "title": "Com Va Començar Tot",
-      "text": "Buscant un lloc on de veritat ens agradés esmorzar a S'Agaró, no en vam trobar cap. Així que la Iwonka va decidir obrir aquest lloc. Un cafè on el cafè fos de veritat bo, on el menjar estigués fet amb cura, i on et poguessis quedar l'estona que volguessis sense que ningú et mirés el rellotge."
+      "text": "Buscant un lloc on de debò ens agradés esmorzar a S'Agaró, no en vam trobar cap. Així que la Iwonka va decidir obrir aquest lloc. Cafè de La Cabra (torrat a Dinamarca), pa de massa mare d'Origo Bakery (Barcelona), matcha orgànic de REQ. Tot pensat, res a l'atzar. Un lloc on poguessis quedar-te l'estona que volguessis sense que ningú et mirés el rellotge."
     },
     "whySagaro": {
       "title": "Per Què S'Agaró",
@@ -125,7 +125,7 @@
     },
     "philosophy": {
       "title": "La Nostra Filosofia",
-      "text": "No perseguim tendències ni pretenem reinventar res. Simplement fem les coses amb cura. Bons ingredients, tècnica honesta, i el temps que cada cosa necessita. Així de simple."
+      "text": "No perseguim tendències ni pretenem reinventar res. Simplement fem les coses amb cura. Cafè d'especialitat en una La Marzocco KB90, brioixeria de La Puntual (Girona), aigua filtrada per osmosi inversa. Bons ingredients, tècnica honesta, i el temps que cada cosa necessita."
     },
     "theName": {
       "title": "El Nom",
@@ -145,7 +145,12 @@
         "text": "Cada elecció té propòsit. La Cabra, REQ, Awachai — escollits amb intenció."
       }
     },
-    "tagline": "Casa lluny de casa"
+    "tagline": "Casa lluny de casa",
+    "cta": {
+      "title": "Vens a esmorzar?",
+      "carta": "Veure la Carta",
+      "visit": "Com Arribar-hi"
+    }
   },
   "common": {
     "viewAll": "Veure Tot",

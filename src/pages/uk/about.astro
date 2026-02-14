@@ -13,7 +13,7 @@ const t = getTranslations(lang);
   <!-- Hero Section -->
   <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">{t.historia.title}</h1>
+      <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">Ми, По-Своєму</h1>
       <div class="w-16 h-px bg-red mx-auto mb-8"></div>
       <p class="font-mono text-lg md:text-xl text-black/70 italic">
         {t.historia.tagline}
@@ -128,22 +128,13 @@ const t = getTranslations(lang);
   <!-- CTA Section -->
   <section class="py-16 md:py-24 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-6">Завітайте до нас</h2>
-      <p class="font-mono text-base md:text-lg text-black/70 mb-10 max-w-xl mx-auto">
-        Ми знаходимося в С'Агаро, за 2 хвилини від пляжу Сант Пол. Приходьте спробувати нашу каву і залишайтеся скільки забажаєте.
-      </p>
+      <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-6">{t.historia.cta?.title || "Прийдете на сніданок?"}</h2>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a 
           href="/uk/carta"
           class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-red text-red hover:bg-red hover:text-white transition-colors rounded-lg"
         >
-          Переглянути меню
-        </a>
-        <a 
-          href="/uk/producers"
-          class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-red text-red hover:bg-red hover:text-white transition-colors rounded-lg"
-        >
-          Наші виробники
+          {t.historia.cta?.carta || "Переглянути Меню"}
         </a>
         <a 
           href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaró"
@@ -151,7 +142,7 @@ const t = getTranslations(lang);
           rel="noopener noreferrer"
           class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-lg"
         >
-          Як дістатися
+          {t.historia.cta?.visit || "Як Дістатися"}
         </a>
       </div>
     </div>

@@ -116,16 +116,16 @@
   "historia": {
     "title": "Nasza historia",
     "howItStarted": {
-      "title": "Jak to się zaczęło",
-      "text": "Szukaliśmy miejsca na porządne śniadanie w S'Agaró — nie znaleźliśmy. Więc Iwonka postanowiła otworzyć własne. Kawiarnia, gdzie kawa jest naprawdę dobra, jedzenie przygotowane z sercem, i można siedzieć ile się chce."
+      "title": "Jak to Się Zaczęło",
+      "text": "Szukając miejsca, gdzie naprawdę chcielibyśmy jeść śniadanie w S'Agaró, nie mogliśmy znaleźć żadnego. Więc Iwonka postanowiła otworzyć to miejsce. Kawa z La Cabra (palona w Danii), chleb na zakwasie z Origo Bakery (Barcelona), organiczna matcha z REQ. Wszystko przemyślane, nic przypadkowego. Miejsce, gdzie możesz zostać tak długo, jak chcesz, bez poczucia, że ktoś patrzy na zegarek."
     },
     "whySagaro": {
       "title": "Dlaczego S'Agaró",
       "text": "Chcieliśmy miejsca ze słońcem, morzem i prawdziwą społecznością. S'Agaró podbiło nas od pierwszego spaceru wzdłuż wybrzeża. Idealny balans: spokojnie zimą, tętniące życiem latem, i zawsze to śródziemnomorskie światło."
     },
     "philosophy": {
-      "title": "Nasza filozofia",
-      "text": "Nie gonimy za trendami. Po prostu robimy z troską. Dobre składniki, uczciwa technika, czas dla każdego detalu. Takie proste."
+      "title": "Nasza Filozofia",
+      "text": "Nie gonimy za trendami ani nie próbujemy niczego na nowo wymyślać. Po prostu robimy rzeczy z dbałością. Kawa speciality na La Marzocco KB90, wypieki z La Puntual (Girona), woda filtrowana przez odwróconą osmozę. Dobre składniki, uczciwa technika i czas, którego każda rzecz potrzebuje."
     },
     "theName": {
       "title": "Nazwa",
@@ -145,7 +145,12 @@
         "text": "Każdy wybór ma sens. La Cabra, REQ, Awachai — wybrane z intencją."
       }
     },
-    "tagline": "Dom z dala od domu"
+    "tagline": "Dom z dala od domu",
+    "cta": {
+      "title": "Przyjdziesz na śniadanie?",
+      "carta": "Zobacz Menu",
+      "visit": "Jak Dojechać"
+    }
   },
   "common": {
     "viewAll": "Zobacz wszystko",

@@ -117,7 +117,7 @@
     "title": "Nuestra Historia",
     "howItStarted": {
       "title": "Cómo Empezó Todo",
-      "text": "Buscando un sitio donde de verdad nos gustara desayunar en S'Agaró, no encontramos ninguno. Así que Iwonka decidió abrir este lugar. Un café donde el café fuera de verdad bueno, donde la comida estuviera hecha con cariño, y donde pudieras quedarte el rato que quisieras sin que nadie te mirara el reloj."
+      "text": "Buscando un sitio donde de verdad nos gustara desayunar en S'Agaró, no encontramos ninguno. Así que Iwonka decidió abrir este lugar. Café de La Cabra (tostado en Dinamarca), pan de masa madre de Origo Bakery (Barcelona), matcha orgánico de REQ. Todo pensado, nada al azar. Un sitio donde pudieras quedarte el rato que quisieras sin que nadie te mirara el reloj."
     },
     "whySagaro": {
       "title": "Por Qué S'Agaró",
@@ -125,7 +125,7 @@
     },
     "philosophy": {
       "title": "Nuestra Filosofía",
-      "text": "No perseguimos tendencias ni pretendemos reinventar nada. Simplemente hacemos las cosas con cuidado. Buenos ingredientes, técnica honesta, y el tiempo que cada cosa necesita. Así de simple."
+      "text": "No perseguimos tendencias ni pretendemos reinventar nada. Simplemente hacemos las cosas con cuidado. Café de especialidad en una La Marzocco KB90, bollería de La Puntual (Girona), agua filtrada por ósmosis inversa. Buenos ingredientes, técnica honesta, y el tiempo que cada cosa necesita."
     },
     "theName": {
       "title": "El Nombre",
@@ -145,7 +145,12 @@
         "text": "Cada elección tiene propósito. La Cabra, REQ, Awachai — elegidos con intención."
       }
     },
-    "tagline": "Casa lejos de casa"
+    "tagline": "Casa lejos de casa",
+    "cta": {
+      "title": "¿Vienes a desayunar?",
+      "carta": "Ver la Carta",
+      "visit": "Cómo Llegar"
+    }
   },
   "common": {
     "viewAll": "Ver Todo",

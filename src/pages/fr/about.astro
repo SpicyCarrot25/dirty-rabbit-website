@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../i18n';
 
-const lang = 'ca';
+const lang = 'fr';
 const t = getTranslations(lang);
 
 const iwonkaSchema = {
@@ -10,25 +10,25 @@ const iwonkaSchema = {
   "@type": "Person",
   "@id": "https://dirtyrabbit.es/#iwonka",
   "name": "Iwonka",
-  "jobTitle": "Fundadora i Barista",
+  "jobTitle": "Fondatrice & Barista",
   "worksFor": {
     "@type": "Organization",
     "@id": "https://dirtyrabbit.es/#business"
   },
-  "description": "Fundadora de Dirty Rabbit, apassionada del cafè d'especialitat i l'hospitalitat"
+  "description": "Fondatrice de Dirty Rabbit, passionnée de café de spécialité et d'hospitalité"
 };
 ---
 
 <Layout 
   title={`${t.historia.title} — Dirty Rabbit`} 
-  description="Coneix la Iwonka, fundadora de Dirty Rabbit: cafè d'especialitat i brunch a S'Agaró, Costa Brava."
+  description="Découvrez Iwonka, fondatrice de Dirty Rabbit: café de spécialité et brunch à S'Agaró, Costa Brava."
   lang={lang}>
   
   <script type="application/ld+json" set:html={JSON.stringify(iwonkaSchema)} slot="head" />
   
   <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">Nosaltres a la Nostra Manera</h1>
+      <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">Nous, à Notre Façon</h1>
       <div class="w-16 h-px bg-red mx-auto mb-8"></div>
       <p class="font-mono text-lg md:text-xl text-black/70 italic">
         {t.historia.tagline}
@@ -71,7 +71,7 @@ const iwonkaSchema = {
   <section class="py-16 md:py-24 bg-black text-cream">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <p class="font-mono text-sm tracking-widest text-cream/60 mb-4">El Que Creiem</p>
+        <p class="font-mono text-sm tracking-widest text-cream/60 mb-4">Ce Que Nous Croyons</p>
         <div class="w-12 h-px bg-red mx-auto"></div>
       </div>
       <div class="space-y-16">
@@ -89,20 +89,20 @@ const iwonkaSchema = {
         </div>
       </div>
       <div class="mt-16 pt-12 border-t border-cream/20 text-center">
-        <p class="font-typewriter text-xl md:text-2xl text-cream/90 italic">"On el cafè sap a alguna cosa més."</p>
+        <p class="font-typewriter text-xl md:text-2xl text-cream/90 italic">"Où le café a un goût de quelque chose de plus."</p>
       </div>
     </div>
   </section>
 
   <section class="py-16 md:py-24 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-6">{t.historia.cta?.title || "Vens a esmorzar?"}</h2>
+      <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-6">{t.historia.cta?.title || "Vous venez pour le petit-déjeuner ?"}</h2>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href={getLocalizedPath('/carta', lang)} class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-red text-red hover:bg-red hover:text-white transition-colors rounded-lg">
-          {t.historia.cta?.carta || "Veure la Carta"}
+          {t.historia.cta?.carta || "Voir la Carte"}
         </a>
         <a href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaró" target="_blank" rel="noopener noreferrer" class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-lg">
-          {t.historia.cta?.visit || "Com Arribar-hi"}
+          {t.historia.cta?.visit || "Comment Venir"}
         </a>
       </div>
     </div>

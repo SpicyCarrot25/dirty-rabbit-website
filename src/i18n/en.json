@@ -117,7 +117,7 @@
     "title": "Our Story",
     "howItStarted": {
       "title": "How It Started",
-      "text": "Looking for a place we actually wanted to have breakfast in S'Agaró, we couldn't find one. So Iwonka decided to open this place. A café where the coffee is actually good, where the food is made with care, and where you can stay as long as you want without anyone watching the clock."
+      "text": "Looking for a place where we'd actually enjoy breakfast in S'Agaró, we couldn't find one. So Iwonka decided to open this place. Coffee from La Cabra (roasted in Denmark), sourdough bread from Origo Bakery (Barcelona), organic matcha from REQ. Everything intentional, nothing random. A place where you could stay as long as you wanted without anyone watching the clock."
     },
     "whySagaro": {
       "title": "Why S'Agaró",
@@ -125,7 +125,7 @@
     },
     "philosophy": {
       "title": "Our Philosophy",
-      "text": "We don't chase trends or try to reinvent anything. We simply do things with care. Good ingredients, honest technique, and the time each thing needs. That simple."
+      "text": "We don't chase trends or try to reinvent anything. We simply do things with care. Specialty coffee on a La Marzocco KB90, pastries from La Puntual (Girona), reverse osmosis filtered water. Good ingredients, honest technique, and the time each thing needs."
     },
     "theName": {
       "title": "The Name",
@@ -145,7 +145,12 @@
         "text": "Every choice has purpose. La Cabra, REQ, Awachai — chosen with intention."
       }
     },
-    "tagline": "Home away from home"
+    "tagline": "Home away from home",
+    "cta": {
+      "title": "Coming for breakfast?",
+      "carta": "See the Menu",
+      "visit": "How to Get Here"
+    }
   },
   "common": {
     "viewAll": "View All",
