@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getLocalizedPath } from '../i18n';
 import menuData from '../data/menu.json';
 
 const lang = 'es';
@@ -21,7 +22,7 @@ const breadcrumbs = [
       <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">Carta</h1>
       <div class="w-16 h-px bg-red mx-auto mb-8"></div>
       <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed max-w-xl mx-auto">
-        Seleccionamos con intención todo lo que servimos. Productos locales y orgánicos de nuestros vecinos, 
+        Seleccionamos con intención todo lo que servimos. Productos locales y orgánicos de <a href={getLocalizedPath('/proveedores', lang)} class="text-red hover:underline">nuestros proveedores</a>, 
         y también tesoros que amamos de fuera — café tostado en Copenhague, 
         matcha orgánico de REQ Barcelona, pasteles de La Puntual Girona. 
         Este es nuestro hogar, y queremos compartirlo contigo.

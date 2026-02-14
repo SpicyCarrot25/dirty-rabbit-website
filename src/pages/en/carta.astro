@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getLocalizedPath } from '../../i18n';
 import menuData from '../../data/menu.json';
 
 const lang = 'en';
@@ -20,7 +21,7 @@ const breadcrumbs = [
       <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">Menu</h1>
       <div class="w-16 h-px bg-red mx-auto mb-8"></div>
       <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed max-w-xl mx-auto">
-        We select with intention everything we serve. Local and organic products from our neighbors, 
+        We select with intention everything we serve. Local and organic products from <a href={getLocalizedPath('/producers', lang)} class="text-red hover:underline">our producers</a>, 
         and treasures we love from afar — coffee roasted in Copenhagen, 
         organic matcha from REQ Barcelona, pastries from La Puntual Girona. 
         This is our home, and we want to share it with you.
