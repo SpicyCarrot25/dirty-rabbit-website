@@ -1,8 +1,26 @@
 # Dirty Rabbit Coffee - S'Agaró
 # https://dirtyrabbit.es
 
+# Search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI crawlers (for GEO/AI discoverability)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# All other bots
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://dirtyrabbit.es/sitemap.xml
+Sitemap: https://dirtyrabbit.es/sitemap-index.xml
