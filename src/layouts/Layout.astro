@@ -29,106 +29,118 @@ const currentLang = lang || getLangFromUrl(Astro.url);
 const t = getTranslations(currentLang);
 const alternates = getAlternateUrls(Astro.url.pathname, 'https://dirtyrabbit.es');
 
-// Enhanced LocalBusiness Schema
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "CafeOrCoffeeShop",
-  "name": "Dirty Rabbit",
-  "image": "https://dirtyrabbit.es/og-image.jpg",
-  "url": "https://dirtyrabbit.es",
-  "telephone": "+34 872 454 264",
-  "email": "hola@dirtyrabbit.es",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Carrer de la Conca 17",
-    "addressLocality": "S'Agaró",
-    "addressRegion": "Girona",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.7967591,
-    "longitude": 3.0485060
-  },
-  "hasMenu": "https://dirtyrabbit.es/carta",
-  "acceptsReservations": false,
-  "paymentAccepted": "Cash, Credit Card",
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      "opens": "08:00",
-      "closes": "15:00"
+// Build @graph array with all schema objects
+const graphItems: Record<string, unknown>[] = [
+  // CafeOrCoffeeShop (LocalBusiness)
+  {
+    "@type": "CafeOrCoffeeShop",
+    "@id": "https://dirtyrabbit.es/#business",
+    "name": "Dirty Rabbit",
+    "image": "https://dirtyrabbit.es/og-image.jpg",
+    "url": "https://dirtyrabbit.es",
+    "telephone": "+34 872 454 264",
+    "email": "hola@dirtyrabbit.es",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer de la Conca 17",
+      "addressLocality": "S'Agaró",
+      "addressRegion": "Girona",
+      "postalCode": "17248",
+      "addressCountry": "ES"
     },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Monday",
-      "opens": "00:00",
-      "closes": "00:00"
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.7967591,
+      "longitude": 3.0485060
+    },
+    "hasMenu": "https://dirtyrabbit.es/carta",
+    "acceptsReservations": false,
+    "paymentAccepted": "Cash, Credit Card",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "08:00",
+        "closes": "15:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Monday",
+        "opens": "00:00",
+        "closes": "00:00"
+      }
+    ],
+    "servesCuisine": ["Specialty Coffee", "Brunch", "Breakfast"],
+    "priceRange": "€€",
+    "sameAs": [
+      "https://instagram.com/dirtyrabbitsagaro"
+    ]
+  },
+  // WebSite with SearchAction
+  {
+    "@type": "WebSite",
+    "@id": "https://dirtyrabbit.es/#website",
+    "name": "Dirty Rabbit",
+    "url": "https://dirtyrabbit.es",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://dirtyrabbit.es/?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
     }
-  ],
-  "servesCuisine": ["Specialty Coffee", "Brunch", "Breakfast"],
-  "priceRange": "€€",
-  "sameAs": [
-    "https://instagram.com/dirtyrabbitsagaro"
-  ]
-};
-
-// WebSite Schema with SearchAction (sitelinks search box)
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Dirty Rabbit",
-  "url": "https://dirtyrabbit.es",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://dirtyrabbit.es/?q={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
   }
+];
+
+// Add BreadcrumbList if provided
+if (breadcrumbs && breadcrumbs.length > 0) {
+  graphItems.push({
+    "@type": "BreadcrumbList",
+    "@id": `https://dirtyrabbit.es${Astro.url.pathname}#breadcrumb`,
+    "itemListElement": breadcrumbs.map((crumb, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": crumb.name,
+      "item": crumb.url
+    }))
+  });
+}
+
+// Add Menu schema for carta pages
+if (isMenuPage) {
+  graphItems.push({
+    "@type": "Menu",
+    "@id": "https://dirtyrabbit.es/carta#menu",
+    "name": "Dirty Rabbit Menu",
+    "url": "https://dirtyrabbit.es/carta",
+    "mainEntityOfPage": "https://dirtyrabbit.es/carta",
+    "inLanguage": currentLang,
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "Café & Cia",
+        "description": "Specialty coffee roasted by La Cabra, Copenhagen"
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Bebidas",
+        "description": "Smoothies, soft drinks, and adult beverages"
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Comida",
+        "description": "Toasts, bagels, and bowls"
+      }
+    ]
+  });
+}
+
+// Single unified schema with @graph
+const unifiedSchema = {
+  "@context": "https://schema.org",
+  "@graph": graphItems
 };
-
-// BreadcrumbList Schema (only if breadcrumbs provided)
-const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": breadcrumbs.map((crumb, index) => ({
-    "@type": "ListItem",
-    "position": index + 1,
-    "name": crumb.name,
-    "item": crumb.url
-  }))
-} : null;
-
-// Menu Schema (for carta pages)
-const menuSchema = isMenuPage ? {
-  "@context": "https://schema.org",
-  "@type": "Menu",
-  "name": "Dirty Rabbit Menu",
-  "url": "https://dirtyrabbit.es/carta",
-  "mainEntityOfPage": "https://dirtyrabbit.es/carta",
-  "inLanguage": currentLang,
-  "hasMenuSection": [
-    {
-      "@type": "MenuSection",
-      "name": "Café & Cia",
-      "description": "Specialty coffee roasted by La Cabra, Copenhagen"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Bebidas",
-      "description": "Smoothies, soft drinks, and adult beverages"
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Comida",
-      "description": "Toasts, bagels, and bowls"
-    }
-  ]
-} : null;
 ---
 
 <!doctype html>
@@ -165,10 +177,7 @@ const menuSchema = isMenuPage ? {
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     
-    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
-    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
-    {menuSchema && <script type="application/ld+json" set:html={JSON.stringify(menuSchema)} />}
+    <script type="application/ld+json" set:html={JSON.stringify(unifiedSchema)} />
     
     <title>{title}</title>
   </head>

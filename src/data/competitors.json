@@ -1,0 +1,118 @@
+[
+  {
+    "name": "ANNNA",
+    "slug": "annna",
+    "location": {
+      "town": "Sant Feliu de Guíxols",
+      "address": "Carrer de l'Hospital 21, 17220 Sant Feliu de Guíxols",
+      "lat": 41.7825,
+      "lng": 3.0295
+    },
+    "distanceFromDR": "7 min en coche",
+    "distanceMinutes": 7,
+    "website": "https://www.annna.cc",
+    "instagram": null,
+    "phone": "+34 972 03 83 68",
+    "hours": "Jue–Lun 9:00–14:30, cerrado Mar y Mié",
+    "description": {
+      "es": "Café de especialidad, panadería sin gluten artesanal y concept store en la histórica Casa Trachsler del siglo XIX. Fundado por Ana y Pascal.",
+      "en": "Specialty coffee, artisan gluten-free bakery, and concept store in the historic 19th-century Casa Trachsler. Founded by Ana and Pascal."
+    },
+    "notable": "Primera cafetería de especialidad en la zona. Pan de masa madre sin gluten, productos locales curados (aceites, vinos, merchandising de Sant Feliu). Filosofía de honestidad, sostenibilidad y proximidad.",
+    "coffeeStyle": "Specialty coffee — roaster/origin TBD",
+    "relationship": "competitor-friend"
+  },
+  {
+    "name": "La Maglia",
+    "slug": "la-maglia",
+    "location": {
+      "town": "Platja d'Aro",
+      "address": "C/ Juli Garreta, 10, Platja d'Aro",
+      "lat": 41.8168,
+      "lng": 3.0680
+    },
+    "distanceFromDR": "5 min en coche",
+    "distanceMinutes": 5,
+    "website": "https://lamaglia.cafe",
+    "instagram": null,
+    "phone": null,
+    "hours": "Lun–Jue 9:00–20:00, Vie 9:00–20:00, Sáb–Dom 9:00–16:00",
+    "description": {
+      "es": "Cafetería de especialidad y tostadero propio en Platja d'Aro, con fuerte cultura ciclista. Café de origen único, brunch saludable, ambiente relajado.",
+      "en": "Specialty coffee shop and roastery in Platja d'Aro with strong cycling culture. Single-origin coffee, healthy brunch, relaxed atmosphere."
+    },
+    "notable": "Primer tostadero de especialidad en la costa de Girona. Temática ciclista (nombre del maillot rosa del Giro). Máquina Victoria Arduino Eagle One. Terraza de 50 plazas. Bowls de açaí, zumos, pastelería local de La Puntual y Can Pericus. Dog-friendly y laptop-friendly.",
+    "coffeeStyle": "Tostado propio, single-origin, 100% Arábica ≥85 SCA",
+    "relationship": "competitor-friend"
+  },
+  {
+    "name": "Fitzroy Café",
+    "slug": "fitzroy",
+    "location": {
+      "town": "Begur",
+      "address": "Carrer de Francesc Forgas 1, 17255 Begur",
+      "lat": 41.9540,
+      "lng": 3.2060
+    },
+    "distanceFromDR": "30 min en coche",
+    "distanceMinutes": 30,
+    "website": "https://fitzroycafe.com",
+    "instagram": null,
+    "phone": "+34 695 34 18 95",
+    "hours": "Variable, cerrado martes. Mañanas 8:30–14:00, cenas Jue–Sáb 19:00–22:00",
+    "description": {
+      "es": "Café de especialidad y wine bar en el corazón de Begur. Slow food con producto local de temporada. Pancakes, banana bread y brunch de culto.",
+      "en": "Specialty coffee and wine bar in the heart of Begur. Slow food with seasonal local produce. Cult-status pancakes, banana bread, and brunch."
+    },
+    "notable": "Estacional (más activo en temporada alta). Ubicación espectacular junto a la Plaça de l'Església de Begur. Banana bread legendario. Opciones veganas/vegetarianas. Wine bar por las noches.",
+    "coffeeStyle": "Specialty coffee — roaster/origin TBD",
+    "relationship": "competitor-distant",
+    "seasonal": true
+  },
+  {
+    "name": "Grava",
+    "slug": "grava",
+    "location": {
+      "town": "Pals",
+      "address": "C/ de la Font, 7, 17256 Pals",
+      "lat": 41.9715,
+      "lng": 3.1485
+    },
+    "distanceFromDR": "25 min en coche",
+    "distanceMinutes": 25,
+    "website": null,
+    "instagram": null,
+    "phone": "+34 676 14 69 41",
+    "hours": "Variable — desayuno, comida y cena",
+    "description": {
+      "es": "Café de especialidad, pizzería y restaurante mediterráneo al pie del pueblo medieval de Pals. Sirven café Right Side. Espacio comunitario con gravel cycling culture.",
+      "en": "Specialty coffee, pizzeria, and Mediterranean restaurant at the foot of the medieval village of Pals. Serving Right Side coffee. Community space with gravel cycling culture."
+    },
+    "notable": "Sirven café Right Side (tostador de Barcelona). Pizzería + café de especialidad es una combinación única. Patio exterior tranquilo. Organizan eventos: yoga, rutas en gravel bike al atardecer. Vinos naturales.",
+    "coffeeStyle": "Right Side Coffee Roasters (Barcelona)",
+    "relationship": "competitor"
+  },
+  {
+    "name": "Rustik",
+    "slug": "rustik",
+    "location": {
+      "town": "Bellcaire d'Empordà",
+      "address": "Bellcaire d'Empordà, Girona",
+      "lat": 42.0835,
+      "lng": 3.0859
+    },
+    "distanceFromDR": "35 min en coche",
+    "distanceMinutes": 35,
+    "website": "https://rustikemporda.wixsite.com/rustikemporda",
+    "instagram": null,
+    "phone": null,
+    "hours": "Lun–Vie 7:00–13:30, Sáb–Dom 7:30–13:00, cerrado miércoles",
+    "description": {
+      "es": "Desayunos y brunches creativos en Bellcaire d'Empordà. Mezcla de tradición e innovación con producto local. Ambiente bike-friendly y pet-friendly.",
+      "en": "Creative breakfasts and brunches in Bellcaire d'Empordà. Mix of tradition and innovation with local produce. Bike-friendly and pet-friendly vibe."
+    },
+    "notable": "Desde 2018. Tostadas, croissants rellenos, bowls de fruta y yogur. 'Rustik Lab' para platos experimentales. Organizan eventos de ciclismo y running. Ambiente muy acogedor ('Laugh more, it's FREE!').",
+    "coffeeStyle": "Coffee — roaster/origin TBD",
+    "relationship": "competitor-distant"
+  }
+]

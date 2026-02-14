@@ -1,0 +1,287 @@
+[
+  {
+    "slug": "sagaro",
+    "name": {
+      "es": "S'Agaró",
+      "en": "S'Agaró",
+      "ca": "S'Agaró",
+      "fr": "S'Agaró"
+    },
+    "distanceMinutes": 0,
+    "type": "town",
+    "lat": 41.7885,
+    "lng": 3.0380,
+    "description": {
+      "es": "Urbanización de lujo junto al mar con arquitectura noucentista y el famoso Camí de Ronda.",
+      "en": "Luxury seaside enclave with Noucentista architecture and the famous Camí de Ronda coastal path.",
+      "ca": "Urbanització de luxe vora el mar amb arquitectura noucentista i el famós Camí de Ronda.",
+      "fr": "Quartier résidentiel de luxe en bord de mer avec architecture noucentiste et le célèbre Camí de Ronda."
+    }
+  },
+  {
+    "slug": "platja-daro",
+    "name": {
+      "es": "Platja d'Aro",
+      "en": "Platja d'Aro",
+      "ca": "Platja d'Aro",
+      "fr": "Platja d'Aro"
+    },
+    "distanceMinutes": 5,
+    "type": "town",
+    "lat": 41.8165,
+    "lng": 3.0685,
+    "description": {
+      "es": "Centro turístico de la Costa Brava con extensa playa, comercios y vida nocturna.",
+      "en": "Major Costa Brava resort town with a long beach, shopping, and nightlife.",
+      "ca": "Centre turístic de la Costa Brava amb extensa platja, comerços i vida nocturna.",
+      "fr": "Station balnéaire majeure de la Costa Brava avec longue plage, commerces et vie nocturne."
+    }
+  },
+  {
+    "slug": "sant-feliu-de-guixols",
+    "name": {
+      "es": "Sant Feliu de Guíxols",
+      "en": "Sant Feliu de Guíxols",
+      "ca": "Sant Feliu de Guíxols",
+      "fr": "Sant Feliu de Guíxols"
+    },
+    "distanceMinutes": 7,
+    "type": "town",
+    "lat": 41.7832,
+    "lng": 3.0312,
+    "description": {
+      "es": "Ciudad costera con puerto pesquero, monasterio benedictino y tradición corchera.",
+      "en": "Coastal town with a fishing port, Benedictine monastery, and cork-making heritage.",
+      "ca": "Ciutat costanera amb port pesquer, monestir benedictí i tradició surera.",
+      "fr": "Ville côtière avec port de pêche, monastère bénédictin et tradition du liège."
+    }
+  },
+  {
+    "slug": "palamos",
+    "name": {
+      "es": "Palamós",
+      "en": "Palamós",
+      "ca": "Palamós",
+      "fr": "Palamós"
+    },
+    "distanceMinutes": 15,
+    "type": "town",
+    "lat": 41.8484,
+    "lng": 3.1290,
+    "description": {
+      "es": "Puerto pesquero famoso por sus gambas rojas y su museo de la pesca.",
+      "en": "Fishing port famous for its red prawns and fishing museum.",
+      "ca": "Port pesquer famós per les seves gambes vermelles i el museu de la pesca.",
+      "fr": "Port de pêche célèbre pour ses crevettes rouges et son musée de la pêche."
+    }
+  },
+  {
+    "slug": "calonge",
+    "name": {
+      "es": "Calonge",
+      "en": "Calonge",
+      "ca": "Calonge",
+      "fr": "Calonge"
+    },
+    "distanceMinutes": 10,
+    "type": "town",
+    "lat": 41.8408,
+    "lng": 3.0756,
+    "description": {
+      "es": "Pueblo medieval con castillo y calas escondidas entre pinos.",
+      "en": "Medieval village with a castle and hidden coves among pine trees.",
+      "ca": "Poble medieval amb castell i cales amagades entre pins.",
+      "fr": "Village médiéval avec château et criques cachées parmi les pins."
+    }
+  },
+  {
+    "slug": "castell-daro",
+    "name": {
+      "es": "Castell d'Aro",
+      "en": "Castell d'Aro",
+      "ca": "Castell d'Aro",
+      "fr": "Castell d'Aro"
+    },
+    "distanceMinutes": 5,
+    "type": "town",
+    "lat": 41.8112,
+    "lng": 3.0528,
+    "description": {
+      "es": "Pueblo del interior con castillo medieval de Benedormiens y ambiente tranquilo.",
+      "en": "Inland village with the medieval Benedormiens castle and a quiet atmosphere.",
+      "ca": "Poble de l'interior amb el castell medieval de Benedormiens i ambient tranquil.",
+      "fr": "Village de l'intérieur avec château médiéval de Benedormiens et ambiance paisible."
+    }
+  },
+  {
+    "slug": "la-bisbal-demporda",
+    "name": {
+      "es": "La Bisbal d'Empordà",
+      "en": "La Bisbal d'Empordà",
+      "ca": "La Bisbal d'Empordà",
+      "fr": "La Bisbal d'Empordà"
+    },
+    "distanceMinutes": 20,
+    "type": "town",
+    "lat": 41.9594,
+    "lng": 3.0430,
+    "description": {
+      "es": "Capital de la cerámica catalana, con tiendas artesanas y un castillo-palacio medieval.",
+      "en": "Capital of Catalan pottery, with artisan shops and a medieval castle-palace.",
+      "ca": "Capital de la ceràmica catalana, amb botigues artesanes i un castell-palau medieval.",
+      "fr": "Capitale de la poterie catalane, avec boutiques artisanales et château-palais médiéval."
+    }
+  },
+  {
+    "slug": "begur",
+    "name": {
+      "es": "Begur",
+      "en": "Begur",
+      "ca": "Begur",
+      "fr": "Begur"
+    },
+    "distanceMinutes": 30,
+    "type": "town",
+    "lat": 41.9544,
+    "lng": 3.2068,
+    "description": {
+      "es": "Pueblo con encanto, casas indianas y las calas más bonitas de la Costa Brava.",
+      "en": "Charming hilltop village with colonial-era mansions and the Costa Brava's most beautiful coves.",
+      "ca": "Poble amb encant, cases indianes i les cales més boniques de la Costa Brava.",
+      "fr": "Village charmant avec maisons coloniales et les plus belles criques de la Costa Brava."
+    }
+  },
+  {
+    "slug": "pals",
+    "name": {
+      "es": "Pals",
+      "en": "Pals",
+      "ca": "Pals",
+      "fr": "Pals"
+    },
+    "distanceMinutes": 25,
+    "type": "town",
+    "lat": 41.9718,
+    "lng": 3.1479,
+    "description": {
+      "es": "Recinto gótico perfectamente conservado con torre románica y campos de arroz.",
+      "en": "Perfectly preserved Gothic quarter with a Romanesque tower and rice paddies.",
+      "ca": "Recinte gòtic perfectament conservat amb torre romànica i camps d'arròs.",
+      "fr": "Quartier gothique parfaitement conservé avec tour romane et rizières."
+    }
+  },
+  {
+    "slug": "tossa-de-mar",
+    "name": {
+      "es": "Tossa de Mar",
+      "en": "Tossa de Mar",
+      "ca": "Tossa de Mar",
+      "fr": "Tossa de Mar"
+    },
+    "distanceMinutes": 25,
+    "type": "town",
+    "lat": 41.7194,
+    "lng": 2.9333,
+    "description": {
+      "es": "Villa amurallada medieval junto al mar, declarada monumento histórico nacional.",
+      "en": "Medieval walled town by the sea, declared a national historic monument.",
+      "ca": "Vila emmurallada medieval vora el mar, declarada monument històric nacional.",
+      "fr": "Ville médiévale fortifiée en bord de mer, déclarée monument historique national."
+    }
+  },
+  {
+    "slug": "lloret-de-mar",
+    "name": {
+      "es": "Lloret de Mar",
+      "en": "Lloret de Mar",
+      "ca": "Lloret de Mar",
+      "fr": "Lloret de Mar"
+    },
+    "distanceMinutes": 35,
+    "type": "town",
+    "lat": 41.6999,
+    "lng": 2.8455,
+    "description": {
+      "es": "Gran centro turístico con jardines botánicos, playas extensas y castillo en la playa.",
+      "en": "Major resort with botanical gardens, long beaches, and a castle on the beach.",
+      "ca": "Gran centre turístic amb jardins botànics, platges extenses i castell a la platja.",
+      "fr": "Grande station balnéaire avec jardins botaniques, longues plages et château sur la plage."
+    }
+  },
+  {
+    "slug": "platja-de-sant-pol",
+    "name": {
+      "es": "Playa de Sant Pol",
+      "en": "Sant Pol Beach",
+      "ca": "Platja de Sant Pol",
+      "fr": "Plage de Sant Pol"
+    },
+    "distanceMinutes": 3,
+    "type": "beach",
+    "lat": 41.7905,
+    "lng": 3.0275,
+    "description": {
+      "es": "Playa familiar de arena fina entre S'Agaró y Sant Feliu, con aguas cristalinas y chiringuitos.",
+      "en": "Family-friendly sandy beach between S'Agaró and Sant Feliu, with crystal-clear water and beach bars.",
+      "ca": "Platja familiar de sorra fina entre S'Agaró i Sant Feliu, amb aigües cristal·lines i xiringuitos.",
+      "fr": "Plage familiale de sable fin entre S'Agaró et Sant Feliu, aux eaux cristallines et bars de plage."
+    }
+  },
+  {
+    "slug": "cala-sa-conca",
+    "name": {
+      "es": "Cala Sa Conca",
+      "en": "Sa Conca Cove",
+      "ca": "Cala Sa Conca",
+      "fr": "Crique Sa Conca"
+    },
+    "distanceMinutes": 2,
+    "type": "beach",
+    "lat": 41.7920,
+    "lng": 3.0420,
+    "description": {
+      "es": "Pequeña cala rocosa entre S'Agaró y Sant Pol, accesible por el Camí de Ronda.",
+      "en": "Small rocky cove between S'Agaró and Sant Pol, accessible via the Camí de Ronda.",
+      "ca": "Petita cala rocosa entre S'Agaró i Sant Pol, accessible pel Camí de Ronda.",
+      "fr": "Petite crique rocheuse entre S'Agaró et Sant Pol, accessible par le Camí de Ronda."
+    }
+  },
+  {
+    "slug": "calella-de-palafrugell",
+    "name": {
+      "es": "Calella de Palafrugell",
+      "en": "Calella de Palafrugell",
+      "ca": "Calella de Palafrugell",
+      "fr": "Calella de Palafrugell"
+    },
+    "distanceMinutes": 25,
+    "type": "town",
+    "lat": 41.8898,
+    "lng": 3.1848,
+    "description": {
+      "es": "Antiguo pueblo de pescadores con casas blancas, calas de postal y la habanera de verano.",
+      "en": "Former fishing village with whitewashed houses, postcard coves, and summer habanera concerts.",
+      "ca": "Antic poble de pescadors amb cases blanques, cales de postal i la havanera d'estiu.",
+      "fr": "Ancien village de pêcheurs avec maisons blanches, criques de carte postale et concerts de habanera."
+    }
+  },
+  {
+    "slug": "tamariu",
+    "name": {
+      "es": "Tamariu",
+      "en": "Tamariu",
+      "ca": "Tamariu",
+      "fr": "Tamariu"
+    },
+    "distanceMinutes": 30,
+    "type": "beach",
+    "lat": 41.9178,
+    "lng": 3.2113,
+    "description": {
+      "es": "Cala diminuta y encantadora rodeada de pinos, una de las joyas secretas de la Costa Brava.",
+      "en": "Tiny, charming cove surrounded by pine trees — one of the Costa Brava's hidden gems.",
+      "ca": "Cala diminuta i encantadora envoltada de pins, una de les joies secretes de la Costa Brava.",
+      "fr": "Petite crique charmante entourée de pins, l'un des joyaux secrets de la Costa Brava."
+    }
+  }
+]
