@@ -51,8 +51,9 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
   <!-- COMMUNITY SECTION -->
   <section class="py-16 md:py-24 bg-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
+      <h1 class="sr-only">Dirty Rabbit — Спешелті кава та Бранчі в С'Агаро, Коста Брава</h1>
       <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80 mb-10">
-        Сім'я з дитиною, яка не може всидіти на місці. Пара, яка ходить до нас з першого дня. Той, хто щойно переїхав і нікого не знає. Це місце для справжнього сніданку, хорошої кави і часу без поспіху. Незнайомці, які стають постійними гостями, а потім — друзями. Спешелті кава, бранчі та смачні сніданки в С'Агаро, в серці Коста Брава.
+        Сім'я з дитиною, яка не може всидіти на місці. Пара, яка ходить до нас з першого дня. Той, хто щойно переїхав і нікого не знає. Це місце для справжнього сніданку, хорошої кави і часу без поспіху. Незнайомці, які стають постійними гостями, а потім — друзями. <a href={getLocalizedPath('/carta', lang)} class="text-red hover:underline">Спешелті кава</a>, бранчі та смачні сніданки в С'Агаро, в серці Коста Брава.
       </p>
       
       <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
@@ -117,8 +118,9 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
             <div class="absolute inset-0 bg-cream">
               <img 
                 src={p.image || `/images/proveedores/${p.id}.jpg`}
-                alt={p.name}
+                alt={`dirty-rabbit-виробник-${p.id}-${p.origin?.toLowerCase().replace(/\s+/g, '-') || 'local'}`}
                 class="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16">
@@ -170,8 +172,9 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
                 {post.data.image && (
                   <img 
                     src={post.data.image}
-                    alt={post.data.title}
+                    alt={`dirty-rabbit-новини-${post.slug}`}
                     class="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 )}
               </div>

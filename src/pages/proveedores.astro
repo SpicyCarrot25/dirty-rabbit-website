@@ -41,8 +41,9 @@ const t = getTranslations(lang);
             <div class="w-full aspect-[4/3] bg-cream relative overflow-hidden">
               <img 
                 src={p.image || `/images/proveedores/${p.id}.jpg`}
-                alt={p.name}
+                alt={`dirty-rabbit-proveedor-${p.id}-${p.origin?.toLowerCase().replace(/\s+/g, '-') || 'local'}`}
                 class="w-full h-full object-cover"
+                loading="lazy"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
               />
               <div class="absolute inset-0 bg-cream flex items-center justify-center" style="display:none;">

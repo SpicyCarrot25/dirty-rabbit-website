@@ -57,8 +57,9 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
   <!-- COMMUNITY SECTION: Post-hero, no headline, elegant typography -->
   <section class="py-16 md:py-24 bg-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
+      <h1 class="sr-only">Dirty Rabbit — Café de Spécialité et Brunch à S'Agaró, Costa Brava</h1>
       <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80 mb-10">
-        La famille avec l'enfant qui ne tient pas en place. Le couple qui vient depuis le premier jour. Celui qui vient d'arriver et ne connaît encore personne. C'est un endroit pour prendre un vrai petit-déjeuner, boire du bon café, et rester un moment. Des inconnus qui deviennent des habitués qui deviennent des amis. Café de spécialité, brunch et petits-déjeuners savoureux à S'Agaró, au cœur de la Costa Brava.
+        La famille avec l'enfant qui ne tient pas en place. Le couple qui vient depuis le premier jour. Celui qui vient d'arriver et ne connaît encore personne. C'est un endroit pour prendre un vrai petit-déjeuner, boire du bon café, et rester un moment. Des inconnus qui deviennent des habitués qui deviennent des amis. <a href={getLocalizedPath('/carta', lang)} class="text-red hover:underline">Café de spécialité</a>, brunch et petits-déjeuners savoureux à S'Agaró, au cœur de la Costa Brava.
       </p>
       
       <!-- CTA Buttons -->
@@ -129,8 +130,9 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
             <div class="absolute inset-0 bg-cream">
               <img 
                 src={p.image || `/images/proveedores/${p.id}.jpg`}
-                alt={p.name}
+                alt={`dirty-rabbit-producteur-${p.id}-${p.origin?.toLowerCase().replace(/\s+/g, '-') || 'local'}`}
                 class="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16">
@@ -190,8 +192,9 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
                 {post.data.image && (
                   <img 
                     src={post.data.image}
-                    alt={post.data.title}
+                    alt={`dirty-rabbit-actualites-${post.slug}`}
                     class="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 )}
               </div>

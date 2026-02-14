@@ -5,33 +5,18 @@ import { getTranslations, getLocalizedPath } from '../../i18n';
 const lang = 'en';
 const t = getTranslations(lang);
 
-// Person structured data for founders
+// Person structured data for founder
 const foundersSchema = {
   "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://dirtyrabbit.es/#iwonka",
-      "name": "Iwonka",
-      "jobTitle": "Founder & Barista",
-      "worksFor": {
-        "@type": "Organization",
-        "@id": "https://dirtyrabbit.es/#business"
-      },
-      "description": "Founder of Dirty Rabbit, passionate about specialty coffee and hospitality"
-    },
-    {
-      "@type": "Person",
-      "@id": "https://dirtyrabbit.es/#franc",
-      "name": "Franc",
-      "jobTitle": "Co-founder",
-      "worksFor": {
-        "@type": "Organization",
-        "@id": "https://dirtyrabbit.es/#business"
-      },
-      "description": "Co-founder of Dirty Rabbit, focused on operations and customer experience"
-    }
-  ]
+  "@type": "Person",
+  "@id": "https://dirtyrabbit.es/#iwonka",
+  "name": "Iwonka",
+  "jobTitle": "Founder & Barista",
+  "worksFor": {
+    "@type": "Organization",
+    "@id": "https://dirtyrabbit.es/#business"
+  },
+  "description": "Founder of Dirty Rabbit, passionate about specialty coffee and hospitality"
 };
 ---
 
@@ -180,6 +165,12 @@ const foundersSchema = {
           class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-red text-red hover:bg-red hover:text-white transition-colors rounded-lg"
         >
           See our menu
+        </a>
+        <a 
+          href={getLocalizedPath('/proveedores', lang)}
+          class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-red text-red hover:bg-red hover:text-white transition-colors rounded-lg"
+        >
+          Our producers
         </a>
         <a 
           href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaró"

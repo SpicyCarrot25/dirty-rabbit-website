@@ -51,8 +51,9 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
   <!-- COMMUNITY SECTION -->
   <section class="py-16 md:py-24 bg-white">
     <div class="max-w-4xl mx-auto px-6 text-center">
+      <h1 class="sr-only">Dirty Rabbit — Specialty Coffee i Brunch w S'Agaró, Costa Brava</h1>
       <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80 mb-10">
-        Rodzina z dzieckiem, które nie może usiedzieć w miejscu. Para, która przychodzi od pierwszego dnia. Ten, kto właśnie się przeprowadził i nikogo nie zna. To miejsce na porządne śniadanie, dobrą kawę i czas bez pośpiechu. Nieznajomi, którzy stają się stałymi gośćmi, a potem — przyjaciółmi. Specialty coffee, brunche i pyszne śniadania w S'Agaró, w sercu Costa Brava.
+        Rodzina z dzieckiem, które nie może usiedzieć w miejscu. Para, która przychodzi od pierwszego dnia. Ten, kto właśnie się przeprowadził i nikogo nie zna. To miejsce na porządne śniadanie, dobrą kawę i czas bez pośpiechu. Nieznajomi, którzy stają się stałymi gośćmi, a potem — przyjaciółmi. <a href={getLocalizedPath('/carta', lang)} class="text-red hover:underline">Specialty coffee</a>, brunche i pyszne śniadania w S'Agaró, w sercu Costa Brava.
       </p>
       
       <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
@@ -117,8 +118,9 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
             <div class="absolute inset-0 bg-cream">
               <img 
                 src={p.image || `/images/proveedores/${p.id}.jpg`}
-                alt={p.name}
+                alt={`dirty-rabbit-producent-${p.id}-${p.origin?.toLowerCase().replace(/\s+/g, '-') || 'local'}`}
                 class="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
             <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16">
@@ -170,8 +172,9 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
                 {post.data.image && (
                   <img 
                     src={post.data.image}
-                    alt={post.data.title}
+                    alt={`dirty-rabbit-news-${post.slug}`}
                     class="w-full h-full object-cover"
+                    loading="lazy"
                   />
                 )}
               </div>
