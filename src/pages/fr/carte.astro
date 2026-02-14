@@ -3,12 +3,18 @@ import Layout from '../../layouts/Layout.astro';
 import menuData from '../../data/menu.json';
 
 const lang = 'fr';
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Carte', url: 'https://dirtyrabbit.es/fr/carte' }
+];
 ---
 
 <Layout 
   title="Carte — Dirty Rabbit" 
   description="Carte Dirty Rabbit : Flat whites, cold brew, espresso single-origin & brunch frais. Options véganes & sans gluten. Menu enfants disponible."
-  lang={lang}>
+  lang={lang}
+  breadcrumbs={breadcrumbs}
+  isMenuPage={true}>
   <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">Carte</h1>

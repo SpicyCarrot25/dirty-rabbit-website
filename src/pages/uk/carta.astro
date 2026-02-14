@@ -5,12 +5,18 @@ import menuData from '../../data/menu.json';
 
 const lang = 'uk';
 const t = getTranslations(lang);
+const breadcrumbs = [
+  { name: 'Головна', url: 'https://dirtyrabbit.es/uk/' },
+  { name: 'Меню', url: 'https://dirtyrabbit.es/uk/carta' }
+];
 ---
 
 <Layout 
   title={`${t.menu.title} — Dirty Rabbit`} 
   description="Меню Dirty Rabbit: флет вайт, колд брю, еспресо single origin та свіжі бранчі. Веганські та безглютенові опції. Дитяче меню."
-  lang={lang}>
+  lang={lang}
+  breadcrumbs={breadcrumbs}
+  isMenuPage={true}>
   <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">{t.menu.title}</h1>

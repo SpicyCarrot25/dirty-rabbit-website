@@ -4,44 +4,131 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { getLangFromUrl, getTranslations, getAlternateUrls, type Language } from '../i18n';
 
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
 interface Props {
   title: string;
   description?: string;
   lang?: Language;
+  breadcrumbs?: BreadcrumbItem[];
+  isMenuPage?: boolean;
 }
 
-const { title, description = 'Specialty Coffee, Breakfast & Brunch en S\'Agaró, Costa Brava', lang } = Astro.props;
+const { 
+  title, 
+  description = 'Specialty Coffee, Breakfast & Brunch en S\'Agaró, Costa Brava', 
+  lang,
+  breadcrumbs,
+  isMenuPage = false
+} = Astro.props;
 
 const currentLang = lang || getLangFromUrl(Astro.url);
 const t = getTranslations(currentLang);
 const alternates = getAlternateUrls(Astro.url.pathname, 'https://dirtyrabbit.es');
 
+// Enhanced LocalBusiness Schema
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "CafeOrCoffeeShop",
   "name": "Dirty Rabbit",
   "image": "https://dirtyrabbit.es/og-image.jpg",
   "url": "https://dirtyrabbit.es",
+  "telephone": "+34 872 454 264",
   "email": "hola@dirtyrabbit.es",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Avinguda de Platja d'Aro, 275",
+    "streetAddress": "Carrer de la Conca 17",
     "addressLocality": "S'Agaró",
     "addressRegion": "Girona",
     "postalCode": "17248",
     "addressCountry": "ES"
   },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7967591,
+    "longitude": 3.0485060
+  },
+  "hasMenu": "https://dirtyrabbit.es/carta",
+  "acceptsReservations": false,
+  "paymentAccepted": "Cash, Credit Card",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
       "opens": "08:00",
       "closes": "15:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "00:00",
+      "closes": "00:00"
     }
   ],
   "servesCuisine": ["Specialty Coffee", "Brunch", "Breakfast"],
-  "priceRange": "€€"
+  "priceRange": "€€",
+  "sameAs": [
+    "https://instagram.com/dirtyrabbitsagaro"
+  ]
 };
+
+// WebSite Schema with SearchAction (sitelinks search box)
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Dirty Rabbit",
+  "url": "https://dirtyrabbit.es",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://dirtyrabbit.es/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
+
+// BreadcrumbList Schema (only if breadcrumbs provided)
+const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((crumb, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "name": crumb.name,
+    "item": crumb.url
+  }))
+} : null;
+
+// Menu Schema (for carta pages)
+const menuSchema = isMenuPage ? {
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "Dirty Rabbit Menu",
+  "url": "https://dirtyrabbit.es/carta",
+  "mainEntityOfPage": "https://dirtyrabbit.es/carta",
+  "inLanguage": currentLang,
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "name": "Café & Cia",
+      "description": "Specialty coffee roasted by La Cabra, Copenhagen"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Bebidas",
+      "description": "Smoothies, soft drinks, and adult beverages"
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Comida",
+      "description": "Toasts, bagels, and bowls"
+    }
+  ]
+} : null;
 ---
 
 <!doctype html>
@@ -79,6 +166,9 @@ const localBusinessSchema = {
     <meta name="twitter:description" content={description} />
     
     <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
+    {menuSchema && <script type="application/ld+json" set:html={JSON.stringify(menuSchema)} />}
     
     <title>{title}</title>
   </head>
