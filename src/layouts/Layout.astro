@@ -155,6 +155,10 @@ const unifiedSchema = {
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="/fonts/NYCTypewriter-Regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/NYCTypewriter-Mono.woff2" as="font" type="font/woff2" crossorigin />
+    
     <link rel="canonical" href={Astro.url.href} />
     
     <link rel="alternate" hreflang="es" href={alternates.es} />
