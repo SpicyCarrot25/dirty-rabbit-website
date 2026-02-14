@@ -184,6 +184,15 @@ const unifiedSchema = {
     <script type="application/ld+json" set:html={JSON.stringify(unifiedSchema)} />
     
     <title>{title}</title>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0RBR92LJQK"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-0RBR92LJQK');
+    </script>
   </head>
   <body class="min-h-screen flex flex-col bg-white text-black">
     <Header lang={currentLang} />
