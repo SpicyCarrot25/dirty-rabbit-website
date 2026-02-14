@@ -106,7 +106,7 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
             <div class="absolute inset-0 bg-cream">
               <img 
                 src={p.image || `/images/proveedores/${p.id}.jpg`}
-                alt={p.name}
+                alt={`dirty-rabbit-proveedor-${p.id}-${p.origin?.toLowerCase().replace(/\s+/g, '-') || 'local'}`}
                 class="w-full h-full object-cover"
               />
             </div>
@@ -168,7 +168,7 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
                 {post.data.image && (
                   <img 
                     src={post.data.image}
-                    alt={post.data.title}
+                    alt={`dirty-rabbit-news-${post.slug}`}
                     class="w-full h-full object-cover"
                   />
                 )}
