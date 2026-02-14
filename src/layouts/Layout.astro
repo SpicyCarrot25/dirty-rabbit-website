@@ -192,6 +192,44 @@ const unifiedSchema = {
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-0RBR92LJQK');
+      
+      // Custom event tracking
+      document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('click', function(e) {
+          var link = e.target.closest('a');
+          if (!link) return;
+          var href = link.href || '';
+          
+          // Order button (Square)
+          if (href.includes('order.dirtyrabbit.es')) {
+            gtag('event', 'click_order', { event_category: 'cta', event_label: href });
+          }
+          // Google Maps / directions
+          else if (href.includes('maps.google') || href.includes('goo.gl/maps')) {
+            gtag('event', 'click_directions', { event_category: 'cta', event_label: 'google_maps' });
+          }
+          // Phone call
+          else if (href.startsWith('tel:')) {
+            gtag('event', 'click_call', { event_category: 'cta', event_label: href });
+          }
+          // Instagram
+          else if (href.includes('instagram.com')) {
+            gtag('event', 'click_social', { event_category: 'social', event_label: 'instagram' });
+          }
+          // Spotify
+          else if (href.includes('spotify.com')) {
+            gtag('event', 'click_social', { event_category: 'social', event_label: 'spotify' });
+          }
+        });
+        
+        // Newsletter form submit
+        var nlForm = document.querySelector('form[action*="newsletter"], form[data-newsletter]');
+        if (nlForm) {
+          nlForm.addEventListener('submit', function() {
+            gtag('event', 'newsletter_signup', { event_category: 'conversion' });
+          });
+        }
+      });
     </script>
   </head>
   <body class="min-h-screen flex flex-col bg-white text-black">
