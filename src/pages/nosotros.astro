@@ -4,12 +4,44 @@ import { getTranslations, getLocalizedPath } from '../i18n';
 
 const lang = 'es';
 const t = getTranslations(lang);
+
+// Person structured data for founders
+const foundersSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://dirtyrabbit.es/#iwonka",
+      "name": "Iwonka",
+      "jobTitle": "Fundadora & Barista",
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://dirtyrabbit.es/#business"
+      },
+      "description": "Fundadora de Dirty Rabbit, apasionada del café de especialidad y la hospitalidad"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://dirtyrabbit.es/#franc",
+      "name": "Franc",
+      "jobTitle": "Co-fundador",
+      "worksFor": {
+        "@type": "Organization",
+        "@id": "https://dirtyrabbit.es/#business"
+      },
+      "description": "Co-fundador de Dirty Rabbit, enfocado en operaciones y experiencia del cliente"
+    }
+  ]
+};
 ---
 
 <Layout 
   title={`${t.historia.title} — Dirty Rabbit`} 
-  description="Conoce Dirty Rabbit: Café de tercera ola en S'Agaró. Ambiente acogedor y el mejor brunch de Costa Brava."
+  description="Conoce a Iwonka y Franc, fundadores de Dirty Rabbit: specialty coffee y brunch en S'Agaró, Costa Brava. Nuestra historia, filosofía y pasión por el café de origen único."
   lang={lang}>
+  
+  <!-- Founders structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify(foundersSchema)} slot="head" />
   <!-- Hero Section -->
   <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -132,6 +164,32 @@ const t = getTranslations(lang);
         </p>
       </div>
 
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-6">Ven a conocernos</h2>
+      <p class="font-mono text-base md:text-lg text-black/70 mb-10 max-w-xl mx-auto">
+        Estamos en S'Agaró, a 2 minutos de la playa de Sant Pol. Ven a probar nuestro café y quédate el rato que quieras.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href={getLocalizedPath('/carta', lang)}
+          class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-red text-red hover:bg-red hover:text-white transition-colors rounded-lg"
+        >
+          Ver nuestra carta
+        </a>
+        <a 
+          href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaró"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-lg"
+        >
+          Cómo llegar
+        </a>
+      </div>
     </div>
   </section>
 
