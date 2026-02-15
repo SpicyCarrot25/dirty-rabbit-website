@@ -180,6 +180,15 @@ const googleMapsUrl = 'https://search.google.com/local/writereview?placeid=ChIJk
   supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJyZ3ZzY2Fnb2Z6ZnRtYnRha29hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNTAyNjEsImV4cCI6MjA2MzgyNjI2MX0.MhZQeNoSXqKB3wepUtNcPghzJvizrlS899fA4hpLSp8',
   lang: 'es'
 }}>
+  // Capture UTM parameters from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const utmParams = {
+    utm_source: urlParams.get('utm_source'),
+    utm_medium: urlParams.get('utm_medium'),
+    utm_content: urlParams.get('utm_content'),
+    utm_campaign: urlParams.get('utm_campaign')
+  };
+  
   let selectedRating = 0;
   let subRatings = {
     rating_food: null,
@@ -311,7 +320,11 @@ const googleMapsUrl = 'https://search.google.com/local/writereview?placeid=ChIJk
       lang: lang,
       rating_food: subRatings.rating_food,
       rating_service: subRatings.rating_service,
-      rating_atmosphere: subRatings.rating_atmosphere
+      rating_atmosphere: subRatings.rating_atmosphere,
+      utm_source: utmParams.utm_source,
+      utm_medium: utmParams.utm_medium,
+      utm_content: utmParams.utm_content,
+      utm_campaign: utmParams.utm_campaign
     };
     
     try {
