@@ -1,0 +1,268 @@
+---
+/**
+ * Review Gate Page - Spanish (Default)
+ * 
+ * SUPABASE TABLE SQL (run once):
+ * CREATE TABLE IF NOT EXISTS feedback (
+ *   id SERIAL PRIMARY KEY,
+ *   rating INT NOT NULL CHECK (rating >= 1 AND rating <= 5),
+ *   comment TEXT,
+ *   lang TEXT DEFAULT 'es',
+ *   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+ * );
+ */
+
+import Layout from '../layouts/Layout.astro';
+
+const lang = 'es';
+
+// i18n strings inline for simplicity
+const t = {
+  title: '¿Cómo estuvo tu visita?',
+  metaTitle: 'Tu Opinión | Dirty Rabbit',
+  metaDesc: 'Cuéntanos cómo fue tu experiencia en Dirty Rabbit',
+  thanks5: '¡Gracias! 🎉',
+  googleButton: 'Dejar review en Google',
+  googleSubtext: 'Tu opinión nos ayuda mucho',
+  thanks14: '¿Qué podríamos mejorar?',
+  placeholder: 'Cuéntanos... (máximo 500 caracteres)',
+  submit: 'Enviar',
+  thanksFinal: 'Gracias por ayudarnos a mejorar 💚'
+};
+
+const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
+---
+
+<Layout 
+  title={t.metaTitle}
+  description={t.metaDesc}
+  lang={lang}>
+  
+  <section class="min-h-[80vh] flex items-center justify-center py-16 px-4 bg-cream">
+    <div class="w-full max-w-md mx-auto text-center">
+      
+      <!-- Step 1: Rating Selection -->
+      <div id="step-rating" class="space-y-8">
+        <h1 class="font-typewriter text-3xl md:text-4xl lg:text-5xl text-black leading-tight">
+          {t.title}
+        </h1>
+        
+        <div id="stars-container" class="flex justify-center gap-2 md:gap-4">
+          {[1, 2, 3, 4, 5].map(star => (
+            <button 
+              type="button"
+              data-rating={star}
+              class="star-btn text-5xl md:text-6xl lg:text-7xl transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer select-none p-2"
+              aria-label={`${star} estrellas`}
+            >
+              <span class="star-empty">☆</span>
+              <span class="star-filled hidden">⭐</span>
+            </button>
+          ))}
+        </div>
+        
+        <p class="font-mono text-sm text-black/50">
+          Toca una estrella para valorar
+        </p>
+      </div>
+      
+      <!-- Step 2A: 5 Stars - Google Review -->
+      <div id="step-5stars" class="hidden space-y-6">
+        <p class="font-typewriter text-4xl md:text-5xl text-black">
+          {t.thanks5}
+        </p>
+        
+        <a 
+          href={googleMapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block font-typewriter text-lg px-8 py-4 bg-red text-white hover:bg-red/90 transition-colors rounded-xl shadow-lg"
+        >
+          {t.googleButton}
+        </a>
+        
+        <p class="font-mono text-sm text-black/60">
+          {t.googleSubtext}
+        </p>
+      </div>
+      
+      <!-- Step 2B: 1-4 Stars - Feedback Form -->
+      <div id="step-feedback" class="hidden space-y-6">
+        <p class="font-typewriter text-2xl md:text-3xl text-black">
+          {t.thanks14}
+        </p>
+        
+        <form id="feedback-form" class="space-y-4">
+          <textarea 
+            id="feedback-comment"
+            name="comment"
+            maxlength="500"
+            rows="4"
+            placeholder={t.placeholder}
+            class="w-full p-4 font-mono text-base border border-[#1A1A1A] rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-red resize-none"
+          ></textarea>
+          
+          <div class="flex justify-between items-center">
+            <span id="char-count" class="font-mono text-xs text-black/40">0/500</span>
+            <button 
+              type="submit"
+              id="submit-btn"
+              class="font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-xl"
+            >
+              {t.submit}
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Step 3: Thank You (after feedback) -->
+      <div id="step-thanks" class="hidden space-y-6">
+        <p class="font-typewriter text-3xl md:text-4xl text-black">
+          {t.thanksFinal}
+        </p>
+      </div>
+      
+    </div>
+  </section>
+</Layout>
+
+<script define:vars={{ 
+  supabaseUrl: 'https://brgvscagofzftmbtakoa.supabase.co', 
+  supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJyZ3ZzY2Fnb2Z6ZnRtYnRha29hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNTAyNjEsImV4cCI6MjA2MzgyNjI2MX0.LgSfVNLbCRr7ZuLmSwvLJqi-fHbJF1XzrOd0qf7sKPk',
+  lang: 'es'
+}}>
+  let selectedRating = 0;
+  
+  const starsContainer = document.getElementById('stars-container');
+  const stepRating = document.getElementById('step-rating');
+  const step5Stars = document.getElementById('step-5stars');
+  const stepFeedback = document.getElementById('step-feedback');
+  const stepThanks = document.getElementById('step-thanks');
+  const feedbackForm = document.getElementById('feedback-form');
+  const feedbackComment = document.getElementById('feedback-comment');
+  const charCount = document.getElementById('char-count');
+  const submitBtn = document.getElementById('submit-btn');
+  
+  // Star selection
+  starsContainer.querySelectorAll('.star-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      selectedRating = parseInt(btn.dataset.rating);
+      
+      // Update star display
+      starsContainer.querySelectorAll('.star-btn').forEach((star, index) => {
+        const empty = star.querySelector('.star-empty');
+        const filled = star.querySelector('.star-filled');
+        if (index < selectedRating) {
+          empty.classList.add('hidden');
+          filled.classList.remove('hidden');
+        } else {
+          empty.classList.remove('hidden');
+          filled.classList.add('hidden');
+        }
+      });
+      
+      // Short delay then show next step
+      setTimeout(() => {
+        stepRating.classList.add('hidden');
+        
+        if (selectedRating === 5) {
+          step5Stars.classList.remove('hidden');
+        } else {
+          stepFeedback.classList.remove('hidden');
+        }
+      }, 300);
+    });
+    
+    // Hover effect
+    btn.addEventListener('mouseenter', () => {
+      const hoverRating = parseInt(btn.dataset.rating);
+      starsContainer.querySelectorAll('.star-btn').forEach((star, index) => {
+        const empty = star.querySelector('.star-empty');
+        const filled = star.querySelector('.star-filled');
+        if (index < hoverRating) {
+          empty.classList.add('hidden');
+          filled.classList.remove('hidden');
+        } else if (index >= selectedRating) {
+          empty.classList.remove('hidden');
+          filled.classList.add('hidden');
+        }
+      });
+    });
+    
+    btn.addEventListener('mouseleave', () => {
+      starsContainer.querySelectorAll('.star-btn').forEach((star, index) => {
+        const empty = star.querySelector('.star-empty');
+        const filled = star.querySelector('.star-filled');
+        if (index < selectedRating) {
+          empty.classList.add('hidden');
+          filled.classList.remove('hidden');
+        } else {
+          empty.classList.remove('hidden');
+          filled.classList.add('hidden');
+        }
+      });
+    });
+  });
+  
+  // Character counter
+  feedbackComment.addEventListener('input', () => {
+    const count = feedbackComment.value.length;
+    charCount.textContent = `${count}/500`;
+  });
+  
+  // Form submission
+  feedbackForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const comment = feedbackComment.value.trim();
+    
+    submitBtn.textContent = '...';
+    submitBtn.disabled = true;
+    
+    try {
+      const res = await fetch(`${supabaseUrl}/rest/v1/feedback`, {
+        method: 'POST',
+        headers: {
+          'apikey': supabaseKey,
+          'Authorization': `Bearer ${supabaseKey}`,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({
+          rating: selectedRating,
+          comment: comment || null,
+          lang: lang
+        })
+      });
+      
+      if (res.ok || res.status === 201) {
+        stepFeedback.classList.add('hidden');
+        stepThanks.classList.remove('hidden');
+      } else {
+        throw new Error('API error');
+      }
+    } catch (err) {
+      // Fallback: save to localStorage
+      const feedbacks = JSON.parse(localStorage.getItem('dr_feedback') || '[]');
+      feedbacks.push({
+        rating: selectedRating,
+        comment: comment || null,
+        lang: lang,
+        created_at: new Date().toISOString()
+      });
+      localStorage.setItem('dr_feedback', JSON.stringify(feedbacks));
+      
+      // Still show success
+      stepFeedback.classList.add('hidden');
+      stepThanks.classList.remove('hidden');
+    }
+  });
+</script>
+
+<style>
+  .star-btn:focus {
+    outline: 2px solid #CD202C;
+    outline-offset: 4px;
+    border-radius: 8px;
+  }
+</style>

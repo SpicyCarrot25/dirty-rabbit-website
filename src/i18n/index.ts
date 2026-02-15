@@ -53,6 +53,8 @@ const pathMappings: Record<string, Record<Language, string>> = {
   'contacto': { es: 'contacto', en: 'contact', ca: 'contacte', fr: 'contact', ru: 'contact', uk: 'contact', pl: 'contact' },
   'contact': { es: 'contacto', en: 'contact', ca: 'contacte', fr: 'contact', ru: 'contact', uk: 'contact', pl: 'contact' },
   'contacte': { es: 'contacto', en: 'contact', ca: 'contacte', fr: 'contact', ru: 'contact', uk: 'contact', pl: 'contact' },
+  // Review page (same in all languages)
+  'review': { es: 'review', en: 'review', ca: 'review', fr: 'review', ru: 'review', uk: 'review', pl: 'review' },
   // News index
   'news': { es: 'news', en: 'news', ca: 'news', fr: 'actualites', ru: 'news', uk: 'news', pl: 'news' },
   'actualites': { es: 'news', en: 'news', ca: 'news', fr: 'actualites', ru: 'news', uk: 'news', pl: 'news' },
