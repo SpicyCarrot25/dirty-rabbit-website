@@ -1,0 +1,150 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const locationName = "Pals";
+const locationSlug = "pals";
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/en/guide/' },
+  { name: `Best coffee in ${locationName}`, url: `https://dirtyrabbit.es/en/guide/best-coffee-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Best Specialty Coffee in ${locationName} — Local Guide 2026`}
+  description={`Where to find specialty coffee in ${locationName}, Costa Brava. Grava, Dirty Rabbit and more — honest guide to third-wave cafés.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">LOCAL GUIDE · SPECIALTY COFFEE</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Best Specialty Coffee in {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Pals is a medieval postcard: a perfectly preserved Gothic quarter, an 11th-century Romanesque tower, and rice paddies that give the village an unexpected feel. The old town is small but immaculate — stone, arches, views across the Empordà. And now it also has specialty coffee.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Grava — Coffee, pizza, and natural wines</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Font, 7, Pals · At the foot of the medieval village</p>
+          
+          <p class="mb-4">
+            Grava is the meeting point for cyclists, locals, and tourists with good taste. Specialty coffee (possibly Right Side from Barcelona), artisan pizzas, tapas, craft beers, and natural wines. The chill-out terrace is perfect after a gravel ride.
+          </p>
+          <p class="mb-4">
+            They organise gravel rides and yoga events. They call themselves "the best specialty café and pizzeria on Costa Brava" — confident, but the product backs it up.
+          </p>
+          <p class="mb-4">
+            Open Monday to Sunday (closed Wednesday). Hours: 8:30–13:00 and 18:30–00:30.
+          </p>
+          <p class="font-mono text-sm"><strong>Best for:</strong> Coffee + sunset pizza on the terrace.</p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — 25 minutes to the best coffee
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 25 min drive from Pals</p>
+          
+          <p class="mb-4">
+            If you're after the best specialty coffee on Costa Brava, Dirty Rabbit is 25 minutes away — and it's a perfect excursion if you're heading towards the coast.
+          </p>
+          
+          <p class="mb-4">
+            We serve <strong>La Cabra</strong>, the Danish roaster that's been in the global specialty elite for years. Every bean is fully traceable: farm, altitude, variety, process. We prepare it on our <strong>La Marzocco KB90</strong> with <strong>RO-filtered water</strong>. This isn't "good" coffee — it's extraordinary.
+          </p>
+          
+          <p class="mb-4">
+            Beyond coffee, you can have a leisurely breakfast (eggs benedict, toast, bowls) and then walk down to Sant Pol Beach in 3 minutes. Combine medieval Pals in the morning + Dirty Rabbit + swim in S'Agaró — perfect day plan.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Our three pillars</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Wild Comfort</strong> — A place that's wild and cosy at once.</li>
+            <li><strong>Intention</strong> — Everything we do has a why.</li>
+            <li><strong>Belonging</strong> — A place where you fit in, wherever you're from.</li>
+          </ul>
+          
+          <p class="mb-4">
+            We speak <strong>Spanish, Catalan, English, and Polish</strong>. Menus in Russian, French, and Ukrainian.
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 View on Google Maps →
+          </a>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distances from {locationName}</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Café</th>
+                <th class="text-left py-3">Time</th>
+                <th class="text-left py-3">Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Grava</td>
+                <td class="py-3">In Pals</td>
+                <td class="py-3">Right Side + pizzeria</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Fitzroy Café</td>
+                <td class="py-3">15 min (Begur)</td>
+                <td class="py-3">Melbourne-style (seasonal)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">25 min</td>
+                <td class="py-3">La Cabra (Denmark)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Rustik Empordà</td>
+                <td class="py-3">20 min (Bellcaire)</td>
+                <td class="py-3">Bakery café</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Coming to see us?</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            25 minutes from Pals. Combine medieval + coffee + beach.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

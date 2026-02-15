@@ -1,0 +1,161 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const locationName = "Calonge";
+const locationSlug = "calonge";
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guides', url: 'https://dirtyrabbit.es/fr/guides/' },
+  { name: `Meilleur café à ${locationName}`, url: `https://dirtyrabbit.es/fr/guides/meilleur-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Meilleur café de spécialité à ${locationName} — Guide local 2026`}
+  description={`Où trouver le meilleur café de spécialité près de ${locationName} et Sant Antoni de Calonge, Costa Brava. Guide local.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · CAFÉ DE SPÉCIALITÉ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Meilleur café de spécialité à {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Calonge est un village médiéval avec château et criques cachées parmi les pins. Sant Antoni de Calonge, sa partie côtière, est plus touristique mais garde un charme authentique. Pour le café de spécialité, les options locales se développent — et les meilleures adresses de la région sont à quelques minutes.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Dupla — Nouveau spot specialty</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Sant Antoni de Calonge · Près de la plage</p>
+          
+          <p class="mb-4">
+            Dupla est une nouvelle adresse de café de spécialité et brunch à Sant Antoni de Calonge. Près du front de mer, ils servent du café specialty (possiblement Right Side ou Nomad de Barcelone), espresso et filtré.
+          </p>
+          <p class="mb-4">
+            Encore récent et en train de construire sa réputation — vérifiez les horaires sur Instagram avant de venir.
+          </p>
+          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Un spot prometteur à surveiller.</p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — Le meilleur de la zone (10 min)
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 10 min en voiture</p>
+          
+          <p class="mb-4">
+            Depuis Calonge ou Sant Antoni, vous êtes à 10 minutes du meilleur café de spécialité de la Costa Brava.
+          </p>
+          
+          <p class="mb-4">
+            Nous servons <strong>La Cabra</strong> — le torréfacteur danois mondialement reconnu. Préparé sur <strong>La Marzocco KB90</strong> avec eau filtrée. C'est le niveau au-dessus du "bon café" — c'est extraordinaire.
+          </p>
+          
+          <p class="mb-4">
+            Parfait pour un brunch après avoir exploré les criques de Calonge, ou comme pause pendant une journée à la plage de Sant Antoni.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Depuis Calonge</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>10 minutes en voiture</strong> — Route directe vers S'Agaró</li>
+            <li><strong>25 minutes à vélo</strong> — Agréable route côtière</li>
+          </ul>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Voir sur Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">Autres options à proximité</h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">☕ La Maglia — Platja d'Aro (8 min)</h3>
+          <p class="mb-4">
+            Torréfacteur local avec café 100% Arabica, culture cycliste, grande terrasse. Bonne option pour un café rapide.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">☕ Zero — Palamós (10 min)</h3>
+          <p class="mb-4">
+            Café de spécialité tranquille avec espresso, filtré et options véganes. 5.0/5 sur TripAdvisor.
+          </p>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distances depuis Calonge</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Café</th>
+                <th class="text-left py-3">Distance</th>
+                <th class="text-left py-3">Temps</th>
+                <th class="text-left py-3">Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Dupla</td>
+                <td class="py-3">2 km</td>
+                <td class="py-3">5 min</td>
+                <td class="py-3">Nouveau spot</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">5 km</td>
+                <td class="py-3">8 min</td>
+                <td class="py-3">Torréfaction propre</td>
+              </tr>
+              <tr class="border-b border-black/20 bg-cream">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">7 km</td>
+                <td class="py-3">10 min</td>
+                <td class="py-3">La Cabra (Danemark)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Zero</td>
+                <td class="py-3">8 km</td>
+                <td class="py-3">10 min</td>
+                <td class="py-3">Specialty Palamós</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">On vous attend</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            À 10 minutes de Calonge. Le meilleur café vous attend.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Comment venir
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

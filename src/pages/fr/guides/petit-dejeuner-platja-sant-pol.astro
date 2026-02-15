@@ -1,0 +1,134 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const locationName = "Platja de Sant Pol";
+const locationSlug = "platja-sant-pol";
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guides', url: 'https://dirtyrabbit.es/fr/guides/' },
+  { name: `Petit-déjeuner près de ${locationName}`, url: `https://dirtyrabbit.es/fr/guides/petit-dejeuner-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Où prendre le petit-déjeuner près de ${locationName} — Guide 2026`}
+  description={`Les meilleures adresses pour le petit-déjeuner et le brunch près de la plage de Sant Pol, entre S'Agaró et Sant Feliu. Guide local.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · PETIT-DÉJEUNER</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Où prendre le petit-déjeuner près de {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          La Platja de Sant Pol est l'une des plus belles plages de la Costa Brava : sable fin, eaux cristallines, cabines de bain historiques. Et juste à côté, à S'Agaró, vous trouverez le meilleur petit-déjeuner de la région.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — Le petit-déjeuner parfait
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 3 min à pied de Sant Pol</p>
+          
+          <p class="mb-4">
+            À quelques pas de la plage, Dirty Rabbit est l'endroit idéal pour commencer la journée. Café La Cabra (Danemark), brunch artisanal, et une ambiance décontractée qui donne envie de rester.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mt-6 mb-3">Notre carte petit-déjeuner</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Œufs Bénédicte</strong> — Classiques ou au saumon fumé</li>
+            <li><strong>Bagels</strong> — Garnitures variées, pain frais</li>
+            <li><strong>Toasts artisanaux</strong> — Avocat, ricotta, confiture maison...</li>
+            <li><strong>Bowls</strong> — Açaí, granola, fruits frais</li>
+            <li><strong>Café La Cabra</strong> — Espresso, flat white, filtré...</li>
+          </ul>
+
+          <h3 class="font-typewriter text-xl mt-6 mb-3">La matinée parfaite</h3>
+          <ol class="space-y-2 mb-6">
+            <li><strong>8h00</strong> — Baignade matinale à Sant Pol (la plage est presque vide)</li>
+            <li><strong>9h30</strong> — Petit-déjeuner chez Dirty Rabbit</li>
+            <li><strong>11h00</strong> — Camí de Ronda vers Sa Conca</li>
+            <li><strong>12h30</strong> — Deuxième baignade et détente</li>
+          </ol>
+          
+          <p class="mb-4">
+            Nous parlons <strong>espagnol, catalan, anglais et polonais</strong>. Menus en français disponibles.
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Voir sur Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">Autres options à proximité</h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">☕ Chiringuitos de Sant Pol</h3>
+          <p class="mb-4">
+            En été, les chiringuitos sur la plage proposent des petits-déjeuners basiques : café, toast, jus d'orange. Pratique si vous ne voulez pas quitter le sable, mais la qualité est standard.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">☕ ANNNA — Sant Feliu (7 min)</h3>
+          <p class="mb-4">
+            Café de spécialité + boulangerie sans gluten dans une belle maison du XIXe siècle. Leur pain au levain et les tartines sont excellents. Ouvert Jeu-Lun, 9h-14h30.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">☕ La Maglia — Platja d'Aro (8 min)</h3>
+          <p class="mb-4">
+            Torréfacteur local avec grande terrasse. Bowls açaí, toasts, café torréfié sur place. Ambiance cycliste.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">À propos de la Platja de Sant Pol</h2>
+          
+          <p class="mb-4">
+            Sant Pol est une plage historique, avec ses cabines de bain des années 1920 encore debout. L'eau est particulièrement claire ici — parfait pour le snorkeling le long des rochers.
+          </p>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Parking :</strong> Limité, arrivez avant 10h en été</li>
+            <li><strong>Services :</strong> Transats, parasols, chiringuitos (en saison)</li>
+            <li><strong>Ambiance :</strong> Familiale, moins bondée que Platja d'Aro</li>
+            <li><strong>Accès :</strong> Depuis S'Agaró ou par le Camí de Ronda depuis Sant Feliu</li>
+          </ul>
+        </section>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">On vous attend après votre baignade</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            À 3 minutes de la plage de Sant Pol. Venez comme vous êtes.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Comment venir
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

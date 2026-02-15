@@ -1,0 +1,137 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const locationName = "Camí de Ronda";
+const locationSlug = "cami-de-ronda";
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/en/guide/' },
+  { name: `Breakfast on the ${locationName}`, url: `https://dirtyrabbit.es/en/guide/breakfast-near-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Where to have breakfast on the ${locationName} — Guide 2026`}
+  description={`The best spots for breakfast or brunch after hiking the Camí de Ronda coastal path, Costa Brava. Dirty Rabbit in S'Agaró.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">LOCAL GUIDE · BREAKFAST</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Breakfast on the {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          The Camí de Ronda is the legendary coastal path of the Costa Brava. After a morning walk along the cliffs, with the sea at your feet and the sun rising, there's nothing better than a proper breakfast to complete the experience.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🥾 The Sant Feliu → S'Agaró route</h2>
+          
+          <p class="mb-4">
+            One of the most beautiful stretches of the Camí de Ronda is between Sant Feliu de Guíxols and S'Agaró. About 30-45 minutes of spectacular walking, with incredible views and coves where you can stop for a swim.
+          </p>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Start:</strong> Sant Feliu de Guíxols beach</li>
+            <li><strong>End:</strong> Platja de Sant Pol (S'Agaró)</li>
+            <li><strong>Duration:</strong> 30-45 minutes</li>
+            <li><strong>Difficulty:</strong> Moderate (stairs, sometimes uneven terrain)</li>
+            <li><strong>Best time:</strong> Early morning (8am-9am) to avoid the heat</li>
+          </ul>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — The perfect reward
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · At the end of the Camí de Ronda</p>
+          
+          <p class="mb-4">
+            When you arrive in S'Agaró after your walk, Dirty Rabbit is just minutes away. It's the perfect reward: extraordinary coffee, hearty brunch, and an atmosphere where you can settle in comfortably.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mt-6 mb-3">What we recommend after the walk</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>La Cabra flat white</strong> — The best coffee on the Costa Brava to recharge</li>
+            <li><strong>Eggs Benedict</strong> — Protein and pleasure after the effort</li>
+            <li><strong>Avocado toast</strong> — Fresh and filling</li>
+            <li><strong>Fresh juice</strong> — Vitamins to finish</li>
+          </ul>
+
+          <h3 class="font-typewriter text-xl mt-6 mb-3">The perfect morning</h3>
+          <ol class="space-y-2 mb-6">
+            <li><strong>8:00</strong> — Start Camí de Ronda from Sant Feliu</li>
+            <li><strong>8:45</strong> — Arrive at Sant Pol, quick swim</li>
+            <li><strong>9:30</strong> — Brunch at Dirty Rabbit</li>
+            <li><strong>11:00</strong> — Relaxed return (or explore S'Agaró)</li>
+          </ol>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 View on Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">Other Camí de Ronda routes</h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">S'Agaró → Platja d'Aro</h3>
+          <p class="mb-4">
+            Another popular stretch. About 25 minutes' walk. Breakfast at La Maglia in Platja d'Aro on arrival.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">Begur → Calella de Palafrugell</h3>
+          <p class="mb-4">
+            Further north, a spectacular route (1h30-2h). Fitzroy Café in Begur for breakfast before or after.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">💡 Practical tips</h2>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Proper shoes</strong> — The terrain is sometimes rocky and uneven</li>
+            <li><strong>Water</strong> — Bring a bottle, especially in summer</li>
+            <li><strong>Swimsuit</strong> — There are coves along the way for swimming</li>
+            <li><strong>Sun cream</strong> — Little shade on some stretches</li>
+            <li><strong>Camera</strong> — The views are spectacular</li>
+          </ul>
+        </section>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">We're waiting at the finish line</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            The best way to end your Camí de Ronda hike.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

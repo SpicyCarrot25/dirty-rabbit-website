@@ -1,0 +1,206 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const locationName = "Girona";
+const locationSlug = "girona";
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' },
+  { name: `Mejor café en ${locationName}`, url: `https://dirtyrabbit.es/guia/mejor-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Mejor café de especialidad en ${locationName} — Guía local 2026`}
+  description={`Las mejores cafeterías de specialty coffee en ${locationName}. La Fábrica, Espresso Mafia, Oniria y más — guía completa para amantes del café.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <!-- Header -->
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUÍA LOCAL · CAFÉ DE ESPECIALIDAD</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Mejor café de especialidad en {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Girona es la capital del specialty coffee en Cataluña fuera de Barcelona. Ciudad pequeña, casco antiguo precioso, y una comunidad ciclista internacional que ha transformado la escena cafetera. Aquí tienes las mejores opciones — y una razón para bajar a la costa después.
+        </p>
+      </header>
+
+      <!-- Main Content -->
+      <div class="prose prose-lg max-w-none">
+        
+        <!-- La Fábrica Section -->
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ La Fábrica — El OG del specialty en Girona</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Llebre, 3, Girona</p>
+          
+          <p class="mb-4">
+            La Fábrica es leyenda. Abierta en marzo de 2015 por el ex-ciclista profesional Christian Meier y su mujer Amber, en un antiguo taller de carpintería con paredes de piedra. Bomba de bicicleta en la puerta, candados prestables, y más de 90 ciclistas profesionales entre sus clientes habituales.
+          </p>
+          <p class="mb-4">
+            Tuestan bajo el sello <strong>Approachable Coffee</strong> en un tostador Joper de 15 kilos. El café llega a Barcelona, Yakarta, Portland y Viena. Amber hornea los pasteles en su propio horno. El ambiente es de los que te hacen querer quedarte.
+          </p>
+          <p class="font-mono text-sm"><strong>Lo mejor:</strong> El espresso house con un pastry de Amber. Pura Girona.</p>
+        </section>
+
+        <!-- Espresso Mafia Section -->
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Espresso Mafia — El hermano experimental</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Cort Reial, 5, Girona · 2 min andando de La Fábrica</p>
+          
+          <p class="mb-4">
+            Espresso Mafia es el segundo local de La Fábrica, abierto en 2017. Más moderno, más pequeño, sin Wi-Fi. Hasta 5 cafés diferentes disponibles, vuelos de degustación, nitro coffee estacional. Máquina Sanremo Cafe Racer custom de dos grupos.
+          </p>
+          <p class="font-mono text-sm"><strong>Lo mejor:</strong> Los vuelos de degustación para comparar diferentes tuestes.</p>
+        </section>
+
+        <!-- Oniria Section -->
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Oniria Café — Tostadores invitados de Europa</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer del Nord, 11, Girona</p>
+          
+          <p class="mb-4">
+            Abierta en 2021, Oniria es una cafetería pequeña e íntima con tostadores invitados rotativos de toda Europa. Pastelería raw vegan y sin azúcar, ambiente consciente. Venden granos para casa. Pet-friendly, terraza pequeña.
+          </p>
+          <p class="font-mono text-sm"><strong>Lo mejor:</strong> Descubrir un tostador europeo que no conocías.</p>
+        </section>
+
+        <!-- Originem Section -->
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Originem — Km0 y sostenibilidad</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Força, 1, A, Girona</p>
+          
+          <p class="mb-4">
+            Café sostenible km0 en el casco antiguo. Tazas de cerámica hechas a mano, productos regionales, zero-waste. Tostadas de masa madre, pastelería catalana (xuixo!), paredes de piedra originales. También tienda de productos locales.
+          </p>
+        </section>
+
+        <!-- Hors Catégorie Section -->
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Hors Catégorie — El café de los ciclistas</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer del Perill, 3, Girona</p>
+          
+          <p class="mb-4">
+            Nombrado por la categoría más dura del ciclismo. Café Nomad de Barcelona en máquina Rocket Espresso. Comida saludable, cervezas craft, memorabilia ciclista. Abierto hasta tarde, perfecto para una cerveza post-ride.
+          </p>
+        </section>
+
+        <!-- Dirty Rabbit Section -->
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — Si bajas a la costa
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 35 min en coche desde Girona</p>
+          
+          <p class="mb-4">
+            Si después de Girona te apetece playa y el mejor café de la Costa Brava, Dirty Rabbit está a 35 minutos en S'Agaró.
+          </p>
+          
+          <p class="mb-4">
+            Servimos <strong>La Cabra</strong> — el tostador danés que compite al mismo nivel que Approachable. Trazabilidad completa, tueste de precisión, preparado en <strong>La Marzocco KB90</strong> con agua filtrada por <strong>ósmosis inversa</strong>.
+          </p>
+          
+          <p class="mb-4">
+            Combina un día en Girona con un atardecer en S'Agaró: café, baño en Sant Pol, Camí de Ronda. Plan redondo.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Nuestros tres pilares</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Wild Comfort</strong> — Un sitio salvaje y acogedor a la vez.</li>
+            <li><strong>Intention</strong> — Todo lo que hacemos tiene un porqué.</li>
+            <li><strong>Belonging</strong> — Un lugar donde encajas, vengas de donde vengas.</li>
+          </ul>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Ver en Google Maps →
+          </a>
+        </section>
+
+        <!-- Distance Table -->
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Cafeterías specialty en {locationName}</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Cafetería</th>
+                <th class="text-left py-3">Ubicación</th>
+                <th class="text-left py-3">Café</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">La Fábrica</td>
+                <td class="py-3">Casco antiguo</td>
+                <td class="py-3">Approachable (propio)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Espresso Mafia</td>
+                <td class="py-3">Casco antiguo</td>
+                <td class="py-3">Approachable (propio)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Oniria Café</td>
+                <td class="py-3">Casco antiguo</td>
+                <td class="py-3">Tostadores invitados</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Originem</td>
+                <td class="py-3">Casco antiguo</td>
+                <td class="py-3">Km0 specialty</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Hors Catégorie</td>
+                <td class="py-3">Casco antiguo</td>
+                <td class="py-3">Nomad Coffee</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Federal Café</td>
+                <td class="py-3">Casco antiguo</td>
+                <td class="py-3">Cadena specialty</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">S'Agaró (35 min)</td>
+                <td class="py-3">La Cabra (Dinamarca)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">¿Bajas a la costa?</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            35 minutos desde Girona. Café + playa + Camí de Ronda.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Cómo llegar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

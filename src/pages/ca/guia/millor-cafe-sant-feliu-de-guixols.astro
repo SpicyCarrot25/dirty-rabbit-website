@@ -1,0 +1,159 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'ca';
+const locationName = "Sant Feliu de Guíxols";
+const locationSlug = "sant-feliu-de-guixols";
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `Millor cafè prop de ${locationName}`, url: `https://dirtyrabbit.es/ca/guia/millor-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Millor cafè d'especialitat prop de ${locationName} — Guia local 2026`}
+  description={`On trobar specialty coffee a ${locationName}, Costa Brava. Des d'ANNNA fins a Dirty Rabbit a S'Agaró — guia honesta de cafeteries d'especialitat.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIA LOCAL · CAFÈ D'ESPECIALITAT</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Millor cafè d'especialitat prop de {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Sant Feliu de Guíxols és la capital històrica de la Costa Brava sud: port pesquer actiu, monestir benedictí del segle X, i una tradició surera que va definir el poble durant segles. Avui és un lloc autèntic, sense les masses de Lloret però amb tot el que necessites. Incloent, per fi, bon cafè d'especialitat.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ ANNNA — El primer specialty a Sant Feliu</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de l'Hospital 21, Sant Feliu de Guíxols · Al centre</p>
+          
+          <p class="mb-4">
+            ANNNA va ser el primer specialty coffee de Sant Feliu, i segueix sent referència. L'Ana (fleca) i en Pascal (cafè) han creat un espai únic a la Casa Trachsler, una casa senyorial del segle XIX al casc antic.
+          </p>
+          <p class="mb-4">
+            És cafè d'especialitat, fleca artesana 100% sense gluten, i concept store amb productes locals (olis de l'Empordà, vins naturals, ceràmica). El pa de massa mare sense gluten és excepcional.
+          </p>
+          <p class="mb-4">
+            Oberta de dijous a dilluns, de 9:00 a 14:30. Tancada dimarts i dimecres. Pet-friendly, accessible.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Maison Marcel — Pastisseria francesa amb bon cafè</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer Major, 5, Sant Feliu de Guíxols · Al centre</p>
+          
+          <p class="mb-4">
+            L'Andrea i en Franck han portat un tros de França a Sant Feliu. Els croissants de mantega amb farina ecològica km0 són els millors de la zona — sense discussió. Pain au chocolat, Paris-Brest, tiramisú... tot artesà.
+          </p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — 5 minuts i un altre nivell de cafè
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avinguda Platja d'Aro 275, S'Agaró · 5 min en cotxe des de Sant Feliu</p>
+          
+          <p class="mb-4">
+            Si busques el millor cafè d'especialitat de veritat, Dirty Rabbit és a 5 minuts seguint la costa cap a S'Agaró.
+          </p>
+          
+          <p class="mb-4">
+            Servim <strong>La Cabra</strong> — el torrefactor danès que fa anys que és a l'elit mundial del specialty coffee. Cada gra és traçable fins a la finca d'origen. El preparem a la <strong>La Marzocco KB90</strong> amb aigua filtrada per <strong>osmosi inversa</strong> — perquè la diferència està en els detalls.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Com arribar des de Sant Feliu</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>5 minuts en cotxe</strong> per la carretera de la costa (GI-682).</li>
+            <li><strong>20-30 minuts caminant</strong> pel Camí de Ronda — una de les rutes més boniques de la Costa Brava.</li>
+            <li><strong>10 minuts en bici</strong> per la carretera o pel camí costaner.</li>
+          </ul>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Els nostres tres pilars</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Wild Comfort</strong> — Un lloc salvatge i acollidor alhora.</li>
+            <li><strong>Intention</strong> — Tot el que fem té un perquè.</li>
+            <li><strong>Belonging</strong> — Un lloc on encaixes, vinguis d'on vinguis.</li>
+          </ul>
+          
+          <p class="mb-4">
+            Parlem <strong>castellà, català, anglès i polonès</strong>. Tenim cartes en rus, francès i ucraïnès.
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Veure a Google Maps →
+          </a>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distàncies des de {locationName}</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Cafeteria</th>
+                <th class="text-left py-3">Temps</th>
+                <th class="text-left py-3">Tipus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">ANNNA</td>
+                <td class="py-3">A Sant Feliu</td>
+                <td class="py-3">Specialty + fleca GF</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Maison Marcel</td>
+                <td class="py-3">A Sant Feliu</td>
+                <td class="py-3">Fleca francesa</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">5 min</td>
+                <td class="py-3">La Cabra (Dinamarca)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">7 min</td>
+                <td class="py-3">Torrefactor propi</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avinguda Platja d'Aro 275, S'Agaró<br>
+            A 5 minuts de Sant Feliu. Obre la porta i queda't l'estona que vulguis.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

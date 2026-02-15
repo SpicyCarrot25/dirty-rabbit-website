@@ -1,0 +1,234 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const locationName = "Platja d'Aro";
+const locationSlug = "platja-daro";
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' },
+  { name: `Qué hacer en ${locationName}`, url: `https://dirtyrabbit.es/guia/que-hacer-en-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Qué hacer en ${locationName} — Guía local 2026`}
+  description={`Todo lo que puedes hacer en ${locationName}: playas, paseo marítimo, compras, vida nocturna y excursiones. Guía escrita por locales.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUÍA LOCAL</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Qué hacer en {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Platja d'Aro es el centro turístico de la Costa Brava sur: kilómetros de playa, paseo marítimo animado, tiendas, restaurantes y una vida nocturna que no para hasta el amanecer. Es el sitio perfecto para quien busca acción y opciones — y también una base excelente para explorar rincones más tranquilos como S'Agaró o Sant Feliu de Guíxols.
+        </p>
+      </header>
+
+      <!-- Playas -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🏖️</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Playas</h2>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="p-6 bg-cream">
+            <h3 class="font-typewriter text-xl mb-2">Platja Gran</h3>
+            <p class="font-mono text-black/80">
+              La playa principal: más de 2 km de arena, paseo marítimo con chiringuitos, alquiler de tumbonas y patines, aguas tranquilas. Perfecta para familias. En verano hay socorristas, duchas y todo tipo de servicios.
+            </p>
+          </div>
+          
+          <div class="p-6 bg-cream">
+            <h3 class="font-typewriter text-xl mb-2">Cala Rovira</h3>
+            <p class="font-mono text-black/80">
+              Al norte del centro, más recogida. Rodeada de pinos, con un chiringuito clásico. Ideal para quien busca algo más íntimo sin alejarse del pueblo.
+            </p>
+          </div>
+          
+          <div class="p-6 bg-cream">
+            <h3 class="font-typewriter text-xl mb-2">A 5 minutos: Platja de Sant Pol</h3>
+            <p class="font-mono text-black/80">
+              La playa más bonita de la zona está en S'Agaró, a 5 minutos en coche o 15 en bici. Arena fina, aguas cristalinas, casetas de baño históricas. Mucho menos masificada que Platja d'Aro.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Paseo y compras -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🛍️</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Paseo marítimo y compras</h2>
+        </div>
+        <div class="prose prose-lg max-w-none font-mono text-black/80">
+          <p>
+            El paseo marítimo de Platja d'Aro es el corazón del pueblo. Tiendas de todo tipo, heladerías, restaurantes con terrazas mirando al mar. En verano se llena de gente paseando hasta tarde.
+          </p>
+          <p>
+            Para compras más serias, el centro comercial cerca de la carretera tiene marcas conocidas. Y si buscas productos locales, el mercado de los viernes (por la mañana) tiene fruta, quesos, embutidos y ropa.
+          </p>
+        </div>
+      </section>
+
+      <!-- Vida nocturna -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🌙</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Vida nocturna</h2>
+        </div>
+        <div class="prose prose-lg max-w-none font-mono text-black/80">
+          <p>
+            Platja d'Aro es conocido por su vida nocturna — de las más activas de la Costa Brava. Discotecas como Pacha (ahora Nuba), chiringuitos con música hasta tarde, bares de copas en el paseo. En julio y agosto la fiesta no para.
+          </p>
+          <p>
+            Si prefieres algo más tranquilo, los cócteles al atardecer en alguna terraza del paseo son una opción más relajada.
+          </p>
+        </div>
+      </section>
+
+      <!-- Excursiones -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🥾</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Excursiones desde Platja d'Aro</h2>
+        </div>
+        <ul class="space-y-4 font-mono text-black/80">
+          <li>
+            <strong>S'Agaró (5 min)</strong> — Urbanización noucentista con el Camí de Ronda más bonito de la costa. Imprescindible para un paseo y un café en <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">Dirty Rabbit</a>.
+          </li>
+          <li>
+            <strong>Sant Feliu de Guíxols (10 min)</strong> — Puerto pesquero, monasterio benedictino, mercado los domingos. Ciudad con personalidad.
+          </li>
+          <li>
+            <strong>Palamós (15 min)</strong> — Las famosas gambas rojas. Visita la lonja, el Museo de la Pesca, y prueba el arroz de gamba.
+          </li>
+          <li>
+            <strong>Begur y sus calas (30 min)</strong> — Pueblo con encanto, casas indianas, y las calas más bonitas: Aiguafreda, Sa Tuna, Fornells.
+          </li>
+          <li>
+            <strong>Pals (25 min)</strong> — Pueblo medieval perfectamente conservado. Campos de arroz, torre románica, calles de piedra.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Actividades -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🚴</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Actividades</h2>
+        </div>
+        <ul class="space-y-3 font-mono text-black/80">
+          <li>
+            <strong>Ciclismo</strong> — Rutas de gravel y carretera espectaculares. La Maglia es el punto de encuentro ciclista.
+          </li>
+          <li>
+            <strong>Deportes acuáticos</strong> — Kayak, paddle surf, jet ski, parasailing. Todo disponible en la playa en verano.
+          </li>
+          <li>
+            <strong>Golf</strong> — Dos campos cerca: Mas Nou y d'Aro.
+          </li>
+          <li>
+            <strong>Parques acuáticos</strong> — Aquadiver está a 10 minutos. Perfecto con niños.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Dónde desayunar -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">☕</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Dónde desayunar bien</h2>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="p-6 bg-cream border-l-4 border-red">
+            <h3 class="font-typewriter text-xl mb-2">🐇 Dirty Rabbit — 5 min en coche (S'Agaró)</h3>
+            <p class="font-mono text-black/80">
+              El mejor specialty coffee de la zona. La Cabra de Dinamarca, brunch con producto local, y un ambiente de "casa lejos de casa". Merece la pena los 5 minutos hasta S'Agaró.
+            </p>
+            <a href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaro" class="inline-block mt-2 font-typewriter text-red hover:underline text-sm">
+              Ver en Google Maps →
+            </a>
+          </div>
+          
+          <div>
+            <h3 class="font-typewriter text-xl mb-2">En Platja d'Aro</h3>
+            <ul class="space-y-2 font-mono text-black/80">
+              <li>
+                <strong>La Maglia</strong> — Tostadero propio, cultura ciclista, terraza grande. Muy buena opción para café de especialidad sin salir del pueblo.
+              </li>
+              <li>
+                <strong>Grace Coffee</strong> — Café casual con desayunos. Cómodo, sin pretensiones.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tips -->
+      <section class="mb-12 p-6 bg-cream">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">💡</span>
+          <h2 class="font-typewriter text-2xl">Tips de local</h2>
+        </div>
+        <ol class="space-y-2 font-mono text-black/80 list-decimal list-inside">
+          <li><strong>El parking en verano es complicado.</strong> Usa los parkings públicos de la zona alta o llega temprano.</li>
+          <li><strong>Los mejores restaurantes se llenan.</strong> Reserva con antelación en temporada alta.</li>
+          <li><strong>No todo está en Platja d'Aro.</strong> A 5-10 minutos hay opciones más tranquilas y con más encanto.</li>
+          <li><strong>Los domingos por la mañana</strong> hay mercado en Sant Feliu — merece la pena el paseo.</li>
+          <li><strong>Para playas más bonitas,</strong> escápate a Sant Pol en S'Agaró o a las calas de Calonge.</li>
+        </ol>
+      </section>
+
+      <!-- Internal Links -->
+      <section class="mt-12 p-6 bg-cream">
+        <h2 class="font-typewriter text-xl mb-4">Explora más</h2>
+        <ul class="space-y-2 font-mono text-sm">
+          <li>
+            <a href="/guia/mejor-cafe-platja-daro" class="text-red hover:underline">
+              → Mejor café de especialidad cerca de Platja d'Aro
+            </a>
+          </li>
+          <li>
+            <a href="/guia/que-hacer-en-sagaro" class="text-red hover:underline">
+              → Qué hacer en S'Agaró
+            </a>
+          </li>
+          <li>
+            <a href="/guia/desayunar-cerca-de-centre-platja-daro" class="text-red hover:underline">
+              → Dónde desayunar en el centro de Platja d'Aro
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <section class="mt-12 text-center">
+        <p class="font-mono text-black/70 mb-4">
+          ¿Un café después de la playa? Estamos a 5 minutos, en S'Agaró.
+        </p>
+        <a 
+          href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaro"
+          target="_blank"
+          rel="noopener"
+          class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors"
+        >
+          Ven a Dirty Rabbit
+        </a>
+      </section>
+
+    </div>
+  </article>
+
+</Layout>

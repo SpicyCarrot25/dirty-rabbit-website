@@ -1,0 +1,137 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const locationName = "Camí de Ronda";
+const locationSlug = "cami-de-ronda";
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guides', url: 'https://dirtyrabbit.es/fr/guides/' },
+  { name: `Petit-déjeuner sur le ${locationName}`, url: `https://dirtyrabbit.es/fr/guides/petit-dejeuner-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Où petit-déjeuner sur le ${locationName} — Guide 2026`}
+  description={`Les meilleures adresses pour un petit-déjeuner ou brunch après une randonnée sur le Camí de Ronda, Costa Brava. Dirty Rabbit à S'Agaró.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · PETIT-DÉJEUNER</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Petit-déjeuner sur le {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Le Camí de Ronda est le sentier côtier mythique de la Costa Brava. Après une marche matinale le long des falaises, avec la mer à vos pieds et le soleil qui monte, il n'y a rien de mieux qu'un bon petit-déjeuner pour compléter l'expérience.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🥾 Le parcours Sant Feliu → S'Agaró</h2>
+          
+          <p class="mb-4">
+            L'un des tronçons les plus beaux du Camí de Ronda est celui entre Sant Feliu de Guíxols et S'Agaró. Environ 30-45 minutes de marche spectaculaire, avec des vues incroyables et des criques où vous pouvez vous arrêter pour une baignade.
+          </p>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Départ :</strong> Plage de Sant Feliu de Guíxols</li>
+            <li><strong>Arrivée :</strong> Platja de Sant Pol (S'Agaró)</li>
+            <li><strong>Durée :</strong> 30-45 minutes</li>
+            <li><strong>Difficulté :</strong> Modérée (escaliers, terrain parfois inégal)</li>
+            <li><strong>Meilleure heure :</strong> Tôt le matin (8h-9h) pour éviter la chaleur</li>
+          </ul>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — La récompense parfaite
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · À l'arrivée du Camí de Ronda</p>
+          
+          <p class="mb-4">
+            Quand vous arrivez à S'Agaró après votre marche, Dirty Rabbit est à quelques minutes. C'est la récompense parfaite : café extraordinaire, brunch copieux, et une ambiance où vous pouvez vous installer confortablement.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mt-6 mb-3">Ce qu'on vous recommande après la marche</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Flat white La Cabra</strong> — Le meilleur café de la Costa Brava pour reprendre des forces</li>
+            <li><strong>Œufs Bénédicte</strong> — Protéines et plaisir après l'effort</li>
+            <li><strong>Toast à l'avocat</strong> — Frais et nourrissant</li>
+            <li><strong>Jus frais</strong> — Vitamines pour compléter</li>
+          </ul>
+
+          <h3 class="font-typewriter text-xl mt-6 mb-3">La matinée parfaite</h3>
+          <ol class="space-y-2 mb-6">
+            <li><strong>8h00</strong> — Départ du Camí de Ronda depuis Sant Feliu</li>
+            <li><strong>8h45</strong> — Arrivée à Sant Pol, baignade rapide</li>
+            <li><strong>9h30</strong> — Brunch chez Dirty Rabbit</li>
+            <li><strong>11h00</strong> — Retour tranquille (ou explorez S'Agaró)</li>
+          </ol>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Voir sur Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">Autres parcours du Camí de Ronda</h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">S'Agaró → Platja d'Aro</h3>
+          <p class="mb-4">
+            Un autre tronçon populaire. Environ 25 minutes de marche. Petit-déjeuner possible chez La Maglia à Platja d'Aro à l'arrivée.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">Begur → Calella de Palafrugell</h3>
+          <p class="mb-4">
+            Plus au nord, un parcours spectaculaire (1h30-2h). Fitzroy Café à Begur pour le petit-déjeuner avant ou après.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">💡 Conseils pratiques</h2>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Chaussures fermées</strong> — Le terrain est parfois rocheux et inégal</li>
+            <li><strong>Eau</strong> — Prenez une bouteille, surtout en été</li>
+            <li><strong>Maillot de bain</strong> — Il y a des criques en chemin pour se baigner</li>
+            <li><strong>Crème solaire</strong> — Peu d'ombre sur certains tronçons</li>
+            <li><strong>Appareil photo</strong> — Les vues sont spectaculaires</li>
+          </ul>
+        </section>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">On vous attend à l'arrivée</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            La meilleure façon de terminer votre randonnée sur le Camí de Ronda.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Comment venir
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

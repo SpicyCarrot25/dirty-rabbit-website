@@ -1,0 +1,143 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+
+const locationName = "Platja d'Aro";
+const locationSlug = "platja-daro";
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `Esmorzar a ${locationName}`, url: `https://dirtyrabbit.es/ca/guia/esmorzar-prop-de-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`On esmorzar a ${locationName} — Guia 2026`}
+  description={`Les millors adreces per esmorzar i brunchar a ${locationName} i voltants, Costa Brava. Guia local.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIA LOCAL · ESMORZAR</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Esmorzar a {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Platja d'Aro és el centre turístic de la Costa Brava, amb moltes opcions per esmorzar. Però si busques més que un croissant estàndard i un cafè mediocre, aquí tens la nostra guia de les millors adreces — a Platja d'Aro i just al costat.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ La Maglia — Torrador local</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">C/ Juli Garreta, 10, Platja d'Aro · Al centre</p>
+          
+          <p class="mb-4">
+            La Maglia és el cafè d'especialitat de Platja d'Aro. Torren els seus propis grans (100% Aràbica, SCA 85+), i ofereixen bowls açaí, torrades, i pastisseria local.
+          </p>
+          <p class="mb-4">
+            L'ambient és ciclista — el nom ve del maillot rosa del Giro d'Italia. Gran terrassa, servei ràpid. Bona opció si et quedes al centre de Platja d'Aro.
+          </p>
+          <p class="font-mono text-sm"><strong>El millor:</strong> El seu cafè torrat in situ + bowl açaí.</p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — El millor esmorzar (5 min)
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avinguda Platja d'Aro 275, S'Agaró · 5 min en cotxe</p>
+          
+          <p class="mb-4">
+            Per al millor esmorzar de la zona, fes els 5 minuts fins a S'Agaró. Val realment la pena el tomb.
+          </p>
+          
+          <p class="mb-4">
+            Servim <strong>La Cabra</strong> — el torrador danès d'elit mundial. Preparat en <strong>La Marzocco KB90</strong> amb aigua filtrada. Això és cafè extraordinari, no només "bo".
+          </p>
+          
+          <h3 class="font-typewriter text-xl mt-6 mb-3">La nostra carta d'esmorzar</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Ous Beneïts</strong> — Clàssics o amb salmó fumat</li>
+            <li><strong>Bagels</strong> — Guarnicions variades, pa fresc del dia</li>
+            <li><strong>Torrades artesanes</strong> — Alvocat, ricotta, melmelada casolana</li>
+            <li><strong>Bowls</strong> — Açaí, granola, fruita de temporada</li>
+          </ul>
+
+          <h3 class="font-typewriter text-xl mt-6 mb-3">El bonus</h3>
+          <p class="mb-4">
+            Venint cap aquí, passes per davant de la Platja de Sant Pol — una de les platges més boniques de la zona. Perfecta per un bany abans o després de l'esmorzar.
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Veure a Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">Altres opcions</h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">ANNNA — Sant Feliu (7 min)</h3>
+          <p class="mb-4">
+            Cafè d'especialitat + fleca sense gluten en una casa preciosa del segle XIX. Torrades excel·lents, ambient únic. Obert dj-dl, 9h-14:30h.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">Hotels del passeig marítim</h3>
+          <p class="mb-4">
+            Diversos hotels ofereixen bufets d'esmorzar oberts a no-hostes. Còmode però sense res especial.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">Fleques del centre</h3>
+          <p class="mb-4">
+            Croissants i cafè estàndard. Correcte per un esmorzar ràpid, però res excepcional.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">La nostra recomanació</h2>
+          
+          <p class="mb-4">
+            Si ets de vacances a Platja d'Aro i busques una experiència d'esmorzar que surti de l'ordinari, fes el trajecte fins a S'Agaró. Descobriràs una altra cara de la Costa Brava — més autèntica, més tranquil·la, més bonica.
+          </p>
+          
+          <ol class="space-y-2 mb-6">
+            <li><strong>8:30</strong> — Ruta cap a S'Agaró (5 min)</li>
+            <li><strong>8:45</strong> — Bany a la Platja de Sant Pol</li>
+            <li><strong>9:30</strong> — Brunch a Dirty Rabbit</li>
+            <li><strong>11:00</strong> — Camí de Ronda cap a Sa Conca (o tornada)</li>
+          </ol>
+        </section>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">T'esperem a 5 minuts</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avinguda Platja d'Aro 275, S'Agaró<br>
+            El millor esmorzar de la zona. Val la pena el tomb.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

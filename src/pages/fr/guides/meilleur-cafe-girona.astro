@@ -1,0 +1,158 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const locationName = "Girona";
+const locationSlug = "girona";
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guides', url: 'https://dirtyrabbit.es/fr/guides/' },
+  { name: `Meilleur café à ${locationName}`, url: `https://dirtyrabbit.es/fr/guides/meilleur-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Meilleur café de spécialité à ${locationName} — Guide complet 2026`}
+  description={`Guide des meilleurs cafés de spécialité à ${locationName}. De La Fábrica à Espresso Mafia, Oniria et au-delà : où les cyclistes pros prennent leur café.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · CAFÉ DE SPÉCIALITÉ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Meilleur café de spécialité à {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Girona est la capitale provinciale et, grâce à sa communauté cycliste professionnelle, elle est devenue l'un des hauts lieux du café de spécialité en Espagne. Des anciens cyclistes pros aux baristas passionnés, la scène café ici est mature et diversifiée.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ La Fábrica — L'original</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Llebre, 3, Girona</p>
+          
+          <p class="mb-4">
+            La Fábrica est LE café de spécialité de Girona. Ouvert en mars 2015 par l'ancien cycliste professionnel Christian Meier et sa femme Amber, dans un ancien atelier de menuiserie aux murs de pierre.
+          </p>
+          <p class="mb-4">
+            Ils torréfient leur propre café sous le label <strong>Approachable Coffee</strong> sur un torréfacteur Joper de 15kg. Plus de 90 cyclistes professionnels fréquentent l'endroit. Amber prépare les pâtisseries maison. Pompe à vélo à l'entrée, cadenas à emprunter.
+          </p>
+          <p class="mb-4">
+            <strong>Horaires :</strong> Tous les jours 8h00–17h30. Fermé seulement le 25 déc et 6 jan.
+          </p>
+          <p class="font-mono text-sm"><strong>Le meilleur :</strong> L'expérience complète — café torréfié sur place, ambiance authentique, communauté cycliste.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Espresso Mafia — Le laboratoire</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Cort Reial, 5, Girona · 2 min à pied de La Fábrica</p>
+          
+          <p class="mb-4">
+            Le petit frère expérimental de La Fábrica, ouvert en 2017. Plus moderne, plus petit, sans WiFi. Jusqu'à 5 cafés différents disponibles avec des vols de dégustation et des offres saisonnières (nitro coffee...).
+          </p>
+          <p class="mb-4">
+            Machine Sanremo Cafe Racer customisée. Même café Approachable Coffee que La Fábrica, mais présenté différemment.
+          </p>
+          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Vol de dégustation pour comparer plusieurs origines.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Oniria Café — Les torréfacteurs invités</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer del Nord, 11, Girona</p>
+          
+          <p class="mb-4">
+            Petit café de spécialité ouvert en 2021 par un couple passionné. Le concept : torréfacteurs invités rotatifs de toute l'Europe. Espresso, filtré, et vente de grains pour chez soi.
+          </p>
+          <p class="mb-4">
+            Pâtisseries crues véganes et sans sucre, produits artisanaux. Ambiance intime et consciente.
+          </p>
+          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Découvrir des torréfacteurs européens qu'on ne trouve nulle part ailleurs.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Autres options notables</h2>
+          
+          <ul class="space-y-4">
+            <li>
+              <strong>La Maglia Girona</strong> — Le même La Maglia de Platja d'Aro, installé au Velódromo (ancien théâtre Odeon). Torréfaction propre.
+            </li>
+            <li>
+              <strong>Hors Catégorie</strong> — Bike café servant Nomad Coffee sur machine Rocket Espresso. Ambiance cycliste assumée.
+            </li>
+            <li>
+              <strong>Federal Café</strong> — Chaîne de brunch (Madrid, Barcelona, Valencia, Girona). Près de la cathédrale. Bon niveau, sans surprises.
+            </li>
+            <li>
+              <strong>Originem</strong> — Café km0 durable dans la vieille ville. Tasses en céramique artisanale, produits locaux, ambiance consciente.
+            </li>
+          </ul>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Et sur la côte ? Dirty Rabbit à S'Agaró (35 min)
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró</p>
+          
+          <p class="mb-4">
+            Si vous descendez vers la Costa Brava depuis Girona, ne manquez pas Dirty Rabbit à S'Agaró.
+          </p>
+          
+          <p class="mb-4">
+            Nous servons <strong>La Cabra</strong> — le torréfacteur danois d'élite mondiale. Préparé sur <strong>La Marzocco KB90</strong>. C'est le meilleur café de la côte, et ça vaut le détour après avoir exploré la ville.
+          </p>
+          
+          <p class="mb-4">
+            Parfait pour combiner : café de spécialité à Girona le matin, route vers la côte, brunch chez nous, puis plage à Sant Pol.
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Voir sur Google Maps →
+          </a>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Le tour café parfait à Girona</h2>
+        <ol class="space-y-2 mb-8">
+          <li><strong>8h30</strong> — Espresso et croissant chez La Fábrica</li>
+          <li><strong>9h30</strong> — Balade dans la vieille ville (cathédrale, quartier juif)</li>
+          <li><strong>11h00</strong> — Vol de dégustation chez Espresso Mafia</li>
+          <li><strong>12h00</strong> — Route vers S'Agaró (35 min)</li>
+          <li><strong>12h45</strong> — Brunch chez Dirty Rabbit</li>
+          <li><strong>14h30</strong> — Plage de Sant Pol et Camí de Ronda</li>
+        </ol>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">De Girona à la mer</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            35 minutes depuis Girona. Le meilleur café de la côte vous attend.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Comment venir
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

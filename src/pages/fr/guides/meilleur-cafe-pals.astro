@@ -1,0 +1,160 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const locationName = "Pals";
+const locationSlug = "pals";
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guides', url: 'https://dirtyrabbit.es/fr/guides/' },
+  { name: `Meilleur café à ${locationName}`, url: `https://dirtyrabbit.es/fr/guides/meilleur-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Meilleur café de spécialité à ${locationName} — Guide local 2026`}
+  description={`Où trouver le meilleur café de spécialité à ${locationName}, village médiéval de la Costa Brava. De Grava à Dirty Rabbit.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · CAFÉ DE SPÉCIALITÉ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Meilleur café de spécialité à {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Pals est l'un des villages médiévaux les mieux préservés de Catalogne. Son quartier gothique, sa tour romane et ses rizières environnantes créent une atmosphère unique. Et au pied du village, une scène café de spécialité intéressante émerge.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Grava — Café, pizzeria et culture gravel</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Font, 7, Pals · Au pied du village</p>
+          
+          <p class="mb-4">
+            Grava est un lieu unique : café de spécialité, pizzeria et restaurant méditerranéen. Ils servent du café <strong>Right Side</strong> de Barcelone — l'un des meilleurs torréfacteurs de la ville. La combinaison café specialty + pizza est originale et fonctionne bien.
+          </p>
+          <p class="mb-4">
+            Le patio extérieur est populaire auprès des cyclistes gravel — ils organisent même des sorties vélo au coucher du soleil et des sessions yoga. Vins naturels, bières craft, ambiance décontractée.
+          </p>
+          <p class="mb-4">
+            <strong>Horaires :</strong> Lun–Mar, Jeu–Dim 8h30–13h00 & 18h30–00h30. Fermé mercredi.
+          </p>
+          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Espresso Right Side + pizza le soir. Ou brunch + balade dans le village médiéval.</p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — Le meilleur café de la région (25 min)
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 25 min en voiture</p>
+          
+          <p class="mb-4">
+            Si vous voulez le meilleur café de spécialité de toute la Costa Brava, combinez votre visite de Pals avec un détour par S'Agaró.
+          </p>
+          
+          <p class="mb-4">
+            Nous servons <strong>La Cabra</strong> — le torréfacteur danois de renommée mondiale. Préparé sur <strong>La Marzocco KB90</strong>, c'est du café d'exception — traçable, précis, extraordinaire.
+          </p>
+          
+          <p class="mb-4">
+            Parfait après une matinée à explorer Pals : route vers la côte, baignade à Sant Pol, brunch chez nous, puis retour. Une journée complète Costa Brava.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Depuis Pals</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>25 minutes en voiture</strong> — Via Palamós ou la route intérieure</li>
+            <li><strong>1h à vélo</strong> — Beau parcours pour les cyclistes</li>
+          </ul>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Voir sur Google Maps →
+          </a>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distances depuis Pals</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Café</th>
+                <th class="text-left py-3">Distance</th>
+                <th class="text-left py-3">Temps</th>
+                <th class="text-left py-3">Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Grava</td>
+                <td class="py-3">0 km</td>
+                <td class="py-3">À Pals</td>
+                <td class="py-3">Right Side (Barcelona)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Zero</td>
+                <td class="py-3">12 km</td>
+                <td class="py-3">15 min</td>
+                <td class="py-3">Specialty Palamós</td>
+              </tr>
+              <tr class="border-b border-black/20 bg-cream">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">18 km</td>
+                <td class="py-3">25 min</td>
+                <td class="py-3">La Cabra (Danemark)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Fitzroy Café</td>
+                <td class="py-3">8 km</td>
+                <td class="py-3">12 min</td>
+                <td class="py-3">Brunch culte (Begur)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Journée parfaite Pals + Costa</h2>
+        <ol class="space-y-2 mb-8">
+          <li><strong>9h00</strong> — Petit-déjeuner chez Grava à Pals</li>
+          <li><strong>10h00</strong> — Balade dans le village médiéval</li>
+          <li><strong>11h30</strong> — Route vers S'Agaró</li>
+          <li><strong>12h00</strong> — Brunch chez Dirty Rabbit</li>
+          <li><strong>14h00</strong> — Camí de Ronda et plage de Sant Pol</li>
+          <li><strong>17h00</strong> — Retour par Begur ou Calella</li>
+        </ol>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">On vous attend</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            25 minutes de Pals. Le détour en vaut la peine.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Comment venir
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

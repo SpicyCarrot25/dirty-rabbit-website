@@ -1,0 +1,172 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const locationName = "S'Agaró";
+const locationSlug = "sagaro";
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/en/guide/' },
+  { name: `Things to do in ${locationName}`, url: `https://dirtyrabbit.es/en/guide/things-to-do-in-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Things to do in ${locationName} — Local Guide 2026`}
+  description={`Everything to do in ${locationName}: Camí de Ronda, beaches, noucentiste architecture, where to eat and get coffee. Written by locals.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">LOCAL GUIDE · ACTIVITIES</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Things to do in {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          S'Agaró isn't your typical village. It's a luxury residential enclave created in the 1920s, when industrialist Josep Ensesa commissioned architect Rafael Masó to build a noucentiste paradise by the sea. White houses with archways, staircases among pine trees, the famous Camí de Ronda coastal path... and yet, this is authentic Costa Brava.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🥾 Camí de Ronda: the absolute gem</h2>
+          
+          <p class="mb-4">
+            If you only do one thing in S'Agaró, make it this. The stretch of Camí de Ronda between Platja de Sant Pol and Cala Sa Conca is one of the most beautiful on the entire Costa Brava. A narrow path between cliffs, pines, and the sea at your feet.
+          </p>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Duration:</strong> 20-30 minutes (one way)</li>
+            <li><strong>Difficulty:</strong> Easy, but with steps</li>
+            <li><strong>Best time:</strong> Early morning or sunset</li>
+            <li><strong>Local tip:</strong> You can continue to Sant Feliu de Guíxols (1h walk). Bring water and proper shoes.</li>
+          </ul>
+          
+          <p>The path passes natural viewpoints that are spectacular. In summer there can be crowds, but at 8am it's all yours.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🏖️ Beaches and coves</h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">Platja de Sant Pol</h3>
+          <p class="mb-4">
+            The main beach. Fine sand, calm waters, historic bathing huts that have been there since the 1920s. In summer there are chiringuitos and you can rent sun loungers and parasols. Family atmosphere, nowhere near as packed as Platja d'Aro.
+          </p>
+          <p class="mb-4 font-mono text-sm"><strong>Tip:</strong> Parking fills up fast in July-August. Arrive before 10am or park higher up and walk down.</p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-8">Cala Sa Conca</h3>
+          <p class="mb-4">
+            Small, rocky, gorgeous. Accessible via the Camí de Ronda or from the S'Agaró urbanisation. Crystal-clear waters ideal for snorkelling. Much quieter than Sant Pol.
+          </p>
+          <p class="mb-4 font-mono text-sm"><strong>Tip:</strong> No facilities (no chiringuito or showers). Bring everything you need.</p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-8">Hidden coves</h3>
+          <p class="mb-4">
+            Following the Camí de Ronda towards Sant Feliu you'll find Cala del Pi, Cala Pedrosa, and other nameless spots. Some are only accessible on foot or by kayak. That's their charm.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🏛️ Noucentiste architecture</h2>
+          
+          <p class="mb-4">S'Agaró is an open-air museum of Catalan noucentisme. The must-see points:</p>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Senya Blanca</strong> — The first chalet, inaugurated in 1924. White house with tower, visible from the Camí de Ronda.</li>
+            <li><strong>Hostal de la Gavina</strong> — 5-star Grand Luxury hotel since 1932. Even if you don't stay, the building and gardens are worth visiting.</li>
+            <li><strong>Les Escales de S'Agaró</strong> — Monumental staircases connecting the urbanisation to the beach. Pure scenography.</li>
+            <li><strong>Restaurant dels Banys</strong> — Historic 1929 building near the old baths.</li>
+          </ul>
+          
+          <p>Walking through S'Agaró is walking through the history of 20th-century Catalan bourgeoisie. Every corner has aesthetic intention.</p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Where to eat and drink
+          </h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">Breakfast and brunch</h3>
+          <p class="mb-4">
+            <strong>Dirty Rabbit</strong> (Avenida Platja d'Aro 275) — La Cabra specialty coffee (Denmark) and brunch with local produce. Eggs benedict, toasts, bowls... and a flat white that's worth the trip. Relaxed atmosphere, we speak Spanish, Catalan, English and Polish — menus also in French.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">Lunch and dinner</h3>
+          <ul class="space-y-2">
+            <li><strong>Restaurante Villamás</strong> — The best restaurant in S'Agaró. Seasonal produce, impeccable service, Mediterranean cuisine with signature touches.</li>
+            <li><strong>Restaurant dels Banys</strong> — Mediterranean cuisine by the beach, in a historic building.</li>
+            <li><strong>Hostal de la Gavina</strong> — For a special occasion. Fresh fish from Palamós with Empordà wines.</li>
+          </ul>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline mt-6"
+          >
+            📍 Dirty Rabbit on Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🚴 Activities</h2>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Kayak and snorkel</strong> — Rental at Platja de Sant Pol in summer. The surrounding coves are perfect to explore from the water.</li>
+            <li><strong>Cycling</strong> — Costa Brava is a world destination for gravel and road cycling. S'Agaró is a perfect base: quiet roads, spectacular scenery.</li>
+            <li><strong>SUP (Stand Up Paddle)</strong> — Rental at Sant Pol. Try the route towards Sa Conca: magical when the sea is calm.</li>
+            <li><strong>Diving</strong> — Dive centres in Sant Feliu de Guíxols, 7 minutes away.</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">📅 When to come?</h2>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>June and September</strong> — The perfect months. Great weather, uncrowded beaches, everything open.</li>
+            <li><strong>July-August</strong> — Peak season. More atmosphere, but more people and tricky parking.</li>
+            <li><strong>Winter and spring</strong> — Off-season S'Agaró has a special magic. The Camí de Ronda all to yourself, golden light, pleasant temperatures for walking.</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">💡 Local tips</h2>
+          
+          <ol class="space-y-2 mb-6">
+            <li><strong>Skip the car in August if you can.</strong> Parking is limited and expensive.</li>
+            <li><strong>Get up early.</strong> The beaches at 8am are another world.</li>
+            <li><strong>Combine S'Agaró with Sant Feliu.</strong> Camí de Ronda walk → coffee at ANNNA → Sant Feliu market is a perfect plan.</li>
+            <li><strong>Bring water shoes.</strong> The rocky coves are beautiful but slippery.</li>
+            <li><strong>Stay for sunset.</strong> The colours from the Camí de Ronda at dusk are among the best on the entire Costa Brava.</li>
+          </ol>
+        </section>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Start the day with us?</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            Push the door open. Freshly made coffee, food that tastes like home, and the unique calm of S'Agaró.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

@@ -1,0 +1,196 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const locationName = "Girona";
+const locationSlug = "girona";
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/en/guide/' },
+  { name: `Best coffee in ${locationName}`, url: `https://dirtyrabbit.es/en/guide/best-coffee-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Best Specialty Coffee in ${locationName} — Local Guide 2026`}
+  description={`The best specialty coffee cafés in ${locationName}. La Fábrica, Espresso Mafia, Oniria and more — complete guide for coffee lovers.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">LOCAL GUIDE · SPECIALTY COFFEE</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Best Specialty Coffee in {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Girona is the specialty coffee capital of Catalonia outside Barcelona. Small city, beautiful old town, and an international cycling community that has transformed the coffee scene. Here are the best options — and a reason to head to the coast afterwards.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ La Fábrica — The OG specialty café in Girona</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Llebre, 3, Girona</p>
+          
+          <p class="mb-4">
+            La Fábrica is legend. Opened March 2015 by former pro cyclist Christian Meier and his wife Amber, in a converted carpenter's workshop with stone walls. Bike pump at the door, borrowable cable locks, and over 90 professional cyclists among their regulars.
+          </p>
+          <p class="mb-4">
+            They roast under the <strong>Approachable Coffee</strong> label on a 15-kilo Joper roaster. The coffee reaches Barcelona, Jakarta, Portland, and Vienna. Amber bakes the pastries in her own oven. The atmosphere makes you want to stay.
+          </p>
+          <p class="font-mono text-sm"><strong>Best for:</strong> House espresso with one of Amber's pastries. Pure Girona.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Espresso Mafia — The experimental sibling</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Cort Reial, 5, Girona · 2 min walk from La Fábrica</p>
+          
+          <p class="mb-4">
+            Espresso Mafia is La Fábrica's second venue, opened 2017. More modern, smaller, no Wi-Fi. Up to 5 different coffees available, tasting flights, seasonal nitro coffee. Custom two-group Sanremo Cafe Racer machine.
+          </p>
+          <p class="font-mono text-sm"><strong>Best for:</strong> Tasting flights to compare different roasts.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Oniria Café — Rotating European roasters</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer del Nord, 11, Girona</p>
+          
+          <p class="mb-4">
+            Opened 2021, Oniria is a small, intimate café with rotating guest roasters from across Europe. Raw vegan and sugar-free pastries, conscious atmosphere. They sell beans for home brewing. Pet-friendly, small terrace.
+          </p>
+          <p class="font-mono text-sm"><strong>Best for:</strong> Discovering a European roaster you didn't know.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Originem — Km0 and sustainability</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Força, 1, A, Girona</p>
+          
+          <p class="mb-4">
+            Sustainable km0 café in Girona's old town. Handmade ceramic cups, regional products, zero-waste. Sourdough toast, Catalan pastries (xuixo!), original stone walls and wooden beams. Also a small shop with local products.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Hors Catégorie — The cyclists' café</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer del Perill, 3, Girona</p>
+          
+          <p class="mb-4">
+            Named after cycling's toughest climb category. Nomad Coffee from Barcelona on a Rocket Espresso machine. Healthy food, craft beer, cycling memorabilia. Open late, perfect for a post-ride beer.
+          </p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — If you're heading to the coast
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 35 min drive from Girona</p>
+          
+          <p class="mb-4">
+            If after Girona you fancy beach and the best coffee on Costa Brava, Dirty Rabbit is 35 minutes away in S'Agaró.
+          </p>
+          
+          <p class="mb-4">
+            We serve <strong>La Cabra</strong> — the Danish roaster competing at the same level as Approachable. Full traceability, precision roasting, prepared on our <strong>La Marzocco KB90</strong> with <strong>RO-filtered water</strong>.
+          </p>
+          
+          <p class="mb-4">
+            Combine a day in Girona with an S'Agaró sunset: coffee, swim at Sant Pol, Camí de Ronda. Perfect plan.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Our three pillars</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Wild Comfort</strong> — A place that's wild and cosy at once.</li>
+            <li><strong>Intention</strong> — Everything we do has a why.</li>
+            <li><strong>Belonging</strong> — A place where you fit in, wherever you're from.</li>
+          </ul>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 View on Google Maps →
+          </a>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Specialty cafés in {locationName}</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Café</th>
+                <th class="text-left py-3">Location</th>
+                <th class="text-left py-3">Coffee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">La Fábrica</td>
+                <td class="py-3">Old town</td>
+                <td class="py-3">Approachable (own)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Espresso Mafia</td>
+                <td class="py-3">Old town</td>
+                <td class="py-3">Approachable (own)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Oniria Café</td>
+                <td class="py-3">Old town</td>
+                <td class="py-3">Guest roasters</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Originem</td>
+                <td class="py-3">Old town</td>
+                <td class="py-3">Km0 specialty</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Hors Catégorie</td>
+                <td class="py-3">Old town</td>
+                <td class="py-3">Nomad Coffee</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Federal Café</td>
+                <td class="py-3">Old town</td>
+                <td class="py-3">Specialty chain</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">S'Agaró (35 min)</td>
+                <td class="py-3">La Cabra (Denmark)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Heading to the coast?</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            35 minutes from Girona. Coffee + beach + Camí de Ronda.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

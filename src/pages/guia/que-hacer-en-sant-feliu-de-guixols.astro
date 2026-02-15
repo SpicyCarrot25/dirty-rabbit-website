@@ -1,0 +1,224 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const locationName = "Sant Feliu de Guíxols";
+const locationSlug = "sant-feliu-de-guixols";
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' },
+  { name: `Qué hacer en ${locationName}`, url: `https://dirtyrabbit.es/guia/que-hacer-en-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Qué hacer en ${locationName} — Guía local 2026`}
+  description={`Todo lo que puedes hacer en ${locationName}: monasterio, puerto, mercado dominical, Camí de Ronda y dónde comer. Guía escrita por locales.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUÍA LOCAL</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Qué hacer en {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Sant Feliu de Guíxols es la ciudad con más personalidad de la costa. Mientras que Platja d'Aro es turismo de sol y playa, Sant Feliu tiene historia, arquitectura, un puerto pesquero activo y una vida local que no depende de los visitantes. Monasterio benedictino del siglo X, tradición corchera que le dio riqueza, casco antiguo para perderse, y uno de los mercados dominicales más bonitos de Catalunya. Aquí te contamos qué hacer.
+        </p>
+      </header>
+
+      <!-- Monasterio -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🏛️</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Monasterio benedictino</h2>
+        </div>
+        <div class="prose prose-lg max-w-none font-mono text-black/80">
+          <p>
+            El origen de Sant Feliu está aquí. El monasterio data del siglo X y ocupa el corazón de la ciudad. La Porta Ferrada — la entrada románica con arcos de herradura — es una de las joyas arquitectónicas de la Costa Brava.
+          </p>
+          <p>
+            Hoy alberga el Museu d'Història de la Ciutat, con exposiciones sobre la industria del corcho que hizo rica a Sant Feliu en el siglo XIX. También hay un espacio dedicado a Carmen Amaya, la bailaora flamenca que nació aquí.
+          </p>
+          <p>
+            La visita es corta pero imprescindible. Y el paseo por las calles de alrededor — con casas señoriales y detalles modernistas — es parte de la experiencia.
+          </p>
+        </div>
+      </section>
+
+      <!-- Puerto -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">⚓</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Puerto y paseo marítimo</h2>
+        </div>
+        <div class="prose prose-lg max-w-none font-mono text-black/80">
+          <p>
+            Sant Feliu tiene un puerto de verdad, no solo un puerto deportivo. Los pescadores siguen saliendo cada mañana, y puedes ver las barcas en la lonja a primera hora. El paseo marítimo es más auténtico que el de Platja d'Aro — menos turístico, más local.
+          </p>
+          <p>
+            Por la tarde, los bancos del paseo se llenan de gente leyendo, charlando, mirando al mar. Es un sitio para estar, no para pasar.
+          </p>
+        </div>
+      </section>
+
+      <!-- Mercado -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🍅</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Mercado de los domingos</h2>
+        </div>
+        <div class="prose prose-lg max-w-none font-mono text-black/80">
+          <p>
+            El mercado dominical de Sant Feliu es uno de los más bonitos de Catalunya. Ocupa el paseo marítimo y parte del centro, con puestos de fruta local, quesos del Empordà, embutidos, ropa, artesanía, plantas...
+          </p>
+          <p>
+            Es el plan perfecto para un domingo por la mañana: mercado, café en ANNNA o Maison Marcel, paseo por el casco antiguo, y almuerzo en alguna de las terrazas del puerto.
+          </p>
+          <p>
+            <strong>Horario:</strong> Domingos por la mañana, aproximadamente 8:00-14:00.
+          </p>
+        </div>
+      </section>
+
+      <!-- Camí de Ronda -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🥾</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Camí de Ronda</h2>
+        </div>
+        <div class="prose prose-lg max-w-none font-mono text-black/80">
+          <p>
+            Desde Sant Feliu puedes hacer el Camí de Ronda hacia S'Agaró — uno de los tramos más bonitos de toda la costa. Son unos 30-40 minutos andando, entre acantilados y pinos, con vistas espectaculares.
+          </p>
+          <p>
+            El plan perfecto: salir de Sant Feliu por la mañana, andar hasta S'Agaró, desayunar en Dirty Rabbit, y volver paseando (o pillando un taxi si has andado bastante).
+          </p>
+          <ul class="list-disc list-inside my-4">
+            <li><strong>Dirección S'Agaró:</strong> Pasas por calas escondidas hasta llegar a Sant Pol.</li>
+            <li><strong>Dirección Tossa:</strong> Más largo y exigente, pero paisajes increíbles.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Playas -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🏖️</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Playas</h2>
+        </div>
+        <div class="space-y-6">
+          <div class="p-6 bg-cream">
+            <h3 class="font-typewriter text-xl mb-2">Platja de Sant Feliu</h3>
+            <p class="font-mono text-black/80">
+              La playa urbana, junto al paseo marítimo. Servicios completos, fácil acceso, ambiente local. Perfecta para un baño rápido.
+            </p>
+          </div>
+          
+          <div class="p-6 bg-cream">
+            <h3 class="font-typewriter text-xl mb-2">Platja de Sant Pol (5 min)</h3>
+            <p class="font-mono text-black/80">
+              La playa más bonita de la zona, compartida con S'Agaró. Arena fina, aguas cristalinas, casetas históricas. Vale la pena el paseo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Dónde comer -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🍽️</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Dónde comer y tomar café</h2>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="p-6 bg-cream border-l-4 border-red">
+            <h3 class="font-typewriter text-xl mb-2">🐇 Specialty coffee: Dirty Rabbit (5 min)</h3>
+            <p class="font-mono text-black/80">
+              El mejor café de la zona está a 5 minutos, en S'Agaró. La Cabra de Dinamarca, brunch con producto local. Perfecto después del Camí de Ronda.
+            </p>
+            <a href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaro" class="inline-block mt-2 font-typewriter text-red hover:underline text-sm">
+              Ver en Google Maps →
+            </a>
+          </div>
+          
+          <div>
+            <h3 class="font-typewriter text-xl mb-2">En Sant Feliu</h3>
+            <ul class="space-y-3 font-mono text-black/80">
+              <li>
+                <strong>ANNNA</strong> — Primera cafetería de especialidad de la zona. Panadería sin gluten artesanal, concept store. En la Casa Trachsler, una casa señorial del XIX.
+              </li>
+              <li>
+                <strong>Maison Marcel</strong> — Panadería francesa con los mejores croissants de la costa. El café es bueno, la pastelería increíble.
+              </li>
+              <li>
+                <strong>Restaurantes del puerto</strong> — Arroces y pescado fresco. El Can Salvi y el Cau del Pescador son clásicos.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tips -->
+      <section class="mb-12 p-6 bg-cream">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">💡</span>
+          <h2 class="font-typewriter text-2xl">Tips de local</h2>
+        </div>
+        <ol class="space-y-2 font-mono text-black/80 list-decimal list-inside">
+          <li><strong>El domingo es el mejor día</strong> para visitar Sant Feliu — mercado + ambiente local.</li>
+          <li><strong>Combínalo con S'Agaró.</strong> El Camí de Ronda entre los dos es espectacular.</li>
+          <li><strong>Aparca en la zona alta</strong> y baja andando. El centro es peatonal y el parking limitado.</li>
+          <li><strong>El atardecer desde el paseo marítimo</strong> es de los mejores de la costa.</li>
+          <li><strong>Si te gusta la historia,</strong> el monasterio y las casas modernistas merecen un paseo sin prisa.</li>
+        </ol>
+      </section>
+
+      <!-- Internal Links -->
+      <section class="mt-12 p-6 bg-cream">
+        <h2 class="font-typewriter text-xl mb-4">Explora más</h2>
+        <ul class="space-y-2 font-mono text-sm">
+          <li>
+            <a href="/guia/mejor-cafe-sant-feliu-de-guixols" class="text-red hover:underline">
+              → Mejor café de especialidad en Sant Feliu de Guíxols
+            </a>
+          </li>
+          <li>
+            <a href="/guia/que-hacer-en-sagaro" class="text-red hover:underline">
+              → Qué hacer en S'Agaró
+            </a>
+          </li>
+          <li>
+            <a href="/guia/desayunar-cerca-de-platja-sant-pol" class="text-red hover:underline">
+              → Dónde desayunar cerca de la Playa de Sant Pol
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <section class="mt-12 text-center">
+        <p class="font-mono text-black/70 mb-4">
+          Camí de Ronda + café en Dirty Rabbit. El plan perfecto desde Sant Feliu.
+        </p>
+        <a 
+          href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaro"
+          target="_blank"
+          rel="noopener"
+          class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors"
+        >
+          Ven a Dirty Rabbit
+        </a>
+      </section>
+
+    </div>
+  </article>
+
+</Layout>

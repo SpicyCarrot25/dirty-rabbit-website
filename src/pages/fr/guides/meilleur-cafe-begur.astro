@@ -1,0 +1,159 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const locationName = "Begur";
+const locationSlug = "begur";
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guides', url: 'https://dirtyrabbit.es/fr/guides/' },
+  { name: `Meilleur café à ${locationName}`, url: `https://dirtyrabbit.es/fr/guides/meilleur-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Meilleur café de spécialité à ${locationName} — Guide local 2026`}
+  description={`Où trouver le meilleur café de spécialité à ${locationName}, Costa Brava. De Fitzroy Café à Dirty Rabbit : guide des amateurs.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · CAFÉ DE SPÉCIALITÉ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Meilleur café de spécialité à {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Begur est l'un des villages les plus charmants de la Costa Brava : maisons coloniales (les "casas indianas"), ruines du château, et les plus belles criques de la région à portée de main. Sa scène café de spécialité est saisonnière mais de qualité.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Fitzroy Café — Le brunch culte de Begur</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de Francesc Forgas 1, Begur · Près de la Plaça de l'Església</p>
+          
+          <p class="mb-4">
+            Fitzroy Café est une institution de Begur. Inspiré par Melbourne, ce café-bar à vin propose un café de spécialité soigné, un brunch légendaire (les pancakes et le banana bread sont cultes), et une carte de vins naturels pour le soir.
+          </p>
+          <p class="mb-4">
+            L'emplacement est spectaculaire — près de l'église, avec vue sur le village. L'atmosphère est slow food, avec des produits locaux et de saison.
+          </p>
+          <p class="mb-4">
+            <strong>Attention :</strong> Ouverture saisonnière (principalement printemps-été). Fermé le mardi. Vérifiez avant de venir en hiver.
+          </p>
+          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Banana bread + flat white. Une institution.</p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — Le meilleur café toute l'année (30 min)
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 30 min en voiture</p>
+          
+          <p class="mb-4">
+            Pour le meilleur café de spécialité de la Costa Brava — et ouvert toute l'année — faites le détour jusqu'à S'Agaró.
+          </p>
+          
+          <p class="mb-4">
+            Nous servons <strong>La Cabra</strong> — le torréfacteur danois d'élite mondiale. Préparé sur <strong>La Marzocco KB90</strong> avec eau filtrée par osmose inverse. C'est du café extraordinaire — pas juste bon, extraordinaire.
+          </p>
+          
+          <p class="mb-4">
+            Parfait pour une journée découverte : commencez par les criques de Begur (Sa Tuna, Aiguablava), puis descendez vers S'Agaró pour un brunch tardif et une baignade à Sant Pol.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Depuis Begur</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>30 minutes en voiture</strong> — Route côtière magnifique</li>
+            <li><strong>1h15 à vélo</strong> — Pour les cyclistes motivés</li>
+          </ul>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Voir sur Google Maps →
+          </a>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distances depuis Begur</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Café</th>
+                <th class="text-left py-3">Distance</th>
+                <th class="text-left py-3">Temps</th>
+                <th class="text-left py-3">Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Fitzroy Café</td>
+                <td class="py-3">0 km</td>
+                <td class="py-3">À Begur</td>
+                <td class="py-3">Saisonnier</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Grava</td>
+                <td class="py-3">8 km</td>
+                <td class="py-3">12 min</td>
+                <td class="py-3">Pals</td>
+              </tr>
+              <tr class="border-b border-black/20 bg-cream">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">20 km</td>
+                <td class="py-3">30 min</td>
+                <td class="py-3">Toute l'année</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">22 km</td>
+                <td class="py-3">28 min</td>
+                <td class="py-3">Platja d'Aro</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Journée Begur + S'Agaró</h2>
+        <ol class="space-y-2 mb-8">
+          <li><strong>9h00</strong> — Café et banana bread chez Fitzroy à Begur</li>
+          <li><strong>10h00</strong> — Baignade à Sa Tuna ou Aiguablava</li>
+          <li><strong>12h30</strong> — Route vers S'Agaró</li>
+          <li><strong>13h00</strong> — Brunch chez Dirty Rabbit</li>
+          <li><strong>15h00</strong> — Camí de Ronda et plage de Sant Pol</li>
+        </ol>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">On vous attend</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            30 minutes de Begur. Une belle route, un meilleur café.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Comment venir
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

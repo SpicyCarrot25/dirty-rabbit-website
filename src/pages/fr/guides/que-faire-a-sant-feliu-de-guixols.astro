@@ -1,0 +1,165 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const locationName = "Sant Feliu de Guíxols";
+const locationSlug = "sant-feliu-de-guixols";
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guides', url: 'https://dirtyrabbit.es/fr/guides/' },
+  { name: `Que faire à ${locationName}`, url: `https://dirtyrabbit.es/fr/guides/que-faire-a-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Que faire à ${locationName} — Guide local 2026`}
+  description={`Tout ce qu'il y a à faire à ${locationName}, Costa Brava : monastère, port de pêche, Camí de Ronda, et les meilleures adresses pour café et cuisine locale.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · ACTIVITÉS</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Que faire à {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Sant Feliu de Guíxols est une vraie ville de la Costa Brava — pas une station balnéaire créée pour les touristes. Port de pêche authentique, monastère bénédictin millénaire, tradition du liège, et une vie locale qui continue toute l'année. C'est ici que les Catalans viennent en vacances.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🏛️ Le monastère bénédictin</h2>
+          
+          <p class="mb-4">
+            Le monastère de Sant Feliu date du Xe siècle. C'est le cœur historique de la ville. L'église romane, le cloître, et le musée d'histoire valent la visite. L'entrée est gratuite certains jours.
+          </p>
+          
+          <p class="mb-4">
+            La Porta Ferrada, la porte d'entrée pré-romane, est l'un des monuments les plus anciens de Catalogne. Chaque été, le festival de musique Porta Ferrada y présente des concerts dans un cadre exceptionnel.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">⚓ Le port et le front de mer</h2>
+          
+          <p class="mb-4">
+            Le port de Sant Feliu est encore un port de pêche actif. Tôt le matin, vous pouvez voir les bateaux rentrer avec leur prise. La criée aux poissons (la llotja) est ouverte au public certains jours.
+          </p>
+          
+          <p class="mb-4">
+            Le passeig del Mar (promenade maritime) longe la plage jusqu'au port. Parfait pour une balade, avec vue sur la mer et les façades colorées.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🥾 Camí de Ronda vers S'Agaró</h2>
+          
+          <p class="mb-4">
+            Le tronçon du Camí de Ronda entre Sant Feliu et S'Agaró est spectaculaire. Environ 30-45 minutes de marche le long des falaises, avec des vues sur la mer et des criques cachées en chemin.
+          </p>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Départ :</strong> Depuis la plage de Sant Feliu, direction sud</li>
+            <li><strong>Arrivée :</strong> Platja de Sant Pol ou Cala Sa Conca</li>
+            <li><strong>Difficulté :</strong> Modérée (escaliers, terrain parfois inégal)</li>
+            <li><strong>À faire :</strong> Prenez de l'eau, des chaussures fermées. Baignade possible en chemin.</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🏖️ Plages</h2>
+          
+          <ul class="space-y-4 mb-6">
+            <li>
+              <strong>Platja de Sant Feliu</strong> — La plage principale, en centre-ville. Tous les services, mais peut être bondée en été.
+            </li>
+            <li>
+              <strong>Platja de Sant Pol</strong> (5 min en voiture) — Plus belle, plus tranquille. Sable fin, eaux cristallines, ambiance familiale.
+            </li>
+            <li>
+              <strong>Criques du Camí de Ronda</strong> — Cala del Pi, Cala Pedrosa... Accessibles à pied, souvent désertes.
+            </li>
+          </ul>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Où prendre un bon café
+          </h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">À Sant Feliu</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>ANNNA</strong> (Carrer de l'Hospital 21) — Café de spécialité, boulangerie sans gluten, concept store. Dans une belle maison du XIXe. Ouvert Jeu-Lun.</li>
+            <li><strong>Maison Marcel</strong> (Carrer Major 5) — Pâtisserie française, croissants au beurre exceptionnels.</li>
+          </ul>
+          
+          <h3 class="font-typewriter text-xl mb-3">À 7 minutes (S'Agaró)</h3>
+          <p class="mb-4">
+            Pour le meilleur café de spécialité de la région, faites un détour par <strong>Dirty Rabbit</strong>. Café La Cabra (Danemark), préparé sur La Marzocco, brunch artisanal, ambiance "maison loin de la maison".
+          </p>
+          
+          <p class="mb-4">
+            Parfait après une marche sur le Camí de Ronda : vous arrivez directement à S'Agaró !
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Dirty Rabbit sur Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🎭 Culture et événements</h2>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Festival Porta Ferrada</strong> (juillet-août) — Concerts de musique classique et populaire dans le monastère. Événement majeur de la Costa Brava.</li>
+            <li><strong>Musée d'Histoire</strong> — Dans le monastère. Histoire locale, industrie du liège, art.</li>
+            <li><strong>Marché du dimanche</strong> — Marché hebdomadaire dans le centre-ville.</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">💡 Conseils de local</h2>
+          
+          <ol class="space-y-2 mb-6">
+            <li><strong>Le parking du port</strong> est le plus pratique pour visiter la vieille ville et le monastère.</li>
+            <li><strong>Les restaurants près du port</strong> servent du poisson frais de la criée — demandez le "peix del dia".</li>
+            <li><strong>Combinez avec S'Agaró :</strong> Camí de Ronda → Plage de Sant Pol → Brunch chez Dirty Rabbit → Retour par la route.</li>
+            <li><strong>En été, arrivez tôt</strong> — le parking se remplit vite, surtout le weekend.</li>
+          </ol>
+        </section>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">On vous attend à 7 minutes</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            Le meilleur café de la région, à la fin du Camí de Ronda.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Comment venir
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

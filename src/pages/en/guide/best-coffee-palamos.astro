@@ -1,0 +1,156 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const locationName = "Palamós";
+const locationSlug = "palamos";
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/en/guide/' },
+  { name: `Best coffee near ${locationName}`, url: `https://dirtyrabbit.es/en/guide/best-coffee-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Best Specialty Coffee near ${locationName} — Local Guide 2026`}
+  description={`Where to find specialty coffee in ${locationName}, Costa Brava. Honest guide from Zero Café to Dirty Rabbit in S'Agaró.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">LOCAL GUIDE · SPECIALTY COFFEE</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Best Specialty Coffee near {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Palamós is synonymous with red prawns — the most prized seafood in the Mediterranean. Authentic fishing port, active fish auction every afternoon, and a fishing museum worth the visit. But beyond the seafood, where do you get good coffee? Here's our guide.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Zero — Specialty coffee in Palamós</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer Pagès Ortiz, 55, Palamós · In the centre</p>
+          
+          <p class="mb-4">
+            Zero is the specialty option in Palamós itself. Specialty coffee (espresso, filter, cold brew), breakfast and lunch with vegan options. Quiet atmosphere, away from the tourist port area. Free Wi-Fi, pet-friendly, terrace.
+          </p>
+          <p class="mb-4">
+            Open daily 8:00–15:00. Perfect rating on TripAdvisor.
+          </p>
+          <p class="font-mono text-sm"><strong>Best for:</strong> An oasis of quality in an area where good coffee is scarce.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Dupla — New in Sant Antoni de Calonge</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Sant Antoni de Calonge · 8 min drive</p>
+          
+          <p class="mb-4">
+            Relatively new on the scene, Dupla is a specialty coffee and brunch spot near Sant Antoni's seafront. Still building its reputation, but early signs are promising. We recommend checking their Instagram for hours before visiting.
+          </p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — 15 minutes worth taking
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 15 min drive from Palamós</p>
+          
+          <p class="mb-4">
+            If you fancy turning your morning coffee into a small excursion, Dirty Rabbit is 15 minutes along the coast — and the journey is worth it.
+          </p>
+          
+          <p class="mb-4">
+            We serve <strong>La Cabra</strong>, the Danish roaster that's been among the world's best for years. Every bean is fully traceable: farm, altitude, variety, process. We prepare it on our <strong>La Marzocco KB90</strong> with <strong>RO-filtered water</strong>. This isn't "good for Costa Brava" coffee — it's world-class, full stop.
+          </p>
+          
+          <p class="mb-4">
+            Beyond coffee, you can have a leisurely breakfast (eggs benedict, toast, bowls), stay reading with a flat white, or simply enjoy the calm of S'Agaró. We're 3 minutes from Sant Pol Beach — perfect for combining coffee and a swim.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Our three pillars</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Wild Comfort</strong> — A place that's wild and cosy at once.</li>
+            <li><strong>Intention</strong> — Everything we do has a why.</li>
+            <li><strong>Belonging</strong> — A place where you fit in, wherever you're from.</li>
+          </ul>
+          
+          <p class="mb-4">
+            We speak <strong>Spanish, Catalan, English, and Polish</strong>. Menus in Russian, French, and Ukrainian.
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 View on Google Maps →
+          </a>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distances from {locationName}</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Café</th>
+                <th class="text-left py-3">Time</th>
+                <th class="text-left py-3">Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Zero</td>
+                <td class="py-3">In Palamós</td>
+                <td class="py-3">Specialty café</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Dupla</td>
+                <td class="py-3">8 min</td>
+                <td class="py-3">Specialty + brunch</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">10 min</td>
+                <td class="py-3">Own roastery</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">15 min</td>
+                <td class="py-3">La Cabra (Denmark)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Coming to see us?</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            15 minutes from Palamós. The best coffee on Costa Brava awaits.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

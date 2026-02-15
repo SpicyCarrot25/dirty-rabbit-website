@@ -1,0 +1,159 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const locationName = "Calonge";
+const locationSlug = "calonge";
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' },
+  { name: `Mejor café cerca de ${locationName}`, url: `https://dirtyrabbit.es/guia/mejor-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Mejor café de especialidad cerca de ${locationName} — Guía local 2026`}
+  description={`Dónde tomar specialty coffee cerca de ${locationName} y Sant Antoni de Calonge, Costa Brava. Guía honesta de cafeterías de especialidad.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <!-- Header -->
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUÍA LOCAL · CAFÉ DE ESPECIALIDAD</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Mejor café de especialidad cerca de {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Calonge es dos mundos en uno: el pueblo medieval con su castillo del siglo XI en lo alto, y Sant Antoni de Calonge abajo en la costa — calas entre pinos, agua turquesa, y un ambiente más tranquilo que Platja d'Aro. Aquí va dónde encontrar buen café de especialidad en la zona.
+        </p>
+      </header>
+
+      <!-- Main Content -->
+      <div class="prose prose-lg max-w-none">
+        
+        <!-- Dupla Section -->
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Dupla — Nuevo specialty en Sant Antoni</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Sant Antoni de Calonge · En la costa</p>
+          
+          <p class="mb-4">
+            Dupla es relativamente nuevo en la zona, cerca del paseo marítimo de Sant Antoni de Calonge. Café de especialidad, brunch, ambiente joven. Aún construyendo reputación, pero forma parte del creciente movimiento specialty en la Costa Brava. Recomendamos verificar horarios en Instagram antes de ir.
+          </p>
+        </section>
+
+        <!-- La Maglia Section -->
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ La Maglia — Tostadero a 5 minutos</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Platja d'Aro · 5 min en coche</p>
+          
+          <p class="mb-4">
+            A 5 minutos en dirección Platja d'Aro, La Maglia es el único tostador de la Costa Brava costera. Tuestan su propio café con granos 100% arábica, puntuación SCA +85. Estética ciclista, terraza grande, açaí bowls. Dato curioso: están planeando un nuevo espacio de 300m² en Calonge para 2027.
+          </p>
+        </section>
+
+        <!-- Dirty Rabbit Section -->
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — El mejor specialty de la zona
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 10 min en coche desde Calonge</p>
+          
+          <p class="mb-4">
+            Si buscas el mejor café de especialidad de la Costa Brava, Dirty Rabbit está a 10 minutos en dirección S'Agaró.
+          </p>
+          
+          <p class="mb-4">
+            Servimos <strong>La Cabra</strong> — el tostador danés que lleva años en la élite del specialty coffee mundial. No es café "bueno para ser de playa". Es café extraordinario: trazable hasta la finca, procesado con precisión, tostado en Copenhague. Lo preparamos en <strong>La Marzocco KB90</strong> con agua filtrada por <strong>ósmosis inversa</strong>.
+          </p>
+          
+          <p class="mb-4">
+            Pero Dirty Rabbit es más que café. Es un sitio donde quedarte leyendo, desayunar con calma, o simplemente disfrutar de la tranquilidad de S'Agaró. Estamos a 3 minutos de la playa de Sant Pol — perfecta para combinar café y baño.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Nuestros tres pilares</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Wild Comfort</strong> — Un sitio salvaje y acogedor a la vez.</li>
+            <li><strong>Intention</strong> — Todo lo que hacemos tiene un porqué.</li>
+            <li><strong>Belonging</strong> — Un lugar donde encajas, vengas de donde vengas.</li>
+          </ul>
+          
+          <p class="mb-4">
+            Hablamos <strong>español, catalán, inglés y polaco</strong>. Tenemos cartas en ruso, francés y ucraniano.
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Ver en Google Maps →
+          </a>
+        </section>
+
+        <!-- Distance Table -->
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distancias desde {locationName}</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Cafetería</th>
+                <th class="text-left py-3">Tiempo</th>
+                <th class="text-left py-3">Tipo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Dupla</td>
+                <td class="py-3">En Sant Antoni</td>
+                <td class="py-3">Specialty + brunch</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">5 min</td>
+                <td class="py-3">Tostadero propio</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">10 min</td>
+                <td class="py-3">La Cabra (Dinamarca)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">ANNNA</td>
+                <td class="py-3">12 min</td>
+                <td class="py-3">Specialty + GF bakery</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">¿Vienes a vernos?</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            10 minutos desde Calonge. Esto es tu casa.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Cómo llegar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

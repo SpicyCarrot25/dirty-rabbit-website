@@ -1,0 +1,169 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const locationName = "Platja d'Aro";
+const locationSlug = "platja-daro";
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guides', url: 'https://dirtyrabbit.es/fr/guides/' },
+  { name: `Que faire à ${locationName}`, url: `https://dirtyrabbit.es/fr/guides/que-faire-a-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Que faire à ${locationName} — Guide local 2026`}
+  description={`Tout ce qu'il y a à faire à ${locationName}, Costa Brava : plages, shopping, vie nocturne, et les meilleures adresses pour manger et prendre un café.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · ACTIVITÉS</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Que faire à {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Platja d'Aro est le cœur touristique de la Costa Brava : longue plage de sable, promenade animée, shopping, vie nocturne... C'est la station balnéaire par excellence. Mais au-delà des boutiques et des bars, il y a aussi une Costa Brava authentique à découvrir à quelques minutes.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🏖️ La plage principale</h2>
+          
+          <p class="mb-4">
+            La Platja Gran de Platja d'Aro est une longue plage de sable fin, bien équipée : transats, parasols, chiringuitos, douches. C'est la plage familiale classique de la Costa Brava, avec tous les services.
+          </p>
+          
+          <p class="mb-4">
+            En haute saison (juillet-août), c'est bondé. Pour plus de tranquillité, venez tôt le matin ou optez pour les plages voisines : Sant Pol (5 min en voiture) ou les criques de Calonge.
+          </p>
+          
+          <p class="font-mono text-sm"><strong>Conseil :</strong> La promenade maritime est agréable le soir — parfait pour une balade digestive après dîner.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🛍️ Shopping</h2>
+          
+          <p class="mb-4">
+            Platja d'Aro est connue pour son shopping. L'avenue principale et les rues adjacentes regorgent de boutiques — des marques internationales aux commerces locaux.
+          </p>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Gran Via</strong> — L'artère principale avec les grandes enseignes</li>
+            <li><strong>Rues piétonnes</strong> — Boutiques locales, souvenirs, mode</li>
+            <li><strong>Marché du vendredi</strong> — Marché hebdomadaire avec produits locaux et vêtements</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🌙 Vie nocturne</h2>
+          
+          <p class="mb-4">
+            Platja d'Aro est la capitale de la nuit sur la Costa Brava. Les discothèques et bars sont concentrés dans la zone du port et le long de l'avenue principale.
+          </p>
+          
+          <p class="mb-4">
+            C'est animé de juin à septembre, avec un pic en juillet-août. Si vous cherchez du calme, évitez le front de mer le weekend en haute saison.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🚴 Activités sportives</h2>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Cyclisme</strong> — La Costa Brava est une destination mondiale pour le vélo de route et le gravel. Platja d'Aro est un bon point de départ.</li>
+            <li><strong>Sports nautiques</strong> — Jet ski, paddle, kayak disponibles sur la plage en été.</li>
+            <li><strong>Golf</strong> — Plusieurs parcours dans la région (Club de Golf d'Aro, Mas Nou...).</li>
+            <li><strong>Randonnée</strong> — Le Camí de Ronda vers S'Agaró ou Sant Feliu (25 min à pied).</li>
+          </ul>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Notre recommandation : échappez 5 minutes
+          </h2>
+          
+          <p class="mb-4">
+            Pour une expérience Costa Brava plus authentique, faites les 5 minutes jusqu'à S'Agaró. L'atmosphère est complètement différente : architecture noucentiste, Camí de Ronda, plage de Sant Pol...
+          </p>
+          
+          <p class="mb-4">
+            Et bien sûr, passez prendre un café chez nous. <strong>Dirty Rabbit</strong> sert du café La Cabra (Danemark) préparé sur La Marzocco, avec un brunch maison et une ambiance décontractée.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mt-6 mb-3">Journée parfaite depuis Platja d'Aro</h3>
+          <ol class="space-y-2 mb-6">
+            <li><strong>9h00</strong> — Route vers S'Agaró (5 min)</li>
+            <li><strong>9h15</strong> — Camí de Ronda vers Sa Conca</li>
+            <li><strong>10h30</strong> — Baignade à la Platja de Sant Pol</li>
+            <li><strong>11h30</strong> — Brunch chez Dirty Rabbit</li>
+            <li><strong>13h30</strong> — Retour à Platja d'Aro pour shopping ou plage</li>
+          </ol>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Dirty Rabbit sur Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🍽️ Où manger</h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">À Platja d'Aro</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>La Maglia</strong> — Café de spécialité torréfié sur place, culture cycliste, grande terrasse. Bowls, toasts, açaí.</li>
+            <li><strong>Restaurants du front de mer</strong> — Cuisine variée, de la paella aux tapas. Qualité variable.</li>
+          </ul>
+          
+          <h3 class="font-typewriter text-xl mb-3">À 5-7 minutes</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Dirty Rabbit (S'Agaró)</strong> — Meilleur café de la région, brunch artisanal, ambiance authentique.</li>
+            <li><strong>ANNNA (Sant Feliu)</strong> — Café de spécialité + boulangerie sans gluten. Cadre magnifique.</li>
+            <li><strong>Villamás (S'Agaró)</strong> — Restaurant gastronomique, produits de saison, pour une occasion spéciale.</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">📅 Quand venir ?</h2>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Juin et septembre</strong> — Beau temps, moins de monde, meilleurs prix.</li>
+            <li><strong>Juillet-août</strong> — Haute saison. Animation maximale, mais plages bondées et prix élevés.</li>
+            <li><strong>Hors saison</strong> — Beaucoup de commerces fermés, mais les plages sont tranquilles et les températures encore douces.</li>
+          </ul>
+        </section>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">On vous attend à 5 minutes</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            Un café extraordinaire, un brunch maison, et la vraie Costa Brava.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Comment venir
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

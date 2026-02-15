@@ -1,0 +1,247 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const landmarkName = "la Playa de Sant Pol";
+const landmarkSlug = "platja-sant-pol";
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' },
+  { name: `Desayunar cerca de ${landmarkName}`, url: `https://dirtyrabbit.es/guia/desayunar-cerca-de-${landmarkSlug}` }
+];
+---
+
+<Layout 
+  title={`Dónde desayunar cerca de ${landmarkName} — Guía 2026`}
+  description={`Dónde desayunar cerca de la Playa de Sant Pol en S'Agaró. Specialty coffee, brunch y opciones para antes o después del baño.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUÍA DE DESAYUNOS</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Dónde desayunar cerca de {landmarkName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          La Playa de Sant Pol es, posiblemente, la playa más bonita de la Costa Brava sur. Arena fina, aguas tranquilas de un azul que no parece mediterráneo, y al fondo las casas blancas noucentistas de S'Agaró asomando entre pinos. Las casetas de baño históricas — que llevan ahí desde los años 20 — le dan un aire retro que no encontrarás en ningún otro sitio.
+        </p>
+        <p class="font-mono text-lg text-black/70 leading-relaxed mt-4">
+          Pero antes (o después) del baño, la pregunta es siempre la misma: <strong>¿dónde desayuno?</strong>
+        </p>
+      </header>
+
+      <!-- La playa -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🏖️</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">La playa</h2>
+        </div>
+        <div class="prose prose-lg max-w-none font-mono text-black/80">
+          <p>
+            Sant Pol es una playa de unos 800 metros de largo, compartida entre S'Agaró y Sant Feliu de Guíxols. El agua es increíblemente limpia — tanto que en días de calma puedes ver el fondo a varios metros. La entrada es suave, perfecta para familias con niños.
+          </p>
+          <p>
+            En verano hay servicio de tumbonas y sombrillas, y se pueden alquilar kayaks y tablas de SUP. Pero el mejor momento es a primera hora: la playa casi vacía, la luz rasante, el agua quieta. Un baño a las 8 de la mañana en Sant Pol te cambia el día.
+          </p>
+          
+          <h3 class="font-typewriter text-lg mt-6 mb-2">Cómo llegar</h3>
+          <ul class="list-disc list-inside">
+            <li><strong>En coche desde Platja d'Aro:</strong> 5 minutos por la GI-682. Hay un parking público junto a la playa (ojo, se llena rápido en temporada).</li>
+            <li><strong>Andando desde S'Agaró:</strong> Bajas por las escalinatas noucentistas en 5 minutos.</li>
+            <li><strong>Por el Camí de Ronda desde Sant Feliu:</strong> 20-30 minutos andando, una de las rutas más espectaculares de la costa.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- DR Featured -->
+      <section class="mb-12 p-8 bg-cream border-l-4 border-red">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🐇</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Dirty Rabbit — A 3 minutos andando</h2>
+        </div>
+        <p class="font-mono text-sm text-black/60 mb-4">Avenida Platja d'Aro 275, S'Agaró</p>
+        
+        <div class="prose prose-lg max-w-none font-mono text-black/80">
+          <p>
+            Estamos literalmente a la vuelta de la esquina de Sant Pol. Tres minutos andando cuesta arriba y estás en Dirty Rabbit.
+          </p>
+          <p>
+            La idea es simple: vienes del baño (o antes de ir), te sientas, y te cuidas. Un café de especialidad hecho como tiene que estar hecho — servimos <strong>La Cabra</strong>, uno de los tostadores más respetados de Europa (de Copenhague). Cada grano tiene trazabilidad completa: finca, altitud, proceso, tueste. No es café "bueno para ser de playa". Es café de los mejores, punto.
+          </p>
+          
+          <h3 class="font-typewriter text-lg mt-6 mb-2">Para desayunar</h3>
+          <p>Nuestro brunch cambia con la temporada y el producto disponible, pero siempre encontrarás:</p>
+          <ul class="list-disc list-inside my-3">
+            <li><strong>Eggs Benedict</strong> — con hollandaise casera y pan de masa madre</li>
+            <li><strong>Tostadas</strong> — con aguacate, salmón curado o tomate de temporada</li>
+            <li><strong>Bowls</strong> — granola casera, yogur, fruta fresca</li>
+            <li><strong>Zumos naturales</strong> — exprimidos al momento</li>
+          </ul>
+          <p>Todo hecho con calma y con cariño. Eso es lo que significa <em>cuidado</em> para nosotros.</p>
+          
+          <h3 class="font-typewriter text-lg mt-6 mb-2">El ambiente</h3>
+          <p>
+            Dirty Rabbit es lo que llamamos "casa lejos de casa". Un sitio donde puedes venir en bañador con la toalla al hombro, quedarte leyendo dos horas con tu flat white, o sentarte con desconocidos y acabar hablando de la vida. Sin pretensiones, sin prisa.
+          </p>
+          <p>
+            Hablamos <strong>español, catalán, inglés y polaco</strong>. Sea cual sea tu idioma, aquí te vas a sentir cómodo.
+          </p>
+        </div>
+        
+        <div class="mt-6">
+          <a href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaro" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-typewriter text-red hover:underline">
+            Ver en Google Maps →
+          </a>
+        </div>
+      </section>
+
+      <!-- Distance Table -->
+      <section class="mb-12">
+        <h2 class="font-typewriter text-2xl mb-6">Distancia desde la playa</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3 pr-4">Desde</th>
+                <th class="text-left py-3 pr-4">A Dirty Rabbit</th>
+                <th class="text-left py-3">Cómo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/10">
+                <td class="py-3 pr-4">Platja de Sant Pol</td>
+                <td class="py-3 pr-4">3 min</td>
+                <td class="py-3">Andando cuesta arriba por Avenida Platja d'Aro</td>
+              </tr>
+              <tr class="border-b border-black/10">
+                <td class="py-3 pr-4">Cala Sa Conca</td>
+                <td class="py-3 pr-4">5 min</td>
+                <td class="py-3">Andando por la urbanización</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4">Parking de Sant Pol</td>
+                <td class="py-3 pr-4">2 min</td>
+                <td class="py-3">Andando</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Other options -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">☕</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Otras opciones cerca</h2>
+        </div>
+        
+        <div class="space-y-6">
+          <div>
+            <h3 class="font-typewriter text-xl mb-2">En S'Agaró</h3>
+            <ul class="space-y-2 font-mono text-black/80">
+              <li>
+                <strong>Restaurant dels Banys</strong> — Junto a la playa, en el edificio histórico de los baños (1929). Más orientado a comidas, pero en verano abre para desayunos.
+              </li>
+              <li>
+                <strong>Hostal de la Gavina</strong> — Si quieres darte un capricho. Desayuno de hotel 5 estrellas con vistas al mar. Precio acorde.
+              </li>
+              <li>
+                <strong>S'Agaró BAR 245</strong> — Opción más casual con terraza.
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-typewriter text-xl mb-2">A 5-7 minutos en coche</h3>
+            <ul class="space-y-2 font-mono text-black/80">
+              <li>
+                <strong>La Maglia</strong> (Platja d'Aro) — Otro café de especialidad con tostado propio. Si ya conoces DR y quieres explorar, merece la pena. Gran terraza, cultura ciclista.
+              </li>
+              <li>
+                <strong>ANNNA</strong> (Sant Feliu de Guíxols) — Café de especialidad + panadería sin gluten artesanal en una casa del siglo XIX. Abierta de jueves a lunes.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- El plan perfecto -->
+      <section class="mb-12 p-6 bg-cream">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">✨</span>
+          <h2 class="font-typewriter text-2xl">El plan perfecto</h2>
+        </div>
+        <ol class="space-y-2 font-mono text-black/80 list-decimal list-inside">
+          <li><strong>8:00</strong> — Baño en Sant Pol con la playa para ti</li>
+          <li><strong>8:30</strong> — Sube a Dirty Rabbit. Pide un flat white con leche de avena y unos eggs benedict</li>
+          <li><strong>9:30</strong> — Segundo café (nadie te juzga) y un rato de lectura al sol</li>
+          <li><strong>10:30</strong> — Camí de Ronda hacia Sa Conca. 20 minutos de paseo entre acantilados y pinos</li>
+          <li><strong>11:30</strong> — Segundo baño en Sa Conca. Te lo has ganado</li>
+        </ol>
+        <p class="font-mono text-black/60 mt-4 text-sm">
+          Repetir cada mañana hasta que se acaben las vacaciones.
+        </p>
+      </section>
+
+      <!-- Tips -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">💡</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Consejos prácticos</h2>
+        </div>
+        <ul class="space-y-2 font-mono text-black/80">
+          <li><strong>Parking:</strong> El parking público junto a Sant Pol es gratuito fuera de temporada. En julio-agosto, ven antes de las 9:30 o aparca en la zona alta de S'Agaró.</li>
+          <li><strong>Calzado:</strong> Para bajar a la playa, cualquier cosa vale. Para el Camí de Ronda, mejor zapatillas cerradas.</li>
+          <li><strong>Toalla y protección solar:</strong> Siempre. Incluso en mayo el sol de la Costa Brava quema.</li>
+          <li><strong>Efectivo:</strong> Algunos chiringuitos solo aceptan efectivo en verano. En Dirty Rabbit aceptamos tarjeta, claro.</li>
+        </ul>
+      </section>
+
+      <!-- Internal Links -->
+      <section class="mt-12 p-6 bg-cream">
+        <h2 class="font-typewriter text-xl mb-4">Explora más</h2>
+        <ul class="space-y-2 font-mono text-sm">
+          <li>
+            <a href="/guia/que-hacer-en-sagaro" class="text-red hover:underline">
+              → Qué hacer en S'Agaró
+            </a>
+          </li>
+          <li>
+            <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">
+              → Mejor café de especialidad en S'Agaró
+            </a>
+          </li>
+          <li>
+            <a href="/guia/desayunar-cerca-de-cami-de-ronda" class="text-red hover:underline">
+              → Dónde desayunar cerca del Camí de Ronda
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <section class="mt-12 text-center">
+        <p class="font-mono text-black/70 mb-4">
+          La Playa de Sant Pol está ahí abajo. El café está aquí arriba. Ven, date un baño y luego sube — la puerta siempre está abierta.
+        </p>
+        <a 
+          href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaro"
+          target="_blank"
+          rel="noopener"
+          class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors"
+        >
+          Cómo llegar a Dirty Rabbit
+        </a>
+      </section>
+
+    </div>
+  </article>
+
+</Layout>

@@ -1,0 +1,148 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+
+const locationName = "Platja d'Aro";
+const locationSlug = "platja-daro";
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `Què fer a ${locationName}`, url: `https://dirtyrabbit.es/ca/guia/que-fer-a-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Què fer a ${locationName} — Guia local 2026`}
+  description={`Tot el que pots fer a ${locationName}, Costa Brava: platges, compres, vida nocturna, i les millors adreces per menjar i prendre cafè.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIA LOCAL · ACTIVITATS</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Què fer a {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Platja d'Aro és el cor turístic de la Costa Brava: platja llarga de sorra, passeig marítim animat, botigues, vida nocturna... És el destí de platja per excel·lència. Però més enllà de les botigues i els bars, també hi ha una Costa Brava autèntica a descobrir a pocs minuts.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🏖️ La platja principal</h2>
+          
+          <p class="mb-4">
+            La Platja Gran de Platja d'Aro és una platja llarga de sorra fina, ben equipada: hamaques, para-sols, xiringuitos, dutxes. És la platja familiar clàssica de la Costa Brava, amb tots els serveis.
+          </p>
+          
+          <p class="mb-4">
+            En temporada alta (juliol-agost), s'omple. Per més tranquil·litat, vine a primera hora del matí o opta per les platges veïnes: Sant Pol (5 min en cotxe) o les cales de Calonge.
+          </p>
+          
+          <p class="font-mono text-sm"><strong>Consell:</strong> El passeig marítim és agradable al vespre — perfecte per a un passeig després de sopar.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🛍️ Compres</h2>
+          
+          <p class="mb-4">
+            Platja d'Aro és coneguda per les seves botigues. L'avinguda principal i els carrers adjacents estan plens de comerços — des de marques internacionals fins a botigues locals.
+          </p>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Gran Via</strong> — L'artèria principal amb les grans cadenes</li>
+            <li><strong>Carrers de vianants</strong> — Botigues locals, souvenirs, moda</li>
+            <li><strong>Mercat del divendres</strong> — Mercat setmanal amb producte local i roba</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🌙 Vida nocturna</h2>
+          
+          <p class="mb-4">
+            Platja d'Aro és la capital de la nit a la Costa Brava. Les discoteques i bars es concentren a la zona del port i al llarg de l'avinguda principal.
+          </p>
+          
+          <p class="mb-4">
+            És animat de juny a setembre, amb el pic al juliol-agost. Si busques tranquil·litat, evita el passeig marítim el cap de setmana en temporada alta.
+          </p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> La nostra recomanació: escapa't 5 minuts
+          </h2>
+          
+          <p class="mb-4">
+            Per una experiència Costa Brava més autèntica, fes els 5 minuts fins a S'Agaró. L'ambient és completament diferent: arquitectura noucentista, Camí de Ronda, platja de Sant Pol...
+          </p>
+          
+          <p class="mb-4">
+            I és clar, passa a prendre un cafè amb nosaltres. <strong>Dirty Rabbit</strong> serveix cafè La Cabra (Dinamarca) preparat en La Marzocco, amb brunch casolà i un ambient relaxat.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mt-6 mb-3">Dia perfecte des de Platja d'Aro</h3>
+          <ol class="space-y-2 mb-6">
+            <li><strong>9:00</strong> — Ruta cap a S'Agaró (5 min)</li>
+            <li><strong>9:15</strong> — Camí de Ronda cap a Sa Conca</li>
+            <li><strong>10:30</strong> — Bany a la Platja de Sant Pol</li>
+            <li><strong>11:30</strong> — Brunch a Dirty Rabbit</li>
+            <li><strong>13:30</strong> — Tornada a Platja d'Aro per compres o platja</li>
+          </ol>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Dirty Rabbit a Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🍽️ On menjar</h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">A Platja d'Aro</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>La Maglia</strong> — Cafè d'especialitat torrat in situ, cultura ciclista, gran terrassa. Bowls, torrades, açaí.</li>
+            <li><strong>Restaurants del passeig</strong> — Cuina variada, des de paella fins a tapes. Qualitat variable.</li>
+          </ul>
+          
+          <h3 class="font-typewriter text-xl mb-3">A 5-7 minuts</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Dirty Rabbit (S'Agaró)</strong> — El millor cafè de la zona, brunch artesà, ambient autèntic.</li>
+            <li><strong>ANNNA (Sant Feliu)</strong> — Cafè d'especialitat + fleca sense gluten. Entorn preciós.</li>
+            <li><strong>Villamás (S'Agaró)</strong> — Restaurant gastronòmic, producte de temporada, per a una ocasió especial.</li>
+          </ul>
+        </section>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">T'esperem a 5 minuts</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avinguda Platja d'Aro 275, S'Agaró<br>
+            Un cafè extraordinari, un brunch casolà, i la Costa Brava de veritat.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

@@ -1,0 +1,215 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const landmarkName = "el centro de Platja d'Aro";
+const landmarkSlug = "centre-platja-daro";
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' },
+  { name: `Desayunar en ${landmarkName}`, url: `https://dirtyrabbit.es/guia/desayunar-cerca-de-${landmarkSlug}` }
+];
+---
+
+<Layout 
+  title={`Dónde desayunar en el centro de Platja d'Aro — Guía 2026`}
+  description={`Dónde desayunar en el centro de Platja d'Aro. Las mejores opciones de specialty coffee y brunch en el corazón turístico de la Costa Brava.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUÍA DE DESAYUNOS</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Dónde desayunar en el centro de Platja d'Aro
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Platja d'Aro es el centro turístico de la Costa Brava sur: paseo marítimo, tiendas, restaurantes y mucha vida. Pero encontrar un buen desayuno — de esos con café de verdad y producto de calidad — requiere saber dónde ir. Aquí te contamos las mejores opciones en el centro y a pocos minutos.
+        </p>
+      </header>
+
+      <!-- La Maglia - In Platja d'Aro -->
+      <section class="mb-12 p-8 bg-cream border-l-4 border-black">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">☕</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">La Maglia — En el centro</h2>
+        </div>
+        <p class="font-mono text-sm text-black/60 mb-4">Carrer Juli Garreta 10, Platja d'Aro · 0 min (estás aquí)</p>
+        
+        <div class="prose prose-lg max-w-none font-mono text-black/80">
+          <p>
+            Si estás en el centro de Platja d'Aro, La Maglia es la opción de specialty coffee más cercana. Tuestan su propio café — el primer tostadero de especialidad de la costa de Girona — con granos 100% arábica y puntuación SCA por encima de 85.
+          </p>
+          <p>
+            El ambiente es muy ciclista (el nombre viene del maillot rosa del Giro d'Italia). Terraza grande, bowls de açaí, tostadas con masa madre de La Farinera, y zumos. Buena opción para un desayuno rápido o para quedar con otros ciclistas antes de una ruta.
+          </p>
+        </div>
+        <p class="font-mono text-sm text-black/60 mt-4">
+          <strong>Lo mejor:</strong> Su tostado propio y la terraza.
+        </p>
+      </section>
+
+      <!-- DR Featured -->
+      <section class="mb-12 p-8 bg-cream border-l-4 border-red">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🐇</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Dirty Rabbit — 5 min en coche (S'Agaró)</h2>
+        </div>
+        <p class="font-mono text-sm text-black/60 mb-4">Avenida Platja d'Aro 275, S'Agaró</p>
+        
+        <div class="prose prose-lg max-w-none font-mono text-black/80">
+          <p>
+            Si quieres el mejor desayuno de la zona — de verdad el mejor — merece la pena los 5 minutos hasta S'Agaró.
+          </p>
+          <p>
+            Servimos <strong>La Cabra</strong> de Dinamarca, uno de los tostadores más respetados del mundo. Cada grano con trazabilidad completa. Preparación en La Marzocco KB90 con agua de ósmosis inversa. No es café "bueno para un pueblo de playa". Es café de élite mundial.
+          </p>
+          <p>
+            Y el brunch: eggs benedict con hollandaise casera, tostadas con aguacate o salmón, bowls con granola casera... Todo hecho con producto local y mucho cariño.
+          </p>
+          <p>
+            El ambiente es lo que llamamos "casa lejos de casa". Puedes venir en bañador, quedarte leyendo dos horas, o conocer gente nueva. Sin pretensiones, sin prisa.
+          </p>
+          
+          <h3 class="font-typewriter text-lg mt-6 mb-2">Cómo llegar desde el centro de Platja d'Aro</h3>
+          <ul class="list-disc list-inside">
+            <li><strong>En coche:</strong> 5 minutos por la GI-682 dirección S'Agaró.</li>
+            <li><strong>En bici:</strong> 15 minutos por la costa — combinación perfecta con la Playa de Sant Pol.</li>
+            <li><strong>Andando por el Camí de Ronda:</strong> 25 minutos por una de las rutas más bonitas de la Costa Brava.</li>
+          </ul>
+        </div>
+        
+        <div class="mt-6">
+          <a href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaro" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-typewriter text-red hover:underline">
+            Ver en Google Maps →
+          </a>
+        </div>
+      </section>
+
+      <!-- Other options -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">☕</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Otras opciones</h2>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="border-b border-black/10 pb-6">
+            <h3 class="font-typewriter text-xl mb-2">En Platja d'Aro</h3>
+            <ul class="space-y-2 font-mono text-black/80">
+              <li>
+                <strong>Grace Coffee</strong> — Café casual con desayunos en el centro. Cómodo, sin pretensiones. No confirmado como specialty, pero correcto.
+              </li>
+              <li>
+                <strong>Terrazas del paseo</strong> — Hay muchas opciones de desayunos turísticos. La calidad varía mucho. Si buscas specialty coffee, La Maglia es la única opción real en el pueblo.
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="font-typewriter text-xl mb-2">A 7-10 minutos</h3>
+            <ul class="space-y-2 font-mono text-black/80">
+              <li>
+                <strong>ANNNA</strong> (Sant Feliu) — Café de especialidad + panadería sin gluten artesanal. En una casa señorial del XIX. 7 minutos en coche.
+              </li>
+              <li>
+                <strong>Maison Marcel</strong> (Sant Feliu) — Panadería francesa con los mejores croissants de la costa. 7 minutos.
+              </li>
+              <li>
+                <strong>Dupla</strong> (Sant Antoni de Calonge) — Nuevo spot de specialty y brunch. 8 minutos dirección Palamós.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison -->
+      <section class="mb-12">
+        <h2 class="font-typewriter text-2xl mb-6">Comparativa rápida</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3 pr-4">Sitio</th>
+                <th class="text-left py-3 pr-4">Distancia</th>
+                <th class="text-left py-3 pr-4">Café</th>
+                <th class="text-left py-3">Lo mejor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/10">
+                <td class="py-3 pr-4">La Maglia</td>
+                <td class="py-3 pr-4">En centro</td>
+                <td class="py-3 pr-4">Propio</td>
+                <td class="py-3">Terraza, ciclismo</td>
+              </tr>
+              <tr class="border-b border-black/10">
+                <td class="py-3 pr-4 font-bold">Dirty Rabbit</td>
+                <td class="py-3 pr-4">5 min</td>
+                <td class="py-3 pr-4">La Cabra</td>
+                <td class="py-3">Mejor café, brunch, ambiente</td>
+              </tr>
+              <tr class="border-b border-black/10">
+                <td class="py-3 pr-4">ANNNA</td>
+                <td class="py-3 pr-4">7 min</td>
+                <td class="py-3 pr-4">Specialty</td>
+                <td class="py-3">Pan sin gluten, espacio</td>
+              </tr>
+              <tr>
+                <td class="py-3 pr-4">Maison Marcel</td>
+                <td class="py-3 pr-4">7 min</td>
+                <td class="py-3 pr-4">Quality</td>
+                <td class="py-3">Croissants</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Internal Links -->
+      <section class="mt-12 p-6 bg-cream">
+        <h2 class="font-typewriter text-xl mb-4">Explora más</h2>
+        <ul class="space-y-2 font-mono text-sm">
+          <li>
+            <a href="/guia/mejor-cafe-platja-daro" class="text-red hover:underline">
+              → Mejor café de especialidad cerca de Platja d'Aro
+            </a>
+          </li>
+          <li>
+            <a href="/guia/que-hacer-en-platja-daro" class="text-red hover:underline">
+              → Qué hacer en Platja d'Aro
+            </a>
+          </li>
+          <li>
+            <a href="/guia/desayunar-cerca-de-platja-sant-pol" class="text-red hover:underline">
+              → Dónde desayunar cerca de la Playa de Sant Pol
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <section class="mt-12 text-center">
+        <p class="font-mono text-black/70 mb-4">
+          El mejor desayuno de la zona está a 5 minutos. ¿Vienes?
+        </p>
+        <a 
+          href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaro"
+          target="_blank"
+          rel="noopener"
+          class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors"
+        >
+          Cómo llegar a Dirty Rabbit
+        </a>
+      </section>
+
+    </div>
+  </article>
+
+</Layout>

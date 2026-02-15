@@ -1,0 +1,165 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const locationName = "Sant Feliu de Guíxols";
+const locationSlug = "sant-feliu-de-guixols";
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/en/guide/' },
+  { name: `Things to do in ${locationName}`, url: `https://dirtyrabbit.es/en/guide/things-to-do-in-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Things to do in ${locationName} — Local Guide 2026`}
+  description={`Everything to do in ${locationName}, Costa Brava: monastery, fishing port, Camí de Ronda, and the best spots for coffee and local cuisine.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">LOCAL GUIDE · ACTIVITIES</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Things to do in {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Sant Feliu de Guíxols is a real Costa Brava town — not a resort built for tourists. Authentic fishing port, thousand-year-old Benedictine monastery, cork-making heritage, and a local life that continues year-round. This is where Catalans come for their holidays.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🏛️ The Benedictine monastery</h2>
+          
+          <p class="mb-4">
+            The monastery of Sant Feliu dates from the 10th century. It's the historic heart of the town. The Romanesque church, the cloister, and the history museum are worth visiting. Entry is free on certain days.
+          </p>
+          
+          <p class="mb-4">
+            The Porta Ferrada, the pre-Romanesque entrance gate, is one of the oldest monuments in Catalonia. Every summer, the Porta Ferrada music festival hosts concerts in an exceptional setting.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">⚓ The port and seafront</h2>
+          
+          <p class="mb-4">
+            The port of Sant Feliu is still an active fishing port. Early in the morning, you can watch the boats come in with their catch. The fish auction (la llotja) is open to the public on certain days.
+          </p>
+          
+          <p class="mb-4">
+            The Passeig del Mar (seafront promenade) runs along the beach to the port. Perfect for a stroll, with views of the sea and colourful facades.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🥾 Camí de Ronda to S'Agaró</h2>
+          
+          <p class="mb-4">
+            The stretch of Camí de Ronda between Sant Feliu and S'Agaró is spectacular. About 30-45 minutes' walk along the cliffs, with sea views and hidden coves along the way.
+          </p>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Start:</strong> From Sant Feliu beach, heading south</li>
+            <li><strong>End:</strong> Platja de Sant Pol or Cala Sa Conca</li>
+            <li><strong>Difficulty:</strong> Moderate (stairs, uneven terrain in places)</li>
+            <li><strong>Bring:</strong> Water, proper shoes. Swimming possible along the way.</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🏖️ Beaches</h2>
+          
+          <ul class="space-y-4 mb-6">
+            <li>
+              <strong>Platja de Sant Feliu</strong> — The main beach, in the town centre. All services, but can be packed in summer.
+            </li>
+            <li>
+              <strong>Platja de Sant Pol</strong> (5 min drive) — More beautiful, more peaceful. Fine sand, crystal-clear waters, family atmosphere.
+            </li>
+            <li>
+              <strong>Camí de Ronda coves</strong> — Cala del Pi, Cala Pedrosa... Accessible on foot, often deserted.
+            </li>
+          </ul>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Where to get good coffee
+          </h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">In Sant Feliu</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>ANNNA</strong> (Carrer de l'Hospital 21) — Specialty coffee, gluten-free bakery, concept store. In a beautiful 19th-century house. Open Thu-Mon.</li>
+            <li><strong>Maison Marcel</strong> (Carrer Major 5) — French patisserie, exceptional butter croissants.</li>
+          </ul>
+          
+          <h3 class="font-typewriter text-xl mb-3">7 minutes away (S'Agaró)</h3>
+          <p class="mb-4">
+            For the best specialty coffee in the area, make a detour to <strong>Dirty Rabbit</strong>. La Cabra coffee (Denmark), prepared on La Marzocco, artisan brunch, "home away from home" atmosphere.
+          </p>
+          
+          <p class="mb-4">
+            Perfect after a walk on the Camí de Ronda: you arrive directly in S'Agaró!
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Dirty Rabbit on Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🎭 Culture and events</h2>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Porta Ferrada Festival</strong> (July-August) — Classical and popular music concerts at the monastery. Major Costa Brava event.</li>
+            <li><strong>History Museum</strong> — In the monastery. Local history, cork industry, art.</li>
+            <li><strong>Sunday market</strong> — Weekly market in the town centre.</li>
+          </ul>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">💡 Local tips</h2>
+          
+          <ol class="space-y-2 mb-6">
+            <li><strong>The port car park</strong> is most convenient for visiting the old town and monastery.</li>
+            <li><strong>Restaurants near the port</strong> serve fresh fish from the auction — ask for the "peix del dia".</li>
+            <li><strong>Combine with S'Agaró:</strong> Camí de Ronda → Sant Pol Beach → Brunch at Dirty Rabbit → Return by road.</li>
+            <li><strong>In summer, arrive early</strong> — parking fills up fast, especially on weekends.</li>
+          </ol>
+        </section>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">We're waiting 7 minutes away</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            The best coffee in the area, at the end of the Camí de Ronda.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

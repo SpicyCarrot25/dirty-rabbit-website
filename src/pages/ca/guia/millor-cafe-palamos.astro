@@ -1,0 +1,131 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'ca';
+const locationName = "Palamós";
+const locationSlug = "palamos";
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `Millor cafè prop de ${locationName}`, url: `https://dirtyrabbit.es/ca/guia/millor-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Millor cafè d'especialitat prop de ${locationName} — Guia local 2026`}
+  description={`On trobar specialty coffee a ${locationName}, Costa Brava. Guia honesta des de Zero Cafè fins a Dirty Rabbit a S'Agaró.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIA LOCAL · CAFÈ D'ESPECIALITAT</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Millor cafè d'especialitat prop de {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Palamós és sinònim de gamba vermella — el marisc més cotitzat del Mediterrani. Port pesquer autèntic, subhasta activa cada tarda, i un museu de la pesca que val la pena visitar. Però més enllà del marisc, on es pren bon cafè? Aquí tens la nostra guia.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Zero — Specialty coffee a Palamós</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer Pagès Ortiz, 55, Palamós · Al centre</p>
+          
+          <p class="mb-4">
+            Zero és l'opció specialty al mateix Palamós. Cafè d'especialitat (espresso, filter, cold brew), esmorzars i dinars amb opcions veganes. Ambient tranquil, allunyat de la zona turística del port. Wi-Fi gratis, pet-friendly, terrassa.
+          </p>
+          <p class="mb-4">
+            Obert cada dia de 8:00 a 15:00. Puntuació perfecta a TripAdvisor.
+          </p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — 15 minuts que valen la pena
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avinguda Platja d'Aro 275, S'Agaró · 15 min en cotxe des de Palamós</p>
+          
+          <p class="mb-4">
+            Si et ve de gust convertir el teu cafè del matí en una petita excursió, Dirty Rabbit és a 15 minuts per la costa — i el viatge val la pena.
+          </p>
+          
+          <p class="mb-4">
+            Servim <strong>La Cabra</strong>, el torrefactor danès que fa anys que és entre els millors del món. Cada gra té traçabilitat completa: finca, altitud, varietat, procés. El preparem a la <strong>La Marzocco KB90</strong> amb aigua filtrada per <strong>osmosi inversa</strong>. No és cafè "bo per ser de Costa Brava" — és cafè d'elit mundial.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Els nostres tres pilars</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Wild Comfort</strong> — Un lloc salvatge i acollidor alhora.</li>
+            <li><strong>Intention</strong> — Tot el que fem té un perquè.</li>
+            <li><strong>Belonging</strong> — Un lloc on encaixes, vinguis d'on vinguis.</li>
+          </ul>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Veure a Google Maps →
+          </a>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distàncies des de {locationName}</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Cafeteria</th>
+                <th class="text-left py-3">Temps</th>
+                <th class="text-left py-3">Tipus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Zero</td>
+                <td class="py-3">A Palamós</td>
+                <td class="py-3">Specialty café</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">10 min</td>
+                <td class="py-3">Torrefactor propi</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">15 min</td>
+                <td class="py-3">La Cabra (Dinamarca)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avinguda Platja d'Aro 275, S'Agaró<br>
+            15 minuts des de Palamós. El millor cafè de la Costa Brava t'espera.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

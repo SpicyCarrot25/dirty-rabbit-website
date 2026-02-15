@@ -1,0 +1,153 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const locationName = "Palamós";
+const locationSlug = "palamos";
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guides', url: 'https://dirtyrabbit.es/fr/guides/' },
+  { name: `Meilleur café à ${locationName}`, url: `https://dirtyrabbit.es/fr/guides/meilleur-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Meilleur café de spécialité à ${locationName} — Guide local 2026`}
+  description={`Où trouver le meilleur café de spécialité à ${locationName}, Costa Brava. De Zero à Dirty Rabbit : guide des amateurs de bon café.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · CAFÉ DE SPÉCIALITÉ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Meilleur café de spécialité à {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Palamós est célèbre pour ses crevettes rouges (gambas de Palamós) et son port de pêche authentique. Mais pour les amateurs de café de spécialité, c'est aussi une étape intéressante sur la Costa Brava. Voici où trouver du vrai bon café.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Zero — Café de spécialité à Palamós</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer Pagès Ortiz, 55, Palamós · Dans le centre</p>
+          
+          <p class="mb-4">
+            Zero est l'adresse specialty de Palamós. Espresso, filtré, cold brew, décaféiné — tout est là. Petit-déjeuner et déjeuner avec options véganes. Laits végétaux disponibles, WiFi gratuit, terrasse extérieure.
+          </p>
+          <p class="mb-4">
+            5.0/5 sur TripAdvisor — un endroit calme et concentré sur la qualité, loin de la zone touristique du port.
+          </p>
+          <p class="mb-4">
+            <strong>Horaires :</strong> Tous les jours 8h00–15h00
+          </p>
+          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Flat white + toast avec avocat. Simple, bien fait.</p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — Le meilleur de la région (15 min)
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 15 min en voiture depuis Palamós</p>
+          
+          <p class="mb-4">
+            Pour le meilleur café de spécialité de toute la Costa Brava, ça vaut les 15 minutes jusqu'à S'Agaró.
+          </p>
+          
+          <p class="mb-4">
+            Nous servons <strong>La Cabra</strong> — torréfacteur danois d'élite mondiale. Café traçable, préparé sur <strong>La Marzocco KB90</strong> avec eau filtrée par osmose inverse. C'est du café extraordinaire, pas juste du "bon café".
+          </p>
+          
+          <p class="mb-4">
+            Après avoir goûté les gambas de Palamós au déjeuner, venez prendre un café digestif chez nous. Ou combinez avec une baignade à Sant Pol et un brunch tranquille.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Depuis Palamós</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>15 minutes en voiture</strong> — Route côtière agréable via Calonge</li>
+            <li><strong>40 minutes à vélo</strong> — Parfait pour les cyclistes</li>
+          </ul>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Voir sur Google Maps →
+          </a>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distances depuis Palamós</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Café</th>
+                <th class="text-left py-3">Distance</th>
+                <th class="text-left py-3">Temps</th>
+                <th class="text-left py-3">Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Zero</td>
+                <td class="py-3">0 km</td>
+                <td class="py-3">À Palamós</td>
+                <td class="py-3">Specialty local</td>
+              </tr>
+              <tr class="border-b border-black/20 bg-cream">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">10 km</td>
+                <td class="py-3">15 min</td>
+                <td class="py-3">La Cabra (Danemark)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">12 km</td>
+                <td class="py-3">18 min</td>
+                <td class="py-3">Torréfaction propre</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Journée parfaite Palamós → S'Agaró</h2>
+        <ol class="space-y-2 mb-8">
+          <li><strong>10h00</strong> — Marché aux poissons de Palamós</li>
+          <li><strong>11h30</strong> — Route côtière vers S'Agaró</li>
+          <li><strong>12h00</strong> — Brunch chez Dirty Rabbit</li>
+          <li><strong>14h00</strong> — Camí de Ronda et baignade à Sant Pol</li>
+          <li><strong>16h00</strong> — Retour à Palamós pour les gambas du soir</li>
+        </ol>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">On vous attend</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            À 15 minutes de Palamós. Ça vaut le détour.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Comment venir
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

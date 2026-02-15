@@ -1,0 +1,160 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const locationName = "Begur";
+const locationSlug = "begur";
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' },
+  { name: `Mejor café cerca de ${locationName}`, url: `https://dirtyrabbit.es/guia/mejor-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Mejor café de especialidad en ${locationName} — Guía local 2026`}
+  description={`Dónde tomar specialty coffee en ${locationName}, Costa Brava. Fitzroy Café, Dirty Rabbit y más — guía honesta de cafeterías de especialidad.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <!-- Header -->
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUÍA LOCAL · CAFÉ DE ESPECIALIDAD</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Mejor café de especialidad en {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Begur es probablemente el pueblo más bonito de la Costa Brava. Casas indianas con aire cubano, callejuelas empedradas, un castillo medieval con vistas de 360°, y las calas más fotogénicas de todo el Mediterráneo (Aiguablava, Sa Tuna, Sa Riera). También tiene su escena de specialty coffee — aunque funciona en modo estacional.
+        </p>
+      </header>
+
+      <!-- Main Content -->
+      <div class="prose prose-lg max-w-none">
+        
+        <!-- Fitzroy Section -->
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Fitzroy Café — Brunch de culto estilo Melbourne</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de Francesc Forgas, 1, Begur · En el centro histórico</p>
+          
+          <p class="mb-4">
+            Fitzroy es inspiración directa de Melbourne — nombrado por el barrio hipster australiano. Café de especialidad, brunch legendario (kimcheese toasties, smashed avo, banana pancakes), y wine bar por las noches en verano.
+          </p>
+          <p class="mb-4">
+            <strong>Importante:</strong> Fitzroy es estacional. En invierno puede estar cerrado o con horarios reducidos. Verifica antes de ir. Cuando está abierto (primavera-otoño), es de lo mejor de la Costa Brava.
+          </p>
+          <p class="font-mono text-sm"><strong>Lo mejor:</strong> El brunch completo + flat white. Terraza en la placita del pueblo.</p>
+        </section>
+
+        <!-- Dirty Rabbit Section -->
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — 20 minutos con vistas al mar
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 20 min en coche desde Begur</p>
+          
+          <p class="mb-4">
+            Si vienes desde Begur hacia S'Agaró por la costa, el viaje de 20 minutos es espectacular — y el destino también lo es.
+          </p>
+          
+          <p class="mb-4">
+            Servimos <strong>La Cabra</strong>, el tostador danés que lleva años en la élite mundial del specialty coffee. Cada grano tiene trazabilidad completa: finca, altitud, variedad, proceso. Lo preparamos en <strong>La Marzocco KB90</strong> con agua filtrada por <strong>ósmosis inversa</strong> — porque los detalles importan.
+          </p>
+          
+          <p class="mb-4">
+            A diferencia de Fitzroy, Dirty Rabbit abre todo el año. Así que si vienes en enero o febrero y buscas buen café, aquí estamos. Además de café, puedes desayunar (eggs benedict, tostadas, bowls), quedarte leyendo, o bajar a la playa de Sant Pol a 3 minutos.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Nuestros tres pilares</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Wild Comfort</strong> — Un sitio salvaje y acogedor a la vez.</li>
+            <li><strong>Intention</strong> — Todo lo que hacemos tiene un porqué.</li>
+            <li><strong>Belonging</strong> — Un lugar donde encajas, vengas de donde vengas.</li>
+          </ul>
+          
+          <p class="mb-4">
+            Hablamos <strong>español, catalán, inglés y polaco</strong>. Tenemos cartas en ruso, francés y ucraniano.
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Ver en Google Maps →
+          </a>
+        </section>
+
+        <!-- Distance Table -->
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distancias desde {locationName}</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Cafetería</th>
+                <th class="text-left py-3">Tiempo</th>
+                <th class="text-left py-3">Tipo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Fitzroy Café</td>
+                <td class="py-3">En Begur</td>
+                <td class="py-3">Melbourne-style (estacional)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">20 min</td>
+                <td class="py-3">La Cabra (Dinamarca)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Grava</td>
+                <td class="py-3">15 min (Pals)</td>
+                <td class="py-3">Right Side + pizzería</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">25 min</td>
+                <td class="py-3">Tostadero propio</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- More Options -->
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Más specialty cerca de Begur</h2>
+        <ul class="space-y-2 mb-8">
+          <li><strong>Grava</strong> en Pals (15 min) — Café Right Side + pizzería + vinos naturales. Terraza chill-out, muy cycling-friendly.</li>
+          <li><strong>Rustik Empordà</strong> en Bellcaire (25 min) — Panadería y café en un pueblo del interior. Perfecto para ciclistas.</li>
+        </ul>
+
+        <!-- CTA -->
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">¿Vienes a vernos?</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            20 minutos desde Begur. Abiertos todo el año.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Cómo llegar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

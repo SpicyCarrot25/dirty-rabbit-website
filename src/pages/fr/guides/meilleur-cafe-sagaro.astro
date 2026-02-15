@@ -1,0 +1,155 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const locationName = "S'Agaró";
+const locationSlug = "sagaro";
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guides', url: 'https://dirtyrabbit.es/fr/guides/' },
+  { name: `Meilleur café à ${locationName}`, url: `https://dirtyrabbit.es/fr/guides/meilleur-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Meilleur café de spécialité à ${locationName} — Guide local 2026`}
+  description={`Où trouver le meilleur café de spécialité à ${locationName}, Costa Brava. Dirty Rabbit : café La Cabra, brunch et ambiance unique.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · CAFÉ DE SPÉCIALITÉ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Meilleur café de spécialité à {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          S'Agaró n'est pas un village ordinaire. C'est un quartier résidentiel de luxe créé dans les années 1920, quand l'industriel Josep Ensesa a commandé à l'architecte Rafael Masó un paradis noucentiste au bord de la mer. Maisons blanches avec arcades, escaliers parmi les pins, le Camí de Ronda... et maintenant, un café qui est à la hauteur de ce décor exceptionnel.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — Le café de spécialité de S'Agaró
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · Vous y êtes !</p>
+          
+          <p class="mb-4">
+            Si vous êtes à S'Agaró et que vous cherchez le meilleur café, bonne nouvelle : vous n'avez pas besoin d'aller loin. Dirty Rabbit est ici même, et c'est exactement ce que vous cherchez.
+          </p>
+          
+          <p class="mb-4">
+            Nous servons <strong>La Cabra</strong> — le torréfacteur danois reconnu mondialement pour son excellence. Chaque grain est traçable jusqu'à la ferme d'origine, torréfié avec précision à Copenhague. Nous le préparons sur notre <strong>La Marzocco KB90</strong> avec de l'eau <strong>filtrée par osmose inverse</strong> — parce que le café extraordinaire mérite une préparation extraordinaire.
+          </p>
+          
+          <p class="mb-4">
+            Mais nous sommes plus qu'un café. C'est un endroit pour s'installer avec un livre après une promenade sur le Camí de Ronda, prendre un brunch tranquille après un bain à Sant Pol, ou simplement profiter de l'atmosphère unique de S'Agaró. Nous l'appelons "wild comfort" — sauvage et accueillant à la fois.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Ce que nous offrons</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Café La Cabra</strong> — Espresso, flat white, filtré, ce que vous préférez</li>
+            <li><strong>Brunch complet</strong> — Œufs bénédicte, bagels, bowls, toasts artisanaux</li>
+            <li><strong>Ambiance décontractée</strong> — WiFi, prises, espace pour travailler ou simplement être</li>
+            <li><strong>Multilingue</strong> — Espagnol, catalan, anglais, polonais (menus en français aussi)</li>
+          </ul>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Voir sur Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">Autres options à proximité</h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">☕ ANNNA — Sant Feliu de Guíxols (7 min)</h3>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de l'Hospital 21</p>
+          <p class="mb-4">
+            Ana et Pascal ont créé un espace unique dans une maison du XIXe siècle : café de spécialité, boulangerie sans gluten et concept store. Leur pain au levain est exceptionnel, et l'ambiance vaut le détour.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-8">☕ La Maglia — Platja d'Aro (5 min)</h3>
+          <p class="font-mono text-sm text-black/60 mb-4">C/ Juli Garreta, 10</p>
+          <p class="mb-4">
+            Torréfacteur local avec une forte culture cycliste. Café 100% Arabica torréfié sur place, bowls açaí et grande terrasse. Ambiance gravel bike le weekend.
+          </p>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distances depuis S'Agaró</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Café</th>
+                <th class="text-left py-3">Distance</th>
+                <th class="text-left py-3">Temps</th>
+                <th class="text-left py-3">Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20 bg-cream">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">0 km</td>
+                <td class="py-3">Vous y êtes</td>
+                <td class="py-3">La Cabra (Danemark)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">3,5 km</td>
+                <td class="py-3">5 min</td>
+                <td class="py-3">Torréfaction propre</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">ANNNA</td>
+                <td class="py-3">5 km</td>
+                <td class="py-3">7 min</td>
+                <td class="py-3">Specialty + boulangerie SG</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Combiné parfait à S'Agaró</h2>
+        <p class="mb-4">Notre recommandation pour une matinée parfaite :</p>
+        <ol class="space-y-2 mb-8">
+          <li><strong>8h00</strong> — Promenade sur le Camí de Ronda, de Sant Pol vers Sa Conca</li>
+          <li><strong>9h30</strong> — Baignade à la Platja de Sant Pol</li>
+          <li><strong>10h30</strong> — Brunch et café chez Dirty Rabbit</li>
+          <li><strong>12h00</strong> — Flânerie dans l'architecture noucentiste de S'Agaró</li>
+        </ol>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Bienvenue à S'Agaró</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            Poussez la porte. Le café est prêt.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Comment venir
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

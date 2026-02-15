@@ -1,0 +1,134 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const locationName = "Platja de Sant Pol";
+const locationSlug = "platja-sant-pol";
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/en/guide/' },
+  { name: `Breakfast near ${locationName}`, url: `https://dirtyrabbit.es/en/guide/breakfast-near-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Where to have breakfast near ${locationName} — Guide 2026`}
+  description={`The best spots for breakfast and brunch near Sant Pol Beach, between S'Agaró and Sant Feliu. Local guide.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">LOCAL GUIDE · BREAKFAST</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Where to have breakfast near {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Platja de Sant Pol is one of the most beautiful beaches on the Costa Brava: fine sand, crystal-clear waters, historic bathing huts. And just next door, in S'Agaró, you'll find the best breakfast in the area.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — The perfect breakfast
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 3 min walk from Sant Pol</p>
+          
+          <p class="mb-4">
+            Steps from the beach, Dirty Rabbit is the ideal spot to start your day. La Cabra coffee (Denmark), artisan brunch, and a relaxed atmosphere that makes you want to stay.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mt-6 mb-3">Our breakfast menu</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Eggs Benedict</strong> — Classic or with smoked salmon</li>
+            <li><strong>Bagels</strong> — Various toppings, fresh bread</li>
+            <li><strong>Artisan toasts</strong> — Avocado, ricotta, homemade jam...</li>
+            <li><strong>Bowls</strong> — Açaí, granola, fresh fruit</li>
+            <li><strong>La Cabra coffee</strong> — Espresso, flat white, filter...</li>
+          </ul>
+
+          <h3 class="font-typewriter text-xl mt-6 mb-3">The perfect morning</h3>
+          <ol class="space-y-2 mb-6">
+            <li><strong>8:00</strong> — Early swim at Sant Pol (beach is almost empty)</li>
+            <li><strong>9:30</strong> — Breakfast at Dirty Rabbit</li>
+            <li><strong>11:00</strong> — Camí de Ronda towards Sa Conca</li>
+            <li><strong>12:30</strong> — Second swim and relaxation</li>
+          </ol>
+          
+          <p class="mb-4">
+            We speak <strong>Spanish, Catalan, English and Polish</strong>. French menus available.
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 View on Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">Other options nearby</h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">☕ Sant Pol chiringuitos</h3>
+          <p class="mb-4">
+            In summer, beach chiringuitos offer basic breakfasts: coffee, toast, orange juice. Convenient if you don't want to leave the sand, but quality is standard.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">☕ ANNNA — Sant Feliu (7 min)</h3>
+          <p class="mb-4">
+            Specialty coffee + gluten-free bakery in a beautiful 19th-century house. Their sourdough bread and toasts are excellent. Open Thu-Mon, 9am-2:30pm.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">☕ La Maglia — Platja d'Aro (8 min)</h3>
+          <p class="mb-4">
+            Local roastery with large terrace. Açaí bowls, toasts, on-site roasted coffee. Cyclist vibe.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">About Platja de Sant Pol</h2>
+          
+          <p class="mb-4">
+            Sant Pol is a historic beach, with its 1920s bathing huts still standing. The water is particularly clear here — perfect for snorkelling along the rocks.
+          </p>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Parking:</strong> Limited, arrive before 10am in summer</li>
+            <li><strong>Services:</strong> Sun loungers, parasols, chiringuitos (in season)</li>
+            <li><strong>Atmosphere:</strong> Family-friendly, less crowded than Platja d'Aro</li>
+            <li><strong>Access:</strong> From S'Agaró or via Camí de Ronda from Sant Feliu</li>
+          </ul>
+        </section>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">We're waiting after your swim</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            3 minutes from Sant Pol beach. Come as you are.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

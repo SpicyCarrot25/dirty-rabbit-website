@@ -1,0 +1,135 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'ca';
+const locationName = "Pals";
+const locationSlug = "pals";
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `Millor cafè a ${locationName}`, url: `https://dirtyrabbit.es/ca/guia/millor-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Millor cafè d'especialitat a ${locationName} — Guia local 2026`}
+  description={`On trobar specialty coffee a ${locationName}, Costa Brava. Grava, Dirty Rabbit i més — guia honesta de cafeteries d'especialitat.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIA LOCAL · CAFÈ D'ESPECIALITAT</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Millor cafè d'especialitat a {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Pals és una postal medieval: recinte gòtic perfectament conservat, torre romànica del segle XI, i camps d'arròs que donen al poble un aire inesperat. El casc antic és petit però impecable — pedra, arcs, vistes a l'Empordà. I ara també té specialty coffee.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Grava — Cafè, pizza i vins naturals</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Font, 7, Pals · Als peus del poble medieval</p>
+          
+          <p class="mb-4">
+            Grava és el punt de trobada de ciclistes, locals i turistes amb bon gust. Cafè d'especialitat (possiblement Right Side de Barcelona), pizzes artesanes, tapes, cerveses craft i vins naturals. La terrassa chill-out és perfecta després d'una ruta de gravel.
+          </p>
+          <p class="mb-4">
+            Obert de dilluns a diumenge (tancat dimecres). Horari: 8:30-13:00 i 18:30-00:30.
+          </p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — 25 minuts fins al millor cafè
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avinguda Platja d'Aro 275, S'Agaró · 25 min en cotxe des de Pals</p>
+          
+          <p class="mb-4">
+            Si busques el millor cafè d'especialitat de la Costa Brava, Dirty Rabbit és a 25 minuts — i és una excursió perfecta si baixes cap a la costa.
+          </p>
+          
+          <p class="mb-4">
+            Servim <strong>La Cabra</strong>, el torrefactor danès que fa anys que és a l'elit mundial del specialty coffee. Cada gra té traçabilitat completa. El preparem a la <strong>La Marzocco KB90</strong> amb aigua filtrada per <strong>osmosi inversa</strong>. No és cafè "bo" — és cafè extraordinari.
+          </p>
+          
+          <p class="mb-4">
+            Combina Pals medieval al matí + Dirty Rabbit + bany a S'Agaró — pla perfecte.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Els nostres tres pilars</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Wild Comfort</strong> — Un lloc salvatge i acollidor alhora.</li>
+            <li><strong>Intention</strong> — Tot el que fem té un perquè.</li>
+            <li><strong>Belonging</strong> — Un lloc on encaixes, vinguis d'on vinguis.</li>
+          </ul>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Veure a Google Maps →
+          </a>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distàncies des de {locationName}</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Cafeteria</th>
+                <th class="text-left py-3">Temps</th>
+                <th class="text-left py-3">Tipus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Grava</td>
+                <td class="py-3">A Pals</td>
+                <td class="py-3">Right Side + pizzeria</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">Fitzroy Café</td>
+                <td class="py-3">15 min (Begur)</td>
+                <td class="py-3">Melbourne-style (estacional)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">25 min</td>
+                <td class="py-3">La Cabra (Dinamarca)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avinguda Platja d'Aro 275, S'Agaró<br>
+            25 minuts des de Pals. Combina medieval + cafè + platja.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

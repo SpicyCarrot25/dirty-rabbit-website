@@ -1,0 +1,143 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const locationName = "Platja d'Aro";
+const locationSlug = "platja-daro";
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guides', url: 'https://dirtyrabbit.es/fr/guides/' },
+  { name: `Petit-déjeuner à ${locationName}`, url: `https://dirtyrabbit.es/fr/guides/petit-dejeuner-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Où prendre le petit-déjeuner à ${locationName} — Guide 2026`}
+  description={`Les meilleures adresses pour le petit-déjeuner et le brunch à ${locationName} et ses environs, Costa Brava. Guide local.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · PETIT-DÉJEUNER</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Petit-déjeuner à {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          Platja d'Aro est le centre touristique de la Costa Brava, avec beaucoup d'options pour le petit-déjeuner. Mais si vous cherchez plus qu'un croissant standard et un café médiocre, voici notre guide des meilleures adresses — à Platja d'Aro et juste à côté.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ La Maglia — Torréfacteur local</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">C/ Juli Garreta, 10, Platja d'Aro · Dans le centre</p>
+          
+          <p class="mb-4">
+            La Maglia est le café de spécialité de Platja d'Aro. Ils torréfient leurs propres grains (100% Arabica, SCA 85+), et proposent des bowls açaí, toasts, et pâtisseries locales.
+          </p>
+          <p class="mb-4">
+            L'ambiance est cycliste — le nom vient du maillot rose du Giro d'Italia. Grande terrasse, service rapide. Bonne option si vous restez dans le centre de Platja d'Aro.
+          </p>
+          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Leur café torréfié sur place + bowl açaí.</p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — Le meilleur petit-déjeuner (5 min)
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 5 min en voiture</p>
+          
+          <p class="mb-4">
+            Pour le meilleur petit-déjeuner de la région, faites les 5 minutes jusqu'à S'Agaró. Ça vaut vraiment le détour.
+          </p>
+          
+          <p class="mb-4">
+            Nous servons <strong>La Cabra</strong> — le torréfacteur danois d'élite mondiale. Préparé sur <strong>La Marzocco KB90</strong> avec eau filtrée. C'est du café extraordinaire, pas juste "bon".
+          </p>
+          
+          <h3 class="font-typewriter text-xl mt-6 mb-3">Notre carte petit-déjeuner</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Œufs Bénédicte</strong> — Classiques ou au saumon fumé</li>
+            <li><strong>Bagels</strong> — Garnitures variées, pain frais du jour</li>
+            <li><strong>Toasts artisanaux</strong> — Avocat, ricotta, confiture maison</li>
+            <li><strong>Bowls</strong> — Açaí, granola, fruits de saison</li>
+          </ul>
+
+          <h3 class="font-typewriter text-xl mt-6 mb-3">Le bonus</h3>
+          <p class="mb-4">
+            En venant chez nous, vous passez devant la Platja de Sant Pol — l'une des plus belles plages de la région. Parfait pour une baignade avant ou après le petit-déjeuner.
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Voir sur Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">Autres options</h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">ANNNA — Sant Feliu (7 min)</h3>
+          <p class="mb-4">
+            Café de spécialité + boulangerie sans gluten dans une belle maison du XIXe siècle. Tartines excellentes, ambiance unique. Ouvert Jeu-Lun, 9h-14h30.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">Hôtels du front de mer</h3>
+          <p class="mb-4">
+            Plusieurs hôtels proposent des buffets petit-déjeuner ouverts aux non-résidents. Pratique mais sans caractère particulier.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">Boulangeries du centre</h3>
+          <p class="mb-4">
+            Croissants et café standard. Correct pour un petit-déjeuner rapide, mais rien d'exceptionnel.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">Notre recommandation</h2>
+          
+          <p class="mb-4">
+            Si vous êtes en vacances à Platja d'Aro et que vous cherchez une expérience petit-déjeuner qui sorte de l'ordinaire, faites le trajet jusqu'à S'Agaró. Vous découvrirez un autre visage de la Costa Brava — plus authentique, plus calme, plus beau.
+          </p>
+          
+          <ol class="space-y-2 mb-6">
+            <li><strong>8h30</strong> — Route vers S'Agaró (5 min)</li>
+            <li><strong>8h45</strong> — Baignade à la Platja de Sant Pol</li>
+            <li><strong>9h30</strong> — Brunch chez Dirty Rabbit</li>
+            <li><strong>11h00</strong> — Camí de Ronda vers Sa Conca (ou retour)</li>
+          </ol>
+        </section>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">On vous attend à 5 minutes</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            Le meilleur petit-déjeuner de la région. Ça vaut le détour.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Comment venir
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

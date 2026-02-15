@@ -1,0 +1,137 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+
+const locationName = "Camí de Ronda";
+const locationSlug = "cami-de-ronda";
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `Esmorzar al ${locationName}`, url: `https://dirtyrabbit.es/ca/guia/esmorzar-prop-de-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`On esmorzar al ${locationName} — Guia 2026`}
+  description={`Les millors adreces per esmorzar o brunchar després d'una caminada pel Camí de Ronda, Costa Brava. Dirty Rabbit a S'Agaró.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIA LOCAL · ESMORZAR</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Esmorzar al {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          El Camí de Ronda és el sender costaner mític de la Costa Brava. Després d'una caminada matinal al llarg dels penya-segats, amb el mar als teus peus i el sol que puja, no hi ha res millor que un bon esmorzar per completar l'experiència.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">🥾 El recorregut Sant Feliu → S'Agaró</h2>
+          
+          <p class="mb-4">
+            Un dels trams més bonics del Camí de Ronda és el que va de Sant Feliu de Guíxols a S'Agaró. Uns 30-45 minuts de caminada espectacular, amb vistes increïbles i cales on pots aturar-te a fer un bany.
+          </p>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Sortida:</strong> Platja de Sant Feliu de Guíxols</li>
+            <li><strong>Arribada:</strong> Platja de Sant Pol (S'Agaró)</li>
+            <li><strong>Durada:</strong> 30-45 minuts</li>
+            <li><strong>Dificultat:</strong> Moderada (escales, terreny irregular a trams)</li>
+            <li><strong>Millor hora:</strong> A primera hora del matí (8h-9h) per evitar la calor</li>
+          </ul>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — La recompensa perfecta
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avinguda Platja d'Aro 275, S'Agaró · A l'arribada del Camí de Ronda</p>
+          
+          <p class="mb-4">
+            Quan arribes a S'Agaró després de la caminada, Dirty Rabbit és a pocs minuts. És la recompensa perfecta: cafè extraordinari, brunch abundant, i un ambient on pots instal·lar-te còmodament.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mt-6 mb-3">El que et recomanem després de la caminada</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Flat white La Cabra</strong> — El millor cafè de la Costa Brava per recuperar forces</li>
+            <li><strong>Ous Beneïts</strong> — Proteïnes i plaer després de l'esforç</li>
+            <li><strong>Torrada d'alvocat</strong> — Fresc i nutritiu</li>
+            <li><strong>Suc fresc</strong> — Vitamines per completar</li>
+          </ul>
+
+          <h3 class="font-typewriter text-xl mt-6 mb-3">El matí perfecte</h3>
+          <ol class="space-y-2 mb-6">
+            <li><strong>8:00</strong> — Sortida del Camí de Ronda des de Sant Feliu</li>
+            <li><strong>8:45</strong> — Arribada a Sant Pol, bany ràpid</li>
+            <li><strong>9:30</strong> — Brunch a Dirty Rabbit</li>
+            <li><strong>11:00</strong> — Tornada tranquil·la (o explora S'Agaró)</li>
+          </ol>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Veure a Google Maps →
+          </a>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">Altres recorreguts del Camí de Ronda</h2>
+          
+          <h3 class="font-typewriter text-xl mb-3">S'Agaró → Platja d'Aro</h3>
+          <p class="mb-4">
+            Un altre tram popular. Uns 25 minuts caminant. Esmorzar possible a La Maglia de Platja d'Aro a l'arribada.
+          </p>
+          
+          <h3 class="font-typewriter text-xl mb-3 mt-6">Begur → Calella de Palafrugell</h3>
+          <p class="mb-4">
+            Més al nord, un recorregut espectacular (1h30-2h). Fitzroy Café a Begur per esmorzar abans o després.
+          </p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">💡 Consells pràctics</h2>
+          
+          <ul class="space-y-2 mb-6">
+            <li><strong>Calçat tancat</strong> — El terreny és a vegades rocós i irregular</li>
+            <li><strong>Aigua</strong> — Porta una ampolla, especialment a l'estiu</li>
+            <li><strong>Banyador</strong> — Hi ha cales pel camí per banyar-te</li>
+            <li><strong>Crema solar</strong> — Poca ombra en alguns trams</li>
+            <li><strong>Càmera</strong> — Les vistes són espectaculars</li>
+          </ul>
+        </section>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">T'esperem a l'arribada</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avinguda Platja d'Aro 275, S'Agaró<br>
+            La millor manera d'acabar la teva caminada pel Camí de Ronda.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

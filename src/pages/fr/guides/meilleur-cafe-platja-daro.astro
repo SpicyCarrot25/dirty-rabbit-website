@@ -1,0 +1,173 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const locationName = "Platja d'Aro";
+const locationSlug = "platja-daro";
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guides', url: 'https://dirtyrabbit.es/fr/guides/' },
+  { name: `Meilleur café près de ${locationName}`, url: `https://dirtyrabbit.es/fr/guides/meilleur-cafe-${locationSlug}` }
+];
+---
+
+<Layout 
+  title={`Meilleur café de spécialité près de ${locationName} — Guide local 2026`}
+  description={`Guide honnête des meilleurs cafés de spécialité près de ${locationName}, Costa Brava. De La Maglia à Dirty Rabbit à S'Agaró.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · CAFÉ DE SPÉCIALITÉ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Meilleur café de spécialité près de {locationName}
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          {locationName} est synonyme d'été sur la Costa Brava : des kilomètres de plage, une promenade animée et une vie nocturne qui ne s'arrête jamais. Mais si vous cherchez un vrai bon café — celui qui sent la torréfaction fraîche, avec une mousse de lait bien texturée et un barista qui connaît son métier — c'est une autre histoire. Voici notre guide honnête.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none">
+        
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ La Maglia — Torréfacteur local à Platja d'Aro</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">C/ Juli Garreta, 10, Platja d'Aro · Au centre</p>
+          
+          <p class="mb-4">
+            Si vous êtes au centre de Platja d'Aro, La Maglia est un choix solide. Ils torréfient leur propre café — 100% Arabica, score SCA supérieur à 85. L'esthétique est très cycliste (le nom vient du maillot rose du Giro d'Italia), donc vous verrez pas mal de groupes de gravel le samedi matin.
+          </p>
+          <p class="mb-4">
+            Ils servent aussi des bowls açaí, des pâtisseries et des jus. Grande terrasse, idéale pour un café rapide.
+          </p>
+          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Leur torréfaction maison — si vous cherchez quelque chose de local, c'est une bonne option.</p>
+        </section>
+
+        <section class="mb-12">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ ANNNA — Café, boulangerie sans gluten et concept store</h2>
+          <p class="font-mono text-sm text-black/60 mb-4">Carrer de l'Hospital 21, Sant Feliu de Guíxols · 7 min en voiture</p>
+          
+          <p class="mb-4">
+            Ana et Pascal ont créé quelque chose de spécial dans la Casa Trachsler, une maison bourgeoise du XIXe siècle dans la vieille ville de Sant Feliu. ANNNA combine café de spécialité, boulangerie artisanale sans gluten et concept store. Leur pain au levain sans gluten est parmi les meilleurs que nous ayons goûtés, et la sélection de produits locaux (huiles, vins, céramiques) vaut la visite à elle seule.
+          </p>
+          <p class="mb-4">
+            Ouvert du jeudi au lundi, 9h00–14h30. Fermé mardi et mercredi.
+          </p>
+          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Les tartines avec leur pain artisanal + un flat white. L'espace lui-même est magnifique.</p>
+        </section>
+
+        <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
+            <span class="text-3xl">🐇</span> Dirty Rabbit — Le meilleur specialty coffee de la région
+          </h2>
+          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 5 min en voiture depuis Platja d'Aro</p>
+          
+          <p class="mb-4">
+            Si vous voulez le meilleur café de spécialité de la Costa Brava, ça vaut les 5 minutes jusqu'à S'Agaró.
+          </p>
+          
+          <p class="mb-4">
+            Nous servons <strong>La Cabra</strong> — le torréfacteur danois qui figure parmi l'élite mondiale du café de spécialité depuis des années. Ce n'est pas du "bon" café — c'est extraordinaire : traçable jusqu'à la ferme, transformé avec précision, torréfié à Copenhague par l'une des meilleures équipes au monde. Nous le préparons sur notre <strong>La Marzocco KB90</strong> avec de l'eau <strong>filtrée par osmose inverse</strong> — chaque variable contrôlée pour tirer le meilleur du grain.
+          </p>
+          
+          <p class="mb-4">
+            Mais Dirty Rabbit n'est pas que du café. C'est un endroit où s'asseoir avec son livre, prendre des œufs bénédicte après une baignade à Sant Pol, ou finir par discuter avec la table d'à côté. Nous l'appelons "maison loin de chez soi" parce que c'est exactement ce que nous voulons qu'il soit.
+          </p>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Pourquoi venir depuis {locationName} ?</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>5 minutes en voiture</strong> par la route de S'Agaró (GI-682). Stationnement facile hors haute saison.</li>
+            <li><strong>15 minutes à vélo</strong> le long de la côte — parfait combiné avec un arrêt à la plage de Sant Pol.</li>
+            <li><strong>25 minutes à pied</strong> par le Camí de Ronda si vous avez envie d'un parcours spectaculaire.</li>
+          </ul>
+
+          <h3 class="font-typewriter text-xl mt-8 mb-4">Nos trois piliers</h3>
+          <ul class="space-y-2 mb-6">
+            <li><strong>Wild Comfort</strong> — Un endroit à la fois sauvage et accueillant. Décontracté mais intentionnel.</li>
+            <li><strong>Intention</strong> — Tout ce que nous faisons a un pourquoi. Chaque détail réfléchi.</li>
+            <li><strong>Belonging</strong> — Un endroit où vous vous sentez à votre place. D'où que vous veniez, c'est chez vous.</li>
+          </ul>
+          
+          <p class="mb-4">
+            Nous parlons <strong>espagnol, catalan, anglais et polonais</strong> — menus également disponibles en russe, français et ukrainien.
+          </p>
+          
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412" 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-red hover:underline"
+          >
+            📍 Voir sur Google Maps →
+          </a>
+        </section>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Carte et distances depuis {locationName}</h2>
+        
+        <div class="overflow-x-auto">
+          <table class="w-full font-mono text-sm">
+            <thead>
+              <tr class="border-b-2 border-black">
+                <th class="text-left py-3">Café</th>
+                <th class="text-left py-3">Distance</th>
+                <th class="text-left py-3">Temps en voiture</th>
+                <th class="text-left py-3">Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">0 km</td>
+                <td class="py-3">À Platja d'Aro</td>
+                <td class="py-3">Torréfaction propre</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3">3,5 km</td>
+                <td class="py-3">5 min</td>
+                <td class="py-3">La Cabra (Danemark)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3">ANNNA</td>
+                <td class="py-3">5 km</td>
+                <td class="py-3">7 min</td>
+                <td class="py-3">Specialty + boulangerie SG</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Plus d'options specialty sur la Costa Brava ?</h2>
+        <ul class="space-y-2 mb-8">
+          <li><strong>Fitzroy Café</strong> à Begur (30 min) — Brunch culte, banana bread légendaire, bar à vin le soir. Saisonnier.</li>
+          <li><strong>Grava</strong> à Pals (25 min) — Café Right Side de Barcelone + pizzeria + vins naturels. Très gravel-cycling.</li>
+        </ul>
+        <p>La Costa Brava offre de plus en plus d'options pour les amoureux du café de spécialité. Et ça nous plaît.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Vous venez nous voir ?</p>
+          <p class="font-mono mb-6">
+            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
+            Poussez la porte, commandez un café et restez aussi longtemps que vous voulez. C'est chez vous.
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Comment venir
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

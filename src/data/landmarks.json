@@ -1,0 +1,71 @@
+[
+  {
+    "slug": "platja-sant-pol",
+    "name": {
+      "es": "Playa de Sant Pol",
+      "en": "Sant Pol Beach",
+      "ca": "Platja de Sant Pol",
+      "fr": "Plage de Sant Pol"
+    },
+    "description": {
+      "es": "La playa más icónica de S'Agaró: 800 metros de arena fina, aguas cristalinas y las históricas casetas de baño de los años 20. Ambiente familiar, perfecta para nadar y tomar el sol.",
+      "en": "S'Agaró's most iconic beach: 800 meters of fine sand, crystal-clear water, and historic 1920s bathing huts. Family-friendly, perfect for swimming and sunbathing.",
+      "ca": "La platja més icònica de S'Agaró: 800 metres de sorra fina, aigües cristal·lines i les històriques casetes de bany dels anys 20. Ambient familiar, perfecta per nedar i prendre el sol.",
+      "fr": "La plage la plus emblématique de S'Agaró : 800 mètres de sable fin, eaux cristallines et cabines de bain historiques des années 1920. Familiale, parfaite pour la baignade."
+    },
+    "lat": 41.7905,
+    "lng": 3.0275,
+    "distanceFromDR": {
+      "minutes": 3,
+      "km": 0.3,
+      "method": "walking"
+    },
+    "type": "beach"
+  },
+  {
+    "slug": "cami-de-ronda",
+    "name": {
+      "es": "Camí de Ronda",
+      "en": "Camí de Ronda Coastal Path",
+      "ca": "Camí de Ronda",
+      "fr": "Chemin de Ronde"
+    },
+    "description": {
+      "es": "El sendero costero más espectacular de la Costa Brava. El tramo entre Sant Pol y Sant Feliu serpentea entre acantilados, pinos y calas escondidas con vistas al mar que quitan el aliento.",
+      "en": "The most spectacular coastal path on the Costa Brava. The stretch between Sant Pol and Sant Feliu winds through cliffs, pine trees, and hidden coves with breathtaking sea views.",
+      "ca": "El sender costaner més espectacular de la Costa Brava. El tram entre Sant Pol i Sant Feliu serpenteja entre penya-segats, pins i cales amagades amb vistes al mar que tallen l'alè.",
+      "fr": "Le sentier côtier le plus spectaculaire de la Costa Brava. Le tronçon entre Sant Pol et Sant Feliu serpente entre falaises, pins et criques cachées avec des vues imprenables."
+    },
+    "lat": 41.7890,
+    "lng": 3.0320,
+    "distanceFromDR": {
+      "minutes": 5,
+      "km": 0.4,
+      "method": "walking"
+    },
+    "type": "trail"
+  },
+  {
+    "slug": "centre-platja-daro",
+    "name": {
+      "es": "Centro de Platja d'Aro",
+      "en": "Platja d'Aro Town Centre",
+      "ca": "Centre de Platja d'Aro",
+      "fr": "Centre de Platja d'Aro"
+    },
+    "description": {
+      "es": "El corazón turístico de la Costa Brava central: paseo marítimo, comercios, restaurantes y la playa principal de casi 2 km. Animado en verano, tranquilo el resto del año.",
+      "en": "The tourist heart of central Costa Brava: seafront promenade, shops, restaurants, and a nearly 2 km main beach. Lively in summer, peaceful the rest of the year.",
+      "ca": "El cor turístic de la Costa Brava central: passeig marítim, comerços, restaurants i la platja principal de gairebé 2 km. Animat a l'estiu, tranquil la resta de l'any.",
+      "fr": "Le cœur touristique de la Costa Brava centrale : promenade maritime, commerces, restaurants et une plage principale de près de 2 km. Animé en été, paisible le reste de l'année."
+    },
+    "lat": 41.8165,
+    "lng": 3.0685,
+    "distanceFromDR": {
+      "minutes": 5,
+      "km": 3.5,
+      "method": "driving"
+    },
+    "type": "town-centre"
+  }
+]

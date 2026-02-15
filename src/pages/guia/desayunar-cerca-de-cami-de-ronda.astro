@@ -1,0 +1,192 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const landmarkName = "el Camí de Ronda";
+const landmarkSlug = "cami-de-ronda";
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' },
+  { name: `Desayunar cerca de ${landmarkName}`, url: `https://dirtyrabbit.es/guia/desayunar-cerca-de-${landmarkSlug}` }
+];
+---
+
+<Layout 
+  title={`Dónde desayunar cerca del Camí de Ronda (S'Agaró) — Guía 2026`}
+  description={`Dónde desayunar antes o después del Camí de Ronda en S'Agaró. Specialty coffee y brunch cerca del sendero costero.`}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">GUÍA DE DESAYUNOS</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Dónde desayunar cerca del Camí de Ronda
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          El Camí de Ronda es el sendero costero que recorre la Costa Brava de punta a punta. El tramo entre S'Agaró y Sant Feliu de Guíxols es uno de los más bonitos: acantilados, pinos mediterráneos, calas escondidas, y vistas que quitan el aliento. Es el paseo perfecto para empezar o terminar con un buen desayuno.
+        </p>
+      </header>
+
+      <!-- El Camí de Ronda -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🥾</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">El sendero</h2>
+        </div>
+        <div class="prose prose-lg max-w-none font-mono text-black/80">
+          <p>
+            El Camí de Ronda era originalmente un sendero de vigilancia costera usado por los carabineros para controlar el contrabando. Hoy es una ruta de senderismo espectacular que conecta todas las playas y calas de la Costa Brava.
+          </p>
+          <p>
+            El tramo S'Agaró – Sant Feliu es especialmente bonito:
+          </p>
+          <ul class="list-disc list-inside my-4">
+            <li><strong>Distancia:</strong> ~3 km (uno sólo sentido)</li>
+            <li><strong>Duración:</strong> 40-60 minutos (depende de cuántas fotos hagas)</li>
+            <li><strong>Dificultad:</strong> Fácil, pero con escalones y algún tramo rocoso</li>
+            <li><strong>Mejor hora:</strong> Primera hora de la mañana o atardecer. Evita el mediodía en verano.</li>
+          </ul>
+          <p>
+            El sendero pasa por la Platja de Sant Pol, Cala Sa Conca, y varias calas sin nombre accesibles solo a pie. Es una experiencia imprescindible.
+          </p>
+        </div>
+      </section>
+
+      <!-- DR Featured -->
+      <section class="mb-12 p-8 bg-cream border-l-4 border-red">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🐇</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Dirty Rabbit — A 5 minutos del Camí</h2>
+        </div>
+        <p class="font-mono text-sm text-black/60 mb-4">Avenida Platja d'Aro 275, S'Agaró</p>
+        
+        <div class="prose prose-lg max-w-none font-mono text-black/80">
+          <p>
+            Estamos justo arriba de donde el Camí de Ronda pasa por la Platja de Sant Pol. 5 minutos andando cuesta arriba y estás en Dirty Rabbit.
+          </p>
+          <p>
+            El plan perfecto:
+          </p>
+          <ul class="list-disc list-inside my-3">
+            <li><strong>Opción A:</strong> Desayuno fuerte primero (eggs benedict, flat white), luego el Camí de Ronda con energía.</li>
+            <li><strong>Opción B:</strong> Camí de Ronda temprano, baño en alguna cala, y luego subir a desayunar como recompensa.</li>
+          </ul>
+          <p>
+            Servimos <strong>La Cabra</strong> de Dinamarca — uno de los mejores tostadores del mundo. Preparado en La Marzocco KB90 con agua de ósmosis inversa. Y brunch con producto local: huevos, aguacate, salmón, masa madre...
+          </p>
+          <p>
+            Hablamos español, catalán, inglés y polaco. Ven en ropa de senderismo o en bañador — aquí nadie juzga.
+          </p>
+        </div>
+        
+        <div class="mt-6">
+          <a href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaro" target="_blank" rel="noopener" class="inline-flex items-center gap-2 font-typewriter text-red hover:underline">
+            Ver en Google Maps →
+          </a>
+        </div>
+      </section>
+
+      <!-- Other options -->
+      <section class="mb-12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">☕</span>
+          <h2 class="font-typewriter text-2xl md:text-3xl">Otras opciones según dónde empieces</h2>
+        </div>
+        
+        <div class="space-y-6">
+          <div class="p-6 bg-cream">
+            <h3 class="font-typewriter text-xl mb-2">Si empiezas en S'Agaró</h3>
+            <ul class="space-y-2 font-mono text-black/80">
+              <li>
+                <strong>Dirty Rabbit</strong> — Desayuno antes del paseo, justo al lado del inicio del Camí.
+              </li>
+              <li>
+                <strong>Restaurant dels Banys</strong> — Junto a la Platja de Sant Pol. Más orientado a comidas.
+              </li>
+            </ul>
+          </div>
+          
+          <div class="p-6 bg-cream">
+            <h3 class="font-typewriter text-xl mb-2">Si empiezas en Sant Feliu</h3>
+            <ul class="space-y-2 font-mono text-black/80">
+              <li>
+                <strong>ANNNA</strong> — Café de especialidad + panadería sin gluten. A 10 minutos andando del inicio del Camí.
+              </li>
+              <li>
+                <strong>Maison Marcel</strong> — Panadería francesa con croissants increíbles. En el centro de Sant Feliu.
+              </li>
+            </ul>
+          </div>
+          
+          <div class="p-6 bg-cream">
+            <h3 class="font-typewriter text-xl mb-2">El plan ideal</h3>
+            <p class="font-mono text-black/80">
+              Empieza en Sant Feliu (café rápido en ANNNA), haz el Camí de Ronda hasta S'Agaró, termina con brunch completo en Dirty Rabbit. O al revés. Cualquier combinación funciona.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tips -->
+      <section class="mb-12 p-6 bg-cream">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">💡</span>
+          <h2 class="font-typewriter text-2xl">Tips para el Camí de Ronda</h2>
+        </div>
+        <ul class="space-y-2 font-mono text-black/80">
+          <li><strong>Calzado:</strong> Zapatillas cerradas. Hay tramos rocosos y escalones.</li>
+          <li><strong>Agua:</strong> Lleva una botella, especialmente en verano. No hay fuentes.</li>
+          <li><strong>Hora:</strong> Primera hora de la mañana es la mejor. A las 7-8 el sendero está vacío y la luz es mágica.</li>
+          <li><strong>Bañador:</strong> Llévalo puesto. Hay calas donde querrás parar a bañarte.</li>
+          <li><strong>Volver:</strong> Puedes hacer ida y vuelta, o coger un taxi de vuelta al punto de inicio.</li>
+        </ul>
+      </section>
+
+      <!-- Internal Links -->
+      <section class="mt-12 p-6 bg-cream">
+        <h2 class="font-typewriter text-xl mb-4">Explora más</h2>
+        <ul class="space-y-2 font-mono text-sm">
+          <li>
+            <a href="/guia/que-hacer-en-sagaro" class="text-red hover:underline">
+              → Qué hacer en S'Agaró
+            </a>
+          </li>
+          <li>
+            <a href="/guia/desayunar-cerca-de-platja-sant-pol" class="text-red hover:underline">
+              → Dónde desayunar cerca de la Playa de Sant Pol
+            </a>
+          </li>
+          <li>
+            <a href="/guia/mejor-cafe-sant-feliu-de-guixols" class="text-red hover:underline">
+              → Mejor café de especialidad en Sant Feliu de Guíxols
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- CTA -->
+      <section class="mt-12 text-center">
+        <p class="font-mono text-black/70 mb-4">
+          El mejor desayuno post-Camí de Ronda te espera en Dirty Rabbit.
+        </p>
+        <a 
+          href="https://maps.google.com/?q=Dirty+Rabbit+S'Agaro"
+          target="_blank"
+          rel="noopener"
+          class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors"
+        >
+          Cómo llegar
+        </a>
+      </section>
+
+    </div>
+  </article>
+
+</Layout>
