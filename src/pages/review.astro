@@ -2,21 +2,16 @@
 /**
  * Review Gate Page - Spanish (Default)
  * 
- * SUPABASE TABLE SQL (run once):
- * CREATE TABLE IF NOT EXISTS feedback (
- *   id SERIAL PRIMARY KEY,
- *   rating INT NOT NULL CHECK (rating >= 1 AND rating <= 5),
- *   comment TEXT,
- *   lang TEXT DEFAULT 'es',
- *   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
- * );
+ * Flow:
+ * 1. Rate overall 1-5 stars
+ * 2. If 5★ → Google review link
+ * 3. If 1-4★ → Optional sub-ratings (food/service/atmosphere) + required comment → Supabase
  */
 
 import Layout from '../layouts/Layout.astro';
 
 const lang = 'es';
 
-// i18n strings inline for simplicity
 const t = {
   title: '¿Cómo estuvo tu visita?',
   metaTitle: 'Tu Opinión | Dirty Rabbit',
@@ -25,12 +20,17 @@ const t = {
   googleButton: 'Dejar review en Google',
   googleSubtext: 'Tu opinión nos ayuda mucho',
   thanks14: '¿Qué podríamos mejorar?',
-  placeholder: 'Cuéntanos... (máximo 500 caracteres)',
+  rateFood: 'Comida',
+  rateService: 'Servicio',
+  rateAtmosphere: 'Ambiente',
+  optional: '(opcional)',
+  placeholder: 'Cuéntanos qué podemos mejorar... *',
   submit: 'Enviar',
-  thanksFinal: 'Gracias por ayudarnos a mejorar 💚'
+  thanksFinal: 'Gracias por ayudarnos a mejorar 💚',
+  required: 'El comentario es obligatorio'
 };
 
-const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
+const googleMapsUrl = 'https://search.google.com/local/writereview?placeid=ChIJkT1ltov3MxIRnPIYrnmHSbg';
 ---
 
 <Layout 
@@ -92,22 +92,71 @@ const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
           {t.thanks14}
         </p>
         
-        <form id="feedback-form" class="space-y-4">
-          <textarea 
-            id="feedback-comment"
-            name="comment"
-            maxlength="500"
-            rows="4"
-            placeholder={t.placeholder}
-            class="w-full p-4 font-mono text-base border border-[#1A1A1A] rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-red resize-none"
-          ></textarea>
+        <form id="feedback-form" class="space-y-5">
+          <!-- Sub-ratings (optional) -->
+          <div class="space-y-3 text-left">
+            <p class="font-mono text-xs text-black/50 text-center">{t.optional}</p>
+            
+            <!-- Food Rating -->
+            <div class="flex items-center justify-between px-2">
+              <span class="font-typewriter text-sm text-black/80">{t.rateFood}</span>
+              <div class="sub-stars flex gap-1" data-field="rating_food">
+                {[1, 2, 3, 4, 5].map(star => (
+                  <button type="button" data-value={star} class="sub-star text-2xl transition-all hover:scale-110" aria-label={`${star} estrellas comida`}>
+                    <span class="empty">☆</span>
+                    <span class="filled hidden">⭐</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+            
+            <!-- Service Rating -->
+            <div class="flex items-center justify-between px-2">
+              <span class="font-typewriter text-sm text-black/80">{t.rateService}</span>
+              <div class="sub-stars flex gap-1" data-field="rating_service">
+                {[1, 2, 3, 4, 5].map(star => (
+                  <button type="button" data-value={star} class="sub-star text-2xl transition-all hover:scale-110" aria-label={`${star} estrellas servicio`}>
+                    <span class="empty">☆</span>
+                    <span class="filled hidden">⭐</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+            
+            <!-- Atmosphere Rating -->
+            <div class="flex items-center justify-between px-2">
+              <span class="font-typewriter text-sm text-black/80">{t.rateAtmosphere}</span>
+              <div class="sub-stars flex gap-1" data-field="rating_atmosphere">
+                {[1, 2, 3, 4, 5].map(star => (
+                  <button type="button" data-value={star} class="sub-star text-2xl transition-all hover:scale-110" aria-label={`${star} estrellas ambiente`}>
+                    <span class="empty">☆</span>
+                    <span class="filled hidden">⭐</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          <!-- Comment (required) -->
+          <div class="space-y-2">
+            <textarea 
+              id="feedback-comment"
+              name="comment"
+              maxlength="500"
+              rows="4"
+              required
+              placeholder={t.placeholder}
+              class="w-full p-4 font-mono text-base border border-[#1A1A1A] rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-red resize-none"
+            ></textarea>
+            <p id="error-msg" class="hidden font-mono text-xs text-red text-left px-2">{t.required}</p>
+          </div>
           
           <div class="flex justify-between items-center">
             <span id="char-count" class="font-mono text-xs text-black/40">0/500</span>
             <button 
               type="submit"
               id="submit-btn"
-              class="font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-xl"
+              class="font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-xl disabled:opacity-50"
             >
               {t.submit}
             </button>
@@ -132,6 +181,11 @@ const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
   lang: 'es'
 }}>
   let selectedRating = 0;
+  let subRatings = {
+    rating_food: null,
+    rating_service: null,
+    rating_atmosphere: null
+  };
   
   const starsContainer = document.getElementById('stars-container');
   const stepRating = document.getElementById('step-rating');
@@ -142,13 +196,13 @@ const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
   const feedbackComment = document.getElementById('feedback-comment');
   const charCount = document.getElementById('char-count');
   const submitBtn = document.getElementById('submit-btn');
+  const errorMsg = document.getElementById('error-msg');
   
-  // Star selection
+  // Main star selection
   starsContainer.querySelectorAll('.star-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       selectedRating = parseInt(btn.dataset.rating);
       
-      // Update star display
       starsContainer.querySelectorAll('.star-btn').forEach((star, index) => {
         const empty = star.querySelector('.star-empty');
         const filled = star.querySelector('.star-filled');
@@ -161,10 +215,8 @@ const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
         }
       });
       
-      // Short delay then show next step
       setTimeout(() => {
         stepRating.classList.add('hidden');
-        
         if (selectedRating === 5) {
           step5Stars.classList.remove('hidden');
         } else {
@@ -173,7 +225,6 @@ const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
       }, 300);
     });
     
-    // Hover effect
     btn.addEventListener('mouseenter', () => {
       const hoverRating = parseInt(btn.dataset.rating);
       starsContainer.querySelectorAll('.star-btn').forEach((star, index) => {
@@ -204,10 +255,38 @@ const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
     });
   });
   
+  // Sub-ratings (optional)
+  document.querySelectorAll('.sub-stars').forEach(container => {
+    const field = container.dataset.field;
+    let selected = 0;
+    
+    container.querySelectorAll('.sub-star').forEach(btn => {
+      btn.addEventListener('click', () => {
+        selected = parseInt(btn.dataset.value);
+        subRatings[field] = selected;
+        
+        container.querySelectorAll('.sub-star').forEach((star, index) => {
+          const empty = star.querySelector('.empty');
+          const filled = star.querySelector('.filled');
+          if (index < selected) {
+            empty.classList.add('hidden');
+            filled.classList.remove('hidden');
+          } else {
+            empty.classList.remove('hidden');
+            filled.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
+  
   // Character counter
   feedbackComment.addEventListener('input', () => {
     const count = feedbackComment.value.length;
     charCount.textContent = `${count}/500`;
+    if (feedbackComment.value.trim()) {
+      errorMsg.classList.add('hidden');
+    }
   });
   
   // Form submission
@@ -216,8 +295,24 @@ const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
     
     const comment = feedbackComment.value.trim();
     
+    // Validate required comment
+    if (!comment) {
+      errorMsg.classList.remove('hidden');
+      feedbackComment.focus();
+      return;
+    }
+    
     submitBtn.textContent = '...';
     submitBtn.disabled = true;
+    
+    const payload = {
+      rating: selectedRating,
+      comment: comment,
+      lang: lang,
+      rating_food: subRatings.rating_food,
+      rating_service: subRatings.rating_service,
+      rating_atmosphere: subRatings.rating_atmosphere
+    };
     
     try {
       const res = await fetch(`${supabaseUrl}/rest/v1/feedback`, {
@@ -228,11 +323,7 @@ const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
           'Content-Type': 'application/json',
           'Prefer': 'return=minimal'
         },
-        body: JSON.stringify({
-          rating: selectedRating,
-          comment: comment || null,
-          lang: lang
-        })
+        body: JSON.stringify(payload)
       });
       
       if (res.ok || res.status === 201) {
@@ -244,15 +335,9 @@ const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
     } catch (err) {
       // Fallback: save to localStorage
       const feedbacks = JSON.parse(localStorage.getItem('dr_feedback') || '[]');
-      feedbacks.push({
-        rating: selectedRating,
-        comment: comment || null,
-        lang: lang,
-        created_at: new Date().toISOString()
-      });
+      feedbacks.push({ ...payload, created_at: new Date().toISOString() });
       localStorage.setItem('dr_feedback', JSON.stringify(feedbacks));
       
-      // Still show success
       stepFeedback.classList.add('hidden');
       stepThanks.classList.remove('hidden');
     }
@@ -260,9 +345,15 @@ const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
 </script>
 
 <style>
-  .star-btn:focus {
+  .star-btn:focus, .sub-star:focus {
     outline: 2px solid #CD202C;
-    outline-offset: 4px;
-    border-radius: 8px;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  .sub-star {
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 2px;
   }
 </style>

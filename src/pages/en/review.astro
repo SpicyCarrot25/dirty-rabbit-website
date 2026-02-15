@@ -1,8 +1,4 @@
 ---
-/**
- * Review Gate Page - English
- */
-
 import Layout from '../../layouts/Layout.astro';
 
 const lang = 'en';
@@ -15,235 +11,75 @@ const t = {
   googleButton: 'Leave a Google Review',
   googleSubtext: 'Your feedback helps us a lot',
   thanks14: 'What could we improve?',
-  placeholder: 'Tell us... (max 500 characters)',
+  rateFood: 'Food',
+  rateService: 'Service',
+  rateAtmosphere: 'Atmosphere',
+  optional: '(optional)',
+  placeholder: 'Tell us what we can improve... *',
   submit: 'Submit',
   thanksFinal: 'Thanks for helping us improve 💚',
+  required: 'Comment is required',
   tapStar: 'Tap a star to rate'
 };
 
-const googleMapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
+const googleMapsUrl = 'https://search.google.com/local/writereview?placeid=ChIJkT1ltov3MxIRnPIYrnmHSbg';
 ---
 
-<Layout 
-  title={t.metaTitle}
-  description={t.metaDesc}
-  lang={lang}>
-  
+<Layout title={t.metaTitle} description={t.metaDesc} lang={lang}>
   <section class="min-h-[80vh] flex items-center justify-center py-16 px-4 bg-cream">
     <div class="w-full max-w-md mx-auto text-center">
-      
-      <!-- Step 1: Rating Selection -->
       <div id="step-rating" class="space-y-8">
-        <h1 class="font-typewriter text-3xl md:text-4xl lg:text-5xl text-black leading-tight">
-          {t.title}
-        </h1>
-        
+        <h1 class="font-typewriter text-3xl md:text-4xl lg:text-5xl text-black leading-tight">{t.title}</h1>
         <div id="stars-container" class="flex justify-center gap-2 md:gap-4">
-          {[1, 2, 3, 4, 5].map(star => (
-            <button 
-              type="button"
-              data-rating={star}
-              class="star-btn text-5xl md:text-6xl lg:text-7xl transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer select-none p-2"
-              aria-label={`${star} stars`}
-            >
-              <span class="star-empty">☆</span>
-              <span class="star-filled hidden">⭐</span>
+          {[1,2,3,4,5].map(star => (
+            <button type="button" data-rating={star} class="star-btn text-5xl md:text-6xl lg:text-7xl transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer select-none p-2" aria-label={`${star} stars`}>
+              <span class="star-empty">☆</span><span class="star-filled hidden">⭐</span>
             </button>
           ))}
         </div>
-        
-        <p class="font-mono text-sm text-black/50">
-          {t.tapStar}
-        </p>
+        <p class="font-mono text-sm text-black/50">{t.tapStar}</p>
       </div>
-      
-      <!-- Step 2A: 5 Stars - Google Review -->
       <div id="step-5stars" class="hidden space-y-6">
-        <p class="font-typewriter text-4xl md:text-5xl text-black">
-          {t.thanks5}
-        </p>
-        
-        <a 
-          href={googleMapsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block font-typewriter text-lg px-8 py-4 bg-red text-white hover:bg-red/90 transition-colors rounded-xl shadow-lg"
-        >
-          {t.googleButton}
-        </a>
-        
-        <p class="font-mono text-sm text-black/60">
-          {t.googleSubtext}
-        </p>
+        <p class="font-typewriter text-4xl md:text-5xl text-black">{t.thanks5}</p>
+        <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" class="inline-block font-typewriter text-lg px-8 py-4 bg-red text-white hover:bg-red/90 transition-colors rounded-xl shadow-lg">{t.googleButton}</a>
+        <p class="font-mono text-sm text-black/60">{t.googleSubtext}</p>
       </div>
-      
-      <!-- Step 2B: 1-4 Stars - Feedback Form -->
       <div id="step-feedback" class="hidden space-y-6">
-        <p class="font-typewriter text-2xl md:text-3xl text-black">
-          {t.thanks14}
-        </p>
-        
-        <form id="feedback-form" class="space-y-4">
-          <textarea 
-            id="feedback-comment"
-            name="comment"
-            maxlength="500"
-            rows="4"
-            placeholder={t.placeholder}
-            class="w-full p-4 font-mono text-base border border-[#1A1A1A] rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-red resize-none"
-          ></textarea>
-          
+        <p class="font-typewriter text-2xl md:text-3xl text-black">{t.thanks14}</p>
+        <form id="feedback-form" class="space-y-5">
+          <div class="space-y-3 text-left">
+            <p class="font-mono text-xs text-black/50 text-center">{t.optional}</p>
+            <div class="flex items-center justify-between px-2">
+              <span class="font-typewriter text-sm text-black/80">{t.rateFood}</span>
+              <div class="sub-stars flex gap-1" data-field="rating_food">{[1,2,3,4,5].map(s => (<button type="button" data-value={s} class="sub-star text-2xl transition-all hover:scale-110"><span class="empty">☆</span><span class="filled hidden">⭐</span></button>))}</div>
+            </div>
+            <div class="flex items-center justify-between px-2">
+              <span class="font-typewriter text-sm text-black/80">{t.rateService}</span>
+              <div class="sub-stars flex gap-1" data-field="rating_service">{[1,2,3,4,5].map(s => (<button type="button" data-value={s} class="sub-star text-2xl transition-all hover:scale-110"><span class="empty">☆</span><span class="filled hidden">⭐</span></button>))}</div>
+            </div>
+            <div class="flex items-center justify-between px-2">
+              <span class="font-typewriter text-sm text-black/80">{t.rateAtmosphere}</span>
+              <div class="sub-stars flex gap-1" data-field="rating_atmosphere">{[1,2,3,4,5].map(s => (<button type="button" data-value={s} class="sub-star text-2xl transition-all hover:scale-110"><span class="empty">☆</span><span class="filled hidden">⭐</span></button>))}</div>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <textarea id="feedback-comment" name="comment" maxlength="500" rows="4" required placeholder={t.placeholder} class="w-full p-4 font-mono text-base border border-[#1A1A1A] rounded-xl bg-white focus:outline-none focus:ring-2 focus:ring-red resize-none"></textarea>
+            <p id="error-msg" class="hidden font-mono text-xs text-red text-left px-2">{t.required}</p>
+          </div>
           <div class="flex justify-between items-center">
             <span id="char-count" class="font-mono text-xs text-black/40">0/500</span>
-            <button 
-              type="submit"
-              id="submit-btn"
-              class="font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-xl"
-            >
-              {t.submit}
-            </button>
+            <button type="submit" id="submit-btn" class="font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-xl disabled:opacity-50">{t.submit}</button>
           </div>
         </form>
       </div>
-      
-      <!-- Step 3: Thank You (after feedback) -->
       <div id="step-thanks" class="hidden space-y-6">
-        <p class="font-typewriter text-3xl md:text-4xl text-black">
-          {t.thanksFinal}
-        </p>
+        <p class="font-typewriter text-3xl md:text-4xl text-black">{t.thanksFinal}</p>
       </div>
-      
     </div>
   </section>
 </Layout>
 
-<script define:vars={{ 
-  supabaseUrl: 'https://brgvscagofzftmbtakoa.supabase.co', 
-  supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJyZ3ZzY2Fnb2Z6ZnRtYnRha29hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNTAyNjEsImV4cCI6MjA2MzgyNjI2MX0.LgSfVNLbCRr7ZuLmSwvLJqi-fHbJF1XzrOd0qf7sKPk',
-  lang: 'en'
-}}>
-  let selectedRating = 0;
-  
-  const starsContainer = document.getElementById('stars-container');
-  const stepRating = document.getElementById('step-rating');
-  const step5Stars = document.getElementById('step-5stars');
-  const stepFeedback = document.getElementById('step-feedback');
-  const stepThanks = document.getElementById('step-thanks');
-  const feedbackForm = document.getElementById('feedback-form');
-  const feedbackComment = document.getElementById('feedback-comment');
-  const charCount = document.getElementById('char-count');
-  const submitBtn = document.getElementById('submit-btn');
-  
-  starsContainer.querySelectorAll('.star-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      selectedRating = parseInt(btn.dataset.rating);
-      
-      starsContainer.querySelectorAll('.star-btn').forEach((star, index) => {
-        const empty = star.querySelector('.star-empty');
-        const filled = star.querySelector('.star-filled');
-        if (index < selectedRating) {
-          empty.classList.add('hidden');
-          filled.classList.remove('hidden');
-        } else {
-          empty.classList.remove('hidden');
-          filled.classList.add('hidden');
-        }
-      });
-      
-      setTimeout(() => {
-        stepRating.classList.add('hidden');
-        if (selectedRating === 5) {
-          step5Stars.classList.remove('hidden');
-        } else {
-          stepFeedback.classList.remove('hidden');
-        }
-      }, 300);
-    });
-    
-    btn.addEventListener('mouseenter', () => {
-      const hoverRating = parseInt(btn.dataset.rating);
-      starsContainer.querySelectorAll('.star-btn').forEach((star, index) => {
-        const empty = star.querySelector('.star-empty');
-        const filled = star.querySelector('.star-filled');
-        if (index < hoverRating) {
-          empty.classList.add('hidden');
-          filled.classList.remove('hidden');
-        } else if (index >= selectedRating) {
-          empty.classList.remove('hidden');
-          filled.classList.add('hidden');
-        }
-      });
-    });
-    
-    btn.addEventListener('mouseleave', () => {
-      starsContainer.querySelectorAll('.star-btn').forEach((star, index) => {
-        const empty = star.querySelector('.star-empty');
-        const filled = star.querySelector('.star-filled');
-        if (index < selectedRating) {
-          empty.classList.add('hidden');
-          filled.classList.remove('hidden');
-        } else {
-          empty.classList.remove('hidden');
-          filled.classList.add('hidden');
-        }
-      });
-    });
-  });
-  
-  feedbackComment.addEventListener('input', () => {
-    const count = feedbackComment.value.length;
-    charCount.textContent = `${count}/500`;
-  });
-  
-  feedbackForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const comment = feedbackComment.value.trim();
-    
-    submitBtn.textContent = '...';
-    submitBtn.disabled = true;
-    
-    try {
-      const res = await fetch(`${supabaseUrl}/rest/v1/feedback`, {
-        method: 'POST',
-        headers: {
-          'apikey': supabaseKey,
-          'Authorization': `Bearer ${supabaseKey}`,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify({
-          rating: selectedRating,
-          comment: comment || null,
-          lang: lang
-        })
-      });
-      
-      if (res.ok || res.status === 201) {
-        stepFeedback.classList.add('hidden');
-        stepThanks.classList.remove('hidden');
-      } else {
-        throw new Error('API error');
-      }
-    } catch (err) {
-      const feedbacks = JSON.parse(localStorage.getItem('dr_feedback') || '[]');
-      feedbacks.push({
-        rating: selectedRating,
-        comment: comment || null,
-        lang: lang,
-        created_at: new Date().toISOString()
-      });
-      localStorage.setItem('dr_feedback', JSON.stringify(feedbacks));
-      stepFeedback.classList.add('hidden');
-      stepThanks.classList.remove('hidden');
-    }
-  });
+<script define:vars={{supabaseUrl:'https://brgvscagofzftmbtakoa.supabase.co',supabaseKey:'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJyZ3ZzY2Fnb2Z6ZnRtYnRha29hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNTAyNjEsImV4cCI6MjA2MzgyNjI2MX0.LgSfVNLbCRr7ZuLmSwvLJqi-fHbJF1XzrOd0qf7sKPk',lang:'en'}}>
+let selectedRating=0,subRatings={rating_food:null,rating_service:null,rating_atmosphere:null};const starsContainer=document.getElementById('stars-container'),stepRating=document.getElementById('step-rating'),step5Stars=document.getElementById('step-5stars'),stepFeedback=document.getElementById('step-feedback'),stepThanks=document.getElementById('step-thanks'),feedbackForm=document.getElementById('feedback-form'),feedbackComment=document.getElementById('feedback-comment'),charCount=document.getElementById('char-count'),submitBtn=document.getElementById('submit-btn'),errorMsg=document.getElementById('error-msg');starsContainer.querySelectorAll('.star-btn').forEach(btn=>{btn.addEventListener('click',()=>{selectedRating=parseInt(btn.dataset.rating);starsContainer.querySelectorAll('.star-btn').forEach((star,i)=>{const e=star.querySelector('.star-empty'),f=star.querySelector('.star-filled');if(i<selectedRating){e.classList.add('hidden');f.classList.remove('hidden')}else{e.classList.remove('hidden');f.classList.add('hidden')}});setTimeout(()=>{stepRating.classList.add('hidden');if(selectedRating===5){step5Stars.classList.remove('hidden')}else{stepFeedback.classList.remove('hidden')}},300)})});document.querySelectorAll('.sub-stars').forEach(c=>{const field=c.dataset.field;c.querySelectorAll('.sub-star').forEach(btn=>{btn.addEventListener('click',()=>{const v=parseInt(btn.dataset.value);subRatings[field]=v;c.querySelectorAll('.sub-star').forEach((s,i)=>{const e=s.querySelector('.empty'),f=s.querySelector('.filled');if(i<v){e.classList.add('hidden');f.classList.remove('hidden')}else{e.classList.remove('hidden');f.classList.add('hidden')}})})})});feedbackComment.addEventListener('input',()=>{charCount.textContent=`${feedbackComment.value.length}/500`;if(feedbackComment.value.trim())errorMsg.classList.add('hidden')});feedbackForm.addEventListener('submit',async e=>{e.preventDefault();const comment=feedbackComment.value.trim();if(!comment){errorMsg.classList.remove('hidden');feedbackComment.focus();return}submitBtn.textContent='...';submitBtn.disabled=true;const payload={rating:selectedRating,comment,lang,rating_food:subRatings.rating_food,rating_service:subRatings.rating_service,rating_atmosphere:subRatings.rating_atmosphere};try{const res=await fetch(`${supabaseUrl}/rest/v1/feedback`,{method:'POST',headers:{'apikey':supabaseKey,'Authorization':`Bearer ${supabaseKey}`,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify(payload)});if(res.ok||res.status===201){stepFeedback.classList.add('hidden');stepThanks.classList.remove('hidden')}else throw new Error()}catch{const fb=JSON.parse(localStorage.getItem('dr_feedback')||'[]');fb.push({...payload,created_at:new Date().toISOString()});localStorage.setItem('dr_feedback',JSON.stringify(fb));stepFeedback.classList.add('hidden');stepThanks.classList.remove('hidden')}});
 </script>
-
-<style>
-  .star-btn:focus {
-    outline: 2px solid #CD202C;
-    outline-offset: 4px;
-    border-radius: 8px;
-  }
-</style>
+<style>.star-btn:focus,.sub-star:focus{outline:2px solid #CD202C;outline-offset:2px;border-radius:4px}.sub-star{cursor:pointer;background:none;border:none;padding:2px}</style>
