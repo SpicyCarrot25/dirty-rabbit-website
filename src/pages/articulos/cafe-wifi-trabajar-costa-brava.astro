@@ -1,0 +1,554 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'es';
+const title = `Cafés con WiFi para trabajar en la Costa Brava`;
+const description = `La Costa Brava no es el primer destino que viene a la mente cuando piensas en "trabajo remoto". Lisboa, Bali, Ciudad de México... esos son los clásicos. Pero si`;
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Artículos', url: 'https://dirtyrabbit.es/articulos/' },
+  { name: title, url: 'https://dirtyrabbit.es/articulos/cafe-wifi-trabajar-costa-brava' }
+];
+---
+
+<Layout 
+  title={title}
+  description={description}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <!-- Header -->
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">ARTÍCULO</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Cafés con WiFi para trabajar en la Costa Brava
+        </h1>
+      </header>
+
+      <!-- Main Content -->
+      <div class="prose prose-lg max-w-none font-mono text-black/80 leading-relaxed">
+        <p class="mb-4"><em>La Costa Brava no es el primer destino que viene a la mente cuando piensas en &quot;trabajo remoto&quot;. Lisboa, Bali, Ciudad de México... esos son los clásicos. Pero si buscas un sitio donde combinar playa, naturaleza y productividad — sin las masas de nómadas digitales — la Costa Brava tiene más que ofrecer de lo que crees. Esta guía cubre los mejores cafés para trabajar en la zona.</em></p>
+<hr class="my-8 border-black/20">
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">¿Es la Costa Brava un buen destino para trabajar en remoto?</h2>
+<p class="mb-4">Vamos a ser honestos: la Costa Brava no está diseñada para nómadas digitales. No hay coworkings en cada esquina, ni cafés con 15 enchufes por mesa, ni &quot;digital nomad community&quot; organizada.</p>
+<p class="mb-4"><strong>Pero eso es precisamente el atractivo.</strong></p>
+<p class="mb-4">Si estás cansado de compartir espacio con 50 portátiles en Lisboa o Chiang Mai, la Costa Brava ofrece algo diferente: trabajar con calma, en sitios donde eres la única persona con un portátil, con acceso a playas espectaculares a 5 minutos.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Lo bueno</h3>
+<ul class="space-y-2 mb-6 list-disc pl-6">
+<li><strong>Mar y naturaleza</strong> al lado — un baño en la pausa del almuerzo</li>
+<li><strong>Tranquilidad</strong> — no es un destino de fiesta (excepto Lloret en verano)</li>
+<li><strong>Buen clima</strong> — 300 días de sol al año</li>
+<li><strong>Conexión fácil</strong> — 1h a Barcelona, aeropuerto Girona-Costa Brava</li>
+<li><strong>Coste de vida</strong> — más bajo que Barcelona, más alto que Portugal/Este de Europa</li>
+</ul>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Lo malo</h3>
+<ul class="space-y-2 mb-6 list-disc pl-6">
+<li><strong>WiFi no siempre garantizado</strong> — algunos cafés tienen conexiones flojas</li>
+<li><strong>Pocos coworkings</strong> — Girona tiene algunos, la costa muy pocos</li>
+<li><strong>Transporte limitado</strong> — necesitas coche para moverte entre pueblos</li>
+<li><strong>Estacionalidad</strong> — en invierno muchos sitios cierran o reducen horarios</li>
+</ul>
+<hr class="my-8 border-black/20">
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Qué buscar en un café para trabajar</h2>
+<p class="mb-4">No todos los cafés son iguales para trabajar. Estos son los criterios que usamos:</p>
+<div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
+<thead class="border-b-2 border-black">
+<tr>
+<th class="text-left py-3 pr-4">Criterio</th>
+<th class="text-left py-3 pr-4">Por qué importa</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="py-3 pr-4 border-b border-black/20"><strong>WiFi</strong></td>
+<td class="py-3 pr-4 border-b border-black/20">Obviamente. Velocidad y estabilidad.</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20"><strong>Enchufes</strong></td>
+<td class="py-3 pr-4 border-b border-black/20">Tu portátil no dura todo el día.</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20"><strong>Ruido</strong></td>
+<td class="py-3 pr-4 border-b border-black/20">¿Puedes concentrarte o hay música a tope?</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20"><strong>Asientos cómodos</strong></td>
+<td class="py-3 pr-4 border-b border-black/20">Vas a estar 3+ horas sentado.</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20"><strong>Política de estancia</strong></td>
+<td class="py-3 pr-4 border-b border-black/20">¿Te miran mal si te quedas 4 horas?</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20"><strong>Café de calidad</strong></td>
+<td class="py-3 pr-4 border-b border-black/20">Vas a beber varios. Que merezcan la pena.</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20"><strong>Horario</strong></td>
+<td class="py-3 pr-4 border-b border-black/20">¿Abre cuando tú trabajas?</td>
+</tr>
+</tbody></table></div>
+<hr class="my-8 border-black/20">
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Los mejores cafés para trabajar en la Costa Brava</h2>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Zona S&#39;Agaró — Platja d&#39;Aro — Sant Feliu</h3>
+<h4>🐇 Dirty Rabbit — S&#39;Agaró</h4>
+<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
+<thead class="border-b-2 border-black">
+<tr>
+<th class="text-left py-3 pr-4">Criterio</th>
+<th class="text-left py-3 pr-4">Valoración</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="py-3 pr-4 border-b border-black/20">WiFi</td>
+<td class="py-3 pr-4 border-b border-black/20">⚠️ Sí, pero puede pausarse en horas punta</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Enchufes</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Disponibles</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Ruido</td>
+<td class="py-3 pr-4 border-b border-black/20">🟢 Bajo-medio, música ambiental</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Asientos</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Cómodos, interior + terraza</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Política</td>
+<td class="py-3 pr-4 border-b border-black/20">⚠️ Portátiles no bienvenidos en rush hour (verano)</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Café</td>
+<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐⭐ La Cabra (top mundial)</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Horario</td>
+<td class="py-3 pr-4 border-b border-black/20">8:00–15:00 (invierno), 8:00–17:00 (verano)</td>
+</tr>
+</tbody></table></div>
+<p class="mb-4"><strong>Importante — seamos honestos:</strong></p>
+<p class="mb-4">Dirty Rabbit es ante todo una cafetería de barrio, no un coworking. <strong>En temporada alta (verano), especialmente durante las horas punta, los portátiles no son bienvenidos.</strong> Cuando el local está lleno, preferimos que las mesas sean para comer y disfrutar, no para ocuparlas con trabajo.</p>
+<p class="mb-4">También: el WiFi a veces lo pausamos cuando hay mucha gente. No es personal — es que la conexión no da para todos.</p>
+<p class="mb-4"><strong>Cuándo SÍ funciona para trabajar:</strong></p>
+<ul class="space-y-2 mb-6 list-disc pl-6">
+<li>Temporada baja (octubre-mayo): tranquilo, puedes quedarte horas</li>
+<li>Mañanas temprano en verano (8:00-10:00): antes de la rush</li>
+<li>Tardes de invierno: prácticamente vacío</li>
+</ul>
+<p class="mb-4">El café es La Cabra (Dinamarca), preparado con La Marzocco KB90 y agua de ósmosis inversa. Si vas a beber varios cafés, que sean buenos.</p>
+<p class="mb-4"><strong>Idiomas:</strong> Español, catalán, inglés, polaco.</p>
+<p class="mb-4"><strong>Comida:</strong> Tostadas con salmón ahumado Benfumat, bollería La Puntual, pan Origo, matcha REQ, chai Awachai.</p>
+<p class="mb-4"><strong>El plan realista:</strong> En invierno o temporada baja, perfecto para trabajar. En verano, ven a desayunar temprano, trabaja un rato, y mueve a otro sitio cuando llene.</p>
+<hr class="my-8 border-black/20">
+<h4>La Maglia Coffee &amp; Co — Platja d&#39;Aro</h4>
+<p class="mb-4"><strong>Carrer Juli Garreta, 10, Platja d&#39;Aro</strong> · 5 min en coche</p>
+<div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
+<thead class="border-b-2 border-black">
+<tr>
+<th class="text-left py-3 pr-4">Criterio</th>
+<th class="text-left py-3 pr-4">Valoración</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="py-3 pr-4 border-b border-black/20">WiFi</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Sí</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Enchufes</td>
+<td class="py-3 pr-4 border-b border-black/20">⚠️ Limitados</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Ruido</td>
+<td class="py-3 pr-4 border-b border-black/20">🟡 Medio, ambiente ciclista</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Asientos</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Terraza grande</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Política</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Puedes quedarte</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Café</td>
+<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐ Propio (muy bueno)</td>
+</tr>
+</tbody></table></div>
+<p class="mb-4"><strong>Por qué funciona:</strong> Primer tostador de la Costa Brava. Terraza amplia, buen café. Los fines de semana puede haber grupos de ciclistas, lo que añade ruido. Entre semana, más tranquilo.</p>
+<hr class="my-8 border-black/20">
+<h4>Zero — Palamós</h4>
+<p class="mb-4"><strong>Carrer Pagès Ortiz, 55, Palamós</strong> · 12 min en coche</p>
+<div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
+<thead class="border-b-2 border-black">
+<tr>
+<th class="text-left py-3 pr-4">Criterio</th>
+<th class="text-left py-3 pr-4">Valoración</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="py-3 pr-4 border-b border-black/20">WiFi</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Gratuito</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Enchufes</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Disponibles</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Ruido</td>
+<td class="py-3 pr-4 border-b border-black/20">🟢 Bajo</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Asientos</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Cómodos</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Política</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Laptop-friendly</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Café</td>
+<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐ Specialty</td>
+</tr>
+</tbody></table></div>
+<p class="mb-4"><strong>Por qué funciona:</strong> Café de especialidad con ambiente tranquilo. TripAdvisor lo marca como &quot;laptop-friendly&quot;. Buena opción si estás por la zona de Palamós. Horario: 8:00–15:00 todos los días.</p>
+<hr class="my-8 border-black/20">
+<h3 class="font-typewriter text-xl mt-8 mb-4">Girona ciudad — El hub real</h3>
+<p class="mb-4">Si necesitas trabajar en serio varios días seguidos, Girona ciudad es donde están las mejores opciones. A 35 minutos en coche de S&#39;Agaró.</p>
+<h4>La Fábrica — Girona</h4>
+<p class="mb-4"><strong>Carrer de la Llebre, 3, Girona</strong></p>
+<div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
+<thead class="border-b-2 border-black">
+<tr>
+<th class="text-left py-3 pr-4">Criterio</th>
+<th class="text-left py-3 pr-4">Valoración</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="py-3 pr-4 border-b border-black/20">WiFi</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Sí</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Enchufes</td>
+<td class="py-3 pr-4 border-b border-black/20">⚠️ Limitados</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Ruido</td>
+<td class="py-3 pr-4 border-b border-black/20">🟡 Medio</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Asientos</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Variados</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Política</td>
+<td class="py-3 pr-4 border-b border-black/20">⚠️ No es coworking, pero se tolera</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Café</td>
+<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐⭐ Approachable Coffee (propio)</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Horario</td>
+<td class="py-3 pr-4 border-b border-black/20">8:00–17:30</td>
+</tr>
+</tbody></table></div>
+<p class="mb-4"><strong>Por qué funciona:</strong> El café más famoso de Girona. El espacio es un antiguo taller de carpintería, precioso. Mucho ciclista profesional. El café propio (Approachable Coffee) es excelente. No es un coworking, pero puedes trabajar un rato.</p>
+<p class="mb-4"><strong>Ojo:</strong> A veces está muy lleno y el ruido sube. Mejor entre semana por la mañana.</p>
+<hr class="my-8 border-black/20">
+<h4>Espresso Mafia — Girona</h4>
+<p class="mb-4"><strong>Carrer de la Cort Reial, 5, Girona</strong></p>
+<div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
+<thead class="border-b-2 border-black">
+<tr>
+<th class="text-left py-3 pr-4">Criterio</th>
+<th class="text-left py-3 pr-4">Valoración</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="py-3 pr-4 border-b border-black/20">WiFi</td>
+<td class="py-3 pr-4 border-b border-black/20">❌ No tiene WiFi</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Enchufes</td>
+<td class="py-3 pr-4 border-b border-black/20">⚠️ Muy limitados</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Ruido</td>
+<td class="py-3 pr-4 border-b border-black/20">🟢 Bajo</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Asientos</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Moderno</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Café</td>
+<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐⭐ Approachable Coffee</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Horario</td>
+<td class="py-3 pr-4 border-b border-black/20">9:00–20:00</td>
+</tr>
+</tbody></table></div>
+<p class="mb-4"><strong>Ojo:</strong> Espresso Mafia NO tiene WiFi intencionalmente. Es para tomar café, no para trabajar. El café es increíble, pero no es tu sitio si necesitas internet.</p>
+<hr class="my-8 border-black/20">
+<h4>Oniria Café — Girona</h4>
+<p class="mb-4"><strong>Carrer del Nord, 11, Girona</strong></p>
+<div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
+<thead class="border-b-2 border-black">
+<tr>
+<th class="text-left py-3 pr-4">Criterio</th>
+<th class="text-left py-3 pr-4">Valoración</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="py-3 pr-4 border-b border-black/20">WiFi</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Sí</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Enchufes</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Disponibles</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Ruido</td>
+<td class="py-3 pr-4 border-b border-black/20">🟢 Muy bajo</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Asientos</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Íntimo, acogedor</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Política</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Trabajo bienvenido</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Café</td>
+<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐⭐ Tostadores europeos rotativos</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Horario</td>
+<td class="py-3 pr-4 border-b border-black/20">Mar-Sáb 9:00–17:00, Dom 11:00–17:00</td>
+</tr>
+</tbody></table></div>
+<p class="mb-4"><strong>Por qué funciona:</strong> Pequeño, íntimo, tranquilo. Perfecto para trabajo concentrado. Tostadores invitados de toda Europa, así que el café cambia. Bollería vegana.</p>
+<hr class="my-8 border-black/20">
+<h4>SHOTS Coffee &amp; Brunch — Girona</h4>
+<p class="mb-4"><strong>Carrer del Bisbe Tomàs de Lorenzana, 47, Girona</strong></p>
+<div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
+<thead class="border-b-2 border-black">
+<tr>
+<th class="text-left py-3 pr-4">Criterio</th>
+<th class="text-left py-3 pr-4">Valoración</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="py-3 pr-4 border-b border-black/20">WiFi</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Sí</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Enchufes</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Cerca de mesas</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Ruido</td>
+<td class="py-3 pr-4 border-b border-black/20">🟢 Bajo</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Asientos</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Cómodos</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Política</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Laptop-friendly</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Café</td>
+<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐ Specialty</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Horario</td>
+<td class="py-3 pr-4 border-b border-black/20">Lun-Vie 8:00–20:00, Sáb 8:30–15:00</td>
+</tr>
+</tbody></table></div>
+<p class="mb-4"><strong>Por qué funciona:</strong> Explícitamente laptop-friendly con enchufes cerca de las mesas. Buen café y comida saludable. Perfecto para una jornada de trabajo.</p>
+<hr class="my-8 border-black/20">
+<h4>Hors Catégorie — Girona</h4>
+<p class="mb-4"><strong>Carrer del Perill, 3, Girona</strong></p>
+<div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
+<thead class="border-b-2 border-black">
+<tr>
+<th class="text-left py-3 pr-4">Criterio</th>
+<th class="text-left py-3 pr-4">Valoración</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="py-3 pr-4 border-b border-black/20">WiFi</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Sí</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Enchufes</td>
+<td class="py-3 pr-4 border-b border-black/20">⚠️ Algunos</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Ruido</td>
+<td class="py-3 pr-4 border-b border-black/20">🟡 Variable</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Asientos</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Buenos</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Café</td>
+<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐ Nomad Coffee</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Horario</td>
+<td class="py-3 pr-4 border-b border-black/20">8:30–23:00/00:00</td>
+</tr>
+</tbody></table></div>
+<p class="mb-4"><strong>Por qué funciona:</strong> Horario largo (hasta medianoche). Usa Nomad Coffee de Barcelona. Ambiente ciclista. Buena opción si necesitas trabajar tarde.</p>
+<hr class="my-8 border-black/20">
+<h4>Originem — Girona</h4>
+<p class="mb-4"><strong>Carrer de la Força, 1, A, Girona</strong></p>
+<div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
+<thead class="border-b-2 border-black">
+<tr>
+<th class="text-left py-3 pr-4">Criterio</th>
+<th class="text-left py-3 pr-4">Valoración</th>
+</tr>
+</thead>
+<tbody><tr>
+<td class="py-3 pr-4 border-b border-black/20">WiFi</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Sí</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Enchufes</td>
+<td class="py-3 pr-4 border-b border-black/20">⚠️ Algunos</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Ruido</td>
+<td class="py-3 pr-4 border-b border-black/20">🟢 Bajo</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Asientos</td>
+<td class="py-3 pr-4 border-b border-black/20">✅ Bonitos, café servido en cerámica artesana</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Café</td>
+<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐ Specialty km0</td>
+</tr>
+<tr>
+<td class="py-3 pr-4 border-b border-black/20">Horario</td>
+<td class="py-3 pr-4 border-b border-black/20">9:00–20:00</td>
+</tr>
+</tbody></table></div>
+<p class="mb-4"><strong>Por qué funciona:</strong> Enfoque km0 y sostenible. Laptop-friendly. Ubicación en el casco antiguo, cerca de la Catedral.</p>
+<hr class="my-8 border-black/20">
+<h3 class="font-typewriter text-xl mt-8 mb-4">Otras zonas</h3>
+<h4>Grava — Pals</h4>
+<p class="mb-4"><strong>Carrer de la Font, 7, Pals</strong> · 20 min en coche</p>
+<p class="mb-4">WiFi sí, ambiente relajado, patio exterior. Funciona bien para trabajar un rato. Cierra miércoles.</p>
+<hr class="my-8 border-black/20">
+<h4>Fitzroy Café — Begur</h4>
+<p class="mb-4"><strong>Carrer de Francesc Forgas, 1, Begur</strong> · 20 min en coche</p>
+<p class="mb-4">WiFi limitado, no es el mejor para trabajo. Ven para el brunch, no para el portátil.</p>
+<hr class="my-8 border-black/20">
+<h4>Casa Nereta — Cadaqués</h4>
+<p class="mb-4"><strong>Carrer Pintor Joan Ponç, 1, Cadaqués</strong> · 60 min en coche</p>
+<p class="mb-4">Café de La Cabra en Cadaqués. Espacio bonito, tranquilo. WiFi del hotel. Funciona si estás por la zona, pero es un viaje largo solo para trabajar.</p>
+<hr class="my-8 border-black/20">
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Coworkings en la zona</h2>
+<p class="mb-4">Si necesitas un espacio de coworking de verdad (no café), las opciones están principalmente en Girona ciudad:</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">La Vela Coworking — Girona</h3>
+<p class="mb-4">Espacio dedicado al trabajo. Mesas, salas de reuniones, buena conexión. El estándar de coworking que esperarías.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Nimba Hub — Girona</h3>
+<p class="mb-4">Otro coworking en la ciudad. Pases diarios disponibles.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">La Costa Brava (fuera de Girona)</h3>
+<p class="mb-4">Prácticamente no hay coworkings dedicados en la costa. La cultura es de vacaciones y segunda residencia, no de trabajo remoto. Pero eso está cambiando poco a poco.</p>
+<hr class="my-8 border-black/20">
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">El setup perfecto para trabajar en la Costa Brava</h2>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Equipamiento recomendado</h3>
+<ul class="space-y-2 mb-6 list-disc pl-6">
+<li><strong>Router 4G/5G portátil</strong> — No dependas del WiFi del café. Movistar, Vodafone y Orange tienen buena cobertura.</li>
+<li><strong>Power bank</strong> — Para cuando los enchufes están lejos.</li>
+<li><strong>Auriculares</strong> — Para videollamadas o concentración.</li>
+<li><strong>Móvil con datos</strong> — Como backup de internet.</li>
+</ul>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Apps útiles</h3>
+<ul class="space-y-2 mb-6 list-disc pl-6">
+<li><strong>Speedtest</strong> — Para verificar velocidad antes de sentarte.</li>
+<li><strong>Workfrom</strong> — Base de datos de cafés para trabajar (la cobertura en España es limitada).</li>
+<li><strong>Meetup</strong> — Para encontrar otros remotos en la zona (más activo en Barcelona/Girona).</li>
+</ul>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Horarios españoles</h3>
+<ul class="space-y-2 mb-6 list-disc pl-6">
+<li><strong>Mañana:</strong> 8:00–14:00 → Hora productiva, cafés tranquilos</li>
+<li><strong>Siesta:</strong> 14:00–17:00 → Algunos cafés cierran, otros están vacíos</li>
+<li><strong>Tarde:</strong> 17:00–21:00 → Segundo pico de actividad</li>
+</ul>
+<p class="mb-4">Si trabajas con horario americano o asiático, la Costa Brava funciona bien — las tardes/noches son tranquilas.</p>
+<hr class="my-8 border-black/20">
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Un día típico de trabajo en la Costa Brava</h2>
+<h3 class="font-typewriter text-xl mt-8 mb-4">El plan &quot;productividad + playa&quot; (temporada baja)</h3>
+<p class="mb-4"><strong>7:30</strong> — Despierta, desayuno rápido en el apartamento<br><strong>8:00</strong> — Camina o corre por el Camí de Ronda (30 min)<br><strong>8:45</strong> — Ducha<br><strong>9:30</strong> — Llega a Dirty Rabbit, pide café de La Cabra<br><strong>9:45</strong> — Primera sesión de trabajo (deep work)<br><strong>13:00</strong> — Pausa, baja a Sant Pol, baño rápido<br><strong>14:00</strong> — Almuerzo ligero<br><strong>15:30</strong> — Segunda sesión en el apartamento (en verano, no vuelvas al café con portátil)<br><strong>18:30</strong> — Fin de la jornada, paseo o playa<br><strong>20:30</strong> — Cena tardía (esto es España)</p>
+<p class="mb-4"><strong>Nota:</strong> En verano, trabaja desde casa o un coworking en Girona. Los cafés de playa no están diseñados para jornadas de portátil.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">El plan &quot;full focus&quot;</h3>
+<p class="mb-4"><strong>8:00</strong> — Desayuno en casa<br><strong>9:00</strong> — Coche a Girona (35 min)<br><strong>9:45</strong> — Oniria Café o SHOTS Coffee, trabajo intensivo<br><strong>14:00</strong> — Pausa, paseo por el casco antiguo<br><strong>15:00</strong> — Segunda sesión<br><strong>18:00</strong> — Vuelve a la costa, playa al atardecer</p>
+<hr class="my-8 border-black/20">
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Preguntas frecuentes</h2>
+<h3 class="font-typewriter text-xl mt-8 mb-4">¿Puedo trabajar en remoto desde la Costa Brava todo el año?</h3>
+<p class="mb-4">Sí, pero ten en cuenta que muchos cafés tienen horarios reducidos o cierran en invierno (noviembre-febrero). Girona ciudad funciona todo el año.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">¿Necesito coche?</h3>
+<p class="mb-4">Prácticamente sí. El transporte público entre pueblos es limitado. Puedes alquilar por semana/mes a buen precio.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">¿Cómo es la conexión a internet?</h3>
+<p class="mb-4">Fibra óptica disponible en la mayoría de pueblos. 4G/5G funciona bien. El WiFi de los cafés varía — algunos excelentes, otros flojos.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">¿Hay comunidad de nómadas digitales?</h3>
+<p class="mb-4">No organizada como en Bali o Lisboa. Pero sí hay gente trabajando en remoto, especialmente en temporada baja. Girona tiene más movimiento.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">¿Cuánto cuesta vivir en la Costa Brava?</h3>
+<ul class="space-y-2 mb-6 list-disc pl-6">
+<li><strong>Alquiler (1 hab, temporada baja):</strong> 600–900€/mes</li>
+<li><strong>Alquiler (temporada alta):</strong> 1.200–2.500€/mes (escasez)</li>
+<li><strong>Café en specialty:</strong> 2.50–4€</li>
+<li><strong>Comida fuera:</strong> 12–25€/persona</li>
+<li><strong>Coworking (Girona):</strong> 150–250€/mes</li>
+</ul>
+<h3 class="font-typewriter text-xl mt-8 mb-4">¿Cuál es la mejor época para trabajar en remoto aquí?</h3>
+<p class="mb-4"><strong>Abril-junio</strong> y <strong>septiembre-octubre</strong>. Buen tiempo, precios razonables, todo abierto, sin masificación de verano.</p>
+<hr class="my-8 border-black/20">
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Nuestra recomendación</h2>
+<p class="mb-4"><strong>Para trabajo serio (varios días, jornadas largas):</strong></p>
+<p class="mb-4"><strong>Girona ciudad</strong> — Oniria, SHOTS Coffee, o un coworking. Más opciones, más infraestructura, política explícita de laptop-friendly.</p>
+<p class="mb-4"><strong>Para combinar trabajo + playa (temporada baja):</strong></p>
+<p class="mb-4"><strong>Dirty Rabbit</strong> en invierno o mañanas temprano — WiFi, enchufes, café de La Cabra, y Sant Pol a 3 minutos. Pero recuerda: somos una cafetería, no un coworking. En verano durante las horas punta, prioriza disfrutar del café y deja el portátil en casa.</p>
+<p class="mb-4"><strong>Zero</strong> en Palamós también es buena opción para trabajo tranquilo.</p>
+<hr class="my-8 border-black/20">
+<p class="mb-4"><em>¿Trabajas en remoto desde la Costa Brava? En temporada baja, pásate por Dirty Rabbit — Avenida Platja d&#39;Aro 275, S&#39;Agaró. Café de La Cabra y Sant Pol a 3 minutos. En verano, disfruta del café sin portátil.</em></p>
+<p class="mb-4"><em>Última actualización: febrero 2026</em></p>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+        <p class="font-typewriter text-2xl mb-4">¿Vienes a vernos?</p>
+        <p class="font-mono mb-6">
+          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
+        </p>
+        <a 
+          href="https://www.google.com/maps?cid=13237319999262880412"
+          target="_blank"
+          rel="noopener noreferrer" 
+          class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+        >
+          Cómo llegar
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>
