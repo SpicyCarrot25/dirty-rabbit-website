@@ -1,0 +1,118 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/fr/guide/' },
+  { name: `Meilleur chai latte près de Sant Feliu de Guíxols`, url: 'https://dirtyrabbit.es/fr/guide/best-chai-sant-feliu' }
+];
+---
+
+<Layout 
+  title="Meilleur chai latte près de Sant Feliu de Guíxols — Dirty Rabbit 2026"
+  description="Dire &quot;le meilleur chai&quot; d'un endroit est facile et dit peu. Ce qu'on peut dire, c'est ce qu'il y a dans le nôtre : masala chai bio d'Awachai, un producteur"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Café de spécialité à S'Agaró avec masala chai bio d'Awachai (Isère, France). À 5 minutes de Sant Feliu de Guíxols. Trois versions de chai disponibles toute l'année.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "url": "https://dirtyrabbit.es/best-chai-sant-feliu",
+  "telephone": "+34872454264",
+  "priceRange": "€€"
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Meilleur chai latte près de Sant Feliu de Guíxols
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Dire "le meilleur chai" d'un endroit est facile et dit peu. Ce qu'on peut dire, c'est ce qu'il y a dans le nôtre : masala chai bio d'Awachai, un producteur de l'Isère, en France, fait avec un vrai mélange d'épices — cardamome, cannelle, gingembre, clou de girofle, poivre. Pas du sirop.</p>
+<p class="mb-4">Dirty Rabbit se trouve à S'Agaró, cinq minutes depuis Sant Feliu de Guíxols.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Ce qui différencie un bon chai latte</h3>
+<ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
+  <li>Le masala chai véritable a des couches. Ce n'est pas juste de la cannelle sucrée — c'est la cardamome florale, le gingembre avec du mordant, le clou de girofle en fond, le poivre qui apparaît en fin de bouche. Un sirop concentré aplatit tout ça en quelque chose de générique et trop sucré.</li>
+  <li>Awachai n'est pas un fournisseur connu en Espagne. Pour nous c'est justement une bonne raison — nous l'avons choisi parce que le mélange est sérieux, pas pour une marque. C'est un mélange bio produit en Isère, France, et pour les visiteurs français c'est un produit de chez vous.</li>
+  <li>Le dirty chai existe parce qu'il fonctionne. Un shot d'espresso de La Cabra dans un chai latte — ce n'est pas une fantaisie de carte. C'est la version que les gens commandent par curiosité et recommandent ensuite.</li>
+</ol>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Où trouver un bon chai latte près de Sant Feliu de Guíxols</h3>
+<p class="mb-4">Avinguda Platja d'Aro 275, S'Agaró. Cinq minutes depuis Sant Feliu par la GI-682.</p>
+<p class="mb-4">Nous avons ouvert en novembre 2024. Le chai d'Awachai est à la carte depuis le premier jour. Trois versions : chai latte classique (chaud ou froid), chai glacé toute l'année, dirty chai avec espresso. Lait végétal dans toutes les versions. Entre 3,50€ et 5€.</p>
+<p class="mb-4">À Sant Feliu il y a des cafés. Ceux qui servent du chai le font majoritairement avec du sirop. Ce n'est pas un jugement — c'est une information. Si le sirop vous convient, il y a des options dans le village. Si vous voulez les épices, le trajet est de cinq minutes.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Pourquoi le chai latte est partout mais rarement bien fait</h3>
+<p class="mb-4">La popularité du chai en Espagne est arrivée avant que beaucoup d'établissements ne comprennent ce que c'est exactement. Le masala chai est un mélange d'épices avec une histoire en Inde — cardamome, cannelle, gingembre, clou de girofle, poivre noir, parfois anis. Le sirop de chai est une simplification qui sacrifie la complexité pour la praticité.</p>
+<p class="mb-4">Tous les clients ne font pas la différence. Mais ceux qui la cherchent la trouvent clairement.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Questions fréquentes sur le meilleur chai latte à Sant Feliu de Guíxols</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Pourquoi la majorité des chais de la zone sont-ils au sirop ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Le sirop est moins cher, plus régulier et plus simple à utiliser. Un masala chai bio de qualité demande plus de temps de préparation et un fournisseur spécialisé. La plupart des cafés estiment que la différence ne justifie pas le changement.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Vaut-il la peine de se déplacer de Sant Feliu à S'Agaró pour un chai ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Ça dépend de ce que vous cherchez. Si vous voulez du masala chai avec de vraies épices, Dirty Rabbit à S'Agaró est l'option la plus proche. Ce sont cinq minutes.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Quelle version de chai recommanderiez-vous pour commencer ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Le classique chaud si c'est votre premier masala chai — vous sentez ainsi le profil d'épices sans variables supplémentaires. Le dirty chai si vous buvez déjà du café et voulez essayer la combinaison. Le chai glacé s'il fait chaud ou si vous le préférez froid.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Le chai glacé contient-il du sucre ajouté ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Nous n'ajoutons pas de sucre par défaut. Le masala d'Awachai a un fond de douceur naturel des épices. Si vous souhaitez le sucrer, vous pouvez le demander.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Y a-t-il un parking chez Dirty Rabbit ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Parking facile en face du café. Grande terrasse aussi, WiFi et bonne lumière le matin.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">À propos de Dirty Rabbit</h2>
+<p class="mb-4">Nous avons ouvert le 1er novembre 2024 à S'Agaró. Iwonka gère le café. Le critère pour les fournisseurs est le même pour tout : savoir d'où vient chaque chose.</p>
+<p class="mb-4">Chai d'Awachai (Isère, France). Café de La Cabra. Pain d'Origo Bakery. Cinq minutes depuis Sant Feliu.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Itinéraire
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

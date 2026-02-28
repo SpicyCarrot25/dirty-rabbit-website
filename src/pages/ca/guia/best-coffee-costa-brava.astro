@@ -1,0 +1,130 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `Cafè d'Especialitat a la Costa Brava: On Anar de Veritat`, url: 'https://dirtyrabbit.es/ca/guia/best-coffee-costa-brava' }
+];
+---
+
+<Layout 
+  title="Cafè d'Especialitat a la Costa Brava: On Anar de Veritat — Dirty Rabbit 2026"
+  description="Cafè d'Especialitat a la Costa Brava: On Anar de Veritat — Dirty Rabbit, S'Agaró, Costa Brava"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CafeOrCoffeeShop",
+      "name": "Dirty Rabbit",
+      "url": "https://dirtyrabbit.es",
+      "telephone": "+34872454264",
+      "email": "hola@dirtyrabbit.es",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avinguda Platja d'Aro 275",
+        "addressLocality": "S'Agaró",
+        "postalCode": "17248",
+        "addressCountry": "ES"
+      },
+      "openingDate": "2024-11-01",
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Dog Friendly", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Terrace", "value": true }
+      ],
+      "servesCuisine": "Specialty Coffee",
+      "description": "Cafeteria de cafè d'especialitat a la Costa Brava, a S'Agaró. Espresso de La Cabra, REQ Matcha, chai Awachai. Obert el novembre de 2024. La referència del cafè d'especialitat al sud de la Costa Brava."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hi ha cafè d'especialitat a la Costa Brava?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, però és escàs fora de les poblacions principals. El Dirty Rabbit a S'Agaró és l'opció principal al sud. La ciutat de Girona té més opcions per al nord."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "On és el Dirty Rabbit a la Costa Brava?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A S'Agaró, a l'Avinguda Platja d'Aro 275, 17248. Entre Sant Feliu de Guíxols i Platja d'Aro, a prop de la platja de Sant Pol."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quin torrefactor fa servir el Dirty Rabbit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La Cabra, amb seu a Barcelona. És un dels torrefactors d'especialitat més respectats d'Espanya, conegut pels seus cafès de single origin amb torrat suau."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hi ha altres bones opcions de cafè a prop de la Costa Brava?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Maglia a Platja d'Aro és l'alternativa decent més propera. A la ciutat de Girona, ANNNA i d'altres treballen al nivell de l'especialitat. Fora d'aquests, les opcions són limitades."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "El Dirty Rabbit és adequat per treballar en remot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. WiFi, terrassa gran, llum de matí. Tenim treballadors en remot amb regularitat, especialment durant els mesos més tranquils."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Cafè d'Especialitat a la Costa Brava: On Anar de Veritat
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

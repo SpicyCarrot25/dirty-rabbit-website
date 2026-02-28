@@ -1,0 +1,124 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/en/guide/' },
+  { name: `Chai latte in Sant Feliu de Guíxols: options and context`, url: 'https://dirtyrabbit.es/en/guide/chai-latte-sant-feliu' }
+];
+---
+
+<Layout 
+  title="Chai latte in Sant Feliu de Guíxols: options and context — Dirty Rabbit 2026"
+  description="Sant Feliu de Guíxols has a reasonable café scene for a coastal town its size. Chai latte appears on a few menus. The question is what that chai actually i"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Specialty café in S'Agaró with organic masala chai from Awachai. 5 minutes from Sant Feliu de Guíxols. Open since November 2024.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/chai-latte-sant-feliu",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Chai", "Masala Chai"],
+  "priceRange": "€€"
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Chai latte in Sant Feliu de Guíxols: options and context
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Sant Feliu de Guíxols has a reasonable café scene for a coastal town its size. Chai latte appears on a few menus. The question is what that chai actually is — syrup or real spices.</p>
+<p class="mb-4">Dirty Rabbit is in S'Agaró, five minutes by car from Sant Feliu. Not Sant Feliu itself, but the nearest option with organic masala chai made from a real spice blend.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">What makes a good chai latte</h3>
+<ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
+  <li>The difference between syrup and masala is real. A chai made with syrup tastes sweet and vaguely of cinnamon. A masala chai with real spices — cardamom, ginger, clove, black pepper — has layers of flavour that don't exist in any bottle.</li>
+  <li>Where the chai comes from matters as much as where the coffee comes from. We use Awachai, a producer in Isère, France, with a 100% organic blend. Not a well-known name in Spain, and that's part of the point — we chose it for quality, not for brand recognition.</li>
+  <li>The three versions each work for different moments. Classic hot for the morning. Iced chai when the sun is strong or you just want it cold. Dirty chai — with La Cabra espresso — for when you want both.</li>
+</ol>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Where to find good chai latte near Sant Feliu de Guíxols</h3>
+<p class="mb-4">Dirty Rabbit is at Avinguda Platja d'Aro 275, S'Agaró — five minutes from Sant Feliu along the GI-682.</p>
+<p class="mb-4">We opened on 1 November 2024. Iwonka runs day-to-day. Awachai's masala chai is on the menu year-round, in three versions: classic, iced chai and dirty chai. Plant milk in all versions. €3.50 to €5.</p>
+<p class="mb-4">Sant Feliu has options. For a quick coffee or somewhere to sit by the sea, they work well. For chai made with real spices, the detour to S'Agaró is five minutes.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Why chai latte is everywhere but good chai is rare</h3>
+<p class="mb-4">In towns like Sant Feliu, chai latte has been on several menus for years. The pattern is the same: syrup in warm milk. Nothing wrong with knowing that and ordering it anyway — but if you're looking for more character, the difference is noticeable.</p>
+<p class="mb-4">The places working with real spice blends are the same ones working with specialty coffee. It's a consistent pattern: when someone cares about where one ingredient comes from, they tend to care about the others too.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Frequently asked questions about chai latte in Sant Feliu de Guíxols</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Are there cafés in Sant Feliu that serve chai with real spices?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Most options in Sant Feliu use syrup or concentrate. The nearest alternative with genuine organic masala chai is Dirty Rabbit in S'Agaró, five minutes along the GI-682.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">How long does it take to get from Sant Feliu to Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Five minutes by car. The most direct route is the GI-682 towards Platja d'Aro. We're at Avinguda Platja d'Aro 275. Easy parking right across the road.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">What exactly is dirty chai?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">A chai latte with an added shot of espresso. The coffee is from La Cabra (Madrid). The masala spices round out the bitterness of the espresso — it works better than it sounds.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Can I order iced chai in October or November?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Yes. Iced chai is available year-round at Dirty Rabbit. The Costa Brava still has warm days in autumn — and even when it doesn't, the iced chai is still an option.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Do you have a terrace at Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Yes, a large terrace. Also WiFi and good natural morning light. A place where staying for the whole morning is straightforward.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">About Dirty Rabbit</h2>
+<p class="mb-4">We opened on 1 November 2024 in S'Agaró. The rule for suppliers is simple: know where everything comes from and be able to say it.</p>
+<p class="mb-4">Chai from Awachai (Isère, France). Coffee from La Cabra. Bread from Origo Bakery. Five minutes from Sant Feliu de Guíxols.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

@@ -1,0 +1,170 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `El millor chai latte prop de Platja d'Aro`, url: 'https://dirtyrabbit.es/ca/guia/best-chai-latte-platja-daro' }
+];
+---
+
+<Layout 
+  title="El millor chai latte prop de Platja d'Aro — Dirty Rabbit 2026"
+  description="&quot;El millor&quot; és una afirmació fàcil de fer i difícil de defensar. No direm que som el millor chai latte de la zona, no ens correspon. El que sí podem explic"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Cafè d'especialitat a S'Agaró amb masala chai orgànic d'Awachai. Chai latte clàssic, iced chai i dirty chai disponibles tot l'any. A 10 minuts de Platja d'Aro.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/best-chai-latte-platja-daro",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Chai", "Masala Chai"],
+  "priceRange": "€€"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Per què el chai latte varia tant d'un lloc a l'altre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Perquè hi ha dues maneres de fer-lo: amb barreja d'espècies real (masala) o amb xarop concentrat. El resultat és completament diferent. Els locals que fan servir xarop són majoria, és més econòmic i més senzill de preparar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Què fa diferent el chai de Dirty Rabbit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fem servir Awachai, un masala chai orgànic d'Isère, França. És una barreja d'espècies real, cardamom, canyella, gingebre, clau, pebre, no un concentrat. El sabor és més complex i menys ensucrat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L'iced chai és disponible a l'hivern?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, tot l'any. L'iced chai fred no és una opció de temporada a Dirty Rabbit. Les espècies del masala funcionen bé en fred."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "El dirty chai és molt fort en cafeïna?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Té el chai més un shot d'espresso, així que té més cafeïna que cadascun per separat. Per a qui ja pren cafè doble, és comparable. Per a qui no pren cafè habitualment, és notable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Com arribo a Dirty Rabbit des de Platja d'Aro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deu minuts en cotxe. Avinguda Platja d'Aro 275, S'Agaró. A la carretera principal entre Sant Feliu i Platja d'Aro. Aparcament davant, terrassa gran, bona llum al matí."
+      }
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          El millor chai latte prop de Platja d'Aro
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">"El millor" és una afirmació fàcil de fer i difícil de defensar. No direm que som el millor chai latte de la zona, no ens correspon. El que sí podem explicar és el que hi ha al nostre i per què el vam triar.</p>
+<p class="mb-4">Si ets a Platja d'Aro buscant alguna cosa més que xarop en llet calenta, el desviament fins a S'Agaró té sentit.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Què fa diferent un bon chai latte</h2>
+<p class="mb-4">La base ha de ser una barreja d'espècies, no un concentrat. Cardamom, canyella, gingebre, clau, pebre, en proporció. Això és masala chai. Un xarop de chai sap dolç però no sap a res en concret.</p>
+<p class="mb-4">El proveïdor defineix el resultat. Fem servir Awachai, d'Isère, França, masala chai 100% orgànic. No és el proveïdor més conegut a Espanya, però la barreja d'espècies és seriosa.</p>
+<p class="mb-4">Hi ha tres formes de prendre'l. Chai latte clàssic (calent o fred), iced chai tot l'any, i dirty chai amb un shot d'espresso de La Cabra. Cada un resol un moment diferent.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">On trobar bon chai latte prop de Platja d'Aro</h2>
+<p class="mb-4">Dirty Rabbit és a S'Agaró, Av. Platja d'Aro 275. Deu minuts des del centre de Platja d'Aro.</p>
+<p class="mb-4">Vam obrir al novembre de 2024. El masala chai d'Awachai és a la carta des del primer dia, al costat del cafè de La Cabra i el pa d'Origo Bakery. No és una carta llarga. És una carta pensada.</p>
+<p class="mb-4">El dirty chai, chai latte més espresso, és el que genera més preguntes. La gent el demana per curiositat i el repeteix. L'iced chai, que a la majoria de llocs de la zona no existeix o és de temporada, el tenim disponible tot l'any. Llet vegetal en totes les versions. Entre 3,50 € i 5 €.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Per què el chai latte és a tot arreu però ben fet en pocs llocs</h2>
+<p class="mb-4">A Espanya el chai latte fa anys que és a la carta de moltes cafeteries. El problema és que la majoria el prepara amb xarop, que és més barat, més fàcil i més predictible. No hi ha res dolent en això si saps el que estàs demanant. El problema és quan es presenta com a chai "de debò" sense ser-ho.</p>
+<p class="mb-4">Una barreja de masala orgànica de qualitat costa més. Però la diferència en sabor és real: més complexa, menys dolça, amb un fons que recorda a cuina índia més que a un refresc.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Preguntes freqüents sobre el millor chai latte a Platja d'Aro</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Per què el chai latte varia tant d'un lloc a l'altre?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Perquè hi ha dues maneres de fer-lo: amb barreja d'espècies real (masala) o amb xarop concentrat. El resultat és completament diferent. Els locals que fan servir xarop són majoria, és més econòmic i més senzill de preparar.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Què fa diferent el chai de Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Fem servir Awachai, un masala chai orgànic d'Isère, França. És una barreja d'espècies real, cardamom, canyella, gingebre, clau, pebre, no un concentrat. El sabor és més complex i menys ensucrat que el que trobaràs a la majoria de llocs.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">L'iced chai és disponible a l'hivern?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí, tot l'any. L'iced chai fred no és una opció de temporada a Dirty Rabbit. Les espècies del masala funcionen bé en fred.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">El dirty chai és molt fort en cafeïna?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Té el chai més un shot d'espresso, així que té més cafeïna que cadascun per separat. Per a qui ja pren cafè doble, és comparable. Per a qui no pren cafè habitualment, és notable.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Com arribo a Dirty Rabbit des de Platja d'Aro?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Deu minuts en cotxe. Avinguda Platja d'Aro 275, S'Agaró. A la carretera principal entre Sant Feliu i Platja d'Aro. Aparcament davant, terrassa gran, bona llum al matí.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Sobre Dirty Rabbit</h2>
+<p class="mb-4">Vam obrir el 1 de novembre de 2024 a S'Agaró. L'Iwonka porta el local amb un criteri senzill: saber exactament el que hi ha a cada tassa i poder explicar-ho.</p>
+<p class="mb-4">Chai d'Awachai. Cafè de La Cabra. Pa d'Origo Bakery. Terrassa gran. WiFi. Llum natural al matí que fa que treballar-hi un matí sigui una opció real.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

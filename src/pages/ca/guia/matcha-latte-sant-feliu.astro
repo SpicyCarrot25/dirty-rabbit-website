@@ -1,0 +1,177 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `Matcha latte a Sant Feliu de Guíxols: el que hi ha i el que val el desviament`, url: 'https://dirtyrabbit.es/ca/guia/matcha-latte-sant-feliu' }
+];
+---
+
+<Layout 
+  title="Matcha latte a Sant Feliu de Guíxols: el que hi ha i el que val el desviament — Dirty Rabbit 2026"
+  description="A Sant Feliu de Guíxols hi ha cafeteries. Al passeig, al mercat, prop del port. La majoria tenen &quot;matcha latte&quot; a la carta, i si el demanes te'l serveixen."
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Cafè d'especialitat a S'Agaró amb matcha orgànic de REQ Matcha i cafè de La Cabra. A 5 minuts de Sant Feliu de Guíxols. Obert des del novembre 2024.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/matcha-latte-sant-feliu",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
+  "priceRange": "€€"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hi ha algun lloc a Sant Feliu de Guíxols que serveixi matcha de qualitat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'oferta a Sant Feliu és limitada quant a matcha de cerimònia. L'opció més propera amb matcha orgànic d'origen japonès és Dirty Rabbit a S'Agaró, a cinc minuts en cotxe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quina distància hi ha entre Sant Feliu de Guíxols i Dirty Rabbit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Uns 4-5 quilòmetres per la GI-682 en direcció a Platja d'Aro. El local és a l'Avinguda Platja d'Aro 275, S'Agaró."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puc demanar el matcha latte amb llet vegetal a Dirty Rabbit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Treballem amb opcions vegetals a més de llet de vaca. Pregunta a la barra per la disponibilitat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dirty Rabbit obre tot l'any o només a l'estiu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vam obrir el 1 de novembre de 2024 i seguim oberts. No som un local de temporada, tot i que l'horari pot variar entre temporada alta i baixa."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hi ha terrassa a Dirty Rabbit S'Agaró?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, terrassa gran quan el temps ho permet. Bona llum al matí i WiFi disponible."
+      }
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Matcha latte a Sant Feliu de Guíxols: el que hi ha i el que val el desviament
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">A Sant Feliu de Guíxols hi ha cafeteries. Al passeig, al mercat, prop del port. La majoria tenen "matcha latte" a la carta, i si el demanes te'l serveixen. El que varia molt és de què està fet aquell matcha.</p>
+<p class="mb-4">A cinc minuts en cotxe, a S'Agaró, tenim Dirty Rabbit. Vam obrir al novembre de 2024 amb una carta construïda des de zero al voltant de proveïdors concrets. El matcha no va ser una decisió de màrqueting.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Què fa diferent un bon matcha latte</h2>
+<p class="mb-4">L'ingredient importa més del que sembla. El matcha de cerimònia té un perfil de sabor completament diferent al de grau alimentari: més suau, més verd, sense l'amargor que fa que molta gent pensi que no li agrada el matcha, quan el que no li agrada és aquella versió concreta.</p>
+<p class="mb-4">La dosi també compta. A Dirty Rabbit fem servir 2 g per tassa, la mesura estàndard perquè el sabor sigui reconeixible sense passar-se. Hi ha opció extra fort per una mica més si el prefereixes més intens.</p>
+<p class="mb-4">La preparació és l'últim factor. El matcha es bat primer amb aigua freda, després s'afegeix la llet. Sense aquest pas, queda pols apinyada al fons. És un detall que no es veu però es nota.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Quins matchas pots demanar</h2>
+<ul class="list-disc list-outside ml-6 space-y-2 mb-6">
+  <li>Matcha latte clàssic, calent o fred, amb llet vegetal disponible</li>
+  <li>Orange matcha, amb suc de taronja en comptes de llet, sense lactis i més fresc</li>
+  <li>Extra fort, amb més dosi, per una mica més</li>
+</ul>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">On trobar bon matcha latte prop de Sant Feliu de Guíxols</h2>
+<p class="mb-4">Dirty Rabbit és a l'Avinguda Platja d'Aro 275, S'Agaró, cinc minuts des de Sant Feliu per la GI-682.</p>
+<p class="mb-4">El matcha que fem servir és de REQ Matcha, un projecte fundat per un japonès que viu al Japó i viatja a les plantacions a seleccionar el te directament. El porten a Barcelona i d'allà arriba fins a nosaltres. La cadena és curta i traçable.</p>
+<p class="mb-4">A Sant Feliu centre trobaràs opcions per seure amb vistes al mar. Si el matcha en si és el que busques, el desviament a S'Agaró té sentit.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Per què el matcha latte és a tot arreu però ben fet en pocs llocs</h2>
+<p class="mb-4">Hi ha una raó econòmica senzilla: el matcha de cerimònia d'origen japonès costa significativament més que la pols verda genèrica. Si un local ven el matcha latte al mateix preu que el tallat, cal preguntar-se d'on ve l'estalvi.</p>
+<p class="mb-4">A la Costa Brava el cafè d'especialitat va arribar tard comparat amb Barcelona o Girona ciutat. El mateix va passar amb el matcha. Els locals que es van prendre seriosament el cafè també es van prendre seriosament les alternatives. No n'hi ha molts, però existeixen.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Preguntes freqüents sobre matcha latte a Sant Feliu de Guíxols</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Hi ha algun lloc a Sant Feliu de Guíxols que serveixi matcha de qualitat?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">L'oferta a Sant Feliu és limitada quant a matcha de cerimònia. L'opció més propera amb matcha orgànic d'origen japonès és Dirty Rabbit a S'Agaró, a cinc minuts en cotxe.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Quina distància hi ha entre Sant Feliu de Guíxols i Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Uns 4-5 quilòmetres per la GI-682 en direcció a Platja d'Aro. El local és a l'Avinguda Platja d'Aro 275, S'Agaró.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Puc demanar el matcha latte amb llet vegetal?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí. Treballem amb opcions vegetals a més de llet de vaca. Pregunta a la barra per la disponibilitat.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Obriu tot l'any o només a l'estiu?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Vam obrir el 1 de novembre de 2024 i seguim oberts. No som un local de temporada, tot i que l'horari pot variar entre temporada alta i baixa.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Hi ha terrassa a Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí, terrassa gran quan el temps ho permet. Bona llum al matí i WiFi disponible.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Sobre Dirty Rabbit</h2>
+<p class="mb-4">Vam obrir el 1 de novembre de 2024 a S'Agaró. La proposta és senzilla: cafè d'especialitat, begudes alternatives ben fetes i un lloc on quedar-te si vols.</p>
+<p class="mb-4">L'Iwonka, que porta el dia a dia, té un criteri clar amb els proveïdors: si no pot explicar d'on ve l'ingredient, no entra a la carta. El matcha és de REQ Matcha. El cafè és de La Cabra. El pa és d'Origo Bakery.</p>
+<p class="mb-4">Bona llum natural al matí, WiFi, terrassa gran quan el temps ho permet. Un d'aquells llocs on pots quedar-te treballant un matí sense que ningú et miri malament.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

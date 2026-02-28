@@ -1,0 +1,170 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `El millor chai latte prop de Sant Feliu de Guíxols`, url: 'https://dirtyrabbit.es/ca/guia/best-chai-sant-feliu' }
+];
+---
+
+<Layout 
+  title="El millor chai latte prop de Sant Feliu de Guíxols — Dirty Rabbit 2026"
+  description="Dir &quot;el millor chai&quot; de qualsevol lloc és fàcil i diu poc. El que sí podem dir és el que hi ha al nostre: masala chai orgànic d'Awachai, un productor d'Isè"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Cafè d'especialitat a S'Agaró amb masala chai orgànic d'Awachai (Isère, França). A 5 minuts de Sant Feliu de Guíxols. Tres versions de chai disponibles tot l'any.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/best-chai-sant-feliu",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Chai", "Masala Chai"],
+  "priceRange": "€€"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Per què la majoria de chais de la zona són amb xarop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El xarop és més barat, més consistent i més fàcil de fer servir. Un masala chai orgànic de qualitat requereix més temps de preparació i un proveïdor especialitzat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Val la pena desplaçar-se des de Sant Feliu fins a S'Agaró per prendre un chai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depèn del que busquis. Si vols masala chai amb espècies reals, Dirty Rabbit a S'Agaró és l'opció més propera. Són cinc minuts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quina versió de chai recomaneu per començar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El clàssic calent si és el teu primer masala chai. El dirty chai si ja prens cafè i vols provar la combinació. L'iced si fa calor o simplement el prefereixes fred."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L'iced chai té sucre afegit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No n'afegim per defecte. El masala d'Awachai té un punt de dolçor natural de les espècies. Si el vols endolcir, pots demanar-ho."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Teniu aparcament a Dirty Rabbit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aparcament fàcil davant del local. També terrassa gran, WiFi i bona llum al matí."
+      }
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          El millor chai latte prop de Sant Feliu de Guíxols
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Dir "el millor chai" de qualsevol lloc és fàcil i diu poc. El que sí podem dir és el que hi ha al nostre: masala chai orgànic d'Awachai, un productor d'Isère, França, fet amb barreja real d'espècies, cardamom, canyella, gingebre, clau, pebre. No xarop.</p>
+<p class="mb-4">Dirty Rabbit és a S'Agaró, cinc minuts des de Sant Feliu de Guíxols.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Què fa diferent un bon chai latte</h2>
+<p class="mb-4">El masala chai de debò té capes. No és només canyella dolça: és cardamom floral, gingebre amb mossegada, clau al fons, pebre que apareix al final. Un xarop concentrat aplana tot això en quelcom genèric i massa dolç.</p>
+<p class="mb-4">Awachai no és un proveïdor conegut a Espanya. El triem perquè la barreja és seriosa, no per màrqueting. És orgànic, es produeix a Isère, i la qualitat es nota en el sabor.</p>
+<p class="mb-4">El dirty chai existeix perquè funciona. Un shot d'espresso de La Cabra en un chai latte no és una raresa: és l'opció per a qui vol les dues coses. Ho demana gent que mai hauria demanat un chai sol, i repeteix.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">On trobar bon chai latte prop de Sant Feliu de Guíxols</h2>
+<p class="mb-4">Avinguda Platja d'Aro 275, S'Agaró. Cinc minuts des de Sant Feliu per la GI-682.</p>
+<p class="mb-4">Vam obrir al novembre de 2024. El chai d'Awachai és a la carta des del primer dia. Tres versions: chai latte clàssic (calent o fred), iced chai tot l'any, dirty chai amb espresso. Llet vegetal en totes. Entre 3,50 € i 5 €.</p>
+<p class="mb-4">A Sant Feliu hi ha cafeteries. Les que serveixen chai, en la seva majoria, ho fan amb xarop. No és un judici, és un fet. Si el xarop et funciona, hi ha opcions al poble. Si vols les espècies, el desviament és cinc minuts.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Per què el chai latte és a tot arreu però ben fet en pocs llocs</h2>
+<p class="mb-4">La popularitat del chai a Espanya va arribar abans que molts locals entenguessin exactament el que era. El masala chai és una barreja d'espècies amb història a l'Índia: cardamom, canyella, gingebre, clau, pebre negre, de vegades anís o cardamom negre. El xarop de chai és una simplificació que sacrifica complexitat per comoditat.</p>
+<p class="mb-4">No tots els clients noten la diferència. Però els que la busquen, la noten molt.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Preguntes freqüents sobre el millor chai latte a Sant Feliu de Guíxols</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Per què la majoria de chais de la zona són amb xarop?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">El xarop és més barat, més consistent i més fàcil de fer servir. Un masala chai orgànic de qualitat requereix més temps de preparació i un proveïdor especialitzat. La majoria de cafeteries no creuen que la diferència justifiqui el canvi.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Val la pena desplaçar-se des de Sant Feliu fins a S'Agaró per prendre un chai?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Depèn del que busquis. Si vols masala chai amb espècies reals, Dirty Rabbit a S'Agaró és l'opció més propera. Són cinc minuts.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Quina versió de chai recomaneu per començar?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">El clàssic calent si és el teu primer masala chai, per notar el perfil d'espècies sense altres variables. El dirty chai si ja prens cafè i vols provar la combinació. L'iced si fa calor o simplement el prefereixes fred.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">L'iced chai té sucre afegit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">No n'afegim per defecte. El masala d'Awachai té un punt de dolçor natural de les espècies. Si el vols endolcir, pots demanar-ho.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Teniu aparcament a Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Aparcament fàcil davant del local. També terrassa gran, WiFi i bona llum al matí.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Sobre Dirty Rabbit</h2>
+<p class="mb-4">Vam obrir el 1 de novembre de 2024 a S'Agaró. L'Iwonka porta el local. El criteri per als proveïdors és el mateix en tot: saber d'on ve cada cosa.</p>
+<p class="mb-4">Chai d'Awachai. Cafè de La Cabra. Pa d'Origo Bakery. Cinc minuts des de Sant Feliu.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

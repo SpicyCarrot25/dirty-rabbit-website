@@ -1,0 +1,170 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `Chai latte a Girona: el que hi ha a la ciutat i el que hi ha a la costa`, url: 'https://dirtyrabbit.es/ca/guia/chai-latte-girona' }
+];
+---
+
+<Layout 
+  title="Chai latte a Girona: el que hi ha a la ciutat i el que hi ha a la costa — Dirty Rabbit 2026"
+  description="Girona té una escena de cafeteries d'especialitat raonablement activa. Per al chai latte, hi ha opcions a la ciutat: algunes amb xarop, alguna amb més crit"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Cafè d'especialitat a S'Agaró (Costa Brava) amb masala chai orgànic d'Awachai. A 35 minuts de Girona. Chai latte clàssic, iced chai i dirty chai tot l'any.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/chai-latte-girona",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Chai", "Masala Chai"],
+  "priceRange": "€€"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hi ha cafeteries a Girona amb chai d'espècies reals?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hi ha opcions a Girona. La majoria fan servir xarop. Per a masala chai orgànic amb barreja real d'espècies, l'opció més propera fora de la ciutat és Dirty Rabbit a S'Agaró, a 35 minuts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Val la pena anar des de Girona fins a S'Agaró per prendre un chai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depèn. Si ja vas a la costa, sí. Si vas expressament des de Girona només pel chai, 35 minuts és una decisió personal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Què és l'iced chai i per què l'oferiu tot l'any?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "L'iced chai és el masala chai fred. La majoria de locals no l'ofereixen fora de l'estiu. El tenim tot l'any perquè les espècies funcionen igual en fred."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quina diferència hi ha entre el dirty chai i un tallat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un tallat és espresso i llet. El dirty chai hi afegeix la barreja de masala, cardamom, canyella, gingebre, clau, pebre. El sabor és completament diferent: més càlid, més especiat, menys amarg."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Com s'arriba a Dirty Rabbit des de Girona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per la C-65 direcció Sant Feliu de Guíxols, o per l'AP-7 sortida Platja d'Aro. El local és a l'Avinguda Platja d'Aro 275, S'Agaró. Uns 35 minuts des del centre de Girona. Aparcament davant."
+      }
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Chai latte a Girona: el que hi ha a la ciutat i el que hi ha a la costa
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Girona té una escena de cafeteries d'especialitat raonablement activa. Per al chai latte, hi ha opcions a la ciutat: algunes amb xarop, alguna amb més criteri. Val la pena saber el que hi ha abans de demanar.</p>
+<p class="mb-4">Dirty Rabbit és a S'Agaró, uns 35 minuts de Girona per la C-65 o per l'autopista. No et direm que ens agafes de camí a la feina si vius al centre: no és així. Però si ja ets a la Costa Brava o tens motiu per venir a la zona, som aquí.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Què fa diferent un bon chai latte</h2>
+<p class="mb-4">La barreja d'espècies defineix tot. Cardamom, canyella, gingebre, clau, pebre, un masala chai real té un perfil de sabor complex. El xarop de chai que fa servir la majoria de locals simplifica això en quelcom dolç i unidimensional.</p>
+<p class="mb-4">El proveïdor no ha de ser famós per ser bo. El nostre és Awachai, d'Isère, França, masala chai 100% orgànic. No és un nom que veuràs en molts llocs. El triem perquè la barreja és seriosa.</p>
+<p class="mb-4">El dirty chai resol un dubte habitual. Chai o cafè? La resposta pot ser les dues coses: chai latte amb un shot d'espresso de La Cabra. Més energia, més complexitat. Per a qui els vol alhora.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">On trobar bon chai latte prop de Girona</h2>
+<p class="mb-4">A Girona ciutat hi ha cafeteries amb chai a la carta. Per a masala chai amb espècies orgàniques de debò, l'opció més propera fora de la ciutat és Dirty Rabbit a S'Agaró, 35 minuts per la C-65 o l'AP-7.</p>
+<p class="mb-4">Vam obrir al novembre de 2024. Tres versions: chai latte clàssic (calent o fred), iced chai tot l'any, i dirty chai amb espresso. Llet vegetal disponible. Entre 3,50 € i 5 €. Terrassa gran, WiFi, bona llum al matí.</p>
+<p class="mb-4">Per a qui ja fa la ruta Girona-Costa Brava amb freqüència, S'Agaró queda de camí entre Sant Feliu i Platja d'Aro. Per a qui va expressament des de Girona només pel chai, és una decisió teva, no nostra.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Per què el chai latte és a tot arreu però ben fet en pocs llocs</h2>
+<p class="mb-4">Girona, com a ciutat universitària i amb turisme creixent, té més varietat que la majoria de la Costa Brava. Però el patró és el mateix: la majoria de versions de chai que circulen són de xarop. És l'opció econòmica i senzilla per a un local que no té el chai com a producte central.</p>
+<p class="mb-4">Els que treballen amb masala chai de debò solen ser els mateixos que treballen amb cafè d'especialitat, pa de fermentació lenta i llets vegetals de qualitat. Són locals on el criteri creua tota la carta.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Preguntes freqüents sobre chai latte a Girona</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Hi ha cafeteries a Girona amb chai d'espècies reals?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Hi ha opcions a Girona. La majoria fan servir xarop. Per a masala chai orgànic amb barreja real d'espècies, l'opció més propera fora de la ciutat és Dirty Rabbit a S'Agaró, a 35 minuts.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Val la pena anar des de Girona fins a S'Agaró per prendre un chai?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Depèn. Si ja vas a la costa, sí, som a la carretera entre Sant Feliu i Platja d'Aro. Si vas expressament des de Girona només pel chai, 35 minuts és una decisió personal.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Què és l'iced chai i per què l'oferiu tot l'any?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">L'iced chai és el masala chai fred. La majoria de locals no l'ofereixen fora de l'estiu. Nosaltres el tenim tot l'any perquè les espècies funcionen igual en fred i hi ha qui el prefereix així independentment de la temperatura exterior.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Quina diferència hi ha entre el dirty chai i un tallat?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Un tallat és espresso i llet. El dirty chai hi afegeix la barreja de masala, cardamom, canyella, gingebre, clau, pebre. El sabor és completament diferent: més càlid, més especiat, menys amarg.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Com s'arriba a Dirty Rabbit des de Girona?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Per la C-65 direcció Sant Feliu de Guíxols, o per l'AP-7 sortida Platja d'Aro. El local és a l'Avinguda Platja d'Aro 275, S'Agaró. Uns 35 minuts des del centre de Girona. Aparcament davant.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Sobre Dirty Rabbit</h2>
+<p class="mb-4">Vam obrir el 1 de novembre de 2024 a S'Agaró. L'Iwonka porta el local amb un criteri que s'aplica a tot: saber d'on ve cada ingredient.</p>
+<p class="mb-4">Chai d'Awachai (Isère, França). Cafè de La Cabra. Pa d'Origo Bakery. A 35 minuts de Girona, honestament.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

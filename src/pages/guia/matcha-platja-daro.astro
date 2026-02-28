@@ -1,0 +1,158 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' },
+  { name: `Matcha en Platja d'Aro: lo que hay y lo que merece la pena`, url: 'https://dirtyrabbit.es/guia/matcha-platja-daro' }
+];
+---
+
+<Layout 
+  title="Matcha en Platja d'Aro: lo que hay y lo que merece la pena — Dirty Rabbit 2026"
+  description="Si has buscado matcha en Platja d'Aro y no has encontrado gran cosa, tiene sentido. La mayoría de cafeterías de la zona tienen en carta algún &quot;matcha latte"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Café de especialidad en S'Agaró con matcha orgánico de REQ Matcha, chai y café de La Cabra. Abierto desde noviembre 2024. A 10 minutos de Platja d'Aro.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avenida Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/matcha-platja-daro",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
+  "priceRange": "€€"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Hay algún sitio en Platja d'Aro que sirva matcha de ceremonia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En el centro de Platja d'Aro la oferta es limitada. La opción más cercana con matcha orgánico de calidad es Dirty Rabbit en S'Agaró, a 10 minutos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta un matcha latte en Platja d'Aro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entre 4 y 6 euros dependiendo del local y el tamaño. Los que usan matcha ceremonial suelen estar en la parte alta del rango."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo pedir matcha frío en verano cerca de Platja d'Aro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Dirty Rabbit en S'Agaró lo tiene disponible todo el año tanto caliente como frío, con leche de avena disponible."
+      }
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Matcha en Platja d'Aro: lo que hay y lo que merece la pena
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Si has buscado matcha en Platja d'Aro y no has encontrado gran cosa, tiene sentido. La mayoría de cafeterías de la zona tienen en carta algún "matcha latte" que es polvo verde disuelto en leche caliente. Funciona, pero no es lo mismo.</p>
+<p class="mb-4">Vale la pena saber qué buscar antes de pedir uno.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Qué hace diferente a un buen matcha</h2>
+<ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
+  <li>Se prepara con té verde japonés ceremonial o de grado premium, batido en frío con un poco de agua antes de añadir la leche.</li>
+  <li>El color es verde intenso, casi brillante. Si te sirven algo amarillento o apagado, es polvo de baja calidad.</li>
+  <li>No tiene que saber amargo. Un matcha bien hecho es suave, con un fondo dulce.</li>
+</ol>
+<p class="mb-4">No es snobismo — simplemente sabe diferente y no tiene nada que ver con lo que sirven la mayoría.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Dónde encontrar buen matcha cerca de Platja d'Aro</h2>
+<p class="mb-4">Dirty Rabbit está en S'Agaró, Av. Platja d'Aro 275 — unos 10 minutos en coche desde el centro de Platja d'Aro.</p>
+<p class="mb-4">Abrimos el 1 de noviembre de 2024 con una carta pensada desde el principio para personas que se preocupan por lo que toman. El matcha latte que usamos es orgánico, de REQ Matcha — un proyecto de Barcelona gestionado por un japonés que vive en Japón y selecciona el té directamente en origen. Lo servimos con 2g de matcha ceremonial — la dosis estándar. Si lo quieres más intenso, hay opción extra fuerte por un poco más, con leche de avena si no tomas lácteos.</p>
+<p class="mb-4">En Platja d'Aro centro vas a encontrar opciones. Si lo que buscas es pasar el rato con vistas al paseo, perfecto. Si quieres que el matcha sepa a algo, vale la pena el desvío.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Por qué el matcha está en todas partes pero bien hecho en pocos sitios</h2>
+<p class="mb-4">El matcha explotó en Catalunya alrededor de 2022, impulsado por cafeterías de Barcelona y por Instagram. El problema es que muchos sitios añadieron "matcha latte" a la carta sin cambiar proveedores. El polvo ceremonial cuesta bastante más que el de grado alimentario, y la diferencia se nota.</p>
+<p class="mb-4">En la Costa Brava la adopción fue más lenta. Los sitios que realmente se preocupan por el origen del matcha son los mismos que se preocupan por el origen del café. Son pocos, pero existen.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Preguntas frecuentes sobre matcha en Platja d'Aro</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Hay algún sitio en Platja d'Aro que sirva matcha de ceremonia?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">En el centro de Platja d'Aro la oferta es limitada. La opción más cercana con matcha orgánico de calidad es Dirty Rabbit en S'Agaró, a 10 minutos.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Cuánto cuesta un matcha latte en la zona?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Entre 4 y 6 euros dependiendo del local y el tamaño. Los que usan matcha ceremonial suelen estar en la parte alta del rango — el coste del ingrediente lo justifica.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Puedo pedir matcha frío en verano?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí. En Dirty Rabbit lo tenemos disponible todo el año, tanto caliente como frío, con leche de avena si lo prefieres.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Es el matcha una buena alternativa al café?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Depende de lo que busques. El matcha tiene cafeína, pero la libera de forma más gradual gracias a la L-teanina. Muchas personas lo eligen por eso — energía sin el pico y la caída del café. Para quienes son sensibles al café, suele sentarles mejor.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Dónde está Dirty Rabbit exactamente?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Avenida Platja d'Aro 275, S'Agaró — en la carretera principal que conecta Sant Feliu con Platja d'Aro, antes de llegar al núcleo de S'Agaró. Hay parking fácil enfrente.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Sobre Dirty Rabbit</h2>
+<p class="mb-4">Abrimos el 1 de noviembre de 2024 en S'Agaró. La propuesta es sencilla: café de especialidad, bebidas alternativas bien hechas, y un sitio donde quedarte si quieres.</p>
+<p class="mb-4">Iwonka, que lleva el día a día, tiene un criterio claro con los proveedores: si no puede explicar de dónde viene el ingrediente, no entra en carta. El matcha es de REQ Matcha. El café es de La Cabra. El pan es de Origo Bakery.</p>
+<p class="mb-4">Buena luz natural por la mañana, WiFi, terraza pequeña cuando el tiempo lo permite. Uno de esos sitios donde puedes quedarte trabajando una mañana sin que nadie te mire mal.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Cómo llegar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

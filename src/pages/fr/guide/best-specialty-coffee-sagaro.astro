@@ -1,0 +1,135 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/fr/guide/' },
+  { name: `Le Meilleur Café de Spécialité à S'Agaró`, url: 'https://dirtyrabbit.es/fr/guide/best-specialty-coffee-sagaro' }
+];
+---
+
+<Layout 
+  title="Le Meilleur Café de Spécialité à S'Agaró — Dirty Rabbit 2026"
+  description="Le Meilleur Café de Spécialité à S'Agaró — Dirty Rabbit, S'Agaró, Costa Brava"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CafeOrCoffeeShop",
+      "name": "Dirty Rabbit",
+      "url": "https://dirtyrabbit.es",
+      "telephone": "+34872454264",
+      "email": "hola@dirtyrabbit.es",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avinguda Platja d'Aro 275",
+        "addressLocality": "S'Agaró",
+        "postalCode": "17248",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.797,
+        "longitude": 3.036
+      },
+      "openingDate": "2024-11-01",
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Dog Friendly", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Terrace", "value": true }
+      ],
+      "servesCuisine": "Specialty Coffee",
+      "description": "Coffee shop de spécialité à S'Agaró. Espresso La Cabra, REQ Matcha et chai Awachai. Ouvert en novembre 2024."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Où se trouve exactement le Dirty Rabbit à S'Agaró ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Au 275, Avinguda Platja d'Aro, S'Agaró, 17248. À environ cinq minutes à pied de la plage de Sant Pol."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le Dirty Rabbit est-il dog friendly ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. La grande terrasse est dog friendly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Y a-t-il du WiFi ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, WiFi gratuit disponible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le café La Cabra est-il disponible ailleurs près de S'Agaró ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pas à notre connaissance. La Cabra est un torréfacteur de spécialité basé à Barcelone. Dirty Rabbit est leur point de vente dans cette partie de la Costa Brava."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quand a ouvert le Dirty Rabbit ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le 1er novembre 2024."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Le Meilleur Café de Spécialité à S'Agaró
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Itinéraire
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

@@ -1,0 +1,177 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `El millor matcha latte prop de Platja d'Aro: què buscar i on anar`, url: 'https://dirtyrabbit.es/ca/guia/best-matcha-platja-daro' }
+];
+---
+
+<Layout 
+  title="El millor matcha latte prop de Platja d'Aro: què buscar i on anar — Dirty Rabbit 2026"
+  description="Si busques el millor matcha latte prop de Platja d'Aro, la resposta més concreta que podem donar-te és aquesta: Dirty Rabbit a S'Agaró, a deu minuts. Vam o"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Cafè d'especialitat a S'Agaró amb matcha orgànic de REQ Matcha i cafè de La Cabra. A 10 minuts de Platja d'Aro. L'opció de matcha de cerimònia més propera a Platja d'Aro. Obert des del novembre 2024.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/best-matcha-platja-daro",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
+  "priceRange": "€€"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "On és el millor matcha latte prop de Platja d'Aro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dirty Rabbit a S'Agaró, Avinguda Platja d'Aro 275. A deu minuts en cotxe des del centre de Platja d'Aro. Matcha orgànic de cerimònia de REQ Matcha, dosi estàndard de 2 g amb opció extra fort."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quina diferència hi ha entre un matcha latte normal i un de cerimònia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El matcha de cerimònia es fa amb les fulles més joves del te verd japonès, mòltes en pedra. El sabor és més suau, el verd més intens i no té l'amargor de la pols genèrica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quant costa un matcha latte a Dirty Rabbit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entre 3,50 € i 5 €. El matcha de qualitat té un cost de matèria primera més alt, i el preu ho reflecteix."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Teniu opcions sense lactosa a Dirty Rabbit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Treballem amb llet de vaca i alternatives vegetals. Pregunta a la barra quines opcions hi ha disponibles aquell dia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Puc anar a Dirty Rabbit amb el gos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La terrassa gran és l'espai més flexible per a això. Consulta directament al local o truca al +34 872 454 264 si vols confirmar-ho abans de venir."
+      }
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          El millor matcha latte prop de Platja d'Aro: què buscar i on anar
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Si busques el millor matcha latte prop de Platja d'Aro, la resposta més concreta que podem donar-te és aquesta: Dirty Rabbit a S'Agaró, a deu minuts. Vam obrir el 1 de novembre de 2024 amb una carta construïda al voltant de proveïdors amb nom.</p>
+<p class="mb-4">Però "el millor" és una afirmació que cal justificar, no només proclamar. Aquí tens el que fem i per què creiem que importa.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Què fa diferent un bon matcha latte</h2>
+<p class="mb-4">El proveïdor és el punt de partida. Fem servir REQ Matcha, un projecte de Barcelona amb fundador japonès que viu al Japó i selecciona el te directament a les plantacions. No és màrqueting: és la raó per la qual el color és verd intens, el sabor és net i no té aquella amargor que molta gent associa al matcha perquè només n'ha provat versions de baixa qualitat.</p>
+<p class="mb-4">La dosi també compta. Servim 2 g de matcha de cerimònia per tassa, l'estàndard del sector per a una tassa equilibrada. Si el vols més carregat, hi ha l'opció extra fort per una mica més. No hi ha cap versió "diluïda" que sembli igual al got però no sàpiga a res.</p>
+<p class="mb-4">La tècnica fa la diferència. Es bat primer amb aigua freda, després s'afegeix la llet. És el pas que més llocs ometen perquè alenteix el procés. També és el pas que determina si la tassa és homogènia o té la pols apinyada al fons.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Quins matchas pots demanar</h2>
+<ul class="list-disc list-outside ml-6 space-y-2 mb-6">
+  <li>Matcha latte clàssic, calent o fred, amb llet vegetal disponible</li>
+  <li>Orange matcha, amb suc de taronja en comptes de llet, sense lactis i més fresc</li>
+  <li>Extra fort, amb més dosi, per una mica més</li>
+</ul>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">On trobar el millor matcha latte prop de Platja d'Aro</h2>
+<p class="mb-4">Dirty Rabbit, Avinguda Platja d'Aro 275, S'Agaró, uns deu minuts des del centre de Platja d'Aro.</p>
+<p class="mb-4">A Platja d'Aro centre hi ha opcions per seure al passeig o a prop de la platja. Si el matcha en si és el que busques, no el decorat, val la pena el desviament a S'Agaró. Terrassa gran, bona llum de matí, WiFi. Aparcament fàcil davant.</p>
+<p class="mb-4">El matcha és disponible tot l'any, calent o fred. Amb llet de vaca o vegetal. L'Iwonka porta el dia a dia amb una lògica senzilla: si no pot explicar d'on ve l'ingredient, no entra a la carta.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Per què el matcha latte és a tot arreu però ben fet en pocs llocs</h2>
+<p class="mb-4">Platja d'Aro és una destinació turística amb molt volum en temporada alta. Això empeny molts locals cap a proveïdors de baix cost i alta disponibilitat. El matcha de cerimònia japonès no entra en aquesta categoria: és més car, té més punts de fallada en la preparació i requereix personal que entengui per què importa.</p>
+<p class="mb-4">El resultat és que l'oferta de matcha de qualitat a la zona de Platja d'Aro és escassa. No inexistent, però escassa. Els llocs que ho fan bé són els que han pres decisions conscients sobre quins ingredients volen treballar, independentment del marge.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Preguntes freqüents sobre el millor matcha latte a Platja d'Aro</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">On és el millor matcha latte prop de Platja d'Aro?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Dirty Rabbit a S'Agaró, Avinguda Platja d'Aro 275. A deu minuts en cotxe des del centre de Platja d'Aro. Matcha orgànic de cerimònia de REQ Matcha, dosi estàndard de 2 g amb opció extra fort.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Quina diferència hi ha entre un matcha latte normal i un de cerimònia?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">El matcha de cerimònia es fa amb les fulles més joves del te verd japonès, mòltes en pedra. El sabor és més suau, el verd més intens i no té l'amargor de la pols genèrica. La diferència és perceptible des del primer glop si n'has provat els dos.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Quant costa un matcha latte a Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Entre 3,50 € i 5 €. El matcha de qualitat té un cost de matèria primera més alt, i el preu ho reflecteix.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Teniu opcions sense lactosa?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí. Treballem amb llet de vaca i alternatives vegetals. Pregunta a la barra quines opcions hi ha disponibles aquell dia.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Puc venir amb el gos?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">La terrassa gran és l'espai més flexible per a això. Consulta directament al local o truca al +34 872 454 264 si vols confirmar-ho abans de venir.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Sobre Dirty Rabbit</h2>
+<p class="mb-4">Vam obrir el 1 de novembre de 2024 a S'Agaró. La proposta és senzilla: cafè d'especialitat, begudes alternatives ben fetes i un lloc on quedar-te si vols.</p>
+<p class="mb-4">L'Iwonka, que porta el dia a dia, té un criteri clar amb els proveïdors: si no pot explicar d'on ve l'ingredient, no entra a la carta. El matcha és de REQ Matcha. El cafè és de La Cabra. El pa és d'Origo Bakery.</p>
+<p class="mb-4">Bona llum natural al matí, WiFi, terrassa gran quan el temps ho permet. Un d'aquells llocs on pots quedar-te treballant un matí sense que ningú et miri malament.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

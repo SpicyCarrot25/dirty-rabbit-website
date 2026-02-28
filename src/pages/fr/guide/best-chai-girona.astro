@@ -1,0 +1,118 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/fr/guide/' },
+  { name: `Meilleur chai latte près de Gérone`, url: 'https://dirtyrabbit.es/fr/guide/best-chai-girona' }
+];
+---
+
+<Layout 
+  title="Meilleur chai latte près de Gérone — Dirty Rabbit 2026"
+  description="&quot;Le meilleur chai de Gérone&quot; est une recherche avec du contexte. En ville il y a des options — certaines meilleures que d'autres. Hors de la ville, sur la "
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Café de spécialité à S'Agaró (Costa Brava) avec masala chai bio d'Awachai (Isère, France). À 35 minutes de Gérone. Iced chai et dirty chai disponibles toute l'année.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "url": "https://dirtyrabbit.es/best-chai-girona",
+  "telephone": "+34872454264",
+  "priceRange": "€€"
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Meilleur chai latte près de Gérone
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">"Le meilleur chai de Gérone" est une recherche avec du contexte. En ville il y a des options — certaines meilleures que d'autres. Hors de la ville, sur la Costa Brava, l'offre se rétrécit.</p>
+<p class="mb-4">Dirty Rabbit est à S'Agaró, 35 minutes de Gérone. Nous sommes honnêtes sur la distance. Si vous êtes déjà sur la côte ou que la distance ne vous pose pas de problème, c'est l'endroit. Si vous êtes au centre de Gérone et cherchez quelque chose à pied, il y a des options en ville qui méritent aussi d'être connues.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Ce qui différencie un bon chai latte</h3>
+<ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
+  <li>Le vrai masala chai n'est pas un mélange de poudre générique — c'est de la cardamome, de la cannelle, du gingembre, du clou de girofle et du poivre en proportion précise. Awachai, le fournisseur que nous utilisons, élabore ce mélange en Isère, France, avec des ingrédients 100% bio. Pour les visiteurs français, c'est un produit fabriqué chez vous — ça mérite d'être dit. Le résultat est plus complexe et moins sucré que n'importe quelle version au sirop.</li>
+  <li>Le froid ne gâche pas le chai. Le chai glacé est une des versions les plus sous-estimées en Espagne — peu de cafés le proposent hors de l'été. Chez Dirty Rabbit il est disponible toute l'année parce que les épices du masala tiennent parfaitement en froid.</li>
+  <li>Le dirty chai n'est pas un caprice. C'est l'option la plus commandée parmi les gens qui découvrent le chai pour la première fois — l'espresso de La Cabra apporte de l'énergie et le masala apporte du goût. Ensemble ils fonctionnent mieux que la description sur le papier.</li>
+</ol>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Où trouver un bon chai latte près de Gérone</h3>
+<p class="mb-4">À Gérone en ville, quelques cafés de spécialité se préoccupent de leurs ingrédients. Pour le masala chai spécifiquement, l'offre est plus restreinte — la majorité utilise du sirop.</p>
+<p class="mb-4">Dirty Rabbit se trouve Avinguda Platja d'Aro 275, S'Agaró — 35 minutes depuis Gérone. Si vous avez une raison d'être sur la Costa Brava, le détour est minime : nous sommes sur la route entre Sant Feliu de Guíxols et Platja d'Aro.</p>
+<p class="mb-4">Trois versions de chai toute l'année : classique chaud ou froid, chai glacé, dirty chai avec espresso. Lait végétal disponible. Entre 3,50€ et 5€.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Pourquoi le chai latte est partout mais rarement bien fait</h3>
+<p class="mb-4">Gérone a une scène de cafés avec plus d'exigence que la moyenne des villes de cette taille. Même ainsi, le masala chai véritable reste minoritaire. Le schéma est prévisible : les établissements qui travaillent avec de vraies épices sont les mêmes qui travaillent avec du café de spécialité et du pain au levain. C'est une exigence qui traverse toute la carte, pas une décision isolée.</p>
+<p class="mb-4">La Costa Brava, étant plus touristique et saisonnière, a moins de densité de ce type de cafés. Ceux qui existent ont tendance à se distinguer par là.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Questions fréquentes sur le meilleur chai latte près de Gérone</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Quel est le chai latte le plus proche de Gérone avec de vraies épices ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">En ville il y a des options, même si la majorité sont au sirop. Pour du masala chai bio véritable, l'option la plus proche que nous connaissons est Dirty Rabbit à S'Agaró, à 35 minutes.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Qu'a de particulier le masala chai d'Awachai ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Awachai est un producteur de l'Isère, France, qui élabore un mélange d'épices bio — cardamome, cannelle, gingembre, clou de girofle, poivre. Ils n'utilisent pas d'édulcorants ni de sucres ajoutés dans le mélange de base. Le goût est plus propre et plus complexe qu'un sirop standard.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Servez-vous le chai froid en hiver ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Oui. Le chai glacé est disponible toute l'année chez Dirty Rabbit. Ce n'est pas une offre saisonnière.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Le dirty chai convient-il à quelqu'un qui ne boit pas de café habituellement ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Il contient de l'espresso, donc de la caféine. Pour ceux qui sont sensibles au café, le chai simple (sans espresso) est plus adapté — moins de caféine, libérée de façon plus progressive.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Y a-t-il quelque chose à faire à S'Agaró en dehors de Dirty Rabbit ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">S'Agaró a une plage à proximité, la promenade de la Conca et un accès rapide à Platja d'Aro et Sant Feliu. Si vous êtes dans la zone, il y a des raisons de rester plus d'une heure.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">À propos de Dirty Rabbit</h2>
+<p class="mb-4">Nous avons ouvert le 1er novembre 2024 à S'Agaró. Le critère pour les fournisseurs ne change pas : savoir d'où vient chaque chose et pourquoi ce producteur.</p>
+<p class="mb-4">Chai d'Awachai (Isère, France). Café de La Cabra. Pain d'Origo Bakery. Grande terrasse, WiFi, bonne lumière naturelle. À 35 minutes de Gérone — sans détour.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Itinéraire
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

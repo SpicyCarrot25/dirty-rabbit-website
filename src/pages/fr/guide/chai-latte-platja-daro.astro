@@ -1,0 +1,118 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/fr/guide/' },
+  { name: `Chai latte à Platja d'Aro : ce qu'on trouve et ce qui vaut le détour`, url: 'https://dirtyrabbit.es/fr/guide/chai-latte-platja-daro' }
+];
+---
+
+<Layout 
+  title="Chai latte à Platja d'Aro : ce qu'on trouve et ce qui vaut le détour — Dirty Rabbit 2026"
+  description="Si vous avez cherché un chai latte à Platja d'Aro, vous avez probablement trouvé des versions faites avec du sirop. Un filet de concentré sucré dans du lai"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Café de spécialité à S'Agaró avec masala chai bio d'Awachai (Isère, France), café de La Cabra et pain d'Origo Bakery. Ouvert depuis novembre 2024. À 10 minutes de Platja d'Aro.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "url": "https://dirtyrabbit.es/chai-latte-platja-daro",
+  "telephone": "+34872454264",
+  "priceRange": "€€"
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Chai latte à Platja d'Aro : ce qu'on trouve et ce qui vaut le détour
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Si vous avez cherché un chai latte à Platja d'Aro, vous avez probablement trouvé des versions faites avec du sirop. Un filet de concentré sucré dans du lait chaud. Ça passe, mais ce n'est pas la même chose qu'un masala chai préparé avec un vrai mélange d'épices.</p>
+<p class="mb-4">La différence n'est pas subtile. Cardamome, cannelle, gingembre, clou de girofle, poivre — ensemble, en proportion. C'est ça, un vrai chai.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Ce qui différencie un bon chai latte</h3>
+<ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
+  <li>Les épices doivent être réelles, pas un sirop. Un chai bien fait utilise un mélange masala — cardamome, cannelle, gingembre, clou de girofle et poivre — pas un concentré sucré en bouteille.</li>
+  <li>Le fournisseur compte. Le chai que nous utilisons chez Dirty Rabbit est d'Awachai, un producteur de l'Isère, en France, avec un mélange 100% bio. Ce n'est pas ce qu'on trouve dans la majorité des chaînes — et pour les visiteurs français, c'est un produit fabriqué chez vous.</li>
+  <li>Le froid fonctionne aussi bien. Le chai glacé n'est pas qu'une option estivale — nous le proposons toute l'année parce que les épices tiennent parfaitement en froid.</li>
+</ol>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Où trouver un bon chai latte près de Platja d'Aro</h3>
+<p class="mb-4">Dirty Rabbit se trouve à S'Agaró, Av. Platja d'Aro 275 — environ 10 minutes en voiture depuis le centre de Platja d'Aro.</p>
+<p class="mb-4">Nous avons ouvert le 1er novembre 2024. Le masala chai bio d'Awachai est à la carte depuis le premier jour. Nous le servons en trois versions : chai latte classique (chaud ou froid), iced chai froid toute l'année, et dirty chai — le chai latte avec un shot d'espresso de La Cabra. Ce dernier réveille à peu près n'importe qui. Lait végétal disponible dans toutes les versions. Prix entre 3,50€ et 5€.</p>
+<p class="mb-4">À Platja d'Aro centre il y a des cafés. Pour s'asseoir en terrasse sur la promenade, ils font l'affaire. Pour un chai avec de vraies épices, dix minutes de trajet valent le déplacement.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Pourquoi le chai latte est partout mais rarement bien fait</h3>
+<p class="mb-4">Le chai latte s'est popularisé bien avant le matcha en Espagne. Ça a un bon côté et un mauvais. Le bon : on peut en commander presque partout. Le mauvais : la majorité des versions qui circulent sont du sirop dans du lait chaud, ce qui n'a pas grand-chose à voir avec un vrai masala chai.</p>
+<p class="mb-4">Le problème tient au coût et à l'intérêt. Un mélange d'épices bio de qualité coûte plus cher qu'un pot de concentré, et beaucoup d'établissements ne pensent pas que le client va faire la différence. Parfois ils ont raison. Mais qui a goûté un chai avec de vraies épices, le remarque.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Questions fréquentes sur le chai latte à Platja d'Aro</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Y a-t-il un endroit à Platja d'Aro qui sert du chai avec de vraies épices et non du sirop ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Au centre de Platja d'Aro la majorité des versions sont du sirop ou du concentré. L'option la plus proche avec du masala chai bio véritable est Dirty Rabbit à S'Agaró, à environ 10 minutes.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Combien coûte un chai latte dans la zone ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Chez Dirty Rabbit entre 3,50€ et 5€ selon la version. Le chai latte classique est l'option la moins chère ; le dirty chai (avec espresso) est en haut de la fourchette.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Peut-on commander le chai latte froid hors de l'été ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Oui. Chez Dirty Rabbit le chai glacé est disponible toute l'année. Les épices du masala fonctionnent aussi bien en froid — ce n'est pas une option saisonnière.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Qu'est-ce que le dirty chai et vaut-il la peine d'être commandé ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">C'est un chai latte auquel on ajoute un shot d'espresso. Le café est de La Cabra (Madrid), torréfié avec soin. La combinaison est surprenante en théorie et très bonne en pratique — pour ceux qui veulent l'énergie du café mais avec le goût des épices.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Où se trouve exactement Dirty Rabbit ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Avinguda Platja d'Aro 275, S'Agaró. Sur la route principale qui relie Sant Feliu à Platja d'Aro. Parking facile en face, grande terrasse, WiFi, bonne lumière le matin.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">À propos de Dirty Rabbit</h2>
+<p class="mb-4">Nous avons ouvert le 1er novembre 2024 à S'Agaró. Iwonka gère le quotidien avec un critère clair : chaque ingrédient doit pouvoir être expliqué — d'où il vient, pourquoi ce fournisseur.</p>
+<p class="mb-4">Le chai est d'Awachai (Isère, France). Le café est de La Cabra. Le pain est d'Origo Bakery. Grande terrasse, WiFi, bonne lumière naturelle le matin. Un endroit où passer toute une matinée sans problème.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Itinéraire
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

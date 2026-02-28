@@ -1,0 +1,131 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/en/guide/' },
+  { name: `Matcha latte in Girona: options in the city and one on the coast`, url: 'https://dirtyrabbit.es/en/guide/matcha-latte-girona' }
+];
+---
+
+<Layout 
+  title="Matcha latte in Girona: options in the city and one on the coast — Dirty Rabbit 2026"
+  description="Girona has a real specialty coffee scene. There are several places in the Barri Vell and the Eixample working with quality matcha — this isn't an article t"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Specialty café in S'Agaró, Costa Brava. Organic matcha from REQ Matcha, La Cabra coffee. 35 minutes from Girona along the C-65. Open since November 2024.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/matcha-latte-girona",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
+  "priceRange": "€€"
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Matcha latte in Girona: options in the city and one on the coast
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Girona has a real specialty coffee scene. There are several places in the Barri Vell and the Eixample working with quality matcha — this isn't an article that's going to pretend you need to leave Girona to find something decent. You don't.</p>
+<p class="mb-4">What also exists, 35 minutes along the C-65 towards the Costa Brava, is Dirty Rabbit in S'Agaró. A specialty café that opened in November 2024. It makes sense if you're combining matcha with a beach day, or if you're already heading down to the coast.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">What makes a good matcha latte</h3>
+<ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
+  <li>Japanese ceremonial matcha tastes different from generic powder, and the difference isn't subtle. Ceremonial is smooth, with a clean green colour and an almost sweet finish. Generic powder tends to be bitter in a way that makes people think they don't like matcha — usually what they don't like is that version of it.</li>
+  <li>Dose matters. We serve 2g of ceremonial matcha per cup. It's the standard to get flavour that's recognisable without being heavy or bitter. Want more body? There's an extra strong option for a little more. Not a gimmick — the difference is real.</li>
+  <li>Whisking cold with water before adding milk. Without that step, the matcha doesn't dissolve properly. It's a technical detail that separates places that thought it through from those that didn't.</li>
+</ol>
+<h3 class="font-typewriter text-xl mb-4 mt-8">What matcha you can order</h3>
+<ul class="list-disc list-outside ml-6 space-y-2 mb-6">
+  <li>Classic matcha latte — hot or iced, with plant milk available</li>
+  <li>Orange matcha — with orange juice instead of milk (dairy-free, more refreshing)</li>
+  <li>Extra strong — higher dose, for a little more</li>
+</ul>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Where to find a good matcha latte near Girona</h3>
+<p class="mb-4">In Girona city: look for specialty cafés in the Barri Vell and Eixample. There are places working seriously with coffee that have also brought in quality matcha. Worth researching before you order anywhere.</p>
+<p class="mb-4">If you're planning a trip to the Costa Brava: Dirty Rabbit in S'Agaró, Avinguda Platja d'Aro 275. The matcha we use is from REQ Matcha — a Barcelona project run by a Japanese founder who lives in Japan and selects the tea at origin. We serve 2g of ceremonial grade, hot or cold, with plant milk available.</p>
+<p class="mb-4">35 minutes from Girona. Not for every day, but if the trip makes sense for other reasons, the matcha is here.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Why matcha is everywhere but good matcha is rare</h3>
+<p class="mb-4">Girona was one of the first Catalan cities outside Barcelona to develop a serious specialty coffee culture. That gave matcha a head start compared to other parts of the province. But even in Girona, not every place that offers it changed supplier when they added it to the menu.</p>
+<p class="mb-4">The question worth asking before you order: do they know what brand the matcha is? If they don't, it's probably generic.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Frequently asked questions about matcha latte in Girona</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Are there good places to get a matcha latte in Girona?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Yes. Girona has a real specialty scene. Start with cafés in the Barri Vell and Eixample that work with single-origin coffee — they tend to be the same places that care about matcha. The selection is wider than in most other cities in the province.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Is it worth coming down to Dirty Rabbit from Girona just for the matcha?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Depends. It's 35 minutes along the C-65. If you're combining it with a beach day or you're already in the area, yes, it makes sense. If you're only looking for good matcha in Girona, there are options closer.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">What matcha does Dirty Rabbit use?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">REQ Matcha. A Barcelona project whose Japanese founder travels to Japan to select the tea directly. Standard dose is 2g ceremonial, with an extra strong option available.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Are you open every day?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">We opened on 1 November 2024. Check current hours on our social media or call +34 872 454 264 — hours may vary between high and low season.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Do you have WiFi and a terrace?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Yes to both. Large terrace when the weather allows, WiFi available. Good natural morning light if you're coming to read or work.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">About Dirty Rabbit</h2>
+<p class="mb-4">We opened on 1 November 2024 in S'Agaró. Specialty coffee, properly made alternative drinks, and a space where you can actually stay.</p>
+<p class="mb-4">Iwonka runs day-to-day with a clear rule on suppliers: if she can't explain where an ingredient comes from, it doesn't go on the menu. Matcha from REQ Matcha. Coffee from La Cabra. Bread from Origo Bakery.</p>
+<p class="mb-4">Natural light in the mornings, WiFi, large terrace when the weather holds. The kind of place where you can work through a morning without anyone minding.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

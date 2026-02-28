@@ -1,0 +1,124 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/en/guide/' },
+  { name: `Chai latte in Girona: what's in the city and what's on the coast`, url: 'https://dirtyrabbit.es/en/guide/chai-latte-girona' }
+];
+---
+
+<Layout 
+  title="Chai latte in Girona: what's in the city and what's on the coast — Dirty Rabbit 2026"
+  description="Girona has a reasonably active specialty café scene. For chai latte, there are options in the city — some with syrup, some with more thought behind them. I"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Specialty café in S'Agaró (Costa Brava) with organic masala chai from Awachai. 35 minutes from Girona. Classic chai latte, iced chai and dirty chai year-round.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/chai-latte-girona",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Chai", "Masala Chai"],
+  "priceRange": "€€"
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Chai latte in Girona: what's in the city and what's on the coast
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Girona has a reasonably active specialty café scene. For chai latte, there are options in the city — some with syrup, some with more thought behind them. It's worth knowing what you're ordering.</p>
+<p class="mb-4">Dirty Rabbit is in S'Agaró, about 35 minutes from Girona along the C-65 or the motorway. We're not going to tell you to come out of your way on a workday. But if you're already heading to the Costa Brava, or if you have a reason to be in the area, we're here.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">What makes a good chai latte</h3>
+<ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
+  <li>The spice blend defines everything. Cardamom, cinnamon, ginger, clove, black pepper — real masala chai has a complex flavour profile. The syrup that most places use simplifies that into something sweet and one-dimensional.</li>
+  <li>A supplier doesn't need to be famous to be good. Ours is Awachai, from Isère, France — 100% organic masala chai. Not a name you'll see everywhere. We chose it because the blend is serious.</li>
+  <li>Dirty chai solves a common question. Chai or coffee? The answer can be both: chai latte with a shot of La Cabra espresso. More energy, more complexity. For anyone who wants both at once.</li>
+</ol>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Where to find good chai latte near Girona</h3>
+<p class="mb-4">In Girona city, there are cafés with chai on the menu. For organic masala chai with real spices, the nearest option outside the city is Dirty Rabbit in S'Agaró — 35 minutes along the C-65 or the AP-7.</p>
+<p class="mb-4">We opened in November 2024. Three versions: classic chai latte (hot or iced), iced chai year-round, and dirty chai with espresso. Plant milk available. €3.50 to €5. Large terrace, WiFi, good morning light.</p>
+<p class="mb-4">For anyone who makes the Girona-to-Costa Brava run regularly, S'Agaró sits on the road between Sant Feliu and Platja d'Aro. For anyone coming from Girona specifically for the chai — that's your call, not ours to make.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Why chai latte is everywhere but good chai is rare</h3>
+<p class="mb-4">Girona, as a university city with growing tourism, has more variety than most of Catalonia. But the same pattern holds: most chai versions going around use syrup. It's the economical, easy choice for a place where chai isn't a central product.</p>
+<p class="mb-4">Places working with real masala chai tend to be the same ones working with specialty coffee, slow-fermentation bread, and quality plant milks. The standard crosses the whole menu, not just one item.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Frequently asked questions about chai latte in Girona</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Are there cafés in Girona serving chai with real spices?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">There are options in Girona. Most use syrup. For organic masala chai with a real spice blend, the nearest option outside the city is Dirty Rabbit in S'Agaró, 35 minutes away.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Is it worth going from Girona to S'Agaró for a chai?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Depends. If you're already going to the coast, yes — we're on the road between Sant Feliu and Platja d'Aro. If you're making the trip from central Girona just for chai, 35 minutes is a personal decision.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">What is iced chai and why do you have it year-round?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Iced chai is masala chai served cold. Most cafés don't offer it outside summer. We have it year-round because the spices work just as well cold, and some people prefer it that way regardless of the weather.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">What's the difference between dirty chai and a regular coffee?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">A regular coffee is espresso and milk. Dirty chai adds the masala blend — cardamom, cinnamon, ginger, clove, black pepper — to the espresso and milk. The flavour is completely different: warmer, spiced, less bitter.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">How do I get to Dirty Rabbit from Girona?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Take the C-65 towards Sant Feliu de Guíxols, then on to Platja d'Aro, or the AP-7 exit for Platja d'Aro. We're at Avinguda Platja d'Aro 275, S'Agaró. About 35 minutes from central Girona. Parking right across the road.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">About Dirty Rabbit</h2>
+<p class="mb-4">We opened on 1 November 2024 in S'Agaró. Iwonka runs the place with a rule that applies to everything: know where each ingredient comes from.</p>
+<p class="mb-4">Chai from Awachai (Isère, France). Coffee from La Cabra. Bread from Origo Bakery. 35 minutes from Girona — honestly.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

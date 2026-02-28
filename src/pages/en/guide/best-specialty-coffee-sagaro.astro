@@ -1,0 +1,135 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/en/guide/' },
+  { name: `Best Specialty Coffee in S'Agaró`, url: 'https://dirtyrabbit.es/en/guide/best-specialty-coffee-sagaro' }
+];
+---
+
+<Layout 
+  title="Best Specialty Coffee in S'Agaró — Dirty Rabbit 2026"
+  description="Best Specialty Coffee in S'Agaró — Dirty Rabbit, S'Agaró, Costa Brava"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CafeOrCoffeeShop",
+      "name": "Dirty Rabbit",
+      "url": "https://dirtyrabbit.es",
+      "telephone": "+34872454264",
+      "email": "hola@dirtyrabbit.es",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avinguda Platja d'Aro 275",
+        "addressLocality": "S'Agaró",
+        "postalCode": "17248",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.797,
+        "longitude": 3.036
+      },
+      "openingDate": "2024-11-01",
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Dog Friendly", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Terrace", "value": true }
+      ],
+      "servesCuisine": "Specialty Coffee",
+      "description": "Specialty coffee shop in S'Agaró serving La Cabra espresso, REQ Matcha, and Awachai chai. Opened November 2024."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where exactly is Dirty Rabbit in S'Agaró?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Avinguda Platja d'Aro 275, S'Agaró, 17248. About five minutes on foot from Platja de Sant Pol."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Dirty Rabbit dog friendly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The large terrace is dog friendly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you have WiFi?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, free WiFi is available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is La Cabra coffee available anywhere else near S'Agaró?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not that we know of. La Cabra is a Barcelona-based specialty roaster. Dirty Rabbit is their outlet in this part of the Costa Brava."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When did Dirty Rabbit open?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "1 November 2024."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Best Specialty Coffee in S'Agaró
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

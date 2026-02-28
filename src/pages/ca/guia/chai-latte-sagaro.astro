@@ -1,0 +1,170 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `Chai latte a S'Agaró: ja ets al lloc correcte`, url: 'https://dirtyrabbit.es/ca/guia/chai-latte-sagaro' }
+];
+---
+
+<Layout 
+  title="Chai latte a S'Agaró: ja ets al lloc correcte — Dirty Rabbit 2026"
+  description="Si busques chai latte a S'Agaró, ja ets aquí. Dirty Rabbit és a l'Avinguda Platja d'Aro 275, a S'Agaró, no a prop, no a uns minuts: aquí mateix."
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Cafè d'especialitat a S'Agaró amb masala chai orgànic d'Awachai (Isère, França). Chai latte clàssic, iced chai i dirty chai disponibles tot l'any. Obert des del novembre 2024.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/chai-latte-sagaro",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Chai", "Masala Chai"],
+  "priceRange": "€€"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hi ha més cafeteries amb chai a S'Agaró?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No gaires. S'Agaró és petita. Dirty Rabbit és l'opció a la zona amb masala chai orgànic d'espècies reals. Per a més varietat, Sant Feliu és a 5 minuts i Platja d'Aro a 10."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quines versions de chai latte teniu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tres: chai latte clàssic (calent o fred), iced chai fred tot l'any, i dirty chai amb un shot d'espresso de La Cabra. Llet vegetal disponible en totes. Entre 3,50 € i 5 €."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "L'iced chai és només a l'estiu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El tenim tot l'any. A S'Agaró l'hivern és suau comparat amb l'interior, i hi ha qui el demana fred al desembre. Cap problema."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Què és exactament el masala chai d'Awachai?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Awachai és un productor d'Isère, França, que elabora una barreja d'espècies orgànica, cardamom, canyella, gingebre, clau, pebre. No és un te en bosseta ni un xarop. És una barreja d'espècies que s'infusiona en llet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Teniu WiFi i lloc per treballar a Dirty Rabbit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. WiFi, terrassa gran, bona llum natural al matí. Molts clients venen a treballar un matí sencer."
+      }
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Chai latte a S'Agaró: ja ets al lloc correcte
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Si busques chai latte a S'Agaró, ja ets aquí. Dirty Rabbit és a l'Avinguda Platja d'Aro 275, a S'Agaró, no a prop, no a uns minuts: aquí mateix.</p>
+<p class="mb-4">S'Agaró no té moltes cafeteries. Les que hi ha serveixen el que tenen. Nosaltres servim masala chai orgànic d'Awachai, una barreja d'espècies real feta a Isère, França.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Què fa diferent un bon chai latte</h2>
+<p class="mb-4">Comença per les espècies. Cardamom, canyella, gingebre, clau, pebre, cadascuna té un paper. Un chai que fa servir xarop concentrat aplana tot això en sabor dolç genèric. No és el mateix.</p>
+<p class="mb-4">La temperatura no defineix el sabor. El masala chai d'Awachai funciona igual calent que en fred. Per això el servim en tres versions tot l'any: clàssic calent, iced chai, i dirty chai amb espresso.</p>
+<p class="mb-4">L'espresso canvia el chai. El dirty chai no és una raresa, és la versió per a qui vol l'energia del cafè però prefereix les espècies a l'amargor pura. El nostre porta un shot de La Cabra.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">On trobar bon chai latte a S'Agaró</h2>
+<p class="mb-4">Aquí. Avinguda Platja d'Aro 275.</p>
+<p class="mb-4">Vam obrir el 1 de novembre de 2024. Des de llavors el masala chai d'Awachai és a la carta al costat del cafè de La Cabra i el pa d'Origo Bakery. L'Iwonka porta el dia a dia. Terrassa gran, WiFi, bona llum al matí.</p>
+<p class="mb-4">Si el que busques és a S'Agaró, ja ho has trobat. Si vols comparar, les opcions més properes són a Sant Feliu de Guíxols (5 minuts) i Platja d'Aro (10 minuts), tot i que allà l'oferta de chai amb espècies reals és escassa.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Per què el chai latte és a tot arreu però ben fet en pocs llocs</h2>
+<p class="mb-4">El chai fa anys que és a la carta de cafeteries de tota Espanya. El problema no és la popularitat, és que la majoria de versions són xarop en llet calenta, que no té gaire a veure amb un masala chai real.</p>
+<p class="mb-4">A S'Agaró l'oferta de cafeteries és limitada per definició: és una urbanització petita, no un centre urbà. Això té un avantatge: el que hi ha aquí es tria amb més cura perquè el volum no ho aguanta tot.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Preguntes freqüents sobre chai latte a S'Agaró</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Hi ha més cafeteries amb chai a S'Agaró?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">No gaires. S'Agaró és petita. Dirty Rabbit és l'opció a la zona amb masala chai orgànic d'espècies reals. Per a més varietat, Sant Feliu és a 5 minuts i Platja d'Aro a 10.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Quines versions de chai latte teniu?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Tres: chai latte clàssic (calent o fred), iced chai fred tot l'any, i dirty chai amb un shot d'espresso de La Cabra. Llet vegetal disponible en totes. Entre 3,50 € i 5 €.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">L'iced chai és només a l'estiu?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">No. El tenim tot l'any. A S'Agaró l'hivern és suau comparat amb l'interior, i hi ha qui el demana fred al desembre. Cap problema.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Què és exactament el masala chai d'Awachai?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Awachai és un productor d'Isère, França, que elabora una barreja d'espècies orgànica, cardamom, canyella, gingebre, clau, pebre. No és un te en bosseta ni un xarop. És una barreja d'espècies que s'infusiona en llet.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Teniu WiFi i lloc per treballar a Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí. WiFi, terrassa gran, bona llum natural al matí. Molts clients venen a treballar un matí sencer.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Sobre Dirty Rabbit</h2>
+<p class="mb-4">Vam obrir el 1 de novembre de 2024 a S'Agaró. L'Iwonka porta el local amb un criteri clar: cada proveïdor ha de poder explicar-se. El chai és d'Awachai. El cafè és de La Cabra. El pa és d'Origo Bakery.</p>
+<p class="mb-4">Ets a S'Agaró. Ja ets aquí.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

@@ -1,0 +1,130 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/en/guide/' },
+  { name: `Chai latte on the Costa Brava: what exists and where to find it`, url: 'https://dirtyrabbit.es/en/guide/chai-latte-costa-brava' }
+];
+---
+
+<Layout 
+  title="Chai latte on the Costa Brava: what exists and where to find it — Dirty Rabbit 2026"
+  description="Chai latte appears on quite a few Costa Brava café menus, especially in the more tourist-heavy towns. Most of it is syrup. That's not necessarily a problem"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Specialty café in S'Agaró, central Costa Brava. Organic masala chai from Awachai (Isère, France). Chai latte, iced chai and dirty chai available year-round. Between Sant Feliu de Guíxols and Platja d'Aro.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/chai-latte-costa-brava",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Chai", "Masala Chai"],
+  "priceRange": "€€",
+  "areaServed": [
+    "S'Agaró",
+    "Platja d'Aro",
+    "Sant Feliu de Guíxols",
+    "Costa Brava"
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Chai latte on the Costa Brava: what exists and where to find it
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Chai latte appears on quite a few Costa Brava café menus, especially in the more tourist-heavy towns. Most of it is syrup. That's not necessarily a problem — if you know what you're ordering.</p>
+<p class="mb-4">Dirty Rabbit is in S'Agaró, on the central Costa Brava, between Sant Feliu de Guíxols and Platja d'Aro. We opened in November 2024 with organic masala chai from Awachai — a real spice blend, not a concentrate.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">What makes a good chai latte</h3>
+<ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
+  <li>The spices have to actually be present. Cardamom, cinnamon, ginger, clove, black pepper — in a real masala chai these notes are distinguishable. In generic syrup, everything collapses into sweet and vague. They share a name on a menu but they're different drinks.</li>
+  <li>The Costa Brava gets a lot of sun and relatively mild winters. Iced chai makes more sense here than almost anywhere else in Catalonia — and we have it year-round, not just in peak season. Most places in the area don't carry it outside summer.</li>
+  <li>Dirty chai is for anyone who can't decide between chai and coffee. The answer: both. A shot of La Cabra espresso in Awachai's masala chai — more energy, more complexity. It's the version that gets the most follow-up questions and the most repeat orders.</li>
+</ol>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Where to find good chai latte on the Costa Brava</h3>
+<p class="mb-4">Dirty Rabbit is at Avinguda Platja d'Aro 275, S'Agaró (17248). On the road connecting Sant Feliu de Guíxols with Platja d'Aro — accessible from both directions.</p>
+<p class="mb-4">We opened on 1 November 2024. Iwonka runs the place. Awachai's masala chai is from Isère, France — organic, real spice blend. Three versions: classic chai latte (hot or iced), iced chai year-round, dirty chai with espresso. Plant milk in all versions. €3.50 to €5.</p>
+<p class="mb-4">Other specialty cafés exist along the Costa Brava. For chai specifically made with real spices, the options are thin. If you're driving the coast and want something more than syrup in milk, S'Agaró is a stop that makes sense.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Why chai latte is everywhere but good chai is rare</h3>
+<p class="mb-4">The Costa Brava is a seasonal destination — high peaks in summer, quiet in winter. That shapes which places survive and what kind of menu they run. The ones open year-round have to earn the local customer, not just the July tourist.</p>
+<p class="mb-4">Real masala chai requires a specialist supplier, a more careful preparation process, and a customer who's going to notice the difference. On the Costa Brava that customer exists — the same one who orders specialty coffee and asks where the bread is from. Not a large group, but a consistent one.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Frequently asked questions about chai latte on the Costa Brava</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Where can I get chai latte made with real spices on the Costa Brava?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">The option we know with genuine organic masala chai on the central Costa Brava is Dirty Rabbit in S'Agaró — between Sant Feliu de Guíxols and Platja d'Aro. Avinguda Platja d'Aro 275.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">What chai versions do you have and how much do they cost?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Three versions: classic chai latte (hot or iced), iced chai year-round, and dirty chai with a shot of La Cabra espresso. €3.50 to €5. Plant milk available in all versions.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Do you have iced chai outside summer on the Costa Brava?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Most places don't. At Dirty Rabbit, yes — year-round. The Costa Brava has mild autumns and winters, and some people prefer chai cold regardless of season.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Does masala chai have caffeine?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Yes. The black tea base in masala chai has caffeine, though less than a shot of espresso. Dirty chai adds an espresso shot — that's the highest-caffeine version of the three.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Do you have dairy-free options?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Yes. Plant milk is available in all chai versions. The full menu has options for people who don't drink dairy.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">About Dirty Rabbit</h2>
+<p class="mb-4">We opened on 1 November 2024 in S'Agaró, Costa Brava. The rule we use for choosing suppliers is the same for chai, coffee, and bread: know exactly what's in each ingredient.</p>
+<p class="mb-4">Chai from Awachai (Isère, France). Coffee from La Cabra. Bread from Origo Bakery. Large terrace, WiFi, good natural morning light. Open year-round.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

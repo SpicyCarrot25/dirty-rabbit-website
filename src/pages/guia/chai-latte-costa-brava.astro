@@ -1,0 +1,178 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' },
+  { name: `Chai latte en la Costa Brava: lo que existe y dónde encontrarlo`, url: 'https://dirtyrabbit.es/guia/chai-latte-costa-brava' }
+];
+---
+
+<Layout 
+  title="Chai latte en la Costa Brava: lo que existe y dónde encontrarlo — Dirty Rabbit 2026"
+  description="En la Costa Brava el chai latte aparece en bastantes cartas de cafetería, especialmente en los pueblos más turísticos. La mayoría son de sirope. Eso no es "
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Café de especialidad en S'Agaró, Costa Brava central. Masala chai orgánico de Awachai (Isère, Francia). Chai latte, iced chai y dirty chai disponibles todo el año. Entre Sant Feliu de Guíxols y Platja d'Aro.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avenida Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/chai-latte-costa-brava",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Chai", "Masala Chai"],
+  "priceRange": "€€",
+  "areaServed": [
+    "S'Agaró",
+    "Platja d'Aro",
+    "Sant Feliu de Guíxols",
+    "Costa Brava"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Dónde puedo tomar chai latte con especias reales en la Costa Brava?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La opción que conocemos con masala chai orgánico de verdad en la Costa Brava central es Dirty Rabbit, en S'Agaró — entre Sant Feliu de Guíxols y Platja d'Aro. Avenida Platja d'Aro 275."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué versiones de chai latte tenéis y cuánto cuestan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tres versiones: chai latte clásico (caliente o frío), iced chai frío todo el año, y dirty chai con un shot de espresso de La Cabra. Entre 3,50€ y 5€. Leche vegetal disponible en todas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tienen iced chai fuera del verano en la Costa Brava?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En la mayoría de sitios no. En Dirty Rabbit sí — todo el año. La Costa Brava tiene otoños e inviernos suaves, y hay quien prefiere el chai frío independientemente de la época."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El masala chai lleva cafeína?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, el té negro del masala chai tiene cafeína, aunque menos que un espresso. El dirty chai añade además un shot de espresso — es la versión con más cafeína de las tres."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tenéis opciones para intolerantes a la lactosa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Leche vegetal disponible en todas las versiones de chai. La carta completa incluye opciones para quienes no toman lácteos."
+      }
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Chai latte en la Costa Brava: lo que existe y dónde encontrarlo
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">En la Costa Brava el chai latte aparece en bastantes cartas de cafetería, especialmente en los pueblos más turísticos. La mayoría son de sirope. Eso no es necesariamente malo — si sabes lo que estás pidiendo.</p>
+<p class="mb-4">Dirty Rabbit está en S'Agaró, en la Costa Brava central, entre Sant Feliu de Guíxols y Platja d'Aro. Abrimos en noviembre de 2024 con masala chai orgánico de Awachai — una mezcla de especias real, no un concentrado.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Qué hace diferente a un buen chai latte</h3>
+<ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
+  <li>Las especias tienen que estar presentes de verdad. Cardamomo, canela, jengibre, clavo, pimienta — en un masala chai real estas notas son distinguibles. En un sirope genérico todo converge en dulce y canela. Son bebidas distintas, aunque compartan nombre en la carta.</li>
+  <li>La Costa Brava tiene mucho sol y poco frío. El iced chai tiene más sentido aquí que en cualquier otra zona de Catalunya — y en Dirty Rabbit lo tenemos disponible todo el año, no solo en verano. La mayoría de sitios de la zona no lo ofrecen fuera de temporada alta.</li>
+  <li>El dirty chai existe para quien no sabe si pedir chai o café. La respuesta: ambos. Un shot de espresso de La Cabra en el masala chai de Awachai — más energía, más capas de sabor. Es la versión que más preguntas genera y que más veces vuelve a pedir.</li>
+</ol>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Dónde encontrar buen chai latte en la Costa Brava</h3>
+<p class="mb-4">Dirty Rabbit está en Avenida Platja d'Aro 275, S'Agaró (17248). En la carretera que conecta Sant Feliu de Guíxols con Platja d'Aro — accesible desde ambos lados.</p>
+<p class="mb-4">Abrimos el 1 de noviembre de 2024. Iwonka lleva el local. El masala chai es de Awachai, Isère, Francia — orgánico, mezcla real de especias. Tres versiones: chai latte clásico (caliente o frío), iced chai todo el año, dirty chai con espresso. Leche vegetal disponible en todas. Entre 3,50€ y 5€.</p>
+<p class="mb-4">Hay otras cafeterías en la Costa Brava con criterio. Para chai específicamente, la oferta con especias reales es escasa. Si estás haciendo la ruta de la costa y buscas algo más que sirope en leche, S'Agaró es una parada que tiene sentido.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Por qué el chai latte está en todas partes pero bien hecho en pocos sitios</h3>
+<p class="mb-4">La Costa Brava es un destino estacional — con picos en verano y quietud en invierno. Eso moldea qué tipo de locales sobreviven y qué tipo de carta tienen. Los que abren todo el año tienen que ganarse al cliente local, no solo al turista de julio.</p>
+<p class="mb-4">El masala chai con especias reales requiere un proveedor especializado, un proceso de preparación más cuidado, y un cliente que esté dispuesto a notar la diferencia. En la Costa Brava ese cliente existe — es el mismo que pide café de especialidad y pan de fermentación lenta. No son muchos, pero son fieles.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Preguntas frecuentes sobre chai latte en la Costa Brava</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Dónde puedo tomar chai latte con especias reales en la Costa Brava?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">La opción que conocemos con masala chai orgánico de verdad en la Costa Brava central es Dirty Rabbit, en S'Agaró — entre Sant Feliu de Guíxols y Platja d'Aro. Avenida Platja d'Aro 275.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Qué versiones de chai latte tenéis y cuánto cuestan?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Tres versiones: chai latte clásico (caliente o frío), iced chai frío todo el año, y dirty chai con un shot de espresso de La Cabra. Entre 3,50€ y 5€. Leche vegetal disponible en todas.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Tienen iced chai fuera del verano en la Costa Brava?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">En la mayoría de sitios no. En Dirty Rabbit sí — todo el año. La Costa Brava tiene otoños e inviernos suaves, y hay quien prefiere el chai frío independientemente de la época.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿El masala chai lleva cafeína?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí, el té negro del masala chai tiene cafeína, aunque menos que un espresso. El dirty chai añade además un shot de espresso — es la versión con más cafeína de las tres.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Tenéis opciones para intolerantes a la lactosa?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí. Leche vegetal disponible en todas las versiones de chai. La carta completa incluye opciones para quienes no toman lácteos.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Sobre Dirty Rabbit</h2>
+<p class="mb-4">Abrimos el 1 de noviembre de 2024 en S'Agaró, Costa Brava. El criterio que usamos para elegir proveedores es el mismo para el chai que para el café y el pan: saber exactamente qué hay en cada ingrediente.</p>
+<p class="mb-4">Chai de Awachai (Isère, Francia). Café de La Cabra. Pan de Origo Bakery. Terraza grande, WiFi, buena luz natural por la mañana. Abiertos todo el año.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Cómo llegar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

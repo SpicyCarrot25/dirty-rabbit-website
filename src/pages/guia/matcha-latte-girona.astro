@@ -1,0 +1,179 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' },
+  { name: `Matcha latte en Girona: opciones en ciudad y una alternativa en la costa`, url: 'https://dirtyrabbit.es/guia/matcha-latte-girona' }
+];
+---
+
+<Layout 
+  title="Matcha latte en Girona: opciones en ciudad y una alternativa en la costa — Dirty Rabbit 2026"
+  description="Girona tiene una escena de café de especialidad real. Hay varios sitios en el Barri Vell y en el Eixample que trabajan con matcha de calidad — esto no es u"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Café de especialidad en S'Agaró, Costa Brava. Matcha orgánico de REQ Matcha, café de La Cabra. A 35 minutos de Girona por la C-65. Abierto desde noviembre 2024.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avenida Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/matcha-latte-girona",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
+  "priceRange": "€€"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Hay buenos sitios para tomar matcha latte en Girona?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Girona tiene una escena de especialidad real. Busca cafés del Barri Vell y el Eixample que trabajen con café de origen — suelen ser los mismos que se preocupan por el matcha."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Vale la pena bajar a Dirty Rabbit desde Girona solo por el matcha?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Depende. Son 35 minutos por la C-65. Si combinas con playa o ya estás en la zona, sí tiene sentido. Si solo buscas buen matcha en Girona, hay opciones más cerca."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué matcha usa Dirty Rabbit en S'Agaró?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "REQ Matcha. Un proyecto de Barcelona cuyo fundador japonés selecciona el té directamente en las plantaciones en Japón. Dosis estándar 2g ceremonial, con opción extra fuerte disponible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dirty Rabbit abre todos los días de la semana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Abrimos el 1 de noviembre de 2024. Consulta el horario actualizado en nuestras redes sociales o llama al +34 872 454 264 — el horario puede variar entre temporada alta y baja."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tienen WiFi y terraza en Dirty Rabbit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí a los dos. Terraza grande cuando el tiempo lo permite y WiFi disponible. Buena luz natural por la mañana."
+      }
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Matcha latte en Girona: opciones en ciudad y una alternativa en la costa
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Girona tiene una escena de café de especialidad real. Hay varios sitios en el Barri Vell y en el Eixample que trabajan con matcha de calidad — esto no es un artículo que pretenda que tienes que salir de Girona para tomar algo decente. No es así.</p>
+<p class="mb-4">Lo que sí existe, a 35 minutos por la C-65 en dirección a la Costa Brava, es Dirty Rabbit en S'Agaró. Un café de especialidad que abrió en noviembre de 2024 y que puede tener sentido si el plan es combinar matcha con playa, o si ya estás bajando a la costa.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Qué hace diferente a un buen matcha latte</h3>
+<ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
+  <li>El matcha ceremonial japonés sabe diferente al polvo genérico — y la diferencia no es sutil. El primero es suave, con un verde limpio y un fondo casi dulce. El segundo puede tener un amargor que hace que mucha gente piense que no le gusta el matcha, cuando lo que no les gusta es esa versión de él.</li>
+  <li>La dosis importa. En Dirty Rabbit servimos 2g de matcha ceremonial estándar. Si lo quieres con más cuerpo, hay opción extra fuerte por un poco más. No es marketing — es la diferencia entre una taza que sabe a algo y una que no.</li>
+  <li>La integración previa con agua fría antes de añadir la leche. Sin ese paso, el matcha no se disuelve bien. Es un detalle técnico que separa los sitios que se lo han pensado de los que no.</li>
+</ol>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Qué matcha puedes pedir</h3>
+<ul class="list-disc list-outside ml-6 space-y-2 mb-6">
+  <li><strong>Matcha latte clásico</strong> — caliente o frío, con leche vegetal disponible</li>
+  <li><strong>Orange matcha</strong> — con zumo de naranja en vez de leche (sin lácteos, más fresco)</li>
+  <li><strong>Extra fuerte</strong> — más dosis, por un poco más</li>
+</ul>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Dónde encontrar buen matcha latte cerca de Girona</h3>
+<p class="mb-4">En Girona ciudad: busca los cafés de especialidad del Barri Vell y el Eixample. Hay opciones que trabajan bien el café y que han incorporado matcha de calidad. Merece la pena investigar antes de pedir en cualquier sitio.</p>
+<p class="mb-4">Si estás planeando bajar a la Costa Brava: Dirty Rabbit en S'Agaró, Avenida Platja d'Aro 275. El matcha que usamos es de REQ Matcha, un proyecto de Barcelona gestionado por un japonés que selecciona el té en origen, en Japón. Lo servimos con 2g ceremonial, disponible caliente o frío, con opción de leche vegetal.</p>
+<p class="mb-4">35 minutos desde Girona. No es para cualquier día, pero si la excursión tiene sentido por otras razones, el matcha está aquí.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Por qué el matcha latte está en todas partes pero bien hecho en pocos sitios</h3>
+<p class="mb-4">Girona fue de las primeras ciudades catalanas fuera de Barcelona en desarrollar una cultura de café de especialidad seria. Eso ayudó a que el matcha llegara antes y mejor que en otras zonas de la provincia. Pero incluso en Girona hay locales que lo ofrecen sin haber cambiado de proveedor — solo añadieron la línea a la carta.</p>
+<p class="mb-4">La pregunta que vale la pena hacerse antes de pedir: ¿saben de qué marca es el matcha? Si no lo saben, es probable que sea genérico.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Preguntas frecuentes sobre matcha latte en Girona</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Hay buenos sitios para tomar matcha latte en Girona?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí. Girona tiene una escena de especialidad real. Busca cafés del Barri Vell y el Eixample que trabajen con café de origen — suelen ser los mismos que se preocupan por el matcha. La oferta es más amplia que en otras ciudades de la provincia.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Vale la pena bajar a Dirty Rabbit desde Girona solo por el matcha?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Depende. Son 35 minutos por la C-65. Si combinas con playa, Costa Brava, o ya estás en la zona, sí tiene sentido. Si solo buscas buen matcha en Girona, hay opciones más cerca.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Qué matcha usa Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">REQ Matcha. Un proyecto de Barcelona cuyo fundador japonés selecciona el té directamente en las plantaciones en Japón. Dosis estándar 2g ceremonial, con opción extra fuerte disponible.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Abren todos los días de la semana?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Abrimos el 1 de noviembre de 2024. Consulta el horario actualizado en nuestras redes sociales o llama al +34 872 454 264 — el horario puede variar entre temporada alta y baja.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Tienen WiFi y terraza?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí a los dos. Terraza grande cuando el tiempo lo permite y WiFi disponible. Buena luz natural por la mañana si vienes a trabajar o a leer.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Sobre Dirty Rabbit</h2>
+<p class="mb-4">Abrimos el 1 de noviembre de 2024 en S'Agaró. La propuesta es sencilla: café de especialidad, bebidas alternativas bien hechas, y un sitio donde quedarte si quieres.</p>
+<p class="mb-4">Iwonka, que lleva el día a día, tiene un criterio claro con los proveedores: si no puede explicar de dónde viene el ingrediente, no entra en carta. El matcha es de REQ Matcha. El café es de La Cabra. El pan es de Origo Bakery.</p>
+<p class="mb-4">Buena luz natural por la mañana, WiFi, terraza grande cuando el tiempo lo permite. Uno de esos sitios donde puedes quedarte trabajando una mañana sin que nadie te mire mal.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Cómo llegar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

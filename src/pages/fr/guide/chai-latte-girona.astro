@@ -1,0 +1,118 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/fr/guide/' },
+  { name: `Chai latte à Gérone : ce qu'on trouve en ville et ce qu'il y a sur la côte`, url: 'https://dirtyrabbit.es/fr/guide/chai-latte-girona' }
+];
+---
+
+<Layout 
+  title="Chai latte à Gérone : ce qu'on trouve en ville et ce qu'il y a sur la côte — Dirty Rabbit 2026"
+  description="Gérone a une scène de cafés de spécialité raisonnablement active. Pour le chai latte, il y a des options en ville — certaines au sirop, quelques-unes avec "
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Café de spécialité à S'Agaró (Costa Brava) avec masala chai bio d'Awachai (Isère, France). À 35 minutes de Gérone. Chai latte classique, iced chai et dirty chai toute l'année.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "url": "https://dirtyrabbit.es/chai-latte-girona",
+  "telephone": "+34872454264",
+  "priceRange": "€€"
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Chai latte à Gérone : ce qu'on trouve en ville et ce qu'il y a sur la côte
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Gérone a une scène de cafés de spécialité raisonnablement active. Pour le chai latte, il y a des options en ville — certaines au sirop, quelques-unes avec plus d'exigence. Ça vaut la peine de savoir ce qu'on trouve avant de commander.</p>
+<p class="mb-4">Dirty Rabbit est à S'Agaró, à environ 35 minutes de Gérone par la C-65 ou l'autoroute. Nous ne prétendons pas être sur le chemin du travail si vous habitez en centre-ville — ce n'est pas le cas. Mais si vous êtes déjà sur la Costa Brava ou que vous avez une raison de venir dans la zone, nous sommes là.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Ce qui différencie un bon chai latte</h3>
+<ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
+  <li>Le mélange d'épices définit tout. Cardamome, cannelle, gingembre, clou de girofle, poivre — un vrai masala chai a un profil de goût complexe. Le sirop de chai qu'utilisent la majorité des établissements simplifie ça en quelque chose de sucré et unidimensionnel.</li>
+  <li>Le fournisseur n'a pas besoin d'être célèbre pour être bon. Le nôtre est Awachai, de l'Isère, France — masala chai 100% bio. Pour les visiteurs français, c'est un produit fabriqué chez vous, dans les Alpes. Nous l'avons choisi parce que le mélange est sérieux.</li>
+  <li>Le dirty chai répond à une hésitation habituelle. Chai ou café ? La réponse peut être les deux : chai latte avec un shot d'espresso de La Cabra. Plus d'énergie, plus de complexité. Pour ceux qui veulent les deux à la fois.</li>
+</ol>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Où trouver un bon chai latte près de Gérone</h3>
+<p class="mb-4">À Gérone en ville il y a des cafés avec du chai à la carte. Pour du masala chai avec de vraies épices bio, l'option la plus proche hors de la ville est Dirty Rabbit à S'Agaró — 35 minutes par la C-65 ou l'AP-7.</p>
+<p class="mb-4">Nous avons ouvert en novembre 2024. Trois versions : chai latte classique (chaud ou froid), chai glacé toute l'année, et dirty chai avec espresso. Lait végétal disponible. Entre 3,50€ et 5€. Grande terrasse, WiFi, bonne lumière le matin.</p>
+<p class="mb-4">Pour ceux qui font régulièrement l'aller-retour Gérone-Costa Brava, S'Agaró est entre Sant Feliu et Platja d'Aro. Pour ceux qui viendraient exprès depuis Gérone juste pour le chai — ça, c'est votre décision, pas la nôtre.</p>
+<h3 class="font-typewriter text-xl mb-4 mt-8">Pourquoi le chai latte est partout mais rarement bien fait</h3>
+<p class="mb-4">Gérone, en tant que ville universitaire avec un tourisme croissant, a plus de variété que la plupart des villes de sa taille. Pourtant le schéma est le même : la majorité des versions de chai qui circulent sont du sirop. C'est l'option économique et simple pour un établissement qui ne fait pas du chai son produit central.</p>
+<p class="mb-4">Ceux qui travaillent avec du vrai masala chai sont généralement les mêmes qui travaillent avec du café de spécialité, du pain au levain et des laits végétaux de qualité. Ce sont des cafés où l'exigence traverse toute la carte.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Questions fréquentes sur le chai latte à Gérone</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Y a-t-il des cafés à Gérone avec du chai aux vraies épices ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Il y a des options à Gérone. La majorité utilisent du sirop. Pour du masala chai bio avec un vrai mélange d'épices, l'option la plus proche hors de la ville est Dirty Rabbit à S'Agaró, à 35 minutes.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Vaut-il la peine d'aller de Gérone à S'Agaró pour un chai ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Ça dépend. Si vous allez déjà sur la côte, oui — nous sommes sur la route entre Sant Feliu et Platja d'Aro. Si vous venez exprès depuis Gérone juste pour le chai, 35 minutes reste une décision personnelle.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Qu'est-ce que le chai glacé et pourquoi le proposez-vous toute l'année ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Le chai glacé est le masala chai froid — les épices infusées puis servies sur glace. La plupart des établissements ne le proposent pas hors de l'été. Nous l'avons toute l'année parce que les épices fonctionnent aussi bien en froid, et certains le préfèrent ainsi indépendamment de la température.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Quelle est la différence entre un dirty chai et un café au lait ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Un café au lait c'est espresso et lait. Le dirty chai ajoute le mélange masala — cardamome, cannelle, gingembre, clou de girofle, poivre — à l'espresso et au lait. Le goût est complètement différent : plus chaud, plus épicé, moins amer.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Comment aller à Dirty Rabbit depuis Gérone ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Par la C-65 direction Sant Feliu de Guíxols puis Platja d'Aro, ou par l'AP-7 sortie Platja d'Aro. Le café est Avinguda Platja d'Aro 275, S'Agaró. Environ 35 minutes depuis le centre de Gérone. Parking en face.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">À propos de Dirty Rabbit</h2>
+<p class="mb-4">Nous avons ouvert le 1er novembre 2024 à S'Agaró. Iwonka gère le café avec un critère qui s'applique à tout : savoir d'où vient chaque ingrédient.</p>
+<p class="mb-4">Chai d'Awachai (Isère, France). Café de La Cabra. Pain d'Origo Bakery. À 35 minutes de Gérone — honnêtement.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Itinéraire
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

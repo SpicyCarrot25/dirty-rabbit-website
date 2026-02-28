@@ -1,0 +1,130 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'ca';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Guia', url: 'https://dirtyrabbit.es/ca/guia/' },
+  { name: `El Millor Cafè a Platja d'Aro: el que val la pena`, url: 'https://dirtyrabbit.es/ca/guia/best-coffee-platja-daro' }
+];
+---
+
+<Layout 
+  title="El Millor Cafè a Platja d'Aro: el que val la pena — Dirty Rabbit 2026"
+  description="El Millor Cafè a Platja d'Aro: el que val la pena — Dirty Rabbit, S'Agaró, Costa Brava"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CafeOrCoffeeShop",
+      "name": "Dirty Rabbit",
+      "url": "https://dirtyrabbit.es",
+      "telephone": "+34872454264",
+      "email": "hola@dirtyrabbit.es",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avinguda Platja d'Aro 275",
+        "addressLocality": "S'Agaró",
+        "postalCode": "17248",
+        "addressCountry": "ES"
+      },
+      "openingDate": "2024-11-01",
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Dog Friendly", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Terrace", "value": true }
+      ],
+      "servesCuisine": "Specialty Coffee",
+      "description": "Cafeteria de cafè d'especialitat a S'Agaró, a 10 minuts de Platja d'Aro. Espresso de La Cabra, REQ Matcha, chai Awachai. Obert el novembre de 2024."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "El Dirty Rabbit és a Platja d'Aro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. El Dirty Rabbit és a S'Agaró, a l'Avinguda Platja d'Aro 275, 17248. A uns deu minuts en cotxe del centre de Platja d'Aro."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quin és el millor cafè que hi ha pròpiament a Platja d'Aro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Maglia és l'opció més consistent a la localitat. Per a cafè d'especialitat a un nivell més alt, val la pena fer el petit desplaçament fins al Dirty Rabbit a S'Agaró."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Es pot anar a peu de Platja d'Aro fins al Dirty Rabbit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Són uns 3 km per carretera. Factible en 30-35 minuts. En cotxe o taxi, deu minuts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hi ha aparcament prop del Dirty Rabbit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, hi ha aparcament disponible a prop de l'Avinguda Platja d'Aro 275 a S'Agaró."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Teniu terrassa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, gran. Llum de matí, dog friendly."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          El Millor Cafè a Platja d'Aro: el que val la pena
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Com arribar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>

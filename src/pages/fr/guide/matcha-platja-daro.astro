@@ -1,0 +1,126 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../../i18n';
+
+const lang = 'fr';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/fr/guide/' },
+  { name: `Matcha à Platja d'Aro : ce qu'on trouve et ce qui vaut le détour`, url: 'https://dirtyrabbit.es/fr/guide/matcha-platja-daro' }
+];
+---
+
+<Layout 
+  title="Matcha à Platja d'Aro : ce qu'on trouve et ce qui vaut le détour — Dirty Rabbit 2026"
+  description="Si vous avez cherché un matcha à Platja d'Aro sans trouver grand-chose de convaincant, c'est logique. La plupart des cafés de la zone ont un &quot;matcha latte&quot;"
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Café de spécialité à S'Agaró avec matcha bio de REQ Matcha, chai et café de La Cabra. Ouvert depuis novembre 2024. À 10 minutes de Platja d'Aro.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/matcha-platja-daro",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
+  "priceRange": "€€"
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Matcha à Platja d'Aro : ce qu'on trouve et ce qui vaut le détour
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Si vous avez cherché un matcha à Platja d'Aro sans trouver grand-chose de convaincant, c'est logique. La plupart des cafés de la zone ont un "matcha latte" à la carte — de la poudre verte dissoute dans du lait chaud. Ça passe, mais ce n'est pas la même chose.</p>
+<p class="mb-4">Avant de commander, il vaut mieux savoir ce qu'on cherche.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Ce qui différencie un bon matcha</h2>
+<ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
+  <li>Il se prépare avec du thé vert japonais de grade cérémoniel ou premium, fouetté à froid avec un peu d'eau avant d'ajouter le lait.</li>
+  <li>La couleur est verte, franche et soutenue. Si on vous sert quelque chose de jaunâtre ou terne, c'est de la poudre bas de gamme.</li>
+  <li>Un bon matcha n'est pas amer. Bien préparé, il est doux, avec un fond presque sucré.</li>
+</ol>
+<p class="mb-4">Ce n'est pas du snobisme, c'est juste une question de goût. La différence avec ce que servent la plupart des établissements est réelle.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Où trouver un bon matcha près de Platja d'Aro</h2>
+<p class="mb-4">Dirty Rabbit se trouve à S'Agaró, Av. Platja d'Aro 275 — environ 10 minutes en voiture depuis le centre de Platja d'Aro.</p>
+<p class="mb-4">Nous avons ouvert le 1er novembre 2024 avec une carte construite autour de fournisseurs identifiés. Le matcha que nous utilisons est bio, de REQ Matcha — un projet de Barcelone dirigé par un Japonais qui vit au Japon et sélectionne le thé directement à l'origine. Nous le servons avec 2g de matcha cérémoniel, la dose standard. Pour quelque chose de plus intense, nous proposons une version extra forte. Lait d'avoine disponible si vous ne prenez pas de produits laitiers.</p>
+<p class="mb-4">À Platja d'Aro centre vous trouverez des options. Si vous voulez juste vous asseoir en terrasse sur le front de mer, elles feront l'affaire. Si le goût du matcha compte, le détour par S'Agaró vaut dix minutes.</p>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Pourquoi le matcha est partout mais rarement bien fait</h2>
+<p class="mb-4">Le matcha a explosé en Catalogne autour de 2022, porté par les cafés de Barcelone et les réseaux sociaux. Le problème : beaucoup d'établissements ont ajouté "matcha latte" à leur carte sans changer de fournisseur. La poudre cérémonielle coûte nettement plus cher que la version alimentaire, et ça se sent dans la tasse.</p>
+<p class="mb-4">Sur la Costa Brava, l'adoption a été plus lente qu'à Barcelone. Les cafés qui prennent le matcha au sérieux sont les mêmes qui prennent le café au sérieux. Ils sont peu nombreux dans la zone, mais ils existent.</p>
+<hr class="my-8 border-black/20" />
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Questions fréquentes sur le matcha à Platja d'Aro</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Y a-t-il un endroit à Platja d'Aro qui sert du matcha cérémoniel ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Au centre de Platja d'Aro, l'offre est limitée. L'option la plus proche avec du matcha bio de qualité est Dirty Rabbit à S'Agaró, à 10 minutes en voiture.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Combien coûte un matcha latte dans la zone ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Entre 3,50€ et 5€ chez Dirty Rabbit. Les établissements qui utilisent du matcha cérémoniel facturent naturellement plus — le coût de la matière première le justifie.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Peut-on commander un matcha froid en été ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Oui. Chez Dirty Rabbit nous le proposons toute l'année, chaud ou froid, avec du lait végétal si vous préférez.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Le matcha est-il une bonne alternative au café ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Ça dépend de ce que vous cherchez. Le matcha contient de la caféine, mais la libère de façon plus progressive grâce à la L-théanine. Beaucoup de personnes le choisissent pour ça — une énergie stable, sans le pic puis la chute du café. Pour ceux qui sont sensibles au café, il est généralement mieux toléré.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Où se trouve exactement Dirty Rabbit ?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Avinguda Platja d'Aro 275, S'Agaró — sur la route principale qui relie Sant Feliu à Platja d'Aro, avant d'arriver au cœur de S'Agaró. Parking facile en face.</p>
+</div>
+<hr class="my-8 border-black/20" />
+</div>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">À propos de Dirty Rabbit</h2>
+<p class="mb-4">Nous avons ouvert le 1er novembre 2024 à S'Agaró. Concept simple : café de spécialité, boissons alternatives bien faites, et un endroit où s'installer sans se sentir pressé de partir.</p>
+<p class="mb-4">Iwonka, qui gère le quotidien, applique un critère clair avec les fournisseurs : si elle ne peut pas expliquer d'où vient l'ingrédient, il n'entre pas à la carte. Le matcha est de REQ Matcha. Le café est de La Cabra. Le pain est d'Origo Bakery.</p>
+<p class="mb-4">Bonne lumière naturelle le matin, WiFi, grande terrasse. Un de ces endroits où on peut travailler toute une matinée sans que personne ne regarde l'heure.</p>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Itinéraire
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>
