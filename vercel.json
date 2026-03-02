@@ -1,17 +1,17 @@
 {
   "redirects": [
-    { "source": "/gmb",         "destination": "https://www.google.com/maps?cid=13237319999262880412&utm_source=google&utm_medium=maps&utm_campaign=gmb-main",                                                                                                    "permanent": true },
-    { "source": "/gmb-menu",    "destination": "https://dirtyrabbit.es/carta?utm_source=google&utm_medium=maps&utm_campaign=gmb-menu",                                                                                                                           "permanent": true },
-    { "source": "/ig",          "destination": "https://www.instagram.com/dirtyrabbitsagaro/?utm_source=instagram&utm_medium=social&utm_campaign=bio",                                                                                                            "permanent": true },
-    { "source": "/ig-menu",     "destination": "https://dirtyrabbit.es/carta?utm_source=instagram&utm_medium=social&utm_campaign=bio-menu",                                                                                                                       "permanent": true },
-    { "source": "/ta",          "destination": "https://www.tripadvisor.es/Restaurant_Review-g1063449-d28059812-Reviews-Dirty_Rabbit.html?utm_source=tripadvisor&utm_medium=referral&utm_campaign=listing",                                                       "permanent": true },
-    { "source": "/apple",       "destination": "https://maps.apple.com/?q=Dirty+Rabbit+S%27Agaro&utm_source=apple&utm_medium=maps&utm_campaign=apple-maps",                                                                                                      "permanent": true },
-    { "source": "/yelp",        "destination": "https://www.yelp.com/biz/dirty-rabbit-s-agaro?utm_source=yelp&utm_medium=referral&utm_campaign=listing",                                                                                                         "permanent": true },
-    { "source": "/ect",         "destination": "https://europeancoffeetrip.com/cafe/dirtyrabbit-sagaro/?utm_source=europeancoffeetrip&utm_medium=referral&utm_campaign=ect-listing",                                                                              "permanent": true },
-    { "source": "/bing",        "destination": "https://www.bing.com/maps?q=Dirty+Rabbit+S%27Agaro&utm_source=bing&utm_medium=maps&utm_campaign=bing-places",                                                                                                    "permanent": true },
-    { "source": "/qr-menu",     "destination": "https://dirtyrabbit.es/carta?utm_source=qr&utm_medium=print&utm_campaign=table-menu",                                                                                                                             "permanent": true },
-    { "source": "/qr-review",   "destination": "https://dirtyrabbit.es/review?utm_source=qr&utm_medium=print&utm_campaign=table-review",                                                                                                                          "permanent": true },
-    { "source": "/qr-window",   "destination": "https://dirtyrabbit.es/?utm_source=qr&utm_medium=print&utm_campaign=window",                                                                                                                                      "permanent": true },
-    { "source": "/qr-takeaway", "destination": "https://dirtyrabbit.es/?utm_source=qr&utm_medium=print&utm_campaign=takeaway",                                                                                                                                    "permanent": true }
+    { "source": "/gmb",         "destination": "https://dirtyrabbit.es/?utm_source=google&utm_medium=maps&utm_campaign=gmb-main",              "permanent": true },
+    { "source": "/gmb-menu",    "destination": "https://dirtyrabbit.es/carta?utm_source=google&utm_medium=maps&utm_campaign=gmb-menu",          "permanent": true },
+    { "source": "/ig",          "destination": "https://dirtyrabbit.es/?utm_source=instagram&utm_medium=social&utm_campaign=bio",               "permanent": true },
+    { "source": "/ig-menu",     "destination": "https://dirtyrabbit.es/carta?utm_source=instagram&utm_medium=social&utm_campaign=bio-menu",     "permanent": true },
+    { "source": "/ta",          "destination": "https://dirtyrabbit.es/?utm_source=tripadvisor&utm_medium=referral&utm_campaign=listing",       "permanent": true },
+    { "source": "/apple",       "destination": "https://dirtyrabbit.es/?utm_source=apple&utm_medium=maps&utm_campaign=apple-maps",              "permanent": true },
+    { "source": "/yelp",        "destination": "https://dirtyrabbit.es/?utm_source=yelp&utm_medium=referral&utm_campaign=listing",              "permanent": true },
+    { "source": "/ect",         "destination": "https://dirtyrabbit.es/?utm_source=europeancoffeetrip&utm_medium=referral&utm_campaign=ect",    "permanent": true },
+    { "source": "/bing",        "destination": "https://dirtyrabbit.es/?utm_source=bing&utm_medium=maps&utm_campaign=bing-places",             "permanent": true },
+    { "source": "/qr-menu",     "destination": "https://dirtyrabbit.es/carta?utm_source=qr&utm_medium=print&utm_campaign=table-menu",           "permanent": true },
+    { "source": "/qr-review",   "destination": "https://dirtyrabbit.es/review?utm_source=qr&utm_medium=print&utm_campaign=table-review",        "permanent": true },
+    { "source": "/qr-window",   "destination": "https://dirtyrabbit.es/?utm_source=qr&utm_medium=print&utm_campaign=window",                   "permanent": true },
+    { "source": "/qr-takeaway", "destination": "https://dirtyrabbit.es/?utm_source=qr&utm_medium=print&utm_campaign=takeaway",                 "permanent": true }
   ]
 }
