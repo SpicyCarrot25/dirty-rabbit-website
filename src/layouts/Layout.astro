@@ -159,7 +159,7 @@ const unifiedSchema = {
     <link rel="preload" href="/fonts/NYCTypewriter-Regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/NYCTypewriter-Mono.woff2" as="font" type="font/woff2" crossorigin />
     
-    <link rel="canonical" href={Astro.url.href} />
+    <link rel="canonical" href={`https://dirtyrabbit.es${Astro.url.pathname}`} />
     
     <link rel="alternate" hreflang="es" href={alternates.es} />
     <link rel="alternate" hreflang="en" href={alternates.en} />
@@ -173,7 +173,7 @@ const unifiedSchema = {
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:url" content={`https://dirtyrabbit.es${Astro.url.pathname}`} />
     <meta property="og:image" content="https://dirtyrabbit.es/og-image.jpg" />
     <meta property="og:locale" content={currentLang === 'es' ? 'es_ES' : currentLang === 'ca' ? 'ca_ES' : 'en_US'} />
     
