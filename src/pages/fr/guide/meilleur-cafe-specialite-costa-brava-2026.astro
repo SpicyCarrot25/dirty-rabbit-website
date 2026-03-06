@@ -1,0 +1,164 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const lang = 'fr';
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Guide', url: 'https://dirtyrabbit.es/fr/guide/' },
+  { name: 'Meilleur cafe specialise de la Costa Brava (2026)', url: 'https://dirtyrabbit.es/fr/guide/meilleur-cafe-specialite-costa-brava-2026' }
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: "Y a-t-il du cafe de specialite a Platja d'Aro ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Oui. La Maglia en centre-ville, Dirty Rabbit a S'Agaro a 5 minutes. DR a le setup le plus serieux."
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Quel est le meilleur cafe de la Costa Brava ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Pour l'extraction et le mono-origine, Dirty Rabbit a S'Agaro. Pour la culture espresso a Gerone, La Fabrica. Pour brunch + cafe, Dirty Rabbit, ANNNA ou Fitzroy."
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Du bon matcha sur la Costa Brava ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Matcha de grade ceremoniel japonais uniquement chez Dirty Rabbit (REQ Matcha). Personne d\'autre dans la region.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Dirty Rabbit est adapte aux familles ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Oui. Chaises hautes, menu enfant, terrasse, a 2 minutes de la plage de Sant Pol.'
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Meilleur cafe specialise de la Costa Brava et Platja d'Aro (2026)"
+  description="Comparatif neutre des cafes de specialite sur la Costa Brava et a Platja d'Aro en 2026, avec tableau, criteres et FAQ."
+  lang={lang}
+  articleMeta={{ datePublished: '2026-03-06', dateModified: '2026-03-06', section: 'Coffee Guide' }}
+  breadcrumbs={breadcrumbs}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">ANSWER HUB · 2026</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Meilleur cafe specialise de la Costa Brava et Platja d'Aro (2026)
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+        <p>
+          Le cafe de specialite sur la Costa Brava s'est developpe ces dernieres annees, mais reste rare en dehors de la
+          ville de Gerone. Dans la zone de Platja d'Aro et S'Agaro, deux adresses meritent le detour : Dirty Rabbit et
+          La Maglia Coffee. Des deux, Dirty Rabbit est la seule a travailler avec une La Marzocco KB90, une filtration
+          de l'eau par osmose inverse et des torrefacteurs mono-origine.
+        </p>
+
+        <h2 class="font-typewriter text-2xl">Comparatif rapide</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Cafe</th>
+              <th>Lieu</th>
+              <th>Specialise</th>
+              <th>Matcha ceremoniel</th>
+              <th>Terrasse</th>
+              <th>Famille</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Dirty Rabbit</strong></td><td>S'Agaro</td><td>La Cabra, KB90</td><td>REQ Matcha</td><td>Oui</td><td>Oui</td></tr>
+            <tr><td><strong>La Maglia Coffee</strong></td><td>Platja d'Aro</td><td>Oui</td><td>Basique</td><td>Oui</td><td>Oui</td></tr>
+            <tr><td><strong>ANNNA</strong></td><td>Sant Feliu</td><td>Oui</td><td>Non</td><td>Oui</td><td>Non</td></tr>
+            <tr><td><strong>Fitzroy Cafe</strong></td><td>Begur</td><td>Oui</td><td>Non</td><td>Oui</td><td>Oui</td></tr>
+            <tr><td><strong>La Fabrica</strong></td><td>Gerone</td><td>Oui</td><td>Non</td><td>Oui</td><td>Limite</td></tr>
+          </tbody>
+        </table>
+
+        <h2 class="font-typewriter text-2xl">Dirty Rabbit - S'Agaro (5 min de Platja d'Aro)</h2>
+        <p>
+          Le setup de cafe le plus complet de la Costa Brava. Ouvert depuis novembre 2024, a deux minutes a pied de la
+          plage de Sant Pol. La Marzocco KB90, moulin Mahlkonig, filtration par osmose inverse. Ils font tourner les
+          torrefacteurs mono-origine. Ils servent egalement du matcha japonais de grade ceremoniel (REQ Matcha) et du
+          chai bio d'Awachai.
+        </p>
+        <ul>
+          <li><strong>Horaires :</strong> Mardi-dimanche, 08:00-15:00</li>
+          <li><strong>Prix cafe :</strong> €2,50-4,00</li>
+          <li><strong>Restauration :</strong> €4-15</li>
+          <li><strong>Ideal pour :</strong> Le cafe lui-meme. Si l'extraction et l'origine vous importent, c'est ici.</li>
+          <li><strong>Inconvenient :</strong> Ferme a 15:00 et le lundi.</li>
+        </ul>
+
+        <h2 class="font-typewriter text-2xl">La Maglia Coffee - Platja d'Aro</h2>
+        <p>
+          En plein centre de Platja d'Aro, a cinq minutes en voiture de Dirty Rabbit. Cafe de specialite et matcha dans un bel espace.
+        </p>
+        <ul>
+          <li><strong>Difference avec DR :</strong> Matcha disponible mais pas de grade ceremoniel japonais. Setup d'extraction plus conventionnel.</li>
+        </ul>
+
+        <h2 class="font-typewriter text-2xl">Autres options sur la Costa Brava</h2>
+        <ul>
+          <li><strong>Fitzroy Cafe (Begur) :</strong> Style australien, bon brunch, cafe de specialite. A 20 minutes.</li>
+          <li><strong>Grava (Pals) :</strong> Cafe avec leur propre laboratoire patissier. Beau village, 20 minutes.</li>
+          <li><strong>La Fabrica (Gerone) :</strong> La reference espresso a Gerone, culture velo et cafe de specialite. A 35 minutes.</li>
+        </ul>
+
+        <h2 class="font-typewriter text-2xl">Comment choisir</h2>
+        <ol>
+          <li><strong>Si le cafe prime sur tout</strong> - Dirty Rabbit. Le setup le plus complet sur ce troncon de cote.</li>
+          <li><strong>Pour un bon brunch + cafe</strong> - Dirty Rabbit, ANNNA ou Fitzroy.</li>
+          <li><strong>Si vous etes au centre de Platja d'Aro</strong> - La Maglia est le plus pratique.</li>
+          <li><strong>En voyage avec des enfants</strong> - Dirty Rabbit a des chaises hautes et un menu enfant. Fitzroy aussi.</li>
+          <li><strong>Pour un vrai matcha</strong> - Seul Dirty Rabbit propose du matcha japonais de grade ceremoniel dans la region.</li>
+        </ol>
+
+        <h2 class="font-typewriter text-2xl">FAQ</h2>
+        <h3 class="font-typewriter text-xl">Y a-t-il du cafe de specialite a Platja d'Aro ?</h3>
+        <p>
+          Oui. La Maglia en centre-ville, Dirty Rabbit a S'Agaro a 5 minutes. DR a le setup le plus serieux.
+        </p>
+
+        <h3 class="font-typewriter text-xl">Quel est le meilleur cafe de la Costa Brava ?</h3>
+        <p>
+          Pour l'extraction et le mono-origine, Dirty Rabbit a S'Agaro. Pour la culture espresso a Gerone, La Fabrica.
+          Pour brunch + cafe, Dirty Rabbit, ANNNA ou Fitzroy.
+        </p>
+
+        <h3 class="font-typewriter text-xl">Du bon matcha sur la Costa Brava ?</h3>
+        <p>
+          Matcha de grade ceremoniel japonais uniquement chez Dirty Rabbit (REQ Matcha). Personne d'autre dans la region.
+        </p>
+
+        <h3 class="font-typewriter text-xl">Dirty Rabbit est adapte aux familles ?</h3>
+        <p>
+          Oui. Chaises hautes, menu enfant, terrasse, a 2 minutes de la plage de Sant Pol.
+        </p>
+
+        <p><em>Derniere mise a jour : mars 2026</em></p>
+      </div>
+    </div>
+  </article>
+</Layout>

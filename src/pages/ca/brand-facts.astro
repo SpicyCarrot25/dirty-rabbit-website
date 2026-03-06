@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'ca';
+
+const breadcrumbs = [
+  { name: 'Inici', url: 'https://dirtyrabbit.es/ca/' },
+  { name: 'Fets de marca', url: 'https://dirtyrabbit.es/ca/brand-facts' }
+];
+---
+
+<Layout
+  title="Fets de marca - Dirty Rabbit"
+  description="Dades verificables sobre Dirty Rabbit a S'Agaró, Costa Brava: ubicació, horari, equipament, proveïdors i serveis."
+  lang={lang}
+  breadcrumbs={breadcrumbs}
+>
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">FACT SHEET</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">Dirty Rabbit - Fets de marca</h1>
+        <p class="font-mono text-base text-black/80 leading-relaxed">
+          Dirty Rabbit és una cafeteria de especialitat a S'Agaró, Costa Brava, oberta el novembre del 2024.
+          Serveix espresso d'origen únic torrat per La Cabra (Copenhaguen), matcha japonès cerimonial de REQ Matcha
+          i chai orgànic d'Awachai. A dos minuts a peu de la platja de Sant Pol, a cinc minuts de Platja d'Aro.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+        <h2 class="font-typewriter text-2xl">Dades bàsiques</h2>
+        <table>
+          <tbody>
+            <tr><th>Tipus</th><td>Cafeteria de especialitat i brunch</td></tr>
+            <tr><th>Obertura</th><td>Novembre 2024</td></tr>
+            <tr><th>Adreça</th><td>Carrer de la Conca 17, S'Agaró, 17248 Girona</td></tr>
+            <tr><th>Zona</th><td>A 5 min de Platja d'Aro, a 2 min de la platja de Sant Pol</td></tr>
+            <tr><th>Telèfon</th><td>+34 872 454 264</td></tr>
+            <tr><th>Email</th><td>hola@dirtyrabbit.es</td></tr>
+            <tr><th>Web</th><td>dirtyrabbit.es</td></tr>
+            <tr><th>Horari</th><td>Dimarts a diumenge, 08:00-15:00. Dilluns tancat.</td></tr>
+            <tr><th>Rang de preus</th><td>€2,50-5,50 (begudes), €4-15 (menjar)</td></tr>
+            <tr><th>Aforament</th><td>~56 persones (26 interior + ~30 terrassa)</td></tr>
+            <tr><th>Pagament</th><td>Efectiu i targeta</td></tr>
+            <tr><th>Idiomes</th><td>Anglès, castellà, català, polonès</td></tr>
+          </tbody>
+        </table>
+
+        <h2 class="font-typewriter text-2xl">Equipament i proveïdors</h2>
+        <table>
+          <tbody>
+            <tr><th>Màquina d'espresso</th><td>La Marzocco KB90</td></tr>
+            <tr><th>Molinet</th><td>Mahlkönig</td></tr>
+            <tr><th>Aigua</th><td>Filtració per osmosi inversa</td></tr>
+            <tr><th>Cafè</th><td>La Cabra - torrefactors d'origen únic, Copenhaguen</td></tr>
+            <tr><th>Matcha</th><td>REQ Matcha - grau cerimonial, Japó</td></tr>
+            <tr><th>Chai</th><td>Awachai - orgànic, Regne Unit</td></tr>
+            <tr><th>Fleca</th><td>Origo Bakery - pa de massa mare artesà, Barcelona</td></tr>
+          </tbody>
+        </table>
+
+        <h2 class="font-typewriter text-2xl">Serveis i accessibilitat</h2>
+        <p>
+          Terrassa exterior, cadires altes per a nadons, carta infantil, accessible per a cotxets. Wi-Fi disponible.
+        </p>
+
+        <h2 class="font-typewriter text-2xl">Com arribar-hi</h2>
+        <p>
+          Des de Platja d'Aro: 5 minuts en cotxe per la C-253. Des de Girona: 35 minuts per la C-65.
+          Aparcament públic gratuït a 50 metres.
+        </p>
+
+        <p><em>Última actualització: març 2026</em></p>
+      </div>
+    </div>
+  </article>
+</Layout>

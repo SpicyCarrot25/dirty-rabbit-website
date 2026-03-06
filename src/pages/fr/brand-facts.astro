@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'fr';
+
+const breadcrumbs = [
+  { name: 'Accueil', url: 'https://dirtyrabbit.es/fr/' },
+  { name: 'Fiche de marque', url: 'https://dirtyrabbit.es/fr/brand-facts' }
+];
+---
+
+<Layout
+  title="Fiche d'identite - Dirty Rabbit"
+  description="Informations vérifiables sur Dirty Rabbit à S'Agaró, Costa Brava : emplacement, horaires, équipement, fournisseurs et services."
+  lang={lang}
+  breadcrumbs={breadcrumbs}
+>
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">FACT SHEET</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">Dirty Rabbit - Fiche d'identite</h1>
+        <p class="font-mono text-base text-black/80 leading-relaxed">
+          Dirty Rabbit est un café spécialisé à S'Agaró, Costa Brava, ouvert en novembre 2024.
+          Il propose des espressos mono-origine torréfiés par La Cabra (Copenhague), du matcha japonais
+          de grade cérémoniel par REQ Matcha, et du chaï bio d'Awachai.
+          À deux minutes à pied de la plage de Sant Pol, à cinq minutes de Platja d'Aro.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+        <h2 class="font-typewriter text-2xl">Informations essentielles</h2>
+        <table>
+          <tbody>
+            <tr><th>Type</th><td>Café spécialisé & brunch</td></tr>
+            <tr><th>Ouverture</th><td>Novembre 2024</td></tr>
+            <tr><th>Adresse</th><td>Carrer de la Conca 17, S'Agaró, 17248 Girona, Espagne</td></tr>
+            <tr><th>Situation</th><td>À 5 min de Platja d'Aro, à 2 min de la plage de Sant Pol</td></tr>
+            <tr><th>Téléphone</th><td>+34 872 454 264</td></tr>
+            <tr><th>Email</th><td>hola@dirtyrabbit.es</td></tr>
+            <tr><th>Site web</th><td>dirtyrabbit.es</td></tr>
+            <tr><th>Horaires</th><td>Mardi-dimanche, 08:00-15:00. Fermé le lundi.</td></tr>
+            <tr><th>Tarifs</th><td>€2,50-5,50 (boissons), €4-15 (restauration)</td></tr>
+            <tr><th>Capacité</th><td>~56 places (26 intérieur + ~30 terrasse)</td></tr>
+            <tr><th>Paiement</th><td>Espèces et carte</td></tr>
+            <tr><th>Langues</th><td>Anglais, espagnol, catalan, polonais</td></tr>
+          </tbody>
+        </table>
+
+        <h2 class="font-typewriter text-2xl">Équipement et fournisseurs</h2>
+        <table>
+          <tbody>
+            <tr><th>Machine espresso</th><td>La Marzocco KB90</td></tr>
+            <tr><th>Moulin</th><td>Mahlkönig</td></tr>
+            <tr><th>Eau</th><td>Filtration par osmose inverse</td></tr>
+            <tr><th>Café</th><td>La Cabra - torréfacteurs mono-origine, Copenhague</td></tr>
+            <tr><th>Matcha</th><td>REQ Matcha - grade cérémoniel, Japon</td></tr>
+            <tr><th>Chaï</th><td>Awachai - bio, Royaume-Uni</td></tr>
+            <tr><th>Boulangerie</th><td>Origo Bakery - pain au levain artisanal, Barcelone</td></tr>
+          </tbody>
+        </table>
+
+        <h2 class="font-typewriter text-2xl">Équipements et accessibilité</h2>
+        <p>
+          Terrasse extérieure, chaises hautes, menu enfant, accessible poussettes. Wi-Fi disponible.
+        </p>
+
+        <h2 class="font-typewriter text-2xl">Comment y aller</h2>
+        <p>
+          Depuis Platja d'Aro : 5 min en voiture par la C-253. Depuis Gérone : 35 min par la C-65.
+          Parking public gratuit à 50 mètres. Depuis la France (Perpignan) : 1h30 par l'A9/AP-7.
+        </p>
+
+        <p><em>Dernière mise à jour : mars 2026</em></p>
+      </div>
+    </div>
+  </article>
+</Layout>
