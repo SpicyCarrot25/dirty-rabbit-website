@@ -9,12 +9,20 @@ interface BreadcrumbItem {
   url: string;
 }
 
+interface ArticleMeta {
+  datePublished: string;
+  dateModified?: string;
+  author?: string;
+  section?: string;
+}
+
 interface Props {
   title: string;
   description?: string;
   lang?: Language;
   breadcrumbs?: BreadcrumbItem[];
   isMenuPage?: boolean;
+  articleMeta?: ArticleMeta;
 }
 
 const { 
@@ -22,7 +30,8 @@ const {
   description = 'Specialty Coffee, Breakfast & Brunch en S\'Agaró, Costa Brava', 
   lang,
   breadcrumbs,
-  isMenuPage = false
+  isMenuPage = false,
+  articleMeta
 } = Astro.props;
 
 const currentLang = lang || getLangFromUrl(Astro.url);
@@ -73,7 +82,7 @@ const graphItems: Record<string, unknown>[] = [
     "servesCuisine": ["Specialty Coffee", "Brunch", "Breakfast"],
     "priceRange": "€€",
     "sameAs": [
-      "https://instagram.com/dirtyrabbitsagaro"
+      "https://instagram.com/dirtyrabbitcoffee"
     ]
   },
   // WebSite with SearchAction
@@ -136,6 +145,35 @@ if (isMenuPage) {
   });
 }
 
+if (articleMeta) {
+  graphItems.push({
+    "@type": "Article",
+    "@id": `https://dirtyrabbit.es${Astro.url.pathname}#article`,
+    "headline": title,
+    "description": description,
+    "datePublished": articleMeta.datePublished,
+    "dateModified": articleMeta.dateModified || articleMeta.datePublished,
+    "author": {
+      "@type": "Organization",
+      "name": articleMeta.author || "Dirty Rabbit",
+      "@id": "https://dirtyrabbit.es/#business"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Dirty Rabbit",
+      "@id": "https://dirtyrabbit.es/#business"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://dirtyrabbit.es${Astro.url.pathname}`
+    },
+    "isPartOf": {
+      "@id": "https://dirtyrabbit.es/#website"
+    },
+    ...(articleMeta.section ? { "articleSection": articleMeta.section } : {})
+  });
+}
+
 // Single unified schema with @graph
 const unifiedSchema = {
   "@context": "https://schema.org",
@@ -172,10 +210,16 @@ const unifiedSchema = {
     
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={articleMeta ? "article" : "website"} />
     <meta property="og:url" content={`https://dirtyrabbit.es${Astro.url.pathname}`} />
     <meta property="og:image" content="https://dirtyrabbit.es/og-image.jpg" />
     <meta property="og:locale" content={currentLang === 'es' ? 'es_ES' : currentLang === 'ca' ? 'ca_ES' : 'en_US'} />
+    {articleMeta && (
+      <>
+        <meta property="article:published_time" content={articleMeta.datePublished} />
+        <meta property="article:modified_time" content={articleMeta.dateModified || articleMeta.datePublished} />
+      </>
+    )}
     
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
@@ -248,6 +292,7 @@ const unifiedSchema = {
       src="https://www.facebook.com/tr?id=1968087450813045&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel -->
+    <slot name="head" />
   </head>
   <body class="min-h-screen flex flex-col bg-white text-black">
     <Header lang={currentLang} />

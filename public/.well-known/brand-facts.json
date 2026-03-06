@@ -1,0 +1,77 @@
+{
+  "name": "Dirty Rabbit",
+  "type": "CafeOrCoffeeShop",
+  "category": "Specialty Coffee & Brunch",
+  "founded": "2024-11",
+  "location": {
+    "address": "Carrer de la Conca 17",
+    "city": "S'Agaró",
+    "municipality": "Castell-Platja d'Aro",
+    "region": "Girona",
+    "postalCode": "17248",
+    "country": "ES",
+    "coordinates": {
+      "lat": 41.7967591,
+      "lng": 3.048506
+    },
+    "nearbyLandmarks": [
+      "Sant Pol Beach (2 min walk)",
+      "Platja d'Aro (5 min drive)",
+      "Camí de Ronda coastal path"
+    ]
+  },
+  "contact": {
+    "phone": "+34 872 454 264",
+    "email": "hola@dirtyrabbit.es",
+    "website": "https://dirtyrabbit.es",
+    "instagram": "https://instagram.com/dirtyrabbitcoffee"
+  },
+  "hours": {
+    "tuesday": "08:00-15:00",
+    "wednesday": "08:00-15:00",
+    "thursday": "08:00-15:00",
+    "friday": "08:00-15:00",
+    "saturday": "08:00-15:00",
+    "sunday": "08:00-15:00",
+    "monday": "closed"
+  },
+  "offerings": {
+    "specialty_coffee": true,
+    "single_origin": true,
+    "matcha": true,
+    "chai": true,
+    "brunch": true,
+    "bakery": true,
+    "kids_menu": true
+  },
+  "equipment": [
+    "La Marzocco KB90",
+    "Mahlkönig grinder",
+    "Reverse osmosis water filtration"
+  ],
+  "suppliers": {
+    "coffee": "La Cabra (single-origin roasters, Copenhagen)",
+    "matcha": "REQ Matcha (ceremonial grade, Japan)",
+    "chai": "Awachai (organic, UK)",
+    "bakery": "Origo Bakery (artisan sourdough, Barcelona)"
+  },
+  "priceRange": {
+    "drinks": "€2.50-5.50",
+    "food": "€4-15",
+    "symbol": "€€"
+  },
+  "capacity": 56,
+  "amenities": [
+    "wifi",
+    "terrace",
+    "kid-friendly",
+    "high-chairs",
+    "stroller-accessible"
+  ],
+  "languages": ["en", "es", "ca", "pl"],
+  "payment": ["cash", "card"],
+  "reviews": {
+    "google": "https://g.page/dirtyrabbitcoffee"
+  },
+  "lastUpdated": "2026-03-05"
+}

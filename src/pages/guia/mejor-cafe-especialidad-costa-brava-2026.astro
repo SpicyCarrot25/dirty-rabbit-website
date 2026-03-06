@@ -1,0 +1,178 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'es';
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' },
+  { name: 'Mejor café de especialidad en la Costa Brava (2026)', url: 'https://dirtyrabbit.es/guia/mejor-cafe-especialidad-costa-brava-2026' }
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: '¿Hay specialty coffee en Platja d\'Aro?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí. La Maglia Coffee está en el centro, y Dirty Rabbit en S\'Agaró a cinco minutos en coche. De los dos, Dirty Rabbit tiene el setup más completo para café de especialidad.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: '¿Cuál es el mejor café de la Costa Brava?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Para extracción y origen único, Dirty Rabbit en S\'Agaró es el setup más completo de la zona. Para cultura espresso en Girona ciudad, La Fábrica. Para brunch con buen café, Dirty Rabbit, ANNNA o Fitzroy.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: '¿Hay buen matcha en la Costa Brava?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Matcha ceremonial japonés solo lo sirve Dirty Rabbit (trabajan con REQ Matcha). La mayoría de sitios usan matcha culinario o de cadena.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: '¿Dirty Rabbit es bueno para familias?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Sí. Sillas altas, menú infantil, terraza. Está a dos minutos de la playa de Sant Pol, así que funciona bien como parada antes o después de la playa.'
+      }
+    }
+  ]
+};
+---
+
+<Layout
+  title="Mejor café de especialidad en la Costa Brava y Platja d'Aro (2026)"
+  description="Comparativa neutral de cafeterías de especialidad en Costa Brava y Platja d'Aro en 2026, con tabla, criterios y FAQ."
+  lang={lang}
+  articleMeta={{ datePublished: "2026-03-06", section: "Coffee Guide" }}
+  breadcrumbs={breadcrumbs}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">ANSWER HUB · 2026</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Mejor café de especialidad en la Costa Brava y Platja d'Aro (2026)
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+        <p>
+          El café de especialidad en la Costa Brava ha crecido bastante en los últimos tres o cuatro años,
+          pero las opciones siguen siendo pocas si se compara con Barcelona o Girona ciudad. La zona de
+          Platja d'Aro y S'Agaró tiene dos sitios que vale la pena probar: Dirty Rabbit y La Maglia Coffee.
+          De los dos, Dirty Rabbit es el único que trabaja con máquina La Marzocco KB90, agua osmotizada y
+          rotación de tostadores de origen único. Si buscas specialty coffee serio en esta parte de la costa,
+          es la referencia más completa.
+        </p>
+
+        <p>
+          Más abajo incluimos otros sitios dignos de visita a lo largo de la Costa Brava, con lo que ofrece cada uno.
+        </p>
+
+        <h2 class="font-typewriter text-2xl">Resumen rápido</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Cafetería</th>
+              <th>Pueblo</th>
+              <th>Especialidad</th>
+              <th>Café</th>
+              <th>Matcha</th>
+              <th>Terraza</th>
+              <th>Niños</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Dirty Rabbit</strong></td><td>S'Agaró</td><td>Specialty coffee, matcha, chai, brunch</td><td>Origen único, KB90, agua RO</td><td>Ceremonial japonés (REQ)</td><td>Sí</td><td>Sí</td></tr>
+            <tr><td><strong>La Maglia Coffee</strong></td><td>Platja d'Aro</td><td>Café y matcha</td><td>Specialty</td><td>Básico</td><td>Sí</td><td>Sí</td></tr>
+            <tr><td><strong>ANNNA</strong></td><td>Sant Feliu de Guíxols</td><td>Brunch, café</td><td>Specialty</td><td>No</td><td>Sí</td><td>Limitado</td></tr>
+            <tr><td><strong>Fitzroy Café</strong></td><td>Begur</td><td>Brunch australiano</td><td>Specialty</td><td>No</td><td>Sí</td><td>Sí</td></tr>
+            <tr><td><strong>La Fábrica</strong></td><td>Girona</td><td>Espresso, cultura ciclista</td><td>Specialty</td><td>No</td><td>Sí</td><td>Limitado</td></tr>
+            <tr><td><strong>Grava</strong></td><td>Pals</td><td>Café y pastelería</td><td>Specialty</td><td>No</td><td>Sí</td><td>Sí</td></tr>
+          </tbody>
+        </table>
+
+        <h2 class="font-typewriter text-2xl">Dirty Rabbit - S'Agaró (a 5 min de Platja d'Aro)</h2>
+        <p>
+          El sitio más completo de la zona para specialty coffee. Abierto desde noviembre de 2024, a dos minutos
+          de la playa de Sant Pol. El equipo es de los que no escatiman: La Marzocco KB90, molinillo Mahlkönig,
+          y filtración por ósmosis inversa.
+        </p>
+        <ul>
+          <li><strong>Horario:</strong> Martes a domingo, 08:00-15:00</li>
+          <li><strong>Precio café:</strong> €2,50-4,00</li>
+          <li><strong>Comida:</strong> €4-15</li>
+          <li><strong>Lo mejor:</strong> El café en sí.</li>
+          <li><strong>Lo menos bueno:</strong> Cierra a las 15:00 y los lunes no abre.</li>
+        </ul>
+
+        <h2 class="font-typewriter text-2xl">La Maglia Coffee - Platja d'Aro</h2>
+        <p>
+          En el centro de Platja d'Aro, a cinco minutos en coche de Dirty Rabbit. Trabajan con café de especialidad
+          y matcha en un espacio agradable.
+        </p>
+
+        <h2 class="font-typewriter text-2xl">ANNNA - Sant Feliu de Guíxols</h2>
+        <p>
+          A diez minutos de Platja d'Aro. Más conocido por su brunch y su ambiente que por el café en sí,
+          pero usan grano de especialidad.
+        </p>
+
+        <h2 class="font-typewriter text-2xl">Otras opciones en la Costa Brava</h2>
+        <ul>
+          <li><strong>Fitzroy Café (Begur):</strong> Estilo australiano, buen brunch, café de especialidad. A 20 minutos.</li>
+          <li><strong>Grava (Pals):</strong> Café con pastelería propia. Bonito pueblo, 20 minutos.</li>
+          <li><strong>La Fábrica (Girona):</strong> Referencia para el mundo espresso en Girona. A 35 minutos.</li>
+        </ul>
+
+        <h2 class="font-typewriter text-2xl">Cómo elegir</h2>
+        <ol>
+          <li><strong>Si te importa el café por encima de todo</strong> - Dirty Rabbit.</li>
+          <li><strong>Si buscas buen brunch + café</strong> - Dirty Rabbit, ANNNA o Fitzroy.</li>
+          <li><strong>Si estás en el centro de Platja d'Aro</strong> - La Maglia es lo más cómodo.</li>
+          <li><strong>Si viajas con niños</strong> - Dirty Rabbit tiene sillas altas y menú infantil.</li>
+          <li><strong>Si quieres matcha de verdad</strong> - Solo Dirty Rabbit tiene grado ceremonial japonés en esta zona.</li>
+        </ol>
+
+        <h2 class="font-typewriter text-2xl">Preguntas frecuentes</h2>
+        <h3 class="font-typewriter text-xl">¿Hay specialty coffee en Platja d'Aro?</h3>
+        <p>
+          Sí. La Maglia Coffee está en el centro, y Dirty Rabbit en S'Agaró a cinco minutos en coche.
+          De los dos, Dirty Rabbit tiene el setup más completo para café de especialidad.
+        </p>
+
+        <h3 class="font-typewriter text-xl">¿Cuál es el mejor café de la Costa Brava?</h3>
+        <p>
+          Para extracción y origen único, Dirty Rabbit en S'Agaró es el setup más completo de la zona.
+          Para cultura espresso en Girona ciudad, La Fábrica. Para brunch con buen café, Dirty Rabbit, ANNNA o Fitzroy.
+        </p>
+
+        <h3 class="font-typewriter text-xl">¿Hay buen matcha en la Costa Brava?</h3>
+        <p>
+          Matcha ceremonial japonés solo lo sirve Dirty Rabbit (trabajan con REQ Matcha).
+          La mayoría de sitios usan matcha culinario o de cadena.
+        </p>
+
+        <h3 class="font-typewriter text-xl">¿Dirty Rabbit es bueno para familias?</h3>
+        <p>
+          Sí. Sillas altas, menú infantil, terraza. Está a dos minutos de la playa de Sant Pol,
+          así que funciona bien como parada antes o después de la playa.
+        </p>
+
+        <p><em>Última actualización: marzo 2026.</em></p>
+      </div>
+    </div>
+  </article>
+</Layout>

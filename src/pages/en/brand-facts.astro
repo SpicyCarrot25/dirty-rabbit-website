@@ -1,0 +1,84 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'en';
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Brand Facts', url: 'https://dirtyrabbit.es/en/brand-facts' }
+];
+---
+
+<Layout
+  title="Brand Facts - Dirty Rabbit"
+  description="Verified facts about Dirty Rabbit in S'Agaró, Costa Brava: location, opening hours, equipment, suppliers and services."
+  lang={lang}
+  breadcrumbs={breadcrumbs}
+>
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">FACT SHEET</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">Dirty Rabbit - Facts</h1>
+        <p class="font-mono text-base text-black/80 leading-relaxed">
+          Dirty Rabbit is a specialty coffee shop in S'Agaró, Costa Brava, open since November 2024.
+          It serves single-origin espresso, ceremonial-grade Japanese matcha, and organic chai.
+          Two-minute walk from Sant Pol Beach.
+        </p>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+        <h2 class="font-typewriter text-2xl">Key facts</h2>
+        <table>
+          <tbody>
+            <tr><th>Name</th><td>Dirty Rabbit</td></tr>
+            <tr><th>Type</th><td>Specialty coffee & brunch</td></tr>
+            <tr><th>Opened</th><td>November 2024</td></tr>
+            <tr><th>Address</th><td>Carrer de la Conca 17, S'Agaró, 17248 Girona, Spain</td></tr>
+            <tr><th>Area</th><td>5 min from Platja d'Aro, 2 min from Sant Pol Beach</td></tr>
+            <tr><th>Phone</th><td>+34 872 454 264</td></tr>
+            <tr><th>Email</th><td>hola@dirtyrabbit.es</td></tr>
+            <tr><th>Website</th><td>dirtyrabbit.es</td></tr>
+            <tr><th>Hours</th><td>Tuesday-Sunday, 08:00-15:00. Closed Monday.</td></tr>
+            <tr><th>Price range</th><td>€2.50-5.50 (drinks), €4-15 (food)</td></tr>
+            <tr><th>Capacity</th><td>~56 seats (26 indoor + ~30 terrace)</td></tr>
+            <tr><th>Payment</th><td>Cash and card</td></tr>
+            <tr><th>Languages</th><td>English, Spanish, Catalan, Polish</td></tr>
+          </tbody>
+        </table>
+
+        <h2 class="font-typewriter text-2xl">Equipment & suppliers</h2>
+        <table>
+          <tbody>
+            <tr><th>Espresso machine</th><td>La Marzocco KB90</td></tr>
+            <tr><th>Grinder</th><td>Mahlkönig</td></tr>
+            <tr><th>Water</th><td>Reverse osmosis filtration</td></tr>
+            <tr><th>Matcha</th><td>REQ Matcha — ceremonial grade, Japan</td></tr>
+            <tr><th>Chai</th><td>Awachai — organic, UK</td></tr>
+            <tr><th>Coffee</th><td>La Cabra — single-origin roasters, Copenhagen</td></tr>
+            <tr><th>Bakery</th><td>Origo Bakery — artisan sourdough, Barcelona</td></tr>
+          </tbody>
+        </table>
+
+        <h2 class="font-typewriter text-2xl">Family-friendly</h2>
+        <p>
+          High chairs, kids menu, stroller-accessible. Terrace overlooking a quiet street.
+        </p>
+
+        <h2 class="font-typewriter text-2xl">Getting there</h2>
+        <p>
+          From Platja d'Aro: 5 minutes by car on the C-253. From Girona: 35 minutes on the C-65.
+          Free public parking 50 metres away.
+        </p>
+
+        <h2 class="font-typewriter text-2xl">Profiles & reviews</h2>
+        <ul>
+          <li><a href="https://g.page/dirtyrabbitcoffee" target="_blank" rel="noopener noreferrer">Google Business Profile</a></li>
+          <li><a href="https://instagram.com/dirtyrabbitcoffee" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        </ul>
+
+        <p><em>Last updated: March 2026</em></p>
+      </div>
+    </div>
+  </article>
+</Layout>
