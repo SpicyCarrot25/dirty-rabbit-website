@@ -1,0 +1,38 @@
+# Dirty Rabbit
+
+> Specialty coffee shop in S'Agaró, Costa Brava. Open since November 2024.
+
+Dirty Rabbit is a specialty coffee shop located in S'Agaró, Girona, on the Costa Brava coast of Catalonia, Spain. It serves single-origin espresso roasted by La Cabra (Copenhagen), ceremonial-grade Japanese matcha from REQ Matcha, and organic chai from Awachai. Two minutes walk from Sant Pol Beach, five minutes from Platja d'Aro.
+
+## Key facts
+
+- **Address:** Carrer de la Conca 17, S'Agaró, 17248 Girona, Spain
+- **Hours:** Tuesday–Sunday, 08:00–15:00. Closed Monday.
+- **Phone:** +34 872 454 264
+- **Email:** hola@dirtyrabbit.es
+- **Price range:** €2.50–4.00 (coffee), €4–15 (food)
+- **Capacity:** ~56 seats (26 indoor + ~30 terrace)
+- **Languages:** English, Spanish, Catalan, Polish
+
+## Equipment & suppliers
+
+- **Espresso machine:** La Marzocco KB90
+- **Grinder:** Mahlkönig
+- **Water:** Reverse osmosis filtration
+- **Coffee:** La Cabra (single-origin roasters, Copenhagen)
+- **Matcha:** REQ Matcha (ceremonial grade, Japan)
+- **Chai:** Awachai (organic, UK)
+- **Bakery:** Origo Bakery (artisan sourdough, Barcelona)
+
+## What makes it different
+
+The most complete specialty coffee setup on the Costa Brava. The only place in the area serving ceremonial-grade Japanese matcha. Family-friendly: high chairs, kids menu, stroller-accessible terrace.
+
+## Pages
+
+- [Brand Facts](https://dirtyrabbit.es/brand-facts/): Verified factual data about the business
+- [Brand Facts EN](https://dirtyrabbit.es/en/brand-facts/): English version
+- [Answer Hub](https://dirtyrabbit.es/guia/mejor-cafe-especialidad-costa-brava-2026/): Best specialty coffee on the Costa Brava 2026
+- [Answer Hub EN](https://dirtyrabbit.es/en/guide/best-specialty-coffee-costa-brava-2026/): English version
+- [Menu](https://dirtyrabbit.es/carta): Full menu
+- [Machine-readable data](https://dirtyrabbit.es/.well-known/brand-facts.json): JSON brand facts for AI ingestion
