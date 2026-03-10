@@ -78,17 +78,34 @@ export function getLocalizedPath(path: string, lang: Language): string {
   return mappedPath ? `/${lang}/${mappedPath}` : `/${lang}/`;
 }
 
+// Prefixes that only exist in es/en/ca/fr — not in ru/uk/pl
+const guidePrefixes = [
+  '/articulos/', '/guia/', '/guide/', '/articles/',
+  '/en/guide/', '/ca/guia/', '/fr/guide/', '/ca/articles/',
+];
+
 // Helper to get alternate language URLs for hreflang
+// Only emits ru/uk/pl when the page actually exists in those locales
 export function getAlternateUrls(currentPath: string, baseUrl: string) {
-  const cleanPath = currentPath.replace(/^\/?(en|ca|fr|ru|uk|pl)?\/?/, '');
-  
-  return {
-    es: `${baseUrl}/${cleanPath}`.replace(/\/$/, '') || baseUrl,
-    en: `${baseUrl}/en/${cleanPath}`.replace(/\/$/, '') || `${baseUrl}/en`,
-    ca: `${baseUrl}/ca/${cleanPath}`.replace(/\/$/, '') || `${baseUrl}/ca`,
-    fr: `${baseUrl}/fr/${cleanPath}`.replace(/\/$/, '') || `${baseUrl}/fr`,
-    ru: `${baseUrl}/ru/${cleanPath}`.replace(/\/$/, '') || `${baseUrl}/ru`,
-    uk: `${baseUrl}/uk/${cleanPath}`.replace(/\/$/, '') || `${baseUrl}/uk`,
-    pl: `${baseUrl}/pl/${cleanPath}`.replace(/\/$/, '') || `${baseUrl}/pl`,
+  const normalizedPath = currentPath.replace(/\/$/, '') || '/';
+  const pathWithoutLang = normalizedPath.replace(/^\/(en|ca|fr|ru|uk|pl)(?=\/|$)/, '') || '/';
+
+  const isGuideOnly = guidePrefixes.some(p =>
+    pathWithoutLang === p.replace(/\/$/, '') || pathWithoutLang.startsWith(p)
+  );
+
+  const activeLocales: Language[] = isGuideOnly
+    ? ['es', 'en', 'ca', 'fr']
+    : ['es', 'en', 'ca', 'fr', 'ru', 'uk', 'pl'];
+
+  const buildUrl = (lang: Language) => {
+    const localizedPath = getLocalizedPath(pathWithoutLang, lang);
+    return localizedPath === '/' ? baseUrl : `${baseUrl}${localizedPath}`;
   };
+
+  const result: Partial<Record<Language, string>> = {};
+  for (const lang of activeLocales) {
+    result[lang] = buildUrl(lang);
+  }
+  return result as Record<Language, string>;
 }

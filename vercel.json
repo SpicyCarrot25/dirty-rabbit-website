@@ -1,5 +1,17 @@
 {
   "redirects": [
+    { "source": "/about",       "destination": "/nosotros",         "permanent": true },
+    { "source": "/ca/about",    "destination": "/ca/nosaltres",     "permanent": true },
+    { "source": "/ca/contact",  "destination": "/ca/contacte",      "permanent": true },
+    { "source": "/ca/jobs",     "destination": "/ca/feina",         "permanent": true },
+    { "source": "/ca/privacy",  "destination": "/ca/privacitat",    "permanent": true },
+    { "source": "/ca/producers", "destination": "/ca/proveidors",   "permanent": true },
+    { "source": "/fr/about",    "destination": "/fr/a-propos",      "permanent": true },
+    { "source": "/fr/carta",    "destination": "/fr/carte",         "permanent": true },
+    { "source": "/fr/jobs",     "destination": "/fr/emplois",       "permanent": true },
+    { "source": "/fr/news",     "destination": "/fr/actualites",    "permanent": true },
+    { "source": "/fr/privacy",  "destination": "/fr/confidentialite", "permanent": true },
+    { "source": "/fr/producers", "destination": "/fr/producteurs",  "permanent": true },
     { "source": "/gmb",         "destination": "https://dirtyrabbit.es/?utm_source=google&utm_medium=maps&utm_campaign=gmb-main",              "permanent": true },
     { "source": "/gmb-menu",    "destination": "https://dirtyrabbit.es/carta?utm_source=google&utm_medium=maps&utm_campaign=gmb-menu",          "permanent": true },
     { "source": "/ig",          "destination": "https://dirtyrabbit.es/?utm_source=instagram&utm_medium=social&utm_campaign=bio",               "permanent": true },
