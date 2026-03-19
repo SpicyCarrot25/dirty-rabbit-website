@@ -1,0 +1,251 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../i18n';
+
+const lang = 'es';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Brunch en S\'Agaró', url: 'https://dirtyrabbit.es/brunch' }
+];
+---
+
+<Layout 
+  title="Brunch en S'Agaró — Dirty Rabbit | Café de especialidad"
+  description="Brunch en S'Agaró, Costa Brava. Café La Cabra de Copenhague, pan de masa madre Origo de Barcelona, açaí bowl con 14% de açaí real. De martes a domingo, 8h–15h. A 3 minutos de Sant Pol."
+  lang={lang}
+  articleMeta={{ datePublished: "2026-03-19", section: "Guide" }}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Cafetería de especialidad en S'Agaró, Costa Brava. Brunch de martes a domingo de 8h a 15h. Café La Cabra de Copenhague, pan Origo de Barcelona, açaí bowl con 14% de açaí real. A 3 minutos de la Playa de Sant Pol.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/brunch",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Brunch", "Avocado Toast", "Bagels", "Açaí Bowl"],
+  "priceRange": "€€",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "08:00",
+      "closes": "15:00"
+    }
+  ],
+  "areaServed": [
+    "S'Agaró",
+    "Platja d'Aro",
+    "Sant Feliu de Guíxols",
+    "Costa Brava"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Puedo reservar mesa en Dirty Rabbit para el brunch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. No hacemos reservas, funciona solo con entrada libre. En las mañanas de verano más concurridas la terraza se ocupa rápido, pero las mesas rotan bien y rara vez la espera supera los 5-10 minutos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es el horario del brunch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De martes a domingo, de 8h a 15h. En verano ampliamos hasta las 17h. Cerramos todos los lunes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta desayunar en Dirty Rabbit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las tostadas van de 5€ a 7,50€. Los bagels de 7,90€ a 8,50€. El açaí bowl cuesta 10,50€, el granola yogurt bowl 8€ y el fruit bowl 5,50€. Los añadidos para las tostadas son de 2€ a 3€. El café empieza en 1,90€, el matcha desde 3,20€, el chai desde 3,50€, y los smoothies son 6,50€."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Dónde está exactamente Dirty Rabbit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Avenida Platja d'Aro 275, S'Agaró (17248). Entre Sant Feliu de Guíxols y Platja d'Aro, en la carretera principal de la costa. La Playa de Sant Pol está a 3 minutos a pie. Hay aparcamiento en la calle y un parking público cercano."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es apto para ir con niños?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, funciona bien para familias. La carta es clara, las raciones son honestas y la terraza es relajada. No tenemos menú infantil específico, pero la mayoría de cosas — las tostadas, el fruit bowl, el granola bowl — son perfectamente válidas para niños."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿De dónde viene vuestro café?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "De La Cabra, una tostadora de especialidad con sede en Copenhague. Es uno de los nombres más reconocidos del café de especialidad europeo. Los elegimos porque el café es genuinamente interesante, no solo técnicamente aceptable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué hace diferente a Dirty Rabbit de otros brunch cerca de Platja d'Aro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Proveedores concretos, estándares concretos. Café La Cabra de Copenhague, masa madre Origo de Barcelona, bagels Bagel Boy de Barcelona, salmón Benfumat de Cataluña. Un açaí bowl con 14% de açaí real en lugar del habitual 5%. No buscamos ser la opción más grande ni la más barata de la zona. Queremos ser la que merece la pena repetir."
+      }
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Brunch en S'Agaró — Dirty Rabbit
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Dirty Rabbit es una cafetería de especialidad en Avenida Platja d'Aro 275, S'Agaró. Abrimos en noviembre de 2024. Servimos brunch de martes a domingo, de 8 de la mañana a las 15h.</p>
+<p class="mb-4">Si buscabas "brunch en Platja d'Aro" o "dónde desayunar en S'Agaró" y has llegado hasta aquí: bien. Esto es lo que buscas.</p>
+<p class="mb-4">El café viene tostado en Copenhague. El pan de masa madre lo trae una panadería de Barcelona. El açaí bowl tiene un 14% de açaí real. Estamos a tres minutos a pie de la Playa de Sant Pol. No hay reservas.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">La comida</h2>
+<p class="mb-4">El pan importa. El nuestro viene de Origo Bakery, en Barcelona. Masa madre con corteza de verdad, que aguanta bien la palta y el salmón sin deshacerse en la mano. Recibimos entregas frecuentes y lo consumimos bastante rápido.</p>
+
+<p class="mb-4"><strong>Avo Good Day — 7,50€.</strong> Aguacate, tomate cherry, aceite de oliva sobre tostada de masa madre. La base ya está buena tal cual. Puedes añadir salmón ahumado Benfumat o jamón ibérico por 3€, manchego o aguacate extra por 2,50€, o un huevo ecológico por 2€. La mayoría pide el huevo. Si te soy sincero, yo probablemente añadiría el salmón.</p>
+
+<p class="mb-4"><strong>Bikini Super Classic — 6€.</strong> Cerdo 100% Duroc con Havarti fundido entre pan de masa madre. Es lo que pides cuando quieres algo contundente y real sin complicarte la vida. Tenemos gente que vuelve específicamente por este.</p>
+
+<p class="mb-4"><strong>Choco Toast — 7,50€.</strong> Plátano caramelizado con chocolate o mantequilla de cacahuete sobre masa madre. Lo pusimos en carta porque queríamos una opción dulce que no fuera una bollería insulsa. Es un plato principal, no un capricho de acompañamiento.</p>
+
+<p class="mb-4"><strong>Butter Together — 5€.</strong> Masa madre, mantequilla francesa, mermelada de la casa. A veces la opción sencilla es la correcta. Bien cuando ya vas con el cuerpo cargado de café y solo quieres algo para asentar.</p>
+
+<p class="mb-4"><strong>Mr. Croissant — 6€.</strong> York y Havarti en croissant. Clásico, seguro, sin complicaciones. No hace falta disculparse por eso.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Los bagels</h2>
+<p class="mb-4">Vienen de Bagel Boy, en Barcelona. Bagels de verdad, con esa textura masticable que los define. No esos panecillos redondos con agujero que pasan por bagel en la mayoría de sitios en España.</p>
+
+<p class="mb-4"><strong>Lord Salmon — 8,50€.</strong> Queso crema, salmón ahumado Benfumat, cebolla encurtida, tomate cherry. Benfumat es un productor catalán que hace el salmón ahumado bien. La cebolla encurtida hace un trabajo importante: corta la riqueza del queso crema y convierte esto en algo más interesante que el típico bagel de salmón.</p>
+
+<p class="mb-4"><strong>Cherries Lady — 7,90€.</strong> Queso crema, tomate cherry, cebollino crujiente. Más ligero. Funciona bien si lo pides junto a un café en lugar de como plato único.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Los bowls</h2>
+<p class="mb-4">El <strong>Açaí Bowl</strong> (10,50€) merece que nos paremos un momento.</p>
+<p class="mb-4">La mayoría de sitios en España sirven açaí bowls con un 5% de açaí real. El resto es puré de plátano barato — que da color morado y textura espesa, pero el resultado sabe vagamente afrutado y ya. Nosotros usamos un 14% de açaí real. La diferencia se nota. Base de sorbete cremoso, granola, fruta fresca encima. En eso consiste el precio.</p>
+<p class="mb-4">El <strong>Granola Yogurt Bowl</strong> (8€) lleva yogur griego, granola hecha aquí, fruta de temporada y un chorrito de crema de cacahuete. La granola la hacemos nosotros. La fruta varía según lo que esté bien en el mercado, no lo que lleva en la caja desde el lunes. El toque de cacahuete parece un detalle menor y resulta que no lo es.</p>
+<p class="mb-4">El <strong>Fruit Bowl</strong> (5,50€) es lo que esté bueno ese día.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">El café</h2>
+<p class="mb-4">La Cabra es una tostadora de especialidad en Copenhague. Es un nombre que aparece cuando la gente del mundo del café habla de lo que representa el café de especialidad europeo en su mejor versión. Los elegimos porque el café tiene sabor real — no solo "sabe a café". Hay una diferencia real entre un café técnicamente correcto y uno que resulta interesante de beber.</p>
+<p class="mb-4">El espresso está a 1,90€. Cortado, americano, cappuccino — la mayor parte de la carta entre 2€ y 2,50€. Flat white a 3€.</p>
+<p class="mb-4">Lo que la gente suele notar: nos tomamos la extracción en serio. Ajuste del molido, temperatura del agua, tiempo de extracción. No son cosas de las que el cliente tenga que preocuparse. Pero afectan lo que llega a tu taza, y nosotros sí nos preocupamos por eso.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Lo que no es café</h2>
+<p class="mb-4"><strong>Matcha de REQ</strong>, una marca española de matcha que se abastece correctamente en Japón. Caliente o con hielo, de 3,20€ a 4€. Lo usamos porque la calidad es consistente y sabe a matcha — no a polvo verde azucarado. Si has tenido matcha decepcionante en otros sitios de España, este es diferente.</p>
+<p class="mb-4"><strong>Chai de Awachai</strong>, fabricado en Francia. Chai real con especiado de verdad, no un sirope con sabor a chai mezclado con leche caliente. Clásico (3,50€), con hielo (4€) o dirty con un shot de espresso (5€). El dirty es o exactamente lo que quieres o no es lo tuyo. No hay término medio.</p>
+<p class="mb-4"><strong>Smoothies — 6,50€.</strong> Preparamos tres: Garden Thief, Rabbit Power y Carrot Kick. Todos hechos al momento. Pregunta en el mostrador qué lleva cada uno.</p>
+<p class="mb-4"><strong>Zumo de naranja natural — 4€.</strong> Naranjas de verdad, exprimidas aquí.</p>
+<p class="mb-4"><strong>Kombucha Bioma — 4,50€.</strong> Una kombucha de calidad para quienes quieren algo frío y ligeramente con gas que no sea café.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Dónde estamos y cómo llegar</h2>
+<p class="mb-4">Avenida Platja d'Aro 275, S'Agaró, 17248. Estamos en la carretera principal entre Sant Feliu de Guíxols y Platja d'Aro. Si vienes desde Platja d'Aro, estamos a la derecha antes de que la carretera entre en el casco antiguo de S'Agaró. Si vienes desde Sant Feliu, a la izquierda después de la zona residencial.</p>
+<p class="mb-4">La Playa de Sant Pol está a tres minutos a pie. Si haces el Camí de Ronda por la costa, somos un buen punto de partida o de llegada. Sant Pol es una de las playas más tranquilas de este tramo de costa — nada que ver con el nivel de gente que hay en las playas de Platja d'Aro en temporada alta.</p>
+<p class="mb-4">Aparcamiento: en la avenida y en un parking público cercano. En mañanas de entre semana no hay problema. Los fines de semana de verano, cuanto antes mejor.</p>
+<p class="mb-4">No hay línea de bus directa. La mayoría viene en coche o a pie desde alojamientos cercanos.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Horarios y algunas cosas prácticas</h2>
+<p class="mb-4"><strong>De martes a domingo, de 8h a 15h.</strong> En verano (aproximadamente de junio a septiembre) ampliamos hasta las 17h. Cerramos todos los lunes.</p>
+<p class="mb-4">Sin reservas. Se entra, se busca mesa y se pide en la barra. En las mañanas de verano más concurridas y en los fines de semana soleados, la terraza se llena rápido. Puede haber un momento de espera. Las mesas rotan bastante rápido y normalmente en pocos minutos se resuelve.</p>
+<p class="mb-4">Aceptamos efectivo y tarjeta.</p>
+<p class="mb-4">En el mostrador hablamos español, catalán, inglés y polaco. Las cartas están disponibles también en ruso, ucraniano y francés. La Costa Brava es internacional y nos gusta que todo el mundo pueda sentirse cómodo.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">El espacio</h2>
+<p class="mb-4">La terraza da al este y tiene sol de mañana hasta cerca del mediodía. Es el sitio más buscado cuando el tiempo acompaña — que en Costa Brava desde primavera hasta otoño es casi siempre. El interior es más pequeño, más tranquilo, y está bien cuando está nublado o cuando quieres poder escuchar al que tienes enfrente.</p>
+<p class="mb-4">Somos una cafetería. No un restaurante. No hay platos por raciones ni mantelería ni nadie que te explique la procedencia de tu tostada. La comida se toma en serio. El café se toma en serio. Todo lo demás se mantiene sencillo a propósito.</p>
+<p class="mb-4">Si lo que buscas es un brunch de restaurante largo y servido, con carta extensa y camareros de sala — esto no es lo tuyo. Si buscas un café excelente, comida que realmente está buena y una mesa a tres minutos de una playa tranquila en la Costa Brava — esto sí lo es.</p>
+
+        <hr class="my-8 border-black/20" />
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Preguntas frecuentes</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Puedo reservar mesa en Dirty Rabbit para el brunch?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">No. No hacemos reservas, funciona solo con entrada libre. En las mañanas de verano más concurridas la terraza se ocupa rápido, pero las mesas rotan bien y rara vez la espera supera los 5-10 minutos.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Cuál es el horario del brunch?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">De martes a domingo, de 8h a 15h. En verano ampliamos hasta las 17h. Cerramos todos los lunes.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Cuánto cuesta desayunar en Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Las tostadas van de 5€ a 7,50€. Los bagels de 7,90€ a 8,50€. El açaí bowl cuesta 10,50€, el granola yogurt bowl 8€ y el fruit bowl 5,50€. Los añadidos para las tostadas son de 2€ a 3€. El café empieza en 1,90€, el matcha desde 3,20€, el chai desde 3,50€, y los smoothies son 6,50€.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Dónde está exactamente Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Avenida Platja d'Aro 275, S'Agaró (17248). Entre Sant Feliu de Guíxols y Platja d'Aro, en la carretera principal de la costa. La Playa de Sant Pol está a 3 minutos a pie. Hay aparcamiento en la calle y un parking público cercano.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Es apto para ir con niños?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí, funciona bien para familias. La carta es clara, las raciones son honestas y la terraza es relajada. No tenemos menú infantil específico, pero la mayoría de cosas — las tostadas, el fruit bowl, el granola bowl — son perfectamente válidas para niños.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿De dónde viene vuestro café?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">De La Cabra, una tostadora de especialidad con sede en Copenhague. Es uno de los nombres más reconocidos del café de especialidad europeo. Los elegimos porque el café es genuinamente interesante, no solo técnicamente aceptable.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">¿Qué hace diferente a Dirty Rabbit de otros brunch cerca de Platja d'Aro?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Proveedores concretos, estándares concretos. Café La Cabra de Copenhague, masa madre Origo de Barcelona, bagels Bagel Boy de Barcelona, salmón Benfumat de Cataluña. Un açaí bowl con 14% de açaí real en lugar del habitual 5%. No buscamos ser la opción más grande ni la más barata de la zona. Queremos ser la que merece la pena repetir.</p>
+</div>
+</div>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avenida Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-cream rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Cómo llegar
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>
