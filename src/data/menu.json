@@ -1,11 +1,11 @@
 {
   "coffee": [
-    { "name": "Espresso", "price": "1.90", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
-    { "name": "Americano", "price": "2.40", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
-    { "name": "Cortado", "price": "2.10", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
-    { "name": "Café con Leche", "price": "2.00", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
-    { "name": "Latte", "price": "2.50", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots", "fr": "2 shots" } },
-    { "name": "Flat White", "price": "3.00", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots", "fr": "2 shots" } },
+    { "name": "Espresso", "price": "1.90 / 2.40", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
+    { "name": "Americano", "price": "2.10", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
+    { "name": "Cortado", "price": "2.00", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
+    { "name": "Café con Leche", "price": "2.50", "desc": { "es": "La Cabra / Etiopía", "en": "La Cabra / Ethiopia", "ca": "La Cabra / Etiòpia", "fr": "La Cabra / Éthiopie" } },
+    { "name": "Latte", "price": "3.00", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots", "fr": "2 shots" } },
+    { "name": "Flat White", "price": "2.90", "desc": { "es": "2 shots", "en": "2 shots", "ca": "2 shots", "fr": "2 shots" } },
     { "name": "Batch Brew L / XL", "price": "2.5 / 3", "desc": { "es": "Honduras", "en": "Honduras", "ca": "Hondures", "fr": "Honduras" } },
     { "name": "Puchero", "price": "+0", "desc": { "es": "Decaf · tostado por Puchero", "en": "Decaf · roasted by Puchero", "ca": "Decaf · torrat per Puchero", "fr": "Décaféiné · torréfié par Puchero" } }
   ],
