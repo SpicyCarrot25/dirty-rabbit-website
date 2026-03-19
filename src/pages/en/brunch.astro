@@ -1,0 +1,263 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getTranslations, getLocalizedPath } from '../../i18n';
+
+const lang = 'en';
+const t = getTranslations(lang);
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: "Brunch in S'Agaró", url: 'https://dirtyrabbit.es/en/brunch' }
+];
+---
+
+<Layout 
+  title="Brunch in S'Agaró — Dirty Rabbit | Specialty Coffee Shop"
+  description="Brunch in S'Agaró, Costa Brava. La Cabra coffee from Copenhagen, Origo sourdough from Barcelona, açaí bowl with 14% real açaí. Tuesday to Sunday, 8am–3pm. 3 minutes from Sant Pol Beach."
+  lang={lang}
+  articleMeta={{ datePublished: "2026-03-19", section: "Guide" }}
+  breadcrumbs={breadcrumbs}>
+  <Fragment slot="head">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
+  "name": "Dirty Rabbit",
+  "description": "Specialty coffee shop in S'Agaró, Costa Brava. Brunch Tuesday to Sunday, 8am to 3pm. La Cabra coffee from Copenhagen, Origo sourdough from Barcelona, açaí bowl with 14% real açaí. 3 minutes from Sant Pol Beach.",
+  "foundingDate": "2024-11-01",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.7882,
+    "longitude": 3.0323
+  },
+  "url": "https://dirtyrabbit.es/en/brunch",
+  "telephone": "+34872454264",
+  "servesCuisine": ["Specialty Coffee", "Brunch", "Avocado Toast", "Bagels", "Açaí Bowl"],
+  "priceRange": "€€",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "08:00",
+      "closes": "15:00"
+    }
+  ],
+  "areaServed": [
+    "S'Agaró",
+    "Platja d'Aro",
+    "Sant Feliu de Guíxols",
+    "Costa Brava"
+  ]
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I book a table at Dirty Rabbit for brunch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We don't take reservations — it's walk-in only. On busy summer mornings, the terrace fills up quickly, but tables turn over fast and there's rarely a wait longer than 5-10 minutes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the brunch hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tuesday through Sunday, 8am to 3pm. In summer we extend to 5pm. Closed every Monday."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does brunch cost at Dirty Rabbit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Toasts run €5 to €7.50. Bagels are €7.90 to €8.50. The açaí bowl is €10.50, the granola yogurt bowl is €8, and the fruit bowl is €5.50. Add-ons for toasts are €2 to €3 each. Coffee starts at €1.90, matcha from €3.20, chai from €3.50, smoothies are €6.50."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where exactly is Dirty Rabbit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Avinguda Platja d'Aro 275, S'Agaró (17248). Between Sant Feliu de Guíxols and Platja d'Aro on the main coastal road. Sant Pol Beach is a 3-minute walk. There's parking on the street and a public lot nearby."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it family-friendly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, it works well for families. The menu is straightforward, portions are honest, and the terrace is relaxed. We don't have a specific kids' menu, but most things — the toasties, the fruit bowl, the granola bowl — work well for children."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does your coffee come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "La Cabra, a specialty roaster based in Copenhagen. They're one of the more respected names in European specialty coffee. We chose them because the coffee is genuinely interesting, not just technically adequate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you serve food all day or just in the morning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Same menu all day. During summer when we stay open until 5pm, you can order the full brunch menu through the afternoon. We don't switch to a lunch menu or evening menu — it's brunch from open to close."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Dirty Rabbit different from other brunch spots near Platja d'Aro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Specific suppliers, specific standards. La Cabra coffee from Copenhagen, Origo sourdough from Barcelona, Bagel Boy bagels from Barcelona, Benfumat salmon from Catalonia. An açaí bowl with 14% real açaí instead of the usual 5%. We're not trying to be the biggest or cheapest option in the area. We're trying to be the one worth going back to."
+      }
+    }
+  ]
+}
+    </script>
+  </Fragment>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">DIRTY RABBIT · S'AGARÓ</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Brunch in S'Agaró — Dirty Rabbit
+        </h1>
+      </header>
+
+      <div class="prose prose-lg max-w-none font-mono leading-relaxed">
+
+<p class="mb-4">Dirty Rabbit is a specialty coffee shop at Avinguda Platja d'Aro 275, S'Agaró. We opened in November 2024. We serve brunch Tuesday through Sunday, from 8 in the morning until 3pm.</p>
+<p class="mb-4">If you're looking for "brunch near Platja d'Aro" and ended up here: good. This is the place.</p>
+<p class="mb-4">The coffee is roasted in Copenhagen. The sourdough comes from a bakery in Barcelona. The açaí bowl has 14% real açaí (most places use 5% and fill the rest with banana purée). We're three minutes on foot from Sant Pol Beach. We don't take reservations.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">The food</h2>
+<p class="mb-4">The bread matters. Ours comes from Origo Bakery in Barcelona. Proper sourdough with a crust that holds up to avocado and doesn't collapse into mush when you pick it up. We get regular deliveries and we go through a lot of it.</p>
+
+<p class="mb-4"><strong>Avo Good Day — €7.50.</strong> Avocado, cherry tomato, olive oil on toasted sourdough. The base is good on its own. Add Benfumat smoked salmon or Ibérico ham for €3, Manchego or extra avocado for €2.50, or an organic egg for €2. Most people add the egg. Honestly, we'd probably add the salmon.</p>
+
+<p class="mb-4"><strong>Bikini Super Classic — €6.</strong> 100% Duroc pork with melted Havarti on sourdough. This is what you order when you want something real without overthinking it. People come back for it specifically.</p>
+
+<p class="mb-4"><strong>Choco Toast — €7.50.</strong> Caramelized banana with chocolate or peanut butter on sourdough. We added it because we wanted a sweet option that wasn't a limp pastry. It holds its own as a main order, not just a side thought.</p>
+
+<p class="mb-4"><strong>Butter Together — €5.</strong> Sourdough, French butter, house jam. Sometimes the simple option is the right one. Good when you're already full of coffee and want just enough food.</p>
+
+<p class="mb-4"><strong>Mr. Croissant — €6.</strong> York ham and Havarti in a croissant. Familiar, solid, reliable. No apologies for that.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">The bagels</h2>
+<p class="mb-4">These come from Bagel Boy in Barcelona. Real chewy bagels — not the bread-roll imposters that pass for bagels at most places in Spain.</p>
+
+<p class="mb-4"><strong>Lord Salmon — €8.50.</strong> Cream cheese, Benfumat smoked salmon, pickled onion, cherry tomato. Benfumat is a Catalan producer doing smoked salmon properly. The pickled onion does a lot of work here — cuts through the richness of the cream cheese in a way that makes this more interesting than your average lox bagel.</p>
+
+<p class="mb-4"><strong>Cherries Lady — €7.90.</strong> Cream cheese, cherry tomato, crispy chive. Lighter option. Works well if you're having it alongside coffee rather than as your main thing.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">The bowls</h2>
+<p class="mb-4">The <strong>Açaí Bowl</strong> (€10.50) gets a longer explanation because it's worth it.</p>
+<p class="mb-4">Most places in Spain serving açaí bowls use around 5% actual açaí. They get the purple color and thick texture from cheap banana purée, and you end up paying €10 for something that tastes vaguely fruity. Ours uses 14% real açaí. You can taste the difference. Creamy sorbet base, granola, fresh fruit on top. That's what you're paying for.</p>
+<p class="mb-4">The <strong>Granola Yogurt Bowl</strong> (€8) is Greek yogurt with house-made granola, seasonal fruit, and a peanut drizzle. The granola is ours — we make it here. The seasonal fruit changes depending on what's actually good, not what's been in a box since Monday. The peanut drizzle sounds like a small thing and it's not.</p>
+<p class="mb-4">The <strong>Fruit Bowl</strong> (€5.50) is whatever's good from the market that day.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">The coffee</h2>
+<p class="mb-4">La Cabra is a specialty roaster in Copenhagen. They're one of those roasters that comes up when people in the coffee world talk about what European specialty coffee actually looks like at its best. We chose them because the coffee has real flavor — not just "coffee-flavored." There's a meaningful difference between coffee that's technically correct and coffee that's actually interesting to drink.</p>
+<p class="mb-4">Espresso is €1.90. Cortado, americano, cappuccino — most of the menu sits between €2 and €2.50. Flat white is €3.</p>
+<p class="mb-4">One thing that gets noticed: we take the extraction seriously. Grind settings, water temperature, pull time. These aren't things customers need to care about. But they affect what ends up in your cup and we care about them so you don't have to.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Not coffee</h2>
+<p class="mb-4"><strong>REQ matcha</strong> comes from Barcelona. Hot or iced, €3.20 to €4. REQ is a Spanish matcha brand that actually sources properly from Japan. We use them because the quality is consistent and it tastes like matcha — not like green-tinted sweetened powder. If you've had disappointing matcha elsewhere in Spain, this is different.</p>
+<p class="mb-4"><strong>Awachai chai</strong> is from France. This is real chai made with proper spicing, not a chai-flavored syrup added to hot milk. Classic (€3.50), iced (€4), or dirty with a shot of espresso (€5). The dirty version is either exactly what you want or not your thing at all. No in between.</p>
+<p class="mb-4"><strong>Smoothies — €6.50.</strong> We make three: Garden Thief, Rabbit Power, and Carrot Kick. All made fresh to order. Ask at the counter what's in each one.</p>
+<p class="mb-4"><strong>Fresh OJ — €4.</strong> Real oranges, pressed here.</p>
+<p class="mb-4"><strong>Kombucha Bioma — €4.50.</strong> Good-quality kombucha for people who want something cold and lightly fizzy that isn't coffee.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Where to find us and how to get there</h2>
+<p class="mb-4">Avinguda Platja d'Aro 275, S'Agaró, 17248. We're on the main road between Sant Feliu de Guíxols and Platja d'Aro. Coming from Platja d'Aro, we're on the right before the road curves into the older part of S'Agaró. Coming from Sant Feliu, we're on the left after the residential area opens up.</p>
+<p class="mb-4">Sant Pol Beach is about three minutes on foot. If you're walking the Camí de Ronda along the coast, we're a good spot to start or end. The beach is one of the nicer ones on this stretch of coast and it's rarely as busy as the beaches right in Platja d'Aro.</p>
+<p class="mb-4">Parking: street parking on the avenue and a public lot nearby. No problem on weekday mornings. Summer weekends, earlier is better.</p>
+<p class="mb-4">There's no direct bus route here. Most people come by car or on foot from nearby accommodation.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Hours and a few practical things</h2>
+<p class="mb-4"><strong>Tuesday through Sunday, 8am to 3pm.</strong> In summer (roughly June to September), we extend to 5pm. Closed every Monday.</p>
+<p class="mb-4">No reservations. Walk in, find a table, order at the counter. On peak summer mornings and sunny weekends, the terrace fills up fast. There might be a short wait. We turn tables fairly quickly and it's usually fine within a few minutes.</p>
+<p class="mb-4">Cash and card both work.</p>
+<p class="mb-4">At the counter we speak Spanish, Catalan, English, and Polish. Menus are available in Russian, Ukrainian, and French. The Costa Brava is international and we try to be useful to everyone.</p>
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">The space</h2>
+<p class="mb-4">The terrace faces east and gets morning light through to about midday. That's the most popular spot when the weather cooperates, which in Costa Brava from spring through autumn is most of the time. Inside is smaller, quieter, and comfortable when it's overcast or you want to actually hear the person across from you.</p>
+<p class="mb-4">We're a coffee shop. Not a restaurant. There are no courses, no tablecloths, no one describing the provenance of your toast at length. The food is taken seriously. The coffee is taken seriously. The whole thing is kept simple on purpose.</p>
+<p class="mb-4">If you want a long, leisurely restaurant brunch with service and a full menu, this isn't it. If you want excellent coffee, food that's actually good, and a table three minutes from a quiet Catalan beach — this is it.</p>
+
+        <hr class="my-8 border-black/20" />
+
+<h2 class="font-typewriter text-2xl md:text-3xl mb-8 mt-16">Frequently asked questions</h2>
+<div class="space-y-6">
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Can I book a table at Dirty Rabbit for brunch?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">No. We don't take reservations — it's walk-in only. On busy summer mornings, the terrace fills up quickly, but tables turn over fast and there's rarely a wait longer than 5-10 minutes.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">What are the brunch hours?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Tuesday through Sunday, 8am to 3pm. In summer we extend to 5pm. Closed every Monday.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">How much does brunch cost at Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Toasts run €5 to €7.50. Bagels are €7.90 to €8.50. The açaí bowl is €10.50, the granola yogurt bowl is €8, and the fruit bowl is €5.50. Add-ons for toasts are €2 to €3 each. Coffee starts at €1.90, matcha from €3.20, chai from €3.50, smoothies are €6.50.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Where exactly is Dirty Rabbit?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Avinguda Platja d'Aro 275, S'Agaró (17248). Between Sant Feliu de Guíxols and Platja d'Aro on the main coastal road. Sant Pol Beach is a 3-minute walk. There's parking on the street and a public lot nearby.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Is it family-friendly?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Yes, it works well for families. The menu is straightforward, portions are honest, and the terrace is relaxed. We don't have a specific kids' menu, but most things — the toasties, the fruit bowl, the granola bowl — work well for children.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Where does your coffee come from?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">La Cabra, a specialty roaster based in Copenhagen. They're one of the more respected names in European specialty coffee. We chose them because the coffee is genuinely interesting, not just technically adequate.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">Do you serve food all day or just in the morning?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Same menu all day. During summer when we stay open until 5pm, you can order the full brunch menu through the afternoon. We don't switch to a lunch menu or evening menu — it's brunch from open to close.</p>
+</div>
+<div class="border-b border-black/10 pb-5">
+  <p class="font-typewriter font-bold mb-2">What makes Dirty Rabbit different from other brunch spots near Platja d'Aro?</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed">Specific suppliers, specific standards. La Cabra coffee from Copenhagen, Origo sourdough from Barcelona, Bagel Boy bagels from Barcelona, Benfumat salmon from Catalonia. An açaí bowl with 14% real açaí instead of the usual 5%. We're not trying to be the biggest or cheapest option in the area. We're trying to be the one worth going back to.</p>
+</div>
+</div>
+
+        <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+          <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
+          <p class="font-mono mb-6">
+            Avinguda Platja d'Aro 275, S'Agaró<br>
+            +34 872 454 264
+          </p>
+          <a 
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer" 
+            class="inline-block font-typewriter px-8 py-3 bg-red text-cream rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+</Layout>
