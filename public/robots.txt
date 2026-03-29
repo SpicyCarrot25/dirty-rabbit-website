@@ -18,6 +18,9 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 # All other bots
 User-agent: *
 Allow: /

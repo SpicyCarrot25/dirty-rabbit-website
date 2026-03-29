@@ -14,6 +14,10 @@ export default defineConfig({
   site: 'https://dirtyrabbit.es',
   integrations: [
     sitemap({
+      serialize(item) {
+        item.lastmod = new Date('2026-03-28').toISOString();
+        return item;
+      },
       filter: (page) => {
         const url = new URL(page);
         return !sitemapExcludedPaths.has(url.pathname.replace(/\/$/, '') || '/');
