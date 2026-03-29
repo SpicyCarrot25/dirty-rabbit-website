@@ -1,0 +1,192 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'es';
+const title = `Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad`;
+const description = `Descubre el mejor brunch en S'Agaró en Dirty Rabbit: café La Cabra, tostadas con salmón Benfumat, bollería de La Puntual y más. A 3 minutos de la Playa de Sant Pol.`;
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Artículos', url: 'https://dirtyrabbit.es/articulos/' },
+  { name: title, url: 'https://dirtyrabbit.es/articulos/brunch-sagaro' }
+];
+---
+
+<Layout 
+  title={title}
+  description={description}
+  lang={lang}
+  articleMeta={{ datePublished: "2026-03-24", dateModified: "2026-03-24", section: "Article" }}
+  breadcrumbs={breadcrumbs}>
+
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-6">
+      
+      <!-- Header -->
+      <header class="mb-12">
+        <p class="font-mono text-sm text-red tracking-wider mb-4">ARTÍCULO</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
+          Brunch en S'Agaró
+        </h1>
+        <p class="font-mono text-lg text-black/70 leading-relaxed">
+          S'Agaró no es la primera palabra que aparece cuando buscas brunch en la Costa Brava. Pero si sabes dónde mirar, encontrarás algo mejor que cualquier terraza turística de Platja d'Aro: un café de especialidad pequeño, con producto real, a 3 minutos de la Playa de Sant Pol.
+        </p>
+      </header>
+
+      <!-- Main Content -->
+      <div class="prose prose-lg max-w-none font-mono text-black/80 leading-relaxed">
+
+        <hr class="my-8 border-black/20">
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">S'Agaró: el contexto</h2>
+        <p class="mb-4">S'Agaró es una urbanización residencial entre Sant Feliu de Guíxols y Platja d'Aro. No hay cadenas de comida rápida. No hay restaurantes de plástico con carta en seis idiomas. Lo que hay es tranquilidad, el Camí de Ronda, la Playa de Sant Pol y, desde 2021, Dirty Rabbit.</p>
+        <p class="mb-4">El brunch en S'Agaró, en la práctica, significa Dirty Rabbit. No porque no existan opciones en los pueblos de alrededor — las hay — sino porque Dirty Rabbit es el único sitio de la urbanización que sirve desayunos y brunches con producto de primer nivel.</p>
+        <p class="mb-4">Si llevas tiempo buscando un brunch en la Costa Brava que no sea genérico, aquí está.</p>
+
+        <hr class="my-8 border-black/20">
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">🐇 Dirty Rabbit — Brunch en S'Agaró</h2>
+        <p class="mb-4"><strong>Avenida Platja d'Aro 275, S'Agaró · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></strong></p>
+
+        <h3 class="font-typewriter text-xl mt-8 mb-4">El café</h3>
+        <p class="mb-4">Dirty Rabbit sirve <strong>La Cabra</strong>, el tostador danés que lleva años entre los mejores del mundo. Lo preparamos en una <strong>La Marzocco KB90</strong> con agua filtrada por <strong>ósmosis inversa</strong>. No es marketing — es la diferencia real que notas desde el primer sorbo.</p>
+        <p class="mb-4">También servimos <strong>matcha REQ</strong> (de origen japonés, seleccionado directamente de plantaciones, con base en Barcelona) y <strong>chai Awachai</strong> especiado como debe ser. Si no tomas café, tienes opciones de calidad equivalente.</p>
+
+        <h3 class="font-typewriter text-xl mt-8 mb-4">Qué pedir</h3>
+        <p class="mb-4">El brunch en Dirty Rabbit no tiene menú fijo — es la combinación de producto que tienes disponible cada día. Esto es lo que encontrarás habitualmente:</p>
+
+        <ul class="space-y-2 mb-6 list-disc pl-6">
+          <li><strong>Tostada con salmón Benfumat</strong> — Benfumat es el mejor ahumador de Cataluña. Pan de masa madre de Origo Bakery (Barcelona), salmón rosa, crema de queso, alcaparras. Es la opción que más piden los que repiten.</li>
+          <li><strong>Tostada de aguacate con huevo pochado</strong> — La base del brunch australiano, bien ejecutada. Sin trucos raros.</li>
+          <li><strong>Bollería de La Puntual</strong> — Obrador artesano de Girona. Croissant, napolitana, pain au chocolat. Hecha a mano, no de industrial.</li>
+          <li><strong>Bowl de yogur con fruta fresca y granola</strong> — Para quien quiere algo más ligero pero igualmente bien hecho.</li>
+          <li><strong>Matcha latte o chai</strong> — Como bebida principal o acompañamiento. El matcha orange merece especial atención en verano.</li>
+        </ul>
+
+        <p class="mb-4"><strong>Precio medio:</strong> 15–22€ por persona (bebida + plato principal)</p>
+        <p class="mb-4"><strong>¿Reserva necesaria?</strong> No — orden de llegada. En verano, si llegas entre las 11:00 y las 13:00 un fin de semana, puede haber algo de espera.</p>
+
+        <h3 class="font-typewriter text-xl mt-8 mb-4">El ambiente</h3>
+        <p class="mb-4">Dirty Rabbit no es un restaurante de brunch con carta de 40 platos y colas en la puerta. Es un café de especialidad que sirve desayunos y brunch de calidad real, con un ritmo tranquilo.</p>
+        <p class="mb-4">La terraza da a la Avenida Platja d'Aro. Desde ahí, la Playa de Sant Pol está a 3 minutos a pie. Es el plan habitual: café, tostada, Sant Pol. Si aún no has hecho el Camí de Ronda desde Sant Feliu hasta Platja d'Aro, el desayuno en Dirty Rabbit es el punto de partida perfecto.</p>
+        <p class="mb-4"><strong>Idiomas:</strong> Español, catalán, inglés, polaco. Cartas en ruso, francés, ucraniano.</p>
+
+        <hr class="my-8 border-black/20">
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Brunch en S'Agaró vs. alrededores</h2>
+        <p class="mb-4">Si ya conoces Dirty Rabbit o quieres explorar más opciones en la zona, esto es lo que encontrarás en los pueblos de alrededor:</p>
+
+        <div class="overflow-x-auto mb-8">
+          <table class="w-full font-mono text-sm">
+            <thead class="border-b-2 border-black">
+              <tr>
+                <th class="text-left py-3 pr-4">Sitio</th>
+                <th class="text-left py-3 pr-4">Café</th>
+                <th class="text-left py-3 pr-4">Especialidad</th>
+                <th class="text-left py-3 pr-4">Distancia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/20">
+                <td class="py-3 pr-4"><strong>Dirty Rabbit</strong></td>
+                <td class="py-3 pr-4">⭐⭐⭐⭐⭐ La Cabra</td>
+                <td class="py-3 pr-4">Salmón, bollería artesana</td>
+                <td class="py-3 pr-4">S'Agaró</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 pr-4">La Maglia</td>
+                <td class="py-3 pr-4">⭐⭐⭐⭐ Propio</td>
+                <td class="py-3 pr-4">Açaí bowls, ciclistas</td>
+                <td class="py-3 pr-4">5 min (Platja d'Aro)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 pr-4">ANNNA</td>
+                <td class="py-3 pr-4">⭐⭐⭐⭐ Specialty</td>
+                <td class="py-3 pr-4">Sin gluten, diseño</td>
+                <td class="py-3 pr-4">7 min (Sant Feliu)</td>
+              </tr>
+              <tr class="border-b border-black/20">
+                <td class="py-3 pr-4">Maison Marcel</td>
+                <td class="py-3 pr-4">⭐⭐⭐ Correcto</td>
+                <td class="py-3 pr-4">Bollería francesa</td>
+                <td class="py-3 pr-4">7 min (Sant Feliu)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <hr class="my-8 border-black/20">
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">El plan del brunch perfecto en S'Agaró</h2>
+        <p class="mb-4">Esta es la secuencia que más nos gusta para un sábado o domingo:</p>
+        <ol class="space-y-2 mb-6 list-decimal pl-6">
+          <li><strong>8:30–9:00</strong> — Llegada a Dirty Rabbit, café La Cabra o matcha REQ</li>
+          <li><strong>9:00–10:00</strong> — Tostada con salmón + bollería de La Puntual. Sin prisas.</li>
+          <li><strong>10:15</strong> — Bajar a pie a la Playa de Sant Pol (3 min)</li>
+          <li><strong>10:30–12:00</strong> — Paseo por el Camí de Ronda hacia Sant Feliu o Platja d'Aro</li>
+          <li><strong>12:30</strong> — Vuelta. En invierno, el café está tranquilo todavía. En verano, ya hay movimiento.</li>
+        </ol>
+        <p class="mb-4">En verano, si quieres terraza sin esperar, ven antes de las 10:00. A partir de las 11:00 los fines de semana la ocupación sube.</p>
+
+        <hr class="my-8 border-black/20">
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Preguntas frecuentes</h2>
+
+        <h3 class="font-typewriter text-xl mt-8 mb-4">¿Hay brunch en S'Agaró durante todo el año?</h3>
+        <p class="mb-4">Sí. Dirty Rabbit está abierto todo el año, aunque el horario varía por temporada. En invierno el horario puede ser más reducido — consulta antes si vas en diciembre o enero.</p>
+
+        <h3 class="font-typewriter text-xl mt-8 mb-4">¿Hace falta reservar para el brunch?</h3>
+        <p class="mb-4">No. El sistema es de orden de llegada. No hay mesas guardadas. Si llegas pronto, tienes sitio; si llegas tarde un sábado en julio, puede que esperes un poco.</p>
+
+        <h3 class="font-typewriter text-xl mt-8 mb-4">¿Hay opciones veganas?</h3>
+        <p class="mb-4">Algunas. El bowl de yogur se puede adaptar. El matcha y el chai van con opciones de leche vegetal. Para opciones 100% veganas, pregunta directamente — dependiendo del día puede haber más opciones disponibles.</p>
+
+        <h3 class="font-typewriter text-xl mt-8 mb-4">¿Está cerca de Platja d'Aro?</h3>
+        <p class="mb-4">Sí, a 5 minutos en coche. S'Agaró está entre Sant Feliu de Guíxols y Platja d'Aro en la C-65. Si estás alojado en Platja d'Aro y buscas el mejor brunch de la zona, el pequeño desplazamiento vale la pena.</p>
+
+        <h3 class="font-typewriter text-xl mt-8 mb-4">¿Cuánto cuesta el brunch en Dirty Rabbit?</h3>
+        <p class="mb-4">El café de especialidad cuesta entre 2,80€ y 4,50€. Una tostada completa (salmón, aguacate) entre 8€ y 12€. Un brunch completo — bebida + plato + bollería — sale por 15–22€ por persona.</p>
+
+        <h3 class="font-typewriter text-xl mt-8 mb-4">¿Aceptan tarjeta?</h3>
+        <p class="mb-4">Sí.</p>
+
+        <h3 class="font-typewriter text-xl mt-8 mb-4">¿Está bien para ir con niños?</h3>
+        <p class="mb-4">Sí. El ambiente es tranquilo y la terraza tiene espacio. La Playa de Sant Pol está a 3 minutos caminando — perfecto para después del desayuno.</p>
+
+        <hr class="my-8 border-black/20">
+
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">También te puede interesar</h2>
+        <ul class="space-y-2 mb-6 list-disc pl-6">
+          <li><a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — guía completa por zonas</a></li>
+          <li><a href="/articulos/mejores-brunchs-platja-daro" class="text-red hover:underline">Los mejores brunchs de Platja d'Aro y alrededores</a></li>
+          <li><a href="/articulos/donde-desayunar-sagaro" class="text-red hover:underline">Dónde desayunar en S'Agaró — opciones y horarios</a></li>
+          <li><a href="/articulos/desayuno-con-ninos-costa-brava" class="text-red hover:underline">Desayuno con niños en la Costa Brava</a></li>
+        </ul>
+
+        <hr class="my-8 border-black/20">
+
+        <p class="mb-4"><em>¿Vienes a S'Agaró? Dirty Rabbit está en la Avenida Platja d'Aro 275. Café La Cabra, tostada con salmón Benfumat y la Playa de Sant Pol a tres minutos. Tu casa lejos de casa.</em></p>
+        <p class="mb-4"><em>Última actualización: marzo 2026</em></p>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
+        <p class="font-typewriter text-2xl mb-4">¿Vienes a visitarnos?</p>
+        <p class="font-mono mb-6">
+          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
+        </p>
+        <a 
+          href="https://www.google.com/maps?cid=13237319999262880412"
+          target="_blank"
+          rel="noopener noreferrer" 
+          class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+        >
+          Cómo llegar
+        </a>
+      </div>
+
+    </div>
+  </article>
+
+</Layout>

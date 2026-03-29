@@ -1,0 +1,246 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getLocalizedPath } from '../i18n';
+
+const lang = 'es';
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: "Café de especialidad en S'Agaró", url: 'https://dirtyrabbit.es/cafe-especialidad-sagaro' }
+];
+
+const faqItems = [
+  {
+    question: "¿Dónde está Dirty Rabbit en S'Agaró?",
+    answer: "Estamos en Avinguda Platja d'Aro 275, S'Agaró 17248, en la Costa Brava, a pocos minutos de la Platja de Sant Pol."
+  },
+  {
+    question: "¿Qué café puedo pedir en Dirty Rabbit?",
+    answer: "Preparamos espresso, americano, flat white, cortado, café con leche y café de filtro de especialidad, además de otras bebidas de temporada."
+  },
+  {
+    question: "¿Tenéis WiFi y terraza?",
+    answer: "Sí. Tenemos WiFi y terraza, así que puedes pasar a tomar café con calma, trabajar un rato o hacer una parada antes o después de la playa."
+  },
+  {
+    question: "¿Hay aparcamiento cerca?",
+    answer: "Sí. Hay aparcamiento en calles cercanas y en la zona de S'Agaró y Sant Pol. En temporada alta conviene venir con algo de margen."
+  },
+  {
+    question: "¿Por qué Dirty Rabbit es una buena opción si busco café de especialidad cerca de mí?",
+    answer: "Porque estamos realmente en S'Agaró, trabajamos con café trazable de proveedores nombrados, lo extraemos en una La Marzocco KB90 y lo servimos con un estándar de barra pensado para café de especialidad."
+  }
+];
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://dirtyrabbit.es/cafe-especialidad-sagaro#business",
+  "name": "Dirty Rabbit Specialty Coffee",
+  "url": "https://dirtyrabbit.es/cafe-especialidad-sagaro",
+  "telephone": "+34 872 454 264",
+  "email": "hola@dirtyrabbit.es",
+  "description": "Café de especialidad en S'Agaró, Costa Brava. Espresso, flat white, cortado, café con leche y filtro preparados en La Marzocco KB90 con café de origen trazable.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda Platja d'Aro 275",
+    "addressLocality": "S'Agaró",
+    "addressRegion": "Girona",
+    "postalCode": "17248",
+    "addressCountry": "ES"
+  },
+  "servesCuisine": ["Café de especialidad", "Coffee shop"],
+  "priceRange": "€€",
+  "areaServed": ["S'Agaró", "Platja d'Aro", "Costa Brava"],
+  "hasMap": "https://www.google.com/maps?cid=13237319999262880412",
+  "amenityFeature": [
+    { "@type": "LocationFeatureSpecification", "name": "Terraza", "value": true },
+    { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true }
+  ]
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqItems.map((item) => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer
+    }
+  }))
+};
+---
+
+<Layout
+  title="Café de Especialidad en S'Agaró | Dirty Rabbit — Costa Brava"
+  description="Café de especialidad en S'Agaró, Costa Brava. Dirty Rabbit sirve espresso, flat white y filtro con origen trazable, terraza y WiFi."
+  lang={lang}
+  breadcrumbs={breadcrumbs}
+  articleMeta={{ datePublished: '2026-03-23', dateModified: '2026-03-23', section: 'Coffee Guide' }}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <article class="bg-white">
+    <section class="pt-10 pb-12 md:pt-14 md:pb-16 bg-cream">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p class="font-mono text-sm tracking-widest text-red mb-4">DIRTY RABBIT · S'AGARÓ · COSTA BRAVA</p>
+        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl text-red mb-6">
+          El mejor café de especialidad cerca de ti — S'Agaró, Costa Brava
+        </h1>
+        <p class="font-mono text-base md:text-lg text-black/75 max-w-3xl mx-auto leading-relaxed">
+          Si buscas <strong>café de especialidad cerca de mí</strong>, <strong>café de especialidad en S'Agaró</strong> o el
+          <strong> mejor café de especialidad cerca de Platja d'Aro</strong>, Dirty Rabbit está aquí mismo: barra cuidada,
+          terraza, WiFi y café con origen trazable a pocos minutos del mar.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-14">
+          <h2 class="font-typewriter text-2xl md:text-3xl text-red mb-5">¿Qué es el café de especialidad?</h2>
+          <div class="font-mono text-sm md:text-base text-black/80 leading-relaxed space-y-4">
+            <p>
+              El café de especialidad no es simplemente un café “más bonito” o una etiqueta de moda. Es café trabajado con
+              más control en toda la cadena: origen identificable, cosecha cuidada, tueste pensado para resaltar el grano y
+              extracción precisa en barra. En la práctica, eso se traduce en una taza más limpia, más dulce y con sabores más
+              definidos.
+            </p>
+            <p>
+              Frente al café comercial, que suele buscar uniformidad, intensidad y precio, el café de especialidad prioriza
+              trazabilidad y calidad. No intenta esconder defectos con tuestes muy oscuros o amargor excesivo. Quiere que se
+              note la finca, el proceso y el trabajo del productor. Por eso un espresso puede tener más equilibrio y un filtro
+              puede mostrar notas que en un café convencional simplemente desaparecen.
+            </p>
+            <p>
+              Si estás en la Costa Brava y quieres un café que sepa a algo más que “café”, esa diferencia se nota desde el
+              primer sorbo.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-14">
+          <h2 class="font-typewriter text-2xl md:text-3xl text-red mb-5">Nuestro programa de café</h2>
+          <div class="font-mono text-sm md:text-base text-black/80 leading-relaxed space-y-4">
+            <p>
+              En Dirty Rabbit trabajamos con café de proveedores nombrados y lotes de origen trazable. Priorizamos partners
+              que publican productor, finca, variedad y proceso, y que operan con relaciones transparentes o direct trade
+              cuando el origen lo permite. Esa claridad importa porque el café de especialidad empieza mucho antes de la taza.
+            </p>
+            <p>
+              En barra trabajamos con una <strong>La Marzocco KB90</strong>, una máquina pensada para consistencia y ritmo de
+              servicio. En un negocio estacional como el nuestro, eso importa mucho: en plena temporada de Costa Brava
+              necesitamos mantener calidad incluso cuando la terraza se llena y el flujo sube. La máquina ayuda, pero no hace
+              el trabajo sola.
+            </p>
+            <p>
+              También hay criterio humano. Nuestros baristas calibran, prueban y ajustan para que el espresso salga bien y las
+              bebidas con leche mantengan equilibrio. Además del café, trabajamos con otros proveedores de producto cuidado como
+              REQ para matcha y Awachai para chai. El enfoque es el mismo: ingredientes con nombre, no polvos genéricos.
+            </p>
+            <p>
+              Eso se nota especialmente en una zona tan estacional como S'Agaró. Durante gran parte del año convivimos con
+              vecinos, visitantes de fin de semana y picos fuertes de verano. Nuestro programa de café está pensado para que la
+              experiencia siga siendo sólida en ambos escenarios: un servicio rápido cuando hace falta y una taza que sigue
+              teniendo intención cuando alguien viene buscando el mejor café de especialidad entre S'Agaró, Platja d'Aro y el
+              resto de la Costa Brava.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-14">
+          <h2 class="font-typewriter text-2xl md:text-3xl text-red mb-5">Qué puedes pedir</h2>
+          <div class="font-mono text-sm md:text-base text-black/80 leading-relaxed space-y-4">
+            <p>
+              Nuestra carta de café cubre lo esencial bien hecho. Puedes pedir <strong>espresso</strong>,
+              <strong> americano</strong>, <strong>flat white</strong>, <strong>cortado</strong>,
+              <strong> café con leche</strong> y <strong>café de filtro de especialidad</strong>. Si vienes buscando un café
+              rápido antes de bajar a la playa, un flat white para sentarte en terraza o un filtro para beber con calma, hay
+              opciones.
+            </p>
+            <p>
+              El espresso es la base de la barra y la referencia para medir consistencia. El americano y el café con leche
+              funcionan como opciones cómodas para quien quiere algo familiar, pero con mejor materia prima. El cortado y el
+              flat white son ideales si quieres sentir más el café. Y el filtro de especialidad es la mejor elección cuando te
+              interesa el perfil del grano y no solo el golpe de cafeína.
+            </p>
+            <p>
+              Si además quieres desayunar o alargar la parada, puedes ver la <a href={getLocalizedPath('/carta', lang)} class="text-red underline decoration-red/40 hover:decoration-red">carta</a>,
+              conocer más sobre nuestra historia en <a href={getLocalizedPath('/nosotros', lang)} class="text-red underline decoration-red/40 hover:decoration-red">nosotros</a>
+              o volver al <a href={getLocalizedPath('/', lang)} class="text-red underline decoration-red/40 hover:decoration-red">inicio</a> para ubicar todo el espacio.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-14">
+          <h2 class="font-typewriter text-2xl md:text-3xl text-red mb-5">Información práctica</h2>
+          <div class="font-mono text-sm md:text-base text-black/80 leading-relaxed space-y-4">
+            <p>
+              Estamos en <strong>Avinguda Platja d'Aro 275, S'Agaró 17248</strong>. Si te mueves por S'Agaró, Sant Feliu o
+              Platja d'Aro, llegar es fácil y directo. Para mucha gente que busca “café de especialidad cerca de mí” en esta
+              zona, el problema no es encontrar una cafetería, sino encontrar una donde el café sea realmente la prioridad.
+            </p>
+            <p>
+              Tenemos <strong>terraza</strong>, <strong>WiFi</strong> y un ritmo de local pensado tanto para una parada corta
+              como para una mañana más tranquila. En cuanto a <strong>aparcamiento</strong>, hay opciones en calles cercanas y
+              en la zona de S'Agaró y Sant Pol; en temporada alta lo mejor es venir con un poco de margen porque la Costa Brava
+              se llena rápido.
+            </p>
+            <p>
+              Si vienes desde Platja d'Aro, estás a pocos minutos en coche. Si estás caminando por la zona de la playa, somos
+              una parada lógica antes o después del paseo. Y si vienes por primera vez, puedes abrir directamente
+              <a href="https://www.google.com/maps?cid=13237319999262880412" target="_blank" rel="noopener noreferrer" class="text-red underline decoration-red/40 hover:decoration-red"> cómo llegar</a>.
+            </p>
+            <p>
+              También somos una opción muy cómoda si estás comparando cafeterías entre S'Agaró y Platja d'Aro. Mucha gente
+              termina desplazándose varios minutos para tomar un café que esté realmente bien hecho; aquí la idea es que no
+              tengas que elegir entre ubicación y calidad. Si estás de paso por la Costa Brava y solo tienes una parada, Dirty
+              Rabbit concentra lo importante: café serio, buen entorno y una ubicación fácil de encajar en la ruta.
+            </p>
+          </div>
+        </div>
+
+        <div class="mb-14">
+          <h2 class="font-typewriter text-2xl md:text-3xl text-red mb-6">Preguntas frecuentes</h2>
+          <div class="space-y-5">
+            {faqItems.map((item) => (
+              <div class="border-b border-black/10 pb-5">
+                <h3 class="font-typewriter text-lg md:text-xl text-black mb-2">{item.question}</h3>
+                <p class="font-mono text-sm md:text-base text-black/70 leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="bg-black text-cream rounded-xl p-8 md:p-10 text-center">
+          <h2 class="font-typewriter text-3xl md:text-4xl mb-4">Visítanos</h2>
+          <p class="font-mono text-sm md:text-base text-cream/80 leading-relaxed max-w-2xl mx-auto mb-6">
+            Dirty Rabbit Specialty Coffee está en S'Agaró, en plena Costa Brava. Si quieres café de especialidad de verdad,
+            barra seria y un sitio agradable para parar, aquí te esperamos.
+          </p>
+          <p class="font-mono text-sm md:text-base text-cream/80 mb-8">
+            Avinguda Platja d'Aro 275 · S'Agaró 17248
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://www.google.com/maps?cid=13237319999262880412"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block font-typewriter px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors">
+              Cómo llegar
+            </a>
+            <a
+              href={getLocalizedPath('/carta', lang)}
+              class="inline-block font-typewriter px-8 py-3 border-2 border-cream text-cream rounded-lg hover:bg-cream hover:text-black transition-colors">
+              Ver la carta
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>

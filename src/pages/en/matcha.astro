@@ -1,0 +1,315 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'en';
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': ['LocalBusiness', 'CafeOrCoffeeShop'],
+  '@id': 'https://dirtyrabbit.es/en/matcha#business',
+  name: 'Dirty Rabbit Specialty Coffee',
+  description:
+    "Dirty Rabbit Specialty Coffee in S'Agaro serves ceremonial-grade REQ Matcha on the Costa Brava, with hot and iced matcha drinks made year-round.",
+  url: 'https://dirtyrabbit.es/en/matcha',
+  image: 'https://dirtyrabbit.es/favicon.svg',
+  telephone: '+34 872 454 264',
+  priceRange: 'EUR',
+  servesCuisine: ['Specialty Coffee', 'Matcha', 'Brunch'],
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: "Avinguda Platja d'Aro 275",
+    addressLocality: "S'Agaro",
+    postalCode: '17248',
+    addressRegion: 'Girona',
+    addressCountry: 'ES',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 41.7882,
+    longitude: 3.0323,
+  },
+  areaServed: ['Costa Brava', "Platja d'Aro", 'Girona'],
+  sameAs: ['https://www.instagram.com/dirtyrabbitcoffee/'],
+};
+
+const faqItems = [
+  {
+    question: 'Where can I get the best matcha on the Costa Brava?',
+    answer:
+      "Dirty Rabbit Specialty Coffee in S'Agaro is a strong option if you want ceremonial-grade matcha on the Costa Brava, prepared carefully and available all year.",
+  },
+  {
+    question: "Is Dirty Rabbit close to Platja d'Aro?",
+    answer:
+      "Yes. Dirty Rabbit is on Avinguda Platja d'Aro 275 in S'Agaro, around ten minutes from central Platja d'Aro and easy to reach from the wider Costa Brava area.",
+  },
+  {
+    question: 'What kind of matcha do you use?',
+    answer:
+      'We use REQ Matcha, a Barcelona supplier with a Japanese founder who selects tea directly from Japanese plantations.',
+  },
+  {
+    question: 'What matcha drinks are on the menu?',
+    answer:
+      'The matcha menu includes a classic matcha latte hot or iced, an orange matcha, and an extra strong matcha option.',
+  },
+  {
+    question: 'Do you serve matcha outside summer season?',
+    answer:
+      "Yes. Dirty Rabbit is a seasonal Costa Brava business with peak months from June to September, but we stay open year-round and keep matcha on the menu.",
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+};
+---
+
+<Layout
+  title="Best Matcha on the Costa Brava — Ceremonial Grade in S'Agaró"
+  description="Ceremonial-grade REQ matcha at Dirty Rabbit in S'Agaró. Classic matcha latte, orange matcha, and extra strong — prepared properly, year-round on the Costa Brava."
+  lang={lang}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  </Fragment>
+
+  <section class="pt-12 pb-14 md:pt-16 md:pb-20 bg-cream">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="font-mono text-sm text-red tracking-[0.2em] mb-4">DIRTY RABBIT · S'AGARÓ · COSTA BRAVA</p>
+      <div class="grid lg:grid-cols-[1.4fr_0.8fr] gap-10 items-end">
+        <div>
+          <h1 class="font-typewriter text-4xl md:text-6xl text-black mb-6">
+            Best Matcha in Costa Brava
+          </h1>
+          <p class="font-mono text-base md:text-lg text-black/75 leading-relaxed max-w-3xl mb-6">
+            If you are searching for the best matcha Costa Brava, the real question is not who
+            writes it on the board. It is who treats matcha with the same care they give to
+            specialty coffee. At Dirty Rabbit in S&apos;Agaró, matcha is not an afterthought. It is a
+            year-round part of the menu, made with ceremonial tea from REQ Matcha and prepared the
+            slow way because texture, color, and taste depend on it.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="/carta"
+              class="inline-block font-typewriter text-base px-7 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+            >
+              See the menu
+            </a>
+            <a
+              href="https://www.google.com/maps?cid=13237319999262880412"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block font-typewriter text-base px-7 py-3 border-2 border-red text-red rounded-lg hover:bg-red hover:text-white transition-colors"
+            >
+              Visit Dirty Rabbit
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 border border-black/10">
+          <p class="font-typewriter text-2xl text-red mb-4">Why people come for it</p>
+          <ul class="font-mono text-sm text-black/75 space-y-3">
+            <li>Ceremonial matcha from REQ, selected directly from Japanese plantations</li>
+            <li>Classic hot and iced drinks, plus orange matcha and extra strong matcha</li>
+            <li>Ten minutes from Platja d&apos;Aro, around 35 minutes from Girona</li>
+            <li>Open year-round, even though Costa Brava demand peaks June to September</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 md:py-18 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-typewriter text-3xl md:text-4xl text-red mb-6">The story of matcha at Dirty Rabbit</h2>
+      <div class="space-y-5 font-mono text-sm md:text-base text-black/80 leading-relaxed">
+        <p>
+          Dirty Rabbit Specialty Coffee is in S&apos;Agaró, at Avinguda Platja d&apos;Aro 275, on the
+          southern Costa Brava. The café is known first for coffee, with a La Marzocco KB90 behind
+          the bar, but the same logic that shaped the coffee menu shaped the matcha menu too:
+          choose suppliers with a name, a point of view, and a product worth explaining.
+        </p>
+        <p>
+          That is why Dirty Rabbit works with REQ Matcha. They are based in Barcelona, founded by a
+          Japanese entrepreneur, and they source directly from Japanese plantations instead of
+          treating matcha as a generic green powder. For guests, that translates into a cup that is
+          deep green, clean on the palate, and much less bitter than the low-grade versions many
+          people have tried elsewhere.
+        </p>
+        <p>
+          This matters on the Costa Brava because many cafés run under intense seasonal pressure.
+          From June to September, service gets faster, queues get longer, and menus often drift
+          toward whatever is easiest to execute. Matcha has become fashionable, but good matcha is
+          still rare. Dirty Rabbit opened with the idea that quality should not disappear just
+          because the beach is full. The shop stays open year-round, and the matcha program stays on
+          the menu through winter, shoulder season, and summer rush alike.
+        </p>
+        <p>
+          So when someone asks for the best matcha Platja d&apos;Aro, the best matcha Girona, or even
+          mejor matcha Costa Brava, the honest answer is not about hype. It is about whether the
+          place can tell you what tea it uses, why it chose it, and how it is prepared. Dirty
+          Rabbit can.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 md:py-18 bg-black text-cream">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-typewriter text-3xl md:text-4xl mb-8">How Dirty Rabbit prepares matcha</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="border border-cream/20 rounded-2xl p-6">
+          <p class="font-typewriter text-xl mb-3">1. Start with the right tea</p>
+          <p class="font-mono text-sm md:text-base text-cream/75 leading-relaxed">
+            The result is decided before milk ever enters the cup. REQ Matcha gives a smoother,
+            sweeter, more vegetal profile than low-cost food-grade powders. That is why the drink
+            keeps its structure even when served iced.
+          </p>
+        </div>
+        <div class="border border-cream/20 rounded-2xl p-6">
+          <p class="font-typewriter text-xl mb-3">2. Whisk before dilution</p>
+          <p class="font-mono text-sm md:text-base text-cream/75 leading-relaxed">
+            Matcha is whisked with water first so it opens correctly and avoids clumps. This step is
+            simple, but it is exactly where rushed service usually cuts corners. The payoff is a
+            cleaner texture from the first sip to the last.
+          </p>
+        </div>
+        <div class="border border-cream/20 rounded-2xl p-6">
+          <p class="font-typewriter text-xl mb-3">3. Build around balance</p>
+          <p class="font-mono text-sm md:text-base text-cream/75 leading-relaxed">
+            Milk or ice should support the tea, not bury it. Dirty Rabbit aims for a cup where you
+            still taste the matcha clearly, whether you order a classic latte or something more
+            refreshing for a hot Costa Brava afternoon.
+          </p>
+        </div>
+        <div class="border border-cream/20 rounded-2xl p-6">
+          <p class="font-typewriter text-xl mb-3">4. Keep it flexible</p>
+          <p class="font-mono text-sm md:text-base text-cream/75 leading-relaxed">
+            Some people want the standard build. Others want more intensity. That is why the menu
+            includes an extra strong matcha option instead of pretending every guest wants the same
+            strength.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 md:py-18 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-typewriter text-3xl md:text-4xl text-red mb-8">Matcha menu at Dirty Rabbit</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-black/10 p-6 bg-cream">
+          <p class="font-typewriter text-2xl text-black mb-3">Classic Matcha Latte</p>
+          <p class="font-mono text-sm text-black/75 leading-relaxed">
+            The anchor drink. Available hot or iced. Smooth, green, and built for people who want a
+            proper everyday matcha instead of a novelty order.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-black/10 p-6 bg-cream">
+          <p class="font-typewriter text-2xl text-black mb-3">Orange Matcha</p>
+          <p class="font-mono text-sm text-black/75 leading-relaxed">
+            A brighter Costa Brava version for warmer days. Orange sharpens the tea without covering
+            it, which makes this one especially good in spring and summer.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-black/10 p-6 bg-cream">
+          <p class="font-typewriter text-2xl text-black mb-3">Extra Strong Matcha</p>
+          <p class="font-mono text-sm text-black/75 leading-relaxed">
+            For guests who want more body and more edge. Same supplier, same technique, just a
+            stronger expression of the tea.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-10 space-y-5 font-mono text-sm md:text-base text-black/80 leading-relaxed max-w-3xl">
+        <p>
+          This menu is intentionally short. A short menu is easier to execute well, especially in a
+          café where pace changes dramatically across the year. In high season, Costa Brava traffic
+          rewards simplification. In low season, it rewards consistency. Dirty Rabbit does both by
+          focusing on drinks that can be repeated properly instead of expanding for the sake of
+          variety.
+        </p>
+        <p>
+          That discipline is part of why the café appears in conversations around the best matcha
+          Girona and the best matcha Costa Brava. It is not trying to be everything. It is trying to
+          make a few things well enough that the recommendation feels earned.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 md:py-18 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-typewriter text-3xl md:text-4xl text-red mb-8">FAQ</h2>
+      <div class="space-y-6">
+        {faqItems.map((item) => (
+          <div class="border-b border-black/10 pb-5">
+            <h3 class="font-typewriter text-xl text-black mb-2">{item.question}</h3>
+            <p class="font-mono text-sm md:text-base text-black/75 leading-relaxed">{item.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="p-6 bg-cream rounded-xl">
+        <h2 class="font-typewriter text-2xl mb-4">You might also like</h2>
+        <ul class="font-mono text-sm space-y-3">
+          <li>☕ <a href="/en/guide/best-coffee-girona" class="text-red hover:underline">Best Specialty Coffee in Girona Province</a></li>
+          <li>🫖 <a href="/en/guide/chai-latte-sagaro" class="text-red hover:underline">Chai Latte in S'Agaró — What to Expect</a></li>
+          <li>🍵 <a href="/en/guide/matcha-latte-sagaro" class="text-red hover:underline">Matcha Latte in S'Agaró — Full Guide</a></li>
+          <li>🍳 <a href="/en/articles/brunch-sagaro" class="text-red hover:underline">Brunch in S'Agaró — Dirty Rabbit Specialty Coffee</a></li>
+          <li>🌅 <a href="/en/articles/breakfast-costa-brava" class="text-red hover:underline">Best Breakfast on the Costa Brava (2026)</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-red text-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="font-mono text-sm tracking-[0.2em] mb-4">VISIT US</p>
+      <h2 class="font-typewriter text-3xl md:text-5xl mb-6">Come for matcha, stay for the morning</h2>
+      <p class="font-mono text-base md:text-lg text-white/85 leading-relaxed max-w-2xl mx-auto mb-8">
+        Dirty Rabbit is in S&apos;Agaró, close to Platja d&apos;Aro and easy to reach from the rest of the
+        southern Costa Brava. If you want the best matcha Costa Brava without guessing, come by,
+        check the menu, and ask what is being served that day.
+      </p>
+      <p class="font-mono text-sm md:text-base text-white/80 mb-8">
+        Avinguda Platja d&apos;Aro 275, S&apos;Agaró 17248, Costa Brava
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/en/"
+          class="inline-block font-typewriter text-base px-7 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red transition-colors"
+        >
+          Dirty Rabbit home
+        </a>
+        <a
+          href="/en/about"
+          class="inline-block font-typewriter text-base px-7 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red transition-colors"
+        >
+          Read our story
+        </a>
+        <a
+          href="/carta"
+          class="inline-block font-typewriter text-base px-7 py-3 bg-white text-red rounded-lg hover:bg-cream transition-colors"
+        >
+          Browse the menu
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

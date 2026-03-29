@@ -1,0 +1,336 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getLocalizedPath } from '../i18n';
+
+const lang = 'es';
+const pageUrl = 'https://dirtyrabbit.es/brunch-sagaro';
+const mapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Brunch en S\'Agaró', url: pageUrl }
+];
+
+const menuHighlights = [
+  {
+    name: 'Avocado toast',
+    description: 'Tostada generosa de aguacate sobre pan bien tostado, pensada para un brunch largo y sin prisas.'
+  },
+  {
+    name: 'Tostadas con tomate',
+    description: 'La opción más simple y más mediterránea: pan crujiente, tomate maduro y aceite de oliva.'
+  },
+  {
+    name: 'Smoothie bowls',
+    description: 'Bowls frescos y saciantes para cuando buscas algo más ligero pero con fruta de verdad.'
+  },
+  {
+    name: 'Acai bowls',
+    description: 'Una de las elecciones más pedidas en verano: frío, afrutado y muy de Costa Brava.'
+  },
+  {
+    name: 'Specialty coffee',
+    description: 'Espresso, flat white, cappuccino y filtros para acompañar el brunch con café serio.'
+  },
+  {
+    name: 'Zumos naturales y matcha latte',
+    description: 'Opciones frescas para quien quiere variar: zumos recién hechos y matcha latte suave y equilibrado.'
+  }
+];
+
+const faqs = [
+  {
+    question: '¿Dónde hacer brunch en S\'Agaró cerca de la playa?',
+    answer: 'Dirty Rabbit está en S\'Agaró, en Avinguda Platja d\'Aro 275, a pocos minutos de Sant Pol. Es una parada cómoda si buscas brunch antes de la playa, después de pasear o de camino entre Sant Feliu y Platja d\'Aro.'
+  },
+  {
+    question: '¿Dirty Rabbit sirve brunch todo el año?',
+    answer: 'Trabajamos con una dinámica estacional propia de la Costa Brava. La temporada fuerte va de junio a septiembre, pero también abrimos en meses intermedios. Antes de venir, conviene confirmar el horario actual en Google Maps.'
+  },
+  {
+    question: '¿Qué tipo de brunch hay en Dirty Rabbit?',
+    answer: 'El brunch combina tostadas, bowls, café de especialidad, zumos y matcha. Es una propuesta pensada para desayunar bien, sin caer en un menú turístico genérico.'
+  },
+  {
+    question: '¿Hay aparcamiento si vengo desde Platja d\'Aro?',
+    answer: 'Sí. Hay aparcamiento justo al otro lado de la carretera, algo especialmente útil si vienes en coche desde Platja d\'Aro, Sant Feliu de Guíxols o cualquier punto de la Costa Brava.'
+  },
+  {
+    question: '¿Puedo trabajar un rato desde Dirty Rabbit?',
+    answer: 'Sí. Hay WiFi y muchas mañanas tranquilas en las que apetece quedarse con el portátil, un café y luz natural en la terraza.'
+  }
+];
+
+const pageSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Restaurant',
+      '@id': `${pageUrl}#restaurant`,
+      name: 'Dirty Rabbit Specialty Coffee',
+      url: pageUrl,
+      mainEntityOfPage: pageUrl,
+      image: 'https://dirtyrabbit.es/og-image.jpg',
+      servesCuisine: ['Brunch', 'Breakfast', 'Specialty Coffee'],
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Avinguda Platja d\'Aro 275',
+        addressLocality: 'S\'Agaró',
+        addressRegion: 'Girona',
+        postalCode: '17248',
+        addressCountry: 'ES'
+      },
+      telephone: '+34 872 454 264',
+      hasMap: mapsUrl,
+      acceptsReservations: false,
+      areaServed: ['S\'Agaró', 'Platja d\'Aro', 'Costa Brava'],
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '08:00',
+          closes: '15:00'
+        }
+      ],
+      amenityFeature: [
+        { '@type': 'LocationFeatureSpecification', name: 'Terraza con luz de mañana', value: true },
+        { '@type': 'LocationFeatureSpecification', name: 'Aparcamiento cerca', value: true },
+        { '@type': 'LocationFeatureSpecification', name: 'WiFi', value: true }
+      ]
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${pageUrl}#faq`,
+      mainEntity: faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    },
+    {
+      '@type': 'Menu',
+      '@id': `${pageUrl}#menu`,
+      name: 'Brunch en S\'Agaró - Selección Dirty Rabbit',
+      url: pageUrl,
+      hasMenuSection: [
+        {
+          '@type': 'MenuSection',
+          name: 'Brunch Highlights',
+          hasMenuItem: menuHighlights.map((item) => ({
+            '@type': 'MenuItem',
+            name: item.name,
+            description: item.description
+          }))
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout
+  title="Brunch en S'Agaró | Dirty Rabbit — Costa Brava"
+  description="Brunch sagaro en Dirty Rabbit: tostadas, bowls, café de especialidad y terraza con luz de mañana en la Costa Brava."
+  lang={lang}
+  breadcrumbs={breadcrumbs}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} slot="head" />
+
+  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="font-mono text-sm tracking-[0.25em] text-red mb-4">COSTA BRAVA · S'AGARÓ</p>
+      <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">Brunch en S'Agaró</h1>
+      <div class="w-16 h-px bg-red mx-auto mb-8"></div>
+      <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed max-w-2xl mx-auto">
+        Si estás buscando <strong>brunch en S'Agaró</strong>, o vienes desde Platja d'Aro y quieres un sitio donde desayunar sin caer en lo típico,
+        Dirty Rabbit es una de las paradas más cómodas de esta parte de la Costa Brava. Estamos en S'Agaró, con terraza amplia,
+        luz suave por la mañana, café de especialidad y una carta pensada para desayunos largos: tostadas, bowls, zumos y matcha.
+        Es un sitio muy de aquí en ritmo, pero fácil de disfrutar tanto si vives cerca como si estás de paso en vacaciones.
+      </p>
+      <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed max-w-2xl mx-auto mt-4">
+        Desde la apertura, Iwonka lleva el día a día y ha construido un espacio que funciona igual de bien para una primera parada antes de ir a la playa,
+        para un café con portátil gracias al WiFi, o para un <strong>desayuno en S'Agaró</strong> con calma. Si tu búsqueda era
+        <strong> brunch platja d'aro</strong> o <strong>brunch Costa Brava</strong>, merece la pena desviarse unos minutos.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-4">El menú brunch</h2>
+        <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">
+          La carta completa está en <a href={getLocalizedPath('/carta', lang)} class="text-red hover:underline">/carta</a>, pero para esta página local nos centramos en lo que suele pedir
+          quien llega con hambre de mañana. No es un brunch sobreactuado ni un menú gigante. La idea es clara: buen café, platos frescos y opciones que funcionan
+          tanto a las nueve como a mediodía.
+        </p>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2">
+        {menuHighlights.map((item) => (
+          <article class="border border-black/10 rounded-lg p-6 bg-cream">
+            <h3 class="font-typewriter text-2xl text-red mb-3">{item.name}</h3>
+            <p class="font-mono text-sm md:text-base text-black/75 leading-relaxed">{item.description}</p>
+          </article>
+        ))}
+      </div>
+
+      <div class="max-w-3xl mt-10 space-y-4 font-mono text-sm md:text-base text-black/80 leading-relaxed">
+        <p>
+          Para mucha gente, el clásico es la tostada de aguacate con café. Para otros, el plan cambia según la estación: en verano triunfan más los
+          bowls fríos y los zumos; en meses de entretiempo entran mejor el flat white, el matcha latte y las tostadas recién hechas. Esa mezcla entre
+          desayuno serio y ritmo relajado es justo lo que hace que muchos visitantes repitan.
+        </p>
+        <p>
+          Además, la ubicación ayuda. Dirty Rabbit está bien posicionado para quien duerme en S'Agaró, en Sant Pol o incluso en Platja d'Aro y quiere
+          evitar el centro más saturado. Vienes, desayunas, miras la carta completa si quieres quedarte más rato y luego sigues el día con la sensación
+          de haber empezado bien la mañana.
+        </p>
+        <p>
+          También funciona muy bien para grupos pequeños con gustos distintos. Hay quien entra directo a por café de especialidad y hay quien viene buscando
+          una opción más fresca, más ligera o más fotogénica. El punto fuerte es que no obliga a elegir entre una cosa y otra: puedes pedir una tostada,
+          completar con un bowl o quedarte solo con un matcha y un zumo si es el tipo de mañana que te pide el cuerpo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-cream">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+      <div>
+        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-4">Horarios y cómo llegar</h2>
+        <div class="space-y-4 font-mono text-sm md:text-base text-black/80 leading-relaxed">
+          <p>
+            Dirty Rabbit está en <strong>Avinguda Platja d'Aro 275, S'Agaró 17248</strong>. La ubicación es práctica porque queda en un punto natural de paso
+            entre S'Agaró, Sant Feliu de Guíxols y Platja d'Aro. Si vienes en coche, llegas rápido desde cualquiera de los tres. Si estás alojado cerca de Sant Pol,
+            también puedes acercarte andando y convertir el desayuno en parte del paseo.
+          </p>
+          <p>
+            El horario base de brunch es de <strong>martes a domingo, de 8:00 a 15:00</strong>, con temporada alta de junio a septiembre y apertura en shoulder seasons.
+            Como cualquier negocio de costa, puede haber ajustes puntuales por época del año, así que el enlace de
+            <a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="text-red hover:underline"> Google Maps</a> es la forma más fiable de confirmar antes de venir.
+          </p>
+          <p>
+            Si tu referencia es "brunch en Platja d'Aro", piensa en Dirty Rabbit como la opción cercana que te saca un poco del ruido del centro sin mandarte lejos.
+            Llegas en unos minutos, aparcas fácil y sigues teniendo Costa Brava total: mar cerca, mañana luminosa y ritmo sin prisa.
+          </p>
+          <p>
+            Para quien está de vacaciones, eso tiene mucho valor. No pierdes media mañana improvisando ni entras en un circuito de terrazas demasiado enfocadas a rotación.
+            Llegas, desayunas bien y te plantas enseguida en la playa, en el paseo o en tu siguiente parada. Para residentes, en cambio, el atractivo es otro:
+            tener un sitio cómodo al que volver entre semana y los fines de semana sin sentir que cada visita depende del pico turístico.
+          </p>
+        </div>
+      </div>
+
+      <aside class="border border-red rounded-lg p-6 bg-white">
+        <h3 class="font-typewriter text-2xl text-red mb-4">Datos útiles</h3>
+        <ul class="space-y-3 font-mono text-sm md:text-base text-black/80">
+          <li><strong>Dirección:</strong> Avinguda Platja d'Aro 275</li>
+          <li><strong>Pueblo:</strong> S'Agaró, Girona 17248</li>
+          <li><strong>Horario habitual:</strong> Mar-Dom · 8:00-15:00</li>
+          <li><strong>Cerca de:</strong> Sant Pol y Platja d'Aro</li>
+          <li><strong>Enlaces:</strong> <a href={getLocalizedPath('/', lang)} class="text-red hover:underline">Home</a> · <a href={getLocalizedPath('/carta', lang)} class="text-red hover:underline">Carta</a> · <a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="text-red hover:underline">Maps</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-4">El espacio</h2>
+        <div class="space-y-4 font-mono text-sm md:text-base text-black/80 leading-relaxed">
+          <p>
+            Una de las razones por las que esta página responde tan bien a búsquedas como <strong>desayuno S'Agaró</strong> es que el espacio acompaña de verdad.
+            La terraza recibe buena luz por la mañana, que es justo cuando apetece sentarse sin calor excesivo y alargar el café. No hace falta montar una escena:
+            se nota rápido que es un sitio pensado para mañanas agradables.
+          </p>
+          <p>
+            El aparcamiento al otro lado de la carretera resuelve algo importante en la Costa Brava: poder venir sin complicarte. Mucha gente llega desde apartamentos,
+            hoteles o campings cercanos y agradece no tener que entrar en una búsqueda eterna de sitio. Si a eso le sumas WiFi y mesas cómodas, Dirty Rabbit encaja
+            igual de bien para una conversación tranquila, una reunión informal o una primera hora de trabajo antes de bajar a la playa.
+          </p>
+          <p>
+            El ambiente también tiene mucho que ver con quién lo lleva. Iwonka está muy presente en la operación diaria, y eso se nota en el ritmo del servicio y en la
+            sensación general del local. No es un brunch clonado. Tiene ese equilibrio entre cafetería de especialidad y punto de encuentro de barrio que cuesta encontrar
+            en zonas tan estacionales como esta.
+          </p>
+          <p>
+            Ese detalle importa a nivel SEO, pero sobre todo importa cuando vienes de verdad. Muchas búsquedas de <strong>brunch Costa Brava</strong> terminan en sitios que parecen
+            pensados solo para julio y agosto. Aquí la sensación es distinta: sí, la temporada fuerte existe y se nota, pero el espacio sigue teniendo lógica fuera del pico,
+            en esos meses donde la costa está más tranquila y desayunar se vuelve incluso mejor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-black text-cream">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-typewriter text-3xl md:text-4xl font-bold mb-8">Testimonios</h2>
+      <div class="grid gap-5 md:grid-cols-3">
+        <blockquote class="border border-cream/20 rounded-lg p-6 bg-white/5">
+          <p class="font-mono text-sm md:text-base leading-relaxed">"Veníamos buscando brunch cerca de Platja d'Aro y acabamos repitiendo dos veces. La terraza por la mañana es una maravilla."</p>
+        </blockquote>
+        <blockquote class="border border-cream/20 rounded-lg p-6 bg-white/5">
+          <p class="font-mono text-sm md:text-base leading-relaxed">"Buen café, matcha fino y sitio fácil para aparcar. En verano eso vale oro."</p>
+        </blockquote>
+        <blockquote class="border border-cream/20 rounded-lg p-6 bg-white/5">
+          <p class="font-mono text-sm md:text-base leading-relaxed">"Parada perfecta antes de bajar a Sant Pol. Desayuno rico, servicio cercano y cero sensación de trampa turística."</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 bg-cream">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-8">FAQ</h2>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <div class="border-b border-black/10 pb-6">
+            <h3 class="font-typewriter text-2xl text-red mb-3">{faq.question}</h3>
+            <p class="font-mono text-sm md:text-base text-black/80 leading-relaxed">{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-24 bg-red text-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-typewriter text-3xl md:text-4xl font-bold mb-5">Tu próximo brunch en S'Agaró</h2>
+      <p class="font-mono text-sm md:text-base leading-relaxed text-white/90 max-w-2xl mx-auto mb-8">
+        Si estás en la zona y quieres un brunch bien resuelto, con café de especialidad, terraza, parking cerca y un ritmo más amable que el de los puntos más saturados,
+        pasa por Dirty Rabbit. Puedes empezar en la <a href={getLocalizedPath('/', lang)} class="underline underline-offset-4">home</a>, mirar la
+        <a href={getLocalizedPath('/carta', lang)} class="underline underline-offset-4"> carta</a> o abrir directamente
+        <a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="underline underline-offset-4"> Google Maps</a> para venir.
+      </p>
+      <p class="font-mono text-sm md:text-base leading-relaxed text-white/90 max-w-2xl mx-auto mb-8">
+        Avinguda Platja d'Aro 275, S'Agaró 17248. Costa Brava. Mañanas con luz, brunch sin teatro y café hecho con intención.
+      </p>
+      <p class="font-mono text-sm md:text-base leading-relaxed text-white/90 max-w-2xl mx-auto mb-8">
+        Si hoy buscabas un sitio para desayunar en S'Agaró, o estabas comparando opciones entre S'Agaró y Platja d'Aro, esta es la respuesta corta:
+        buen café, brunch honesto y un espacio al que apetece volver. El resto ya lo decides tú cuando te sientes en la terraza.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href={getLocalizedPath('/carta', lang)}
+          class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-red transition-colors rounded-lg"
+        >
+          Ver la carta
+        </a>
+        <a
+          href={mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-block font-typewriter text-lg px-8 py-3 bg-white text-red hover:bg-cream transition-colors rounded-lg"
+        >
+          Cómo llegar
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

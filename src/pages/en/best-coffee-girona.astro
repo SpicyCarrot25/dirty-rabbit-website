@@ -1,0 +1,319 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'en';
+const canonicalUrl = 'https://dirtyrabbit.es/en/best-coffee-girona';
+const pageTitle = "Best Coffee Shop in Girona Province (2026) — Specialty Coffee Worth the Drive";
+const pageDescription = "Looking for the best specialty coffee in Girona Province? Dirty Rabbit in S'Agaró serves La Cabra on a La Marzocco KB90 — worth every minute of the drive.";
+
+const breadcrumbs = [
+  { name: 'Home', url: 'https://dirtyrabbit.es/en/' },
+  { name: 'Best coffee in Girona province', url: canonicalUrl }
+];
+
+const faqItems = [
+  {
+    question: 'What is the best coffee shop near Girona for specialty coffee?',
+    answer: "If you want a proper specialty coffee experience in Girona province, Dirty Rabbit in S'Agaró is worth knowing. We are about 45 minutes from Girona city and focus on traceable beans, careful extraction, and a full coffee program rather than generic café coffee."
+  },
+  {
+    question: 'Is it worth leaving Girona city for coffee?',
+    answer: "If you are already exploring the Costa Brava, yes. Girona city has solid options, but S'Agaró gives you a different combination: beach, slower pace, and a destination café built around coffee quality. Many people turn the drive into part of the plan."
+  },
+  {
+    question: 'How far is Dirty Rabbit from Girona city?',
+    answer: "Dirty Rabbit is in S'Agaró, around 45 minutes by car from Girona city depending on traffic, roughly 38 to 40 km away."
+  },
+  {
+    question: 'What coffee machine does Dirty Rabbit use?',
+    answer: "We work on a La Marzocco KB90, a machine chosen for consistency during service and for the level of control it gives our baristas when dialling espresso."
+  },
+  {
+    question: 'What makes specialty coffee in Girona different from standard café coffee?',
+    answer: "Specialty coffee usually means better green coffee, traceable sourcing, fresher roasting, and more precise brewing. In the cup, that translates into cleaner sweetness, more clarity, and less bitterness."
+  }
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": `${canonicalUrl}#article`,
+      "headline": pageTitle,
+      "description": pageDescription,
+      "inLanguage": "en",
+      "datePublished": "2026-03-23",
+      "dateModified": "2026-03-23",
+      "mainEntityOfPage": canonicalUrl,
+      "author": {
+        "@type": "Organization",
+        "name": "Dirty Rabbit",
+        "@id": "https://dirtyrabbit.es/#business"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Dirty Rabbit",
+        "@id": "https://dirtyrabbit.es/#business"
+      },
+      "keywords": [
+        "best coffee shop girona",
+        "best coffee girona",
+        "specialty coffee girona",
+        "coffee girona province"
+      ]
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": `${canonicalUrl}#localbusiness`,
+      "name": "Dirty Rabbit Specialty Coffee",
+      "url": canonicalUrl,
+      "telephone": "+34 872 454 264",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avinguda Platja d'Aro 275",
+        "addressLocality": "S'Agaró",
+        "addressRegion": "Girona",
+        "postalCode": "17248",
+        "addressCountry": "ES"
+      },
+      "areaServed": ["Girona", "Girona province", "Costa Brava", "S'Agaró"],
+      "description": "Specialty coffee shop in S'Agaró, Girona province, serving carefully sourced coffee on a La Marzocco KB90."
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${canonicalUrl}#faq`,
+      "mainEntity": faqItems.map((item) => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": item.answer
+        }
+      }))
+    }
+  ]
+};
+---
+
+<Layout
+  title={pageTitle}
+  description={pageDescription}
+  lang={lang}
+  breadcrumbs={breadcrumbs}
+  articleMeta={{ datePublished: "2026-03-23", dateModified: "2026-03-23", section: "Coffee Guide" }}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} slot="head" />
+
+  <article class="bg-white">
+    <section class="pt-10 pb-12 md:pt-14 md:pb-16 bg-cream border-b border-black/10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p class="font-mono text-sm tracking-[0.2em] text-red mb-4">GIRONA PROVINCE GUIDE</p>
+        <h1 class="font-typewriter text-4xl md:text-6xl text-red mb-6">The Best Coffee in Girona Province</h1>
+        <div class="max-w-3xl space-y-4 font-mono text-base md:text-lg text-black/75 leading-relaxed">
+          <p>
+            Search for the <strong>best coffee shop in Girona province</strong> and most lists stay inside the city.
+            That makes sense if you want something five minutes from the cathedral. It makes less sense if you care
+            about the full experience: the coffee itself, the machine behind it, the barista work, and whether the
+            place feels like somewhere you actually want to stay.
+          </p>
+          <p>
+            Dirty Rabbit is in S'Agaró, on the Costa Brava side of Girona province. We are not pretending to be in
+            Girona city. We are saying something more precise: if your goal is to find <strong>the best coffee Girona
+            province has worth travelling for</strong>, the drive south matters less than the cup. We built the place
+            for people who notice the difference.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 md:py-16">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <section>
+          <h2 class="font-typewriter text-3xl text-red mb-5">What makes specialty coffee different</h2>
+          <div class="font-mono text-black/80 leading-relaxed space-y-4">
+            <p>
+              Specialty coffee starts long before the espresso machine. It is about better green coffee, bought with
+              traceability, roasted to show character instead of hiding flaws, and brewed with enough care that the
+              work done at origin still shows up in the cup. That means sweeter espresso, cleaner acidity, more
+              clarity, and far less of the burnt bitterness people often accept as normal.
+            </p>
+            <p>
+              In practical terms, a specialty café should know what it is serving: farm or cooperative, process,
+              roast profile, recipe, and why the shot tastes the way it does. It should also pay attention to water,
+              grind, extraction time, and milk texture. None of this is theatre. It is the difference between coffee
+              that wakes you up and coffee that makes you stop, taste, and come back for another round.
+            </p>
+          </div>
+        </section>
+
+        <section class="bg-cream rounded-xl p-8 border border-black/10">
+          <h2 class="font-typewriter text-3xl text-red mb-5">Why S'Agaró is worth the trip from Girona city</h2>
+          <div class="font-mono text-black/80 leading-relaxed space-y-4">
+            <p>
+              From Girona city, S'Agaró is roughly <strong>45 minutes by car</strong>, around <strong>38 to 40 km</strong>
+              depending on your route. That is close enough for a morning plan, an easy lunch detour, or the kind of
+              afternoon escape where you trade stone streets for sea air without losing the province.
+            </p>
+            <p>
+              The point is not "leave Girona because Girona has nothing." That would be nonsense. Girona city has a
+              real coffee culture and several strong cafés. The reason to come to S'Agaró is different. You get the
+              coffee, then you get the wider experience around it: Sant Pol beach, the Camí de Ronda, slower pace,
+              and a table where you do not feel pressure to rush through the cup.
+            </p>
+            <p>
+              Many visitors already head toward the coast for a beach walk, a long lunch, or a reset from the city.
+              If that is your plan, choosing a proper specialty stop instead of a random seaside café is an easy
+              upgrade. Dirty Rabbit sits right in that sweet spot: a <strong>coffee Girona province</strong> visitors
+              can reach easily, but still distinct enough to feel like discovery rather than default.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-typewriter text-3xl text-red mb-5">Our coffee program</h2>
+          <div class="font-mono text-black/80 leading-relaxed space-y-4">
+            <p>
+              We built Dirty Rabbit around a simple idea: if you say you care about coffee, the full system has to
+              support that claim. That starts with sourcing. We look for coffees with traceability, clean processing,
+              and enough character to stay interesting beyond the first sip. We want cups with sweetness, structure,
+              and a profile that feels intentional rather than generic.
+            </p>
+            <p>
+              On bar, we work with a <strong>La Marzocco KB90</strong>. It is not there for status. It is there because
+              it holds up under service, gives baristas reliable thermal stability, and supports repeatable espresso.
+              Consistency matters if you want the second flat white of the morning to taste as good as the first.
+            </p>
+            <p>
+              Then there is the craft side. Barista work is not just pushing a button on a good machine. It is recipe
+              control, grind changes through the day, milk texture that supports the coffee instead of burying it, and
+              knowing when to adjust because humidity, temperature, or bean age shifted the balance. Good equipment
+              makes this possible. Good habits make it real.
+            </p>
+            <p>
+              For guests, all of that should feel easy. You order, you sit down, and the cup arrives balanced and
+              clear. That is the standard we aim for every day. If you are specifically searching for
+              <strong>specialty coffee in Girona</strong>, that level of consistency is what separates a destination
+              café from a place that simply uses the phrase in its bio.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-typewriter text-3xl text-red mb-5">Honest comparison context</h2>
+          <div class="font-mono text-black/80 leading-relaxed space-y-4">
+            <p>
+              Girona province has no shortage of cafés. What it does have is a gap between places that serve coffee
+              and places that build a serious coffee program. A typical café in Girona or on the Costa Brava may still
+              serve a dark commercial blend, pull shots to a fixed setting all week, and treat milk drinks as the
+              standard output. That can be perfectly fine if all you want is a quick caffeine stop.
+            </p>
+            <p>
+              The difference is attention. In a specialty-led café, the bean matters, the recipe matters, and the
+              person behind the bar is expected to notice when things drift. You can taste that in texture, sweetness,
+              and finish. You also feel it in the menu and the pace of service: the place is organised around quality,
+              not only speed.
+            </p>
+            <p>
+              We are not claiming every café in Girona city is average. Some are genuinely very good, and if you are
+              staying in the city they deserve your time. We are also not saying everyone needs to drive 45 minutes
+              for every coffee. What we are saying is narrower and more honest: if you want a coast-side café in
+              Girona province that takes specialty seriously, Dirty Rabbit belongs in that conversation.
+            </p>
+            <p>
+              That matters for search intent too. People looking for the <strong>best coffee Girona</strong> often
+              mean one of two things: the best cup in the city centre, or the best coffee experience available within
+              the province. This page targets the second question clearly. If you are willing to move beyond city
+              limits, S'Agaró gives you a very strong answer.
+            </p>
+            <p>
+              There is also a hospitality difference that matters more than most guides admit. A lot of cafés are
+              built to turn tables quickly, especially in busy periods. Dirty Rabbit was designed for people who want
+              to settle in for a while, talk, read, recover after a swim, or make the coffee stop part of the day
+              rather than a transaction between parking the car and the next errand. For many guests, that is part of
+              what makes a place feel like the <strong>best coffee shop Girona province</strong> has to offer.
+            </p>
+          </div>
+        </section>
+
+        <section class="border-t border-black/10 pt-12">
+          <h2 class="font-typewriter text-3xl text-red mb-6">A short Girona coffee guide, from our side of the province</h2>
+          <div class="font-mono text-black/80 leading-relaxed space-y-4">
+            <p>
+              Start in Girona city if you want density. It is the province's main concentration of specialty cafés,
+              and it is the easiest place to compare different roasters in one walk. Then use the coast differently.
+              Instead of settling for the first beach bar with an espresso machine, make coffee part of the reason you
+              come down.
+            </p>
+            <p>
+              That is where Dirty Rabbit fits. We are not trying to replace Girona city. We complement it. City day
+              for architecture, cycling culture, and café-hopping; coast day for sea, space, and a cup that still
+              meets the standard. For many visitors, that combination ends up being the best version of a Girona
+              coffee trip.
+            </p>
+            <p>
+              If you want the broader Dirty Rabbit context before visiting, start with our <a href="/en/" class="text-red underline decoration-red/40 underline-offset-4 hover:decoration-red">homepage</a>,
+              read more <a href="/en/about" class="text-red underline decoration-red/40 underline-offset-4 hover:decoration-red">about us</a>,
+              and check the <a href="/carta" class="text-red underline decoration-red/40 underline-offset-4 hover:decoration-red">menu</a>.
+              Those three pages tell you quickly whether the place matches what you are looking for.
+            </p>
+          </div>
+        </section>
+
+        <section class="border-t border-black/10 pt-12">
+          <h2 class="font-typewriter text-3xl text-red mb-6">FAQ: coffee in Girona and Costa Brava</h2>
+          <div class="space-y-6">
+            {faqItems.map((item) => (
+              <div class="rounded-xl border border-black/10 p-6 bg-white">
+                <h3 class="font-typewriter text-xl text-red mb-3">{item.question}</h3>
+                <p class="font-mono text-black/80 leading-relaxed">{item.answer}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-black text-cream">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="font-typewriter text-3xl md:text-4xl mb-5">Visit Dirty Rabbit in S'Agaró</h2>
+        <p class="font-mono text-base md:text-lg text-cream/80 leading-relaxed mb-8">
+          If you are planning a Girona province coffee stop, make it one with a proper machine, a serious bar setup,
+          and somewhere you will actually want to stay. Dirty Rabbit is at Avinguda Platja d'Aro 275, S'Agaró,
+          around 45 minutes from Girona city.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://www.google.com/maps?cid=13237319999262880412"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white rounded-lg hover:bg-red/90 transition-colors"
+          >
+            Get directions
+          </a>
+          <a
+            href="/carta"
+            class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-cream text-cream rounded-lg hover:bg-cream hover:text-black transition-colors"
+          >
+            See the menu
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-cream">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="p-6 bg-white rounded-xl border border-black/10">
+          <h2 class="font-typewriter text-2xl mb-4">You might also like</h2>
+          <ul class="font-mono text-sm space-y-3">
+            <li>🍵 <a href="/en/matcha" class="text-red hover:underline">Best Matcha on the Costa Brava — Ceremonial Grade in S'Agaró</a></li>
+            <li>🫖 <a href="/en/guide/chai-latte-sagaro" class="text-red hover:underline">Chai Latte in S'Agaró — What to Expect</a></li>
+            <li>☕ <a href="/en/guide/best-coffee-sagaro" class="text-red hover:underline">Best Coffee in S'Agaró — Dirty Rabbit Guide</a></li>
+            <li>🍳 <a href="/en/articles/brunch-sagaro" class="text-red hover:underline">Brunch in S'Agaró — Dirty Rabbit Specialty Coffee</a></li>
+            <li>🌅 <a href="/en/articles/breakfast-costa-brava" class="text-red hover:underline">Best Breakfast on the Costa Brava (2026)</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </article>
+</Layout>
