@@ -1,0 +1,84 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const lang = 'es';
+const title = 'Guías de Café y Brunch en la Costa Brava — Dirty Rabbit';
+const description = 'Guías completas sobre café de especialidad, matcha, chai y los mejores lugares para desayunar en la Costa Brava.';
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
+  { name: 'Guía', url: 'https://dirtyrabbit.es/guia/' }
+];
+
+const guideFiles = Object.keys(import.meta.glob('./*.astro'))
+  .filter((pagePath) => !pagePath.endsWith('/index.astro'))
+  .sort();
+
+const formatGuideTitle = (slug: string) => {
+  const baseTitle = slug
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+
+  return [
+    ['Platja Daro', "Platja d'Aro"],
+    ['Sagaro', "S'Agaró"],
+    ['Sant Feliu De Guixols', 'Sant Feliu de Guíxols'],
+    ['Cami De Ronda', 'Camí de Ronda'],
+    ['Costa Brava', 'Costa Brava'],
+    ['Cafe', 'Café'],
+    ['Wifi', 'WiFi'],
+    [' De ', ' de '],
+    [' Del ', ' del '],
+    [' La ', ' la '],
+    [' Las ', ' las '],
+    [' El ', ' el '],
+    [' En ', ' en '],
+    [' Y ', ' y ']
+  ].reduce((result, [from, to]) => result.replaceAll(from, to), baseTitle);
+};
+
+const guideLinks = guideFiles.map((pagePath) => {
+  const slug = pagePath.replace('./', '').replace('.astro', '');
+  return {
+    href: '/guia/' + slug,
+    slug,
+    title: formatGuideTitle(slug)
+  };
+});
+---
+
+<Layout
+  title={title}
+  description={description}
+  lang={lang}
+  breadcrumbs={breadcrumbs}>
+  <section class="bg-cream pt-10 pb-12 md:pt-14 md:pb-16">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <p class="font-mono text-xs tracking-[0.25em] text-red/80 mb-4">GUÍAS</p>
+      <h1 class="font-typewriter text-4xl md:text-6xl font-bold text-red mb-6">{title}</h1>
+      <div class="w-16 h-px bg-red mx-auto mb-8"></div>
+      <p class="font-mono text-sm md:text-base text-black/75 max-w-2xl mx-auto leading-relaxed">
+        Una vista rápida de todas nuestras guías locales sobre specialty coffee, matcha, chai y desayunos por S'Agaró, Platja d'Aro, Sant Feliu y el resto de la Costa Brava.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-cream pb-16 md:pb-24">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {guideLinks.map((guide) => (
+          <a
+            href={guide.href}
+            class="group rounded-2xl border border-black/10 bg-white px-5 py-5 transition-transform duration-200 hover:-translate-y-1 hover:border-red/40 hover:shadow-[0_18px_40px_rgba(0,0,0,0.08)] focus:outline-none focus:ring-2 focus:ring-red/40"
+          >
+            <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-black/45 mb-3">{guide.slug}</p>
+            <h2 class="font-typewriter text-2xl leading-tight text-red group-hover:text-black transition-colors">
+              {guide.title}
+            </h2>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

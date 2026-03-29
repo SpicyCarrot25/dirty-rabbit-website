@@ -79,12 +79,6 @@ const graphItems: Record<string, unknown>[] = [
         "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
         "opens": "08:00",
         "closes": "15:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Monday",
-        "opens": "00:00",
-        "closes": "00:00"
       }
     ],
     "servesCuisine": ["Specialty Coffee", "Brunch", "Breakfast"],
@@ -153,34 +147,6 @@ if (breadcrumbs && breadcrumbs.length > 0) {
   });
 }
 
-// Add Menu schema for carta pages
-if (isMenuPage) {
-  graphItems.push({
-    "@type": "Menu",
-    "@id": "https://dirtyrabbit.es/carta#menu",
-    "name": "Dirty Rabbit Menu",
-    "url": "https://dirtyrabbit.es/carta",
-    "mainEntityOfPage": "https://dirtyrabbit.es/carta",
-    "inLanguage": currentLang,
-    "hasMenuSection": [
-      {
-        "@type": "MenuSection",
-        "name": "Café & Cia",
-        "description": "Specialty coffee roasted by La Cabra, Copenhagen"
-      },
-      {
-        "@type": "MenuSection",
-        "name": "Bebidas",
-        "description": "Smoothies, soft drinks, and adult beverages"
-      },
-      {
-        "@type": "MenuSection",
-        "name": "Comida",
-        "description": "Toasts, bagels, and bowls"
-      }
-    ]
-  });
-}
 
 if (articleMeta) {
   graphItems.push({

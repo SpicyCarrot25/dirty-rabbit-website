@@ -5,18 +5,14 @@ import { getTranslations, getLocalizedPath } from '../i18n';
 const lang = 'es';
 const t = getTranslations(lang);
 
-// Person structured data for founder
+// Organization structured data for the business story page
 const foundersSchema = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://dirtyrabbit.es/#iwonka",
-  "name": "Iwonka",
-  "jobTitle": "Fundadora & Barista",
-  "worksFor": {
-    "@type": "Organization",
-    "@id": "https://dirtyrabbit.es/#business"
-  },
-  "description": "Fundadora de Dirty Rabbit, apasionada del café de especialidad y la hospitalidad"
+  "@type": "CafeOrCoffeeShop",
+  "@id": "https://dirtyrabbit.es/#business",
+  "name": "Dirty Rabbit",
+  "url": "https://dirtyrabbit.es",
+  "description": "Specialty coffee shop en S'Agaró, Costa Brava. Café de especialidad, brunch mediterráneo y ambiente acogedor."
 };
 ---
 

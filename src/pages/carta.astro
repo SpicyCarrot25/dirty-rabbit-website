@@ -8,6 +8,48 @@ const breadcrumbs = [
   { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
   { name: 'Carta', url: 'https://dirtyrabbit.es/carta' }
 ];
+
+const getItemName = (item: { name: string | Record<string, string> }) =>
+  typeof item.name === 'string' ? item.name : item.name[lang];
+
+const getSchemaPrice = (price: string) => {
+  const match = price.match(/\d+(?:[.,]\d+)?/);
+  return match ? match[0].replace(',', '.') : undefined;
+};
+
+const toMenuItem = (item: { name: string | Record<string, string>; desc: Record<string, string>; price: string }) => ({
+  "@type": "MenuItem",
+  "name": getItemName(item),
+  "description": item.desc[lang],
+  "offers": {
+    "@type": "Offer",
+    "price": getSchemaPrice(item.price),
+    "priceCurrency": "EUR"
+  }
+});
+
+const menuSchema = {
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "Carta de Dirty Rabbit",
+  "url": "https://dirtyrabbit.es/carta",
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "name": "Café & Cia",
+      "hasMenuItem": menuData.coffee
+        .filter((item) => ['Espresso', 'Americano', 'Latte', 'Flat White'].includes(getItemName(item)))
+        .map(toMenuItem)
+    },
+    {
+      "@type": "MenuSection",
+      "name": "No Café",
+      "hasMenuItem": menuData.notCoffee
+        .filter((item) => ['Matcha Latte', 'Chai Latte', 'Dirty Chai'].includes(getItemName(item)))
+        .map(toMenuItem)
+    }
+  ]
+};
 ---
 
 <Layout 
@@ -16,6 +58,9 @@ const breadcrumbs = [
   lang={lang}
   breadcrumbs={breadcrumbs}
   isMenuPage={true}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(menuSchema)} />
+  </Fragment>
   <!-- Hero Section -->
   <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
