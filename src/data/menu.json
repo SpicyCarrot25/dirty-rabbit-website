@@ -1,664 +1,1593 @@
 {
-  "coffee": [
+  "sections": [
     {
-      "name": "Espresso",
+      "id": "coffee",
+      "title": {
+        "es": "Café & Cia",
+        "en": "Coffee & Cia",
+        "ca": "Cafè & Cia",
+        "fr": "Café & Cie",
+        "pl": "Kawa & Cia",
+        "ru": "Кофе & Cia",
+        "uk": "Кава & Cia"
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "title": {
+            "es": "Café",
+            "en": "Coffee",
+            "ca": "Cafè",
+            "fr": "Café",
+            "pl": "Kawa",
+            "ru": "Кофе",
+            "uk": "Кава"
+          },
+          "subtitle": {
+            "es": "tostado por La Cabra, DK",
+            "en": "roasted by La Cabra, DK",
+            "ca": "torrat per La Cabra, DK",
+            "fr": "torréfié par La Cabra, DK",
+            "pl": "palona przez La Cabra, DK",
+            "ru": "обжарка La Cabra, DK",
+            "uk": "обсмажка La Cabra, DK"
+          },
+          "items": [
+            "espresso",
+            "americano",
+            "cortado",
+            "cafe-con-leche",
+            "latte",
+            "flat-white",
+            "batch-brew"
+          ],
+          "descriptionStyle": "inline",
+          "note": {
+            "es": "Leche vegetal +0.30 · Extra shot +0.50",
+            "en": "Plant milk +0.30 · Extra shot +0.50",
+            "ca": "Llet vegetal +0.30 · Shot extra +0.50",
+            "fr": "Lait végétal +0.30 · Shot en plus +0.50",
+            "pl": "Mleko roślinne +0.30 · Dodatkowe espresso +0.50",
+            "ru": "Растительное молоко +0.30 · Дополнительный шот +0.50",
+            "uk": "Рослинне молоко +0.30 · Додатковий шот +0.50"
+          }
+        },
+        {
+          "type": "list",
+          "title": {
+            "es": "Matcha",
+            "en": "Matcha",
+            "ca": "Matcha",
+            "fr": "Matcha",
+            "pl": "Matcha",
+            "ru": "Матча",
+            "uk": "Матча"
+          },
+          "subtitle": {
+            "es": "matcha orgánico de REQ Barcelona",
+            "en": "organic matcha from REQ Barcelona",
+            "ca": "matcha orgànic de REQ Barcelona",
+            "fr": "matcha bio de REQ Barcelona",
+            "pl": "organiczna matcha od REQ Barcelona",
+            "ru": "органическая матча от REQ Barcelona",
+            "uk": "органічна матча від REQ Barcelona"
+          },
+          "items": [
+            "matcha-latte"
+          ],
+          "descriptionStyle": "none",
+          "secondaryTitle": {
+            "es": "Matchas frios",
+            "en": "Iced matchas",
+            "ca": "Matchas freds",
+            "fr": "Matchas glacés",
+            "pl": "Matcha na zimno",
+            "ru": "Матча со льдом",
+            "uk": "Матча з льодом"
+          },
+          "secondaryItems": [
+            "iced-matcha-latte",
+            "strawberry-matcha",
+            "dirty-matcha",
+            "orange-matcha",
+            "blueberry-matcha"
+          ],
+          "secondaryDescriptionStyle": "inline"
+        },
+        {
+          "type": "list",
+          "title": {
+            "es": "No Café",
+            "en": "No Coffee",
+            "ca": "No Cafè",
+            "fr": "Sans café",
+            "pl": "Bez kawy",
+            "ru": "Без кофе",
+            "uk": "Без кави"
+          },
+          "items": [
+            "chai-latte",
+            "dirty-chai",
+            "hot-chocolate",
+            "teas-infusions",
+            "glass-of-milk"
+          ],
+          "descriptionStyle": "none"
+        },
+        {
+          "type": "list",
+          "title": {
+            "es": "Iced",
+            "en": "Iced",
+            "ca": "Freds",
+            "fr": "Glacé",
+            "pl": "Na zimno",
+            "ru": "Со льдом",
+            "uk": "Холодне"
+          },
+          "items": [
+            "iced-coffee",
+            "iced-latte",
+            "espresso-tonic",
+            "iced-chai",
+            "iced-dirty-chai",
+            "iced-chocolate"
+          ],
+          "descriptionStyle": "none",
+          "note": {
+            "es": "Leche vegetal +0.30 · Extra shot +0.50",
+            "en": "Plant milk +0.30 · Extra shot +0.50",
+            "ca": "Llet vegetal +0.30 · Shot extra +0.50",
+            "fr": "Lait végétal +0.30 · Shot en plus +0.50",
+            "pl": "Mleko roślinne +0.30 · Dodatkowe espresso +0.50",
+            "ru": "Растительное молоко +0.30 · Дополнительный шот +0.50",
+            "uk": "Рослинне молоко +0.30 · Додатковий шот +0.50"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bebidas",
+      "title": {
+        "es": "Bebidas",
+        "en": "Drinks",
+        "ca": "Begudes",
+        "fr": "Boissons",
+        "pl": "Napoje",
+        "ru": "Напитки",
+        "uk": "Напої"
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "title": {
+            "es": "Smoothies",
+            "en": "Smoothies",
+            "ca": "Smoothies",
+            "fr": "Smoothies",
+            "pl": "Smoothie",
+            "ru": "Смузи",
+            "uk": "Смузі"
+          },
+          "subtitle": {
+            "es": "base de agua",
+            "en": "water based",
+            "ca": "base d'aigua",
+            "fr": "à base d’eau",
+            "pl": "na bazie wody",
+            "ru": "на воде",
+            "uk": "на воді"
+          },
+          "items": [
+            "garden-thief",
+            "rabbit-power",
+            "carrot-kick"
+          ],
+          "descriptionStyle": "stacked"
+        },
+        {
+          "type": "extras",
+          "title": {
+            "es": "Extras",
+            "en": "Extras",
+            "ca": "Extres",
+            "fr": "Extras",
+            "pl": "Dodatki",
+            "ru": "Добавки",
+            "uk": "Додатки"
+          },
+          "groups": [
+            {
+              "items": [
+                {
+                  "label": {
+                    "es": "Proteína",
+                    "en": "Protein",
+                    "ca": "Proteïna",
+                    "fr": "Protéine",
+                    "pl": "Białko",
+                    "ru": "Протеин",
+                    "uk": "Протеїн"
+                  },
+                  "price": "+3"
+                },
+                {
+                  "label": {
+                    "es": "Colágeno",
+                    "en": "Collagen",
+                    "ca": "Col·lagen",
+                    "fr": "Collagène",
+                    "pl": "Kolagen",
+                    "ru": "Коллаген",
+                    "uk": "Колаген"
+                  },
+                  "price": "+1.50"
+                },
+                {
+                  "label": {
+                    "es": "Creatina, Espirulina",
+                    "en": "Creatine, Spirulina",
+                    "ca": "Creatina, Espirulina",
+                    "fr": "Créatine, Spiruline",
+                    "pl": "Kreatyna, spirulina",
+                    "ru": "Креатин, спирулина",
+                    "uk": "Креатин, спіруліна"
+                  },
+                  "price": "+1"
+                }
+              ]
+            }
+          ],
+          "align": "left"
+        },
+        {
+          "type": "list",
+          "title": {
+            "es": "Bebidas",
+            "en": "Beverages",
+            "ca": "Begudes",
+            "fr": "Boissons",
+            "pl": "Napoje",
+            "ru": "Напитки",
+            "uk": "Напої"
+          },
+          "items": [
+            "agua-sant-aniol",
+            "agua-con-gas",
+            "vichy-catalan",
+            "fritz-kola-zero",
+            "juno-soda",
+            "linda-juice",
+            "kombucha",
+            "zumo-naranja",
+            "cerveza-artesana",
+            "cerveza-sin-alcohol",
+            "copa-vino-tinto",
+            "copa-vino-blanco"
+          ],
+          "descriptionStyle": "inline"
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": {
+        "es": "Comida",
+        "en": "Food",
+        "ca": "Menjar",
+        "fr": "À manger",
+        "pl": "Jedzenie",
+        "ru": "Еда",
+        "uk": "Їжа"
+      },
+      "blocks": [
+        {
+          "type": "list",
+          "title": {
+            "es": "Tostadas",
+            "en": "Toasts",
+            "ca": "Torrades",
+            "fr": "Tartines",
+            "pl": "Tosty",
+            "ru": "Тосты",
+            "uk": "Тости"
+          },
+          "subtitle": {
+            "es": "Origo Bakery, Barcelona",
+            "en": "Origo Bakery, Barcelona",
+            "ca": "Origo Bakery, Barcelona",
+            "fr": "Origo Bakery, Barcelone",
+            "pl": "Origo Bakery, Barcelona",
+            "ru": "Origo Bakery, Барселона",
+            "uk": "Origo Bakery, Барселона"
+          },
+          "items": [
+            "avo-good-day",
+            "choco-or-buddy",
+            "tofu-goodnight",
+            "butter-together"
+          ],
+          "descriptionStyle": "stacked",
+          "showBadges": true
+        },
+        {
+          "type": "extras",
+          "title": {
+            "es": "Extras",
+            "en": "Extras",
+            "ca": "Extres",
+            "fr": "Extras",
+            "pl": "Dodatki",
+            "ru": "Добавки",
+            "uk": "Додатки"
+          },
+          "subtitle": {
+            "es": "Disponible para cualquier plato",
+            "en": "Available for any dish",
+            "ca": "Disponible per a qualsevol plat",
+            "fr": "Disponible pour tous les plats",
+            "pl": "Dostępne do każdego dania",
+            "ru": "Можно добавить к любому блюду",
+            "uk": "Можна додати до будь-якої страви"
+          },
+          "groups": [
+            {
+              "title": {
+                "es": "Proteína",
+                "en": "Protein",
+                "ca": "Proteïna",
+                "fr": "Protéine",
+                "pl": "Białko",
+                "ru": "Белок",
+                "uk": "Білок"
+              },
+              "items": [
+                {
+                  "label": {
+                    "es": "Jamón ibérico",
+                    "en": "Iberian ham",
+                    "ca": "Pernil ibèric",
+                    "fr": "Jambon ibérique",
+                    "pl": "Szynka iberyjska",
+                    "ru": "Иберийский хамон",
+                    "uk": "Іберійський хамон"
+                  },
+                  "price": "+3.50"
+                },
+                {
+                  "label": {
+                    "es": "Manchego",
+                    "en": "Manchego",
+                    "ca": "Manxec",
+                    "fr": "Manchego",
+                    "pl": "Manchego",
+                    "ru": "Манчего",
+                    "uk": "Манчего"
+                  },
+                  "price": "+2.50"
+                },
+                {
+                  "label": {
+                    "es": "Salmón",
+                    "en": "Salmon",
+                    "ca": "Salmó",
+                    "fr": "Saumon",
+                    "pl": "Łosoś",
+                    "ru": "Лосось",
+                    "uk": "Лосось"
+                  },
+                  "price": "+3.50"
+                },
+                {
+                  "label": {
+                    "es": "Pastrami",
+                    "en": "Pastrami",
+                    "ca": "Pastrami",
+                    "fr": "Pastrami",
+                    "pl": "Pastrami",
+                    "ru": "Пастрами",
+                    "uk": "Пастрамі"
+                  },
+                  "price": "+3.50"
+                },
+                {
+                  "label": {
+                    "es": "Tofu",
+                    "en": "Tofu",
+                    "ca": "Tofu",
+                    "fr": "Tofu",
+                    "pl": "Tofu",
+                    "ru": "Тофу",
+                    "uk": "Тофу"
+                  },
+                  "price": "+2.00"
+                }
+              ]
+            },
+            {
+              "title": {
+                "es": "Base",
+                "en": "Base",
+                "ca": "Base",
+                "fr": "Base",
+                "pl": "Baza",
+                "ru": "Основа",
+                "uk": "Основа"
+              },
+              "items": [
+                {
+                  "label": {
+                    "es": "Pan sin gluten",
+                    "en": "Gluten-free bread",
+                    "ca": "Pa sense gluten",
+                    "fr": "Pain sans gluten",
+                    "pl": "Pieczywo bez glutenu",
+                    "ru": "Безглютеновый хлеб",
+                    "uk": "Безглютеновий хліб"
+                  },
+                  "price": "+1.50"
+                },
+                {
+                  "label": {
+                    "es": "Pan normal",
+                    "en": "Regular bread",
+                    "ca": "Pa normal",
+                    "fr": "Pain classique",
+                    "pl": "Zwykłe pieczywo",
+                    "ru": "Обычный хлеб",
+                    "uk": "Звичайний хліб"
+                  },
+                  "price": "+1.50"
+                }
+              ]
+            },
+            {
+              "title": {
+                "es": "Más",
+                "en": "More",
+                "ca": "Més",
+                "fr": "Encore",
+                "pl": "Jeszcze",
+                "ru": "Ещё",
+                "uk": "Ще"
+              },
+              "items": [
+                {
+                  "label": {
+                    "es": "Aguacate",
+                    "en": "Avocado",
+                    "ca": "Alvocat",
+                    "fr": "Avocat",
+                    "pl": "Awokado",
+                    "ru": "Авокадо",
+                    "uk": "Авокадо"
+                  },
+                  "price": "+3.80"
+                },
+                {
+                  "label": {
+                    "es": "Mantequilla",
+                    "en": "Butter",
+                    "ca": "Mantega",
+                    "fr": "Beurre",
+                    "pl": "Masło",
+                    "ru": "Масло",
+                    "uk": "Масло"
+                  },
+                  "price": "+1.50"
+                },
+                {
+                  "label": {
+                    "es": "Crema cacahuete Buddy Buddy",
+                    "en": "Buddy Buddy peanut butter",
+                    "ca": "Crema de cacauet Buddy Buddy",
+                    "fr": "Crème de cacahuète Buddy Buddy",
+                    "pl": "Masło orzechowe Buddy Buddy",
+                    "ru": "Арахисовая паста Buddy Buddy",
+                    "uk": "Арахісова паста Buddy Buddy"
+                  },
+                  "price": "+2.00"
+                },
+                {
+                  "label": {
+                    "es": "Mermelada",
+                    "en": "Jam",
+                    "ca": "Melmelada",
+                    "fr": "Confiture",
+                    "pl": "Dżem",
+                    "ru": "Джем",
+                    "uk": "Джем"
+                  },
+                  "price": "+1.80"
+                },
+                {
+                  "label": {
+                    "es": "Nutella",
+                    "en": "Nutella",
+                    "ca": "Nutella",
+                    "fr": "Nutella",
+                    "pl": "Nutella",
+                    "ru": "Nutella",
+                    "uk": "Nutella"
+                  },
+                  "price": "+1.80"
+                }
+              ]
+            }
+          ],
+          "align": "left"
+        },
+        {
+          "type": "list",
+          "title": {
+            "es": "Bagels",
+            "en": "Bagels",
+            "ca": "Bagels",
+            "fr": "Bagels",
+            "pl": "Bajgle",
+            "ru": "Бейглы",
+            "uk": "Бейгли"
+          },
+          "subtitle": {
+            "es": "Bagel Boy, Barcelona",
+            "en": "Bagel Boy, Barcelona",
+            "ca": "Bagel Boy, Barcelona",
+            "fr": "Bagel Boy, Barcelone",
+            "pl": "Bagel Boy, Barcelona",
+            "ru": "Bagel Boy, Барселона",
+            "uk": "Bagel Boy, Барселона"
+          },
+          "items": [
+            "lord-salmon",
+            "cherries-lady",
+            "king-pastrami"
+          ],
+          "descriptionStyle": "stacked",
+          "showBadges": true,
+          "note": {
+            "es": "Añade cualquier extra",
+            "en": "Add any extra you like",
+            "ca": "Afegeix qualsevol extra",
+            "fr": "Ajoute l’extra que tu veux",
+            "pl": "Dobierz dowolny dodatek",
+            "ru": "Можно добавить любой топпинг",
+            "uk": "Можна додати будь-який топінг"
+          }
+        },
+        {
+          "type": "list",
+          "title": {
+            "es": "Planchados",
+            "en": "Pressed",
+            "ca": "Planchats",
+            "fr": "Pressés",
+            "pl": "Na ciepło",
+            "ru": "Гриль",
+            "uk": "Гриль"
+          },
+          "items": [
+            "bikini-super-classic",
+            "mr-croissant",
+            "bikini-rooftop",
+            "tunacado"
+          ],
+          "descriptionStyle": "stacked",
+          "showBadges": true,
+          "note": {
+            "es": "Añade cualquier extra",
+            "en": "Add any extra you like",
+            "ca": "Afegeix qualsevol extra",
+            "fr": "Ajoute l’extra que tu veux",
+            "pl": "Dobierz dowolny dodatek",
+            "ru": "Можно добавить любой топпинг",
+            "uk": "Можна додати будь-який топінг"
+          }
+        },
+        {
+          "type": "list",
+          "title": {
+            "es": "Bowls",
+            "en": "Bowls",
+            "ca": "Bowls",
+            "fr": "Bowls",
+            "pl": "Bowle",
+            "ru": "Боулы",
+            "uk": "Боули"
+          },
+          "items": [
+            "granola-yogurt-bowl",
+            "acai-bowl",
+            "fruit-bowl"
+          ],
+          "descriptionStyle": "stacked",
+          "note": {
+            "es": "Añade cualquier extra",
+            "en": "Add any extra you like",
+            "ca": "Afegeix qualsevol extra",
+            "fr": "Ajoute l’extra que tu veux",
+            "pl": "Dobierz dowolny dodatek",
+            "ru": "Можно добавить любой топпинг",
+            "uk": "Можна додати будь-який топінг"
+          }
+        }
+      ]
+    }
+  ],
+  "items": {
+    "espresso": {
+      "name": {
+        "es": "Espresso",
+        "en": "Espresso",
+        "ca": "Espresso",
+        "fr": "Espresso",
+        "pl": "Espresso",
+        "ru": "Эспрессо",
+        "uk": "Еспресо"
+      },
       "price": "1.90 / 2.40",
       "desc": {
         "es": "La Cabra / Etiopía",
         "en": "La Cabra / Ethiopia",
         "ca": "La Cabra / Etiòpia",
-        "fr": "La Cabra / Éthiopie"
+        "fr": "La Cabra / Éthiopie",
+        "pl": "La Cabra / Etiopia",
+        "ru": "La Cabra / Эфиопия",
+        "uk": "La Cabra / Ефіопія"
       }
     },
-    {
-      "name": "Americano",
+    "americano": {
+      "name": {
+        "es": "Americano",
+        "en": "Americano",
+        "ca": "Americano",
+        "fr": "Americano",
+        "pl": "Americano",
+        "ru": "Американо",
+        "uk": "Американо"
+      },
       "price": "2.20",
       "desc": {
         "es": "La Cabra / Etiopía",
         "en": "La Cabra / Ethiopia",
         "ca": "La Cabra / Etiòpia",
-        "fr": "La Cabra / Éthiopie"
+        "fr": "La Cabra / Éthiopie",
+        "pl": "La Cabra / Etiopia",
+        "ru": "La Cabra / Эфиопия",
+        "uk": "La Cabra / Ефіопія"
       }
     },
-    {
-      "name": "Cortado",
+    "cortado": {
+      "name": {
+        "es": "Cortado",
+        "en": "Cortado",
+        "ca": "Tallat",
+        "fr": "Cortado",
+        "pl": "Cortado",
+        "ru": "Кортадо",
+        "uk": "Кортадо"
+      },
       "price": "2.10",
       "desc": {
         "es": "La Cabra / Etiopía",
         "en": "La Cabra / Ethiopia",
         "ca": "La Cabra / Etiòpia",
-        "fr": "La Cabra / Éthiopie"
+        "fr": "La Cabra / Éthiopie",
+        "pl": "La Cabra / Etiopia",
+        "ru": "La Cabra / Эфиопия",
+        "uk": "La Cabra / Ефіопія"
       }
     },
-    {
-      "name": "Café con Leche",
-      "price": "2.50",
+    "cafe-con-leche": {
+      "name": {
+        "es": "Café con leche",
+        "en": "Coffee with milk",
+        "ca": "Cafè amb llet",
+        "fr": "Café au lait",
+        "pl": "Kawa z mlekiem",
+        "ru": "Кофе с молоком",
+        "uk": "Кава з молоком"
+      },
+      "price": "2.60",
       "desc": {
         "es": "La Cabra / Etiopía",
         "en": "La Cabra / Ethiopia",
         "ca": "La Cabra / Etiòpia",
-        "fr": "La Cabra / Éthiopie"
+        "fr": "La Cabra / Éthiopie",
+        "pl": "La Cabra / Etiopia",
+        "ru": "La Cabra / Эфиопия",
+        "uk": "La Cabra / Ефіопія"
       }
     },
-    {
-      "name": "Latte",
+    "latte": {
+      "name": {
+        "es": "Latte",
+        "en": "Latte",
+        "ca": "Latte",
+        "fr": "Latte",
+        "pl": "Latte",
+        "ru": "Латте",
+        "uk": "Лате"
+      },
       "price": "3.20",
       "desc": {
         "es": "2 shots",
         "en": "2 shots",
         "ca": "2 shots",
-        "fr": "2 shots"
+        "fr": "2 shots",
+        "pl": "2 shota",
+        "ru": "2 шота",
+        "uk": "2 шоти"
       }
     },
-    {
-      "name": "Flat White",
+    "flat-white": {
+      "name": {
+        "es": "Flat white",
+        "en": "Flat white",
+        "ca": "Flat white",
+        "fr": "Flat white",
+        "pl": "Flat white",
+        "ru": "Флэт уайт",
+        "uk": "Флет вайт"
+      },
       "price": "3.00",
       "desc": {
         "es": "2 shots",
         "en": "2 shots",
         "ca": "2 shots",
-        "fr": "2 shots"
+        "fr": "2 shots",
+        "pl": "2 shota",
+        "ru": "2 шота",
+        "uk": "2 шоти"
       }
     },
-    {
-      "name": "Batch Brew L / XL",
-      "price": "2.5 / 3",
+    "batch-brew": {
+      "name": {
+        "es": "Batch brew L/XL",
+        "en": "Batch brew L/XL",
+        "ca": "Batch brew L/XL",
+        "fr": "Batch brew L/XL",
+        "pl": "Batch brew L/XL",
+        "ru": "Batch brew L/XL",
+        "uk": "Batch brew L/XL"
+      },
+      "price": "2.50 / 3.00",
       "desc": {
         "es": "Honduras",
         "en": "Honduras",
         "ca": "Hondures",
-        "fr": "Honduras"
+        "fr": "Honduras",
+        "pl": "Honduras",
+        "ru": "Гондурас",
+        "uk": "Гондурас"
       }
     },
-    {
-      "name": "Puchero",
-      "price": "+0",
+    "matcha-latte": {
+      "name": {
+        "es": "Matcha Latte",
+        "en": "Matcha Latte",
+        "ca": "Matcha Latte",
+        "fr": "Matcha Latte",
+        "pl": "Matcha Latte",
+        "ru": "Matcha Latte",
+        "uk": "Matcha Latte"
+      },
+      "price": "3.80"
+    },
+    "iced-matcha-latte": {
+      "name": {
+        "es": "Iced Matcha Latte",
+        "en": "Iced Matcha Latte",
+        "ca": "Iced Matcha Latte",
+        "fr": "Iced Matcha Latte",
+        "pl": "Iced Matcha Latte",
+        "ru": "Iced Matcha Latte",
+        "uk": "Iced Matcha Latte"
+      },
+      "price": "4.30"
+    },
+    "strawberry-matcha": {
+      "name": {
+        "es": "Strawberry Matcha",
+        "en": "Strawberry Matcha",
+        "ca": "Strawberry Matcha",
+        "fr": "Strawberry Matcha",
+        "pl": "Strawberry Matcha",
+        "ru": "Strawberry Matcha",
+        "uk": "Strawberry Matcha"
+      },
+      "price": "4.90",
       "desc": {
-        "es": "Decaf · tostado por Puchero",
-        "en": "Decaf · roasted by Puchero",
-        "ca": "Decaf · torrat per Puchero",
-        "fr": "Décaféiné · torréfié par Puchero"
-      }
-    }
-  ],
-  "notCoffee": [
-    {
-      "name": "Matcha Pure",
-      "price": "3.20",
-      "desc": {
-        "es": "REQ matcha (con agua)",
-        "en": "REQ matcha (with water)",
-        "ca": "REQ matcha (amb aigua)",
-        "fr": "REQ matcha (avec eau)"
+        "es": "matcha latte · homemade de fresa · hielo",
+        "en": "matcha latte · house strawberry base · ice",
+        "ca": "matcha latte · base casolana de maduixa · gel",
+        "fr": "matcha latte · base maison à la fraise · glaçons",
+        "pl": "matcha latte · domowa baza truskawkowa · lód",
+        "ru": "matcha latte · домашняя клубничная база · лёд",
+        "uk": "matcha latte · домашня полунична база · лід"
       }
     },
-    {
-      "name": "Matcha Latte",
-      "price": "3.80",
+    "dirty-matcha": {
+      "name": {
+        "es": "Dirty Matcha",
+        "en": "Dirty Matcha",
+        "ca": "Dirty Matcha",
+        "fr": "Dirty Matcha",
+        "pl": "Dirty Matcha",
+        "ru": "Dirty Matcha",
+        "uk": "Dirty Matcha"
+      },
+      "price": "4.90",
       "desc": {
-        "es": "REQ matcha",
-        "en": "REQ matcha",
-        "ca": "REQ matcha",
-        "fr": "REQ matcha"
+        "es": "matcha latte · espresso · hielo",
+        "en": "matcha latte · espresso · ice",
+        "ca": "matcha latte · espresso · gel",
+        "fr": "matcha latte · espresso · glaçons",
+        "pl": "matcha latte · espresso · lód",
+        "ru": "matcha latte · эспрессо · лёд",
+        "uk": "matcha latte · еспресо · лід"
       }
     },
-    {
-      "name": "Chai Latte",
-      "price": "3.80",
+    "orange-matcha": {
+      "name": {
+        "es": "Orange Matcha",
+        "en": "Orange Matcha",
+        "ca": "Orange Matcha",
+        "fr": "Orange Matcha",
+        "pl": "Orange Matcha",
+        "ru": "Orange Matcha",
+        "uk": "Orange Matcha"
+      },
+      "price": "5.00",
       "desc": {
-        "es": "Awachai Masala",
-        "en": "Awachai Masala",
-        "ca": "Awachai Masala",
-        "fr": "Awachai Masala"
+        "es": "matcha latte · zumo de naranja natural · hielo",
+        "en": "matcha latte · fresh orange juice · ice",
+        "ca": "matcha latte · suc de taronja natural · gel",
+        "fr": "matcha latte · jus d'orange pressé · glaçons",
+        "pl": "matcha latte · świeżo wyciskany sok pomarańczowy · lód",
+        "ru": "matcha latte · свежий апельсиновый сок · лёд",
+        "uk": "matcha latte · свіжий апельсиновий сік · лід"
       }
     },
-    {
-      "name": "Dirty Chai",
-      "price": "4.30",
+    "blueberry-matcha": {
+      "name": {
+        "es": "Blueberry Matcha",
+        "en": "Blueberry Matcha",
+        "ca": "Blueberry Matcha",
+        "fr": "Blueberry Matcha",
+        "pl": "Blueberry Matcha",
+        "ru": "Blueberry Matcha",
+        "uk": "Blueberry Matcha"
+      },
+      "price": "5.20",
       "desc": {
-        "es": "Awachai Masala + espresso",
-        "en": "Awachai Masala + espresso",
-        "ca": "Awachai Masala + espresso",
-        "fr": "Awachai Masala + espresso"
+        "es": "matcha latte · base de arandanos homemade · hielo",
+        "en": "matcha latte · house blueberry base · ice",
+        "ca": "matcha latte · base casolana de nabius · gel",
+        "fr": "matcha latte · base maison à la myrtille · glaçons",
+        "pl": "matcha latte · domowa baza jagodowa · lód",
+        "ru": "matcha latte · домашняя черничная база · лёд",
+        "uk": "matcha latte · домашня чорнична база · лід"
       }
     },
-    {
-      "name": "Hot Chocolate",
-      "price": "4.50",
-      "desc": {
-        "es": "LOT Roasters",
-        "en": "LOT Roasters",
-        "ca": "LOT Roasters",
-        "fr": "LOT Roasters"
-      }
+    "chai-latte": {
+      "name": {
+        "es": "Chai Latte",
+        "en": "Chai Latte",
+        "ca": "Chai Latte",
+        "fr": "Chai Latte",
+        "pl": "Chai Latte",
+        "ru": "Chai Latte",
+        "uk": "Chai Latte"
+      },
+      "price": "3.80"
     },
-    {
+    "dirty-chai": {
+      "name": {
+        "es": "Dirty Chai",
+        "en": "Dirty Chai",
+        "ca": "Dirty Chai",
+        "fr": "Dirty Chai",
+        "pl": "Dirty Chai",
+        "ru": "Dirty Chai",
+        "uk": "Dirty Chai"
+      },
+      "price": "4.30"
+    },
+    "hot-chocolate": {
+      "name": {
+        "es": "Hot Chocolate",
+        "en": "Hot Chocolate",
+        "ca": "Xocolata calenta",
+        "fr": "Chocolat chaud",
+        "pl": "Gorąca czekolada",
+        "ru": "Горячий шоколад",
+        "uk": "Гарячий шоколад"
+      },
+      "price": "4.50"
+    },
+    "teas-infusions": {
       "name": {
         "es": "Tés e Infusiones",
-        "en": "Tea & Infusions",
-        "ca": "Tès i Infusions",
-        "fr": "Thés & Infusions"
+        "en": "Teas & infusions",
+        "ca": "Tes i infusions",
+        "fr": "Thés & infusions",
+        "pl": "Herbaty i napary",
+        "ru": "Чай и настои",
+        "uk": "Чаї та настої"
       },
-      "price": "2.80",
-      "desc": {
-        "es": "Sans & Sans",
-        "en": "Sans & Sans",
-        "ca": "Sans & Sans",
-        "fr": "Sans & Sans"
-      }
+      "price": "2.80"
     },
-    {
+    "glass-of-milk": {
       "name": {
-        "es": "Vaso de Leche",
-        "en": "Glass of Milk",
-        "ca": "Got de Llet",
-        "fr": "Verre de Lait"
+        "es": "Vaso de leche",
+        "en": "Glass of milk",
+        "ca": "Got de llet",
+        "fr": "Verre de lait",
+        "pl": "Szklanka mleka",
+        "ru": "Стакан молока",
+        "uk": "Склянка молока"
       },
-      "price": "1.50",
-      "desc": {
-        "es": "La Selvatana",
-        "en": "La Selvatana",
-        "ca": "La Selvatana",
-        "fr": "La Selvatana"
-      }
-    }
-  ],
-  "icedDrinks": [
-    {
-      "name": "Iced Coffee",
-      "price": "3.00",
-      "desc": {
-        "es": "La Cabra / Etiopía",
-        "en": "La Cabra / Ethiopia",
-        "ca": "La Cabra / Etiòpia",
-        "fr": "La Cabra / Éthiopie"
-      }
+      "price": "1.50"
     },
-    {
-      "name": "Iced Latte",
-      "price": "3.80",
-      "desc": {
-        "es": "2 shots",
-        "en": "2 shots",
-        "ca": "2 shots",
-        "fr": "2 shots"
-      }
+    "iced-coffee": {
+      "name": {
+        "es": "Iced Coffee",
+        "en": "Iced Coffee",
+        "ca": "Iced Coffee",
+        "fr": "Iced Coffee",
+        "pl": "Iced Coffee",
+        "ru": "Iced Coffee",
+        "uk": "Iced Coffee"
+      },
+      "price": "3.00"
     },
-    {
-      "name": "Espresso Tonic",
-      "price": "4.50",
-      "desc": {
-        "es": "Espresso + tónica",
-        "en": "Espresso + tonic",
-        "ca": "Espresso + tònica",
-        "fr": "Espresso + tonic"
-      }
+    "iced-latte": {
+      "name": {
+        "es": "Iced Latte",
+        "en": "Iced Latte",
+        "ca": "Iced Latte",
+        "fr": "Iced Latte",
+        "pl": "Iced Latte",
+        "ru": "Iced Latte",
+        "uk": "Iced Latte"
+      },
+      "price": "3.80"
     },
-    {
-      "name": "Iced Matcha Pure",
-      "price": "3.70",
-      "desc": {
-        "es": "REQ matcha",
-        "en": "REQ matcha",
-        "ca": "REQ matcha",
-        "fr": "REQ matcha"
-      }
+    "espresso-tonic": {
+      "name": {
+        "es": "Espresso Tonic",
+        "en": "Espresso Tonic",
+        "ca": "Espresso Tonic",
+        "fr": "Espresso Tonic",
+        "pl": "Espresso Tonic",
+        "ru": "Espresso Tonic",
+        "uk": "Espresso Tonic"
+      },
+      "price": "4.50"
     },
-    {
-      "name": "Iced Matcha Latte",
-      "price": "4.30",
-      "desc": {
-        "es": "REQ matcha",
-        "en": "REQ matcha",
-        "ca": "REQ matcha",
-        "fr": "REQ matcha"
-      }
+    "iced-chai": {
+      "name": {
+        "es": "Iced Chai",
+        "en": "Iced Chai",
+        "ca": "Iced Chai",
+        "fr": "Iced Chai",
+        "pl": "Iced Chai",
+        "ru": "Iced Chai",
+        "uk": "Iced Chai"
+      },
+      "price": "4.30"
     },
-    {
-      "name": "Iced Chai",
-      "price": "4.30",
-      "desc": {
-        "es": "Awachai Masala",
-        "en": "Awachai Masala",
-        "ca": "Awachai Masala",
-        "fr": "Awachai Masala"
-      }
+    "iced-dirty-chai": {
+      "name": {
+        "es": "Iced Dirty Chai",
+        "en": "Iced Dirty Chai",
+        "ca": "Iced Dirty Chai",
+        "fr": "Iced Dirty Chai",
+        "pl": "Iced Dirty Chai",
+        "ru": "Iced Dirty Chai",
+        "uk": "Iced Dirty Chai"
+      },
+      "price": "4.80"
     },
-    {
-      "name": "Iced Chocolate",
-      "price": "4.50",
-      "desc": {
-        "es": "LOT Roasters",
-        "en": "LOT Roasters",
-        "ca": "LOT Roasters",
-        "fr": "LOT Roasters"
-      }
+    "iced-chocolate": {
+      "name": {
+        "es": "Iced Chocolate",
+        "en": "Iced Chocolate",
+        "ca": "Iced Chocolate",
+        "fr": "Iced Chocolate",
+        "pl": "Iced Chocolate",
+        "ru": "Iced Chocolate",
+        "uk": "Iced Chocolate"
+      },
+      "price": "5.00"
     },
-    {
-      "name": "Iced Tea",
-      "price": "3.00",
-      "desc": {
-        "es": "Sans & Sans",
-        "en": "Sans & Sans",
-        "ca": "Sans & Sans",
-        "fr": "Sans & Sans"
-      }
-    }
-  ],
-  "smoothies": [
-    {
-      "name": "Garden Thief",
+    "garden-thief": {
+      "name": {
+        "es": "Garden Thief",
+        "en": "Garden Thief",
+        "ca": "Garden Thief",
+        "fr": "Garden Thief",
+        "pl": "Garden Thief",
+        "ru": "Garden Thief",
+        "uk": "Garden Thief"
+      },
       "price": "6.50",
       "desc": {
         "es": "Robamos lo mejor del huerto — espinacas, brócoli, manzana, plátano",
-        "en": "We stole the best from the garden — spinach, broccoli, apple, banana",
-        "ca": "Hem robat el millor de l'hort — espinacs, bròquil, poma, plàtan",
-        "fr": "On a volé le meilleur du jardin — épinards, brocoli, pomme, banane"
+        "en": "Straight from the garden heist: spinach, broccoli, apple, banana",
+        "ca": "Ens hem endut el millor de l'hort: espinacs, bròquil, poma, plàtan",
+        "fr": "On a piqué le meilleur du potager : épinards, brocoli, pomme, banane",
+        "pl": "Podkradliśmy to, co najlepsze z ogrodu: szpinak, brokuł, jabłko, banan",
+        "ru": "Стащили всё лучшее с огорода: шпинат, брокколи, яблоко, банан",
+        "uk": "Прихопили все найкраще з городу: шпинат, броколі, яблуко, банан"
       }
     },
-    {
-      "name": "Rabbit Power",
+    "rabbit-power": {
+      "name": {
+        "es": "Rabbit Power",
+        "en": "Rabbit Power",
+        "ca": "Rabbit Power",
+        "fr": "Rabbit Power",
+        "pl": "Rabbit Power",
+        "ru": "Rabbit Power",
+        "uk": "Rabbit Power"
+      },
       "price": "6.50",
       "desc": {
         "es": "Pilas alcalinas — manzana, fresas, plátano",
-        "en": "Alkaline batteries — apple, strawberries, banana",
-        "ca": "Piles alcalines — poma, maduixes, plàtan",
-        "fr": "Piles alcalines — pomme, fraises, banane"
+        "en": "Like a fresh set of batteries: apple, strawberries, banana",
+        "ca": "Com piles acabades d'estrenar: poma, maduixes, plàtan",
+        "fr": "Comme des piles toutes neuves : pomme, fraises, banane",
+        "pl": "Jak nowa bateria: jabłko, truskawki, banan",
+        "ru": "Как свежие батарейки: яблоко, клубника, банан",
+        "uk": "Наче свіжі батарейки: яблуко, полуниця, банан"
       }
     },
-    {
-      "name": "Carrot Kick",
+    "carrot-kick": {
+      "name": {
+        "es": "Carrot Kick",
+        "en": "Carrot Kick",
+        "ca": "Carrot Kick",
+        "fr": "Carrot Kick",
+        "pl": "Carrot Kick",
+        "ru": "Carrot Kick",
+        "uk": "Carrot Kick"
+      },
       "price": "6.50",
       "desc": {
         "es": "Un golpe de jengibre — zanahoria, manzana, mango, jengibre",
-        "en": "A ginger kick — carrot, apple, mango, ginger",
-        "ca": "Un cop de gingebre — pastanaga, poma, mango, gingebre",
-        "fr": "Un coup de gingembre — carotte, pomme, mangue, gingembre"
+        "en": "A ginger kick with carrot, apple and mango",
+        "ca": "Un toc de gingebre amb pastanaga, poma i mango",
+        "fr": "Un vrai coup de gingembre avec carotte, pomme et mangue",
+        "pl": "Imbirowy kop z marchewką, jabłkiem i mango",
+        "ru": "Имбирный пинок с морковью, яблоком и манго",
+        "uk": "Імбирний поштовх із морквою, яблуком і манго"
       }
-    }
-  ],
-  "beverages": [
-    {
+    },
+    "agua-sant-aniol": {
       "name": {
         "es": "Agua Sant Aniol",
         "en": "Sant Aniol Water",
         "ca": "Aigua Sant Aniol",
-        "fr": "Eau Sant Aniol"
+        "fr": "Eau Sant Aniol",
+        "pl": "Woda Sant Aniol",
+        "ru": "Вода Sant Aniol",
+        "uk": "Вода Sant Aniol"
       },
       "price": "1.90",
       "desc": {
         "es": "Agua mineral",
         "en": "Mineral water",
         "ca": "Aigua mineral",
-        "fr": "Eau minérale"
+        "fr": "Eau minérale",
+        "pl": "Woda mineralna",
+        "ru": "Минеральная вода",
+        "uk": "Мінеральна вода"
       }
     },
-    {
+    "agua-con-gas": {
       "name": {
         "es": "Agua con Gas",
         "en": "Sparkling Water",
-        "ca": "Aigua amb Gas",
-        "fr": "Eau Gazeuse"
+        "ca": "Aigua amb gas",
+        "fr": "Eau gazeuse",
+        "pl": "Woda gazowana",
+        "ru": "Газированная вода",
+        "uk": "Газована вода"
       },
       "price": "2.20",
       "desc": {
         "es": "Sant Aniol con gas",
         "en": "Sant Aniol sparkling",
         "ca": "Sant Aniol amb gas",
-        "fr": "Sant Aniol pétillante"
+        "fr": "Sant Aniol pétillante",
+        "pl": "Sant Aniol gazowana",
+        "ru": "Sant Aniol с газом",
+        "uk": "Sant Aniol газована"
       }
     },
-    {
-      "name": "Vichy Catalán",
-      "price": "2.20",
+    "vichy-catalan": {
+      "name": {
+        "es": "Vichy Catalán",
+        "en": "Vichy Catalán",
+        "ca": "Vichy Catalán",
+        "fr": "Vichy Catalán",
+        "pl": "Vichy Catalán",
+        "ru": "Vichy Catalán",
+        "uk": "Vichy Catalán"
+      },
+      "price": "2.50",
       "desc": {
         "es": "Lata",
         "en": "Can",
         "ca": "Llauna",
-        "fr": "Canette"
+        "fr": "Canette",
+        "pl": "Puszka",
+        "ru": "Банка",
+        "uk": "Банка"
       }
     },
-    {
-      "name": "Fritz Kola",
+    "fritz-kola-zero": {
+      "name": {
+        "es": "Fritz Kola / Zero",
+        "en": "Fritz Kola / Zero",
+        "ca": "Fritz Kola / Zero",
+        "fr": "Fritz Kola / Zero",
+        "pl": "Fritz Kola / Zero",
+        "ru": "Fritz Kola / Zero",
+        "uk": "Fritz Kola / Zero"
+      },
       "price": "2.80",
       "desc": {
         "es": "Regular o Zero",
         "en": "Regular or Zero",
         "ca": "Regular o Zero",
-        "fr": "Normal ou Zero"
+        "fr": "Classique ou Zero",
+        "pl": "Klasyczna lub Zero",
+        "ru": "Обычная или Zero",
+        "uk": "Класична або Zero"
       }
     },
-    {
-      "name": "Juno Soda",
-      "price": "2.80",
+    "juno-soda": {
+      "name": {
+        "es": "Juno Soda",
+        "en": "Juno Soda",
+        "ca": "Juno Soda",
+        "fr": "Juno Soda",
+        "pl": "Juno Soda",
+        "ru": "Juno Soda",
+        "uk": "Juno Soda"
+      },
+      "price": "3.00",
       "desc": {
         "es": "Naranja o limón",
         "en": "Orange or lemon",
         "ca": "Taronja o llimona",
-        "fr": "Orange ou citron"
+        "fr": "Orange ou citron",
+        "pl": "Pomarańcza lub cytryna",
+        "ru": "Апельсин или лимон",
+        "uk": "Апельсин або лимон"
       }
     },
-    {
-      "name": "Kombucha Bioma",
-      "price": "4.50",
-      "desc": {
-        "es": "Orgánica",
-        "en": "Organic",
-        "ca": "Orgànica",
-        "fr": "Bio"
-      }
-    },
-    {
-      "name": "Linda Juice",
-      "price": "2.80",
+    "linda-juice": {
+      "name": {
+        "es": "Linda Juice",
+        "en": "Linda Juice",
+        "ca": "Linda Juice",
+        "fr": "Linda Juice",
+        "pl": "Linda Juice",
+        "ru": "Linda Juice",
+        "uk": "Linda Juice"
+      },
+      "price": "3.80",
       "desc": {
         "es": "Mandarina o pera",
         "en": "Mandarin or pear",
         "ca": "Mandarina o pera",
-        "fr": "Mandarine ou poire"
+        "fr": "Mandarine ou poire",
+        "pl": "Mandarynka lub gruszka",
+        "ru": "Мандарин или груша",
+        "uk": "Мандарин або груша"
       }
     },
-    {
+    "kombucha": {
+      "name": {
+        "es": "Kombucha",
+        "en": "Kombucha",
+        "ca": "Kombucha",
+        "fr": "Kombucha",
+        "pl": "Kombucha",
+        "ru": "Комбуча",
+        "uk": "Комбуча"
+      },
+      "price": "5.00",
+      "desc": {
+        "es": "Bioma, orgánica",
+        "en": "Bioma, organic",
+        "ca": "Bioma, orgànica",
+        "fr": "Bioma, bio",
+        "pl": "Bioma, organiczna",
+        "ru": "Bioma, органическая",
+        "uk": "Bioma, органічна"
+      }
+    },
+    "zumo-naranja": {
       "name": {
         "es": "Zumo de Naranja",
         "en": "Orange Juice",
-        "ca": "Suc de Taronja",
-        "fr": "Jus d'Orange"
+        "ca": "Suc de taronja",
+        "fr": "Jus d'orange",
+        "pl": "Sok pomarańczowy",
+        "ru": "Апельсиновый сок",
+        "uk": "Апельсиновий сік"
       },
       "price": "4.00",
       "desc": {
         "es": "Natural, exprimido",
         "en": "Fresh squeezed",
         "ca": "Natural, espremut",
-        "fr": "Fraîchement pressé"
+        "fr": "Fraîchement pressé",
+        "pl": "Świeżo wyciskany",
+        "ru": "Свежевыжатый",
+        "uk": "Свіжовичавлений"
       }
-    }
-  ],
-  "adultDrinks": [
-    {
+    },
+    "cerveza-artesana": {
       "name": {
         "es": "Cerveza Artesana",
         "en": "Craft Beer",
-        "ca": "Cervesa Artesana",
-        "fr": "Bière Artisanale"
+        "ca": "Cervesa artesana",
+        "fr": "Bière artisanale",
+        "pl": "Piwo kraftowe",
+        "ru": "Крафтовое пиво",
+        "uk": "Крафтове пиво"
       },
       "price": "3.50-6.50",
       "desc": {
-        "es": "Craft beers · Algunas sin gluten",
-        "en": "Some gluten-free options",
+        "es": "Algunas sin gluten",
+        "en": "Some gluten-free",
         "ca": "Algunes sense gluten",
-        "fr": "Options sans gluten disponibles"
+        "fr": "Quelques-unes sans gluten",
+        "pl": "Część bez glutenu",
+        "ru": "Есть и без глютена",
+        "uk": "Є й без глютену"
       }
     },
-    {
+    "cerveza-sin-alcohol": {
       "name": {
         "es": "Cerveza Sin Alcohol",
-        "en": "Non-Alcoholic Beer",
-        "ca": "Cervesa Sense Alcohol",
-        "fr": "Bière Sans Alcool"
+        "en": "Non-alcoholic Beer",
+        "ca": "Cervesa sense alcohol",
+        "fr": "Bière sans alcool",
+        "pl": "Piwo bezalkoholowe",
+        "ru": "Безалкогольное пиво",
+        "uk": "Безалкогольне пиво"
       },
-      "price": "3.50",
-      "desc": {
-        "es": "Varias opciones",
-        "en": "Various options",
-        "ca": "Diverses opcions",
-        "fr": "Plusieurs choix"
-      }
+      "price": "3.75"
     },
-    {
+    "copa-vino-tinto": {
       "name": {
-        "es": "Copa La Figa",
-        "en": "La Figa (Red)",
-        "ca": "Copa La Figa",
-        "fr": "La Figa (Rouge)"
+        "es": "Copa Vino Tinto",
+        "en": "Glass of Red Wine",
+        "ca": "Copa de vi negre",
+        "fr": "Verre de vin rouge",
+        "pl": "Kieliszek czerwonego wina",
+        "ru": "Бокал красного вина",
+        "uk": "Келих червоного вина"
       },
-      "price": "4.50",
-      "desc": {
-        "es": "Vino natural tinto",
-        "en": "Natural red wine",
-        "ca": "Vi natural negre",
-        "fr": "Vin nature rouge"
-      }
+      "price": "4.50"
     },
-    {
+    "copa-vino-blanco": {
       "name": {
-        "es": "Copa Curuba",
-        "en": "Curuba (White)",
-        "ca": "Copa Curuba",
-        "fr": "Curuba (Blanc)"
+        "es": "Copa Vino Blanco",
+        "en": "Glass of White Wine",
+        "ca": "Copa de vi blanc",
+        "fr": "Verre de vin blanc",
+        "pl": "Kieliszek białego wina",
+        "ru": "Бокал белого вина",
+        "uk": "Келих білого вина"
       },
-      "price": "4.50",
-      "desc": {
-        "es": "Vino natural blanco",
-        "en": "Natural white wine",
-        "ca": "Vi natural blanc",
-        "fr": "Vin nature blanc"
-      }
+      "price": "4.50"
     },
-    {
+    "avo-good-day": {
       "name": {
-        "es": "Descorche",
-        "en": "Corkage",
-        "ca": "Descorxatge",
-        "fr": "Droit de Bouchon"
+        "es": "Avo Good Day",
+        "en": "Avo Good Day",
+        "ca": "Avo Good Day",
+        "fr": "Avo Good Day",
+        "pl": "Avo Good Day",
+        "ru": "Avo Good Day",
+        "uk": "Avo Good Day"
       },
-      "price": "+6.00",
-      "desc": {
-        "es": "Trae tu botella de la tienda",
-        "en": "Bring a bottle from our shop",
-        "ca": "Porta una ampolla de la botiga",
-        "fr": "Apportez une bouteille de notre boutique"
-      }
-    }
-  ],
-  "toasts": [
-    {
-      "name": "Avo Good Day",
       "price": "8.00",
+      "badge": "best-seller",
       "desc": {
-        "es": "Buenos días garantizados — tostada de masa madre, aguacate, cherry y un buen chorro de aceite",
-        "en": "Good morning guaranteed — sourdough toast, avocado, cherry tomatoes, generous olive oil",
-        "ca": "Bon dia garantit — torrada de massa mare, alvocat, cherry i un bon raig d'oli",
-        "fr": "Bonjour garanti — tartine au levain, avocat, tomates cerises, généreux filet d'huile d'olive"
+        "es": "Buenos días garantizados: tostada de masa madre, aguacate, cherry y unbuen chorro de aceite de oliva virgen extra (1)",
+        "en": "Guaranteed good morning: sourdough toast, avocado, cherry tomatoes and a generous pour of extra virgin olive oil (1)",
+        "ca": "Bon dia garantit: torrada de massa mare, alvocat, tomàquet cherry i un bon raig d'oli d'oliva verge extra (1)",
+        "fr": "Bonjour assuré : tartine au levain, avocat, tomates cerises et un joli filet d'huile d'olive vierge extra (1)",
+        "pl": "Dobry poranek gwarantowany: chleb na zakwasie, awokado, pomidorki cherry i porządny strumień oliwy extra virgin (1)",
+        "ru": "Доброе утро гарантировано: тост на закваске, авокадо, томаты черри и щедрая порция оливкового масла extra virgin (1)",
+        "uk": "Гарний ранок гарантовано: тост на заквасці, авокадо, томати чері й щедра порція оливкової олії extra virgin (1)"
       }
     },
-    {
-      "name": "Choco Toast",
+    "choco-or-buddy": {
+      "name": {
+        "es": "Choco Or Buddy",
+        "en": "Choco Or Buddy",
+        "ca": "Choco Or Buddy",
+        "fr": "Choco Or Buddy",
+        "pl": "Choco Or Buddy",
+        "ru": "Choco Or Buddy",
+        "uk": "Choco Or Buddy"
+      },
       "price": "7.50",
       "desc": {
-        "es": "Para los golosos — tostada de masa madre, plátano caramelizado. Elige: chocolate o crema de cacahuete",
-        "en": "For the sweet tooth — sourdough toast, caramelized banana. Choose: chocolate or peanut butter",
-        "ca": "Per als llamins — torrada de massa mare, plàtan caramel·litzat. Tria: xocolata o crema de cacauet",
-        "fr": "Pour les gourmands — tartine au levain, banane caramélisée. Au choix : chocolat ou beurre de cacahuète"
+        "es": "Para los golosos: tostada de masa madre, plátano. Elige: chocolate o crema orgánica de cacahuete Buddy Buddy (1,8,7)",
+        "en": "For anyone with a sweet tooth: sourdough toast and banana. Pick chocolate or Buddy Buddy organic peanut butter (1,8,7)",
+        "ca": "Per als més llaminers: torrada de massa mare i plàtan. Tria xocolata o crema orgànica de cacauet Buddy Buddy (1,8,7)",
+        "fr": "Pour les becs sucrés : tartine au levain et banane. À choisir avec chocolat ou crème de cacahuète bio Buddy Buddy (1,8,7)",
+        "pl": "Dla łasuchów: tost na zakwasie i banan. Do wyboru czekolada albo organiczne masło orzechowe Buddy Buddy (1,8,7)",
+        "ru": "Для сладкоежек: тост на закваске и банан. На выбор шоколад или органическая арахисовая паста Buddy Buddy (1,8,7)",
+        "uk": "Для ласунів: тост на заквасці й банан. Обирай шоколад або органічну арахісову пасту Buddy Buddy (1,8,7)"
       }
     },
-    {
-      "name": "Butter Together",
+    "tofu-goodnight": {
+      "name": {
+        "es": "Tofu Goodnight",
+        "en": "Tofu Goodnight",
+        "ca": "Tofu Goodnight",
+        "fr": "Tofu Goodnight",
+        "pl": "Tofu Goodnight",
+        "ru": "Tofu Goodnight",
+        "uk": "Tofu Goodnight"
+      },
+      "price": "7.50",
+      "badge": "new",
+      "desc": {
+        "es": "La cena perfecta: tostada de masa madre, hummus casero, tofu ahumado de sésamo y pimiento asado (1,6,11)",
+        "en": "Perfect for a later bite: sourdough toast, homemade hummus, smoked sesame tofu and roasted pepper (1,6,11)",
+        "ca": "El sopar perfecte: torrada de massa mare, hummus casolà, tofu fumat de sèsam i pebrot escalivat (1,6,11)",
+        "fr": "Le dîner parfait : tartine au levain, houmous maison, tofu fumé au sésame et poivron rôti (1,6,11)",
+        "pl": "Kolacja idealna: tost na zakwasie, domowy hummus, wędzone tofu z sezamem i pieczona papryka (1,6,11)",
+        "ru": "Идеальный вариант на вечер: тост на закваске, домашний хумус, копчёный кунжутный тофу и запечённый перец (1,6,11)",
+        "uk": "Ідеальна вечеря: тост на заквасці, домашній хумус, копчений кунжутний тофу та запечений перець (1,6,11)"
+      }
+    },
+    "butter-together": {
+      "name": {
+        "es": "Butter Together",
+        "en": "Butter Together",
+        "ca": "Butter Together",
+        "fr": "Butter Together",
+        "pl": "Butter Together",
+        "ru": "Butter Together",
+        "uk": "Butter Together"
+      },
       "price": "5.50",
       "desc": {
-        "es": "Simple y perfecto — tostada de masa madre, mantequilla francesa, mermelada casera",
-        "en": "Simple and perfect — sourdough toast, French butter, homemade jam",
-        "ca": "Simple i perfecte — torrada de massa mare, mantega francesa, melmelada casolana",
-        "fr": "Simple et parfait — tartine au levain, beurre français, confiture maison"
+        "es": "Simple y perfecto: tostada de masa madre, mantequilla francesa, mermelada casera (1,7)",
+        "en": "Simple and spot on: sourdough toast, French butter and homemade jam (1,7)",
+        "ca": "Simple i rodó: torrada de massa mare, mantega francesa i melmelada casolana (1,7)",
+        "fr": "Simple et juste parfait : tartine au levain, beurre français et confiture maison (1,7)",
+        "pl": "Prosto i dokładnie tak, jak trzeba: tost na zakwasie, francuskie masło i domowy dżem (1,7)",
+        "ru": "Просто и очень хорошо: тост на закваске, французское масло и домашний джем (1,7)",
+        "uk": "Просто й дуже влучно: тост на заквасці, французьке масло та домашній джем (1,7)"
       }
     },
-    {
-      "name": "Bikini Super Classic",
-      "price": "6.50",
-      "desc": {
-        "es": "El clásico elevado — masa madre, Duroc 100%, Havarti derretido",
-        "en": "The elevated classic — sourdough, 100% Duroc ham, melted Havarti",
-        "ca": "El clàssic elevat — massa mare, Duroc 100%, Havarti fos",
-        "fr": "Le classique revisité — levain, jambon Duroc 100%, Havarti fondu"
-      }
-    },
-    {
-      "name": "Mr. Croissant",
-      "price": "6.50",
-      "desc": {
-        "es": "Crujiente por fuera, fundido por dentro — croissant, York, Havarti",
-        "en": "Crispy outside, melted inside — croissant, York ham, Havarti",
-        "ca": "Cruixent per fora, fos per dins — croissant, York, Havarti",
-        "fr": "Croustillant dehors, fondant dedans — croissant, jambon, Havarti"
-      }
-    }
-  ],
-  "bagels": [
-    {
-      "name": "Lord Salmon",
+    "lord-salmon": {
+      "name": {
+        "es": "Lord Salmon",
+        "en": "Lord Salmon",
+        "ca": "Lord Salmon",
+        "fr": "Lord Salmon",
+        "pl": "Lord Salmon",
+        "ru": "Lord Salmon",
+        "uk": "Lord Salmon"
+      },
       "price": "9.50",
+      "badge": "best-seller",
       "desc": {
-        "es": "Nueva York versión Costa Brava — crema, salmón Benfumat, cebolla encurtida, cherry",
-        "en": "New York meets Costa Brava — cream cheese, Benfumat salmon, pickled onions, cherry",
-        "ca": "Nova York versió Costa Brava — crema, salmó Benfumat, ceba encurtida, cherry",
-        "fr": "New York rencontre la Costa Brava — cream cheese, saumon Benfumat, oignons marinés, tomates cerises"
+        "es": "Nueva York versión Costa Brava: queso crema, salmón Benfumat, cebolla encurtida, tomate cherry (1,4,7)",
+        "en": "New York by way of the Costa Brava: cream cheese, Benfumat salmon, pickled onion and cherry tomatoes (1,4,7)",
+        "ca": "Nova York en clau Costa Brava: formatge crema, salmó Benfumat, ceba adobada i tomàquet cherry (1,4,7)",
+        "fr": "New York façon Costa Brava : cream cheese, saumon Benfumat, oignon picklé et tomates cerises (1,4,7)",
+        "pl": "Nowy Jork w wersji Costa Brava: serek śmietankowy, łosoś Benfumat, marynowana cebula i pomidorki cherry (1,4,7)",
+        "ru": "Нью-Йорк в версии Costa Brava: сливочный сыр, лосось Benfumat, маринованный лук и томаты черри (1,4,7)",
+        "uk": "Нью-Йорк у версії Costa Brava: крем-сир, лосось Benfumat, маринована цибуля та томати чері (1,4,7)"
       }
     },
-    {
-      "name": "Cherries Lady",
+    "cherries-lady": {
+      "name": {
+        "es": "Cherries Lady",
+        "en": "Cherries Lady",
+        "ca": "Cherries Lady",
+        "fr": "Cherries Lady",
+        "pl": "Cherries Lady",
+        "ru": "Cherries Lady",
+        "uk": "Cherries Lady"
+      },
       "price": "8.50",
       "desc": {
-        "es": "La vegetariana irresistible — crema, cherry, cebollino crujiente",
-        "en": "The irresistible veggie — cream cheese, cherry tomatoes, crispy chives",
-        "ca": "La vegetariana irresistible — crema, cherry, cibulet cruixent",
-        "fr": "L'irrésistible végétarienne — cream cheese, tomates cerises, ciboulette croustillante"
-      }
-    }
-  ],
-  "bowls": [
-    {
-      "name": "Granola Yogurt Bowl",
-      "price": "8.00",
-      "desc": {
-        "es": "Crujiente y cremoso — yogur griego, granola casera, fruta del día, toque de cacahuete",
-        "en": "Crunchy and creamy — Greek yogurt, homemade granola, daily fruit, peanut butter touch",
-        "ca": "Cruixent i cremós — iogurt grec, granola casolana, fruita del dia, toc de cacauet",
-        "fr": "Croustillant et crémeux — yaourt grec, granola maison, fruits du jour, touche de beurre de cacahuète"
+        "es": "La vegetariana irresistible: queso crema, tomate cherry, cebolla encurtida (1,7)",
+        "en": "The veggie one you end up craving: cream cheese, cherry tomatoes and pickled onion (1,7)",
+        "ca": "La vegetariana que sempre ve de gust: formatge crema, tomàquet cherry i ceba adobada (1,7)",
+        "fr": "La végé qu'on reprend sans réfléchir : cream cheese, tomates cerises et oignon picklé (1,7)",
+        "pl": "Wegetariańska, do której chce się wracać: serek śmietankowy, pomidorki cherry i marynowana cebula (1,7)",
+        "ru": "Та самая вегетарианская, к которой хочется вернуться: сливочный сыр, томаты черри и маринованный лук (1,7)",
+        "uk": "Та сама вегетаріанська, до якої хочеться повертатися: крем-сир, томати чері та маринована цибуля (1,7)"
       }
     },
-    {
-      "name": "Açaí Bowl",
+    "king-pastrami": {
+      "name": {
+        "es": "King Pastrami",
+        "en": "King Pastrami",
+        "ca": "King Pastrami",
+        "fr": "King Pastrami",
+        "pl": "King Pastrami",
+        "ru": "King Pastrami",
+        "uk": "King Pastrami"
+      },
+      "price": "11.50",
+      "badge": "new",
+      "desc": {
+        "es": "El rey del brunch: bagel, pastrami ahumado de Rooftop Smokehouse, Havarti, pepinillos, mostaza de cerveza de Rooftop (1,7,10)",
+        "en": "Brunch royalty: bagel, Rooftop Smokehouse smoked pastrami, Havarti, pickles and Rooftop beer mustard (1,7,10)",
+        "ca": "El rei del brunch: bagel, pastrami fumat de Rooftop Smokehouse, Havarti, cogombrets i mostassa de cervesa Rooftop (1,7,10)",
+        "fr": "Le roi du brunch : bagel, pastrami fumé de Rooftop Smokehouse, Havarti, pickles et moutarde à la bière Rooftop (1,7,10)",
+        "pl": "Król brunchu: bajgiel, wędzone pastrami od Rooftop Smokehouse, Havarti, pikle i piwna musztarda Rooftop (1,7,10)",
+        "ru": "Король бранча: бейгл, копчёное пастрами Rooftop Smokehouse, Havarti, корнишоны и пивная горчица Rooftop (1,7,10)",
+        "uk": "Король бранчу: бейгл, копчене пастрамі Rooftop Smokehouse, Havarti, пікулі та пивна гірчиця Rooftop (1,7,10)"
+      }
+    },
+    "bikini-super-classic": {
+      "name": {
+        "es": "Bikini Super Classic",
+        "en": "Bikini Super Classic",
+        "ca": "Bikini Super Classic",
+        "fr": "Bikini Super Classic",
+        "pl": "Bikini Super Classic",
+        "ru": "Bikini Super Classic",
+        "uk": "Bikini Super Classic"
+      },
+      "price": "6.50",
+      "desc": {
+        "es": "El clásico elevado: masa madre, Duroc 100%, Havarti derretido (1,7)",
+        "en": "The classic, done properly: sourdough, 100% Duroc ham and melted Havarti (1,7)",
+        "ca": "El clàssic ben fet: massa mare, Duroc 100% i Havarti fos (1,7)",
+        "fr": "Le classique, bien envoyé : levain, Duroc 100 % et Havarti fondu (1,7)",
+        "pl": "Klasyk dopracowany jak trzeba: pieczywo na zakwasie, Duroc 100% i roztopione Havarti (1,7)",
+        "ru": "Классика, доведённая до ума: хлеб на закваске, Duroc 100% и расплавленный Havarti (1,7)",
+        "uk": "Класика, доведена як слід: хліб на заквасці, Duroc 100% і розплавлений Havarti (1,7)"
+      }
+    },
+    "mr-croissant": {
+      "name": {
+        "es": "Mr. Croissant",
+        "en": "Mr. Croissant",
+        "ca": "Mr. Croissant",
+        "fr": "Mr. Croissant",
+        "pl": "Mr. Croissant",
+        "ru": "Mr. Croissant",
+        "uk": "Mr. Croissant"
+      },
+      "price": "6.50",
+      "desc": {
+        "es": "Crujiente por fuera, fundido por dentro: croissant, York, Havarti (1,7)",
+        "en": "Golden outside, melty inside: croissant, York ham and Havarti (1,7)",
+        "ca": "Cruixent per fora, fos per dins: croissant, pernil York i Havarti (1,7)",
+        "fr": "Croustillant dehors, fondant dedans : croissant, jambon York et Havarti (1,7)",
+        "pl": "Chrupi na zewnątrz, rozpływa się w środku: croissant, szynka york i Havarti (1,7)",
+        "ru": "Снаружи хрустит, внутри тает: круассан, ветчина York и Havarti (1,7)",
+        "uk": "Хрусткий зовні, тягучий усередині: круасан, шинка York і Havarti (1,7)"
+      }
+    },
+    "bikini-rooftop": {
+      "name": {
+        "es": "Bikini Rooftop",
+        "en": "Bikini Rooftop",
+        "ca": "Bikini Rooftop",
+        "fr": "Bikini Rooftop",
+        "pl": "Bikini Rooftop",
+        "ru": "Bikini Rooftop",
+        "uk": "Bikini Rooftop"
+      },
+      "price": "7.50",
+      "badge": "new",
+      "desc": {
+        "es": "El clásico ahumado: masa madre, pastrami ahumado de Rooftop Smokehouse, manchego con un toque de mostaza de cerveza (1,7,10)",
+        "en": "The smoky take on the classic: sourdough, Rooftop Smokehouse smoked pastrami, manchego and a touch of beer mustard (1,7,10)",
+        "ca": "La versió fumada del clàssic: massa mare, pastrami fumat de Rooftop Smokehouse, manxec i un toc de mostassa de cervesa (1,7,10)",
+        "fr": "La version fumée du classique : levain, pastrami fumé de Rooftop Smokehouse, manchego et une pointe de moutarde à la bière (1,7,10)",
+        "pl": "Dymna wersja klasyka: pieczywo na zakwasie, wędzone pastrami Rooftop Smokehouse, manchego i odrobina piwnej musztardy (1,7,10)",
+        "ru": "Копчёная версия классики: хлеб на закваске, копчёное пастрами Rooftop Smokehouse, manchego и лёгкий штрих пивной горчицы (1,7,10)",
+        "uk": "Копчена версія класики: хліб на заквасці, копчене пастрамі Rooftop Smokehouse, manchego і легкий штрих пивної гірчиці (1,7,10)"
+      }
+    },
+    "tunacado": {
+      "name": {
+        "es": "Tunacado",
+        "en": "Tunacado",
+        "ca": "Tunacado",
+        "fr": "Tunacado",
+        "pl": "Tunacado",
+        "ru": "Tunacado",
+        "uk": "Tunacado"
+      },
+      "price": "8.50",
+      "badge": "new",
+      "desc": {
+        "es": "Mar y huerto en un bikini: masa madre, atún, aguacate, pesto genovese (1,4)",
+        "en": "A little sea and garden in one bikini: sourdough, tuna, avocado and pesto genovese (1,4)",
+        "ca": "Mar i hort en un sol bikini: massa mare, tonyina, alvocat i pesto genovès (1,4)",
+        "fr": "Un peu de mer et de jardin dans un bikini : levain, thon, avocat et pesto genovese (1,4)",
+        "pl": "Morze i ogród w jednym bikini: pieczywo na zakwasie, tuńczyk, awokado i pesto genovese (1,4)",
+        "ru": "Море и огород в одном бикини: хлеб на закваске, тунец, авокадо и pesto genovese (1,4)",
+        "uk": "Море й город в одному bikini: хліб на заквасці, тунець, авокадо та pesto genovese (1,4)"
+      }
+    },
+    "granola-yogurt-bowl": {
+      "name": {
+        "es": "Granola Yogurt Bowl",
+        "en": "Granola Yogurt Bowl",
+        "ca": "Granola Yogurt Bowl",
+        "fr": "Granola Yogurt Bowl",
+        "pl": "Granola Yogurt Bowl",
+        "ru": "Granola Yogurt Bowl",
+        "uk": "Granola Yogurt Bowl"
+      },
+      "price": "8.50",
+      "desc": {
+        "es": "Crujiente y cremoso: yogurt griego, granola casera, fruta del día, toque de cacahuete Buddy Buddy (1,7)",
+        "en": "Crunchy and creamy: Greek yogurt, house granola, fruit of the day and a touch of Buddy Buddy peanut butter (1,7)",
+        "ca": "Cruixent i cremós: iogurt grec, granola casolana, fruita del dia i un toc de cacauet Buddy Buddy (1,7)",
+        "fr": "Croustillant et crémeux : yaourt grec, granola maison, fruit du jour et une touche de beurre de cacahuète Buddy Buddy (1,7)",
+        "pl": "Chrupi i otula: jogurt grecki, domowa granola, owoc dnia i odrobina masła orzechowego Buddy Buddy (1,7)",
+        "ru": "Хрустящий и нежный: греческий йогурт, домашняя гранола, фрукт дня и немного арахисовой пасты Buddy Buddy (1,7)",
+        "uk": "Хрусткий і ніжний: грецький йогурт, домашня гранола, фрукт дня й трохи арахісової пасти Buddy Buddy (1,7)"
+      }
+    },
+    "acai-bowl": {
+      "name": {
+        "es": "Açaí Bowl",
+        "en": "Açaí Bowl",
+        "ca": "Açaí Bowl",
+        "fr": "Açaí Bowl",
+        "pl": "Açaí Bowl",
+        "ru": "Açaí Bowl",
+        "uk": "Açaí Bowl"
+      },
       "price": "11.00",
       "desc": {
         "es": "14% açaí puro (de verdad) — sorbete cremoso, granola, fruta fresca",
-        "en": "14% pure açaí (for real) — creamy sorbet, granola, fresh fruit",
-        "ca": "14% açaí pur (de debò) — sorbet cremós, granola, fruita fresca",
-        "fr": "14% d'açaí pur (vraiment) — sorbet crémeux, granola, fruits frais"
+        "en": "14% pure açaí, no shortcuts: creamy sorbet, granola and fresh fruit",
+        "ca": "14% d'açaí pur, de debò: sorbet cremós, granola i fruita fresca",
+        "fr": "14 % d'açaí pur, pour de vrai : sorbet crémeux, granola et fruits frais",
+        "pl": "14% czystego açaí, naprawdę: kremowy sorbet, granola i świeże owoce",
+        "ru": "14% чистого аçaí, без шуток: кремовый сорбет, гранола и свежие фрукты",
+        "uk": "14% чистого açaí, без жартів: кремовий сорбет, гранола та свіжі фрукти"
       }
     },
-    {
-      "name": "Fruit Bowl",
-      "price": "5.50",
+    "fruit-bowl": {
+      "name": {
+        "es": "Fruit Bowl",
+        "en": "Fruit Bowl",
+        "ca": "Fruit Bowl",
+        "fr": "Fruit Bowl",
+        "pl": "Fruit Bowl",
+        "ru": "Fruit Bowl",
+        "uk": "Fruit Bowl"
+      },
+      "price": "8.50",
       "desc": {
-        "es": "Lo que el mercado trajo hoy",
-        "en": "Whatever the market brought today",
-        "ca": "El que el mercat ha portat avui",
-        "fr": "Ce que le marché a apporté aujourd'hui"
+        "es": "Lo que el mercado traiga hoy",
+        "en": "Whatever looked best at the market today",
+        "ca": "El que avui ha arribat més bonic del mercat",
+        "fr": "Ce qui nous a fait de l'œil au marché ce matin",
+        "pl": "To, co dziś najładniejsze na targu",
+        "ru": "То, что сегодня лучше всего выглядело на рынке",
+        "uk": "Те, що сьогодні найкраще виглядало на ринку"
       }
     }
-  ],
-  "sweets": [
-    {
-      "name": "Vitrina",
-      "price": "",
-      "desc": {
-        "es": "Mira nuestra selección de galletas, croissants y pasteles",
-        "en": "Check our selection of cookies, croissants and cakes",
-        "ca": "Mira la nostra selecció de galetes, croissants i pastissos",
-        "fr": "Découvrez notre sélection de cookies, croissants et gâteaux"
-      }
-    }
-  ],
-  "extras": {
-    "milk": {
-      "price": "+0.30",
-      "desc": {
-        "es": "Leche de avena o guisante",
-        "en": "Oat or pea milk",
-        "ca": "Llet de civada o pèsol",
-        "fr": "Lait d'avoine ou de pois"
-      }
-    },
-    "extraShot": {
-      "price": "+0.50",
-      "desc": {
-        "es": "Shot extra",
-        "en": "Extra shot",
-        "ca": "Shot extra",
-        "fr": "Shot supplémentaire"
-      }
-    },
-    "smoothieAddons": [
-      {
-        "name": "Proteína",
-        "price": "+3.00",
-        "desc": {
-          "es": "Grass-fed whey 25g",
-          "en": "Grass-fed whey 25g",
-          "ca": "Grass-fed whey 25g",
-          "fr": "Whey grass-fed 25g"
-        }
-      },
-      {
-        "name": "Creatina",
-        "price": "+1.00",
-        "desc": {
-          "es": "5g",
-          "en": "5g",
-          "ca": "5g",
-          "fr": "5g"
-        }
-      },
-      {
-        "name": "Espirulina",
-        "price": "+1.00",
-        "desc": {
-          "es": "",
-          "en": "",
-          "ca": "",
-          "fr": ""
-        }
-      },
-      {
-        "name": "Colágeno",
-        "price": "+1.50",
-        "desc": {
-          "es": "",
-          "en": "",
-          "ca": "",
-          "fr": ""
-        }
-      }
-    ],
-    "toastExtras": [
-      {
-        "name": "Jamón Ibérico",
-        "price": "+3.50"
-      },
-      {
-        "name": "Salmón Ahumado",
-        "price": "+3.50"
-      },
-      {
-        "name": "Huevo Ecológico",
-        "price": "+2.00"
-      },
-      {
-        "name": "Queso Manchego",
-        "price": "+2.50"
-      },
-      {
-        "name": "Aguacate",
-        "price": "+2.50"
-      },
-      {
-        "name": "Pan sin gluten",
-        "price": "+1.50"
-      },
-      {
-        "name": "Pan de masa madre Origo",
-        "price": "+1.50"
-      }
-    ]
   }
 }
