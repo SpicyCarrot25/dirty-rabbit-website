@@ -202,14 +202,14 @@ const unifiedSchema = {
     
     <link rel="canonical" href={`https://dirtyrabbit.es${Astro.url.pathname}`} />
     
-    <link rel="alternate" hreflang="es" href={alternates.es} />
-    <link rel="alternate" hreflang="en" href={alternates.en} />
-    <link rel="alternate" hreflang="ca" href={alternates.ca} />
-    <link rel="alternate" hreflang="fr" href={alternates.fr} />
-    <link rel="alternate" hreflang="ru" href={alternates.ru} />
-    <link rel="alternate" hreflang="uk" href={alternates.uk} />
-    <link rel="alternate" hreflang="pl" href={alternates.pl} />
-    <link rel="alternate" hreflang="x-default" href={alternates.es} />
+    {alternates.es && <link rel="alternate" hreflang="es" href={alternates.es} />}
+    {alternates.en && <link rel="alternate" hreflang="en" href={alternates.en} />}
+    {alternates.ca && <link rel="alternate" hreflang="ca" href={alternates.ca} />}
+    {alternates.fr && <link rel="alternate" hreflang="fr" href={alternates.fr} />}
+    {alternates.ru && <link rel="alternate" hreflang="ru" href={alternates.ru} />}
+    {alternates.uk && <link rel="alternate" hreflang="uk" href={alternates.uk} />}
+    {alternates.pl && <link rel="alternate" hreflang="pl" href={alternates.pl} />}
+    <link rel="alternate" hreflang="x-default" href={alternates.es || alternates.en} />
     
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
