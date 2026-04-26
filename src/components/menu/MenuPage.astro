@@ -133,7 +133,7 @@ const view = getMenuPageView(lang);
                       <p class={`font-mono text-sm text-cream ${block.align === 'center' ? 'text-center' : 'text-left'} ${group.title ? 'mt-1' : ''}`}>
                         {group.items.map((item, itemIndex) => (
                           <>
-                            {item.price} {item.label}
+                            {item.label}{'\u00A0'}{item.price}
                             {itemIndex < group.items.length - 1 && <br />}
                           </>
                         ))}
