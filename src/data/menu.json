@@ -1323,13 +1323,13 @@
       },
       "price": "7.50",
       "desc": {
-        "es": "Para los golosos: tostada de masa madre, plátano. Elige: chocolate o crema orgánica de cacahuete Buddy Buddy (1,8,7)",
-        "en": "For anyone with a sweet tooth: sourdough toast and banana. Pick chocolate or Buddy Buddy organic peanut butter (1,8,7)",
-        "ca": "Per als més llaminers: torrada de massa mare i plàtan. Tria xocolata o crema orgànica de cacauet Buddy Buddy (1,8,7)",
-        "fr": "Pour les becs sucrés : tartine au levain et banane. À choisir avec chocolat ou crème de cacahuète bio Buddy Buddy (1,8,7)",
-        "pl": "Dla łasuchów: tost na zakwasie i banan. Do wyboru czekolada albo organiczne masło orzechowe Buddy Buddy (1,8,7)",
-        "ru": "Для сладкоежек: тост на закваске и банан. На выбор шоколад или органическая арахисовая паста Buddy Buddy (1,8,7)",
-        "uk": "Для ласунів: тост на заквасці й банан. Обирай шоколад або органічну арахісову пасту Buddy Buddy (1,8,7)"
+        "es": "Para los golosos: tostada de masa madre, plátano. Elige: chocolate o crema orgánica de cacahuete Buddy Buddy (1,5,7)",
+        "en": "For anyone with a sweet tooth: sourdough toast and banana. Pick chocolate or Buddy Buddy organic peanut butter (1,5,7)",
+        "ca": "Per als més llaminers: torrada de massa mare i plàtan. Tria xocolata o crema orgànica de cacauet Buddy Buddy (1,5,7)",
+        "fr": "Pour les becs sucrés : tartine au levain et banane. À choisir avec chocolat ou crème de cacahuète bio Buddy Buddy (1,5,7)",
+        "pl": "Dla łasuchów: tost na zakwasie i banan. Do wyboru czekolada albo organiczne masło orzechowe Buddy Buddy (1,5,7)",
+        "ru": "Для сладкоежек: тост на закваске и банан. На выбор шоколад или органическая арахисовая паста Buddy Buddy (1,5,7)",
+        "uk": "Для ласунів: тост на заквасці й банан. Обирай шоколад або органічну арахісову пасту Buddy Buddy (1,5,7)"
       }
     },
     "tofu-goodnight": {
@@ -1538,13 +1538,13 @@
       },
       "price": "8.50",
       "desc": {
-        "es": "Crujiente y cremoso: yogurt griego, granola casera, fruta del día, toque de cacahuete Buddy Buddy (1,7)",
-        "en": "Crunchy and creamy: Greek yogurt, house granola, fruit of the day and a touch of Buddy Buddy peanut butter (1,7)",
-        "ca": "Cruixent i cremós: iogurt grec, granola casolana, fruita del dia i un toc de cacauet Buddy Buddy (1,7)",
-        "fr": "Croustillant et crémeux : yaourt grec, granola maison, fruit du jour et une touche de beurre de cacahuète Buddy Buddy (1,7)",
-        "pl": "Chrupi i otula: jogurt grecki, domowa granola, owoc dnia i odrobina masła orzechowego Buddy Buddy (1,7)",
-        "ru": "Хрустящий и нежный: греческий йогурт, домашняя гранола, фрукт дня и немного арахисовой пасты Buddy Buddy (1,7)",
-        "uk": "Хрусткий і ніжний: грецький йогурт, домашня гранола, фрукт дня й трохи арахісової пасти Buddy Buddy (1,7)"
+        "es": "Crujiente y cremoso: yogurt griego, granola casera, fruta del día, toque de cacahuete Buddy Buddy (1,5,7)",
+        "en": "Crunchy and creamy: Greek yogurt, house granola, fruit of the day and a touch of Buddy Buddy peanut butter (1,5,7)",
+        "ca": "Cruixent i cremós: iogurt grec, granola casolana, fruita del dia i un toc de cacauet Buddy Buddy (1,5,7)",
+        "fr": "Croustillant et crémeux : yaourt grec, granola maison, fruit du jour et une touche de beurre de cacahuète Buddy Buddy (1,5,7)",
+        "pl": "Chrupi i otula: jogurt grecki, domowa granola, owoc dnia i odrobina masła orzechowego Buddy Buddy (1,5,7)",
+        "ru": "Хрустящий и нежный: греческий йогурт, домашняя гранола, фрукт дня и немного арахисовой пасты Buddy Buddy (1,5,7)",
+        "uk": "Хрусткий і ніжний: грецький йогурт, домашня гранола, фрукт дня й трохи арахісової пасти Buddy Buddy (1,5,7)"
       }
     },
     "acai-bowl": {
@@ -1559,13 +1559,13 @@
       },
       "price": "11.00",
       "desc": {
-        "es": "14% açaí puro (de verdad) — sorbete cremoso, granola, fruta fresca",
-        "en": "14% pure açaí, no shortcuts: creamy sorbet, granola and fresh fruit",
-        "ca": "14% d'açaí pur, de debò: sorbet cremós, granola i fruita fresca",
-        "fr": "14 % d'açaí pur, pour de vrai : sorbet crémeux, granola et fruits frais",
-        "pl": "14% czystego açaí, naprawdę: kremowy sorbet, granola i świeże owoce",
-        "ru": "14% чистого аçaí, без шуток: кремовый сорбет, гранола и свежие фрукты",
-        "uk": "14% чистого açaí, без жартів: кремовий сорбет, гранола та свіжі фрукти"
+        "es": "14% açaí puro (de verdad) — sorbete cremoso, granola, fruta fresca (1,5,7)",
+        "en": "14% pure açaí, no shortcuts: creamy sorbet, granola and fresh fruit (1,5,7)",
+        "ca": "14% d'açaí pur, de debò: sorbet cremós, granola i fruita fresca (1,5,7)",
+        "fr": "14 % d'açaí pur, pour de vrai : sorbet crémeux, granola et fruits frais (1,5,7)",
+        "pl": "14% czystego açaí, naprawdę: kremowy sorbet, granola i świeże owoce (1,5,7)",
+        "ru": "14% чистого аçaí, без шуток: кремовый сорбет, гранола и свежие фрукты (1,5,7)",
+        "uk": "14% чистого açaí, без жартів: кремовий сорбет, гранола та свіжі фрукти (1,5,7)"
       }
     },
     "fruit-bowl": {

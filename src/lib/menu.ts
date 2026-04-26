@@ -133,7 +133,7 @@ const pageCopy: Record<Language, MenuPageCopy> = {
     introBeforeLink: 'Seleccionamos con intención todo lo que servimos. Productos locales y orgánicos de ',
     introLinkLabel: 'nuestros proveedores',
     introAfterLink: ', y también tesoros que amamos de fuera — café tostado en Copenhague, matcha orgánico de REQ Barcelona, pasteles de La Puntual Girona. Este es nuestro hogar, y queremos compartirlo contigo.',
-    footerNote: 'Pregunta por alérgenos — la cocina no está 100% libre de gluten'
+    footerNote: 'Alérgenos\n1 Gluten / 4 Pescado / 5 Cacahuetes / 6 Soja\n7 Lácteos / 10 Mostaza / 11 Sésamo\n\nPregunta por alérgenos.\nLa cocina no está 100% libre de gluten.'
   },
   en: {
     title: 'Dirty Rabbit Menu',
@@ -144,7 +144,7 @@ const pageCopy: Record<Language, MenuPageCopy> = {
     introBeforeLink: 'We choose everything we serve with intent. Local and organic goods from ',
     introLinkLabel: 'our producers',
     introAfterLink: ', plus a few things we love from farther away — coffee roasted in Copenhagen, organic matcha from REQ Barcelona, and pastries from La Puntual Girona. This is our home, and we like sharing it.',
-    footerNote: 'Ask about allergens — the kitchen is not 100% gluten-free'
+    footerNote: 'Allergens\n1 Gluten / 4 Fish / 5 Peanuts / 6 Soy\n7 Dairy / 10 Mustard / 11 Sesame\n\nAsk about allergens.\nThe kitchen is not 100% gluten-free.'
   },
   ca: {
     title: 'Carta',
@@ -155,7 +155,7 @@ const pageCopy: Record<Language, MenuPageCopy> = {
     introBeforeLink: 'Triem amb intenció tot el que servim. Producte local i orgànic dels ',
     introLinkLabel: 'nostres proveïdors',
     introAfterLink: ', i també algunes joies que ens encanta portar de fora — cafè torrat a Copenhaguen, matcha orgànic de REQ Barcelona i pastissos de La Puntual Girona. Aquesta és casa nostra, i ens agrada compartir-la.',
-    footerNote: "Pregunta pels al·lèrgens — la cuina no és 100% lliure de gluten"
+    footerNote: "Al·lèrgens\n1 Gluten / 4 Peix / 5 Cacauets / 6 Soja\n7 Làctics / 10 Mostassa / 11 Sèsam\n\nPregunta pels al·lèrgens.\nLa cuina no és 100% lliure de gluten."
   },
   fr: {
     title: 'Carte',
@@ -166,7 +166,7 @@ const pageCopy: Record<Language, MenuPageCopy> = {
     introBeforeLink: 'On choisit tout ce qu’on sert avec soin. Des produits locaux et bio venus de ',
     introLinkLabel: 'nos producteurs',
     introAfterLink: ', et quelques trésors qu’on aime aller chercher plus loin : café torréfié à Copenhague, matcha bio de REQ Barcelona et pâtisseries de La Puntual Girona. C’est chez nous, alors autant le partager.',
-    footerNote: "Demandez les allergènes — la cuisine n'est pas 100% sans gluten"
+    footerNote: "Allergènes\n1 Gluten / 4 Poisson / 5 Cacahuètes / 6 Soja\n7 Produits laitiers / 10 Moutarde / 11 Sésame\n\nDemandez les allergènes.\nLa cuisine n'est pas 100% sans gluten."
   },
   pl: {
     title: 'Menu',
@@ -177,7 +177,7 @@ const pageCopy: Record<Language, MenuPageCopy> = {
     introBeforeLink: 'Wszystko, co podajemy, wybieramy z sensem. Lokalne i organiczne produkty od ',
     introLinkLabel: 'naszych dostawców',
     introAfterLink: ', a do tego kilka rzeczy, po które chętnie sięgamy dalej — kawa palona w Kopenhadze, organiczna matcha od REQ Barcelona i wypieki z La Puntual Girona. To nasze miejsce i dobrze nam się nim dzieli.',
-    footerNote: 'Zapytaj o alergeny — kuchnia nie jest w 100% bezglutenowa'
+    footerNote: 'Alergeny\n1 Gluten / 4 Ryby / 5 Orzeszki ziemne / 6 Soja\n7 Nabiał / 10 Musztarda / 11 Sezam\n\nZapytaj o alergeny.\nKuchnia nie jest w 100% bezglutenowa.'
   },
   ru: {
     title: 'Меню',
@@ -188,7 +188,7 @@ const pageCopy: Record<Language, MenuPageCopy> = {
     introBeforeLink: 'Всё, что мы подаём, выбираем внимательно. Локальные и органические продукты от ',
     introLinkLabel: 'наших поставщиков',
     introAfterLink: ', плюс несколько любимых находок издалека — кофе, обжаренный в Копенгагене, органическая матча от REQ Barcelona и выпечка La Puntual Girona. Это наш дом, и нам приятно делиться им.',
-    footerNote: 'Спросите про аллергены — кухня не на 100% без глютена'
+    footerNote: 'Аллергены\n1 Глютен / 4 Рыба / 5 Арахис / 6 Соя\n7 Молочные продукты / 10 Горчица / 11 Кунжут\n\nСпросите про аллергены.\nКухня не на 100% без глютена.'
   },
   uk: {
     title: 'Меню',
@@ -199,7 +199,7 @@ const pageCopy: Record<Language, MenuPageCopy> = {
     introBeforeLink: 'Усе, що ми подаємо, ми відбираємо уважно. Локальні та органічні продукти від ',
     introLinkLabel: 'наших постачальників',
     introAfterLink: ', а ще кілька улюблених речей здалеку — кава, обсмажена в Копенгагені, органічна матча від REQ Barcelona та випічка La Puntual Girona. Це наш дім, і нам подобається ним ділитися.',
-    footerNote: 'Питайте про алергени — кухня не є 100% безглютеновою'
+    footerNote: 'Алергени\n1 Глютен / 4 Риба / 5 Арахіс / 6 Соя\n7 Молочні продукти / 10 Гірчиця / 11 Кунжут\n\nПитайте про алергени.\nКухня не є 100% безглютеновою.'
   }
 };
 
