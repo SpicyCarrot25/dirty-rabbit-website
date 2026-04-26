@@ -7,6 +7,10 @@ const sitemapExcludedPaths = new Set([
   '/about',
   '/ca/about',
   '/fr/about',
+  '/en/carta',
+  '/pl/carta',
+  '/ru/carta',
+  '/uk/carta',
 ]);
 
 // https://astro.build/config

@@ -47,8 +47,9 @@ const pathMappings: Record<string, Record<Language, string>> = {
   // FAQ page (same in all languages but include for safety)
   'faq': { es: 'faq', en: 'faq', ca: 'faq', fr: 'faq', ru: 'faq', uk: 'faq', pl: 'faq' },
   // Carta/Menu
-  'carta': { es: 'carta', en: 'carta', ca: 'carta', fr: 'carte', ru: 'carta', uk: 'carta', pl: 'carta' },
-  'carte': { es: 'carta', en: 'carta', ca: 'carta', fr: 'carte', ru: 'carta', uk: 'carta', pl: 'carta' },
+  'carta': { es: 'carta', en: 'menu', ca: 'carta', fr: 'carte', ru: 'menu', uk: 'menu', pl: 'menu' },
+  'menu': { es: 'carta', en: 'menu', ca: 'carta', fr: 'carte', ru: 'menu', uk: 'menu', pl: 'menu' },
+  'carte': { es: 'carta', en: 'menu', ca: 'carta', fr: 'carte', ru: 'menu', uk: 'menu', pl: 'menu' },
   // Contact page
   'contacto': { es: 'contacto', en: 'contact', ca: 'contacte', fr: 'contact', ru: 'contact', uk: 'contact', pl: 'contact' },
   'contact': { es: 'contacto', en: 'contact', ca: 'contacte', fr: 'contact', ru: 'contact', uk: 'contact', pl: 'contact' },

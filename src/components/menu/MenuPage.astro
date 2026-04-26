@@ -123,27 +123,25 @@ const view = getMenuPageView(lang);
                 )}
               </>
             ) : (
-              <>
-                <h3 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-4 mt-10">{block.title}</h3>
-                <div class="mt-2 mx-4 bg-red rounded-lg px-4 py-4">
-                  {block.subtitle && <p class={`font-mono text-xs uppercase tracking-[0.2em] text-cream/80 ${block.align === 'center' ? 'text-center' : 'text-left'}`}>{block.subtitle}</p>}
-                  <div class:list={['space-y-4', block.subtitle && 'mt-4']}>
-                    {block.groups.map((group) => (
-                      <div>
-                        {group.title && <p class={`font-typewriter text-lg font-bold text-cream ${block.align === 'center' ? 'text-center' : 'text-left'}`}>{group.title}</p>}
-                        <p class={`font-mono text-sm text-cream ${block.align === 'center' ? 'text-center' : 'text-left'} ${group.title ? 'mt-1' : ''}`}>
-                          {group.items.map((item, itemIndex) => (
-                            <>
-                              {item.price} {item.label}
-                              {itemIndex < group.items.length - 1 && <br />}
-                            </>
-                          ))}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
+              <div class="mt-10 mx-4 bg-red rounded-lg px-4 py-4">
+                <h3 class={`font-typewriter text-xl md:text-2xl font-bold text-cream mb-3 ${block.align === 'center' ? 'text-center' : 'text-left'}`}>{block.title}</h3>
+                {block.subtitle && <p class={`font-mono text-xs uppercase tracking-[0.2em] text-cream/80 ${block.align === 'center' ? 'text-center' : 'text-left'}`}>{block.subtitle}</p>}
+                <div class:list={['space-y-4', block.subtitle && 'mt-4']}>
+                  {block.groups.map((group) => (
+                    <div>
+                      {group.title && <p class={`font-typewriter text-lg font-bold text-cream ${block.align === 'center' ? 'text-center' : 'text-left'}`}>{group.title}</p>}
+                      <p class={`font-mono text-sm text-cream ${block.align === 'center' ? 'text-center' : 'text-left'} ${group.title ? 'mt-1' : ''}`}>
+                        {group.items.map((item, itemIndex) => (
+                          <>
+                            {item.price} {item.label}
+                            {itemIndex < group.items.length - 1 && <br />}
+                          </>
+                        ))}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              </>
+              </div>
             )
           ))}
         </div>

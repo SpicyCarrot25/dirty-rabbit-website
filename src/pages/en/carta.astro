@@ -1,5 +1,16 @@
 ---
-import MenuPage from '../../components/menu/MenuPage.astro';
+const target = '/en/menu/';
 ---
-
-<MenuPage lang="en" />
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <link rel="canonical" href="https://dirtyrabbit.es/en/menu/" />
+    <meta name="robots" content="noindex,follow" />
+    <title>Redirecting to menu</title>
+  </head>
+  <body>
+    <p><a href={target}>Menu moved here.</a></p>
+  </body>
+</html>

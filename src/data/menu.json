@@ -188,10 +188,10 @@
         {
           "type": "extras",
           "title": {
-            "es": "Extras",
-            "en": "Extras",
-            "ca": "Extres",
-            "fr": "Extras",
+            "es": "Añadidos",
+            "en": "Add-ons",
+            "ca": "Afegits",
+            "fr": "Suppléments",
             "pl": "Dodatki",
             "ru": "Добавки",
             "uk": "Додатки"
@@ -1578,7 +1578,7 @@
         "ru": "Fruit Bowl",
         "uk": "Fruit Bowl"
       },
-      "price": "8.50",
+      "price": "5.50",
       "desc": {
         "es": "Lo que el mercado traiga hoy",
         "en": "Whatever looked best at the market today",
