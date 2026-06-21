@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const mapsUrl = 'https://www.google.com/maps/d/u/0/viewer?mid=1ipfFca_4gp7QsnSSwLmwbWlnYU6CK7s&ll=41.800482317211774%2C3.0401439976323497&z=14';
+---
+
+<Layout
+  title="Mapa | Dirty Rabbit"
+  description="Abriendo el mapa de Dirty Rabbit en Google Maps."
+  lang="es"
+>
+  <Fragment slot="head">
+    <meta name="robots" content="noindex, follow" />
+  </Fragment>
+
+  <section class="min-h-[70vh] flex items-center justify-center px-4 py-16 bg-cream">
+    <div class="w-full max-w-md text-center space-y-6">
+      <h1 class="font-typewriter text-3xl md:text-5xl text-black leading-tight">
+        Abriendo mapa
+      </h1>
+      <p class="font-mono text-sm md:text-base text-black/70">
+        Te estamos llevando al mapa de Dirty Rabbit en Google Maps.
+      </p>
+      <a
+        href={mapsUrl}
+        class="inline-block font-typewriter text-lg px-8 py-4 bg-red text-white hover:bg-red/90 transition-colors rounded-xl shadow-lg"
+      >
+        Abrir mapa
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<script define:vars={{ mapsUrl }}>
+  const redirectToMap = () => {
+    window.location.replace(mapsUrl);
+  };
+
+  const fallbackTimer = window.setTimeout(redirectToMap, 900);
+  const gtag = window.gtag;
+
+  if (typeof gtag === 'function') {
+    gtag('event', 'map_redirect', {
+      event_category: 'cta',
+      event_label: 'instagram_bio_map',
+      transport_type: 'beacon',
+      event_callback: () => {
+        window.clearTimeout(fallbackTimer);
+        redirectToMap();
+      }
+    });
+  }
+</script>
