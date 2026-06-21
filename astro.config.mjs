@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite';
 
 const sitemapExcludedPaths = new Set([
   '/about',
+  '/map',
   '/ca/about',
   '/fr/about',
   '/en/carta',
