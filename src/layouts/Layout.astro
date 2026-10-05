@@ -209,7 +209,7 @@ const unifiedSchema = {
     {alternates.ru && <link rel="alternate" hreflang="ru" href={alternates.ru} />}
     {alternates.uk && <link rel="alternate" hreflang="uk" href={alternates.uk} />}
     {alternates.pl && <link rel="alternate" hreflang="pl" href={alternates.pl} />}
-    <link rel="alternate" hreflang="x-default" href={alternates.es || alternates.en} />
+    {Object.keys(alternates).length > 0 && <link rel="alternate" hreflang="x-default" href={alternates.es || alternates.en || Object.values(alternates)[0]} />}
     
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

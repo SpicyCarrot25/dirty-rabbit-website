@@ -85,9 +85,6 @@ const guideSectionPrefix: Record<Language, string> = {
   ru: 'guide', uk: 'guide', pl: 'guide',
 };
 
-// Pages that only exist in English — no other locale version
-const englishOnlyPages = new Set(['/matcha', '/privacy']);
-
 // Cross-locale guide slug mapping. Each entry maps ANY locale's slug to all available
 // locale versions. Guides with identical slugs across locales don't need entries here —
 // they'll fall through to the default (same slug, all 4 guide locales).
@@ -130,68 +127,92 @@ registerGuide({ es: 'que-hacer-en-sant-feliu-de-guixols', en: 'things-to-do-in-s
 // --- EN-only guide ---
 registerGuide({ en: 'digital-nomad-cafe-costa-brava' });
 
-// Helper to get alternate language URLs for hreflang
-// Only emits locales where the page actually exists
+// Inventory routes at build time. Redirects and hypothetical translations are not alternates.
+const pageSources = import.meta.glob('../pages/**/*.astro', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+const routes = new Set(Object.entries(pageSources)
+  .filter(([file, source]) => !file.includes('[') && !source.includes('Astro.redirect('))
+  .map(([file]) => file.replace('../pages', '').replace(/\.astro$/, '').replace(/\/index$/, '') || '/'));
+const newsSources = import.meta.glob('../content/news/*.md', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+for (const [file, source] of Object.entries(newsSources)) {
+  const lang = source.match(/^lang:\s*['"]?(es|en|ca)/m)?.[1] || 'es';
+  const slug = file.split('/').pop()!.replace(/\.md$/, '');
+  routes.add(`${lang === 'es' ? '' : '/' + lang}/news/${slug}`);
+}
+
+// Translation groups describe content identity; route existence is checked separately.
+const articleGroups = [
+  ['brunch-playa-sant-pol', 'brunch-playa-sant-pol', 'brunch-playa-sant-pol', 'brunch-playa-sant-pol'],
+  ['brunch-sagaro', 'brunch-sagaro', null, null],
+  ['cafe-especialidad-vs-cafe-comercial', 'specialty-coffee-vs-commercial-coffee', 'cafe-especialitat-vs-cafe-comercial', 'cafe-specialite-vs-cafe-commercial'],
+  ['cafe-wifi-trabajar-costa-brava', 'cafes-wifi-remote-work-costa-brava', 'cafes-wifi-treballar-costa-brava', 'cafes-wifi-travail-costa-brava'],
+  ['desayunar-costa-brava', 'breakfast-costa-brava', 'esmorzar-costa-brava', 'petit-dejeuner-costa-brava'],
+  ['desayuno-con-ninos-costa-brava', 'breakfast-with-children-costa-brava', 'esmorzar-amb-nens-costa-brava', 'petit-dejeuner-avec-enfants-costa-brava'],
+  ['desayuno-despues-cami-de-ronda', 'breakfast-after-cami-de-ronda', 'esmorzar-despres-cami-de-ronda', 'petit-dejeuner-apres-cami-de-ronda'],
+  ['donde-desayunar-sagaro', 'where-to-breakfast-sagaro', 'on-esmorzar-sagaro', 'ou-petit-dejeuner-sagaro'],
+  ['mejores-brunchs-platja-daro', 'best-brunch-platja-daro', 'millors-brunchs-platja-daro', 'meilleurs-brunchs-platja-daro'],
+  [null, 'specialty-coffee-guide-costa-brava', 'guia-cafe-especialitat-costa-brava', 'guide-cafe-specialite-costa-brava'],
+];
+const guideFrenchSlugs: Record<string, string> = {
+  'mejor-cafe-girona': 'meilleur-cafe-girona',
+  'mejor-cafe-begur': 'meilleur-cafe-begur',
+  'mejor-cafe-calonge': 'meilleur-cafe-calonge',
+  'mejor-cafe-palamos': 'meilleur-cafe-palamos',
+  'mejor-cafe-pals': 'meilleur-cafe-pals',
+  'mejor-cafe-sagaro': 'meilleur-cafe-sagaro',
+  'mejor-cafe-sant-feliu-de-guixols': 'meilleur-cafe-sant-feliu-de-guixols',
+  'desayunar-cerca-de-cami-de-ronda': 'petit-dejeuner-cami-de-ronda',
+  'desayunar-cerca-de-centre-platja-daro': 'petit-dejeuner-platja-daro',
+  'desayunar-cerca-de-platja-sant-pol': 'petit-dejeuner-platja-sant-pol',
+  'que-hacer-en-platja-daro': 'que-faire-a-platja-daro',
+  'que-hacer-en-sagaro': 'que-faire-a-sagaro',
+  'que-hacer-en-sant-feliu-de-guixols': 'que-faire-a-sant-feliu-de-guixols',
+};
+const routeGroups = new Map<string, Partial<Record<Language, string>>>();
+function registerRoutes(group: Partial<Record<Language, string>>) {
+  const existing = Object.fromEntries(Object.entries(group).filter(([, path]) => routes.has(path!)));
+  for (const path of Object.values(existing)) routeGroups.set(path!, existing);
+}
+for (const map of new Set(Object.values(guideSlugMap))) {
+  const group: Partial<Record<Language, string>> = {};
+  for (const [lang, slug] of Object.entries(map)) {
+    group[lang as Language] = `${lang === 'es' ? '' : '/' + lang}/${guideSectionPrefix[lang as Language]}/${slug}`;
+  }
+  const frenchSlug = map.es && guideFrenchSlugs[map.es];
+  if (frenchSlug) group.fr = `/fr/guides/${frenchSlug}`;
+  registerRoutes(group);
+}
+for (const slugs of articleGroups) {
+  const group: Partial<Record<Language, string>> = {};
+  ['es', 'en', 'ca', 'fr'].forEach((lang, i) => {
+    if (slugs[i]) group[lang as Language] = lang === 'es' ? `/articulos/${slugs[i]}` : `/${lang}/articles/${slugs[i]}`;
+  });
+  registerRoutes(group);
+}
+registerRoutes({ es: '/privacidad', en: '/en/privacy', ca: '/ca/privacitat', fr: '/fr/confidentialite' });
+
+// Same-slug pages still form groups, but only among published routes in the same section.
+for (const path of routes) {
+  if (routeGroups.has(path)) continue;
+  const clean = path.replace(/^\/(en|ca|fr|ru|uk|pl)(?=\/|$)/, '') || '/';
+  const guide = clean.match(/^\/(?:guia|guide|guides)\/(.+)$/);
+  const group: Partial<Record<Language, string>> = {};
+  for (const lang of languages) {
+    const target = guide
+      ? `${lang === 'es' ? '' : '/' + lang}/${guideSectionPrefix[lang]}/${guide[1]}`
+      : getLocalizedPath(clean, lang);
+    // Never overwrite an explicitly registered translation group.
+    if (routes.has(target) && !routeGroups.has(target)) group[lang] = target;
+  }
+  // Untranslated pages must retain their self-reference, including /fr/guides/ routes.
+  const ownLang = getLangFromUrl(new URL(path, 'https://dirtyrabbit.es'));
+  group[ownLang] = path;
+  registerRoutes(group);
+}
+
 export function getAlternateUrls(currentPath: string, baseUrl: string) {
-  const normalizedPath = currentPath.replace(/\/$/, '') || '/';
-  const pathWithoutLang = normalizedPath.replace(/^\/(en|ca|fr|ru|uk|pl)(?=\/|$)/, '') || '/';
-
-  // English-only non-guide pages
-  if (englishOnlyPages.has(pathWithoutLang)) {
-    return { en: `${baseUrl}/en${pathWithoutLang}` } as Partial<Record<Language, string>>;
-  }
-
-  // Detect guide/article pages
-  const guideMatch = pathWithoutLang.match(/^\/(guide|guia|articulos|articles)\/(.+)$/);
-  if (guideMatch) {
-    const slug = guideMatch[2];
-    const mapping = guideSlugMap[slug];
-
-    if (mapping) {
-      // Mapped guide — use cross-locale slugs
-      const result: Partial<Record<Language, string>> = {};
-      for (const [lang, localSlug] of Object.entries(mapping) as [Language, string][]) {
-        const prefix = guideSectionPrefix[lang];
-        result[lang] = lang === defaultLang
-          ? `${baseUrl}/${prefix}/${localSlug}`
-          : `${baseUrl}/${lang}/${prefix}/${localSlug}`;
-      }
-      return result;
-    }
-
-    // Unmapped guide — assume same slug exists in all 4 guide locales
-    const result: Partial<Record<Language, string>> = {};
-    for (const lang of ['es', 'en', 'ca', 'fr'] as Language[]) {
-      const prefix = guideSectionPrefix[lang];
-      result[lang] = lang === defaultLang
-        ? `${baseUrl}/${prefix}/${slug}`
-        : `${baseUrl}/${lang}/${prefix}/${slug}`;
-    }
-    return result;
-  }
-
-  // Guide index pages (no slug)
-  const isGuideIndex = ['/guide', '/guia', '/articulos', '/articles'].includes(pathWithoutLang);
-  if (isGuideIndex) {
-    const result: Partial<Record<Language, string>> = {};
-    for (const lang of ['es', 'en', 'ca', 'fr'] as Language[]) {
-      const prefix = guideSectionPrefix[lang];
-      result[lang] = lang === defaultLang ? `${baseUrl}/${prefix}` : `${baseUrl}/${lang}/${prefix}`;
-    }
-    return result;
-  }
-
-  // Regular pages — all 7 locales
-  const activeLocales: Language[] = ['es', 'en', 'ca', 'fr', 'ru', 'uk', 'pl'];
-
-  const buildUrl = (lang: Language) => {
-    const localizedPath = getLocalizedPath(pathWithoutLang, lang);
-    return localizedPath === '/' ? baseUrl : `${baseUrl}${localizedPath}`;
-  };
-
-  const result: Partial<Record<Language, string>> = {};
-  for (const lang of activeLocales) {
-    result[lang] = buildUrl(lang);
-  }
-  return result;
+  const path = currentPath.replace(/\/$/, '') || '/';
+  const group = routeGroups.get(path) || {};
+  return Object.fromEntries(Object.entries(group).map(([lang, route]) =>
+    [lang, route === '/' ? baseUrl : `${baseUrl}${route}`]
+  )) as Partial<Record<Language, string>>;
 }
