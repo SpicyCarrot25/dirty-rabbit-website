@@ -1,6 +1,6 @@
 # One business-facts source
 
-**12 October update:** the approved SEO/GEO work confirms the address from a live GBP/Google Maps read on 12 October (see `../evidence/gbp-address-2026-10-12.json`) and Tuesday–Sunday 08:00–15:00 hours from the dated 5 October GBP packet, plus Franc’s Monday closing and 26 October–1 November / 21–27 December 2026 closures. See [the current implementation and measurement note](../seo-geo-2026-10-12.md). Other confirmation fields remain null. The preparation notes below describe the earlier all-null snapshot and its preservation tests.
+**12 October update:** address verified read-only on the live GBP/Google Maps listing (see `../evidence/gbp-address-2026-10-12.json`). Franc’s closures are 26 October–1 November / 21–27 December 2026. The live holiday-week hours differ from the old API snapshot, so regularHours remains null pending clarification. See [the current implementation note](../seo-geo-2026-10-12.md). Other confirmation fields remain null. The preparation notes below describe the earlier snapshot and its preservation tests.
 
 Visitors retain the currently published facts while address, opening times, winter notices, menu data and facts-page content are prepared for correction through one source file.
 

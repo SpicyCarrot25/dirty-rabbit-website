@@ -48,7 +48,7 @@ for (const [route, { doc }] of pages) {
     if (/Dirty Rabbit/.test(value.name || '') && /CafeOrCoffeeShop|LocalBusiness|Restaurant/.test(String(value['@type']))) {
       schemas++; business = true;
       if (value.address?.addressLocality !== "S'Agaró" || value.address?.streetAddress !== "Avinguda de Platja d'Aro, 275") errors.push({ kind: 'business-address', route, address: value.address });
-      if (JSON.stringify(value.openingHoursSpecification).includes('Monday')) errors.push({ kind: 'monday-opening', route });
+      if (JSON.stringify(value.openingHoursSpecification || []).includes('Monday')) errors.push({ kind: 'monday-opening', route });
     }
     for (const child of Object.values(value)) inspect(child);
   };

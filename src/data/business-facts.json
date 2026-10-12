@@ -2,7 +2,7 @@
   "provenance": {
     "base": "7cca4c9daae4314bbfd9db399d2b4059c0c5f023",
     "captured": "2026-10-02",
-    "note": "2026-10-12: Franc approved SEO/GEO changes and lifted the hold for this scope. Address: live GBP/Google Maps read-only check 2026-10-12 (docs/evidence/gbp-address-2026-10-12.json). Regular hours: GBP Business Information API snapshot 2026-10-05, as required by FACTS-CONFIRMED.md. Monday closing and 2026 holiday dates: Franc, FACTS-CONFIRMED.md (5 October). Remaining null fields are unconfirmed; preserved published variants are not new assertions.",
+    "note": "2026-10-12: Franc approved SEO/GEO changes and lifted the hold for this scope. Address: live GBP/Google Maps read-only check 2026-10-12 (docs/evidence/gbp-address-2026-10-12.json). Regular hours unconfirmed: the live 2026-10-12 Google Maps week view differs from the 2026-10-05 API snapshot (Monday 12 October holiday 08:00–15:00, Tuesday closed). Do not infer a recurring Tuesday closure; reconcile with Franc or an authenticated regular/special-hours API read. Existing hours are preserved pending that clarification, as required by FACTS-CONFIRMED.md. Monday closing and 2026 holiday dates: Franc, FACTS-CONFIRMED.md (5 October). Remaining null fields are unconfirmed; preserved published variants are not new assertions.",
     "addressVerifiedAt": "2026-10-12T15:39:38Z",
     "addressSource": "https://www.google.com/maps?cid=13237319999262880412"
   },
@@ -15,20 +15,7 @@
       "addressCountry": "ES"
     },
     "coordinates": null,
-    "regularHours": [
-      {
-        "dayOfWeek": [
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-          "Sunday"
-        ],
-        "opens": "08:00",
-        "closes": "15:00"
-      }
-    ],
+    "regularHours": null,
     "kitchenCloses": null,
     "summerHours": null,
     "winterClosure": [

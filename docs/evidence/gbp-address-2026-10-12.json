@@ -9,5 +9,11 @@
   "postalCode": "17248",
   "addressRegion": "Girona",
   "addressCountry": "ES",
-  "note": "Address button read on the live listing. No listing edits, review actions or messages. This verifies the address; it does not newly verify exact coordinates, seasonal hours, kitchen cutoff or menu."
+  "note": "Address button read on the live listing. No listing edits, review actions or messages. This verifies the address; it does not newly verify exact coordinates, seasonal hours, kitchen cutoff or menu.",
+  "additionalObservation": {
+    "monday2026-10-12": "08:00–15:00, marked Holiday hours",
+    "tuesday": "Closed",
+    "wednesdayThroughSunday": "08:00–15:00",
+    "decision": "This public week view does not establish whether Tuesday is a recurring or exceptional closure. Do not promote the older regular-hours snapshot to confirmed. No GBP edits."
+  }
 }
