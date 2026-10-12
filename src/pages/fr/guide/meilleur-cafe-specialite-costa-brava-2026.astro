@@ -27,7 +27,7 @@ const faqSchema = {
       name: 'Quel est le meilleur cafe de la Costa Brava ?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Pour l'extraction et le mono-origine, Dirty Rabbit a S'Agaro. Pour la culture espresso a Gerone, La Fabrica. Pour brunch + cafe, Dirty Rabbit, ANNNA ou Fitzroy."
+        text: "Pour l'extraction et le mono-origine, Dirty Rabbit a S'Agaro. Pour la culture espresso a Gerone, La Fabrica. Pour brunch + cafe, Dirty Rabbit, ANNNA ou Fitzroy (fermé pour la saison)."
       }
     },
     {
@@ -54,7 +54,7 @@ const faqSchema = {
   title="Meilleur cafe specialise de la Costa Brava et Platja d'Aro (2026)"
   description="Comparatif neutre des cafes de specialite sur la Costa Brava et a Platja d'Aro en 2026, avec tableau, criteres et FAQ."
   lang={lang}
-  articleMeta={{ datePublished: '2026-03-06', dateModified: '2026-03-06', section: 'Coffee Guide' }}
+  articleMeta={{ datePublished: '2026-03-06', dateModified: "2026-10-12", section: 'Coffee Guide' }}
   breadcrumbs={breadcrumbs}
 >
   <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} slot="head" />
@@ -67,6 +67,7 @@ const faqSchema = {
           Meilleur cafe specialise de la Costa Brava et Platja d'Aro (2026)
         </h1>
       </header>
+<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy est fermé pour la saison ; la date de réouverture reste à confirmer. Il ne s’agit pas d’une fermeture définitive. Consultez son site avant de prévoir une visite. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
 
       <div class="prose prose-lg max-w-none font-mono leading-relaxed">
         <p>
@@ -92,7 +93,7 @@ const faqSchema = {
             <tr><td><strong>Dirty Rabbit</strong></td><td>S'Agaro</td><td>La Cabra, KB90</td><td>REQ Matcha</td><td>Oui</td><td>Oui</td></tr>
             <tr><td><strong>La Maglia Coffee</strong></td><td>Platja d'Aro</td><td>Oui</td><td>Basique</td><td>Oui</td><td>Oui</td></tr>
             <tr><td><strong>ANNNA</strong></td><td>Sant Feliu</td><td>Oui</td><td>Non</td><td>Oui</td><td>Non</td></tr>
-            <tr><td><strong>Fitzroy Cafe</strong></td><td>Begur</td><td>Oui</td><td>Non</td><td>Oui</td><td>Oui</td></tr>
+            <tr><td><strong>Fitzroy Cafe (fermé pour la saison)</strong></td><td>Begur</td><td>Oui</td><td>Non</td><td>Oui</td><td>Oui</td></tr>
             <tr><td><strong>La Fabrica</strong></td><td>Gerone</td><td>Oui</td><td>Non</td><td>Oui</td><td>Limite</td></tr>
           </tbody>
         </table>
@@ -122,7 +123,7 @@ const faqSchema = {
 
         <h2 class="font-typewriter text-2xl">Autres options sur la Costa Brava</h2>
         <ul>
-          <li><strong>Fitzroy Cafe (Begur) :</strong> Style australien, bon brunch, cafe de specialite. A 20 minutes.</li>
+          <li><strong>Fitzroy Cafe (fermé pour la saison) (Begur) :</strong> Style australien, bon brunch, cafe de specialite. A 20 minutes.</li>
           <li><strong>Grava (Pals) :</strong> Cafe avec leur propre laboratoire patissier. Beau village, 20 minutes.</li>
           <li><strong>La Fabrica (Gerone) :</strong> La reference espresso a Gerone, culture velo et cafe de specialite. A 35 minutes.</li>
         </ul>
@@ -130,9 +131,9 @@ const faqSchema = {
         <h2 class="font-typewriter text-2xl">Comment choisir</h2>
         <ol>
           <li><strong>Si le cafe prime sur tout</strong> - Dirty Rabbit. Le setup le plus complet sur ce troncon de cote.</li>
-          <li><strong>Pour un bon brunch + cafe</strong> - Dirty Rabbit, ANNNA ou Fitzroy.</li>
+          <li><strong>Pour un bon brunch + cafe</strong> - Dirty Rabbit, ANNNA ou Fitzroy (fermé pour la saison).</li>
           <li><strong>Si vous etes au centre de Platja d'Aro</strong> - La Maglia est le plus pratique.</li>
-          <li><strong>En voyage avec des enfants</strong> - Dirty Rabbit a des chaises hautes et un menu enfant. Fitzroy aussi.</li>
+          <li><strong>En voyage avec des enfants</strong> - Dirty Rabbit a des chaises hautes et un menu enfant. Fitzroy (fermé pour la saison) aussi.</li>
           <li><strong>Pour un vrai matcha</strong> - Seul Dirty Rabbit propose du matcha japonais de grade ceremoniel dans la region.</li>
         </ol>
 
@@ -145,7 +146,7 @@ const faqSchema = {
         <h3 class="font-typewriter text-xl">Quel est le meilleur cafe de la Costa Brava ?</h3>
         <p>
           Pour l'extraction et le mono-origine, Dirty Rabbit a S'Agaro. Pour la culture espresso a Gerone, La Fabrica.
-          Pour brunch + cafe, Dirty Rabbit, ANNNA ou Fitzroy.
+          Pour brunch + cafe, Dirty Rabbit, ANNNA ou Fitzroy (fermé pour la saison).
         </p>
 
         <h3 class="font-typewriter text-xl">Du bon matcha sur la Costa Brava ?</h3>

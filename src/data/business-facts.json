@@ -4,7 +4,9 @@
     "captured": "2026-10-02",
     "note": "2026-10-12: Franc approved SEO/GEO changes and lifted the hold for this scope. Address: live GBP/Google Maps read-only check 2026-10-12 (docs/evidence/gbp-address-2026-10-12.json). Regular hours unconfirmed: the live 2026-10-12 Google Maps week view differs from the 2026-10-05 API snapshot (Monday 12 October holiday 08:00–15:00, Tuesday closed). Do not infer a recurring Tuesday closure; reconcile with Franc or an authenticated regular/special-hours API read. Existing hours are preserved pending that clarification, as required by FACTS-CONFIRMED.md. Monday closing and 2026 holiday dates: Franc, FACTS-CONFIRMED.md (5 October). Remaining null fields are unconfirmed; preserved published variants are not new assertions.",
     "addressVerifiedAt": "2026-10-12T15:39:38Z",
-    "addressSource": "https://www.google.com/maps?cid=13237319999262880412"
+    "addressSource": "https://www.google.com/maps?cid=13237319999262880412",
+    "phoneVerifiedAt": "2026-10-12T15:58:52Z",
+    "phoneSource": "https://www.google.com/maps?cid=13237319999262880412"
   },
   "confirmed": {
     "address": {
@@ -30,7 +32,8 @@
     ],
     "menu": null,
     "mapEmbedUrl": null,
-    "menuAliases": null
+    "menuAliases": null,
+    "phone": "+34872454264"
   },
   "published": {
     "schemas": {
@@ -6214,7 +6217,7 @@
         "html": true
       },
       "copy-5b6033fd53a0": {
-        "value": "\n            A diferència de Fitzroy, Dirty Rabbit obre tot l'any. Així que si véns al gener o febrer buscant bon cafè, aquí estem.\n          ",
+        "value": "\n            A diferència de Fitzroy (tancat per temporada), Dirty Rabbit obre tot l'any. Així que si véns al gener o febrer buscant bon cafè, aquí estem.\n          ",
         "lang": "ca",
         "kinds": [
           "winterClosure"
@@ -6957,7 +6960,7 @@
         "html": true
       },
       "copy-a254f507ef76": {
-        "value": "\n            Unlike Fitzroy, Dirty Rabbit is open year-round. So if you're visiting in January or February looking for good coffee, we're here. Plus coffee, you can have breakfast (eggs benedict, toast, bowls), stay reading, or walk down to Sant Pol Beach in 3 minutes.\n          ",
+        "value": "\n            Unlike Fitzroy (closed for the season), Dirty Rabbit is open year-round. So if you're visiting in January or February looking for good coffee, we're here. Plus coffee, you can have breakfast (eggs benedict, toast, bowls), stay reading, or walk down to Sant Pol Beach in 3 minutes.\n          ",
         "lang": "en",
         "kinds": [
           "winterClosure"
@@ -9305,7 +9308,7 @@
         "html": true
       },
       "copy-dbb7c9c7b6fd": {
-        "value": "\n            A diferencia de Fitzroy, Dirty Rabbit abre todo el año. Así que si vienes en enero o febrero y buscas buen café, aquí estamos. Además de café, puedes desayunar (eggs benedict, tostadas, bowls), quedarte leyendo, o bajar a la playa de Sant Pol a 3 minutos.\n          ",
+        "value": "\n            A diferencia de Fitzroy (cerrado por temporada), Dirty Rabbit abre todo el año. Así que si vienes en enero o febrero y buscas buen café, aquí estamos. Además de café, puedes desayunar (eggs benedict, tostadas, bowls), quedarte leyendo, o bajar a la playa de Sant Pol a 3 minutos.\n          ",
         "lang": "es",
         "kinds": [
           "winterClosure"

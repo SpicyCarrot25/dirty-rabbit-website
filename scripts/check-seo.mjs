@@ -84,6 +84,14 @@ for (const route of ['/guia/mejor-cafe-begur', '/en/guide/best-coffee-begur', '/
   if (!text.includes('Fitzroy') || text.indexOf('Fitzroy') > text.indexOf('Dirty Rabbit') || !/20 min/.test(text) || /30 min/.test(text)) errors.push({ kind: 'begur-location-order', route });
 }
 const sagaro = pages.get('/guia/que-hacer-en-sagaro')?.doc.title;
+for (const route of ['/contacto', '/en/contact', '/ca/contacte', '/fr/contact', '/pl/contact', '/ru/contact', '/uk/contact']) {
+  const link = pages.get(route)?.doc.querySelector('a[href="tel:+34872454264"]');
+  if (!link?.textContent.includes('+34 872 454 264')) errors.push({ kind: 'visible-contact-phone', route });
+}
+for (const [route, { doc }] of pages) {
+  const article = doc.querySelector('article');
+  if (article?.textContent.includes('Fitzroy') && !article.querySelector('[data-seasonal-status="fitzroy"]')) errors.push({ kind: 'missing-seasonal-status', route });
+}
 if (sagaro !== "Qué ver en S'Agaró: Sant Pol y Camí de Ronda") errors.push({ kind: 'sagaro-approved-title' });
 for (const [route, { doc }] of pages) {
   if (!doc.querySelector('meta[http-equiv="refresh"]') && !doc.querySelector('meta[name="robots"]')?.content.includes('noindex') && !sitemapUrls.has(route)) errors.push({ kind: 'missing-sitemap-url', route });

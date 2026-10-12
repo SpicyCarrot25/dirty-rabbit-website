@@ -54,13 +54,17 @@
     },
     "instagram": "@fitzroycafebegur",
     "website": "https://fitzroycafe.com",
-    "hours": "Mon, Wed–Sun 09:00–14:00 (may add 19:00–22:00 evenings). Closed Tue. Hours may vary seasonally.",
+    "hours": "Closed for the season. Reopening date unconfirmed.",
     "description": "Melbourne-inspired specialty coffee and brunch café in Begur's old town, near Plaça de la Iglesia. Menu includes kimcheese toasties, smash avo toast, banana pancakes, sourdough bagels. Vegan and GF options. Natural wines and craft beer. Named after the hip Melbourne neighborhood. Seasonal operation — check before visiting in winter.",
     "driveFromDR": 20,
     "lat": 41.9548,
     "lng": 3.2068,
     "seasonal": true,
-    "verified": true
+    "verified": true,
+    "status": "seasonally_closed",
+    "reopens": null,
+    "statusSource": "Franc, 2026-10-12",
+    "statusChecked": "2026-10-12"
   },
   {
     "name": "Grava",
