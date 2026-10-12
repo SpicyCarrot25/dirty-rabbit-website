@@ -1,0 +1,53 @@
+---
+import LocalGuide from "../../layouts/LocalGuide.astro";
+// Editorial revision: dateModified: "2026-10-12"
+const guide = {
+  "title": "Dónde desayunar en Palamós",
+  "description": "Organiza el desayuno en Palamós según tu recorrido: una opción local, planes para después y una parada aparte en Dirty Rabbit, S’Agaró.",
+  "intro": "Organiza el desayuno en Palamós según tu recorrido: una opción local, planes para después y una parada aparte en Dirty Rabbit, S’Agaró.",
+  "sections": [
+    {
+      "heading": "Café dentro de Palamós",
+      "paragraphs": [
+        "Zero figura en European Coffee Trip en Carrer Pagès Ortiz, 55. Es una referencia dentro de Palamós si quieres empezar la mañana en el propio pueblo. El directorio no garantiza la apertura del día: confirma con el establecimiento antes de ir.",
+        "Si tienes una visita al museo reservada, escoge primero dónde necesitas estar y a qué hora. Un desayuno cerca del casco urbano y un desayuno en S’Agaró implican planes de desplazamiento distintos."
+      ],
+      "source": {
+        "title": "European Coffee Trip · ficha revisada el 12/10/2026",
+        "url": "https://europeancoffeetrip.com/cafe/zero-palamos/"
+      }
+    },
+    {
+      "heading": "Desayuno antes de puerto o playa",
+      "paragraphs": [
+        "El Museu de la Pesca se encuentra en el entorno portuario. Para continuar caminando hacia la costa, el Camí de Ronda pasa por Cala Margarida y llega a La Fosca; más allá están las barracas de S’Alguer.",
+        "No hace falta recorrer toda la costa en la misma mañana. Si vas a caminar después de desayunar, calcula también la vuelta y lleva agua. Para un plan cultural, comprueba la entrada al museo antes de organizar otras paradas."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://visitpalamos.cat/es/camino-de-ronda/"
+      }
+    },
+    {
+      "heading": "Añadir S’Agaró al recorrido",
+      "paragraphs": [
+        "Dirty Rabbit está en otra localidad. Consulta el mapa antes de decidir si el desayuno encaja al salir hacia el sur o si te obliga a deshacer camino. No lo presentamos como una cafetería dentro de Palamós.",
+        "Deja margen para aparcar y confirma cocina si llegas tarde. Puedes dedicar otra visita a S’Agaró y Sant Pol en lugar de comprimir puerto, museo, caminata y brunch en una sola mañana."
+      ]
+    }
+  ],
+  "related": [
+    {
+      "title": "Qué hacer después del desayuno",
+      "url": "/guia/que-hacer-en-palamos"
+    },
+    {
+      "title": "Nuestra carta",
+      "url": "/carta"
+    }
+  ],
+  "lang": "es",
+  "dateModified": "2026-10-12"
+} as const;
+---
+<LocalGuide {...guide} />

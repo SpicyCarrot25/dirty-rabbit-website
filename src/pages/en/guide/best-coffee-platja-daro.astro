@@ -35,39 +35,13 @@ const breadcrumbs = [
           {locationName} is synonymous with Costa Brava summer: kilometres of beach, a lively seafront promenade, and nightlife that never stops. But if you're after proper coffee — fresh roast aromas, well-textured milk, a barista who knows their craft — the game changes. Here's our honest guide.
         </p>
       </header>
-<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy is closed for the season; the reopening date is unconfirmed. This is not a permanent closure. Check its website before planning a visit. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
+
 
       <div class="prose prose-lg max-w-none">
         
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ La Maglia — Local roastery in Platja d'Aro</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">C/ Juli Garreta, 10, Platja d'Aro · In the centre</p>
-          
-          <p class="mb-4">
-            If you're in central Platja d'Aro, La Maglia is a solid choice. They roast their own beans — 100% Arabica, SCA score above 85. The aesthetic is very cyclist-oriented (the name comes from the Giro d'Italia pink jersey), so you'll see plenty of gravel groups on Saturday mornings.
-          </p>
-          <p class="mb-4">
-            They also serve açaí bowls, pastries, and juices. Large terrace, good for a quick coffee.
-          </p>
-          <p class="font-mono text-sm"><strong>Best for:</strong> Local roast — if you want something homegrown, it's a good shout.</p>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ ANNNA — Coffee, GF bakery, and concept store</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer de l'Hospital 21, Sant Feliu de Guíxols · 7 min drive</p>
-          
-          <p class="mb-4">
-            Ana and Pascal have built something special in Casa Trachsler, a 19th-century townhouse in Sant Feliu's old town. ANNNA is specialty coffee, artisan gluten-free bakery, and concept store — all in one. Their GF sourdough is among the best we've tried, and the local product selection (oils, wines, ceramics) is worth a browse alone.
-          </p>
-          <p class="mb-4">
-            Open Thursday to Monday, 9:00–14:30. Closed Tuesday and Wednesday.
-          </p>
-          <p class="font-mono text-sm"><strong>Best for:</strong> Toast with their artisan bread + a flat white. The space itself is beautiful.</p>
-        </section>
-
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — a separate stop in S’Agaró</h2>
+            <span class="text-3xl">🐇</span> Dirty Rabbit (our café) — a separate stop in S’Agaró</h2>
           <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-4a1373152af8")} />
           
           <p class="mb-4">
@@ -89,12 +63,7 @@ const breadcrumbs = [
             <li><strong>25 minutes walking</strong> via the Camí de Ronda if you fancy a spectacular route.</li>
           </ul>
 
-          <h3 class="font-typewriter text-xl mt-8 mb-4">Our three pillars</h3>
-          <ul class="space-y-2 mb-6">
-            <li><strong>Wild Comfort</strong> — A place that's wild and cosy at once. Relaxed but intentional.</li>
-            <li><strong>Intention</strong> — Everything we do has a why. Every detail considered.</li>
-            <li><strong>Belonging</strong> — A place where you fit in. Wherever you're from, this is your home.</li>
-          </ul>
+          <p><a href="/en/brand-facts" class="text-red underline">Our café facts</a></p>
           
           <p class="mb-4">
             We speak <strong>Spanish, Catalan, English, and Polish</strong> — menus also in Russian, French, and Ukrainian.
@@ -108,7 +77,12 @@ const breadcrumbs = [
           >
             📍 View on Google Maps →
           </a>
-        </section>
+        </section><aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy is closed for the season; the reopening date is unconfirmed. This is not a permanent closure. Check its website before planning a visit. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
+<section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">La Maglia</h2><p>Platja d’Aro. <a href="https://www.lamaglia.cafe/" class="text-red underline">Venue website</a>. Sources checked on 12 October 2026; check opening hours before visiting.</p></section>
+
+        <section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">ANNNA</h2><p>Sant Feliu de Guíxols. <a href="https://www.annna.cc/" class="text-red underline">Venue website</a>. Sources checked on 12 October 2026; check opening hours before visiting.</p></section>
+
+
 
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Map and distances from {locationName}</h2>
         
@@ -122,33 +96,29 @@ const breadcrumbs = [
                 <th class="text-left py-3">Type</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="border-b border-black/20">
-                <td class="py-3">La Maglia</td>
-                <td class="py-3">0 km</td>
-                <td class="py-3">In Platja d'Aro</td>
-                <td class="py-3">Own roastery</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3 font-bold">Dirty Rabbit</td>
+            <tbody><tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit (our café)</td>
                 <td class="py-3">3.5 km</td>
                 <td class="py-3">5 min</td>
                 <td class="py-3">La Cabra (Denmark)</td>
-              </tr>
-              <tr class="border-b border-black/20">
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">0 km</td>
+                <td class="py-3">In Platja d'Aro</td>
+                <td class="py-3">Check availability with the venue</td>
+              </tr><tr class="border-b border-black/20">
                 <td class="py-3">ANNNA</td>
                 <td class="py-3">5 km</td>
                 <td class="py-3">7 min</td>
-                <td class="py-3">Specialty + GF bakery</td>
-              </tr>
-            </tbody>
+                <td class="py-3">Check availability with the venue</td>
+              </tr></tbody>
           </table>
         </div>
 
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">More specialty options on Costa Brava?</h2>
         <ul class="space-y-2 mb-8">
-          <li><strong>Fitzroy Café (closed for the season)</strong> in Begur (30 min) — Cult brunch, legendary banana bread, wine bar in the evenings. Seasonal.</li>
-          <li><strong>Grava</strong> in Pals (25 min) — Right Side Coffee from Barcelona + pizzeria + natural wines. Very gravel-cycling.</li>
+          <li><strong>Fitzroy Café (closed for the season)</strong> — Check availability with the venue.</li>
+          <li><strong>Grava</strong> — Check availability with the venue.</li>
         </ul>
         <p>Costa Brava is getting more and more options for specialty coffee lovers. We love that.</p>
 
@@ -178,6 +148,7 @@ const breadcrumbs = [
 
       </div>
     </div>
-  </article>
+
+</article>
 
 </Layout>

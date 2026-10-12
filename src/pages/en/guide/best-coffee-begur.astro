@@ -35,27 +35,14 @@ const breadcrumbs = [
           Begur is probably the most beautiful village on Costa Brava. Colonial-era Indiano mansions with Cuban flair, cobbled streets, a medieval castle with 360° views, and the most photogenic coves in the entire Mediterranean (Aiguablava, Sa Tuna, Sa Riera). It also has a specialty coffee scene — though it runs in seasonal mode.
         </p>
       </header>
-<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy is closed for the season; the reopening date is unconfirmed. This is not a permanent closure. Check its website before planning a visit. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
+
 
       <div class="prose prose-lg max-w-none">
         
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Fitzroy Café (closed for the season) — Melbourne-style cult brunch</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer de Francesc Forgas, 1, Begur · In the historic centre</p>
-          
-          <p class="mb-4">
-            Fitzroy (closed for the season) draws direct inspiration from Melbourne — named after the hipster Australian neighbourhood. Specialty coffee, legendary brunch (kimcheese toasties, smashed avo, banana pancakes), and wine bar in the evenings during summer.
-          </p>
-          <p class="mb-4">
-            <strong>Important:</strong> Fitzroy (closed for the season) is seasonal. In winter it may be closed or on reduced hours. Check before going. When it's open (spring–autumn), it's among the best on Costa Brava.
-          </p>
-          <p class="font-mono text-sm"><strong>Best for:</strong> Full brunch + flat white. Terrace on the village square.</p>
-        </section>
-
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <p class="mb-4"><strong>We are in S’Agaró, about 20 minutes by car from Begur. We do not have a café in Begur.</strong></p>
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — a separate stop in S’Agaró</h2>
+            <span class="text-3xl">🐇</span> Dirty Rabbit (our café) — a separate stop in S’Agaró</h2>
           <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-0f831391726f")} />
           
           <p class="mb-4">
@@ -68,12 +55,7 @@ const breadcrumbs = [
           
           <p class="mb-4" set:html={getFactCopy("copy-a254f507ef76")} />
 
-          <h3 class="font-typewriter text-xl mt-8 mb-4">Our three pillars</h3>
-          <ul class="space-y-2 mb-6">
-            <li><strong>Wild Comfort</strong> — A place that's wild and cosy at once.</li>
-            <li><strong>Intention</strong> — Everything we do has a why.</li>
-            <li><strong>Belonging</strong> — A place where you fit in, wherever you're from.</li>
-          </ul>
+          <p><a href="/en/brand-facts" class="text-red underline">Our café facts</a></p>
           
           <p class="mb-4">
             We speak <strong>Spanish, Catalan, English, and Polish</strong>. Menus in Russian, French, and Ukrainian.
@@ -87,7 +69,10 @@ const breadcrumbs = [
           >
             📍 View on Google Maps →
           </a>
-        </section>
+        </section><aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy is closed for the season; the reopening date is unconfirmed. This is not a permanent closure. Check its website before planning a visit. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
+<section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">Fitzroy Café</h2><p>Begur. <a href="https://fitzroycafe.com/" class="text-red underline">Venue website</a>. Closed for the season; reopening date unconfirmed.</p></section>
+
+
 
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distances from {locationName}</h2>
         
@@ -100,35 +85,30 @@ const breadcrumbs = [
                 <th class="text-left py-3">Type</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="border-b border-black/20">
-                <td class="py-3">Fitzroy Café (closed for the season)</td>
-                <td class="py-3">In Begur</td>
-                <td class="py-3">Melbourne-style (seasonal)</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3 font-bold">Dirty Rabbit (S’Agaró)</td>
+            <tbody><tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit (our café) (S’Agaró)</td>
                 <td class="py-3">20 min</td>
                 <td class="py-3">La Cabra (Denmark)</td>
-              </tr>
-              <tr class="border-b border-black/20">
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">Fitzroy Café (closed for the season)</td>
+                <td class="py-3">In Begur</td>
+                <td class="py-3">Check availability with the venue</td>
+              </tr><tr class="border-b border-black/20">
                 <td class="py-3">Grava</td>
                 <td class="py-3">15 min (Pals)</td>
-                <td class="py-3">Right Side + pizzeria</td>
-              </tr>
-              <tr class="border-b border-black/20">
+                <td class="py-3">Check availability with the venue</td>
+              </tr><tr class="border-b border-black/20">
                 <td class="py-3">La Maglia</td>
                 <td class="py-3">25 min</td>
-                <td class="py-3">Own roastery</td>
-              </tr>
-            </tbody>
+                <td class="py-3">Check availability with the venue</td>
+              </tr></tbody>
           </table>
         </div>
 
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">More specialty near Begur</h2>
         <ul class="space-y-2 mb-8">
-          <li><strong>Grava</strong> in Pals (15 min) — Right Side coffee + pizzeria + natural wines. Chill-out terrace, very cycling-friendly.</li>
-          <li><strong>Rustik Empordà</strong> in Bellcaire (25 min) — Bakery and café in an inland village. Perfect for cyclists.</li>
+          <li><strong>Grava</strong> — Check availability with the venue.</li>
+          <li><strong>Rustik Empordà</strong> — Check availability with the venue.</li>
         </ul>
 
 
@@ -157,6 +137,7 @@ const breadcrumbs = [
 
       </div>
     </div>
-  </article>
+
+</article>
 
 </Layout>

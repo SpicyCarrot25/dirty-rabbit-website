@@ -1,0 +1,63 @@
+---
+import LocalGuide from "../../layouts/LocalGuide.astro";
+// Editorial revision: dateModified: "2026-10-12"
+const guide = {
+  "title": "Qué hacer en Begur: castillo y patrimonio indiano",
+  "description": "Recorre el castillo, las casas indianas y las torres de Begur. Si añades café en S’Agaró, cuenta con unos 20 minutos en coche como orientación.",
+  "intro": "Recorre el castillo, las casas indianas y las torres de Begur. Si añades café en S’Agaró, cuenta con unos 20 minutos en coche como orientación.",
+  "sections": [
+    {
+      "heading": "Castillo y centro histórico",
+      "paragraphs": [
+        "El castillo medieval es uno de los elementos del patrimonio de Begur. Dedica la primera parte del paseo al casco antiguo y la subida, sin mezclarla con un traslado inmediato a una cala.",
+        "La ruta cultural municipal también recoge torres defensivas del siglo XVI. Son otra forma de leer el pueblo: fíjate en su presencia entre las calles y sigue el itinerario oficial para identificar cada una."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://begur.cat/serveis/cultura/turisme-cultural/"
+      }
+    },
+    {
+      "heading": "Casas indianas: una visita con contexto",
+      "paragraphs": [
+        "Las casas indianas forman parte de la historia local de emigración y regreso. El Centre d’Interpretació dels Indians ofrece una entrada a ese relato y una ruta con audioguía por el patrimonio.",
+        "Elige esta visita si quieres algo más que fotografiar fachadas. Comprueba el horario del centro antes de ajustar tu mañana: el recorrido exterior y el acceso al espacio interpretativo son planes diferentes."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://begur.cat/serveis/cultura/centre-dinterpretacio-indians/"
+      }
+    },
+    {
+      "heading": "Elegir entre pueblo y playa",
+      "paragraphs": [
+        "Con media jornada, puedes dedicarte al castillo y al patrimonio indiano sin bajar además a todas las calas. Si tu prioridad es el baño, escoge una playa y deja tiempo para el regreso: no calcules el desplazamiento como si todo estuviera dentro del casco histórico.",
+        "Nuestra cafetería está en S’Agaró, a unos 20 minutos en coche de Begur como referencia orientativa. El mapa dará el tiempo desde tu posición y con el tráfico del momento. No tenemos local en Begur."
+      ]
+    },
+    {
+      "heading": "Café en Begur y estacionalidad",
+      "paragraphs": [
+        "Fitzroy Café está cerrado por temporada. La fecha de reapertura no está confirmada y no es un cierre permanente. Revisa su web antes de convertirlo en una parada del itinerario."
+      ],
+      "source": {
+        "title": "Fitzroy · estado estacional comunicado por Franc el 12/10/2026",
+        "url": "https://fitzroycafe.com/"
+      }
+    }
+  ],
+  "related": [
+    {
+      "title": "Café y estacionalidad en Begur",
+      "url": "/guia/mejor-cafe-begur"
+    },
+    {
+      "title": "Desayuno y brunch en S’Agaró",
+      "url": "/brunch"
+    }
+  ],
+  "lang": "es",
+  "dateModified": "2026-10-12"
+} as const;
+---
+<LocalGuide {...guide} />

@@ -1,0 +1,53 @@
+---
+import LocalGuide from "../../layouts/LocalGuide.astro";
+// Editorial revision: dateModified: "2026-10-12"
+const guide = {
+  "title": "Palamós: puerto, museo y Camí de Ronda",
+  "description": "Qué hacer en Palamós: elige entre una mañana de puerto y museo o un paseo hacia La Fosca. Añade el desayuno en S’Agaró como otra parada.",
+  "intro": "Qué hacer en Palamós: elige entre una mañana de puerto y museo o un paseo hacia La Fosca. Añade el desayuno en S’Agaró como otra parada.",
+  "sections": [
+    {
+      "heading": "Puerto y Museu de la Pesca",
+      "paragraphs": [
+        "El museo ocupa un antiguo edificio portuario y explica el trabajo de la pesca. Empieza aquí si quieres entender el puerto antes de pasear por él. Las visitas a la lonja se organizan desde el museo: consulta su programa y reserva si la actividad lo requiere.",
+        "No organices toda la visita alrededor de una descarga concreta. El puerto es un lugar de trabajo y las salidas dependen de la actividad pesquera; deja espacio para el museo y un paseo aunque no coincidas con las barcas."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://visitpalamos.cat/el-port-i-la-pesca/"
+      }
+    },
+    {
+      "heading": "Caminar hacia La Fosca",
+      "paragraphs": [
+        "El camino costero pasa por el puerto de Marina y Cala Margarida antes de llegar a La Fosca. Más adelante quedan S’Alguer, con sus antiguas barracas de pescadores, y la playa de Castell.",
+        "Escoge un tramo de ida y vuelta según el tiempo disponible. No necesitas llegar a Castell para disfrutar de la costa: una visita al museo y una caminata larga compiten por la misma mañana. Lleva calzado adecuado para escaleras y roca."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://visitpalamos.cat/es/camino-de-ronda/"
+      }
+    },
+    {
+      "heading": "Cómo repartir el día",
+      "paragraphs": [
+        "Para un plan cultural, combina puerto, museo y casco urbano. Para un día de playa, dedica más tiempo a La Fosca y deja las salas del museo para otra ocasión. Comprueba los avisos locales antes de seguir tramos expuestos al mar.",
+        "Si vienes a desayunar a S’Agaró, calcula el trayecto por separado y evita encadenarlo con una entrada de museo demasiado ajustada. Consulta el mapa desde tu punto real de salida."
+      ]
+    }
+  ],
+  "related": [
+    {
+      "title": "Dónde desayunar en la zona",
+      "url": "/guia/desayunar-en-palamos"
+    },
+    {
+      "title": "Desayuno y brunch en S’Agaró",
+      "url": "/brunch"
+    }
+  ],
+  "lang": "es",
+  "dateModified": "2026-10-12"
+} as const;
+---
+<LocalGuide {...guide} />

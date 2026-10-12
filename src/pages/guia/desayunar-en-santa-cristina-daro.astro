@@ -1,0 +1,57 @@
+---
+import LocalGuide from "../../layouts/LocalGuide.astro";
+// Editorial revision: dateModified: "2026-10-12"
+const guide = {
+  "title": "Dónde desayunar en Santa Cristina d’Aro",
+  "description": "Organiza el desayuno en Santa Cristina d’Aro según tu recorrido: una opción local, planes para después y una parada aparte en Dirty Rabbit, S’Agaró.",
+  "intro": "Organiza el desayuno en Santa Cristina d’Aro según tu recorrido: una opción local, planes para después y una parada aparte en Dirty Rabbit, S’Agaró.",
+  "sections": [
+    {
+      "heading": "Desayuno en Santa Cristina",
+      "paragraphs": [
+        "Can Pijuan aparece en el directorio de comercio de la Diputació de Girona como fleca y cafetería, con desayunos y terraza. Consulta al local el horario del día y la disponibilidad; una ficha pública no confirma que esté abierto en este momento.",
+        "Para una salida hacia Romanyà, elige el desayuno según el sentido de tu recorrido. Si ya estás en el centro de Santa Cristina, una parada local evita empezar la mañana con un desvío hasta la costa."
+      ],
+      "source": {
+        "title": "Diputació de Girona · ficha revisada el 12/10/2026",
+        "url": "https://www.ddgi.cat/comerc-a-casa/sta-cristina-aro/public/negocis/canpijuan"
+      }
+    },
+    {
+      "heading": "Antes de subir a Romanyà",
+      "paragraphs": [
+        "La Cova d’en Daina está en Romanyà de la Selva y pertenece al patrimonio megalítico de las Gavarres. Su galería de grandes losas de granito permite plantear una visita breve centrada en la historia, sin convertirla en una excursión larga.",
+        "Lleva lo necesario para el tramo exterior y no cuentes con encontrar los mismos servicios que en el núcleo urbano. Respeta los accesos y no subas al monumento."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://patrimoni.gencat.cat/ca/coleccio/cova-den-daina"
+      }
+    },
+    {
+      "heading": "Otra opción: reservar La Casa Màgica",
+      "paragraphs": [
+        "El Gran Museu de la Màgia ofrece una alternativa cultural en Santa Cristina. Comprueba el horario de la actividad con turismo antes de decidir a qué hora desayunar; una reserva fija es el mejor punto de partida para ordenar el resto de la mañana.",
+        "Si prefieres nuestro café, recuerda que Dirty Rabbit está en S’Agaró. Consulta la ruta actual y confirma cocina antes de salir. No damos un tiempo de conducción fijo que no hayamos verificado."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://visitsantacristina.cat/visites-guiades/la-casa-magica/"
+      }
+    }
+  ],
+  "related": [
+    {
+      "title": "Qué hacer después del desayuno",
+      "url": "/guia/que-hacer-en-santa-cristina-daro"
+    },
+    {
+      "title": "Nuestra carta",
+      "url": "/carta"
+    }
+  ],
+  "lang": "es",
+  "dateModified": "2026-10-12"
+} as const;
+---
+<LocalGuide {...guide} />

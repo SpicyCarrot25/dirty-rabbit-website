@@ -36,39 +36,9 @@ const breadcrumbs = [
 
       <div class="prose prose-lg max-w-none">
         
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ La Fábrica — L'OG del specialty a Girona</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Llebre, 3, Girona</p>
-          
-          <p class="mb-4">
-            La Fábrica és llegenda. Oberta el març de 2015 per l'exciclista professional Christian Meier i la seva dona Amber, en un antic taller de fusteria amb parets de pedra. Bomba de bicicleta a la porta, candaus de préstec, i més de 90 ciclistes professionals entre els seus clients habituals.
-          </p>
-          <p class="mb-4">
-            Torren sota el segell <strong>Approachable Coffee</strong> en un torrador Joper de 15 quilos. El cafè arriba a Barcelona, Jakarta, Portland i Viena.
-          </p>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Espresso Mafia — El germà experimental</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer de la Cort Reial, 5, Girona · 2 min caminant de La Fábrica</p>
-          
-          <p class="mb-4">
-            Espresso Mafia és el segon local de La Fábrica, obert el 2017. Més modern, més petit, sense Wi-Fi. Fins a 5 cafès diferents disponibles, vols de degustació, nitro coffee estacional.
-          </p>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Oniria Café — Torrefactors convidats d'Europa</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer del Nord, 11, Girona</p>
-          
-          <p class="mb-4">
-            Oberta el 2021, Oniria és una cafeteria petita i íntima amb torrefactors convidats rotatius de tota Europa. Pastisseria raw vegan i sense sucre, ambient conscient. Venen grans per casa.
-          </p>
-        </section>
-
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — una parada a S’Agaró</h2>
+            <span class="text-3xl">🐇</span> Dirty Rabbit (el nostre cafè) — una parada a S’Agaró</h2>
           <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-352d588d9607")} />
           
           <p class="mb-4">
@@ -83,12 +53,7 @@ const breadcrumbs = [
             Combina un dia a Girona amb un capvespre a S'Agaró: cafè, bany a Sant Pol, Camí de Ronda. Pla rodó.
           </p>
 
-          <h3 class="font-typewriter text-xl mt-8 mb-4">Els nostres tres pilars</h3>
-          <ul class="space-y-2 mb-6">
-            <li><strong>Wild Comfort</strong> — Un lloc salvatge i acollidor alhora.</li>
-            <li><strong>Intention</strong> — Tot el que fem té un perquè.</li>
-            <li><strong>Belonging</strong> — Un lloc on encaixes, vinguis d'on vinguis.</li>
-          </ul>
+          <p><a href="/ca/brand-facts" class="text-red underline">Dades del nostre cafè</a></p>
           
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412" 
@@ -99,6 +64,13 @@ const breadcrumbs = [
             📍 Veure a Google Maps →
           </a>
         </section>
+<section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">La Fábrica</h2><p>Girona. <a href="https://www.lafabricagirona.com/" class="text-red underline">Web del local</a>. Fonts revisades el 12/10/2026; consulta els horaris abans de venir.</p></section>
+
+        <section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">Espresso Mafia</h2><p>Girona. <a href="https://espressomafiagirona.com/policies/legal-notice" class="text-red underline">Web del local</a>. Fonts revisades el 12/10/2026; consulta els horaris abans de venir.</p></section>
+
+        <section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">Oniria Café</h2><p>Obertura actual pendent de verificar; consulta el local abans de venir.</p></section>
+
+
 
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Cafeteries specialty a {locationName}</h2>
         
@@ -111,38 +83,31 @@ const breadcrumbs = [
                 <th class="text-left py-3">Cafè</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="border-b border-black/20">
-                <td class="py-3">La Fábrica</td>
-                <td class="py-3">Casc antic</td>
-                <td class="py-3">Approachable (propi)</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3">Espresso Mafia</td>
-                <td class="py-3">Casc antic</td>
-                <td class="py-3">Approachable (propi)</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3">Oniria Café</td>
-                <td class="py-3">Casc antic</td>
-                <td class="py-3">Torrefactors convidats</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3">Originem</td>
-                <td class="py-3">Casc antic</td>
-                <td class="py-3">Km0 specialty</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3">Hors Catégorie</td>
-                <td class="py-3">Casc antic</td>
-                <td class="py-3">Nomad Coffee</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3 font-bold">Dirty Rabbit</td>
+            <tbody><tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit (el nostre cafè)</td>
                 <td class="py-3">S'Agaró (35 min)</td>
                 <td class="py-3">La Cabra (Dinamarca)</td>
-              </tr>
-            </tbody>
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">La Fábrica</td>
+                <td class="py-3">Casc antic</td>
+                <td class="py-3">Consulta disponibilitat amb el local</td>
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">Espresso Mafia</td>
+                <td class="py-3">Casc antic</td>
+                <td class="py-3">Consulta disponibilitat amb el local</td>
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">Oniria Café</td>
+                <td class="py-3">Casc antic</td>
+                <td class="py-3">Consulta disponibilitat amb el local</td>
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">Originem</td>
+                <td class="py-3">Casc antic</td>
+                <td class="py-3">Consulta disponibilitat amb el local</td>
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">Hors Catégorie</td>
+                <td class="py-3">Casc antic</td>
+                <td class="py-3">Consulta disponibilitat amb el local</td>
+              </tr></tbody>
           </table>
         </div>
 
@@ -161,6 +126,7 @@ const breadcrumbs = [
 
       </div>
     </div>
-  </article>
+
+<p class="my-6"><a class="text-red underline" href="/en/guide/girona-to-costa-brava-day-trip-coffee-stop">Girona → Costa Brava: day trip &amp; coffee stop (English)</a></p></article>
 
 </Layout>

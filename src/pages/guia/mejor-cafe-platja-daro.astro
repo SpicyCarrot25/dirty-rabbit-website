@@ -37,43 +37,15 @@ const breadcrumbs = [
           {locationName} es sinónimo de verano en la Costa Brava: kilómetros de playa, paseo marítimo animado y una vida nocturna que no para. Pero si lo que buscas es un buen café de verdad — de esos que huelen a tostado reciente, con leche bien texturizada y un barista que sabe lo que hace — la cosa cambia. Aquí va nuestra guía honesta.
         </p>
       </header>
-<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy está cerrado por temporada; la fecha de reapertura no está confirmada. No es un cierre permanente. Consulta su web antes de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
+
 
       <!-- Main Content -->
       <div class="prose prose-lg max-w-none">
         
         <!-- La Maglia Section -->
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ La Maglia — Tostadero local en Platja d'Aro</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">C/ Juli Garreta, 10, Platja d'Aro · En el centro</p>
-          
-          <p class="mb-4">
-            Si estás en el centro de Platja d'Aro, La Maglia es una opción sólida. Tuestan su propio café con granos 100% arábica y puntuación SCA por encima de 85. La estética es muy ciclista (el nombre viene del maillot rosa del Giro d'Italia), así que verás bastantes grupos de gravel los sábados por la mañana.
-          </p>
-          <p class="mb-4">
-            Ofrecen también bowls de açaí, pastelería y zumos. La terraza grande está bien para un café rápido.
-          </p>
-          <p class="font-mono text-sm"><strong>Lo mejor:</strong> Su tostado propio — si buscas algo local, es buena opción.</p>
-        </section>
-
-        <!-- ANNNA Section -->
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ ANNNA — Café, pan sin gluten y concept store</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer de l'Hospital 21, Sant Feliu de Guíxols · 7 min en coche</p>
-          
-          <p class="mb-4">
-            Ana y Pascal han montado algo especial en la Casa Trachsler, una casa señorial del siglo XIX en el casco antiguo de Sant Feliu. ANNNA es café de especialidad, panadería artesanal sin gluten y concept store — todo en uno. Su masa madre sin gluten es de las mejores que hemos probado, y la selección de productos locales (aceites, vinos, cerámica) merece una visita solo por curiosear.
-          </p>
-          <p class="mb-4">
-            Abierta de jueves a lunes, de 9:00 a 14:30. Cerrada martes y miércoles.
-          </p>
-          <p class="font-mono text-sm"><strong>Lo mejor:</strong> Las tostadas con su pan artesanal + un flat white. El espacio en sí es precioso.</p>
-        </section>
-
-        <!-- Dirty Rabbit Section - Always most detailed -->
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — una parada en S’Agaró</h2>
+            <span class="text-3xl">🐇</span> Dirty Rabbit (nuestro café) — una parada en S’Agaró</h2>
           <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-369eec144eaa")} />
           
           <p class="mb-4">
@@ -95,12 +67,7 @@ const breadcrumbs = [
             <li><strong>25 minutos andando</strong> por el Camí de Ronda si te apetece hacer una ruta espectacular.</li>
           </ul>
 
-          <h3 class="font-typewriter text-xl mt-8 mb-4">Nuestros tres pilares</h3>
-          <ul class="space-y-2 mb-6">
-            <li><strong>Wild Comfort</strong> — Un sitio salvaje y acogedor a la vez. Relajado pero con intención.</li>
-            <li><strong>Intention</strong> — Todo lo que hacemos tiene un porqué. Cada detalle pensado.</li>
-            <li><strong>Belonging</strong> — Un lugar donde encajas. Vengas de donde vengas, esto es tu casa.</li>
-          </ul>
+          <p><a href="/brand-facts" class="text-red underline">Datos de nuestro café</a></p>
           
           <p class="mb-4">
             Hablamos <strong>español, catalán, inglés y polaco</strong> — y tenemos cartas en ruso, francés y ucraniano. Siéntete como en casa vengas de donde vengas.
@@ -114,7 +81,14 @@ const breadcrumbs = [
           >
             📍 Ver en Google Maps →
           </a>
-        </section>
+        </section><aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy está cerrado por temporada; la fecha de reapertura no está confirmada. No es un cierre permanente. Consulta su web antes de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
+<section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">La Maglia</h2><p>Platja d’Aro. <a href="https://www.lamaglia.cafe/" class="text-red underline">Web del local</a>. Fuentes revisadas el 12/10/2026; consulta horarios antes de ir.</p></section>
+
+        <!-- ANNNA Section -->
+        <section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">ANNNA</h2><p>Sant Feliu de Guíxols. <a href="https://www.annna.cc/" class="text-red underline">Web del local</a>. Fuentes revisadas el 12/10/2026; consulta horarios antes de ir.</p></section>
+
+        <!-- Dirty Rabbit Section - Always most detailed -->
+
 
         <!-- Distance Table -->
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Mapa y distancias desde {locationName}</h2>
@@ -129,26 +103,22 @@ const breadcrumbs = [
                 <th class="text-left py-3">Tipo</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="border-b border-black/20">
-                <td class="py-3">La Maglia</td>
-                <td class="py-3">0 km</td>
-                <td class="py-3">En Platja d'Aro</td>
-                <td class="py-3">Tostadero propio</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3 font-bold">Dirty Rabbit</td>
+            <tbody><tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit (nuestro café)</td>
                 <td class="py-3">3,5 km</td>
                 <td class="py-3">5 min</td>
                 <td class="py-3">La Cabra (Dinamarca)</td>
-              </tr>
-              <tr class="border-b border-black/20">
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">0 km</td>
+                <td class="py-3">En Platja d'Aro</td>
+                <td class="py-3">Consulta disponibilidad con el local</td>
+              </tr><tr class="border-b border-black/20">
                 <td class="py-3">ANNNA</td>
                 <td class="py-3">5 km</td>
                 <td class="py-3">7 min</td>
-                <td class="py-3">Specialty + GF bakery</td>
-              </tr>
-            </tbody>
+                <td class="py-3">Consulta disponibilidad con el local</td>
+              </tr></tbody>
           </table>
         </div>
 
@@ -158,8 +128,8 @@ const breadcrumbs = [
           Si estás explorando la zona con tiempo, también merece la pena:
         </p>
         <ul class="space-y-2 mb-8">
-          <li><strong>Fitzroy Café (cerrado por temporada)</strong> en Begur (30 min) — Brunch de culto, banana bread legendario, wine bar por las noches. Abierto en temporada.</li>
-          <li><strong>Grava</strong> en Pals (25 min) — Café Right Side de Barcelona + pizzería + vinos naturales. Muy gravel-cycling.</li>
+          <li><strong>Fitzroy Café (cerrado por temporada)</strong> — Consulta disponibilidad con el local.</li>
+          <li><strong>Grava</strong> — Consulta disponibilidad con el local.</li>
         </ul>
         <p>La Costa Brava cada vez tiene más opciones para los que amamos el buen café. Y eso nos encanta.</p>
 
@@ -190,6 +160,7 @@ const breadcrumbs = [
 
       </div>
     </div>
-  </article>
+
+</article>
 
 </Layout>

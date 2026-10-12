@@ -38,38 +38,9 @@ const breadcrumbs = [
 
       <div class="prose prose-lg max-w-none">
         
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ ANNNA — Le pionnier local</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer de l'Hospital 21, Sant Feliu de Guíxols · Dans la vieille ville</p>
-          
-          <p class="mb-4">
-            ANNNA a été le premier café de spécialité de la zone Sant Feliu. Ana (boulangère) et Pascal (barista) ont transformé la Casa Trachsler, une maison bourgeoise du XIXe siècle, en un espace unique : café de spécialité, boulangerie artisanale sans gluten, et concept store avec des produits locaux.
-          </p>
-          <p class="mb-4">
-            Leur pain au levain sans gluten est remarquable — Ana a perfectionné ses recettes pendant des années. La sélection de produits (huiles d'olive, vins naturels, céramiques) vaut aussi le coup d'œil.
-          </p>
-          <p class="mb-4">
-            <strong>Horaires :</strong> Jeudi–Lundi 9h00–14h30. Fermé mardi et mercredi.
-          </p>
-          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Toast au levain + flat white + flânerie dans la boutique.</p>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Maison Marcel — Pâtisserie française</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer Major, 5, Sant Feliu de Guíxols</p>
-          
-          <p class="mb-4">
-            Andrea et Franck tiennent cette boulangerie-pâtisserie française au cœur de Sant Feliu. Croissants au beurre avec farine bio locale, pain au chocolat parfait, Paris-Brest qui fond en bouche. Le café n'est pas du niveau "specialty roaster" confirmé, mais la qualité est là.
-          </p>
-          <p class="mb-4">
-            5.0/5 sur TripAdvisor avec des commentaires comme "meilleur coffee shop d'Espagne" — un peu exagéré, mais les pâtisseries méritent vraiment le détour.
-          </p>
-          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Croissant + café. Simple mais parfait.</p>
-        </section>
-
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — une autre étape à S’Agaró</h2>
+            <span class="text-3xl">🐇</span> Dirty Rabbit (notre café) — une autre étape à S’Agaró</h2>
           <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-8ab5fb78343a")} />
           
           <p class="mb-4">
@@ -104,6 +75,11 @@ const breadcrumbs = [
             📍 Voir sur Google Maps →
           </a>
         </section>
+<section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">ANNNA</h2><p>Sant Feliu de Guíxols. <a href="https://www.annna.cc/" class="text-red underline">Site du café</a>. Sources consultées le 12/10/2026 ; vérifiez les horaires avant votre visite.</p></section>
+
+        <section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">Maison Marcel</h2><p>Ouverture actuelle non vérifiée ; contactez le café avant votre visite.</p></section>
+
+
 
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distances depuis Sant Feliu</h2>
         
@@ -117,32 +93,27 @@ const breadcrumbs = [
                 <th class="text-left py-3">Spécialité</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="border-b border-black/20">
-                <td class="py-3">ANNNA</td>
-                <td class="py-3">0 km</td>
-                <td class="py-3">À Sant Feliu</td>
-                <td class="py-3">Specialty + sans gluten</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3">Maison Marcel</td>
-                <td class="py-3">0 km</td>
-                <td class="py-3">À Sant Feliu</td>
-                <td class="py-3">Pâtisserie française</td>
-              </tr>
-              <tr class="border-b border-black/20 bg-cream">
-                <td class="py-3 font-bold">Dirty Rabbit</td>
+            <tbody><tr class="border-b border-black/20 bg-cream">
+                <td class="py-3 font-bold">Dirty Rabbit (notre café)</td>
                 <td class="py-3">5 km</td>
                 <td class="py-3">7 min</td>
                 <td class="py-3">La Cabra (Danemark)</td>
-              </tr>
-              <tr class="border-b border-black/20">
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">ANNNA</td>
+                <td class="py-3">0 km</td>
+                <td class="py-3">À Sant Feliu</td>
+                <td class="py-3">Vérifiez la disponibilité auprès du café</td>
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">Maison Marcel</td>
+                <td class="py-3">0 km</td>
+                <td class="py-3">À Sant Feliu</td>
+                <td class="py-3">Vérifiez la disponibilité auprès du café</td>
+              </tr><tr class="border-b border-black/20">
                 <td class="py-3">La Maglia</td>
                 <td class="py-3">6 km</td>
                 <td class="py-3">10 min</td>
-                <td class="py-3">Torréfaction propre</td>
-              </tr>
-            </tbody>
+                <td class="py-3">Vérifiez la disponibilité auprès du café</td>
+              </tr></tbody>
           </table>
         </div>
 
@@ -170,6 +141,7 @@ const breadcrumbs = [
 
       </div>
     </div>
-  </article>
+
+</article>
 
 </Layout>
