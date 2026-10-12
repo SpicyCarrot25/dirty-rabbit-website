@@ -1,326 +1,64 @@
 ---
-import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
-import Layout from '../../layouts/Layout.astro';
-
-const lang = 'es';
-const title = `Desayunar con niños en la Costa Brava`;
-const description = `Desayunar fuera con niños es una aventura. Entre las tronas que no caben, las cartas sin opciones para pequeños, y los camareros que te miran mal cuando tu hijo`;
-
-const breadcrumbs = [
-  { name: 'Inicio', url: 'https://dirtyrabbit.es/' },
-  { name: 'Artículos', url: 'https://dirtyrabbit.es/articulos/' },
-  { name: title, url: 'https://dirtyrabbit.es/articulos/desayuno-con-ninos-costa-brava' }
-];
+import LocalGuide from "../../layouts/LocalGuide.astro";
+// Editorial revision: dateModified: "2026-10-12"
+const guide = {
+  "title": "Desayunar con niños en la Costa Brava: prepara la visita",
+  "description": "Una guía práctica para desayunar con niños en S’Agaró: espacio, carta, paseo y preguntas sobre el rincón infantil antes de venir.",
+  "intro": "Una guía práctica para desayunar con niños en S’Agaró: espacio, carta, paseo y preguntas sobre el rincón infantil antes de venir.",
+  "sections": [
+    {
+      "heading": "Rincón infantil y mesa: qué confirmar",
+      "paragraphs": [
+        "European Coffee Trip identifica Dirty Rabbit como kids-friendly. Para confirmar la disponibilidad actual del rincón infantil, las tronas o el espacio para el cochecito, llámanos al +34 872 454 264. No ofrecemos un servicio de cuidado infantil: los menores deben estar acompañados.",
+        "Dinos cuántas personas venís y qué disposición de mesa necesitáis. Es más útil acordarlo antes que basar toda la visita en una foto antigua. Si el rincón infantil es imprescindible para vuestro plan, pide confirmación expresa para ese día."
+      ],
+      "source": {
+        "title": "European Coffee Trip · ficha revisada el 12/10/2026",
+        "url": "https://europeancoffeetrip.com/cafe/dirtyrabbit-sagaro/"
+      }
+    },
+    {
+      "heading": "Elegir el desayuno sin improvisar a última hora",
+      "paragraphs": [
+        "Consulta la carta y el servicio de cocina antes de salir. No publicamos un menú infantil fijo en esta guía: pregunta por las opciones disponibles y por cualquier ingrediente que necesites consultar.",
+        "Deja margen entre el desayuno y una actividad reservada. Si vais con varios niños, una sola parada exterior después del café suele ser más fácil de organizar que encadenar coche, playa, museo y comida."
+      ]
+    },
+    {
+      "heading": "Un paseo después: centro o Sant Pol",
+      "paragraphs": [
+        "Sant Pol está al norte del núcleo de Sant Feliu. El municipio propone recorridos costeros y la vía verde como actividades diferentes; escoge el tipo de paseo que encaje con vuestro ritmo.",
+        "Antes de llevar un cochecito por un tramo del Camí de Ronda, comprueba firme y escalones. Una caminata corta con vuelta al mismo punto puede ser más práctica que depender de transporte para regresar."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://www.visitguixols.com/es/18-propostes/273-sfg-familiar-es.html"
+      }
+    },
+    {
+      "heading": "Alternativas de las guías anteriores",
+      "paragraphs": [
+        "La Maglia (Platja d’Aro), ANNNA y Maison Marcel (Sant Feliu), y Grava (Pals) siguen siendo referencias de nuestras guías. Confirma con cada establecimiento espacio, carta y disponibilidad para niños; no garantizamos sus instalaciones actuales.",
+        "Fitzroy, en Begur, está cerrado por temporada; la reapertura no tiene fecha confirmada. Lo conservamos como referencia estacional, no como una parada abierta para esta mañana."
+      ],
+      "source": {
+        "title": "Fitzroy · cierre estacional comunicado por Franc el 12/10/2026",
+        "url": "https://fitzroycafe.com/"
+      }
+    }
+  ],
+  "related": [
+    {
+      "title": "Opciones veganas y preguntas sobre gluten",
+      "url": "/guia/brunch-vegano-sin-gluten-costa-brava"
+    },
+    {
+      "title": "Café con perro",
+      "url": "/guia/cafeteria-con-perro-costa-brava"
+    }
+  ],
+  "lang": "es",
+  "dateModified": "2026-10-12"
+} as const;
 ---
-
-<Layout 
-  title={title}
-  description={description}
-  lang={lang}
-  articleMeta={{ datePublished: "2026-03-24", dateModified: "2026-10-12", section: "Article" }}
-  breadcrumbs={breadcrumbs}>
-
-  <article class="py-16 md:py-24 bg-white">
-    <div class="max-w-3xl mx-auto px-6">
-      
-      <!-- Header -->
-      <header class="mb-12">
-        <p class="font-mono text-sm text-red tracking-wider mb-4">ARTÍCULO</p>
-        <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
-          Desayunar con niños en la Costa Brava
-        </h1>
-      </header>
-<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy está cerrado por temporada; la fecha de reapertura no está confirmada. No es un cierre permanente. Consulta su web antes de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
-
-      <!-- Main Content -->
-      <div class="prose prose-lg max-w-none font-mono text-black/80 leading-relaxed">
-        <p class="mb-4"><em>Desayunar fuera con niños es una aventura. Entre las tronas que no caben, las cartas sin opciones para pequeños, y los camareros que te miran mal cuando tu hijo tira el vaso... encontrar un sitio que realmente funcione para familias no es fácil. Esta guía cubre los mejores sitios para desayunar con niños en la Costa Brava — con criterios reales de padres reales.</em></p>
-<hr class="my-8 border-black/20">
-<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">¿Qué hace que un sitio sea &quot;family-friendly&quot; de verdad?</h2>
-<p class="mb-4">Muchos sitios dicen ser &quot;family-friendly&quot; pero luego no tienen trona, el espacio es minúsculo, o el personal suspira cuando entras con un carrito. Estos son los criterios que usamos:</p>
-<h3 class="font-typewriter text-xl mt-8 mb-4">Lo básico (mínimo exigible)</h3>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>✅ <strong>Tronas disponibles</strong> — Y que no estén rotas</li>
-<li>✅ <strong>Espacio para moverse</strong> — Carritos, niños que caminan</li>
-<li>✅ <strong>Baños accesibles</strong> — Idealmente con cambiador</li>
-<li>✅ <strong>Menú con opciones para niños</strong> — No solo nuggets</li>
-</ul>
-<h3 class="font-typewriter text-xl mt-8 mb-4">Lo que marca la diferencia</h3>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>🌟 <strong>Terraza o espacio exterior</strong> — Los niños no explotan si salen fuera</li>
-<li>🌟 <strong>Personal con paciencia</strong> — Se nota cuando les gustan los niños</li>
-<li>🌟 <strong>Ambiente relajado</strong> — No es un restaurante con estrella donde hay que estar callado</li>
-<li>🌟 <strong>Proximidad a parques o playa</strong> — Para después</li>
-</ul>
-<h3 class="font-typewriter text-xl mt-8 mb-4">Lo excepcional</h3>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>💫 <strong>Zona de juegos</strong> — Raro, pero existe</li>
-<li>💫 <strong>Menú específico infantil creativo</strong> — Más allá del clásico</li>
-<li>💫 <strong>Horarios flexibles</strong> — Para las familias que madrugamos o no</li>
-</ul>
-<hr class="my-8 border-black/20">
-<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Los mejores sitios para desayunar con niños por zona</h2>
-<h3 class="font-typewriter text-xl mt-8 mb-4">Zona S&#39;Agaró — Platja d&#39;Aro — Sant Feliu</h3>
-<h4>🐇 Dirty Rabbit — S&#39;Agaró</h4>
-<p class="mb-4" set:html={getFactCopy("copy-d275a35fab67")} />
-<p class="mb-4">Dirty Rabbit es el único café de especialidad de la zona con <strong>zona de niños</strong>. No es un parque de bolas, pero tenemos un espacio donde los pequeños pueden moverse y jugar sin molestar.</p>
-<p class="mb-4"><strong>Lo que tenemos:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li><strong>Zona de niños</strong> — El único café de la zona con espacio dedicado para los pequeños</li>
-<li><strong>Terraza amplia</strong> — Más espacio para moverse</li>
-<li><strong>Tronas</strong> — Sí, y en buen estado</li>
-<li><strong>Ambiente relajado</strong> — No somos un sitio donde hay que susurrar</li>
-<li><strong>Paciencia infinita</strong> — Sabemos que los niños son niños</li>
-<li><strong>Productos de calidad también para ellos</strong> — Bollería de La Puntual, pan de Origo, no solo galletas industriales</li>
-</ul>
-<p class="mb-4"><strong>A 3 minutos de la Playa de Sant Pol</strong> — Desayunas y luego bajas a la playa. Sant Pol es perfecta para niños: arena fina, aguas tranquilas, socorrista en temporada.</p>
-<p class="mb-4"><strong>Menú para niños (no oficial, pero funciona):</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Tostadas con mantequilla y mermelada</li>
-<li>Bollería (croissant, napolitana)</li>
-<li>Yogur con fruta</li>
-<li>Leche caliente o chocolate</li>
-<li>Zumos naturales</li>
-</ul>
-<p class="mb-4"><strong>Horario:</strong> Consulta redes, abrimos para desayuno.</p>
-<p class="mb-4"><strong>Idiomas:</strong> Español, catalán, inglés, polaco. Cartas en ruso, francés, ucraniano.</p>
-<hr class="my-8 border-black/20">
-<h4>La Maglia Coffee &amp; Co — Platja d&#39;Aro</h4>
-<p class="mb-4"><strong>Carrer Juli Garreta, 10, Platja d&#39;Aro</strong> · 5 min en coche</p>
-<p class="mb-4">Terraza grande, ambiente relajado, açaí bowls que a los niños les encantan (¡son morados!). Es ciclista-friendly, lo que significa que están acostumbrados a grupos y ruido.</p>
-<p class="mb-4"><strong>Para niños:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Açaí bowls — Visualmente atractivos</li>
-<li>Zumos naturales</li>
-<li>Tostadas</li>
-</ul>
-<p class="mb-4"><strong>Cerca de:</strong> Playa Grande de Platja d&#39;Aro (más turística, pero con servicios).</p>
-<hr class="my-8 border-black/20">
-<h4>ANNNA — Sant Feliu de Guíxols</h4>
-<p class="mb-4"><strong>Carrer de l&#39;Hospital, 21</strong> · 7 min en coche</p>
-<p class="mb-4">Panadería 100% sin gluten. <strong>Ojo: el local es muy pequeño y NO es ideal para niños</strong> — no hay espacio para moverse, y el ambiente es más de adultos tranquilos. La excepción: si tu hijo es celíaco, merece el esfuerzo porque es la mejor opción sin gluten de la Costa Brava.</p>
-<p class="mb-4"><strong>Para niños celíacos:</strong> Sí, esta es la opción. Todo es sin gluten, con ingredientes de calidad. Pero ven preparado — espacio reducido.</p>
-<p class="mb-4"><strong>Horario:</strong> Jueves a lunes, 9:00–15:00.</p>
-<hr class="my-8 border-black/20">
-<h4>Maison Marcel — Sant Feliu de Guíxols</h4>
-<p class="mb-4"><strong>Carrer Major, 5</strong> · 5 min en coche</p>
-<p class="mb-4">Panadería francesa. Los croissants son espectaculares, y a los niños les encantan las cosas dulces. El espacio es pequeño, así que mejor con niños que pueden estar sentados.</p>
-<p class="mb-4"><strong>Para niños:</strong> Croissants, pain au chocolat, zumos.</p>
-<hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">Zona Begur — Pals</h3>
-<h4>Fitzroy Café (cerrado por temporada) — Begur</h4>
-<p class="mb-4"><strong>Carrer de Francesc Forgas, 1, Begur</strong> · 20 min en coche</p>
-<p class="mb-4">Brunch australiano con terraza en el casco antiguo de Begur. Los pancakes y el banana bread son hits con los niños.</p>
-<p class="mb-4"><strong>Para niños:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Pancakes con sirope</li>
-<li>Banana bread</li>
-<li>Smoothies</li>
-</ul>
-<p class="mb-4"><strong>Después:</strong> Begur tiene calles peatonales para pasear. No hay playa directa, pero las calas de Begur (Aiguablava, Sa Tuna) están a 10 minutos en coche.</p>
-<p class="mb-4"><strong>Ojo:</strong> Estacional — verifica antes de ir en invierno.</p>
-<hr class="my-8 border-black/20">
-<h4>Grava — Pals</h4>
-<p class="mb-4"><strong>Carrer de la Font, 7, Pals</strong> · 20 min en coche</p>
-<p class="mb-4">Café + pizzería. El patio exterior es perfecto para niños — pueden moverse mientras esperas. Las pizzas caseras les encantan.</p>
-<p class="mb-4"><strong>Para niños:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Pizzas (para almuerzo)</li>
-<li>Café y dulces para desayuno</li>
-<li>Espacio exterior amplio</li>
-</ul>
-<p class="mb-4"><strong>Después:</strong> El pueblo medieval de Pals está al lado — perfecto para explorar.</p>
-<hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">Zona Girona ciudad</h3>
-<h4>Federal Café — Girona</h4>
-<p class="mb-4"><strong>Carrer de la Força, 9</strong> · 35 min en coche</p>
-<p class="mb-4">Parte de la cadena Federal. Brunch estilo australiano con opciones para todos. Está cerca de la Catedral de Girona.</p>
-<p class="mb-4"><strong>Para niños:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Pancakes</li>
-<li>Tostadas</li>
-<li>Zumos y smoothies</li>
-</ul>
-<p class="mb-4"><strong>Después:</strong> Girona ciudad tiene muchos parques infantiles. El Parc de la Devesa es enorme.</p>
-<hr class="my-8 border-black/20">
-<h4>Oniria Café — Girona</h4>
-<p class="mb-4"><strong>Carrer del Nord, 11</strong> · 35 min en coche</p>
-<p class="mb-4">Pequeño y acogedor. Bollería vegana y sin azúcar añadido — puede ser hit or miss con niños (depende de lo acostumbrados que estén). Perros bienvenidos.</p>
-<hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">Zona norte — Cadaqués, L&#39;Escala</h3>
-<h4>It&#39;s Coffee Time — L&#39;Escala</h4>
-<p class="mb-4"><strong>Passeig del Mar, 18, L&#39;Escala</strong> · 40 min en coche</p>
-<p class="mb-4">Frente al mar. Pancakes, smoothies, açaí bowls. A los niños les encanta desayunar con vistas al agua.</p>
-<p class="mb-4"><strong>Para niños:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Pancakes</li>
-<li>Smoothies de colores</li>
-<li>Açaí bowls</li>
-</ul>
-<p class="mb-4"><strong>Después:</strong> La playa de L&#39;Escala está literalmente delante.</p>
-<hr class="my-8 border-black/20">
-<h4>Casa Nereta — Cadaqués</h4>
-<p class="mb-4"><strong>Carrer Pintor Joan Ponç, 1, Cadaqués</strong> · 60 min en coche</p>
-<p class="mb-4">Hotel boutique con cafetería. Sirven La Cabra (el mismo café que Dirty Rabbit). Bollería de El Puto Ken. Es un espacio tranquilo, funciona mejor con niños mayores.</p>
-<hr class="my-8 border-black/20">
-<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Consejos para desayunar fuera con niños</h2>
-<h3 class="font-typewriter text-xl mt-8 mb-4">Timing</h3>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li><strong>Evita las 11:00–13:00</strong> — Hora punta en todas partes</li>
-<li><strong>8:30–10:00</strong> — Ideal. Sitios más vacíos, niños más frescos</li>
-<li><strong>Lleva snacks de emergencia</strong> — Por si la comida tarda</li>
-</ul>
-<h3 class="font-typewriter text-xl mt-8 mb-4">Qué preguntar al llegar</h3>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>&quot;¿Tenéis trona?&quot;</li>
-<li>&quot;¿Hay baño con cambiador?&quot; (no siempre)</li>
-<li>&quot;¿Podemos sentarnos fuera?&quot; (si el tiempo lo permite)</li>
-</ul>
-<h3 class="font-typewriter text-xl mt-8 mb-4">Gestión de expectativas</h3>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Los sitios de café de especialidad no suelen tener menú infantil formal — pero casi siempre pueden adaptar</li>
-<li>En España no esperes zonas de juegos en cafeterías — la cultura es diferente</li>
-<li>La mayoría de camareros son pacientes, pero no todos</li>
-</ul>
-<h3 class="font-typewriter text-xl mt-8 mb-4">El kit de supervivencia</h3>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Snacks por si acaso</li>
-<li>Algo para entretenerse (libro, papel para dibujar)</li>
-<li>Babero/servilletas extra</li>
-<li>Cambio de ropa si vais a la playa después</li>
-</ul>
-<hr class="my-8 border-black/20">
-<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Desayuno + playa: Los mejores combos para familias</h2>
-<h3 class="font-typewriter text-xl mt-8 mb-4">Combo 1: Dirty Rabbit + Playa de Sant Pol</h3>
-<p class="mb-4"><strong>Por qué funciona:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>3 minutos andando entre ambos</li>
-<li>Sant Pol: arena fina, aguas tranquilas, socorrista, duchas</li>
-<li>Sin necesidad de coger el coche</li>
-</ul>
-<p class="mb-4"><strong>El plan:</strong></p>
-<ol class="space-y-2 mb-6 list-decimal pl-6">
-<li>9:00 — Desayuno en Dirty Rabbit</li>
-<li>10:00 — Bajáis a Sant Pol</li>
-<li>10:15 — Arena, agua, juego</li>
-<li>13:00 — Volvéis a casa o coméis algo en la playa</li>
-</ol>
-<hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">Combo 2: La Maglia + Playa de Platja d&#39;Aro</h3>
-<p class="mb-4"><strong>Por qué funciona:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Playa Grande de Platja d&#39;Aro tiene todos los servicios</li>
-<li>Más turística, pero más opciones (helados, chiringuitos)</li>
-</ul>
-<p class="mb-4"><strong>El plan:</strong></p>
-<ol class="space-y-2 mb-6 list-decimal pl-6">
-<li>9:30 — Café y açaí en La Maglia</li>
-<li>10:30 — Playa Grande (paseo corto)</li>
-<li>13:00 — Helado en el paseo</li>
-</ol>
-<hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">Combo 3: It&#39;s Coffee Time + Playa de L&#39;Escala</h3>
-<p class="mb-4"><strong>Por qué funciona:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Literalmente al lado del mar</li>
-<li>L&#39;Escala tiene ambiente de pueblo de pescadores</li>
-</ul>
-<p class="mb-4"><strong>El plan:</strong></p>
-<ol class="space-y-2 mb-6 list-decimal pl-6">
-<li>10:00 — Desayuno en It&#39;s Coffee Time</li>
-<li>11:00 — Playa justo enfrente</li>
-<li>13:00 — Paseo por el pueblo</li>
-</ol>
-<hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">Combo 4: Fitzroy (cerrado por temporada) + Calas de Begur</h3>
-<p class="mb-4"><strong>Por qué funciona:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Begur es precioso para pasear</li>
-<li>Las calas (Aiguablava, Sa Tuna) son espectaculares</li>
-</ul>
-<p class="mb-4"><strong>El plan:</strong></p>
-<ol class="space-y-2 mb-6 list-decimal pl-6">
-<li>9:30 — Brunch en Fitzroy (cerrado por temporada)</li>
-<li>11:00 — Coche hasta Aiguablava (10 min)</li>
-<li>11:15 — Cala paradisíaca, menos gente que en playas grandes</li>
-</ol>
-<p class="mb-4"><strong>Ojo:</strong> Las calas de Begur tienen menos servicios (no siempre hay socorrista). Mejor para niños que saben nadar o con supervisión cercana.</p>
-<hr class="my-8 border-black/20">
-<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Opciones para necesidades especiales</h2>
-<h3 class="font-typewriter text-xl mt-8 mb-4">Niños celíacos</h3>
-<p class="mb-4"><strong>La mejor opción:</strong> ANNNA en Sant Feliu de Guíxols. 100% sin gluten, panadería artesana. Pero aviso: el local es muy pequeño, no ideal para niños activos.</p>
-<p class="mb-4"><strong>Alternativas:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Fitzroy Café (cerrado por temporada) (tiene opciones GF, más espacio)</li>
-<li>Dirty Rabbit (algunas opciones sin gluten, pero no 100% GF kitchen — pregunta)</li>
-</ul>
-<h3 class="font-typewriter text-xl mt-8 mb-4">Niños con alergias</h3>
-<p class="mb-4">La cultura de alergias alimentarias en España está menos desarrollada que en otros países. Siempre pregunta antes de pedir. Los sitios de café de especialidad suelen ser más conscientes.</p>
-<h3 class="font-typewriter text-xl mt-8 mb-4">Niños con necesidades de movilidad</h3>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Sant Pol tiene acceso con silla de ruedas/carrito por la rampa principal</li>
-<li>Dirty Rabbit tiene acceso a nivel de calle</li>
-<li>Muchos pueblos medievales (Begur, Pals) tienen calles empedradas — difícil con carrito</li>
-</ul>
-<hr class="my-8 border-black/20">
-<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Preguntas frecuentes</h2>
-<h3 class="font-typewriter text-xl mt-8 mb-4">¿Los cafés de especialidad son buenos para niños?</h3>
-<p class="mb-4">Generalmente sí. El ambiente suele ser más relajado que restaurantes formales. El café de calidad va acompañado de productos de calidad — también para niños.</p>
-<h3 class="font-typewriter text-xl mt-8 mb-4">¿A qué hora desayunan las familias españolas?</h3>
-<p class="mb-4">Entre semana: 8:00–9:00 antes del cole. Fines de semana: 10:00–12:00 es lo habitual. Si quieres evitar colas, ve a las 9:00–10:00.</p>
-<h3 class="font-typewriter text-xl mt-8 mb-4">¿Se aceptan carritos en las cafeterías?</h3>
-<p class="mb-4">La mayoría sí. Los espacios más pequeños (ANNNA, Oniria) pueden ser apretados. Pregunta si no estás seguro.</p>
-<h3 class="font-typewriter text-xl mt-8 mb-4">¿Hay menús infantiles?</h3>
-<p class="mb-4">No es tan común como en países anglosajones. Pero casi siempre pueden adaptar — tostadas con mantequilla, bollería, fruta. Pregunta.</p>
-<h3 class="font-typewriter text-xl mt-8 mb-4">¿Puedo dar el pecho en las cafeterías?</h3>
-<p class="mb-4">Sí. Es legal en España y está normalizado. Nunca hemos visto a nadie poner problemas.</p>
-<h3 class="font-typewriter text-xl mt-8 mb-4">¿Cuánto cuesta desayunar con niños?</h3>
-<p class="mb-4" set:html={getFactCopy("copy-893302d556cf")} />
-<hr class="my-8 border-black/20">
-<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Nuestra recomendación</h2>
-<p class="mb-4">Si tienes que elegir un solo sitio para desayunar con niños en la zona de S&#39;Agaró:</p>
-<p class="mb-4"><strong>Dirty Rabbit</strong> — El único café de especialidad con zona de niños. Terraza, tronas, ambiente relajado, y a 3 minutos de Sant Pol. Paciencia, productos buenos, y un espacio donde los niños son bienvenidos de verdad.</p>
-<p class="mb-4">Si tu hijo es celíaco: <strong>ANNNA</strong> — pero ten en cuenta que el local es muy pequeño. Ve preparado.</p>
-<p class="mb-4">Si quieres brunch más elaborado y los niños ya son mayores: <strong>Fitzroy (cerrado por temporada)</strong> en Begur.</p>
-<hr class="my-8 border-black/20">
-<h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Para saber más</h2>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li><a href="https://www.costabrava.org/que-hacer/playas-y-calas" target="_blank" rel="noopener noreferrer" class="text-red hover:underline">Playas de la Costa Brava</a> — Playas con bandera azul y accesos adaptados para familias con niños</li>
-<li><a href="https://www.costabrava.org/que-hacer/turismo-familiar" target="_blank" rel="noopener noreferrer" class="text-red hover:underline">Turismo familiar en la Costa Brava — Patronat de Turisme</a> — Actividades y recursos para familias en la región</li>
-<li><a href="https://sca.coffee" target="_blank" rel="noopener noreferrer" class="text-red hover:underline">Specialty Coffee Association</a> — El marco de calidad del café que ofrecemos a los adultos de la familia</li>
-</ul>
-
-<p class="mb-4" set:html={getFactCopy("copy-9ec102e1375d")} />
-<p class="mb-4"><em>Última actualización: febrero 2026</em></p>
-
-      </div>
-
-      
-        <div class="mt-12 mb-8 p-6 bg-cream rounded-xl">
-          <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
-          <ul class="font-mono text-sm space-y-3">
-            <li>☕ <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">El mejor café de especialidad en S'Agaró</a></li>
-            <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
-            <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
-            <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
-            <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía completa 2026</a></li>
-          </ul>
-        </div>
-<!-- CTA -->
-      <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
-        <p class="font-typewriter text-2xl mb-4">¿Vienes a vernos?</p>
-        <p class="font-mono mb-6" set:html={getFactCopy("copy-4fb00d6cad80")} />
-        <a 
-          href="https://www.google.com/maps?cid=13237319999262880412"
-          target="_blank"
-          rel="noopener noreferrer" 
-          class="inline-block font-typewriter px-8 py-3 bg-red text-cream rounded-lg hover:bg-red/90 transition-colors"
-        >
-          Cómo llegar
-        </a>
-      </div>
-
-    </div>
-  </article>
-
-</Layout>
+<LocalGuide {...guide} datePublished="2026-03-24" />

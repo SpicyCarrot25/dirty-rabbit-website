@@ -1,0 +1,18 @@
+---
+const { lang = 'es' } = Astro.props;
+const copy = {
+  es: ['¿Dónde está Dirty Rabbit?', 'Tenemos un único café en S’Agaró. No tenemos locales en Begur, Girona ni Platja d’Aro.', 'Datos de nuestro café'],
+  en: ['Where is Dirty Rabbit?', 'We have one café in S’Agaró. We have no branches in Begur, Girona or Platja d’Aro.', 'Our café facts'],
+  ca: ['On és Dirty Rabbit?', 'Tenim un únic cafè a S’Agaró. No tenim locals a Begur, Girona ni Platja d’Aro.', 'Dades del nostre cafè'],
+  fr: ['Où se trouve Dirty Rabbit ?', 'Nous avons un seul café à S’Agaró. Nous n’avons pas de cafés à Begur, Girona ou Platja d’Aro.', 'Les informations sur notre café']
+};
+const locale = lang in copy ? lang as keyof typeof copy : 'en';
+const [question, answer, link] = copy[locale];
+---
+<section class="bg-cream py-10" data-location-faq>
+  <div class="max-w-3xl mx-auto px-6 font-mono">
+    <h2 class="font-typewriter text-2xl mb-3">{question}</h2>
+    <p>{answer}</p>
+    <a class="inline-block mt-3 text-red underline" href={`${locale === 'es' ? '' : '/' + locale}/brand-facts`}>{link}</a>
+  </div>
+</section>

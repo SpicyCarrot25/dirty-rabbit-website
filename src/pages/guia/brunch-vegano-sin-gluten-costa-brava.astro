@@ -1,0 +1,60 @@
+---
+import LocalGuide from "../../layouts/LocalGuide.astro";
+// Editorial revision: dateModified: "2026-10-12"
+const guide = {
+  "title": "Brunch vegano y sin gluten: qué preguntar antes de venir",
+  "description": "Opciones veganas y preguntas sobre ingredientes, gluten y preparación para organizar un brunch en S’Agaró sin dar por hechas las condiciones de cocina.",
+  "intro": "Opciones veganas y preguntas sobre ingredientes, gluten y preparación para organizar un brunch en S’Agaró sin dar por hechas las condiciones de cocina.",
+  "sections": [
+    {
+      "heading": "Opciones veganas: consulta la carta del día",
+      "paragraphs": [
+        "European Coffee Trip señala opciones veganas y bebida vegetal en Dirty Rabbit. La ficha no identifica qué platos están disponibles cada día; revisa nuestra carta y confirma lo que quieres pedir con el equipo.",
+        "Explica si buscas un plato completamente vegano, una bebida con leche vegetal o una adaptación concreta. Son peticiones diferentes y conviene aclararlas antes de elegir."
+      ],
+      "source": {
+        "title": "European Coffee Trip · ficha revisada el 12/10/2026",
+        "url": "https://europeancoffeetrip.com/cafe/dirtyrabbit-sagaro/"
+      }
+    },
+    {
+      "heading": "Gluten: no prometemos una cocina dedicada",
+      "paragraphs": [
+        "Esta guía no confirma que Dirty Rabbit tenga una cocina exclusiva sin gluten. Si necesitas evitarlo, llama antes y pregunta por los ingredientes, los utensilios y el espacio de preparación del plato que te interesa.",
+        "Que una receta no incluya un ingrediente no responde por sí solo a cómo se prepara. Tampoco una opción vegana implica que sea sin gluten. No reserves una comida contando con una garantía que el equipo no te haya dado para tu petición concreta."
+      ]
+    },
+    {
+      "heading": "Una alternativa que publica panadería sin gluten",
+      "paragraphs": [
+        "ANNNA, en Sant Feliu de Guíxols, describe panadería de masa madre sin gluten en su web. Puedes consultarla si ese es el criterio principal de tu desayuno. Confirma allí las condiciones de preparación que necesitas.",
+        "Es un establecimiento distinto en otra localidad. El objetivo de la comparación es que encuentres una opción que pueda responder a tus preguntas, sin convertir una etiqueta de un directorio en una promesa para todas las personas."
+      ],
+      "source": {
+        "title": "ANNNA · web revisada el 12/10/2026",
+        "url": "https://www.annna.cc/"
+      }
+    },
+    {
+      "heading": "Qué decir al llamar",
+      "paragraphs": [
+        "Indica cuántas personas sois, el día, la hora aproximada y qué ingredientes o condiciones necesitas consultar. Pregunta qué platos se pueden preparar tal como los necesitas y hasta qué hora funciona la cocina.",
+        "Puedes llamarnos al +34 872 454 264. Si no podemos confirmar lo que necesitas para esa visita, planifica otra opción antes de desplazarte. Nuestra única dirección es S’Agaró; no tenemos una segunda cocina en otro pueblo."
+      ]
+    }
+  ],
+  "related": [
+    {
+      "title": "Carta de Dirty Rabbit",
+      "url": "/carta"
+    },
+    {
+      "title": "Desayuno en Sant Feliu",
+      "url": "/guia/desayunar-en-sant-feliu-de-guixols"
+    }
+  ],
+  "lang": "es",
+  "dateModified": "2026-10-12"
+} as const;
+---
+<LocalGuide {...guide} />

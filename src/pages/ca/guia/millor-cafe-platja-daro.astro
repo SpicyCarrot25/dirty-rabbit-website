@@ -38,35 +38,9 @@ const breadcrumbs = [
 
       <div class="prose prose-lg max-w-none">
         
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ La Maglia — Torrefactor local a Platja d'Aro</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">C/ Juli Garreta, 10, Platja d'Aro · Al centre</p>
-          
-          <p class="mb-4">
-            Si ets al centre de Platja d'Aro, La Maglia és una opció sòlida. Torren el seu propi cafè amb grans 100% aràbica i puntuació SCA per sobre de 85. L'estètica és molt ciclista (el nom ve del mallot rosa del Giro d'Italia), així que veuràs bastants grups de gravel els dissabtes al matí.
-          </p>
-          <p class="mb-4">
-            Ofereixen també bowls d'açaí, pastisseria i sucs. La terrassa gran va bé per un cafè ràpid.
-          </p>
-          <p class="font-mono text-sm"><strong>El millor:</strong> El seu torrat propi — si busques alguna cosa local, és bona opció.</p>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ ANNNA — Cafè, pa sense gluten i concept store</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer de l'Hospital 21, Sant Feliu de Guíxols · 7 min en cotxe</p>
-          
-          <p class="mb-4">
-            L'Ana i en Pascal han muntat alguna cosa especial a la Casa Trachsler, una casa senyorial del segle XIX al casc antic de Sant Feliu. ANNNA és cafè d'especialitat, fleca artesana sense gluten i concept store — tot en un. La seva massa mare sense gluten és de les millors que hem provat.
-          </p>
-          <p class="mb-4">
-            Oberta de dijous a dilluns, de 9:00 a 14:30. Tancada dimarts i dimecres.
-          </p>
-          <p class="font-mono text-sm"><strong>El millor:</strong> Les torrades amb el seu pa artesà + un flat white. L'espai en si és preciós.</p>
-        </section>
-
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — una parada a S’Agaró</h2>
+            <span class="text-3xl">🐇</span> Dirty Rabbit (el nostre cafè) — una parada a S’Agaró</h2>
           <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-81872e6ccfb5")} />
           
           <p class="mb-4">
@@ -88,12 +62,7 @@ const breadcrumbs = [
             <li><strong>25 minuts caminant</strong> pel Camí de Ronda si et ve de gust fer una ruta espectacular.</li>
           </ul>
 
-          <h3 class="font-typewriter text-xl mt-8 mb-4">Els nostres tres pilars</h3>
-          <ul class="space-y-2 mb-6">
-            <li><strong>Wild Comfort</strong> — Un lloc salvatge i acollidor alhora. Relaxat però amb intenció.</li>
-            <li><strong>Intention</strong> — Tot el que fem té un perquè. Cada detall pensat.</li>
-            <li><strong>Belonging</strong> — Un lloc on encaixes. Vinguis d'on vinguis, això és casa teva.</li>
-          </ul>
+          <p><a href="/ca/brand-facts" class="text-red underline">Dades del nostre cafè</a></p>
           
           <p class="mb-4">
             Parlem <strong>castellà, català, anglès i polonès</strong> — i tenim cartes en rus, francès i ucraïnès.
@@ -108,6 +77,11 @@ const breadcrumbs = [
             📍 Veure a Google Maps →
           </a>
         </section>
+<section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">La Maglia</h2><p>Platja d’Aro. <a href="https://www.lamaglia.cafe/" class="text-red underline">Web del local</a>. Fonts revisades el 12/10/2026; consulta els horaris abans de venir.</p></section>
+
+        <section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">ANNNA</h2><p>Sant Feliu de Guíxols. <a href="https://www.annna.cc/" class="text-red underline">Web del local</a>. Fonts revisades el 12/10/2026; consulta els horaris abans de venir.</p></section>
+
+
 
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Mapa i distàncies des de {locationName}</h2>
         
@@ -121,26 +95,22 @@ const breadcrumbs = [
                 <th class="text-left py-3">Tipus</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="border-b border-black/20">
-                <td class="py-3">La Maglia</td>
-                <td class="py-3">0 km</td>
-                <td class="py-3">A Platja d'Aro</td>
-                <td class="py-3">Torrefactor propi</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3 font-bold">Dirty Rabbit</td>
+            <tbody><tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit (el nostre cafè)</td>
                 <td class="py-3">3,5 km</td>
                 <td class="py-3">5 min</td>
                 <td class="py-3">La Cabra (Dinamarca)</td>
-              </tr>
-              <tr class="border-b border-black/20">
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">0 km</td>
+                <td class="py-3">A Platja d'Aro</td>
+                <td class="py-3">Consulta disponibilitat amb el local</td>
+              </tr><tr class="border-b border-black/20">
                 <td class="py-3">ANNNA</td>
                 <td class="py-3">5 km</td>
                 <td class="py-3">7 min</td>
-                <td class="py-3">Specialty + fleca GF</td>
-              </tr>
-            </tbody>
+                <td class="py-3">Consulta disponibilitat amb el local</td>
+              </tr></tbody>
           </table>
         </div>
 
@@ -159,6 +129,7 @@ const breadcrumbs = [
 
       </div>
     </div>
-  </article>
+
+</article>
 
 </Layout>

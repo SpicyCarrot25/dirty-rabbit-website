@@ -1,0 +1,53 @@
+---
+import LocalGuide from "../../layouts/LocalGuide.astro";
+// Editorial revision: dateModified: "2026-10-12"
+const guide = {
+  "title": "Dónde desayunar en Sant Feliu de Guíxols",
+  "description": "Organiza el desayuno en Sant Feliu de Guíxols según tu recorrido: una opción local, planes para después y una parada aparte en Dirty Rabbit, S’Agaró.",
+  "intro": "Organiza el desayuno en Sant Feliu de Guíxols según tu recorrido: una opción local, planes para después y una parada aparte en Dirty Rabbit, S’Agaró.",
+  "sections": [
+    {
+      "heading": "Desayunar en el núcleo urbano",
+      "paragraphs": [
+        "ANNNA combina café con panadería en una casa del siglo XIX. Su web describe pan de masa madre sin gluten; consulta directamente las opciones y condiciones para tu visita.",
+        "Si quieres caminar por el centro después de desayunar, una parada dentro de Sant Feliu evita volver a coger el coche inmediatamente. La web del local es la referencia para horarios y disponibilidad del día."
+      ],
+      "source": {
+        "title": "ANNNA · web revisada el 12/10/2026",
+        "url": "https://www.annna.cc/"
+      }
+    },
+    {
+      "heading": "Tres maneras de continuar la mañana",
+      "paragraphs": [
+        "El monasterio conserva la Porta Ferrada románica. Puedes dedicarle el tramo cultural de la visita antes de seguir hacia el puerto. La vía verde aprovecha el antiguo trazado ferroviario y ofrece un plan diferente si llevas bicicleta.",
+        "Para una mañana junto al mar, la playa de Sant Pol está al norte del núcleo principal. Escoge entre centro, vía verde y playa según tu medio de transporte; intentar cubrir las tres cosas antes de comer suele quitar tiempo a cada parada."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://www.visitguixols.com/es/18-propostes/273-sfg-familiar-es.html"
+      }
+    },
+    {
+      "heading": "Si prefieres desayunar en S’Agaró",
+      "paragraphs": [
+        "Nuestro café queda en S’Agaró, no en el centro de Sant Feliu. Comprueba el trayecto desde tu alojamiento y el horario del día antes de salir. Si después vas al monasterio, organiza el estacionamiento allí como una segunda llegada.",
+        "Para grupos o para desayunar tarde, llama antes y confirma el servicio de cocina. Tener la puerta del café abierta y poder pedir un plato son cosas distintas; no bases una visita ajustada en un horario antiguo."
+      ]
+    }
+  ],
+  "related": [
+    {
+      "title": "Qué hacer después del desayuno",
+      "url": "/guia/que-hacer-en-sant-feliu-de-guixols"
+    },
+    {
+      "title": "Nuestra carta",
+      "url": "/carta"
+    }
+  ],
+  "lang": "es",
+  "dateModified": "2026-10-12"
+} as const;
+---
+<LocalGuide {...guide} />

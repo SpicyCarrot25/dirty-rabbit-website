@@ -1,0 +1,53 @@
+---
+import LocalGuide from "../../layouts/LocalGuide.astro";
+// Editorial revision: dateModified: "2026-10-12"
+const guide = {
+  "title": "Qué hacer en Santa Cristina d’Aro: Romanyà y magia",
+  "description": "Planea una visita a Santa Cristina d’Aro con el dolmen de la Cova d’en Daina, Romanyà y la Casa Màgica. El desayuno en S’Agaró es otra parada.",
+  "intro": "Planea una visita a Santa Cristina d’Aro con el dolmen de la Cova d’en Daina, Romanyà y la Casa Màgica. El desayuno en S’Agaró es otra parada.",
+  "sections": [
+    {
+      "heading": "Romanyà y la Cova d’en Daina",
+      "paragraphs": [
+        "La Cova d’en Daina está en Romanyà de la Selva, dentro de Santa Cristina d’Aro. Es un sepulcro megalítico del Neolítico final, construido con grandes losas de granito y una galería cubierta.",
+        "Trátalo como una visita al patrimonio: observa la estructura desde los accesos previstos y no subas a las losas. La referencia de Patrimoni permite localizar el monumento y situarlo en el conjunto megalítico de las Gavarres."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://patrimoni.gencat.cat/ca/coleccio/cova-den-daina"
+      }
+    },
+    {
+      "heading": "La Casa Màgica: consulta la visita antes de ir",
+      "paragraphs": [
+        "La oficina de turismo presenta el Gran Museu de la Màgia, conocido como La Casa Màgica, con visitas vinculadas al ilusionista Xevi. Es una opción distinta al paseo exterior y puede dar sentido a un día con niños o con mal tiempo.",
+        "Comprueba la disponibilidad de la actividad antes de organizar el desplazamiento. No la trates como un espacio al que entrar sin horario: una visita guiada necesita encajar con tu día."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://visitsantacristina.cat/visites-guiades/la-casa-magica/"
+      }
+    },
+    {
+      "heading": "Escoge un recorrido que puedas disfrutar",
+      "paragraphs": [
+        "Romanyà y el centro de Santa Cristina no son una misma parada a pie. Si tienes sólo una mañana, elige entre dedicar tiempo al entorno del dolmen o reservar una actividad en el núcleo urbano.",
+        "Para una jornada más larga, combina patrimonio exterior y museo dejando margen de carretera entre ambos. Consulta la previsión antes de subir a las Gavarres. Si el desayuno es en Dirty Rabbit, sitúa primero S’Agaró en tu mapa: nuestra cafetería no está en Santa Cristina."
+      ]
+    }
+  ],
+  "related": [
+    {
+      "title": "Dónde desayunar en la zona",
+      "url": "/guia/desayunar-en-santa-cristina-daro"
+    },
+    {
+      "title": "Desayuno y brunch en S’Agaró",
+      "url": "/brunch"
+    }
+  ],
+  "lang": "es",
+  "dateModified": "2026-10-12"
+} as const;
+---
+<LocalGuide {...guide} />

@@ -17,7 +17,7 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title={`Qué ver y dónde tomar café en ${locationName}`}
+  title={`Dónde tomar café en ${locationName}`}
   description={`Visita ${locationName} y sus cafeterías. Después, si te apetece acercarte a S’Agaró, descubre Dirty Rabbit, en una localidad distinta.`}
   lang={lang}
   articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
@@ -30,36 +30,22 @@ const breadcrumbs = [
       <header class="mb-12">
         <p class="font-mono text-sm text-red tracking-wider mb-4">GUÍA LOCAL · CAFÉ DE ESPECIALIDAD</p>
         <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
-          Qué ver y dónde tomar café en {locationName}
+          Dónde tomar café en {locationName}
         </h1>
         <p class="font-mono text-lg text-black/70 leading-relaxed">
           Begur es probablemente el pueblo más bonito de la Costa Brava. Casas indianas con aire cubano, callejuelas empedradas, un castillo medieval con vistas de 360°, y las calas más fotogénicas de todo el Mediterráneo (Aiguablava, Sa Tuna, Sa Riera). También tiene su escena de specialty coffee — aunque funciona en modo estacional.
         </p>
       </header>
-<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy está cerrado por temporada; la fecha de reapertura no está confirmada. No es un cierre permanente. Consulta su web antes de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
+
 
       <!-- Main Content -->
       <div class="prose prose-lg max-w-none">
         
         <!-- Fitzroy (cerrado por temporada) Section -->
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Fitzroy Café (cerrado por temporada) — Brunch de culto estilo Melbourne</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer de Francesc Forgas, 1, Begur · En el centro histórico</p>
-          
-          <p class="mb-4">
-            Fitzroy (cerrado por temporada) es inspiración directa de Melbourne — nombrado por el barrio hipster australiano. Café de especialidad, brunch legendario (kimcheese toasties, smashed avo, banana pancakes), y wine bar por las noches en verano.
-          </p>
-          <p class="mb-4">
-            <strong>Importante:</strong> Fitzroy (cerrado por temporada) es estacional. En invierno puede estar cerrado o con horarios reducidos. Verifica antes de ir. Cuando está abierto (primavera-otoño), es de lo mejor de la Costa Brava.
-          </p>
-          <p class="font-mono text-sm"><strong>Lo mejor:</strong> El brunch completo + flat white. Terraza en la placita del pueblo.</p>
-        </section>
-
-        <!-- Dirty Rabbit Section -->
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <p class="mb-4"><strong>Estamos en S’Agaró, a unos 20 minutos en coche de Begur. No tenemos local en Begur.</strong></p>
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — una parada en S’Agaró</h2>
+            <span class="text-3xl">🐇</span> Dirty Rabbit (nuestro café) — una parada en S’Agaró</h2>
           <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-b6491d4bed6a")} />
           
           <p class="mb-4">
@@ -72,12 +58,7 @@ const breadcrumbs = [
           
           <p class="mb-4" set:html={getFactCopy("copy-dbb7c9c7b6fd")} />
 
-          <h3 class="font-typewriter text-xl mt-8 mb-4">Nuestros tres pilares</h3>
-          <ul class="space-y-2 mb-6">
-            <li><strong>Wild Comfort</strong> — Un sitio salvaje y acogedor a la vez.</li>
-            <li><strong>Intention</strong> — Todo lo que hacemos tiene un porqué.</li>
-            <li><strong>Belonging</strong> — Un lugar donde encajas, vengas de donde vengas.</li>
-          </ul>
+          <p><a href="/brand-facts" class="text-red underline">Datos de nuestro café</a></p>
           
           <p class="mb-4">
             Hablamos <strong>español, catalán, inglés y polaco</strong>. Tenemos cartas en ruso, francés y ucraniano.
@@ -91,7 +72,11 @@ const breadcrumbs = [
           >
             📍 Ver en Google Maps →
           </a>
-        </section>
+        </section><aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy está cerrado por temporada; la fecha de reapertura no está confirmada. No es un cierre permanente. Consulta su web antes de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
+<section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">Fitzroy Café</h2><p>Begur. <a href="https://fitzroycafe.com/" class="text-red underline">Web del local</a>. Cerrado por temporada; reapertura sin fecha confirmada.</p></section>
+
+        <!-- Dirty Rabbit Section -->
+
 
         <!-- Distance Table -->
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distancias desde {locationName}</h2>
@@ -105,36 +90,31 @@ const breadcrumbs = [
                 <th class="text-left py-3">Tipo</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="border-b border-black/20">
-                <td class="py-3">Fitzroy Café (cerrado por temporada)</td>
-                <td class="py-3">En Begur</td>
-                <td class="py-3">Melbourne-style (estacional)</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3 font-bold">Dirty Rabbit (S’Agaró)</td>
+            <tbody><tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit (nuestro café) (S’Agaró)</td>
                 <td class="py-3">20 min</td>
                 <td class="py-3">La Cabra (Dinamarca)</td>
-              </tr>
-              <tr class="border-b border-black/20">
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">Fitzroy Café (cerrado por temporada)</td>
+                <td class="py-3">En Begur</td>
+                <td class="py-3">Consulta disponibilidad con el local</td>
+              </tr><tr class="border-b border-black/20">
                 <td class="py-3">Grava</td>
                 <td class="py-3">15 min (Pals)</td>
-                <td class="py-3">Right Side + pizzería</td>
-              </tr>
-              <tr class="border-b border-black/20">
+                <td class="py-3">Consulta disponibilidad con el local</td>
+              </tr><tr class="border-b border-black/20">
                 <td class="py-3">La Maglia</td>
                 <td class="py-3">25 min</td>
-                <td class="py-3">Tostadero propio</td>
-              </tr>
-            </tbody>
+                <td class="py-3">Consulta disponibilidad con el local</td>
+              </tr></tbody>
           </table>
         </div>
 
         <!-- More Options -->
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Más specialty cerca de Begur</h2>
         <ul class="space-y-2 mb-8">
-          <li><strong>Grava</strong> en Pals (15 min) — Café Right Side + pizzería + vinos naturales. Terraza chill-out, muy cycling-friendly.</li>
-          <li><strong>Rustik Empordà</strong> en Bellcaire (25 min) — Panadería y café en un pueblo del interior. Perfecto para ciclistas.</li>
+          <li><strong>Grava</strong> — Consulta disponibilidad con el local.</li>
+          <li><strong>Rustik Empordà</strong> — Consulta disponibilidad con el local.</li>
         </ul>
 
         <!-- CTA -->
@@ -164,6 +144,7 @@ const breadcrumbs = [
 
       </div>
     </div>
-  </article>
+
+</article>
 
 </Layout>

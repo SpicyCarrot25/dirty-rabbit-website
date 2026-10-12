@@ -35,39 +35,13 @@ const breadcrumbs = [
           {locationName} est synonyme d'été sur la Costa Brava : des kilomètres de plage, une promenade animée et une vie nocturne qui ne s'arrête jamais. Mais si vous cherchez un vrai bon café — celui qui sent la torréfaction fraîche, avec une mousse de lait bien texturée et un barista qui connaît son métier — c'est une autre histoire. Voici notre guide honnête.
         </p>
       </header>
-<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy est fermé pour la saison ; la date de réouverture reste à confirmer. Il ne s’agit pas d’une fermeture définitive. Consultez son site avant de prévoir une visite. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
+
 
       <div class="prose prose-lg max-w-none">
         
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ La Maglia — Torréfacteur local à Platja d'Aro</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">C/ Juli Garreta, 10, Platja d'Aro · Au centre</p>
-          
-          <p class="mb-4">
-            Si vous êtes au centre de Platja d'Aro, La Maglia est un choix solide. Ils torréfient leur propre café — 100% Arabica, score SCA supérieur à 85. L'esthétique est très cycliste (le nom vient du maillot rose du Giro d'Italia), donc vous verrez pas mal de groupes de gravel le samedi matin.
-          </p>
-          <p class="mb-4">
-            Ils servent aussi des bowls açaí, des pâtisseries et des jus. Grande terrasse, idéale pour un café rapide.
-          </p>
-          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Leur torréfaction maison — si vous cherchez quelque chose de local, c'est une bonne option.</p>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ ANNNA — Café, boulangerie sans gluten et concept store</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer de l'Hospital 21, Sant Feliu de Guíxols · 7 min en voiture</p>
-          
-          <p class="mb-4">
-            Ana et Pascal ont créé quelque chose de spécial dans la Casa Trachsler, une maison bourgeoise du XIXe siècle dans la vieille ville de Sant Feliu. ANNNA combine café de spécialité, boulangerie artisanale sans gluten et concept store. Leur pain au levain sans gluten est parmi les meilleurs que nous ayons goûtés, et la sélection de produits locaux (huiles, vins, céramiques) vaut la visite à elle seule.
-          </p>
-          <p class="mb-4">
-            Ouvert du jeudi au lundi, 9h00–14h30. Fermé mardi et mercredi.
-          </p>
-          <p class="font-mono text-sm"><strong>Le meilleur :</strong> Les tartines avec leur pain artisanal + un flat white. L'espace lui-même est magnifique.</p>
-        </section>
-
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — une autre étape à S’Agaró</h2>
+            <span class="text-3xl">🐇</span> Dirty Rabbit (notre café) — une autre étape à S’Agaró</h2>
           <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-f4bda50989b0")} />
           
           <p class="mb-4">
@@ -89,12 +63,7 @@ const breadcrumbs = [
             <li><strong>25 minutes à pied</strong> par le Camí de Ronda si vous avez envie d'un parcours spectaculaire.</li>
           </ul>
 
-          <h3 class="font-typewriter text-xl mt-8 mb-4">Nos trois piliers</h3>
-          <ul class="space-y-2 mb-6">
-            <li><strong>Wild Comfort</strong> — Un endroit à la fois sauvage et accueillant. Décontracté mais intentionnel.</li>
-            <li><strong>Intention</strong> — Tout ce que nous faisons a un pourquoi. Chaque détail réfléchi.</li>
-            <li><strong>Belonging</strong> — Un endroit où vous vous sentez à votre place. D'où que vous veniez, c'est chez vous.</li>
-          </ul>
+          <p><a href="/fr/brand-facts" class="text-red underline">Les informations sur notre café</a></p>
           
           <p class="mb-4">
             Nous parlons <strong>espagnol, catalan, anglais et polonais</strong> — menus également disponibles en russe, français et ukrainien.
@@ -108,7 +77,12 @@ const breadcrumbs = [
           >
             📍 Voir sur Google Maps →
           </a>
-        </section>
+        </section><aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy est fermé pour la saison ; la date de réouverture reste à confirmer. Il ne s’agit pas d’une fermeture définitive. Consultez son site avant de prévoir une visite. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
+<section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">La Maglia</h2><p>Platja d’Aro. <a href="https://www.lamaglia.cafe/" class="text-red underline">Site du café</a>. Sources consultées le 12/10/2026 ; vérifiez les horaires avant votre visite.</p></section>
+
+        <section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">ANNNA</h2><p>Sant Feliu de Guíxols. <a href="https://www.annna.cc/" class="text-red underline">Site du café</a>. Sources consultées le 12/10/2026 ; vérifiez les horaires avant votre visite.</p></section>
+
+
 
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Carte et distances depuis {locationName}</h2>
         
@@ -122,33 +96,29 @@ const breadcrumbs = [
                 <th class="text-left py-3">Type</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="border-b border-black/20">
-                <td class="py-3">La Maglia</td>
-                <td class="py-3">0 km</td>
-                <td class="py-3">À Platja d'Aro</td>
-                <td class="py-3">Torréfaction propre</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3 font-bold">Dirty Rabbit</td>
+            <tbody><tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit (notre café)</td>
                 <td class="py-3">3,5 km</td>
                 <td class="py-3">5 min</td>
                 <td class="py-3">La Cabra (Danemark)</td>
-              </tr>
-              <tr class="border-b border-black/20">
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">La Maglia</td>
+                <td class="py-3">0 km</td>
+                <td class="py-3">À Platja d'Aro</td>
+                <td class="py-3">Vérifiez la disponibilité auprès du café</td>
+              </tr><tr class="border-b border-black/20">
                 <td class="py-3">ANNNA</td>
                 <td class="py-3">5 km</td>
                 <td class="py-3">7 min</td>
-                <td class="py-3">Specialty + boulangerie SG</td>
-              </tr>
-            </tbody>
+                <td class="py-3">Vérifiez la disponibilité auprès du café</td>
+              </tr></tbody>
           </table>
         </div>
 
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Plus d'options specialty sur la Costa Brava ?</h2>
         <ul class="space-y-2 mb-8">
-          <li><strong>Fitzroy Café (fermé pour la saison)</strong> à Begur (30 min) — Brunch culte, banana bread légendaire, bar à vin le soir. Saisonnier.</li>
-          <li><strong>Grava</strong> à Pals (25 min) — Café Right Side de Barcelone + pizzeria + vins naturels. Très gravel-cycling.</li>
+          <li><strong>Fitzroy Café (fermé pour la saison)</strong> — Vérifiez la disponibilité auprès du café.</li>
+          <li><strong>Grava</strong> — Vérifiez la disponibilité auprès du café.</li>
         </ul>
         <p>La Costa Brava offre de plus en plus d'options pour les amoureux du café de spécialité. Et ça nous plaît.</p>
 
@@ -167,6 +137,7 @@ const breadcrumbs = [
 
       </div>
     </div>
-  </article>
+
+</article>
 
 </Layout>

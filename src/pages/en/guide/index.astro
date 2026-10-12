@@ -1,0 +1,17 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+// Editorial revision: dateModified: "2026-10-12"
+const sources = import.meta.glob('./*.astro', { query: '?raw', import: 'default', eager: true }) as Record<string, string>;
+const guides = Object.entries(sources).filter(([file]) => !file.endsWith('/index.astro')).map(([file, source]) => {
+  const slug = file.replace('./', '').replace('.astro', '');
+  const title = source.match(/"title": "([^"]+)"/)?.[1] || slug.split('-').join(' ');
+  return { href: '/en/guide/' + slug, title };
+}).sort((a, b) => a.title.localeCompare(b.title));
+---
+<Layout title="Costa Brava coffee, breakfast and travel guides" description="Plan coffee stops, breakfast and days out around S’Agaró and the Costa Brava." lang="en">
+  <main class="bg-cream py-16 md:py-24"><div class="max-w-5xl mx-auto px-6">
+    <h1 class="font-typewriter text-4xl md:text-5xl mb-6">Costa Brava guides</h1>
+    <p class="font-mono mb-10">Coffee, breakfast and places to explore. Our café is in S’Agaró; each guide explains where the other stops are.</p>
+    <ul class="grid md:grid-cols-2 gap-4">{guides.map(guide => <li><a class="block bg-white rounded-xl p-6 font-typewriter text-2xl text-red hover:underline" href={guide.href}>{guide.title}</a></li>)}</ul>
+  </div></main>
+</Layout>

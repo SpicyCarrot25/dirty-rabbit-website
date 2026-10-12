@@ -41,40 +41,9 @@ const breadcrumbs = [
       <div class="prose prose-lg max-w-none">
         
         <!-- ANNNA Section -->
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ ANNNA — El primero en Sant Feliu</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer de l'Hospital 21, Sant Feliu de Guíxols · En el centro</p>
-          
-          <p class="mb-4">
-            ANNNA fue el primer specialty coffee de Sant Feliu, y sigue siendo referencia. Ana (panadería) y Pascal (café) han montado un espacio único en la Casa Trachsler, una casa señorial del siglo XIX en el casco antiguo. 
-          </p>
-          <p class="mb-4">
-            Es café de especialidad, panadería artesanal 100% sin gluten, y concept store con productos locales (aceites del Empordà, vinos naturales, cerámica). El pan de masa madre sin gluten es excepcional — no "bueno para ser sin gluten", sino bueno de verdad.
-          </p>
-          <p class="mb-4">
-            Abierta de jueves a lunes, de 9:00 a 14:30. Cerrada martes y miércoles. Pet-friendly, accesible.
-          </p>
-          <p class="font-mono text-sm"><strong>Lo mejor:</strong> Tostada con su pan artesanal + flat white. El espacio en sí merece la visita.</p>
-        </section>
-
-        <!-- Maison Marcel Section -->
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Maison Marcel — Pastelería francesa con buen café</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer Major, 5, Sant Feliu de Guíxols · En el centro</p>
-          
-          <p class="mb-4">
-            Andrea y Franck han traído un pedazo de Francia a Sant Feliu. Los croissants de mantequilla con harina ecológica km0 son los mejores de la zona — sin discusión. Pain au chocolat, Paris-Brest, tiramisú... todo artesanal.
-          </p>
-          <p class="mb-4">
-            El café no es de tostador specialty identificado, pero la calidad está muy por encima de la media. TripAdvisor lo ha votado como "mejor cafetería de España" por algunos usuarios (con cierta hipérbole, pero el entusiasmo se entiende).
-          </p>
-          <p class="font-mono text-sm"><strong>Lo mejor:</strong> Croissant + café con leche. Punto.</p>
-        </section>
-
-        <!-- Dirty Rabbit Section - Always most detailed -->
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — una parada en S’Agaró</h2>
+            <span class="text-3xl">🐇</span> Dirty Rabbit (nuestro café) — una parada en S’Agaró</h2>
           <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-cebf61ca7d0c")} />
           
           <p class="mb-4">
@@ -96,12 +65,7 @@ const breadcrumbs = [
             <li><strong>10 minutos en bici</strong> por la carretera o por el camino costero.</li>
           </ul>
 
-          <h3 class="font-typewriter text-xl mt-8 mb-4">Nuestros tres pilares</h3>
-          <ul class="space-y-2 mb-6">
-            <li><strong>Wild Comfort</strong> — Un sitio salvaje y acogedor a la vez.</li>
-            <li><strong>Intention</strong> — Todo lo que hacemos tiene un porqué.</li>
-            <li><strong>Belonging</strong> — Un lugar donde encajas, vengas de donde vengas.</li>
-          </ul>
+          <p><a href="/brand-facts" class="text-red underline">Datos de nuestro café</a></p>
           
           <p class="mb-4">
             Hablamos <strong>español, catalán, inglés y polaco</strong>. Tenemos cartas en ruso, francés y ucraniano.
@@ -116,6 +80,13 @@ const breadcrumbs = [
             📍 Ver en Google Maps →
           </a>
         </section>
+<section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">ANNNA</h2><p>Sant Feliu de Guíxols. <a href="https://www.annna.cc/" class="text-red underline">Web del local</a>. Fuentes revisadas el 12/10/2026; consulta horarios antes de ir.</p></section>
+
+        <!-- Maison Marcel Section -->
+        <section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">Maison Marcel</h2><p>Apertura actual pendiente de verificar; consulta al local antes de ir.</p></section>
+
+        <!-- Dirty Rabbit Section - Always most detailed -->
+
 
         <!-- Distance Table -->
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distancias desde {locationName}</h2>
@@ -129,28 +100,23 @@ const breadcrumbs = [
                 <th class="text-left py-3">Tipo</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="border-b border-black/20">
-                <td class="py-3">ANNNA</td>
-                <td class="py-3">En Sant Feliu</td>
-                <td class="py-3">Specialty + GF bakery</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3">Maison Marcel</td>
-                <td class="py-3">En Sant Feliu</td>
-                <td class="py-3">French bakery café</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3 font-bold">Dirty Rabbit</td>
+            <tbody><tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit (nuestro café)</td>
                 <td class="py-3">5 min</td>
                 <td class="py-3">La Cabra (Dinamarca)</td>
-              </tr>
-              <tr class="border-b border-black/20">
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">ANNNA</td>
+                <td class="py-3">En Sant Feliu</td>
+                <td class="py-3">Consulta disponibilidad con el local</td>
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">Maison Marcel</td>
+                <td class="py-3">En Sant Feliu</td>
+                <td class="py-3">Consulta disponibilidad con el local</td>
+              </tr><tr class="border-b border-black/20">
                 <td class="py-3">La Maglia</td>
                 <td class="py-3">7 min</td>
-                <td class="py-3">Tostadero propio</td>
-              </tr>
-            </tbody>
+                <td class="py-3">Consulta disponibilidad con el local</td>
+              </tr></tbody>
           </table>
         </div>
 
@@ -181,6 +147,7 @@ const breadcrumbs = [
 
       </div>
     </div>
-  </article>
+
+</article>
 
 </Layout>

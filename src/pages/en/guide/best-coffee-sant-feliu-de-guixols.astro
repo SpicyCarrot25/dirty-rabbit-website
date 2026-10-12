@@ -38,38 +38,9 @@ const breadcrumbs = [
 
       <div class="prose prose-lg max-w-none">
         
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ ANNNA — The first specialty café in Sant Feliu</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer de l'Hospital 21, Sant Feliu de Guíxols · In the centre</p>
-          
-          <p class="mb-4">
-            ANNNA was the first specialty coffee in Sant Feliu, and it remains a reference. Ana (bakery) and Pascal (coffee) have created a unique space in Casa Trachsler, a 19th-century townhouse in the old town.
-          </p>
-          <p class="mb-4">
-            It's specialty coffee, 100% gluten-free artisan bakery, and concept store with local products (Empordà oils, natural wines, ceramics). The GF sourdough bread is exceptional — not "good for gluten-free," but genuinely excellent.
-          </p>
-          <p class="mb-4">
-            Open Thursday to Monday, 9:00–14:30. Closed Tuesday and Wednesday. Pet-friendly, accessible.
-          </p>
-          <p class="font-mono text-sm"><strong>Best for:</strong> Toast with their artisan bread + flat white. The space itself is worth the visit.</p>
-        </section>
-
-        <section class="mb-12">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">☕ Maison Marcel — French bakery with good coffee</h2>
-          <p class="font-mono text-sm text-black/60 mb-4">Carrer Major, 5, Sant Feliu de Guíxols · In the centre</p>
-          
-          <p class="mb-4">
-            Andrea and Franck have brought a piece of France to Sant Feliu. The butter croissants with local organic flour are the best in the area — no debate. Pain au chocolat, Paris-Brest, tiramisú... all artisan.
-          </p>
-          <p class="mb-4">
-            The coffee isn't from an identified specialty roaster, but quality is well above average. TripAdvisor users have voted it "best coffee shop in Spain" (slightly hyperbolic, but the enthusiasm makes sense).
-          </p>
-          <p class="font-mono text-sm"><strong>Best for:</strong> Croissant + café con leche. Simple perfection.</p>
-        </section>
-
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — a separate stop in S’Agaró</h2>
+            <span class="text-3xl">🐇</span> Dirty Rabbit (our café) — a separate stop in S’Agaró</h2>
           <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-073326d6d5c1")} />
           
           <p class="mb-4">
@@ -91,12 +62,7 @@ const breadcrumbs = [
             <li><strong>10 minutes by bike</strong> along the road or coastal path.</li>
           </ul>
 
-          <h3 class="font-typewriter text-xl mt-8 mb-4">Our three pillars</h3>
-          <ul class="space-y-2 mb-6">
-            <li><strong>Wild Comfort</strong> — A place that's wild and cosy at once.</li>
-            <li><strong>Intention</strong> — Everything we do has a why.</li>
-            <li><strong>Belonging</strong> — A place where you fit in, wherever you're from.</li>
-          </ul>
+          <p><a href="/en/brand-facts" class="text-red underline">Our café facts</a></p>
           
           <p class="mb-4">
             We speak <strong>Spanish, Catalan, English, and Polish</strong>. Menus in Russian, French, and Ukrainian.
@@ -111,6 +77,11 @@ const breadcrumbs = [
             📍 View on Google Maps →
           </a>
         </section>
+<section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">ANNNA</h2><p>Sant Feliu de Guíxols. <a href="https://www.annna.cc/" class="text-red underline">Venue website</a>. Sources checked on 12 October 2026; check opening hours before visiting.</p></section>
+
+        <section class="mb-8"><h2 class="font-typewriter text-2xl mb-3">Maison Marcel</h2><p>Current opening status unverified; contact the venue before visiting.</p></section>
+
+
 
         <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-16">Distances from {locationName}</h2>
         
@@ -123,28 +94,23 @@ const breadcrumbs = [
                 <th class="text-left py-3">Type</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="border-b border-black/20">
-                <td class="py-3">ANNNA</td>
-                <td class="py-3">In Sant Feliu</td>
-                <td class="py-3">Specialty + GF bakery</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3">Maison Marcel</td>
-                <td class="py-3">In Sant Feliu</td>
-                <td class="py-3">French bakery café</td>
-              </tr>
-              <tr class="border-b border-black/20">
-                <td class="py-3 font-bold">Dirty Rabbit</td>
+            <tbody><tr class="border-b border-black/20">
+                <td class="py-3 font-bold">Dirty Rabbit (our café)</td>
                 <td class="py-3">5 min</td>
                 <td class="py-3">La Cabra (Denmark)</td>
-              </tr>
-              <tr class="border-b border-black/20">
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">ANNNA</td>
+                <td class="py-3">In Sant Feliu</td>
+                <td class="py-3">Check availability with the venue</td>
+              </tr><tr class="border-b border-black/20">
+                <td class="py-3">Maison Marcel</td>
+                <td class="py-3">In Sant Feliu</td>
+                <td class="py-3">Check availability with the venue</td>
+              </tr><tr class="border-b border-black/20">
                 <td class="py-3">La Maglia</td>
                 <td class="py-3">7 min</td>
-                <td class="py-3">Own roastery</td>
-              </tr>
-            </tbody>
+                <td class="py-3">Check availability with the venue</td>
+              </tr></tbody>
           </table>
         </div>
 
@@ -174,6 +140,7 @@ const breadcrumbs = [
 
       </div>
     </div>
-  </article>
+
+</article>
 
 </Layout>

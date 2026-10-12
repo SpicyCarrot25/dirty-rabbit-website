@@ -1,0 +1,53 @@
+---
+import LocalGuide from "../../layouts/LocalGuide.astro";
+// Editorial revision: dateModified: "2026-10-12"
+const guide = {
+  "title": "Calonge y Sant Antoni: casco antiguo y costa",
+  "description": "Qué hacer en Calonge y Sant Antoni: combina calles medievales, castillo y paseo junto al mar, con una parada aparte en S’Agaró.",
+  "intro": "Qué hacer en Calonge y Sant Antoni: combina calles medievales, castillo y paseo junto al mar, con una parada aparte en S’Agaró.",
+  "sections": [
+    {
+      "heading": "Calonge: un recorrido por el casco antiguo",
+      "paragraphs": [
+        "El castillo se integra en el núcleo histórico junto a la plaza Major. El paseo puede continuar por la calle porticada del Càcul y la plaza de la Doma: tres puntos concretos para orientar una visita sin convertirla en una lista interminable.",
+        "Haz primero el tramo a pie por el centro. Si quieres entrar a un equipamiento, consulta su programación; que un monumento esté en la ruta no significa que su interior tenga acceso libre a cualquier hora."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://costabrava.org/es/a-donde-ir/comarcas/baix-emporda/calonge-y-sant-antoni/"
+      }
+    },
+    {
+      "heading": "Sant Antoni: reserva otra parte del día para el mar",
+      "paragraphs": [
+        "El núcleo de Sant Antoni está en la costa; no confundas el paseo marítimo con el centro histórico de Calonge. El municipio publica un recorrido del Camí de Ronda para explorar el litoral.",
+        "Decide si buscas un paseo urbano o continuar por las calas. Alarga la caminata sólo con tiempo para regresar, y consulta el estado de los pasos costeros después de temporal. Para disfrutar de ambos núcleos con calma, evita programar visitas consecutivas sin margen para desplazarte."
+      ],
+      "source": {
+        "title": "Fuente turística oficial",
+        "url": "https://www.calonge-santantoni.cat/sites/default/files/flyers/a_rondaes.compressed.pdf"
+      }
+    },
+    {
+      "heading": "Desayuno y desplazamientos",
+      "paragraphs": [
+        "Si tu mañana es de playa, busca el desayuno en Sant Antoni. Si empiezas entre las calles antiguas, organiza primero la llegada a Calonge. Nuestra parada en S’Agaró es una tercera localización, no un café dentro de ninguno de esos dos núcleos.",
+        "Enlazamos abajo una guía de desayuno específica para comparar esas decisiones. Las tarifas de estacionamiento y los servicios de temporada deben comprobarse en el lugar; no asumimos que el aparcamiento sea gratuito."
+      ]
+    }
+  ],
+  "related": [
+    {
+      "title": "Dónde desayunar en la zona",
+      "url": "/guia/desayunar-en-calonge-sant-antoni"
+    },
+    {
+      "title": "Desayuno y brunch en S’Agaró",
+      "url": "/brunch"
+    }
+  ],
+  "lang": "es",
+  "dateModified": "2026-10-12"
+} as const;
+---
+<LocalGuide {...guide} />

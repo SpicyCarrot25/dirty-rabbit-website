@@ -81,7 +81,7 @@ for (const [route, { doc }] of pages) {
 }
 for (const route of ['/guia/mejor-cafe-begur', '/en/guide/best-coffee-begur', '/ca/guia/millor-cafe-begur', '/fr/guides/meilleur-cafe-begur']) {
   const text = pages.get(route)?.doc.querySelector('article')?.textContent || '';
-  if (!text.includes('Fitzroy') || text.indexOf('Fitzroy') > text.indexOf('Dirty Rabbit') || !/20 min/.test(text) || /30 min/.test(text)) errors.push({ kind: 'begur-location-order', route });
+  if (!text.includes('Fitzroy') || text.indexOf('Fitzroy') < text.indexOf('Dirty Rabbit') || !/20 min/.test(text) || /30 min/.test(text)) errors.push({ kind: 'begur-location-order', route });
 }
 const sagaro = pages.get('/guia/que-hacer-en-sagaro')?.doc.title;
 for (const route of ['/contacto', '/en/contact', '/ca/contacte', '/fr/contact', '/pl/contact', '/ru/contact', '/uk/contact']) {
