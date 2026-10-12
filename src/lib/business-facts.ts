@@ -24,7 +24,7 @@ const addressPattern = new RegExp(streetPattern + `(?:(?:, | · )(?:17248 ${town
 const labels: Record<Language, { hours: string; summer: string; winter: string; kitchen: string; menu: string }> = {
   es: { hours: 'Horario', summer: 'Horario de verano', winter: 'Cierres previstos', kitchen: 'Cocina hasta', menu: 'Carta' },
   en: { hours: 'Hours', summer: 'Summer hours', winter: 'Planned closures', kitchen: 'Kitchen until', menu: 'Menu' },
-  ca: { hours: 'Horari', summer: "Horari d’estiu", winter: "Tancament d’hivern", kitchen: 'Cuina fins', menu: 'Carta' },
+  ca: { hours: 'Horari', summer: "Horari d’estiu", winter: "Tancaments previstos", kitchen: 'Cuina fins', menu: 'Carta' },
   fr: { hours: 'Horaires', summer: "Horaires d’été", winter: 'Fermetures prévues', kitchen: "Cuisine jusqu’à", menu: 'Carte' },
   ru: { hours: 'Часы работы', summer: 'Летние часы', winter: 'Зимнее закрытие', kitchen: 'Кухня до', menu: 'Меню' },
   uk: { hours: 'Години роботи', summer: 'Літні години', winter: 'Зимове закриття', kitchen: 'Кухня до', menu: 'Меню' },
