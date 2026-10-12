@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'en';
@@ -109,11 +110,11 @@ const faqSchema = {
           reverse osmosis water filtration.
         </p>
         <ul>
-          <li><strong>Hours:</strong> Tuesday-Sunday, 08:00-15:00</li>
-          <li><strong>Coffee price:</strong> €2.50-4.00</li>
-          <li><strong>Food price:</strong> €4-15</li>
+          <li set:html={getFactCopy("copy-fb750f3ba71b")} />
+          <li set:html={getFactCopy("copy-46800784f157")} />
+          <li set:html={getFactCopy("copy-63cb68a73ef5")} />
           <li><strong>Best for:</strong> The coffee itself.</li>
-          <li><strong>Downside:</strong> Closes at 15:00 and closed Mondays.</li>
+          <li set:html={getFactCopy("copy-70be13570cb0")} />
         </ul>
 
         <h2 class="font-typewriter text-2xl">La Maglia Coffee - Platja d'Aro</h2>

@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -19,25 +20,7 @@ const breadcrumbs = [
   articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Café de spécialité à S'Agaró, Costa Brava. Matcha cérémoniel de REQ Matcha, fondateur japonais. À 35 minutes de Gérone. Ouvert depuis novembre 2024.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avinguda Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "url": "https://dirtyrabbit.es/best-matcha-girona",
-  "telephone": "+34872454264",
-  "priceRange": "€€"
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-b6954356a9ef", "fr"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -64,7 +47,7 @@ const breadcrumbs = [
 <p class="mb-4">Matcha latte classique, chaud ou froid, avec lait végétal disponible. Orange matcha, avec du jus d'orange à la place du lait, sans produits laitiers. Version extra forte.</p>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Où trouver le meilleur matcha près de Gérone</h3>
 <p class="mb-4">À Gérone en ville : il y a des cafés de spécialité qui travaillent bien. Le Barri Vell a plusieurs établissements qui prennent le café au sérieux et par extension le matcha. Ça vaut la peine de demander le fournisseur avant de commander — si personne ne le sait, vous avez votre réponse.</p>
-<p class="mb-4">Sur la Costa Brava : Dirty Rabbit, Avinguda Platja d'Aro 275, S'Agaró. À 35 minutes de Gérone par la C-65. Nous avons ouvert le 1er novembre 2024 avec une carte où chaque ingrédient a un nom et une origine. Grande terrasse, WiFi, bonne lumière le matin.</p>
+<p class="mb-4" set:html={getFactCopy("copy-8226750ecbb0")} />
 <h3 class="font-typewriter text-xl mb-4 mt-8">Pourquoi le matcha latte est partout mais rarement bien fait</h3>
 <p class="mb-4">La croissance du matcha en Espagne a été rapide entre 2022 et 2024, et beaucoup d'établissements ont suivi le mouvement sans changer de fournisseur. La poudre verte d'importation générique arrive à des prix qui facilitent son intégration à la carte. Le matcha cérémoniel japonais d'origine contrôlée est une autre catégorie de produit, et de prix.</p>
 <p class="mb-4">Gérone a été relativement précoce dans l'adoption du café de spécialité. Ça a créé un terreau favorable pour que le matcha de qualité arrive avant d'autres points de la province. Mais même ici, tous les établissements qui le proposent ne travaillent pas avec le même niveau d'exigence. La question habituelle reste valable : savent-ils quelle marque c'est ?</p>
@@ -81,7 +64,7 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Quel type de matcha Dirty Rabbit sert-il ?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Matcha bio de REQ Matcha — un projet de Barcelone dont le fondateur japonais se rend au Japon pour sélectionner le thé directement. Nous servons 2g de matcha cérémoniel standard, avec option extra forte. Le prix est entre 3,50€ et 5€.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-143d52de7c4d")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Y a-t-il une différence entre matcha cérémoniel et matcha de grade alimentaire ?</p>
@@ -100,10 +83,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-f81927ed14a8")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../lib/business-facts';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
@@ -41,95 +42,13 @@ const alternates = getAlternateUrls(Astro.url.pathname, 'https://dirtyrabbit.es'
 // Build @graph array with all schema objects
 const graphItems: Record<string, unknown>[] = [
   // CafeOrCoffeeShop (LocalBusiness)
-  {
-    "@type": "CafeOrCoffeeShop",
-    "@id": "https://dirtyrabbit.es/#business",
-    "name": "Dirty Rabbit",
-    "alternateName": ["Dirty Rabbit S'Agaró", "Dirty Rabbit Sagaro", "Dirty Rabbit Specialty Coffee Sagaro"],
-    "image": "https://dirtyrabbit.es/og-image.jpg",
-    "url": "https://dirtyrabbit.es",
-    "telephone": "+34 872 454 264",
-    "email": "hola@dirtyrabbit.es",
-    "description": "Specialty coffee shop in S'Agar\u00f3, Costa Brava. Single-origin espresso by La Cabra (Copenhagen), ceremonial-grade Japanese matcha, artisan sourdough by Origo Bakery. Family-friendly terrace two minutes from Sant Pol Beach.",
-    "logo": "https://dirtyrabbit.es/logos/LOGO-HORIZONTAL-ROJO-DIRTYRABBIT.png",
-    "foundingDate": "2024-11",
-    "speakable": {
-      "@type": "SpeakableSpecification",
-      "cssSelector": ["h1", ".hero-text", "[data-speakable]"]
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Carrer de la Conca 17",
-      "addressLocality": "S'Agaró",
-      "addressRegion": "Girona",
-      "postalCode": "17248",
-      "addressCountry": "ES"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 41.7967591,
-      "longitude": 3.0485060
-    },
-    "hasMenu": "https://dirtyrabbit.es/carta",
-    "acceptsReservations": false,
-    "paymentAccepted": "Cash, Credit Card",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "08:00",
-        "closes": "15:00"
-      }
-    ],
-    "servesCuisine": ["Specialty Coffee", "Brunch", "Breakfast"],
-    "areaServed": ["S'Agaró", "Sagaro", "Platja d'Aro", "Costa Brava", "Girona"],
-    "keywords": "specialty coffee Sagaro, cafe Sagaro, coffee S'Agaró, matcha Sagaro, chai Sagaro, brunch Sagaro, best coffee Platja d'Aro, specialty coffee Costa Brava",
-    "priceRange": "€€",
-    "sameAs": [
-      "https://instagram.com/dirtyrabbitcoffee",
-      "https://www.wikidata.org/wiki/Q138581870",
-      "https://g.page/dirtyrabbitcoffee",
-      "https://www.tripadvisor.com/Restaurant_Review-g1078081-d28571876-Reviews-Dirty_Rabbit-S_Agaro_Province_of_Girona_Catalonia.html",
-      "https://www.facebook.com/dirtyrabbitcoffee",
-      "https://untappd.com/v/dirty-rabbit/10322710"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.5",
-      "bestRating": "5",
-      "worstRating": "1",
-      "ratingCount": "143",
-      "reviewCount": "143"
-    },
-    "amenityFeature": [
-      { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Outdoor seating", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Dog-friendly", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Family-friendly", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "High chairs", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Changing table", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Contactless payment", "value": true }
-    ],
-    "knowsAbout": [
-      "specialty coffee", "La Cabra Copenhagen", "ceremonial matcha", "masala chai",
-      "vegan options", "vegetarian options", "plant-based milk", "decaf coffee",
-      "brunch S'Agaró", "Costa Brava coffee"
-    ]
-  },
-  // WebSite with SearchAction
+  getBusinessSchema("schema-984009e294f3"),
+  // WebSite (there is no on-site search endpoint)
   {
     "@type": "WebSite",
     "@id": "https://dirtyrabbit.es/#website",
     "name": "Dirty Rabbit",
-    "url": "https://dirtyrabbit.es",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://dirtyrabbit.es/?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
-    }
+    "url": "https://dirtyrabbit.es"
   }
 ];
 
@@ -216,7 +135,7 @@ const unifiedSchema = {
     <meta property="og:type" content={articleMeta ? "article" : "website"} />
     <meta property="og:url" content={`https://dirtyrabbit.es${Astro.url.pathname}`} />
     <meta property="og:image" content="https://dirtyrabbit.es/og-image.jpg" />
-    <meta property="og:locale" content={currentLang === 'es' ? 'es_ES' : currentLang === 'ca' ? 'ca_ES' : 'en_US'} />
+    <meta property="og:locale" content={({ es: 'es_ES', en: 'en_GB', ca: 'ca_ES', fr: 'fr_FR', ru: 'ru_RU', uk: 'uk_UA', pl: 'pl_PL' })[currentLang]} />
     {articleMeta && (
       <>
         <meta property="article:published_time" content={articleMeta.datePublished} />

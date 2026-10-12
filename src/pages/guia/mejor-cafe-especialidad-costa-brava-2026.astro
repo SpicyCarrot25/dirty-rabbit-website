@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 
 const lang = 'es';
@@ -111,11 +112,11 @@ const faqSchema = {
           y filtración por ósmosis inversa.
         </p>
         <ul>
-          <li><strong>Horario:</strong> Martes a domingo, 08:00-15:00</li>
-          <li><strong>Precio café:</strong> €2,50-4,00</li>
-          <li><strong>Comida:</strong> €4-15</li>
+          <li set:html={getFactCopy("copy-511481895b5c")} />
+          <li set:html={getFactCopy("copy-ee905d0ebb46")} />
+          <li set:html={getFactCopy("copy-6d32331c2776")} />
           <li><strong>Lo mejor:</strong> El café en sí.</li>
-          <li><strong>Lo menos bueno:</strong> Cierra a las 15:00 y los lunes no abre.</li>
+          <li set:html={getFactCopy("copy-5fdc1f168280")} />
         </ul>
 
         <h2 class="font-typewriter text-2xl">La Maglia Coffee - Platja d'Aro</h2>
@@ -177,7 +178,7 @@ const faqSchema = {
       <div class="mt-12 mb-8 p-6 bg-cream rounded-xl">
         <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
         <ul class="font-mono text-sm space-y-3">
-          <li>🍵 <a href="/matcha" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
+          <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
           <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
           <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
           <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía 2026</a></li>

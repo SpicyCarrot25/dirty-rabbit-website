@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -16,28 +17,10 @@ const breadcrumbs = [
   title="Chai latte à Sant Feliu de Guíxols : options et contexte — Dirty Rabbit 2026"
   description="Sant Feliu de Guíxols a une offre de cafés raisonnable pour une ville côtière de cette taille. Le chai latte apparaît dans quelques cartes. La question est"
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Café de spécialité à S'Agaró avec masala chai bio d'Awachai (Isère, France). À 5 minutes de Sant Feliu de Guíxols. Ouvert depuis novembre 2024.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avinguda Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "url": "https://dirtyrabbit.es/chai-latte-sant-feliu",
-  "telephone": "+34872454264",
-  "priceRange": "€€"
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-5d7f02e016fa", "fr"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -50,6 +33,13 @@ const breadcrumbs = [
         </h1>
       </header>
 
+        <section class="mb-8" aria-label="Sant Feliu de Guíxols">
+          <p class="mb-4">Ville côtière avec port de pêche, monastère bénédictin et tradition du liège.</p>
+          <p class="mb-4"><a class="text-red hover:underline" href="/fr/guides/meilleur-cafe-sant-feliu-de-guixols">Cafés à Sant Feliu de Guíxols</a></p>
+          <p class="mb-4">Ensuite, Dirty Rabbit est une autre étape à S’Agaró. Consultez l’itinéraire avant de vous déplacer.</p>
+        </section>
+
+
       <div class="prose prose-lg max-w-none font-mono leading-relaxed">
 
 <p class="mb-4">Sant Feliu de Guíxols a une offre de cafés raisonnable pour une ville côtière de cette taille. Le chai latte apparaît dans quelques cartes. La question est ce qu'il y a derrière ce chai — du sirop ou de vraies épices.</p>
@@ -61,8 +51,8 @@ const breadcrumbs = [
   <li>Les trois versions répondent à des moments différents. Classique chaud pour le matin. Chai glacé quand il fait chaud ou simplement quand on le préfère froid. Dirty chai — avec un espresso de La Cabra — pour les deux à la fois.</li>
 </ol>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Où trouver un bon chai latte près de Sant Feliu de Guíxols</h3>
-<p class="mb-4">Dirty Rabbit se trouve Avinguda Platja d'Aro 275, S'Agaró — cinq minutes depuis Sant Feliu par la GI-682.</p>
-<p class="mb-4">Nous avons ouvert le 1er novembre 2024. Iwonka gère le quotidien. Le masala chai d'Awachai est à la carte toute l'année, dans les trois versions : classique, chai glacé et dirty chai. Lait végétal disponible dans toutes les versions. Entre 3,50€ et 5€.</p>
+<p class="mb-4" set:html={getFactCopy("copy-cbb551d482a8")} />
+<p class="mb-4" set:html={getFactCopy("copy-2355aed58a65")} />
 <p class="mb-4">À Sant Feliu il y a des options. Pour quelque chose de rapide ou pour passer du temps sur la promenade, elles font l'affaire. Pour un chai avec de vraies épices, le détour à S'Agaró est de cinq minutes.</p>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Pourquoi le chai latte est partout mais rarement bien fait</h3>
 <p class="mb-4">Dans des villes comme Sant Feliu le chai latte est à la carte dans plusieurs endroits depuis des années. Le problème habituel est le même : sirop de chai dans du lait chaud. Il n'y a rien de mal à le savoir et à le commander quand même — mais si vous cherchez quelque chose avec plus de caractère, la différence est notable.</p>
@@ -76,7 +66,7 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Combien de temps faut-il pour aller de Sant Feliu à Dirty Rabbit ?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Cinq minutes en voiture. L'itinéraire le plus direct est par la GI-682 direction Platja d'Aro. Le café se trouve Avinguda Platja d'Aro 275. Parking facile en face.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-a2d718b8b48f")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Qu'est-ce que le dirty chai exactement ?</p>
@@ -84,7 +74,7 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Peut-on commander le chai froid en octobre ou novembre ?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Oui. Le chai glacé est disponible toute l'année chez Dirty Rabbit. La côte en automne a encore des jours chauds — et même si ce n'est pas le cas, le chai glacé reste une option.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-a28a34716b1f")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Y a-t-il une terrasse chez Dirty Rabbit ?</p>
@@ -92,16 +82,13 @@ const breadcrumbs = [
 </div>
 <hr class="my-8 border-black/20" />
 </div>
-<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">À propos de Dirty Rabbit</h2>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4">Dirty Rabbit — S’Agaró</h2>
 <p class="mb-4">Nous avons ouvert le 1er novembre 2024 à S'Agaró. Le critère est simple : savoir d'où vient chaque chose et pouvoir l'expliquer.</p>
 <p class="mb-4">Chai d'Awachai (Isère, France). Café de La Cabra. Pain d'Origo Bakery. Cinq minutes depuis Sant Feliu de Guíxols.</p>
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-f81927ed14a8")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

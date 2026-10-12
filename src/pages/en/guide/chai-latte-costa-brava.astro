@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -19,117 +20,8 @@ const breadcrumbs = [
   articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-19", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Specialty café in S'Agaró, central Costa Brava. Organic masala chai from Awachai (Isère, France). Chai latte, iced chai and dirty chai available year-round. Between Sant Feliu de Guíxols and Platja d'Aro.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avinguda Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.7882,
-    "longitude": 3.0323
-  },
-  "url": "https://dirtyrabbit.es/chai-latte-costa-brava",
-  "telephone": "+34872454264",
-  "servesCuisine": ["Specialty Coffee", "Chai", "Masala Chai"],
-  "priceRange": "€€",
-  "areaServed": [
-    "S'Agaró",
-    "Platja d'Aro",
-    "Sant Feliu de Guíxols",
-    "Costa Brava"
-  ]
-}
-    </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Where can I get chai latte made with real spices on the Costa Brava?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The option we know with genuine organic masala chai on the central Costa Brava is Dirty Rabbit in S'Agaró — between Sant Feliu de Guíxols and Platja d'Aro. Avinguda Platja d'Aro 275."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What chai versions do you have and how much do they cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Three versions: classic chai latte (hot or iced), iced chai year-round, and dirty chai with a shot of La Cabra espresso. €3.50 to €5. Plant milk available in all versions."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you have iced chai outside summer on the Costa Brava?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most places don't. At Dirty Rabbit, yes — year-round. The Costa Brava has mild autumns and winters, and some people prefer chai cold regardless of season."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does masala chai have caffeine?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. The black tea base in masala chai contains roughly 25–50 mg of caffeine per serving, depending on steep time. That's less than a shot of espresso (60–70 mg). Dirty chai adds an espresso shot — that's the highest-caffeine version of the three."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you have dairy-free options?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Plant milk is available in all chai versions — oat, soy, and coconut. The full menu has options for people who don't drink dairy."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the difference between chai latte and masala chai?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Masala chai is the original Indian drink: black tea steeped with whole spices (cardamom, cinnamon, ginger, clove, black pepper), usually simmered with milk. A chai latte is the Western café version — the same spiced tea base, steamed with milk. At Dirty Rabbit, both terms refer to the same thing: Awachai's organic spice blend, steeped with black tea, finished with steamed milk."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I get oat milk chai?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We have oat milk, soy milk, and coconut milk. Oat milk works particularly well with chai — the fat content carries the spice notes better than thinner plant milks. Just mention your preference when you order."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What's the best chai for someone who doesn't like coffee?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "The classic chai latte or the iced chai. Both are completely coffee-free. Masala chai has its own caffeine from the black tea base, but no espresso. If you want something warming and spiced with zero coffee involvement, start with the hot chai latte."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Where does Awachai source its spices?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Awachai is based in Isère, France. They source certified organic spices — cardamom, cinnamon, ginger, clove, and black pepper — and blend them into a loose spice mix (not a concentrate or syrup). The blend is steeped with black tea as part of preparation."
-      }
-    }
-  ]
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-82f52b8d2db7", "en"))} />
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-3d4bb047abc3", "en"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -162,18 +54,18 @@ const breadcrumbs = [
 <p class="mb-4">We make chai in three ways. Each serves a different purpose.</p>
 
 <h4 class="font-typewriter text-lg mb-3 mt-6">Chai latte</h4>
-<p class="mb-4">The standard version. Awachai's spice blend steeped with black tea, finished with steamed milk. Hot or iced. No added sugar in the blend itself — if you want it sweeter, we can add some. Most people don't. The spice has enough presence on its own. €3.50.</p>
+<p class="mb-4" set:html={getFactCopy("copy-fa10681b0783")} />
 
 <h4 class="font-typewriter text-lg mb-3 mt-6">Dirty chai</h4>
 <p class="mb-4">A shot of La Cabra espresso in Awachai's masala chai. La Cabra is a specialty roaster based in Copenhagen. Their espresso is the only coffee we use at Dirty Rabbit — sourced seasonally, changing when the harvest changes. It's a coffee with its own character, which is why it matters what espresso goes into a dirty chai.</p>
 <p class="mb-4">The combination works because chai and espresso don't cancel each other out. The spice adds complexity that straight espresso doesn't have. The coffee grounds the sweetness in the chai and adds a bitterness that stops it from feeling like a dessert drink. Together, they make something neither ingredient produces alone.</p>
 <p class="mb-4">Caffeine-wise: the masala chai base adds 25 to 50 mg, the espresso shot adds roughly 60 to 70 mg. Total is somewhere between 85 and 120 mg per serving — comparable to two cups of green tea, or slightly above a standard coffee depending on how it's pulled. It's the version for people who want something to actually feel.</p>
-<p class="mb-4">Dirty chai gets the most repeat orders of the three. People who try it once tend to come back for it specifically. €5.</p>
+<p class="mb-4" set:html={getFactCopy("copy-8d726d5e2795")} />
 
 <h4 class="font-typewriter text-lg mb-3 mt-6">Iced chai</h4>
-<p class="mb-4">Most cafés on the Costa Brava stop serving iced drinks when October arrives. We don't. Iced chai is available year-round at Dirty Rabbit.</p>
-<p class="mb-4">S'Agaró has a genuinely mild winter. January temperatures stay above 10°C most days. There are weeks in February when sitting on the terrace with something cold makes sense. The people who know this are mostly locals — the ones who live here year-round and don't need summer to justify ordering iced drinks.</p>
-<p class="mb-4">The cold preparation changes how the spice reads. Cardamom and cinnamon are more muted when cold. Ginger stays present. The overall effect is lighter and cleaner than the hot version. Some people prefer it. If you've only had masala chai hot, try it iced at least once — they're genuinely different drinks. €4.</p>
+<p class="mb-4" set:html={getFactCopy("copy-9e751f67d173")} />
+<p class="mb-4" set:html={getFactCopy("copy-21b19108ff54")} />
+<p class="mb-4" set:html={getFactCopy("copy-75d26f5ab989")} />
 
 <h3 class="font-typewriter text-xl mb-4 mt-8">How to order if you've never had real masala chai</h3>
 <p class="mb-4">If this is your first time with masala chai, here's what to expect.</p>
@@ -188,12 +80,12 @@ const breadcrumbs = [
 <p class="mb-4">There's nothing complicated about ordering. Say you want chai, whether you want it hot or cold, and what milk. We'll handle the rest. If you're unsure between versions, just ask — the staff knows the differences and can help you choose.</p>
 
 <h3 class="font-typewriter text-xl mb-4 mt-8">Where to find good chai latte on the Costa Brava</h3>
-<p class="mb-4">Dirty Rabbit is at Avinguda Platja d'Aro 275, S'Agaró (17248). On the road connecting Sant Feliu de Guíxols with Platja d'Aro, accessible from both directions. We opened on 1 November 2024.</p>
-<p class="mb-4">Awachai's masala chai is sourced from Isère, France — organic, real spice blend, prepared fresh. Three versions: classic chai latte (hot or iced), iced chai year-round, dirty chai with espresso. Plant milk in all versions. €3.50 to €5.</p>
+<p class="mb-4" set:html={getFactCopy("copy-0d20493aa1a8")} />
+<p class="mb-4" set:html={getFactCopy("copy-a967e300a24d")} />
 <p class="mb-4">If you're driving the coast and want something more than syrup in milk, S'Agaró is a stop that makes sense. It's not a detour — it's on the main road between the two biggest towns on the central Costa Brava.</p>
 
 <h3 class="font-typewriter text-xl mb-4 mt-8">Why chai latte is everywhere but good chai is rare</h3>
-<p class="mb-4">The Costa Brava is a seasonal destination — high peaks in summer, quiet in winter. That shapes which places survive and what kind of menu they run. The ones open year-round have to earn the local customer, not just the July tourist.</p>
+<p class="mb-4" set:html={getFactCopy("copy-17a1a1820fae")} />
 <p class="mb-4">Real masala chai requires a specialist supplier, a more careful preparation process, and a customer who's going to notice the difference. On the Costa Brava that customer exists — the same one who orders specialty coffee and asks where the bread is from. Not a large group, but a consistent one.</p>
 <p class="mb-4">The rule we use for choosing suppliers is simple: know exactly what's in each ingredient. That applies to chai the same way it applies to coffee and bread. Awachai sources certified organic spices from Isère, France. La Cabra sources coffee seasonally from producing farms. Origo Bakery makes the bread we serve. These aren't branding decisions — they're the minimum standard for a product worth serving.</p>
 
@@ -203,15 +95,15 @@ const breadcrumbs = [
 <div class="space-y-6">
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Where can I get chai latte made with real spices on the Costa Brava?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">The option we know with genuine organic masala chai on the central Costa Brava is Dirty Rabbit in S'Agaró — between Sant Feliu de Guíxols and Platja d'Aro. Avinguda Platja d'Aro 275.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-4a1e59191f88")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">What chai versions do you have and how much do they cost?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Three versions: classic chai latte (hot or iced), iced chai year-round, and dirty chai with a shot of La Cabra espresso. €3.50 to €5. Plant milk available in all versions.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-6c90c1281e5e")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Do you have iced chai outside summer on the Costa Brava?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Most places don't. At Dirty Rabbit, yes — year-round. The Costa Brava has mild autumns and winters, and some people prefer chai cold regardless of season.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-3ac350b2d028")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Does masala chai have caffeine?</p>
@@ -252,14 +144,11 @@ const breadcrumbs = [
         </div>
 <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">About Dirty Rabbit</h2>
 <p class="mb-4">We opened on 1 November 2024 in S'Agaró, Costa Brava. The rule we use for choosing suppliers is the same for chai, coffee, and bread: know exactly what's in each ingredient.</p>
-<p class="mb-4">Chai from Awachai (Isère, France). Coffee from La Cabra. Bread from Origo Bakery. Large terrace, WiFi, good natural morning light. Open year-round.</p>
+<p class="mb-4" set:html={getFactCopy("copy-e5e61b558b3a")} />
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-641e5275e080")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

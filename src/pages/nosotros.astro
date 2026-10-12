@@ -1,4 +1,5 @@
 ---
+import { getBusinessSchema, serializeSchema } from '../lib/business-facts';
 import Layout from '../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../i18n';
 
@@ -6,14 +7,7 @@ const lang = 'es';
 const t = getTranslations(lang);
 
 // Organization structured data for the business story page
-const foundersSchema = {
-  "@context": "https://schema.org",
-  "@type": "CafeOrCoffeeShop",
-  "@id": "https://dirtyrabbit.es/#business",
-  "name": "Dirty Rabbit",
-  "url": "https://dirtyrabbit.es",
-  "description": "Specialty coffee shop en S'Agaró, Costa Brava. Café de especialidad, brunch mediterráneo y ambiente acogedor."
-};
+const foundersSchema = getBusinessSchema("schema-1dc34971a0ee", lang);
 ---
 
 <Layout 
@@ -22,7 +16,7 @@ const foundersSchema = {
   lang={lang}>
   
   <!-- Founders structured data -->
-  <script type="application/ld+json" set:html={JSON.stringify(foundersSchema)} slot="head" />
+  <script type="application/ld+json" set:html={serializeSchema(foundersSchema)} slot="head" />
   <!-- Hero Section -->
   <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

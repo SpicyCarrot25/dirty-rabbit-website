@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations } from '../../../i18n';
 
@@ -16,8 +17,8 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title={`Meilleur café de spécialité à ${locationName} — Guide local 2026`}
-  description={`Où trouver le meilleur café de spécialité à ${locationName}, village médiéval de la Costa Brava. De Grava à Dirty Rabbit.`}
+  title={`Que voir et où prendre un café à ${locationName}`}
+  description={`Découvrez ${locationName} et ses cafés. Puis, si vous souhaitez aller à S’Agaró, retrouvez Dirty Rabbit dans une autre localité.`}
   lang={lang}
   breadcrumbs={breadcrumbs}>
 
@@ -27,7 +28,7 @@ const breadcrumbs = [
       <header class="mb-12">
         <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · CAFÉ DE SPÉCIALITÉ</p>
         <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
-          Meilleur café de spécialité à {locationName}
+          Que voir et où prendre un café à {locationName}
         </h1>
         <p class="font-mono text-lg text-black/70 leading-relaxed">
           Pals est l'un des villages médiévaux les mieux préservés de Catalogne. Son quartier gothique, sa tour romane et ses rizières environnantes créent une atmosphère unique. Et au pied du village, une scène café de spécialité intéressante émerge.
@@ -54,9 +55,8 @@ const breadcrumbs = [
 
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — Le meilleur café de la région (25 min)
-          </h2>
-          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 25 min en voiture</p>
+            <span class="text-3xl">🐇</span> Dirty Rabbit — une autre étape à S’Agaró</h2>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-ccd09c689d65")} />
           
           <p class="mb-4">
             Si vous voulez le meilleur café de spécialité de toute la Costa Brava, combinez votre visite de Pals avec un détour par S'Agaró.
@@ -139,10 +139,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">On vous attend</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
-            25 minutes de Pals. Le détour en vaut la peine.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-10cfacf39be7")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

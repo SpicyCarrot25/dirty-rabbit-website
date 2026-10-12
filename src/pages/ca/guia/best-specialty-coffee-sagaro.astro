@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -19,85 +20,7 @@ const breadcrumbs = [
   articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "CafeOrCoffeeShop",
-      "name": "Dirty Rabbit",
-      "url": "https://dirtyrabbit.es",
-      "telephone": "+34872454264",
-      "email": "hola@dirtyrabbit.es",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Avinguda Platja d'Aro 275",
-        "addressLocality": "S'Agaró",
-        "postalCode": "17248",
-        "addressCountry": "ES"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 41.797,
-        "longitude": 3.036
-      },
-      "openingDate": "2024-11-01",
-      "amenityFeature": [
-        { "@type": "LocationFeatureSpecification", "name": "WiFi", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Dog Friendly", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Terrace", "value": true }
-      ],
-      "servesCuisine": "Specialty Coffee",
-      "description": "Cafeteria de cafè d'especialitat a S'Agaró. Espresso de La Cabra, REQ Matcha i chai Awachai. Obert el novembre de 2024."
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "On és exactament el Dirty Rabbit a S'Agaró?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A l'Avinguda Platja d'Aro 275, S'Agaró, 17248. A uns cinc minuts a peu de la platja de Sant Pol."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "El Dirty Rabbit és dog friendly?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí. La terrassa gran és dog friendly."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Teniu WiFi?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí, WiFi gratuït disponible."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "El cafè La Cabra es troba en algun altre lloc prop de S'Agaró?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Que sapiguem, no. La Cabra és un torrefactor d'especialitat de Barcelona. El Dirty Rabbit és el seu punt de venda en aquesta part de la Costa Brava."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quan va obrir el Dirty Rabbit?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "L'1 de novembre de 2024."
-          }
-        }
-      ]
-    }
-  ]
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-aecba88c8804", "ca"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -115,10 +38,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-69a3be74fc85")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -19,25 +20,7 @@ const breadcrumbs = [
   articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Café de spécialité à S'Agaró, Costa Brava. Matcha bio de REQ Matcha, café de La Cabra, pain d'Origo Bakery. Ouvert depuis novembre 2024.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avinguda Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "url": "https://dirtyrabbit.es/matcha-latte-costa-brava",
-  "telephone": "+34872454264",
-  "priceRange": "€€"
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-5e29382190fe", "fr"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -63,8 +46,8 @@ const breadcrumbs = [
 <h3 class="font-typewriter text-xl mb-4 mt-8">Les versions disponibles</h3>
 <p class="mb-4">Matcha latte classique, chaud ou froid, avec lait végétal disponible. Orange matcha, avec du jus d'orange à la place du lait, sans produits laitiers. Version extra forte.</p>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Où trouver un bon matcha latte sur la Costa Brava</h3>
-<p class="mb-4">Dirty Rabbit se trouve à S'Agaró, Avinguda Platja d'Aro 275 — un point géographiquement central de la côte sud du Baix Empordà. Depuis Tossa de Mar, environ 20 minutes. Depuis Palamós, environ 15 minutes. Depuis Begur, environ 25 minutes. Depuis Gérone, 35 minutes par la C-65.</p>
-<p class="mb-4">Nous avons ouvert le 1er novembre 2024 — hors saison, volontairement. Ce n'est pas un café saisonnier. Le matcha est disponible toute l'année, chaud ou froid, avec lait de vache ou végétal.</p>
+<p class="mb-4" set:html={getFactCopy("copy-75b6f1aae773")} />
+<p class="mb-4" set:html={getFactCopy("copy-208a017c737e")} />
 <p class="mb-4">Il y a d'autres cafés sur la Costa Brava qui travaillent bien le café. La plupart, cependant, ne se sont pas appliqué le même niveau d'exigence au matcha. Si vous voyagez le long de la côte et que le matcha vous importe, ça vaut la peine de vérifier avant de commander.</p>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Pourquoi le matcha latte est partout mais rarement bien fait</h3>
 <p class="mb-4">Sur la Costa Brava le tourisme international pousse les établissements à avoir à la carte ce que les clients connaissent de chez eux — et le matcha latte est devenu un standard dans le nord de l'Europe, au Royaume-Uni, en Australie. Le problème : ajouter la ligne à la carte ne garantit pas que l'ingrédient est le bon.</p>
@@ -74,11 +57,11 @@ const breadcrumbs = [
 <div class="space-y-6">
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Où peut-on prendre un bon matcha latte sur la Costa Brava ?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Dirty Rabbit à S'Agaró, Avinguda Platja d'Aro 275. C'est le café de spécialité le plus accessible de la côte sud avec du matcha bio d'origine japonaise. À moins de 25 minutes de la plupart des villages du Baix Empordà.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-53d0f5a1989e")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Travaillez-vous avec le matcha toute l'année ou seulement en été ?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Toute l'année. Nous avons ouvert le 1er novembre 2024, hors saison. Nous ne fermons pas en hiver. Les horaires peuvent s'ajuster entre les saisons — vérifiez sur nos réseaux ou appelez le +34 872 454 264.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-e645ddf9793b")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Qu'est-ce que REQ Matcha ?</p>
@@ -97,14 +80,11 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">À propos de Dirty Rabbit</h2>
 <p class="mb-4">Nous avons ouvert le 1er novembre 2024 à S'Agaró. Concept simple : café de spécialité, boissons alternatives bien faites, et un endroit où s'installer.</p>
 <p class="mb-4">Iwonka, qui gère le quotidien, a un critère clair avec les fournisseurs : si elle ne peut pas expliquer d'où vient l'ingrédient, il n'entre pas à la carte. Le matcha est de REQ Matcha. Le café est de La Cabra. Le pain est d'Origo Bakery.</p>
-<p class="mb-4">Bonne lumière naturelle le matin, WiFi, grande terrasse. Ouverts toute l'année.</p>
+<p class="mb-4" set:html={getFactCopy("copy-85b50e857bcd")} />
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-f81927ed14a8")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

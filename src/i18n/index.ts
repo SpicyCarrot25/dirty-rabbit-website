@@ -1,3 +1,4 @@
+import { getBusinessTranslation } from '../lib/business-facts';
 import es from './es.json';
 import en from './en.json';
 import ca from './ca.json';
@@ -11,7 +12,9 @@ export type Language = (typeof languages)[number];
 
 export const defaultLang: Language = 'es';
 
-const translations = { es, en, ca, fr, ru, uk, pl };
+const translations = Object.fromEntries(Object.entries({ es, en, ca, fr, ru, uk, pl }).map(([lang, translation]) =>
+  [lang, { ...translation, footer: { ...translation.footer, ...getBusinessTranslation(lang as Language) } }]
+)) as Record<Language, typeof es & { footer: typeof es.footer & ReturnType<typeof getBusinessTranslation> }>;
 
 export function getTranslations(lang: Language) {
   return translations[lang] || translations[defaultLang];

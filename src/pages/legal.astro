@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../lib/business-facts';
 import Layout from '../layouts/Layout.astro';
 ---
 <Layout title="Aviso Legal — Dirty Rabbit" lang="es">
@@ -15,7 +16,7 @@ import Layout from '../layouts/Layout.astro';
             <li><strong>Web:</strong> www.dirtyrabbit.es</li>
             <li><strong>Empresa:</strong> The Rabbit Project SL</li>
             <li><strong>Nombre comercial:</strong> Dirty Rabbit</li>
-            <li><strong>Dirección:</strong> Avda. Platja d'Aro, 275 - Local 2, 17248 S'Agaró, Girona</li>
+            <li set:html={getFactCopy("copy-07be092dec3f")} />
             <li><strong>NIF:</strong> B01589308</li>
             <li><strong>Email:</strong> hola@dirtyrabbit.es</li>
             <li><strong>Registro Mercantil:</strong> Tomo 3291, Folio 152, Sección 8, Hoja GI 67677</li>

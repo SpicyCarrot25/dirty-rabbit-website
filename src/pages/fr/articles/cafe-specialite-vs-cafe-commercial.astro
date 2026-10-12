@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'fr';
@@ -441,8 +442,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Café de spécialité sur la Costa Brava</h2>
 <p class="mb-4">Si vous êtes sur la Costa Brava et voulez goûter du vrai café de spécialité :</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">À S&#39;Agaró</h3>
-<p class="mb-4"><strong>Dirty Rabbit</strong> — Avenida Platja d&#39;Aro 275
-Café de <strong>La Cabra</strong> (Danemark), régulièrement parmi les meilleurs torréfacteurs du monde. Préparé sur une <strong>La Marzocco KB90</strong> avec de l&#39;eau <strong>osmosée</strong>. À 3 minutes de la plage de Sant Pol.</p>
+<p class="mb-4" set:html={getFactCopy("copy-283d755c79d9")} />
 <h3 class="font-typewriter text-xl mt-8 mb-4">Dans la région</h3>
 <ul class="space-y-2 mb-6 list-disc pl-6">
 <li><strong>La Maglia</strong> (Platja d&#39;Aro) — Leur propre torréfaction, premier specialty de la Costa Brava</li>
@@ -469,7 +469,7 @@ Café de <strong>La Cabra</strong> (Danemark), régulièrement parmi les meilleu
 <p class="mb-4">La différence entre un café commercial à 1,50€ et un café de spécialité à 3€ est de 1,50€. C&#39;est moins qu&#39;une viennoiserie industrielle. Si vous buvez un café par jour, c&#39;est 45€/mois de différence pour une expérience complètement différente.</p>
 <p class="mb-4">Essayez-le une fois. Si vous ne remarquez pas la différence, continuez comme d&#39;habitude. Mais si vous la remarquez — et la plupart des gens la remarquent — il n&#39;y a pas de retour en arrière.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Envie d&#39;essayer le café de spécialité sur la Costa Brava ? Passez au Dirty Rabbit — Avenida Platja d&#39;Aro 275, S&#39;Agaró. Nous servons La Cabra, préparé comme il se doit. Sans sucre. Sans excuses. Votre chez-vous loin de chez vous.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-d561baa6ef40")} />
 <p class="mb-4"><em>Dernière mise à jour : février 2026</em></p>
 
       </div>
@@ -477,9 +477,7 @@ Café de <strong>La Cabra</strong> (Danemark), régulièrement parmi les meilleu
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Vous venez nous voir?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-44a10ac1417d")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

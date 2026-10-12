@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'en';
@@ -98,7 +99,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">The Best Cafés for Working on the Costa Brava</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">S&#39;Agaró — Platja d&#39;Aro — Sant Feliu Area</h3>
 <h4>🐇 Dirty Rabbit — S&#39;Agaró</h4>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-2a263e56ea85")} />
 <div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
 <thead class="border-b-2 border-black">
 <tr>
@@ -527,10 +528,10 @@ const breadcrumbs = [
 <p class="mb-4"><strong>For serious work (several days, long sessions):</strong></p>
 <p class="mb-4"><strong>Girona city</strong> — Oniria, SHOTS Coffee, or a coworking. More options, more infrastructure, explicit laptop-friendly policy.</p>
 <p class="mb-4"><strong>For combining work + beach (low season):</strong></p>
-<p class="mb-4"><strong>Dirty Rabbit</strong> in winter or early mornings — WiFi, plugs, La Cabra coffee, and Sant Pol 3 minutes away. But remember: we&#39;re a café, not a coworking. In summer during peak hours, prioritise enjoying your coffee and leave the laptop at home.</p>
+<p class="mb-4" set:html={getFactCopy("copy-679701a10ff3")} />
 <p class="mb-4"><strong>Zero</strong> in Palamós is also a good option for quiet work.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Working remotely from the Costa Brava? In low season, pop into Dirty Rabbit — Avenida Platja d&#39;Aro 275, S&#39;Agaró. La Cabra coffee and Sant Pol 3 minutes away. In summer, enjoy your coffee without a laptop.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-93f3cfda7a43")} />
 <p class="mb-4"><em>Last updated: March 2026</em></p>
 
       </div>
@@ -551,9 +552,7 @@ const breadcrumbs = [
 <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Coming to visit?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7894039d7078")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

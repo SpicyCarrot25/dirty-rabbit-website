@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../i18n';
 
@@ -16,10 +17,10 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title={`Mejor café de especialidad cerca de ${locationName} — Guía local 2026`}
-  description={`Dónde tomar specialty coffee cerca de ${locationName} y Sant Antoni de Calonge, Costa Brava. Guía honesta de cafeterías de especialidad.`}
+  title={`Qué ver y dónde tomar café en ${locationName}`}
+  description={`Visita ${locationName} y sus cafeterías. Después, si te apetece acercarte a S’Agaró, descubre Dirty Rabbit, en una localidad distinta.`}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -29,7 +30,7 @@ const breadcrumbs = [
       <header class="mb-12">
         <p class="font-mono text-sm text-red tracking-wider mb-4">GUÍA LOCAL · CAFÉ DE ESPECIALIDAD</p>
         <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
-          Mejor café de especialidad cerca de {locationName}
+          Qué ver y dónde tomar café en {locationName}
         </h1>
         <p class="font-mono text-lg text-black/70 leading-relaxed">
           Calonge es dos mundos en uno: el pueblo medieval con su castillo del siglo XI en lo alto, y Sant Antoni de Calonge abajo en la costa — calas entre pinos, agua turquesa, y un ambiente más tranquilo que Platja d'Aro. Aquí va dónde encontrar buen café de especialidad en la zona.
@@ -62,9 +63,8 @@ const breadcrumbs = [
         <!-- Dirty Rabbit Section -->
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — El mejor specialty de la zona
-          </h2>
-          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 10 min en coche desde Calonge</p>
+            <span class="text-3xl">🐇</span> Dirty Rabbit — una parada en S’Agaró</h2>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-cd3aa22be802")} />
           
           <p class="mb-4">
             Si buscas el mejor café de especialidad de la Costa Brava, Dirty Rabbit está a 10 minutos en dirección S'Agaró.
@@ -142,7 +142,7 @@ const breadcrumbs = [
           <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
           <ul class="font-mono text-sm space-y-3">
             <li>☕ <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">El mejor café de especialidad en S'Agaró</a></li>
-            <li>🍵 <a href="/matcha" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
+            <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
             <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
             <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
             <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía 2026</a></li>
@@ -150,10 +150,7 @@ const breadcrumbs = [
         </div>
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">¿Vienes a vernos?</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
-            10 minutos desde Calonge. Esto es tu casa.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-26da38935c7c")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

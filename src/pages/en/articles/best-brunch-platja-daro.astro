@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'en';
@@ -46,7 +47,7 @@ const breadcrumbs = [
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">The Best Brunches in Platja d&#39;Aro and Surroundings</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">🐇 Dirty Rabbit — S&#39;Agaró (5 min from Platja d&#39;Aro)</h3>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-2a263e56ea85")} />
 <p class="mb-4">Technically it&#39;s not in Platja d&#39;Aro, but in S&#39;Agaró (5 minutes by car). But if you&#39;re looking for the best brunch in the area, the short drive is worth it.</p>
 <p class="mb-4"><strong>What makes Dirty Rabbit different:</strong></p>
 <p class="mb-4">The coffee is <strong>La Cabra</strong> — a Danish roaster that&#39;s consistently among the best in the world. We prepare it on a <strong>La Marzocco KB90</strong> with <strong>reverse osmosis</strong> filtered water. It&#39;s not just &quot;good&quot; coffee — it&#39;s single-origin coffee, traceable, processed with precision.</p>
@@ -85,18 +86,8 @@ const breadcrumbs = [
 <p class="mb-4"><strong>Booking required?</strong> Not usually.</p>
 <p class="mb-4"><strong>Best for:</strong> Quality local coffee, active atmosphere. Weekends have quite a bit of cycling activity.</p>
 <hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">Grace Coffee — Platja d&#39;Aro</h3>
-<p class="mb-4"><strong>Carrer Pineda del Mar, 27, Platja d&#39;Aro</strong></p>
-<p class="mb-4">Casual café in central Platja d&#39;Aro. Not certified speciality coffee, but reviews are decent (4.6 on Google, 275 reviews).</p>
-<p class="mb-4"><strong>What they serve:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Varied breakfasts</li>
-<li>Espresso coffee</li>
-<li>Basic brunch options</li>
-</ul>
-<p class="mb-4"><strong>Atmosphere:</strong> Casual, convenient.</p>
-<p class="mb-4"><strong>Average price:</strong> €10–15 per person</p>
-<p class="mb-4"><strong>Best for:</strong> Central location, quick and accessible option.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Grace Coffee — permanently closed</h3>
+<p class="mb-4">Grace Coffee in Platja d’Aro is permanently closed and is no longer included in our current café recommendations. Status checked on 5 October 2026 against Google Maps. For current nearby options, see La Maglia in Platja d’Aro, ANNNA in Sant Feliu de Guíxols and Dirty Rabbit in S’Agaró. Check each café’s current opening hours before travelling.</p>
 <hr class="my-8 border-black/20">
 <h3 class="font-typewriter text-xl mt-8 mb-4">ANNNA — Sant Feliu de Guíxols (7 min from Platja d&#39;Aro)</h3>
 <p class="mb-4"><strong>Carrer de l&#39;Hospital, 21, Sant Feliu de Guíxols</strong></p>
@@ -169,14 +160,6 @@ const breadcrumbs = [
 <td class="py-3 pr-4 border-b border-black/20">Centre</td>
 </tr>
 <tr>
-<td class="py-3 pr-4 border-b border-black/20"><strong>Grace Coffee</strong></td>
-<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐ Standard</td>
-<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐ Basic</td>
-<td class="py-3 pr-4 border-b border-black/20">€</td>
-<td class="py-3 pr-4 border-b border-black/20">Casual</td>
-<td class="py-3 pr-4 border-b border-black/20">Centre</td>
-</tr>
-<tr>
 <td class="py-3 pr-4 border-b border-black/20"><strong>ANNNA</strong></td>
 <td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐ Specialty</td>
 <td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐⭐ Gluten-free</td>
@@ -212,7 +195,7 @@ const breadcrumbs = [
 <h3 class="font-typewriter text-xl mt-8 mb-4">&quot;I want to eat with my feet in the sand&quot;</h3>
 <p class="mb-4">→ <strong>Villamás</strong> — On Sant Pol Beach</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">&quot;I want something quick and central&quot;</h3>
-<p class="mb-4">→ <strong>Grace Coffee</strong> — In central Platja d&#39;Aro</p>
+<p class="mb-4">For a café in central Platja d’Aro, see La Maglia Coffee &amp; Co at Carrer Juli Garreta 10. Check its current opening hours before travelling.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">&quot;I want a complete brunch with quality products&quot;</h3>
 <p class="mb-4">→ <strong>Dirty Rabbit</strong> — Benfumat salmon, La Puntual pastries, La Cabra coffee</p>
 <hr class="my-8 border-black/20">
@@ -234,11 +217,6 @@ const breadcrumbs = [
 <td class="py-3 pr-4 border-b border-black/20"><strong>La Maglia</strong></td>
 <td class="py-3 pr-4 border-b border-black/20">8:00–late</td>
 <td class="py-3 pr-4 border-b border-black/20">Open</td>
-</tr>
-<tr>
-<td class="py-3 pr-4 border-b border-black/20"><strong>Grace Coffee</strong></td>
-<td class="py-3 pr-4 border-b border-black/20">Variable</td>
-<td class="py-3 pr-4 border-b border-black/20">Variable</td>
 </tr>
 <tr>
 <td class="py-3 pr-4 border-b border-black/20"><strong>ANNNA</strong></td>
@@ -309,7 +287,7 @@ const breadcrumbs = [
 <p class="mb-4">If you&#39;re coeliac:</p>
 <p class="mb-4"><strong>ANNNA</strong> — The best (and almost only) serious option in the area.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Coming to Platja d&#39;Aro? The best brunch is 5 minutes away: Dirty Rabbit — Avenida Platja d&#39;Aro 275, S&#39;Agaró. La Cabra coffee, toast with Benfumat smoked salmon, and Sant Pol a stroll away. Your home away from home.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-18ae00957280")} />
 <p class="mb-4"><em>Last updated: February 2026</em></p>
 
       </div>
@@ -330,9 +308,7 @@ const breadcrumbs = [
 <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Coming to visit?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7894039d7078")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

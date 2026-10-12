@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../i18n';
 
@@ -19,7 +20,7 @@ const breadcrumbs = [
   title={`Dónde desayunar cerca de ${landmarkName} — Guía 2026`}
   description={`Dónde desayunar cerca de la Playa de Sant Pol en S'Agaró. Specialty coffee, brunch y opciones para antes o después del baño.`}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24">
@@ -67,7 +68,7 @@ const breadcrumbs = [
           <span class="text-2xl">🐇</span>
           <h2 class="font-typewriter text-2xl md:text-3xl">Dirty Rabbit — A 3 minutos andando</h2>
         </div>
-        <p class="font-mono text-sm text-black/60 mb-4">Avenida Platja d'Aro 275, S'Agaró</p>
+        <p class="font-mono text-sm text-black/60 mb-4" set:html={getFactCopy("copy-a5479a925e94")} />
         
         <div class="prose prose-lg max-w-none font-mono text-black/80">
           <p>
@@ -230,7 +231,7 @@ const breadcrumbs = [
             </a>
           </li>
           <li>
-            <a href="/matcha" class="text-red hover:underline">
+            <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">
               → El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró
             </a>
           </li>

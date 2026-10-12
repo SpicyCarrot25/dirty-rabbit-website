@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'fr';
@@ -60,7 +61,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Les meilleurs endroits pour petit-déjeuner avec enfants par zone</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Zone S&#39;Agaró — Platja d&#39;Aro — Sant Feliu</h3>
 <h4>🐇 Dirty Rabbit — S&#39;Agaró</h4>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-3fe8a49f7437")} />
 <p class="mb-4">Dirty Rabbit est le seul café de spécialité de la zone avec un <strong>espace enfants</strong>. Ce n&#39;est pas une piscine à balles, mais nous avons un espace où les petits peuvent bouger et jouer sans déranger.</p>
 <p class="mb-4"><strong>Ce que nous avons :</strong></p>
 <ul class="space-y-2 mb-6 list-disc pl-6">
@@ -273,7 +274,7 @@ const breadcrumbs = [
 <h3 class="font-typewriter text-xl mt-8 mb-4">Puis-je allaiter dans les cafés ?</h3>
 <p class="mb-4">Oui. C&#39;est légal en Espagne et normalisé. Nous n&#39;avons jamais vu personne avoir de problème.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Combien coûte un petit-déjeuner avec enfants ?</h3>
-<p class="mb-4">Ça dépend. Au Dirty Rabbit : 2 adultes + 1 enfant, environ 30–40€ avec tout. Dans des endroits moins chers : 15–25€. Dans les hôtels de luxe : 50€+.</p>
+<p class="mb-4" set:html={getFactCopy("copy-dd741994de38")} />
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Notre recommandation</h2>
 <p class="mb-4">Si vous devez choisir un seul endroit pour petit-déjeuner avec enfants dans la zone de S&#39;Agaró :</p>
@@ -281,7 +282,7 @@ const breadcrumbs = [
 <p class="mb-4">Si votre enfant est cœliaque : <strong>ANNNA</strong> — mais gardez à l&#39;esprit que le local est très petit. Venez préparé.</p>
 <p class="mb-4">Si vous voulez un brunch plus élaboré et que les enfants sont plus grands : <strong>Fitzroy</strong> à Begur.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Venez au Dirty Rabbit avec toute la famille — Avenida Platja d&#39;Aro 275, S&#39;Agaró. Nous avons une terrasse, des chaises hautes, et le café dont les parents ont besoin après une nuit avec des petits. À 3 minutes de la plage de Sant Pol. Votre chez-vous loin de chez vous — aussi pour les petits.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-ce450aa90bfc")} />
 <p class="mb-4"><em>Dernière mise à jour : février 2026</em></p>
 
       </div>
@@ -289,9 +290,7 @@ const breadcrumbs = [
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Vous venez nous voir?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-44a10ac1417d")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

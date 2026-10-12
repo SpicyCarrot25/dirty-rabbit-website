@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'en';
@@ -46,7 +47,7 @@ const breadcrumbs = [
         <hr class="my-8 border-black/20">
 
         <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">🐇 Dirty Rabbit — Brunch in S'Agaró</h2>
-        <p class="mb-4"><strong>Avenida Platja d'Aro 275, S'Agaró · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></strong></p>
+        <p class="mb-4" set:html={getFactCopy("copy-de0e17efb1c0")} />
 
         <h3 class="font-typewriter text-xl mt-8 mb-4">The coffee</h3>
         <p class="mb-4">Dirty Rabbit serves <strong>La Cabra</strong>, the Danish roaster that's been among the best in the world for years. Prepared on a <strong>La Marzocco KB90</strong> with <strong>reverse osmosis</strong> filtered water. Not marketing — it's the real difference you notice from the first sip.</p>
@@ -63,7 +64,7 @@ const breadcrumbs = [
           <li><strong>Matcha latte or chai</strong> — As the main drink or alongside food. The orange matcha is particularly good in summer.</li>
         </ul>
 
-        <p class="mb-4"><strong>Average price:</strong> €15–22 per person (drink + main dish)</p>
+        <p class="mb-4" set:html={getFactCopy("copy-c79a6420bff5")} />
         <p class="mb-4"><strong>Booking required?</strong> No — first come, first served. In summer, if you arrive between 11:00 and 13:00 on a weekend, there may be a short wait.</p>
 
         <h3 class="font-typewriter text-xl mt-8 mb-4">The atmosphere</h3>
@@ -133,7 +134,7 @@ const breadcrumbs = [
         <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Frequently Asked Questions</h2>
 
         <h3 class="font-typewriter text-xl mt-8 mb-4">Is there brunch in S'Agaró year-round?</h3>
-        <p class="mb-4">Yes. Dirty Rabbit is open year-round, though hours vary by season. In winter hours may be shorter — check before going in December or January.</p>
+        <p class="mb-4" set:html={getFactCopy("copy-5079ff10e0a3")} />
 
         <h3 class="font-typewriter text-xl mt-8 mb-4">Do you need to book for brunch?</h3>
         <p class="mb-4">No. First come, first served. No reserved tables. Arrive early and you'll find a spot; arrive late on a Saturday in July and you may wait a little.</p>
@@ -165,7 +166,7 @@ const breadcrumbs = [
 
         <hr class="my-8 border-black/20">
 
-        <p class="mb-4"><em>Coming to S'Agaró? Dirty Rabbit is at Avenida Platja d'Aro 275. La Cabra coffee, Benfumat smoked salmon toast, and Sant Pol Beach a three-minute walk away. Your home away from home.</em></p>
+        <p class="mb-4" set:html={getFactCopy("copy-3c44b60ee6f1")} />
         <p class="mb-4"><em>Last updated: March 2026</em></p>
 
       </div>
@@ -173,9 +174,7 @@ const breadcrumbs = [
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Coming to visit?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7894039d7078")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

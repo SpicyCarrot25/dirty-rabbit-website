@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'ca';
@@ -96,7 +97,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Els millors cafès per treballar a la Costa Brava</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Zona S&#39;Agaró — Platja d&#39;Aro — Sant Feliu</h3>
 <h4>🐇 Dirty Rabbit — S&#39;Agaró</h4>
-<p class="mb-4"><strong>Avinguda Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-385e8285b0c0")} />
 <div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
 <thead class="border-b-2 border-black">
 <tr>
@@ -525,10 +526,10 @@ const breadcrumbs = [
 <p class="mb-4"><strong>Per treball seriós (diversos dies, jornades llargues):</strong></p>
 <p class="mb-4"><strong>Girona ciutat</strong> — Oniria, SHOTS Coffee, o un coworking. Més opcions, més infraestructura, política explícita de laptop-friendly.</p>
 <p class="mb-4"><strong>Per combinar treball + platja (temporada baixa):</strong></p>
-<p class="mb-4"><strong>Dirty Rabbit</strong> a l&#39;hivern o matins d&#39;hora — WiFi, endolls, cafè de La Cabra, i Sant Pol a 3 minuts. Però recorda: som una cafeteria, no un coworking. A l&#39;estiu durant les hores punta, prioritza gaudir del cafè i deixa el portàtil a casa.</p>
+<p class="mb-4" set:html={getFactCopy("copy-50226666058f")} />
 <p class="mb-4"><strong>Zero</strong> a Palamós també és bona opció per treball tranquil.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Treballes en remot des de la Costa Brava? A temporada baixa, passa per Dirty Rabbit — Avinguda Platja d&#39;Aro 275, S&#39;Agaró. Cafè de La Cabra i Sant Pol a 3 minuts. A l&#39;estiu, gaudeix del cafè sense portàtil.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-2ffefe3bfd49")} />
 <p class="mb-4"><em>Última actualització: febrer 2026</em></p>
 
       </div>
@@ -536,9 +537,7 @@ const breadcrumbs = [
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7e287ad1f6de")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

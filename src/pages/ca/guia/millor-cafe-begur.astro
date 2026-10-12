@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -14,10 +15,10 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title={`Millor cafè d'especialitat a ${locationName} — Guia local 2026`}
-  description={`On trobar specialty coffee a ${locationName}, Costa Brava. Fitzroy Café, Dirty Rabbit i més — guia honesta de cafeteries d'especialitat.`}
+  title={`Què veure i on prendre cafè a ${locationName}`}
+  description={`Visita ${locationName} i les seves cafeteries. Després, si et ve de gust anar a S’Agaró, descobreix Dirty Rabbit, en una altra localitat.`}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -26,7 +27,7 @@ const breadcrumbs = [
       <header class="mb-12">
         <p class="font-mono text-sm text-red tracking-wider mb-4">GUIA LOCAL · CAFÈ D'ESPECIALITAT</p>
         <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
-          Millor cafè d'especialitat a {locationName}
+          Què veure i on prendre cafè a {locationName}
         </h1>
         <p class="font-mono text-lg text-black/70 leading-relaxed">
           Begur és probablement el poble més bonic de la Costa Brava. Cases indianes amb aire cubà, carrers empedrats, un castell medieval amb vistes de 360°, i les cales més fotogèniques de tot el Mediterrani (Aiguablava, Sa Tuna, Sa Riera). També té la seva escena de specialty coffee — encara que funciona en mode estacional.
@@ -48,10 +49,10 @@ const breadcrumbs = [
         </section>
 
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
+          <p class="mb-4"><strong>Som a S’Agaró, a uns 20 minuts en cotxe de Begur. No tenim local a Begur.</strong></p>
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — 20 minuts amb vistes al mar
-          </h2>
-          <p class="font-mono text-sm text-red mb-4">Avinguda Platja d'Aro 275, S'Agaró · 20 min en cotxe des de Begur</p>
+            <span class="text-3xl">🐇</span> Dirty Rabbit — una parada a S’Agaró</h2>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-6c63de2deda3")} />
           
           <p class="mb-4">
             Si véns des de Begur cap a S'Agaró per la costa, el viatge de 20 minuts és espectacular — i la destinació també ho és.
@@ -61,9 +62,7 @@ const breadcrumbs = [
             Servim <strong>La Cabra</strong>, el torrefactor danès que fa anys que és a l'elit mundial del specialty coffee. Cada gra té traçabilitat completa: finca, altitud, varietat, procés. El preparem a la <strong>La Marzocco KB90</strong> amb aigua filtrada per <strong>osmosi inversa</strong>.
           </p>
           
-          <p class="mb-4">
-            A diferència de Fitzroy, Dirty Rabbit obre tot l'any. Així que si véns al gener o febrer buscant bon cafè, aquí estem.
-          </p>
+          <p class="mb-4" set:html={getFactCopy("copy-5b6033fd53a0")} />
 
           <h3 class="font-typewriter text-xl mt-8 mb-4">Els nostres tres pilars</h3>
           <ul class="space-y-2 mb-6">
@@ -100,7 +99,7 @@ const breadcrumbs = [
                 <td class="py-3">Melbourne-style (estacional)</td>
               </tr>
               <tr class="border-b border-black/20">
-                <td class="py-3 font-bold">Dirty Rabbit</td>
+                <td class="py-3 font-bold">Dirty Rabbit (S’Agaró)</td>
                 <td class="py-3">20 min</td>
                 <td class="py-3">La Cabra (Dinamarca)</td>
               </tr>
@@ -115,10 +114,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avinguda Platja d'Aro 275, S'Agaró<br>
-            20 minuts des de Begur. Oberts tot l'any.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-d3f3c3cf9e37")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

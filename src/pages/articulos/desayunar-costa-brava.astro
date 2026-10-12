@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 
 const lang = 'es';
@@ -16,7 +17,7 @@ const breadcrumbs = [
   title={title}
   description={description}
   lang={lang}
-  articleMeta={{ datePublished: "2026-03-24", dateModified: "2026-03-24", section: "Article" }}
+  articleMeta={{ datePublished: "2026-03-24", dateModified: "2026-10-12", section: "Article" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -47,7 +48,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zona 1: S&#39;Agaró — Platja d&#39;Aro — Sant Feliu de Guíxols</h2>
 <p class="mb-4">Esta es la zona con más opciones de calidad en un radio corto. En 10 minutos en coche puedes elegir entre cinco o seis sitios buenos.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">🐇 Dirty Rabbit — S&#39;Agaró</h3>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-d275a35fab67")} />
 <p class="mb-4">Dirty Rabbit es nuestra cafetería (sí, escribimos nosotros esta guía, así que el sesgo es evidente). Pero vamos a contarte por qué creemos que merece la pena, con hechos.</p>
 <p class="mb-4">Servimos café de <strong>La Cabra</strong>, el tostador danés que lleva años entre los mejores del mundo. Lo preparamos en una <strong>La Marzocco KB90</strong> con agua filtrada por <strong>ósmosis inversa</strong>. Si el café es lo tuyo, lo notarás desde el primer sorbo.</p>
 <p class="mb-4">Pero Dirty Rabbit es más que café. El desayuno incluye tostadas con <strong>salmón ahumado de Benfumat</strong> (el mejor ahumado de Cataluña), bollería de <strong>La Puntual</strong> (obrador de Girona), y pan de masa madre de <strong>Origo Bakery</strong> (Barcelona). También servimos matcha de <strong>REQ</strong> y chai de <strong>Awachai</strong> — no nos limitamos al café.</p>
@@ -75,10 +76,8 @@ const breadcrumbs = [
 <p class="mb-4"><strong>Horario:</strong> Miércoles a sábado 8:30–19:30. Domingo 8:30–14:30. Cerrado lunes y martes.</p>
 <p class="mb-4"><strong>Lo mejor para:</strong> Amantes de la bollería francesa, desayunos dulces. Una de nuestras recomendaciones favoritas de la zona.</p>
 <hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">Grace Coffee — Platja d&#39;Aro</h3>
-<p class="mb-4"><strong>Carrer Pineda del Mar, 27, Platja d&#39;Aro</strong> · 5 min en coche</p>
-<p class="mb-4">Opción práctica si estás en el centro de Platja d&#39;Aro y no quieres desplazarte. Café decente, desayunos variados, buenas reseñas (4.6 en Google). No es specialty coffee certificado, pero está por encima del promedio de la zona turística.</p>
-<p class="mb-4"><strong>Lo mejor para:</strong> Desayunos rápidos y convenientes en el centro de Platja d&#39;Aro.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Grace Coffee — cerrado permanentemente</h3>
+<p class="mb-4">Grace Coffee, en Platja d’Aro, ha cerrado permanentemente y ya no forma parte de nuestras recomendaciones actuales. Estado comprobado el 5 de octubre de 2026 en Google Maps. Como alternativas cercanas, consulta La Maglia en Platja d’Aro, ANNNA en Sant Feliu de Guíxols y Dirty Rabbit en S’Agaró. Comprueba los horarios actuales antes de desplazarte.</p>
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zona 2: Palamós — Calonge</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Zero — Palamós</h3>
@@ -225,7 +224,7 @@ const breadcrumbs = [
 <li><a href="https://www.costabrava.org/donde-dormir" target="_blank" rel="noopener noreferrer" class="text-red hover:underline">Alojamientos en la Costa Brava</a> — Para planificar tu desayuno con la estancia completa</li>
 </ul>
 
-<p class="mb-4"><em>¿Vienes a S&#39;Agaró? Pásate por Dirty Rabbit — Avenida Platja d&#39;Aro 275. Abrimos la puerta, te preparamos un café de verdad, y te quedas el rato que quieras. Esto es tu casa lejos de casa.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-2c1d37a0d25e")} />
 <p class="mb-4"><em>Última actualización: febrero 2026</em></p>
 
       </div>
@@ -235,7 +234,7 @@ const breadcrumbs = [
           <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
           <ul class="font-mono text-sm space-y-3">
             <li>☕ <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">El mejor café de especialidad en S'Agaró</a></li>
-            <li>🍵 <a href="/matcha" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
+            <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
             <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
             <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
             <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía completa 2026</a></li>
@@ -244,9 +243,7 @@ const breadcrumbs = [
 <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">¿Vienes a vernos?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-4fb00d6cad80")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

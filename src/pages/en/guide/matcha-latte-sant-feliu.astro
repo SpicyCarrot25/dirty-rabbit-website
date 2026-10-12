@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -16,34 +17,10 @@ const breadcrumbs = [
   title="Matcha latte near Sant Feliu de Guíxols: what's there and what's worth the detour — Dirty Rabbit 2026"
   description="Sant Feliu de Guíxols has plenty of cafés. On the seafront, near the market, by the port. Most of them have a &quot;matcha latte&quot; on the menu — order one and th"
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Specialty café in S'Agaró with organic matcha from REQ Matcha and La Cabra coffee. 5 minutes from Sant Feliu de Guíxols. Open since November 2024.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avinguda Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.7882,
-    "longitude": 3.0323
-  },
-  "url": "https://dirtyrabbit.es/matcha-latte-sant-feliu",
-  "telephone": "+34872454264",
-  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
-  "priceRange": "€€"
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-c1d09359cd3e", "en"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -55,6 +32,13 @@ const breadcrumbs = [
           Matcha latte near Sant Feliu de Guíxols: what's there and what's worth the detour
         </h1>
       </header>
+
+        <section class="mb-8" aria-label="Sant Feliu de Guíxols">
+          <p class="mb-4">Coastal town with a fishing port, Benedictine monastery, and cork-making heritage.</p>
+          <p class="mb-4"><a class="text-red hover:underline" href="/en/guide/best-coffee-sant-feliu-de-guixols">Coffee in Sant Feliu de Guíxols</a></p>
+          <p class="mb-4">Afterwards, Dirty Rabbit is a separate visit in S’Agaró. Check the route before travelling.</p>
+        </section>
+
 
       <div class="prose prose-lg max-w-none font-mono leading-relaxed">
 
@@ -73,7 +57,7 @@ const breadcrumbs = [
   <li>Extra strong — higher dose, for a little more</li>
 </ul>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Where to find a good matcha latte near Sant Feliu de Guíxols</h3>
-<p class="mb-4">Dirty Rabbit is at Avinguda Platja d'Aro 275, S'Agaró — five minutes from Sant Feliu along the GI-682.</p>
+<p class="mb-4" set:html={getFactCopy("copy-27e776d0706a")} />
 <p class="mb-4">The matcha we use is from REQ Matcha, a project founded by a Japanese man who lives in Japan and travels to the plantations to select the tea directly. It comes to Barcelona and from there to us. Short chain, traceable.</p>
 <p class="mb-4">In central Sant Feliu you'll find spots with sea views. If the matcha itself is what you're after, the detour to S'Agaró makes sense.</p>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Why matcha is everywhere but good matcha is rare</h3>
@@ -88,7 +72,7 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">How far is Sant Feliu de Guíxols from Dirty Rabbit?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">About 4–5 kilometres along the GI-682 towards Platja d'Aro. We're at Avinguda Platja d'Aro 275, S'Agaró.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-654aefb74ff7")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Can I order the matcha latte with plant milk?</p>
@@ -115,17 +99,14 @@ const breadcrumbs = [
             <li>🌅 <a href="/en/articles/breakfast-costa-brava" class="text-red hover:underline">Best Breakfast on the Costa Brava (2026)</a></li>
           </ul>
         </div>
-<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">About Dirty Rabbit</h2>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4">Dirty Rabbit — S’Agaró</h2>
 <p class="mb-4">We opened on 1 November 2024 in S'Agaró. Specialty coffee, properly made alternative drinks, and a place to stay in if you want.</p>
 <p class="mb-4">Iwonka runs day-to-day with a clear rule on suppliers: if she can't explain where an ingredient comes from, it doesn't go on the menu. Matcha from REQ Matcha. Coffee from La Cabra. Bread from Origo Bakery.</p>
 <p class="mb-4">Natural light in the mornings, WiFi, large terrace when the weather holds. The kind of place where you can work through a morning without anyone minding.</p>
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-641e5275e080")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

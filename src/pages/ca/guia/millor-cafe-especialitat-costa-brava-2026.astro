@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'ca';
@@ -103,11 +104,11 @@ const faqSchema = {
           d'origen unic. Tambe serveixen matcha japones de grau cerimonial (REQ Matcha) i chai organic d'Awachai.
         </p>
         <ul>
-          <li><strong>Horari:</strong> Dimarts-diumenge, 08:00-15:00</li>
-          <li><strong>Preu cafe:</strong> €2,50-4,00</li>
-          <li><strong>Menjar:</strong> €4-15</li>
+          <li set:html={getFactCopy("copy-770ed0de016d")} />
+          <li set:html={getFactCopy("copy-a18fce186765")} />
+          <li set:html={getFactCopy("copy-da859d6025cd")} />
           <li><strong>Ideal per:</strong> El cafe en si. Si t'importa l'extraccio i l'origen, es aqui.</li>
-          <li><strong>Inconvenient:</strong> Tanca a les 15:00 i els dilluns.</li>
+          <li set:html={getFactCopy("copy-0a786170f0bb")} />
         </ul>
 
         <h2 class="font-typewriter text-2xl">La Maglia Coffee - Platja d'Aro</h2>

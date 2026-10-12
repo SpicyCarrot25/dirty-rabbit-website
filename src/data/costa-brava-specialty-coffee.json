@@ -427,27 +427,6 @@
     "verified": false
   },
   {
-    "name": "Grace Coffee",
-    "slug": "grace-coffee-platja-daro",
-    "address": "Carrer Pineda del Mar, 27",
-    "town": "Platja d'Aro",
-    "zone": "Baix Empordà",
-    "type": "café",
-    "coffee": {
-      "roaster": "Unknown",
-      "style": "Espresso, decaf, plant-based milks"
-    },
-    "instagram": null,
-    "website": null,
-    "hours": "Unknown — open most days",
-    "description": "Casual café in Platja d'Aro. Breakfast, lunch, espresso-based drinks. Laptop-friendly, kids-friendly, dog-friendly, outdoor seating. Mixed reviews on TripAdvisor. Not confirmed as specialty, but offers a step above standard tourist coffee. Convenient location.",
-    "driveFromDR": 5,
-    "lat": 41.8178,
-    "lng": 3.0478,
-    "seasonal": false,
-    "verified": false
-  },
-  {
     "name": "Re Mei",
     "slug": "re-mei",
     "address": "Riba Pianc 11, Cadaqués",

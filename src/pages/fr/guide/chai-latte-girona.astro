@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -19,25 +20,7 @@ const breadcrumbs = [
   articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Café de spécialité à S'Agaró (Costa Brava) avec masala chai bio d'Awachai (Isère, France). À 35 minutes de Gérone. Chai latte classique, iced chai et dirty chai toute l'année.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avinguda Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "url": "https://dirtyrabbit.es/chai-latte-girona",
-  "telephone": "+34872454264",
-  "priceRange": "€€"
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-a4b5a44eca79", "fr"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -62,7 +45,7 @@ const breadcrumbs = [
 </ol>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Où trouver un bon chai latte près de Gérone</h3>
 <p class="mb-4">À Gérone en ville il y a des cafés avec du chai à la carte. Pour du masala chai avec de vraies épices bio, l'option la plus proche hors de la ville est Dirty Rabbit à S'Agaró — 35 minutes par la C-65 ou l'AP-7.</p>
-<p class="mb-4">Nous avons ouvert en novembre 2024. Trois versions : chai latte classique (chaud ou froid), chai glacé toute l'année, et dirty chai avec espresso. Lait végétal disponible. Entre 3,50€ et 5€. Grande terrasse, WiFi, bonne lumière le matin.</p>
+<p class="mb-4" set:html={getFactCopy("copy-ea2f10d34698")} />
 <p class="mb-4">Pour ceux qui font régulièrement l'aller-retour Gérone-Costa Brava, S'Agaró est entre Sant Feliu et Platja d'Aro. Pour ceux qui viendraient exprès depuis Gérone juste pour le chai — ça, c'est votre décision, pas la nôtre.</p>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Pourquoi le chai latte est partout mais rarement bien fait</h3>
 <p class="mb-4">Gérone, en tant que ville universitaire avec un tourisme croissant, a plus de variété que la plupart des villes de sa taille. Pourtant le schéma est le même : la majorité des versions de chai qui circulent sont du sirop. C'est l'option économique et simple pour un établissement qui ne fait pas du chai son produit central.</p>
@@ -80,7 +63,7 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Qu'est-ce que le chai glacé et pourquoi le proposez-vous toute l'année ?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Le chai glacé est le masala chai froid — les épices infusées puis servies sur glace. La plupart des établissements ne le proposent pas hors de l'été. Nous l'avons toute l'année parce que les épices fonctionnent aussi bien en froid, et certains le préfèrent ainsi indépendamment de la température.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-1c5feaf10ccd")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Quelle est la différence entre un dirty chai et un café au lait ?</p>
@@ -88,7 +71,7 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Comment aller à Dirty Rabbit depuis Gérone ?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Par la C-65 direction Sant Feliu de Guíxols puis Platja d'Aro, ou par l'AP-7 sortie Platja d'Aro. Le café est Avinguda Platja d'Aro 275, S'Agaró. Environ 35 minutes depuis le centre de Gérone. Parking en face.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-7d855a554eb1")} />
 </div>
 <hr class="my-8 border-black/20" />
 </div>
@@ -98,10 +81,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-f81927ed14a8")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

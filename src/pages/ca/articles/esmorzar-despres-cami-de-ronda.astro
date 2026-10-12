@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'ca';
@@ -99,7 +100,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">On esmorzar després de cada tram</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Si acabes a Sant Pol / S&#39;Agaró</h3>
 <h4>🐇 Dirty Rabbit — S&#39;Agaró</h4>
-<p class="mb-4"><strong>Avinguda Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-385e8285b0c0")} />
 <p class="mb-4">A 3 minuts caminant de la Platja de Sant Pol. Perfecte després d&#39;un tram matinal.</p>
 <p class="mb-4"><strong>Per què funciona per a excursionistes:</strong></p>
 <ul class="space-y-2 mb-6 list-disc pl-6">
@@ -203,7 +204,7 @@ const breadcrumbs = [
 </ol>
 <p class="mb-4">És la Costa Brava en estat pur.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Després de caminar, passa per Dirty Rabbit — Avinguda Platja d&#39;Aro 275, S&#39;Agaró. Som a 3 minuts de Sant Pol. Cafè de La Cabra, torrades amb salmó Benfumat, i tot el temps que necessitis per recuperar-te. Casa teva lluny de casa.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-ed28c1b3dcfc")} />
 <p class="mb-4"><em>Última actualització: febrer 2026</em></p>
 
       </div>
@@ -211,9 +212,7 @@ const breadcrumbs = [
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7e287ad1f6de")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

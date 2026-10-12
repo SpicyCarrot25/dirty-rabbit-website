@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -16,34 +17,10 @@ const breadcrumbs = [
   title="The best matcha latte near Platja d'Aro: what to look for and where to go — Dirty Rabbit 2026"
   description="If you're looking for the best matcha latte near Platja d'Aro, the most specific answer we can give you is this: Dirty Rabbit in S'Agaró, ten minutes away."
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Specialty café in S'Agaró with organic matcha from REQ Matcha and La Cabra coffee. 10 minutes from Platja d'Aro. The nearest ceremonial matcha option to Platja d'Aro. Open since November 2024.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avinguda Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.7882,
-    "longitude": 3.0323
-  },
-  "url": "https://dirtyrabbit.es/best-matcha-platja-daro",
-  "telephone": "+34872454264",
-  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
-  "priceRange": "€€"
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-5d7988462447", "en"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -55,6 +32,13 @@ const breadcrumbs = [
           The best matcha latte near Platja d'Aro: what to look for and where to go
         </h1>
       </header>
+
+        <section class="mb-8" aria-label="Platja d'Aro">
+          <p class="mb-4">Major Costa Brava resort town with a long beach, shopping, and nightlife.</p>
+          <p class="mb-4"><a class="text-red hover:underline" href="/en/guide/best-coffee-platja-daro">Coffee in Platja d'Aro</a></p>
+          <p class="mb-4">Afterwards, Dirty Rabbit is a separate visit in S’Agaró. Check the route before travelling.</p>
+        </section>
+
 
       <div class="prose prose-lg max-w-none font-mono leading-relaxed">
 
@@ -73,9 +57,9 @@ const breadcrumbs = [
   <li>Extra strong — higher dose, for a little more</li>
 </ul>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Where to find the best matcha latte near Platja d'Aro</h3>
-<p class="mb-4">Dirty Rabbit, Avinguda Platja d'Aro 275, S'Agaró — about ten minutes from central Platja d'Aro.</p>
+<p class="mb-4" set:html={getFactCopy("copy-a2fd146b7e2a")} />
 <p class="mb-4">In Platja d'Aro centre there are options to sit on the promenade or near the beach. If the matcha itself is the point — not the setting — the detour to S'Agaró is worth it. Large terrace, good morning light, WiFi. Easy parking right across the road.</p>
-<p class="mb-4">Matcha is available year-round, hot or cold, with dairy or plant milk. Iwonka runs the day-to-day with a simple rule: if she can't explain where an ingredient comes from, it doesn't go on the menu.</p>
+<p class="mb-4" set:html={getFactCopy("copy-c9ba8118086c")} />
 <h3 class="font-typewriter text-xl mb-4 mt-8">Why matcha is everywhere but good matcha is rare</h3>
 <p class="mb-4">Platja d'Aro is a high-volume tourist destination. That pushes many local businesses towards low-cost, high-availability suppliers. Japanese ceremonial matcha doesn't fit that category — it's more expensive, has more potential failure points in preparation, and requires staff who understand why it matters.</p>
 <p class="mb-4">The result is that quality matcha in the Platja d'Aro area is scarce. Not non-existent, but scarce. The places doing it well are the ones that made deliberate choices about which ingredients they wanted to work with, regardless of margin.</p>
@@ -84,7 +68,7 @@ const breadcrumbs = [
 <div class="space-y-6">
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Where is the best matcha latte near Platja d'Aro?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Dirty Rabbit in S'Agaró, Avinguda Platja d'Aro 275. Ten minutes by car from central Platja d'Aro. Organic ceremonial matcha from REQ Matcha, standard dose 2g with an extra strong option available.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-f6b163955a93")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">What's the difference between a regular matcha latte and a ceremonial one?</p>
@@ -92,7 +76,7 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">How much does a matcha latte cost at Dirty Rabbit?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Between €3.50 and €5. Quality matcha has a higher ingredient cost — the price reflects that.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-96d7806e2740")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Do you have dairy-free options?</p>
@@ -115,17 +99,14 @@ const breadcrumbs = [
             <li>🌅 <a href="/en/articles/breakfast-costa-brava" class="text-red hover:underline">Best Breakfast on the Costa Brava (2026)</a></li>
           </ul>
         </div>
-<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">About Dirty Rabbit</h2>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4">Dirty Rabbit — S’Agaró</h2>
 <p class="mb-4">We opened on 1 November 2024 in S'Agaró. Specialty coffee, properly made alternative drinks, and a place to stay in if you want.</p>
 <p class="mb-4">Iwonka runs day-to-day with a clear rule on suppliers: if she can't explain where an ingredient comes from, it doesn't go on the menu. Matcha from REQ Matcha. Coffee from La Cabra. Bread from Origo Bakery.</p>
 <p class="mb-4">Natural light in the mornings, WiFi, large terrace when the weather holds. The kind of place where you can work through a morning without anyone minding.</p>
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-641e5275e080")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

@@ -1,4 +1,5 @@
 ---
+import { getWinterNotice, getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../lib/business-facts';
 import { getTranslations, getLocalizedPath, type Language } from '../i18n';
 
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
 
 const { lang } = Astro.props;
 const t = getTranslations(lang);
+const winterNotice = getWinterNotice(lang);
 
 // Localized footer labels
 const footerLabels = {
@@ -226,9 +228,10 @@ const privacyPrefix: Record<string, string> = {
     <div class="mb-8 font-typewriter">
       <p class="text-lg text-red mb-3">Encuéntranos</p>
       <p class="text-base text-black">Horario</p>
-      <p class="text-base text-black mb-3">Mar-Dom de 8:00 a 15:00</p>
+      <p class="text-base text-black mb-3" set:html={getFactCopy("copy-3e2ab0f46a17")} />
+          {winterNotice && <p class="text-base text-black mb-3">{winterNotice}</p>}
       <p class="text-base text-black">Dirección</p>
-      <p class="text-base text-black mb-3">Avenida Playa de Aro, 275 · S'Agaró</p>
+      <p class="text-base text-black mb-3" set:html={getFactCopy("copy-83f7ba5aaa3c")} />
       <a
         href="https://www.google.com/maps?cid=13237319999262880412"
         target="_blank"

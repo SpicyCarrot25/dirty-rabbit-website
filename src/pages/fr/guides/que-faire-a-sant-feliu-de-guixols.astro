@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations } from '../../../i18n';
 
@@ -144,10 +145,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">On vous attend à 7 minutes</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
-            Le meilleur café de la région, à la fin du Camí de Ronda.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-bc6edf53c960")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

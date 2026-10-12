@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'fr';
@@ -104,11 +105,11 @@ const faqSchema = {
           chai bio d'Awachai.
         </p>
         <ul>
-          <li><strong>Horaires :</strong> Mardi-dimanche, 08:00-15:00</li>
-          <li><strong>Prix cafe :</strong> €2,50-4,00</li>
-          <li><strong>Restauration :</strong> €4-15</li>
+          <li set:html={getFactCopy("copy-3b4a104dcd12")} />
+          <li set:html={getFactCopy("copy-d7a30ee33615")} />
+          <li set:html={getFactCopy("copy-55d09fba7ad1")} />
           <li><strong>Ideal pour :</strong> Le cafe lui-meme. Si l'extraction et l'origine vous importent, c'est ici.</li>
-          <li><strong>Inconvenient :</strong> Ferme a 15:00 et le lundi.</li>
+          <li set:html={getFactCopy("copy-63ab9767f373")} />
         </ul>
 
         <h2 class="font-typewriter text-2xl">La Maglia Coffee - Platja d'Aro</h2>

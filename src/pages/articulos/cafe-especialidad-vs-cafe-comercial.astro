@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 
 const lang = 'es';
@@ -16,7 +17,7 @@ const breadcrumbs = [
   title={title}
   description={description}
   lang={lang}
-  articleMeta={{ datePublished: "2026-03-24", dateModified: "2026-03-24", section: "Article" }}
+  articleMeta={{ datePublished: "2026-03-24", dateModified: "2026-10-12", section: "Article" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -441,8 +442,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Café de especialidad en la Costa Brava</h2>
 <p class="mb-4">Si estás en la Costa Brava y quieres probar café de especialidad real:</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">En S&#39;Agaró</h3>
-<p class="mb-4"><strong>Dirty Rabbit</strong> — Avenida Platja d&#39;Aro 275
-Café de <strong>La Cabra</strong> (Dinamarca), consistentemente entre los mejores tostadores del mundo. Preparado en <strong>La Marzocco KB90</strong> con agua de <strong>ósmosis inversa</strong>. A 3 minutos de la Playa de Sant Pol.</p>
+<p class="mb-4" set:html={getFactCopy("copy-32a7ba99fd11")} />
 <h3 class="font-typewriter text-xl mt-8 mb-4">En la zona</h3>
 <ul class="space-y-2 mb-6 list-disc pl-6">
 <li><strong>La Maglia</strong> (Platja d&#39;Aro) — Tostador propio, primer specialty de la Costa Brava</li>
@@ -476,7 +476,7 @@ Café de <strong>La Cabra</strong> (Dinamarca), consistentemente entre los mejor
 <li><a href="https://perfectdailygrind.com/2019/06/specialty-vs-commercial-coffee-whats-the-difference/" target="_blank" rel="noopener noreferrer" class="text-red hover:underline">Specialty vs Commercial Coffee — Perfect Daily Grind</a> — Análisis detallado de las diferencias entre ambos tipos de café</li>
 </ul>
 
-<p class="mb-4"><em>¿Quieres probar café de especialidad en la Costa Brava? Pásate por Dirty Rabbit — Avenida Platja d&#39;Aro 275, S&#39;Agaró. Servimos La Cabra, preparado como debe ser. Sin azúcar. Sin excusas. Tu casa lejos de casa.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-988d545a4aea")} />
 <p class="mb-4"><em>Última actualización: febrero 2026</em></p>
 
       </div>
@@ -486,7 +486,7 @@ Café de <strong>La Cabra</strong> (Dinamarca), consistentemente entre los mejor
           <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
           <ul class="font-mono text-sm space-y-3">
             <li>☕ <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">El mejor café de especialidad en S'Agaró</a></li>
-            <li>🍵 <a href="/matcha" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
+            <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
             <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
             <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
             <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía completa 2026</a></li>
@@ -495,9 +495,7 @@ Café de <strong>La Cabra</strong> (Dinamarca), consistentemente entre los mejor
 <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">¿Vienes a vernos?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-4fb00d6cad80")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

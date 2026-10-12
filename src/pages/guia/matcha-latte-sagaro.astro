@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../i18n';
 
@@ -16,82 +17,11 @@ const breadcrumbs = [
   title="Matcha latte en S'Agaró: esto es lo que hacemos — Dirty Rabbit 2026"
   description="Si estás en S'Agaró buscando matcha latte, ya estás donde tienes que estar. Dirty Rabbit abrió aquí el 1 de noviembre de 2024, en la Avenida Platja d'Aro 2"
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Café de especialidad en S'Agaró con matcha orgánico de REQ Matcha y café de La Cabra. El único café de especialidad abierto en S'Agaró desde noviembre 2024.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avenida Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.7882,
-    "longitude": 3.0323
-  },
-  "url": "https://dirtyrabbit.es/matcha-latte-sagaro",
-  "telephone": "+34872454264",
-  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
-  "priceRange": "€€"
-}
-    </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Dónde puedo tomar un matcha latte en S'Agaró?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "En Dirty Rabbit, Avenida Platja d'Aro 275. Es el único café de especialidad en S'Agaró que trabaja con matcha orgánico de origen certificado."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué matcha usáis en Dirty Rabbit?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "REQ Matcha, un proyecto de Barcelona con fundador japonés que selecciona el té directamente en Japón. Servimos 2g ceremonial estándar, con opción extra fuerte disponible."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Está disponible el matcha latte frío en Dirty Rabbit S'Agaró?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, todo el año. Tanto caliente como frío, con leche de vaca o alternativas vegetales."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Hay parking cerca de Dirty Rabbit en S'Agaró?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, hay parking fácil enfrente del local en la Avenida Platja d'Aro."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuáles son las opciones de leche para el matcha latte?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Trabajamos con leche de vaca y opciones vegetales. Pregunta en barra por la disponibilidad según temporada."
-      }
-    }
-  ]
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-79c605fdf56b", "es"))} />
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-2278d2aaa4c9", "es"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -106,7 +36,7 @@ const breadcrumbs = [
 
       <div class="prose prose-lg max-w-none font-mono leading-relaxed">
 
-<p class="mb-4">Si estás en S'Agaró buscando matcha latte, ya estás donde tienes que estar. Dirty Rabbit abrió aquí el 1 de noviembre de 2024, en la Avenida Platja d'Aro 275. No hace falta buscar más.</p>
+<p class="mb-4" set:html={getFactCopy("copy-04eea1675a38")} />
 <p class="mb-4">Lo que sí vale la pena explicar es qué tipo de matcha servimos y por qué lo hacemos así.</p>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Qué hace diferente a un buen matcha latte</h3>
 <ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
@@ -122,7 +52,7 @@ const breadcrumbs = [
 </ul>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Dónde encontrar buen matcha latte en S'Agaró</h3>
 <p class="mb-4">Aquí. Somos nosotros.</p>
-<p class="mb-4">Avenida Platja d'Aro 275, S'Agaró, 17248. Abrimos el 1 de noviembre de 2024. Iwonka lleva el día a día con una lógica sencilla: si no podemos explicar de dónde viene el ingrediente, no entra en carta.</p>
+<p class="mb-4" set:html={getFactCopy("copy-e66e2237df02")} />
 <p class="mb-4">El matcha latte está disponible caliente o frío, con leche de vaca u opciones vegetales. Terraza grande cuando el tiempo acompaña, buena luz natural por la mañana, WiFi si lo necesitas.</p>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Por qué el matcha latte está en todas partes pero bien hecho en pocos sitios</h3>
 <p class="mb-4">El matcha se popularizó en España alrededor de 2022, sobre todo desde Barcelona. El problema habitual es que muchos locales añadieron "matcha latte" a la carta sin cambiar de proveedor. El polvo ceremonial cuesta más que el de grado alimentario — y la diferencia se nota en el vaso, aunque no siempre sea fácil de articular.</p>
@@ -132,7 +62,7 @@ const breadcrumbs = [
 <div class="space-y-6">
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">¿Dónde puedo tomar un matcha latte en S'Agaró?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">En Dirty Rabbit, Avenida Platja d'Aro 275. Es el único café de especialidad en S'Agaró que trabaja con matcha orgánico de origen certificado.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-5dc1eac11476")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">¿Qué matcha usáis en Dirty Rabbit?</p>
@@ -140,7 +70,7 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">¿Está disponible el matcha latte frío?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí, todo el año. Tanto caliente como frío, con leche de vaca o alternativas vegetales.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-e074f47febf9")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">¿Hay parking cerca de Dirty Rabbit en S'Agaró?</p>
@@ -157,7 +87,7 @@ const breadcrumbs = [
           <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
           <ul class="font-mono text-sm space-y-3">
             <li>☕ <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">El mejor café de especialidad en S'Agaró</a></li>
-            <li>🍵 <a href="/matcha" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
+            <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
             <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
             <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
             <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía 2026</a></li>
@@ -170,10 +100,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-7db033cf0a58")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

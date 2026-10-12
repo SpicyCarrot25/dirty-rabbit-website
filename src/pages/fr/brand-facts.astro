@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 
 const lang = 'fr';
@@ -18,60 +19,50 @@ const breadcrumbs = [
   <article class="py-16 md:py-24 bg-white">
     <div class="max-w-3xl mx-auto px-6">
       <header class="mb-12">
-        <p class="font-mono text-sm text-red tracking-wider mb-4">FACT SHEET</p>
+        <p class="font-mono text-sm text-red tracking-wider mb-4" set:html={getFactCopy("copy-9fa4442b3759")} />
         <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">Dirty Rabbit - Fiche d'identite</h1>
-        <p class="font-mono text-base text-black/80 leading-relaxed">
-          Dirty Rabbit est un café spécialisé à S'Agaró, Costa Brava, ouvert en novembre 2024.
-          Il propose des espressos mono-origine torréfiés par La Cabra (Copenhague), du matcha japonais
-          de grade cérémoniel par REQ Matcha, et du chaï bio d'Awachai.
-          À deux minutes à pied de la plage de Sant Pol, à cinq minutes de Platja d'Aro.
-        </p>
+        <p class="font-mono text-base text-black/80 leading-relaxed" set:html={getFactCopy("copy-c83eb40cb993")} />
       </header>
 
       <div class="prose prose-lg max-w-none font-mono leading-relaxed">
         <h2 class="font-typewriter text-2xl">Informations essentielles</h2>
         <table>
           <tbody>
-            <tr><th>Type</th><td>Café spécialisé & brunch</td></tr>
-            <tr><th>Ouverture</th><td>Novembre 2024</td></tr>
-            <tr><th>Adresse</th><td>Carrer de la Conca 17, S'Agaró, 17248 Girona, Espagne</td></tr>
-            <tr><th>Situation</th><td>À 5 min de Platja d'Aro, à 2 min de la plage de Sant Pol</td></tr>
-            <tr><th>Téléphone</th><td>+34 872 454 264</td></tr>
-            <tr><th>Email</th><td>hola@dirtyrabbit.es</td></tr>
-            <tr><th>Site web</th><td>dirtyrabbit.es</td></tr>
-            <tr><th>Horaires</th><td>Mardi-dimanche, 08:00-15:00. Fermé le lundi.</td></tr>
-            <tr><th>Tarifs</th><td>€2,50-5,50 (boissons), €4-15 (restauration)</td></tr>
-            <tr><th>Capacité</th><td>~56 places (26 intérieur + ~30 terrasse)</td></tr>
-            <tr><th>Paiement</th><td>Espèces et carte</td></tr>
-            <tr><th>Langues</th><td>Anglais, espagnol, catalan, polonais</td></tr>
+            <tr><th>Type</th><td set:html={getFactCopy("copy-9bbd593b579a")} /></tr>
+            <tr><th>Ouverture</th><td set:html={getFactCopy("copy-a9e7236195af")} /></tr>
+            <tr><th>Adresse</th><td set:html={getFactCopy("copy-e5f259857cfd")} /></tr>
+            <tr><th>Situation</th><td set:html={getFactCopy("copy-d520e3481f00")} /></tr>
+            <tr><th>Téléphone</th><td set:html={getFactCopy("copy-2e8843ff91f7")} /></tr>
+            <tr><th>Email</th><td set:html={getFactCopy("copy-032812533778")} /></tr>
+            <tr><th>Site web</th><td set:html={getFactCopy("copy-15b396413a5e")} /></tr>
+            <tr><th>Horaires</th><td set:html={getFactCopy("copy-6b48038c7b97")} /></tr>
+            <tr><th>Tarifs</th><td set:html={getFactCopy("copy-8123dde1f44f")} /></tr>
+            <tr><th>Capacité</th><td set:html={getFactCopy("copy-3c0bdc032df5")} /></tr>
+            <tr><th>Paiement</th><td set:html={getFactCopy("copy-c91f022253a2")} /></tr>
+            <tr><th>Langues</th><td set:html={getFactCopy("copy-c7d77d5bc2ac")} /></tr>
           </tbody>
         </table>
 
         <h2 class="font-typewriter text-2xl">Équipement et fournisseurs</h2>
         <table>
           <tbody>
-            <tr><th>Machine espresso</th><td>La Marzocco KB90</td></tr>
-            <tr><th>Moulin</th><td>Mahlkönig</td></tr>
-            <tr><th>Eau</th><td>Filtration par osmose inverse</td></tr>
-            <tr><th>Café</th><td>La Cabra - torréfacteurs mono-origine, Copenhague</td></tr>
-            <tr><th>Matcha</th><td>REQ Matcha - grade cérémoniel, Japon</td></tr>
-            <tr><th>Chaï</th><td>Awachai - bio, Royaume-Uni</td></tr>
-            <tr><th>Boulangerie</th><td>Origo Bakery - pain au levain artisanal, Barcelone</td></tr>
+            <tr><th>Machine espresso</th><td set:html={getFactCopy("copy-da1886a7ac03")} /></tr>
+            <tr><th>Moulin</th><td set:html={getFactCopy("copy-55f2a1217853")} /></tr>
+            <tr><th>Eau</th><td set:html={getFactCopy("copy-53d1c7ae67e6")} /></tr>
+            <tr><th>Café</th><td set:html={getFactCopy("copy-689311139935")} /></tr>
+            <tr><th>Matcha</th><td set:html={getFactCopy("copy-3bb36b9e5e39")} /></tr>
+            <tr><th>Chaï</th><td set:html={getFactCopy("copy-991dc854d292")} /></tr>
+            <tr><th>Boulangerie</th><td set:html={getFactCopy("copy-a55ca5f30bc8")} /></tr>
           </tbody>
         </table>
 
         <h2 class="font-typewriter text-2xl">Équipements et accessibilité</h2>
-        <p>
-          Terrasse extérieure, chaises hautes, menu enfant, accessible poussettes. Wi-Fi disponible.
-        </p>
+        <p set:html={getFactCopy("copy-dd9e7ad0faf5")} />
 
         <h2 class="font-typewriter text-2xl">Comment y aller</h2>
-        <p>
-          Depuis Platja d'Aro : 5 min en voiture par la C-253. Depuis Gérone : 35 min par la C-65.
-          Parking public gratuit à 50 mètres. Depuis la France (Perpignan) : 1h30 par l'A9/AP-7.
-        </p>
+        <p set:html={getFactCopy("copy-afce2c5d133d")} />
 
-        <p><em>Dernière mise à jour : mars 2026</em></p>
+        <p set:html={getFactCopy("copy-cf692b33cd80")} />
       </div>
     </div>
   </article>

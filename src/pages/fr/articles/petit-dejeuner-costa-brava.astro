@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'fr';
@@ -16,7 +17,7 @@ const breadcrumbs = [
   title={title}
   description={description}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Article" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Article" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -47,7 +48,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zone 1 : S&#39;Agaró — Platja d&#39;Aro — Sant Feliu de Guíxols</h2>
 <p class="mb-4">C&#39;est la zone avec le plus d&#39;options de qualité dans un court rayon. En 10 minutes en voiture, vous pouvez choisir entre cinq ou six bons endroits.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">🐇 Dirty Rabbit — S&#39;Agaró</h3>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-3fe8a49f7437")} />
 <p class="mb-4">Dirty Rabbit est notre café (oui, c&#39;est nous qui écrivons ce guide, donc le biais est évident). Mais nous allons vous expliquer pourquoi nous pensons que ça vaut le coup, avec des faits.</p>
 <p class="mb-4">Nous servons du café de <strong>La Cabra</strong>, le torréfacteur danois qui figure depuis des années parmi les meilleurs du monde. Nous le préparons sur une <strong>La Marzocco KB90</strong> avec de l&#39;eau filtrée par <strong>osmose inverse</strong>. Si le café est votre truc, vous le remarquerez dès la première gorgée.</p>
 <p class="mb-4">Mais Dirty Rabbit, c&#39;est plus que du café. Le petit-déjeuner comprend des toasts au <strong>saumon fumé Benfumat</strong> (le meilleur fumé de Catalogne), des viennoiseries de <strong>La Puntual</strong> (boulangerie de Gérone), et du pain au levain d&#39;<strong>Origo Bakery</strong> (Barcelone). Nous servons aussi du matcha <strong>REQ</strong> et du chai <strong>Awachai</strong> — nous ne nous limitons pas au café.</p>
@@ -75,10 +76,8 @@ const breadcrumbs = [
 <p class="mb-4"><strong>Horaires :</strong> Mercredi à samedi 8h30–19h30. Dimanche 8h30–14h30. Fermé lundi et mardi.</p>
 <p class="mb-4"><strong>Idéal pour :</strong> Amateurs de viennoiseries françaises, petits-déjeuners sucrés. Une de nos recommandations préférées de la zone.</p>
 <hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">Grace Coffee — Platja d&#39;Aro</h3>
-<p class="mb-4"><strong>Carrer Pineda del Mar, 27, Platja d&#39;Aro</strong> · 5 min en voiture</p>
-<p class="mb-4">Option pratique si vous êtes dans le centre de Platja d&#39;Aro et ne voulez pas vous déplacer. Café correct, petits-déjeuners variés, bons avis (4.6 sur Google). Ce n&#39;est pas du café de spécialité certifié, mais c&#39;est au-dessus de la moyenne de la zone touristique.</p>
-<p class="mb-4"><strong>Idéal pour :</strong> Petits-déjeuners rapides et pratiques dans le centre de Platja d&#39;Aro.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Grace Coffee — fermé définitivement</h3>
+<p class="mb-4">Grace Coffee, à Platja d’Aro, a fermé définitivement et ne figure plus parmi nos recommandations actuelles. Statut vérifié le 5 octobre 2026 sur Google Maps. Pour d’autres options à proximité, consultez La Maglia à Platja d’Aro, ANNNA à Sant Feliu de Guíxols et Dirty Rabbit à S’Agaró. Vérifiez les horaires actuels avant de vous déplacer.</p>
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zone 2 : Palamós — Calonge</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Zero — Palamós</h3>
@@ -218,7 +217,7 @@ const breadcrumbs = [
 <li>Après-midi : Fitzroy à Begur (si c&#39;est la saison)</li>
 </ul>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Vous venez à S&#39;Agaró ? Passez au Dirty Rabbit — Avenida Platja d&#39;Aro 275. Nous ouvrons la porte, nous vous préparons un vrai café, et vous restez aussi longtemps que vous voulez. C&#39;est votre chez-vous loin de chez vous.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-a8bb26d70fca")} />
 <p class="mb-4"><em>Dernière mise à jour : février 2026</em></p>
 
       </div>
@@ -226,9 +225,7 @@ const breadcrumbs = [
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Vous venez nous voir?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-44a10ac1417d")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

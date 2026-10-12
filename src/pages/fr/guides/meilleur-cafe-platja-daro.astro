@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations } from '../../../i18n';
 
@@ -16,8 +17,8 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title={`Meilleur café de spécialité près de ${locationName} — Guide local 2026`}
-  description={`Guide honnête des meilleurs cafés de spécialité près de ${locationName}, Costa Brava. De La Maglia à Dirty Rabbit à S'Agaró.`}
+  title={`Que voir et où prendre un café à ${locationName}`}
+  description={`Découvrez ${locationName} et ses cafés. Puis, si vous souhaitez aller à S’Agaró, retrouvez Dirty Rabbit dans une autre localité.`}
   lang={lang}
   breadcrumbs={breadcrumbs}>
 
@@ -27,7 +28,7 @@ const breadcrumbs = [
       <header class="mb-12">
         <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · CAFÉ DE SPÉCIALITÉ</p>
         <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
-          Meilleur café de spécialité près de {locationName}
+          Que voir et où prendre un café à {locationName}
         </h1>
         <p class="font-mono text-lg text-black/70 leading-relaxed">
           {locationName} est synonyme d'été sur la Costa Brava : des kilomètres de plage, une promenade animée et une vie nocturne qui ne s'arrête jamais. Mais si vous cherchez un vrai bon café — celui qui sent la torréfaction fraîche, avec une mousse de lait bien texturée et un barista qui connaît son métier — c'est une autre histoire. Voici notre guide honnête.
@@ -64,9 +65,8 @@ const breadcrumbs = [
 
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — Le meilleur specialty coffee de la région
-          </h2>
-          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 5 min en voiture depuis Platja d'Aro</p>
+            <span class="text-3xl">🐇</span> Dirty Rabbit — une autre étape à S’Agaró</h2>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-f4bda50989b0")} />
           
           <p class="mb-4">
             Si vous voulez le meilleur café de spécialité de la Costa Brava, ça vaut les 5 minutes jusqu'à S'Agaró.
@@ -152,10 +152,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Vous venez nous voir ?</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
-            Poussez la porte, commandez un café et restez aussi longtemps que vous voulez. C'est chez vous.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-5a504a4662e8")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

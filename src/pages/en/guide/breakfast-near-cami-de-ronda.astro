@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations } from '../../../i18n';
 
@@ -57,7 +58,7 @@ const breadcrumbs = [
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
             <span class="text-3xl">🐇</span> Dirty Rabbit — The perfect reward
           </h2>
-          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · At the end of the Camí de Ronda</p>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-135bca4103ef")} />
           
           <p class="mb-4">
             When you arrive in S'Agaró after your walk, Dirty Rabbit is just minutes away. It's the perfect reward: extraordinary coffee, hearty brunch, and an atmosphere where you can settle in comfortably.
@@ -128,10 +129,7 @@ const breadcrumbs = [
         </div>
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">We're waiting at the finish line</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
-            The best way to end your Camí de Ronda hike.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-c35471519477")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

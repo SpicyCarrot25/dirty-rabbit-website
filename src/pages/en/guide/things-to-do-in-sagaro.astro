@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations } from '../../../i18n';
 
@@ -96,9 +97,7 @@ const breadcrumbs = [
           </h2>
           
           <h3 class="font-typewriter text-xl mb-3">Breakfast and brunch</h3>
-          <p class="mb-4">
-            <strong>Dirty Rabbit</strong> (Avenida Platja d'Aro 275) — La Cabra specialty coffee (Denmark) and brunch with local produce. Eggs benedict, toasts, bowls... and a flat white that's worth the trip. Relaxed atmosphere, we speak Spanish, Catalan, English and Polish — menus also in French.
-          </p>
+          <p class="mb-4" set:html={getFactCopy("copy-4db0476df827")} />
           
           <h3 class="font-typewriter text-xl mb-3 mt-6">Lunch and dinner</h3>
           <ul class="space-y-2">
@@ -163,10 +162,7 @@ const breadcrumbs = [
         </div>
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Start the day with us?</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
-            Push the door open. Freshly made coffee, food that tastes like home, and the unique calm of S'Agaró.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-8c684f6b940c")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

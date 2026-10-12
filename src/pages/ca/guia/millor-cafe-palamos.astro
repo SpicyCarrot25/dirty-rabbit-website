@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -14,10 +15,10 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title={`Millor cafè d'especialitat prop de ${locationName} — Guia local 2026`}
-  description={`On trobar specialty coffee a ${locationName}, Costa Brava. Guia honesta des de Zero Cafè fins a Dirty Rabbit a S'Agaró.`}
+  title={`Què veure i on prendre cafè a ${locationName}`}
+  description={`Visita ${locationName} i les seves cafeteries. Després, si et ve de gust anar a S’Agaró, descobreix Dirty Rabbit, en una altra localitat.`}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -26,7 +27,7 @@ const breadcrumbs = [
       <header class="mb-12">
         <p class="font-mono text-sm text-red tracking-wider mb-4">GUIA LOCAL · CAFÈ D'ESPECIALITAT</p>
         <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
-          Millor cafè d'especialitat prop de {locationName}
+          Què veure i on prendre cafè a {locationName}
         </h1>
         <p class="font-mono text-lg text-black/70 leading-relaxed">
           Palamós és sinònim de gamba vermella — el marisc més cotitzat del Mediterrani. Port pesquer autèntic, subhasta activa cada tarda, i un museu de la pesca que val la pena visitar. Però més enllà del marisc, on es pren bon cafè? Aquí tens la nostra guia.
@@ -49,9 +50,8 @@ const breadcrumbs = [
 
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — 15 minuts que valen la pena
-          </h2>
-          <p class="font-mono text-sm text-red mb-4">Avinguda Platja d'Aro 275, S'Agaró · 15 min en cotxe des de Palamós</p>
+            <span class="text-3xl">🐇</span> Dirty Rabbit — una parada a S’Agaró</h2>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-0ab5ccf9c8f9")} />
           
           <p class="mb-4">
             Si et ve de gust convertir el teu cafè del matí en una petita excursió, Dirty Rabbit és a 15 minuts per la costa — i el viatge val la pena.
@@ -111,10 +111,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avinguda Platja d'Aro 275, S'Agaró<br>
-            15 minuts des de Palamós. El millor cafè de la Costa Brava t'espera.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-eb22d2ad65d8")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"
