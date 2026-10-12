@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'ca';
@@ -16,7 +17,7 @@ const breadcrumbs = [
   title={title}
   description={description}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Article" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Article" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -29,6 +30,7 @@ const breadcrumbs = [
           Millors cafeteries d'especialitat a la Costa Brava
         </h1>
       </header>
+<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy està tancat per temporada; la data de reobertura no està confirmada. No és un tancament permanent. Consulta el seu web abans de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
 
       <!-- Main Content -->
       <div class="prose prose-lg max-w-none font-mono text-black/80 leading-relaxed">
@@ -48,7 +50,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zona 1: S&#39;Agaró — Platja d&#39;Aro — Sant Feliu de Guíxols</h2>
 <p class="mb-4">Aquesta és la zona amb més densitat de cafè d&#39;especialitat de tota la Costa Brava. En un radi de 10 minuts en cotxe tens cinc opcions reals.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">🐇 Dirty Rabbit — S&#39;Agaró</h3>
-<p class="mb-4"><strong>Avinguda Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-385e8285b0c0")} />
 <p class="mb-4">Si ens preguntes (i sí, som nosaltres, així que el biaix és obvi), Dirty Rabbit és el millor cafè d&#39;especialitat de la Costa Brava. Però t&#39;explicarem per què amb fets, no amb màrqueting.</p>
 <p class="mb-4">Servim <strong>La Cabra</strong>, el torrador danès que porta anys entre els millors del món. No és un cafè &quot;bo&quot; — és cafè de finca única, traçable fins al productor, processat amb precisió i torrat a Copenhaguen. El preparem en una <strong>La Marzocco KB90</strong> amb aigua filtrada per <strong>osmosi inversa</strong> — cada variable controlada.</p>
 <p class="mb-4">Però Dirty Rabbit no va només de cafè. És un lloc on esmorzar eggs benedict després d&#39;un bany a Sant Pol, treballar amb el teu portàtil a la terrassa, o quedar-te dues hores xerrant. Ho anomenem &quot;casa teva lluny de casa&quot; perquè això és el que volem que sigui.</p>
@@ -73,10 +75,8 @@ const breadcrumbs = [
 <p class="mb-4">Un lloc acollidor a Sant Feliu amb cafè de qualitat. No està confirmat que treballin amb un torrador d&#39;especialitat reconegut, però el nivell és notablement superior al promig de la zona. Bon brunch i ambient agradable.</p>
 <p class="mb-4"><strong>El millor:</strong> Opció ràpida si ets a Sant Feliu i vols alguna cosa per sobre del cafè estàndard.</p>
 <hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">☕ Grace Coffee — Platja d&#39;Aro</h3>
-<p class="mb-4"><strong>Platja d&#39;Aro</strong> · 5 min en cotxe</p>
-<p class="mb-4">Cafè centrat en qualitat amb bones ressenyes (4.6 a Google amb 275 opinions). Si ets al centre de Platja d&#39;Aro i no vols desplaçar-te, és una opció per a un cafè decent.</p>
-<p class="mb-4"><strong>El millor:</strong> Ubicació cèntrica a Platja d&#39;Aro.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Grace Coffee — tancat permanentment</h3>
+<p class="mb-4">Grace Coffee, a Platja d’Aro, ha tancat permanentment i ja no forma part de les nostres recomanacions actuals. Estat comprovat el 5 d’octubre de 2026 a Google Maps. Com a alternatives properes, consulta La Maglia a Platja d’Aro, ANNNA a Sant Feliu de Guíxols i Dirty Rabbit a S’Agaró. Comprova els horaris actuals abans de desplaçar-te.</p>
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zona 2: Palamós — Calonge</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">☕ Dupla — Sant Antoni de Calonge</h3>
@@ -88,9 +88,9 @@ const breadcrumbs = [
 <p class="mb-4">Palamós és famós per la seva gamba vermella, però també té opcions cafeteres. Zero ofereix cafè d&#39;especialitat d&#39;<strong>Originem</strong> (Girona) en un ambient modern.</p>
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zona 3: Begur — Pals</h2>
-<h3 class="font-typewriter text-xl mt-8 mb-4">☕ Fitzroy Cafè — Begur</h3>
+<h3 class="font-typewriter text-xl mt-8 mb-4">☕ Fitzroy (tancat per temporada) Cafè — Begur</h3>
 <p class="mb-4"><strong>Begur</strong> · 20 min en cotxe · 🏖️ <em>Temporada alta</em></p>
-<p class="mb-4">El Fitzroy és una institució. Inspirat en la cultura cafetera de Melbourne, treballa amb <strong>Hola Coffee</strong> de Barcelona. Ofereix brunch de culte (el seu banana bread és llegendari), còctels al vespre i una terrassa que és pur Begur. És seasonal — obert a temporada alta principalment.</p>
+<p class="mb-4">El Fitzroy (tancat per temporada) és una institució. Inspirat en la cultura cafetera de Melbourne, treballa amb <strong>Hola Coffee</strong> de Barcelona. Ofereix brunch de culte (el seu banana bread és llegendari), còctels al vespre i una terrassa que és pur Begur. És seasonal — obert a temporada alta principalment.</p>
 <p class="mb-4"><strong>El millor:</strong> Brunch + la terrassa en un poble preciós. Val el viatge.</p>
 <hr class="my-8 border-black/20">
 <h3 class="font-typewriter text-xl mt-8 mb-4">☕ Grava — Pals</h3>
@@ -158,7 +158,7 @@ const breadcrumbs = [
 <ol class="space-y-2 mb-6 list-decimal pl-6">
 <li>Matí: Dirty Rabbit → La Maglia → ANNNA</li>
 <li>Migdia: Grava a Pals (pizza + cafè)</li>
-<li>Tarda: Fitzroy a Begur (si és temporada)</li>
+<li>Tarda: Fitzroy (tancat per temporada) a Begur (si és temporada)</li>
 </ol>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Si ets a Girona:</h3>
 <p class="mb-4">La Fàbrica → Espresso Mafia → Oniria → Hors Catégorie. Tot caminant.</p>
@@ -169,11 +169,11 @@ const breadcrumbs = [
 <h3 class="font-typewriter text-xl mt-8 mb-4">Què fa &quot;especial&quot; el cafè d&#39;especialitat?</h3>
 <p class="mb-4">Cafè puntuat per sobre de 80 (normalment 85+) a l&#39;escala SCA. Traçable fins a la finca d&#39;origen. Torrat amb cura per ressaltar les notes naturals del gra, no per tapar-les. Preparat per baristes que saben el que fan.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">És molt més car?</h3>
-<p class="mb-4">Un cafè a Dirty Rabbit costa entre 2,50€ i 4,50€. En un bar estàndard pagaries 1,50–2,50€. La diferència és d&#39;1–2€ per a una experiència completament diferent. Creiem que val la pena.</p>
+<p class="mb-4" set:html={getFactCopy("copy-0882615975f4")} />
 <h3 class="font-typewriter text-xl mt-8 mb-4">Quina és la millor època per a una ruta cafetera per la Costa Brava?</h3>
-<p class="mb-4">Primavera (abril–juny) o tardor (setembre–octubre). Tots els llocs estan oberts, no hi ha massificació i el clima és perfecte. A l&#39;hivern alguns tanquen (Fitzroy, Re Mei). A l&#39;estiu hi ha molta gent però totes les opcions estan disponibles.</p>
+<p class="mb-4">Primavera (abril–juny) o tardor (setembre–octubre). Tots els llocs estan oberts, no hi ha massificació i el clima és perfecte. A l&#39;hivern alguns tanquen (Fitzroy (tancat per temporada), Re Mei). A l&#39;estiu hi ha molta gent però totes les opcions estan disponibles.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Véns a S&#39;Agaró? Comença per Dirty Rabbit — Avinguda Platja d&#39;Aro 275. Obre la porta, demana un cafè i queda&#39;t l&#39;estona que vulguis. Això és casa teva.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-150b7f84e168")} />
 <p class="mb-4"><em>Última actualització: febrer 2026. Coneixes algun cafè d&#39;especialitat a la Costa Brava que ens falta? Escriu-nos a <a href="mailto:hola@dirtyrabbit.es">hola@dirtyrabbit.es</a>.</em></p>
 
       </div>
@@ -181,9 +181,7 @@ const breadcrumbs = [
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7e287ad1f6de")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -14,10 +15,10 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title={`Millor cafè d'especialitat prop de ${locationName} — Guia local 2026`}
-  description={`On trobar specialty coffee prop de ${locationName} i Sant Antoni de Calonge, Costa Brava. Guia honesta de cafeteries d'especialitat.`}
+  title={`Què veure i on prendre cafè a ${locationName}`}
+  description={`Visita ${locationName} i les seves cafeteries. Després, si et ve de gust anar a S’Agaró, descobreix Dirty Rabbit, en una altra localitat.`}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -26,7 +27,7 @@ const breadcrumbs = [
       <header class="mb-12">
         <p class="font-mono text-sm text-red tracking-wider mb-4">GUIA LOCAL · CAFÈ D'ESPECIALITAT</p>
         <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
-          Millor cafè d'especialitat prop de {locationName}
+          Què veure i on prendre cafè a {locationName}
         </h1>
         <p class="font-mono text-lg text-black/70 leading-relaxed">
           Calonge és dos mons en un: el poble medieval amb el seu castell del segle XI dalt del turó, i Sant Antoni de Calonge a baix a la costa — cales entre pins, aigua turquesa, i un ambient més tranquil que Platja d'Aro. Aquí tens on trobar bon cafè d'especialitat a la zona.
@@ -55,9 +56,8 @@ const breadcrumbs = [
 
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — El millor specialty de la zona
-          </h2>
-          <p class="font-mono text-sm text-red mb-4">Avinguda Platja d'Aro 275, S'Agaró · 10 min en cotxe des de Calonge</p>
+            <span class="text-3xl">🐇</span> Dirty Rabbit — una parada a S’Agaró</h2>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-cc211cc4ed42")} />
           
           <p class="mb-4">
             Si busques el millor cafè d'especialitat de la Costa Brava, Dirty Rabbit és a 10 minuts en direcció S'Agaró.
@@ -122,10 +122,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avinguda Platja d'Aro 275, S'Agaró<br>
-            10 minuts des de Calonge. Això és casa teva.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-37ebddcc6271")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

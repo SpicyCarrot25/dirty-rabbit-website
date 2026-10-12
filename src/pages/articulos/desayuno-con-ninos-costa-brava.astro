@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 
 const lang = 'es';
@@ -16,7 +17,7 @@ const breadcrumbs = [
   title={title}
   description={description}
   lang={lang}
-  articleMeta={{ datePublished: "2026-03-24", dateModified: "2026-03-24", section: "Article" }}
+  articleMeta={{ datePublished: "2026-03-24", dateModified: "2026-10-12", section: "Article" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -29,6 +30,7 @@ const breadcrumbs = [
           Desayunar con niños en la Costa Brava
         </h1>
       </header>
+<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy está cerrado por temporada; la fecha de reapertura no está confirmada. No es un cierre permanente. Consulta su web antes de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
 
       <!-- Main Content -->
       <div class="prose prose-lg max-w-none font-mono text-black/80 leading-relaxed">
@@ -60,7 +62,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Los mejores sitios para desayunar con niños por zona</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Zona S&#39;Agaró — Platja d&#39;Aro — Sant Feliu</h3>
 <h4>🐇 Dirty Rabbit — S&#39;Agaró</h4>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-d275a35fab67")} />
 <p class="mb-4">Dirty Rabbit es el único café de especialidad de la zona con <strong>zona de niños</strong>. No es un parque de bolas, pero tenemos un espacio donde los pequeños pueden moverse y jugar sin molestar.</p>
 <p class="mb-4"><strong>Lo que tenemos:</strong></p>
 <ul class="space-y-2 mb-6 list-disc pl-6">
@@ -106,7 +108,7 @@ const breadcrumbs = [
 <p class="mb-4"><strong>Para niños:</strong> Croissants, pain au chocolat, zumos.</p>
 <hr class="my-8 border-black/20">
 <h3 class="font-typewriter text-xl mt-8 mb-4">Zona Begur — Pals</h3>
-<h4>Fitzroy Café — Begur</h4>
+<h4>Fitzroy Café (cerrado por temporada) — Begur</h4>
 <p class="mb-4"><strong>Carrer de Francesc Forgas, 1, Begur</strong> · 20 min en coche</p>
 <p class="mb-4">Brunch australiano con terraza en el casco antiguo de Begur. Los pancakes y el banana bread son hits con los niños.</p>
 <p class="mb-4"><strong>Para niños:</strong></p>
@@ -230,7 +232,7 @@ const breadcrumbs = [
 <li>13:00 — Paseo por el pueblo</li>
 </ol>
 <hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">Combo 4: Fitzroy + Calas de Begur</h3>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Combo 4: Fitzroy (cerrado por temporada) + Calas de Begur</h3>
 <p class="mb-4"><strong>Por qué funciona:</strong></p>
 <ul class="space-y-2 mb-6 list-disc pl-6">
 <li>Begur es precioso para pasear</li>
@@ -238,7 +240,7 @@ const breadcrumbs = [
 </ul>
 <p class="mb-4"><strong>El plan:</strong></p>
 <ol class="space-y-2 mb-6 list-decimal pl-6">
-<li>9:30 — Brunch en Fitzroy</li>
+<li>9:30 — Brunch en Fitzroy (cerrado por temporada)</li>
 <li>11:00 — Coche hasta Aiguablava (10 min)</li>
 <li>11:15 — Cala paradisíaca, menos gente que en playas grandes</li>
 </ol>
@@ -249,7 +251,7 @@ const breadcrumbs = [
 <p class="mb-4"><strong>La mejor opción:</strong> ANNNA en Sant Feliu de Guíxols. 100% sin gluten, panadería artesana. Pero aviso: el local es muy pequeño, no ideal para niños activos.</p>
 <p class="mb-4"><strong>Alternativas:</strong></p>
 <ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Fitzroy Café (tiene opciones GF, más espacio)</li>
+<li>Fitzroy Café (cerrado por temporada) (tiene opciones GF, más espacio)</li>
 <li>Dirty Rabbit (algunas opciones sin gluten, pero no 100% GF kitchen — pregunta)</li>
 </ul>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Niños con alergias</h3>
@@ -273,13 +275,13 @@ const breadcrumbs = [
 <h3 class="font-typewriter text-xl mt-8 mb-4">¿Puedo dar el pecho en las cafeterías?</h3>
 <p class="mb-4">Sí. Es legal en España y está normalizado. Nunca hemos visto a nadie poner problemas.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">¿Cuánto cuesta desayunar con niños?</h3>
-<p class="mb-4">Depende. En Dirty Rabbit: 2 adultos + 1 niño, unos 30–40€ con todo. En sitios más baratos: 15–25€. En hoteles de lujo: 50€+.</p>
+<p class="mb-4" set:html={getFactCopy("copy-893302d556cf")} />
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Nuestra recomendación</h2>
 <p class="mb-4">Si tienes que elegir un solo sitio para desayunar con niños en la zona de S&#39;Agaró:</p>
 <p class="mb-4"><strong>Dirty Rabbit</strong> — El único café de especialidad con zona de niños. Terraza, tronas, ambiente relajado, y a 3 minutos de Sant Pol. Paciencia, productos buenos, y un espacio donde los niños son bienvenidos de verdad.</p>
 <p class="mb-4">Si tu hijo es celíaco: <strong>ANNNA</strong> — pero ten en cuenta que el local es muy pequeño. Ve preparado.</p>
-<p class="mb-4">Si quieres brunch más elaborado y los niños ya son mayores: <strong>Fitzroy</strong> en Begur.</p>
+<p class="mb-4">Si quieres brunch más elaborado y los niños ya son mayores: <strong>Fitzroy (cerrado por temporada)</strong> en Begur.</p>
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Para saber más</h2>
 <ul class="space-y-2 mb-6 list-disc pl-6">
@@ -288,7 +290,7 @@ const breadcrumbs = [
 <li><a href="https://sca.coffee" target="_blank" rel="noopener noreferrer" class="text-red hover:underline">Specialty Coffee Association</a> — El marco de calidad del café que ofrecemos a los adultos de la familia</li>
 </ul>
 
-<p class="mb-4"><em>Ven a Dirty Rabbit con toda la familia — Avenida Platja d&#39;Aro 275, S&#39;Agaró. Tenemos terraza, tronas, y café que los padres necesitáis después de una noche con críos. A 3 minutos de la Playa de Sant Pol. Tu casa lejos de casa — también para los pequeños.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-9ec102e1375d")} />
 <p class="mb-4"><em>Última actualización: febrero 2026</em></p>
 
       </div>
@@ -298,7 +300,7 @@ const breadcrumbs = [
           <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
           <ul class="font-mono text-sm space-y-3">
             <li>☕ <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">El mejor café de especialidad en S'Agaró</a></li>
-            <li>🍵 <a href="/matcha" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
+            <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
             <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
             <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
             <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía completa 2026</a></li>
@@ -307,9 +309,7 @@ const breadcrumbs = [
 <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">¿Vienes a vernos?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-4fb00d6cad80")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

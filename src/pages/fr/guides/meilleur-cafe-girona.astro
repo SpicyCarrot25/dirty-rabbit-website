@@ -1,8 +1,10 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations } from '../../../i18n';
 
 const lang = 'fr';
+// Editorial update (publication date unknown): dateModified: "2026-10-12"
 const t = getTranslations(lang);
 
 const locationName = "Girona";
@@ -16,8 +18,8 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title={`Meilleur café de spécialité à ${locationName} — Guide complet 2026`}
-  description={`Guide des meilleurs cafés de spécialité à ${locationName}. De La Fábrica à Espresso Mafia, Oniria et au-delà : où les cyclistes pros prennent leur café.`}
+  title={`Que voir et où prendre un café à ${locationName}`}
+  description={`Découvrez ${locationName} et ses cafés. Puis, si vous souhaitez aller à S’Agaró, retrouvez Dirty Rabbit dans une autre localité.`}
   lang={lang}
   breadcrumbs={breadcrumbs}>
 
@@ -27,7 +29,7 @@ const breadcrumbs = [
       <header class="mb-12">
         <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · CAFÉ DE SPÉCIALITÉ</p>
         <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
-          Meilleur café de spécialité à {locationName}
+          Que voir et où prendre un café à {locationName}
         </h1>
         <p class="font-mono text-lg text-black/70 leading-relaxed">
           Girona est la capitale provinciale et, grâce à sa communauté cycliste professionnelle, elle est devenue l'un des hauts lieux du café de spécialité en Espagne. Des anciens cyclistes pros aux baristas passionnés, la scène café ici est mature et diversifiée.
@@ -101,7 +103,7 @@ const breadcrumbs = [
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
             <span class="text-3xl">🐇</span> Et sur la côte ? Dirty Rabbit à S'Agaró (35 min)
           </h2>
-          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró</p>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-13e83405928f")} />
           
           <p class="mb-4">
             Si vous descendez vers la Costa Brava depuis Girona, ne manquez pas Dirty Rabbit à S'Agaró.
@@ -137,10 +139,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">De Girona à la mer</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
-            35 minutes depuis Girona. Le meilleur café de la côte vous attend.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-8a3bcdd4f573")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -14,10 +15,10 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title={`Millor cafè d'especialitat a ${locationName} — Guia local 2026`}
-  description={`On trobar specialty coffee a ${locationName}, Costa Brava. Grava, Dirty Rabbit i més — guia honesta de cafeteries d'especialitat.`}
+  title={`Què veure i on prendre cafè a ${locationName}`}
+  description={`Visita ${locationName} i les seves cafeteries. Després, si et ve de gust anar a S’Agaró, descobreix Dirty Rabbit, en una altra localitat.`}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -26,12 +27,13 @@ const breadcrumbs = [
       <header class="mb-12">
         <p class="font-mono text-sm text-red tracking-wider mb-4">GUIA LOCAL · CAFÈ D'ESPECIALITAT</p>
         <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
-          Millor cafè d'especialitat a {locationName}
+          Què veure i on prendre cafè a {locationName}
         </h1>
         <p class="font-mono text-lg text-black/70 leading-relaxed">
           Pals és una postal medieval: recinte gòtic perfectament conservat, torre romànica del segle XI, i camps d'arròs que donen al poble un aire inesperat. El casc antic és petit però impecable — pedra, arcs, vistes a l'Empordà. I ara també té specialty coffee.
         </p>
       </header>
+<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy està tancat per temporada; la data de reobertura no està confirmada. No és un tancament permanent. Consulta el seu web abans de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
 
       <div class="prose prose-lg max-w-none">
         
@@ -49,9 +51,8 @@ const breadcrumbs = [
 
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — 25 minuts fins al millor cafè
-          </h2>
-          <p class="font-mono text-sm text-red mb-4">Avinguda Platja d'Aro 275, S'Agaró · 25 min en cotxe des de Pals</p>
+            <span class="text-3xl">🐇</span> Dirty Rabbit — una parada a S’Agaró</h2>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-508be7689e15")} />
           
           <p class="mb-4">
             Si busques el millor cafè d'especialitat de la Costa Brava, Dirty Rabbit és a 25 minuts — i és una excursió perfecta si baixes cap a la costa.
@@ -100,7 +101,7 @@ const breadcrumbs = [
                 <td class="py-3">Right Side + pizzeria</td>
               </tr>
               <tr class="border-b border-black/20">
-                <td class="py-3">Fitzroy Café</td>
+                <td class="py-3">Fitzroy Café (tancat per temporada)</td>
                 <td class="py-3">15 min (Begur)</td>
                 <td class="py-3">Melbourne-style (estacional)</td>
               </tr>
@@ -115,10 +116,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avinguda Platja d'Aro 275, S'Agaró<br>
-            25 minuts des de Pals. Combina medieval + cafè + platja.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-10c53c8f5517")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

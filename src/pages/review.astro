@@ -66,12 +66,8 @@ const googleMapsUrl = 'https://g.page/r/CZzyPK5naLS3EBE/review';
         </p>
       </div>
       
-      <!-- Step 2A: 5 Stars - Google Review -->
-      <div id="step-5stars" class="hidden space-y-6">
-        <p class="font-typewriter text-4xl md:text-5xl text-black">
-          {t.thanks5}
-        </p>
-        
+      <!-- Public Google review access for every guest -->
+      <div id="public-review" class="space-y-3 my-6">
         <a 
           href={googleMapsUrl}
           target="_blank"
@@ -80,9 +76,13 @@ const googleMapsUrl = 'https://g.page/r/CZzyPK5naLS3EBE/review';
         >
           {t.googleButton}
         </a>
-        
         <p class="font-mono text-sm text-black/60">
           {t.googleSubtext}
+        </p>
+      </div>
+      <div id="step-5stars" class="hidden space-y-6">
+        <p class="font-typewriter text-4xl md:text-5xl text-black">
+          {t.thanks5}
         </p>
       </div>
       

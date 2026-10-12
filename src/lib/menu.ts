@@ -1,4 +1,5 @@
-import menuSource from '../data/menu.json';
+import { businessFacts } from './business-facts';
+const menuSource = businessFacts.published.menu;
 import { getLocalizedPath, type Language } from '../i18n';
 
 type LocalizedText = Partial<Record<Language, string>>;

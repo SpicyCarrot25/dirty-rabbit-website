@@ -1,4 +1,5 @@
 ---
+import { getBusinessMapEmbedUrl } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations } from '../../i18n';
 
@@ -36,7 +37,7 @@ const t = getTranslations(lang);
           <!-- Map -->
           <div class="mt-6 aspect-square md:aspect-video rounded-lg overflow-hidden border border-black/10">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.9654578374!2d3.0619444!3d41.7986111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb1b9c8c8c8c8c%3A0x0!2sAvinguda%20de%20Platja%20d&#39;Aro%2C%20275%2C%2017248%20S&#39;Agar%C3%B3%2C%20Girona!5e0!3m2!1sen!2ses!4v1234567890"
+              src={getBusinessMapEmbedUrl()}
               width="100%" 
               height="100%" 
               style="border:0;" 
@@ -55,6 +56,8 @@ const t = getTranslations(lang);
             <p class="text-red font-bold">{t.footer.closed}</p>
           </div>
           
+          <h2 class="font-typewriter text-2xl font-bold text-red mb-6 mt-10">Téléphone</h2>
+          <a href="tel:+34872454264" class="font-mono text-lg text-red hover:underline">+34 872 454 264</a>
           <h2 class="font-typewriter text-2xl font-bold text-red mb-6 mt-10">Email</h2>
           <a 
             href="mailto:hola@dirtyrabbit.es" 

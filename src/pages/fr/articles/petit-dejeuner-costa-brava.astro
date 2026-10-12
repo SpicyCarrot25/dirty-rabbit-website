@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'fr';
@@ -16,7 +17,7 @@ const breadcrumbs = [
   title={title}
   description={description}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Article" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Article" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -29,6 +30,7 @@ const breadcrumbs = [
           Où prendre le petit-déjeuner sur la Costa Brava
         </h1>
       </header>
+<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy est fermé pour la saison ; la date de réouverture reste à confirmer. Il ne s’agit pas d’une fermeture définitive. Consultez son site avant de prévoir une visite. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
 
       <!-- Main Content -->
       <div class="prose prose-lg max-w-none font-mono text-black/80 leading-relaxed">
@@ -47,7 +49,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zone 1 : S&#39;Agaró — Platja d&#39;Aro — Sant Feliu de Guíxols</h2>
 <p class="mb-4">C&#39;est la zone avec le plus d&#39;options de qualité dans un court rayon. En 10 minutes en voiture, vous pouvez choisir entre cinq ou six bons endroits.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">🐇 Dirty Rabbit — S&#39;Agaró</h3>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-3fe8a49f7437")} />
 <p class="mb-4">Dirty Rabbit est notre café (oui, c&#39;est nous qui écrivons ce guide, donc le biais est évident). Mais nous allons vous expliquer pourquoi nous pensons que ça vaut le coup, avec des faits.</p>
 <p class="mb-4">Nous servons du café de <strong>La Cabra</strong>, le torréfacteur danois qui figure depuis des années parmi les meilleurs du monde. Nous le préparons sur une <strong>La Marzocco KB90</strong> avec de l&#39;eau filtrée par <strong>osmose inverse</strong>. Si le café est votre truc, vous le remarquerez dès la première gorgée.</p>
 <p class="mb-4">Mais Dirty Rabbit, c&#39;est plus que du café. Le petit-déjeuner comprend des toasts au <strong>saumon fumé Benfumat</strong> (le meilleur fumé de Catalogne), des viennoiseries de <strong>La Puntual</strong> (boulangerie de Gérone), et du pain au levain d&#39;<strong>Origo Bakery</strong> (Barcelone). Nous servons aussi du matcha <strong>REQ</strong> et du chai <strong>Awachai</strong> — nous ne nous limitons pas au café.</p>
@@ -75,10 +77,8 @@ const breadcrumbs = [
 <p class="mb-4"><strong>Horaires :</strong> Mercredi à samedi 8h30–19h30. Dimanche 8h30–14h30. Fermé lundi et mardi.</p>
 <p class="mb-4"><strong>Idéal pour :</strong> Amateurs de viennoiseries françaises, petits-déjeuners sucrés. Une de nos recommandations préférées de la zone.</p>
 <hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">Grace Coffee — Platja d&#39;Aro</h3>
-<p class="mb-4"><strong>Carrer Pineda del Mar, 27, Platja d&#39;Aro</strong> · 5 min en voiture</p>
-<p class="mb-4">Option pratique si vous êtes dans le centre de Platja d&#39;Aro et ne voulez pas vous déplacer. Café correct, petits-déjeuners variés, bons avis (4.6 sur Google). Ce n&#39;est pas du café de spécialité certifié, mais c&#39;est au-dessus de la moyenne de la zone touristique.</p>
-<p class="mb-4"><strong>Idéal pour :</strong> Petits-déjeuners rapides et pratiques dans le centre de Platja d&#39;Aro.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Grace Coffee — fermé définitivement</h3>
+<p class="mb-4">Grace Coffee, à Platja d’Aro, a fermé définitivement et ne figure plus parmi nos recommandations actuelles. Statut vérifié le 5 octobre 2026 sur Google Maps. Pour d’autres options à proximité, consultez La Maglia à Platja d’Aro, ANNNA à Sant Feliu de Guíxols et Dirty Rabbit à S’Agaró. Vérifiez les horaires actuels avant de vous déplacer.</p>
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zone 2 : Palamós — Calonge</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Zero — Palamós</h3>
@@ -94,9 +94,9 @@ const breadcrumbs = [
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zone 3 : Begur — Pals — Calella de Palafrugell</h2>
 <p class="mb-4">C&#39;est la zone la plus &quot;instagrammable&quot; de la Costa Brava. Villages de charme, criques de carte postale et quelques très bons cafés.</p>
-<h3 class="font-typewriter text-xl mt-8 mb-4">Fitzroy Café — Begur</h3>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Fitzroy Café (fermé pour la saison) — Begur</h3>
 <p class="mb-4"><strong>Carrer de Francesc Forgas, 1, Begur</strong> · 20 min en voiture depuis S&#39;Agaró</p>
-<p class="mb-4">Le Fitzroy est une institution. Inspiré par la culture café de Melbourne, il propose un brunch culte : banana bread légendaire, kimchi toasties, smash avo toast, pancakes à la banane. Le tout sur une terrasse magnifique dans la vieille ville de Begur.</p>
+<p class="mb-4">Le Fitzroy (fermé pour la saison) est une institution. Inspiré par la culture café de Melbourne, il propose un brunch culte : banana bread légendaire, kimchi toasties, smash avo toast, pancakes à la banane. Le tout sur une terrasse magnifique dans la vieille ville de Begur.</p>
 <p class="mb-4"><strong>Attention :</strong> C&#39;est saisonnier — ouvert principalement en haute saison (printemps-été). Vérifiez avant d&#39;y aller en hiver.</p>
 <p class="mb-4"><strong>Horaires (saison) :</strong> Lundi, mercredi à dimanche 9h00–14h00. Peut ouvrir le soir.</p>
 <p class="mb-4"><strong>Idéal pour :</strong> Brunch de haut niveau, ambiance cool, le plus beau village de la zone.</p>
@@ -174,7 +174,7 @@ const breadcrumbs = [
 </ul>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Brunch à l&#39;australienne/internationale</h3>
 <ul class="space-y-2 mb-6 list-disc pl-6">
-<li><strong>Top picks :</strong> Fitzroy Café (Begur), Federal Café (Gérone), Dirty Rabbit (S&#39;Agaró)</li>
+<li><strong>Top picks :</strong> Fitzroy Café (fermé pour la saison) (Begur), Federal Café (Gérone), Dirty Rabbit (S&#39;Agaró)</li>
 <li><strong>Comprend :</strong> Eggs benedict, avocado toast, pancakes, bowls</li>
 </ul>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Viennoiseries artisanales</h3>
@@ -196,7 +196,7 @@ const breadcrumbs = [
 <h3 class="font-typewriter text-xl mt-8 mb-4">Peut-on petit-déjeuner sur la Costa Brava en hiver ?</h3>
 <p class="mb-4">Oui, mais beaucoup d&#39;endroits ferment ou réduisent leurs horaires. Ceux que nous mentionnons comme &quot;non saisonniers&quot; restent généralement ouverts toute l&#39;année. Vérifiez toujours avant d&#39;y aller.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Faut-il réserver pour le petit-déjeuner ?</h3>
-<p class="mb-4">Normalement non. Exceptions : Fitzroy à Begur (week-ends d&#39;été), Federal Café à Gérone (jours de marché). Dirty Rabbit n&#39;accepte pas les réservations pour le petit-déjeuner — c&#39;est premier arrivé, premier servi.</p>
+<p class="mb-4">Normalement non. Exceptions : Fitzroy (fermé pour la saison) à Begur (week-ends d&#39;été), Federal Café à Gérone (jours de marché). Dirty Rabbit n&#39;accepte pas les réservations pour le petit-déjeuner — c&#39;est premier arrivé, premier servi.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Combien coûte un petit-déjeuner ?</h3>
 <ul class="space-y-2 mb-6 list-disc pl-6">
 <li><strong>Bar standard :</strong> 4–6€ (café + toast)</li>
@@ -215,10 +215,10 @@ const breadcrumbs = [
 <ul class="space-y-2 mb-6 list-disc pl-6">
 <li>Matin : Dirty Rabbit → La Maglia</li>
 <li>Midi : Grava à Pals (pizza + café)</li>
-<li>Après-midi : Fitzroy à Begur (si c&#39;est la saison)</li>
+<li>Après-midi : Fitzroy (fermé pour la saison) à Begur (si c&#39;est la saison)</li>
 </ul>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Vous venez à S&#39;Agaró ? Passez au Dirty Rabbit — Avenida Platja d&#39;Aro 275. Nous ouvrons la porte, nous vous préparons un vrai café, et vous restez aussi longtemps que vous voulez. C&#39;est votre chez-vous loin de chez vous.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-a8bb26d70fca")} />
 <p class="mb-4"><em>Dernière mise à jour : février 2026</em></p>
 
       </div>
@@ -226,9 +226,7 @@ const breadcrumbs = [
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Vous venez nous voir?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-44a10ac1417d")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

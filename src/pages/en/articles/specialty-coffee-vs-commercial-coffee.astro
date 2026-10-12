@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'en';
@@ -441,8 +442,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Speciality Coffee on the Costa Brava</h2>
 <p class="mb-4">If you&#39;re on the Costa Brava and want to try real speciality coffee:</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">In S&#39;Agaró</h3>
-<p class="mb-4"><strong>Dirty Rabbit</strong> — Avenida Platja d&#39;Aro 275
-Coffee from <strong>La Cabra</strong> (Denmark), consistently among the best roasters in the world. Prepared on a <strong>La Marzocco KB90</strong> with <strong>reverse osmosis</strong> water. 3 minutes from Sant Pol Beach.</p>
+<p class="mb-4" set:html={getFactCopy("copy-848d74d09325")} />
 <h3 class="font-typewriter text-xl mt-8 mb-4">In the Area</h3>
 <ul class="space-y-2 mb-6 list-disc pl-6">
 <li><strong>La Maglia</strong> (Platja d&#39;Aro) — Their own roastery, first specialty on the Costa Brava</li>
@@ -469,7 +469,7 @@ Coffee from <strong>La Cabra</strong> (Denmark), consistently among the best roa
 <p class="mb-4">The difference between a £1.50 commercial coffee and a £3 speciality one is £1.50. That&#39;s less than an industrial pastry. If you drink one coffee a day, it&#39;s £45/month difference for a completely different experience.</p>
 <p class="mb-4">Try it once. If you don&#39;t notice the difference, stick with what you know. But if you do notice — and most people do — there&#39;s no going back.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Want to try speciality coffee on the Costa Brava? Pop into Dirty Rabbit — Avenida Platja d&#39;Aro 275, S&#39;Agaró. We serve La Cabra, prepared as it should be. No sugar. No excuses. Your home away from home.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-c38d2718ec9a")} />
 <p class="mb-4"><em>Last updated: February 2026</em></p>
 
       </div>
@@ -490,9 +490,7 @@ Coffee from <strong>La Cabra</strong> (Denmark), consistently among the best roa
 <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Coming to visit?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7894039d7078")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

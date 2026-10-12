@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -19,40 +20,7 @@ const breadcrumbs = [
   articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Specialty café in S'Agaró, Costa Brava. Organic matcha from REQ Matcha, La Cabra coffee, Origo Bakery bread. Open since November 2024.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avinguda Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.7882,
-    "longitude": 3.0323
-  },
-  "url": "https://dirtyrabbit.es/matcha-latte-costa-brava",
-  "telephone": "+34872454264",
-  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
-  "priceRange": "€€",
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 41.7882,
-      "longitude": 3.0323
-    },
-    "geoRadius": "35000"
-  }
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-d49c8636ff83", "en"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -82,8 +50,8 @@ const breadcrumbs = [
   <li>Extra strong — higher dose, for a little more</li>
 </ul>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Where to find good matcha latte on the Costa Brava</h3>
-<p class="mb-4">Dirty Rabbit is in S'Agaró, Avinguda Platja d'Aro 275 — a central point on the southern Costa Brava. From Tossa de Mar, about 20 minutes. From Palamós, about 15. From Begur, about 25. From central Girona, 35 minutes along the C-65.</p>
-<p class="mb-4">We opened on 1 November 2024 — off-season, deliberately. We're not a summer-only place. Matcha is available year-round, hot or cold, with dairy or plant milk.</p>
+<p class="mb-4" set:html={getFactCopy("copy-61324bf5df68")} />
+<p class="mb-4" set:html={getFactCopy("copy-cd54246ae371")} />
 <p class="mb-4">Other specialty cafés exist on the Costa Brava. Most, however, haven't applied the same care to matcha. If you're travelling along the coast and matcha matters to you, it's worth checking the location before you order.</p>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Why matcha is everywhere but good matcha is rare</h3>
 <p class="mb-4">Tourism pressure on the Costa Brava pushes cafés to stock what international visitors already know — and matcha latte is now standard across northern Europe, the UK, and Australia. The problem is that adding the line to the menu doesn't guarantee the right ingredient.</p>
@@ -93,11 +61,11 @@ const breadcrumbs = [
 <div class="space-y-6">
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Where can I get a good matcha latte on the Costa Brava?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Dirty Rabbit in S'Agaró, Avinguda Platja d'Aro 275. The most accessible specialty café on the southern coast with Japanese-origin organic matcha. Less than 25 minutes from most Baix Empordà towns.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-81672fe8d4dc")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Do you work with matcha year-round or just in summer?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Year-round. We opened on 1 November 2024, outside of high season. We don't close in winter. Hours may adjust between seasons — check our social media or call +34 872 454 264.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-6c3f23c1d10a")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">What is REQ Matcha?</p>
@@ -131,10 +99,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-641e5275e080")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

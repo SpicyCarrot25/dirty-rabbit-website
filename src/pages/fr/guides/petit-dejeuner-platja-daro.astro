@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations } from '../../../i18n';
 
@@ -50,10 +51,8 @@ const breadcrumbs = [
         </section>
 
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — Le meilleur petit-déjeuner (5 min)
-          </h2>
-          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 5 min en voiture</p>
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">Dirty Rabbit — S’Agaró</h2>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-e5b709bbf63b")} />
           
           <p class="mb-4">
             Pour le meilleur petit-déjeuner de la région, faites les 5 minutes jusqu'à S'Agaró. Ça vaut vraiment le détour.
@@ -122,10 +121,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">On vous attend à 5 minutes</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
-            Le meilleur petit-déjeuner de la région. Ça vaut le détour.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-bdcad8df619f")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

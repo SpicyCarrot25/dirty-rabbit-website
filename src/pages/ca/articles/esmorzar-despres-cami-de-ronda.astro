@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'ca';
@@ -16,7 +17,7 @@ const breadcrumbs = [
   title={title}
   description={description}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Article" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Article" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -29,6 +30,7 @@ const breadcrumbs = [
           Esmorzar després del Camí de Ronda
         </h1>
       </header>
+<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy està tancat per temporada; la data de reobertura no està confirmada. No és un tancament permanent. Consulta el seu web abans de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
 
       <!-- Main Content -->
       <div class="prose prose-lg max-w-none font-mono text-black/80 leading-relaxed">
@@ -99,7 +101,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">On esmorzar després de cada tram</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Si acabes a Sant Pol / S&#39;Agaró</h3>
 <h4>🐇 Dirty Rabbit — S&#39;Agaró</h4>
-<p class="mb-4"><strong>Avinguda Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-385e8285b0c0")} />
 <p class="mb-4">A 3 minuts caminant de la Platja de Sant Pol. Perfecte després d&#39;un tram matinal.</p>
 <p class="mb-4"><strong>Per què funciona per a excursionistes:</strong></p>
 <ul class="space-y-2 mb-6 list-disc pl-6">
@@ -140,7 +142,7 @@ const breadcrumbs = [
 <p class="mb-4"><strong>Horari:</strong> Tots els dies 8:00–15:00.</p>
 <hr class="my-8 border-black/20">
 <h3 class="font-typewriter text-xl mt-8 mb-4">Si acabes a Begur / Pals</h3>
-<h4>Fitzroy Cafè — Begur</h4>
+<h4>Fitzroy (tancat per temporada) Cafè — Begur</h4>
 <p class="mb-4"><strong>Carrer de Francesc Forgas, 1, Begur</strong></p>
 <p class="mb-4">El brunch més famós de la zona. Banana bread, pancakes, smash avo toast. Després d&#39;un tram llarg, és una recompensa ben merescuda.</p>
 <p class="mb-4"><strong>Ull:</strong> Només temporada alta. Verifica abans d&#39;anar.</p>
@@ -203,7 +205,7 @@ const breadcrumbs = [
 </ol>
 <p class="mb-4">És la Costa Brava en estat pur.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Després de caminar, passa per Dirty Rabbit — Avinguda Platja d&#39;Aro 275, S&#39;Agaró. Som a 3 minuts de Sant Pol. Cafè de La Cabra, torrades amb salmó Benfumat, i tot el temps que necessitis per recuperar-te. Casa teva lluny de casa.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-ed28c1b3dcfc")} />
 <p class="mb-4"><em>Última actualització: febrer 2026</em></p>
 
       </div>
@@ -211,9 +213,7 @@ const breadcrumbs = [
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7e287ad1f6de")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

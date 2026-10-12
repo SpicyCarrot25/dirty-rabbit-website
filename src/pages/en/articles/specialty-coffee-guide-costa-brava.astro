@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'en';
@@ -16,7 +17,7 @@ const breadcrumbs = [
   title={title}
   description={description}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Article" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Article" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -29,6 +30,7 @@ const breadcrumbs = [
           Best Speciality Coffee Shops on the Costa Brava
         </h1>
       </header>
+<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy is closed for the season; the reopening date is unconfirmed. This is not a permanent closure. Check its website before planning a visit. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
 
       <!-- Main Content -->
       <div class="prose prose-lg max-w-none font-mono text-black/80 leading-relaxed">
@@ -48,7 +50,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zone 1: S&#39;Agaró — Platja d&#39;Aro — Sant Feliu de Guíxols</h2>
 <p class="mb-4">This is the area with the highest density of specialty coffee on the entire Costa Brava. Within a 10-minute drive, you have five real options.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">🐇 Dirty Rabbit — S&#39;Agaró</h3>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-2a263e56ea85")} />
 <p class="mb-4">If you ask us (and yes, it&#39;s us, so the bias is obvious), Dirty Rabbit is the best speciality coffee on the Costa Brava. But we&#39;ll explain why with facts, not marketing.</p>
 <p class="mb-4">We serve <strong>La Cabra</strong>, the Danish roaster that&#39;s been among the best in the world for years. It&#39;s not just &quot;good&quot; coffee — it&#39;s single-origin coffee, traceable to the producer, processed with precision and roasted in Copenhagen. We prepare it on a <strong>La Marzocco KB90</strong> with <strong>reverse osmosis</strong> filtered water — every variable controlled.</p>
 <p class="mb-4">But Dirty Rabbit isn&#39;t just about coffee. It&#39;s a place to have eggs benedict after a swim at Sant Pol, work on your laptop on the terrace, or stay for two hours chatting. We call it &quot;your home away from home&quot; because that&#39;s what we want it to be.</p>
@@ -73,10 +75,8 @@ const breadcrumbs = [
 <p class="mb-4">A cosy spot in Sant Feliu with quality coffee. It&#39;s not confirmed they work with a recognised specialty roaster, but the level is noticeably higher than the area average. Good brunch and pleasant atmosphere.</p>
 <p class="mb-4"><strong>Best for:</strong> Quick option if you&#39;re in Sant Feliu and want something above standard coffee.</p>
 <hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">☕ Grace Coffee — Platja d&#39;Aro</h3>
-<p class="mb-4"><strong>Platja d&#39;Aro</strong> · 5 min drive</p>
-<p class="mb-4">Quality-focused café with good reviews (4.6 on Google with 275 reviews). If you&#39;re in central Platja d&#39;Aro and don&#39;t want to move, it&#39;s an option for decent coffee.</p>
-<p class="mb-4"><strong>Best for:</strong> Central location in Platja d&#39;Aro.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Grace Coffee — permanently closed</h3>
+<p class="mb-4">Grace Coffee in Platja d’Aro is permanently closed and is no longer included in our current café recommendations. Status checked on 5 October 2026 against Google Maps. For current nearby options, see La Maglia in Platja d’Aro, ANNNA in Sant Feliu de Guíxols and Dirty Rabbit in S’Agaró. Check each café’s current opening hours before travelling.</p>
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zone 2: Palamós — Calonge</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">☕ Dupla — Sant Antoni de Calonge</h3>
@@ -88,9 +88,9 @@ const breadcrumbs = [
 <p class="mb-4">Palamós is famous for its red prawns, but also has coffee options. Zero offers speciality coffee from <strong>Originem</strong> (Girona) in a modern atmosphere.</p>
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Zone 3: Begur — Pals</h2>
-<h3 class="font-typewriter text-xl mt-8 mb-4">☕ Fitzroy Café — Begur</h3>
+<h3 class="font-typewriter text-xl mt-8 mb-4">☕ Fitzroy Café (closed for the season) — Begur</h3>
 <p class="mb-4"><strong>Begur</strong> · 20 min drive · 🏖️ <em>High season</em></p>
-<p class="mb-4">Fitzroy is an institution. Inspired by Melbourne coffee culture, they work with <strong>Hola Coffee</strong> from Barcelona. They offer cult brunch (their banana bread is legendary), cocktails in the evening and a terrace that&#39;s pure Begur. It&#39;s seasonal — open mainly in high season.</p>
+<p class="mb-4">Fitzroy (closed for the season) is an institution. Inspired by Melbourne coffee culture, they work with <strong>Hola Coffee</strong> from Barcelona. They offer cult brunch (their banana bread is legendary), cocktails in the evening and a terrace that&#39;s pure Begur. It&#39;s seasonal — open mainly in high season.</p>
 <p class="mb-4"><strong>Best for:</strong> Brunch + the terrace in a beautiful village. Worth the trip.</p>
 <hr class="my-8 border-black/20">
 <h3 class="font-typewriter text-xl mt-8 mb-4">☕ Grava — Pals</h3>
@@ -158,7 +158,7 @@ const breadcrumbs = [
 <ol class="space-y-2 mb-6 list-decimal pl-6">
 <li>Morning: Dirty Rabbit → La Maglia → ANNNA</li>
 <li>Midday: Grava in Pals (pizza + coffee)</li>
-<li>Afternoon: Fitzroy in Begur (if in season)</li>
+<li>Afternoon: Fitzroy (closed for the season) in Begur (if in season)</li>
 </ol>
 <h3 class="font-typewriter text-xl mt-8 mb-4">If you&#39;re in Girona:</h3>
 <p class="mb-4">La Fábrica → Espresso Mafia → Oniria → Hors Catégorie. All walking distance.</p>
@@ -169,11 +169,11 @@ const breadcrumbs = [
 <h3 class="font-typewriter text-xl mt-8 mb-4">What makes coffee &quot;specialty&quot;?</h3>
 <p class="mb-4">Coffee scored above 80 (usually 85+) on the SCA scale. Traceable to the farm of origin. Roasted with care to highlight the bean&#39;s natural notes, not to hide them. Prepared by baristas who know what they&#39;re doing.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Is it much more expensive?</h3>
-<p class="mb-4">A coffee at Dirty Rabbit costs between €2.50 and €4.50. At a standard bar you&#39;d pay €1.50–2.50. The difference is €1–2 for a completely different experience. We think it&#39;s worth it.</p>
+<p class="mb-4" set:html={getFactCopy("copy-193a234e60a2")} />
 <h3 class="font-typewriter text-xl mt-8 mb-4">What&#39;s the best time for a coffee route on the Costa Brava?</h3>
-<p class="mb-4">Spring (April–June) or autumn (September–October). All places are open, no crowds and the weather is perfect. In winter some close (Fitzroy, Re Mei). In summer there are lots of people but all options are available.</p>
+<p class="mb-4">Spring (April–June) or autumn (September–October). All places are open, no crowds and the weather is perfect. In winter some close (Fitzroy (closed for the season), Re Mei). In summer there are lots of people but all options are available.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Coming to S&#39;Agaró? Start at Dirty Rabbit — Avenida Platja d&#39;Aro 275. Open the door, order a coffee and stay as long as you like. This is your home.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-d03a58246ad5")} />
 <p class="mb-4"><em>Last updated: February 2026. Know a speciality coffee shop on the Costa Brava we&#39;re missing? Write to us at <a href="mailto:hola@dirtyrabbit.es">hola@dirtyrabbit.es</a>.</em></p>
 
       </div>
@@ -194,9 +194,7 @@ const breadcrumbs = [
 <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Coming to visit?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7894039d7078")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

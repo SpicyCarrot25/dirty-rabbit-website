@@ -1,8 +1,10 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations } from '../../../i18n';
 
 const lang = 'fr';
+// Editorial update (publication date unknown): dateModified: "2026-10-12"
 const t = getTranslations(lang);
 
 const locationName = "Sant Feliu de Guíxols";
@@ -16,8 +18,8 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title={`Meilleur café de spécialité à ${locationName} — Guide local 2026`}
-  description={`Guide des meilleurs cafés de spécialité à ${locationName}, Costa Brava. D'ANNNA à Dirty Rabbit : où trouver du vrai bon café.`}
+  title={`Que voir et où prendre un café à ${locationName}`}
+  description={`Découvrez ${locationName} et ses cafés. Puis, si vous souhaitez aller à S’Agaró, retrouvez Dirty Rabbit dans une autre localité.`}
   lang={lang}
   breadcrumbs={breadcrumbs}>
 
@@ -27,7 +29,7 @@ const breadcrumbs = [
       <header class="mb-12">
         <p class="font-mono text-sm text-red tracking-wider mb-4">GUIDE LOCAL · CAFÉ DE SPÉCIALITÉ</p>
         <h1 class="font-typewriter text-4xl md:text-5xl lg:text-6xl mb-6">
-          Meilleur café de spécialité à {locationName}
+          Que voir et où prendre un café à {locationName}
         </h1>
         <p class="font-mono text-lg text-black/70 leading-relaxed">
           Sant Feliu de Guíxols est une vraie ville de la Costa Brava — pas juste une station balnéaire. Port de pêche authentique, monastère bénédictin millénaire, tradition du liège... et depuis quelques années, une scène café de spécialité qui prend forme. Voici notre guide des meilleures adresses.
@@ -67,9 +69,8 @@ const breadcrumbs = [
 
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — Le meilleur café à 7 minutes
-          </h2>
-          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 7 min en voiture</p>
+            <span class="text-3xl">🐇</span> Dirty Rabbit — une autre étape à S’Agaró</h2>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-8ab5fb78343a")} />
           
           <p class="mb-4">
             Si vous voulez vraiment le meilleur café de spécialité de la région, faites les 7 minutes jusqu'à S'Agaró.
@@ -156,10 +157,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">On vous attend</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
-            À 7 minutes de Sant Feliu. Ça vaut le détour.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-e5181cbbaf3b")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

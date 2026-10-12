@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../i18n';
 
@@ -16,82 +17,11 @@ const breadcrumbs = [
   title="El mejor matcha cerca de Sant Feliu de Guíxols: lo que hay que saber — Dirty Rabbit 2026"
   description="&quot;El mejor matcha de Sant Feliu&quot; es una búsqueda honesta, pero hay que ser francos: la competencia en Sant Feliu de Guíxols no es muy alta cuando se habla d"
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Café de especialidad en S'Agaró, a 5 minutos de Sant Feliu de Guíxols. Matcha ceremonial de REQ Matcha, café de La Cabra. Abierto desde noviembre 2024.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avenida Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.7882,
-    "longitude": 3.0323
-  },
-  "url": "https://dirtyrabbit.es/best-matcha-sant-feliu",
-  "telephone": "+34872454264",
-  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
-  "priceRange": "€€"
-}
-    </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuál es el mejor sitio para tomar matcha cerca de Sant Feliu de Guíxols?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Dirty Rabbit en S'Agaró es la opción más cercana con matcha ceremonial de origen japonés. Está a cinco minutos por carretera desde Sant Feliu."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué hace especial al matcha de Dirty Rabbit?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Lo que más marca la diferencia es el proveedor: REQ Matcha, un proyecto de Barcelona cuyo fundador japonés selecciona el té directamente en Japón. La dosis estándar es 2g ceremonial, con opción extra fuerte."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto cuesta un matcha latte en Dirty Rabbit?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "El rango habitual para matcha ceremonial en cafés de especialidad en España está entre 4,50 y 6 euros. El precio refleja el coste del ingrediente."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Es apto el matcha latte para personas intolerantes a la lactosa?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. Servimos el matcha latte con opciones vegetales. Pregunta en barra qué tenemos ese día."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Dirty Rabbit abre por las mañanas?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. Buena luz natural por la mañana es una de las cosas que más nos define. Consulta el horario actual en nuestras redes o llama al +34 872 454 264."
-      }
-    }
-  ]
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-d98538f8d779", "es"))} />
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-ce33da307df1", "es"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -103,6 +33,13 @@ const breadcrumbs = [
           El mejor matcha cerca de Sant Feliu de Guíxols: lo que hay que saber
         </h1>
       </header>
+
+        <section class="mb-8" aria-label="Sant Feliu de Guíxols">
+          <p class="mb-4">Ciudad costera con puerto pesquero, monasterio benedictino y tradición corchera.</p>
+          <p class="mb-4"><a class="text-red hover:underline" href="/guia/mejor-cafe-sant-feliu-de-guixols">Cafeterías en Sant Feliu de Guíxols</a></p>
+          <p class="mb-4">Después, Dirty Rabbit te espera en S’Agaró, en otra localidad. Consulta la ruta antes de desplazarte.</p>
+        </section>
+
 
       <div class="prose prose-lg max-w-none font-mono leading-relaxed">
 
@@ -121,7 +58,7 @@ const breadcrumbs = [
   <li><strong>Extra fuerte</strong> — más dosis, por un poco más</li>
 </ul>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Dónde encontrar el mejor matcha cerca de Sant Feliu de Guíxols</h3>
-<p class="mb-4">Dirty Rabbit, Avenida Platja d'Aro 275, S'Agaró. A cinco minutos de Sant Feliu por la GI-682.</p>
+<p class="mb-4" set:html={getFactCopy("copy-4af55df4c46d")} />
 <p class="mb-4">Abrimos el 1 de noviembre de 2024. Iwonka lleva el local con una lógica simple: cada ingrediente en carta tiene un nombre y un origen. El matcha es de REQ Matcha. El café es de La Cabra. El pan es de Origo Bakery. No hay nada anónimo.</p>
 <p class="mb-4">Hay terraza grande, WiFi y buena luz natural por la mañana. Si vienes desde Sant Feliu, el camino es la GI-682 dirección Platja d'Aro — el local está antes de llegar al núcleo de S'Agaró.</p>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Por qué el matcha latte está en todas partes pero bien hecho en pocos sitios</h3>
@@ -140,7 +77,7 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">¿Cuánto cuesta un matcha latte en Dirty Rabbit?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Entre 3,50€ y 5€. El precio refleja el coste del ingrediente.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-911821a4a4ce")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">¿Es apto para personas intolerantes a la lactosa?</p>
@@ -157,23 +94,20 @@ const breadcrumbs = [
           <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
           <ul class="font-mono text-sm space-y-3">
             <li>☕ <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">El mejor café de especialidad en S'Agaró</a></li>
-            <li>🍵 <a href="/matcha" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
+            <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
             <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
             <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
             <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía 2026</a></li>
           </ul>
         </div>
-<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Sobre Dirty Rabbit</h2>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4">Dirty Rabbit — S’Agaró</h2>
 <p class="mb-4">Abrimos el 1 de noviembre de 2024 en S'Agaró. La propuesta es sencilla: café de especialidad, bebidas alternativas bien hechas, y un sitio donde quedarte si quieres.</p>
 <p class="mb-4">Iwonka, que lleva el día a día, tiene un criterio claro con los proveedores: si no puede explicar de dónde viene el ingrediente, no entra en carta. El matcha es de REQ Matcha. El café es de La Cabra. El pan es de Origo Bakery.</p>
 <p class="mb-4">Buena luz natural por la mañana, WiFi, terraza grande cuando el tiempo lo permite. Uno de esos sitios donde puedes quedarte trabajando una mañana sin que nadie te mire mal.</p>
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-7db033cf0a58")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

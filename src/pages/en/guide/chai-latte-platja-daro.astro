@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -16,34 +17,10 @@ const breadcrumbs = [
   title="Chai latte near Platja d'Aro: what's out there and what's worth it — Dirty Rabbit 2026"
   description="If you've searched for chai latte in Platja d'Aro, you've probably encountered versions made with syrup. A splash of sweet concentrate in warm milk. It wor"
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Specialty café in S'Agaró with organic masala chai from Awachai, La Cabra coffee and Origo Bakery bread. Open since November 2024. 10 minutes from Platja d'Aro.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avinguda Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.7882,
-    "longitude": 3.0323
-  },
-  "url": "https://dirtyrabbit.es/chai-latte-platja-daro",
-  "telephone": "+34872454264",
-  "servesCuisine": ["Specialty Coffee", "Chai", "Masala Chai"],
-  "priceRange": "€€"
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-c5941a247146", "en"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -56,6 +33,13 @@ const breadcrumbs = [
         </h1>
       </header>
 
+        <section class="mb-8" aria-label="Platja d'Aro">
+          <p class="mb-4">Major Costa Brava resort town with a long beach, shopping, and nightlife.</p>
+          <p class="mb-4"><a class="text-red hover:underline" href="/en/guide/best-coffee-platja-daro">Coffee in Platja d'Aro</a></p>
+          <p class="mb-4">Afterwards, Dirty Rabbit is a separate visit in S’Agaró. Check the route before travelling.</p>
+        </section>
+
+
       <div class="prose prose-lg max-w-none font-mono leading-relaxed">
 
 <p class="mb-4">If you've searched for chai latte in Platja d'Aro, you've probably encountered versions made with syrup. A splash of sweet concentrate in warm milk. It works, but it's not the same as a masala chai made with a real spice blend.</p>
@@ -64,11 +48,11 @@ const breadcrumbs = [
 <ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
   <li>The spices have to actually be there. A properly made chai uses a masala blend — cardamom, cinnamon, ginger, clove, and pepper — not a sweetened concentrate from a bottle.</li>
   <li>The supplier matters. The chai we use at Dirty Rabbit is from Awachai, a producer in Isère, France, with a 100% organic blend. Not what you'll find at most chains.</li>
-  <li>Cold works just as well. Iced chai isn't just a summer option — we have it available year-round because the spices hold up perfectly cold.</li>
+  <li set:html={getFactCopy("copy-3ce4436f6248")} />
 </ol>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Where to find good chai latte near Platja d'Aro</h3>
-<p class="mb-4">Dirty Rabbit is in S'Agaró, Avinguda Platja d'Aro 275 — about 10 minutes by car from central Platja d'Aro.</p>
-<p class="mb-4">We opened on 1 November 2024. Awachai's organic masala chai has been on the menu from day one. We serve it three ways: classic chai latte (hot or iced), iced chai year-round, and dirty chai — which is the chai latte with a shot of La Cabra espresso. That last one is something. Plant milk available in all versions. Price: €3.50 to €5.</p>
+<p class="mb-4" set:html={getFactCopy("copy-34ae5bb9a79a")} />
+<p class="mb-4" set:html={getFactCopy("copy-ca8ea9bcf494")} />
 <p class="mb-4">In central Platja d'Aro there are cafés. Good for sitting out with seafront views. For chai made with real spices, the 10-minute detour is worth it.</p>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Why chai latte is everywhere but good chai is rare</h3>
 <p class="mb-4">Chai latte became popular in Spain well before matcha. That has upsides and downsides. Upside: you can order it almost anywhere. Downside: most versions going around are syrup in warm milk, which has little to do with what masala chai actually is.</p>
@@ -82,11 +66,11 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">How much does a chai latte cost in the area?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">At Dirty Rabbit, between €3.50 and €5 depending on the version. Classic chai latte is at the lower end; dirty chai (with espresso) is at the top.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-8a0dcbb8b322")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Can I order iced chai outside of summer?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Yes. At Dirty Rabbit iced chai is available year-round. The masala spices work just as well cold — it's not a seasonal version.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-0f23234931f1")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">What is dirty chai and is it worth ordering?</p>
@@ -94,7 +78,7 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Where exactly is Dirty Rabbit?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Avinguda Platja d'Aro 275, S'Agaró. On the main road connecting Sant Feliu with Platja d'Aro. Easy parking across the road, large terrace, WiFi, good morning light.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-1e2ebe606a2e")} />
 </div>
 <hr class="my-8 border-black/20" />
 </div>
@@ -109,16 +93,13 @@ const breadcrumbs = [
             <li>🌅 <a href="/en/articles/breakfast-costa-brava" class="text-red hover:underline">Best Breakfast on the Costa Brava (2026)</a></li>
           </ul>
         </div>
-<h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">About Dirty Rabbit</h2>
+<h2 class="font-typewriter text-2xl md:text-3xl mb-4">Dirty Rabbit — S’Agaró</h2>
 <p class="mb-4">We opened on 1 November 2024 in S'Agaró. Iwonka runs day-to-day with a clear rule: every ingredient has to have an explanation — where it comes from, why that supplier.</p>
 <p class="mb-4">Chai from Awachai (Isère, France). Coffee from La Cabra. Bread from Origo Bakery. Large terrace, WiFi, good natural light in the mornings. A place where you can stay the whole morning without any issue.</p>
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-641e5275e080")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

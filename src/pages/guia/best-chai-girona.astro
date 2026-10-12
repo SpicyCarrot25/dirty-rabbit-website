@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../i18n';
 
@@ -16,82 +17,11 @@ const breadcrumbs = [
   title="El mejor chai latte cerca de Girona — Dirty Rabbit 2026"
   description="&quot;El mejor chai de Girona&quot; es una búsqueda con contexto. En la ciudad hay opciones — algunas mejores que otras. Fuera de la ciudad, en la Costa Brava, la of"
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Café de especialidad en S'Agaró (Costa Brava) con masala chai orgánico de Awachai (Isère, Francia). A 35 minutos de Girona. Iced chai y dirty chai disponibles todo el año.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avenida Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.7882,
-    "longitude": 3.0323
-  },
-  "url": "https://dirtyrabbit.es/best-chai-girona",
-  "telephone": "+34872454264",
-  "servesCuisine": ["Specialty Coffee", "Chai", "Masala Chai"],
-  "priceRange": "€€"
-}
-    </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuál es el chai latte más cercano a Girona con especias reales?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "En la ciudad hay opciones, aunque la mayoría son de sirope. Para masala chai orgánico de verdad, la opción más cercana que conocemos es Dirty Rabbit en S'Agaró, a 35 minutos."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué tiene de especial el masala chai de Awachai?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Awachai es un productor de Isère, Francia, que elabora una mezcla de especias orgánica — cardamomo, canela, jengibre, clavo, pimienta. No usan rellenos ni azúcares añadidos en la mezcla base. El sabor es más limpio y más complejo que un sirope estándar."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Sirven el chai frío en invierno?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. El iced chai está disponible todo el año en Dirty Rabbit. No es una oferta de temporada."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿El dirty chai es adecuado para alguien que no toma café normalmente?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tiene espresso, así que tiene cafeína. Para quien es sensible al café, el chai solo (sin espresso) puede ser mejor opción — tiene menos cafeína y la libera de forma más gradual."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Hay algo que hacer en S'Agaró además de ir a Dirty Rabbit?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "S'Agaró tiene playa cercana, el paseo marítimo de la Conca y acceso rápido a Platja d'Aro y Sant Feliu. Si vas a la zona, hay razones para estar más de una hora."
-      }
-    }
-  ]
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-253ad91b91a1", "es"))} />
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-5631061f0117", "es"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -111,13 +41,13 @@ const breadcrumbs = [
 <h3 class="font-typewriter text-xl mb-4 mt-8">Qué hace diferente a un buen chai latte</h3>
 <ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
   <li>El masala chai real no es una mezcla de polvo genérico — es cardamomo, canela, jengibre, clavo y pimienta en proporción específica. Awachai, el proveedor que usamos, elabora la mezcla en Isère, Francia, con ingredientes 100% orgánicos. El resultado es más complejo y menos azucarado que cualquier versión de sirope.</li>
-  <li>El frío no arruina el chai. El iced chai es una de las versiones más subestimadas en España — pocas cafeterías lo tienen fuera del verano. Lo nuestro está todo el año porque las especias del masala aguantan perfectamente en frío.</li>
+  <li set:html={getFactCopy("copy-654756c86672")} />
   <li>El dirty chai no es un capricho. Es la opción más pedida entre gente que descubre el chai por primera vez — el espresso de La Cabra añade energía y el masala añade sabor. Juntos funcionan mejor de lo que parece sobre el papel.</li>
 </ol>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Dónde encontrar buen chai latte cerca de Girona</h3>
 <p class="mb-4">En Girona ciudad hay algunas cafeterías de especialidad que se preocupan por sus ingredientes. Para masala chai específicamente, la oferta es más escasa — la mayoría tira de sirope.</p>
-<p class="mb-4">Dirty Rabbit está en Avenida Platja d'Aro 275, S'Agaró — 35 minutos desde Girona. Si ya tienes motivo para estar en la Costa Brava, el desvío es mínimo: estamos en la carretera entre Sant Feliu de Guíxols y Platja d'Aro.</p>
-<p class="mb-4">Tres versiones de chai todo el año: clásico caliente o frío, iced chai, dirty chai con espresso. Leche vegetal disponible. Entre 3,50€ y 5€.</p>
+<p class="mb-4" set:html={getFactCopy("copy-1edba10d837d")} />
+<p class="mb-4" set:html={getFactCopy("copy-e198eb5cb34f")} />
 <h3 class="font-typewriter text-xl mb-4 mt-8">Por qué el chai latte está en todas partes pero bien hecho en pocos sitios</h3>
 <p class="mb-4">Girona tiene una escena de cafeterías con más criterio que la media de ciudades de su tamaño. Aun así, el chai de masala real sigue siendo minoría. El patrón es predecible: los locales que trabajan con especias de calidad son los mismos que trabajan con café de especialidad y pan de fermentación lenta. Es un criterio que cruza toda la carta, no una decisión aislada.</p>
 <p class="mb-4">La Costa Brava, siendo más turística y estacional, tiene menos densidad de este tipo de locales. Los que existen tienden a destacar por eso.</p>
@@ -134,7 +64,7 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">¿Sirven el chai frío en invierno?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Sí. El iced chai está disponible todo el año en Dirty Rabbit. No es una oferta de temporada.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-c6a58cc3d904")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">¿El dirty chai es adecuado para alguien que no toma café normalmente?</p>
@@ -151,7 +81,7 @@ const breadcrumbs = [
           <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
           <ul class="font-mono text-sm space-y-3">
             <li>☕ <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">El mejor café de especialidad en S'Agaró</a></li>
-            <li>🍵 <a href="/matcha" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
+            <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
             <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
             <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
             <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía 2026</a></li>
@@ -163,10 +93,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-7db033cf0a58")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

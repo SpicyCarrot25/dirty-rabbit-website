@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../i18n';
 
@@ -16,10 +17,10 @@ const breadcrumbs = [
 ---
 
 <Layout 
-  title={`Qué hacer en ${locationName} — Guía local 2026`}
-  description={`Todo lo que puedes hacer en ${locationName}: Camí de Ronda, playas, arquitectura noucentista, dónde comer y desayunar. Guía escrita por locales.`}
+  title={`Qué ver en ${locationName}: Sant Pol y Camí de Ronda`}
+  description={`Descubre ${locationName}: playa de Sant Pol, Camí de Ronda hasta Sa Conca y arquitectura junto al mar. Organiza tu paseo y una parada para desayunar.`}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24">
@@ -31,7 +32,7 @@ const breadcrumbs = [
           Qué hacer en {locationName}
         </h1>
         <p class="font-mono text-lg text-black/70 leading-relaxed">
-          S'Agaró no es un pueblo al uso. Es una urbanización nacida en los años 20 del siglo pasado, cuando el industrial Josep Ensesa encargó al arquitecto Rafael Masó crear un paraíso noucentista junto al mar. Casas blancas con pórticos, escalinatas entre pinos, un camino costero que parece sacado de la Riviera italiana... y, sin embargo, esto es Girona. Pura Costa Brava.
+          Empieza tu visita a S'Agaró en la playa de Sant Pol y sigue el Camí de Ronda hasta Sa Conca. Entre las dos playas encontrarás miradores y arquitectura junto al mar. Esta guía reúne las paradas del paseo y opciones para desayunar en S'Agaró.
         </p>
         <p class="font-mono text-lg text-black/70 leading-relaxed mt-4">
           No es un sitio de fiesta ni de centros comerciales. S'Agaró es para caminar despacio, bañarse en calas de agua transparente y desayunar con calma mirando al mar. Aquí te contamos qué hacer — con ojos de local.
@@ -129,9 +130,7 @@ const breadcrumbs = [
         <div class="space-y-6">
           <div class="p-6 bg-cream border-l-4 border-red">
             <h3 class="font-typewriter text-xl mb-2">🐇 Desayuno y brunch: Dirty Rabbit</h3>
-            <p class="font-mono text-black/80">
-              <a href="https://www.google.com/maps?cid=13237319999262880412" class="text-red hover:underline">Avenida Platja d'Aro 275</a> — Specialty coffee de La Cabra (Dinamarca) y brunch con producto local. Nuestro sitio, claro, pero es que de verdad creemos que el desayuno es el momento más importante del día. Eggs benedict, tostadas, bowls... y un flat white que merece la pena. Ambiente relajado, hablamos español, catalán, inglés y polaco — y tenemos cartas en ruso, francés y ucraniano.
-            </p>
+            <p class="font-mono text-black/80" set:html={getFactCopy("copy-4b347e70791f")} />
           </div>
           
           <div>
@@ -248,7 +247,7 @@ const breadcrumbs = [
             </a>
           </li>
           <li>
-            <a href="/matcha" class="text-red hover:underline">
+            <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">
               → El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró
             </a>
           </li>

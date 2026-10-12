@@ -1,4 +1,5 @@
 ---
+import { applyBusinessFacts, getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 
 const lang = 'en';
@@ -9,25 +10,14 @@ const localBusinessSchema = {
   '@id': 'https://dirtyrabbit.es/en/matcha#business',
   name: 'Dirty Rabbit Specialty Coffee',
   description:
-    "Dirty Rabbit Specialty Coffee in S'Agaro serves ceremonial-grade REQ Matcha on the Costa Brava, with hot and iced matcha drinks made year-round.",
+    getFactCopy("copy-efff3f3177b4"),
   url: 'https://dirtyrabbit.es/en/matcha',
   image: 'https://dirtyrabbit.es/favicon.svg',
   telephone: '+34 872 454 264',
   priceRange: 'EUR',
   servesCuisine: ['Specialty Coffee', 'Matcha', 'Brunch'],
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: "Avinguda Platja d'Aro 275",
-    addressLocality: "S'Agaro",
-    postalCode: '17248',
-    addressRegion: 'Girona',
-    addressCountry: 'ES',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: 41.7882,
-    longitude: 3.0323,
-  },
+  address: getBusinessField("schema-de605158ad01", "address"),
+  geo: getBusinessField("schema-0bc31d893c1f", "geo"),
   areaServed: ['Costa Brava', "Platja d'Aro", 'Girona'],
   sameAs: ['https://www.instagram.com/dirtyrabbitcoffee/'],
 };
@@ -41,7 +31,7 @@ const faqItems = [
   {
     question: "Is Dirty Rabbit close to Platja d'Aro?",
     answer:
-      "Yes. Dirty Rabbit is on Avinguda Platja d'Aro 275 in S'Agaro, around ten minutes from central Platja d'Aro and easy to reach from the wider Costa Brava area.",
+      getFactCopy("copy-b0983290e5d5"),
   },
   {
     question: 'What kind of matcha do you use?',
@@ -56,7 +46,7 @@ const faqItems = [
   {
     question: 'Do you serve matcha outside summer season?',
     answer:
-      "Yes. Dirty Rabbit is a seasonal Costa Brava business with peak months from June to September, but we stay open year-round and keep matcha on the menu.",
+      getFactCopy("copy-e55e576c3d08"),
   },
 ];
 
@@ -76,12 +66,12 @@ const faqSchema = {
 
 <Layout
   title="Best Matcha on the Costa Brava — Ceremonial Grade in S'Agaró"
-  description="Ceremonial-grade REQ matcha at Dirty Rabbit in S'Agaró. Classic matcha latte, orange matcha, and extra strong — prepared properly, year-round on the Costa Brava."
+  description={getFactCopy("copy-ecb9629de6d7")}
   lang={lang}
 >
   <Fragment slot="head">
-    <script type="application/ld+json" set:html={JSON.stringify(localBusinessSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <script type="application/ld+json" set:html={serializeSchema(applyBusinessFacts(localBusinessSchema, lang))} />
+    <script type="application/ld+json" set:html={serializeSchema(applyBusinessFacts(faqSchema, lang))} />
   </Fragment>
 
   <section class="pt-12 pb-14 md:pt-16 md:pb-20 bg-cream">
@@ -92,13 +82,7 @@ const faqSchema = {
           <h1 class="font-typewriter text-4xl md:text-6xl text-black mb-6">
             Best Matcha in Costa Brava
           </h1>
-          <p class="font-mono text-base md:text-lg text-black/75 leading-relaxed max-w-3xl mb-6">
-            If you are searching for the best matcha Costa Brava, the real question is not who
-            writes it on the board. It is who treats matcha with the same care they give to
-            specialty coffee. At Dirty Rabbit in S&apos;Agaró, matcha is not an afterthought. It is a
-            year-round part of the menu, made with ceremonial tea from REQ Matcha and prepared the
-            slow way because texture, color, and taste depend on it.
-          </p>
+          <p class="font-mono text-base md:text-lg text-black/75 leading-relaxed max-w-3xl mb-6" set:html={getFactCopy("copy-028454ef3d4b")} />
           <div class="flex flex-col sm:flex-row gap-4">
             <a
               href="/en/menu"
@@ -123,7 +107,7 @@ const faqSchema = {
             <li>Ceremonial matcha from REQ, selected directly from Japanese plantations</li>
             <li>Classic hot and iced drinks, plus orange matcha and extra strong matcha</li>
             <li>Ten minutes from Platja d&apos;Aro, around 35 minutes from Girona</li>
-            <li>Open year-round, even though Costa Brava demand peaks June to September</li>
+            <li set:html={getFactCopy("copy-73832d7810d0")} />
           </ul>
         </div>
       </div>
@@ -134,12 +118,7 @@ const faqSchema = {
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="font-typewriter text-3xl md:text-4xl text-red mb-6">The story of matcha at Dirty Rabbit</h2>
       <div class="space-y-5 font-mono text-sm md:text-base text-black/80 leading-relaxed">
-        <p>
-          Dirty Rabbit Specialty Coffee is in S&apos;Agaró, at Avinguda Platja d&apos;Aro 275, on the
-          southern Costa Brava. The café is known first for coffee, with a La Marzocco KB90 behind
-          the bar, but the same logic that shaped the coffee menu shaped the matcha menu too:
-          choose suppliers with a name, a point of view, and a product worth explaining.
-        </p>
+        <p set:html={getFactCopy("copy-0e8d169e2e9b")} />
         <p>
           That is why Dirty Rabbit works with REQ Matcha. They are based in Barcelona, founded by a
           Japanese entrepreneur, and they source directly from Japanese plantations instead of
@@ -147,14 +126,7 @@ const faqSchema = {
           deep green, clean on the palate, and much less bitter than the low-grade versions many
           people have tried elsewhere.
         </p>
-        <p>
-          This matters on the Costa Brava because many cafés run under intense seasonal pressure.
-          From June to September, service gets faster, queues get longer, and menus often drift
-          toward whatever is easiest to execute. Matcha has become fashionable, but good matcha is
-          still rare. Dirty Rabbit opened with the idea that quality should not disappear just
-          because the beach is full. The shop stays open year-round, and the matcha program stays on
-          the menu through winter, shoulder season, and summer rush alike.
-        </p>
+        <p set:html={getFactCopy("copy-4f2105e2bb37")} />
         <p>
           So when someone asks for the best matcha Platja d&apos;Aro, the best matcha Girona, or even
           mejor matcha Costa Brava, the honest answer is not about hype. It is about whether the
@@ -287,9 +259,7 @@ const faqSchema = {
         southern Costa Brava. If you want the best matcha Costa Brava without guessing, come by,
         check the menu, and ask what is being served that day.
       </p>
-      <p class="font-mono text-sm md:text-base text-white/80 mb-8">
-        Avinguda Platja d&apos;Aro 275, S&apos;Agaró 17248, Costa Brava
-      </p>
+      <p class="font-mono text-sm md:text-base text-white/80 mb-8" set:html={getFactCopy("copy-96626429b0ff")} />
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="/en/"

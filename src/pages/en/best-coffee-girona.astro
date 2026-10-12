@@ -1,4 +1,5 @@
 ---
+import { applyBusinessFacts, getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 
 const lang = 'en';
@@ -71,7 +72,7 @@ const pageSchema = {
       "telephone": "+34 872 454 264",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Avinguda Platja d'Aro 275",
+        "streetAddress": getFactCopy("copy-764a6d130854"),
         "addressLocality": "S'Agaró",
         "addressRegion": "Girona",
         "postalCode": "17248",
@@ -103,7 +104,7 @@ const pageSchema = {
   breadcrumbs={breadcrumbs}
   articleMeta={{ datePublished: "2026-03-23", dateModified: "2026-03-23", section: "Coffee Guide" }}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} slot="head" />
+  <script type="application/ld+json" set:html={serializeSchema(applyBusinessFacts(pageSchema, lang))} slot="head" />
 
   <article class="bg-white">
     <section class="pt-10 pb-12 md:pt-14 md:pb-16 bg-cream border-b border-black/10">
@@ -277,11 +278,7 @@ const pageSchema = {
     <section class="py-16 md:py-20 bg-black text-cream">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="font-typewriter text-3xl md:text-4xl mb-5">Visit Dirty Rabbit in S'Agaró</h2>
-        <p class="font-mono text-base md:text-lg text-cream/80 leading-relaxed mb-8">
-          If you are planning a Girona province coffee stop, make it one with a proper machine, a serious bar setup,
-          and somewhere you will actually want to stay. Dirty Rabbit is at Avinguda Platja d'Aro 275, S'Agaró,
-          around 45 minutes from Girona city.
-        </p>
+        <p class="font-mono text-base md:text-lg text-cream/80 leading-relaxed mb-8" set:html={getFactCopy("copy-87468aeec7cf")} />
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="https://www.google.com/maps?cid=13237319999262880412"

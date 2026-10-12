@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations } from '../../../i18n';
 
@@ -19,7 +20,7 @@ const breadcrumbs = [
   title={`On esmorzar al ${locationName} — Guia 2026`}
   description={`Les millors adreces per esmorzar o brunchar després d'una caminada pel Camí de Ronda, Costa Brava. Dirty Rabbit a S'Agaró.`}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -34,6 +35,7 @@ const breadcrumbs = [
           El Camí de Ronda és el sender costaner mític de la Costa Brava. Després d'una caminada matinal al llarg dels penya-segats, amb el mar als teus peus i el sol que puja, no hi ha res millor que un bon esmorzar per completar l'experiència.
         </p>
       </header>
+<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy està tancat per temporada; la data de reobertura no està confirmada. No és un tancament permanent. Consulta el seu web abans de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
 
       <div class="prose prose-lg max-w-none">
 
@@ -57,7 +59,7 @@ const breadcrumbs = [
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
             <span class="text-3xl">🐇</span> Dirty Rabbit — La recompensa perfecta
           </h2>
-          <p class="font-mono text-sm text-red mb-4">Avinguda Platja d'Aro 275, S'Agaró · A l'arribada del Camí de Ronda</p>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-c977563dc3e5")} />
           
           <p class="mb-4">
             Quan arribes a S'Agaró després de la caminada, Dirty Rabbit és a pocs minuts. És la recompensa perfecta: cafè extraordinari, brunch abundant, i un ambient on pots instal·lar-te còmodament.
@@ -99,7 +101,7 @@ const breadcrumbs = [
           
           <h3 class="font-typewriter text-xl mb-3 mt-6">Begur → Calella de Palafrugell</h3>
           <p class="mb-4">
-            Més al nord, un recorregut espectacular (1h30-2h). Fitzroy Café a Begur per esmorzar abans o després.
+            Més al nord, un recorregut espectacular (1h30-2h). Fitzroy Café (tancat per temporada) a Begur per esmorzar abans o després.
           </p>
         </section>
 
@@ -117,10 +119,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">T'esperem a l'arribada</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avinguda Platja d'Aro 275, S'Agaró<br>
-            La millor manera d'acabar la teva caminada pel Camí de Ronda.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-0497466ef5bc")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

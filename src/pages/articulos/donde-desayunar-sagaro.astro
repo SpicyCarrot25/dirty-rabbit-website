@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 
 const lang = 'es';
@@ -16,7 +17,7 @@ const breadcrumbs = [
   title={title}
   description={description}
   lang={lang}
-  articleMeta={{ datePublished: "2026-03-24", dateModified: "2026-03-24", section: "Article" }}
+  articleMeta={{ datePublished: "2026-03-24", dateModified: "2026-10-12", section: "Article" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -55,7 +56,7 @@ const breadcrumbs = [
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Las opciones para desayunar en S&#39;Agaró</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">🐇 Dirty Rabbit</h3>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-d275a35fab67")} />
 <p class="mb-4">Dirty Rabbit es la cafetería de referencia de S&#39;Agaró. Sí, la escribimos nosotros, así que el sesgo es obvio. Pero vamos a explicar qué hacemos y por qué.</p>
 <p class="mb-4"><strong>El café:</strong>
 Servimos <strong>La Cabra</strong>, el tostador danés que consistentemente está entre los mejores del mundo. No es café &quot;bueno&quot; — es café de finca única, trazable hasta el productor, procesado con precisión y tostado en Copenhague. Lo preparamos en una <strong>La Marzocco KB90</strong> con agua filtrada por <strong>ósmosis inversa</strong> — cada variable controlada.</p>
@@ -240,10 +241,10 @@ Interior acogedor + terraza para días de sol. A 3 minutos andando de la Playa d
 <h3 class="font-typewriter text-xl mt-8 mb-4">¿Hay opciones para celíacos en S&#39;Agaró?</h3>
 <p class="mb-4">En Dirty Rabbit hay algunas opciones, pero no somos 100% gluten-free kitchen. Para celíacos con sensibilidad alta, ANNNA en Sant Feliu es la mejor opción (100% sin gluten).</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">¿Los sitios abren en invierno?</h3>
-<p class="mb-4">Dirty Rabbit abre todo el año. Hostal de la Gavina tiene temporadas (consultar). Villamás puede cerrar o reducir en invierno.</p>
+<p class="mb-4" set:html={getFactCopy("copy-ea85a6e4b4bc")} />
 <h3 class="font-typewriter text-xl mt-8 mb-4">¿Cuánto cuesta desayunar en S&#39;Agaró?</h3>
 <ul class="space-y-2 mb-6 list-disc pl-6">
-<li><strong>Dirty Rabbit:</strong> 12–18€ por persona</li>
+<li set:html={getFactCopy("copy-2fdd1702fb28")} />
 <li><strong>Hostal de la Gavina:</strong> 40–70€ por persona</li>
 <li><strong>Villamás:</strong> Variable, 15–30€ para desayuno/snack</li>
 </ul>
@@ -268,7 +269,7 @@ Interior acogedor + terraza para días de sol. A 3 minutos andando de la Playa d
 <li><a href="https://www.camidironda.cat" target="_blank" rel="noopener noreferrer" class="text-red hover:underline">Camí de Ronda</a> — Ruta litoral que pasa por S'Agaró, perfecta para combinar con el desayuno</li>
 </ul>
 
-<p class="mb-4"><em>Pásate por Dirty Rabbit — Avenida Platja d&#39;Aro 275, S&#39;Agaró. Café de La Cabra, tostadas con salmón Benfumat, a 3 minutos de Sant Pol. Abrimos la puerta y te quedas el rato que quieras. Tu casa lejos de casa.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-6dd2d9f4949c")} />
 <p class="mb-4"><em>Última actualización: febrero 2026</em></p>
 
       </div>
@@ -278,7 +279,7 @@ Interior acogedor + terraza para días de sol. A 3 minutos andando de la Playa d
           <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
           <ul class="font-mono text-sm space-y-3">
             <li>☕ <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">El mejor café de especialidad en S'Agaró</a></li>
-            <li>🍵 <a href="/matcha" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
+            <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
             <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
             <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
             <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía completa 2026</a></li>
@@ -287,9 +288,7 @@ Interior acogedor + terraza para días de sol. A 3 minutos andando de la Playa d
 <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">¿Vienes a vernos?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-4fb00d6cad80")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

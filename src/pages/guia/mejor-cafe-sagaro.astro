@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../i18n';
 import cafes from '../../data/costa-brava-specialty-coffee.json';
@@ -25,7 +26,7 @@ const breadcrumbs = [
   title={`Mejor café de especialidad en ${locationName} — Guía local 2026`}
   description={`Dónde tomar el mejor specialty coffee en ${locationName}, Costa Brava. Guía honesta de cafeterías de especialidad: La Cabra, tostadores locales y más.`}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -41,6 +42,7 @@ const breadcrumbs = [
           {locationName} es una joya de la Costa Brava: arquitectura noucentista, el Camí de Ronda serpenteando entre acantilados, y la playa de Sant Pol a tus pies. Pero, ¿dónde se toma buen café de verdad? Aquí va nuestra guía honesta — escrita por locales, sin filtros.
         </p>
       </header>
+<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy está cerrado por temporada; la fecha de reapertura no está confirmada. No es un cierre permanente. Consulta su web antes de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
 
       <!-- Main Content -->
       <div class="prose prose-lg max-w-none">
@@ -50,7 +52,7 @@ const breadcrumbs = [
           <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
             <span class="text-3xl">🐇</span> Dirty Rabbit — Specialty coffee en el corazón de {locationName}
           </h2>
-          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · En el centro</p>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-9a8eede3b46d")} />
           
           <p class="mb-4">
             Estás en casa. Literalmente — Dirty Rabbit está en {locationName}, a tres minutos andando de la playa de Sant Pol.
@@ -147,7 +149,7 @@ const breadcrumbs = [
           Si tienes tiempo, también merece la pena:
         </p>
         <ul class="space-y-2 mb-8">
-          <li><strong>Fitzroy Café</strong> en Begur (30 min) — Brunch de culto estilo Melbourne. Abierto en temporada.</li>
+          <li><strong>Fitzroy Café (cerrado por temporada)</strong> en Begur (30 min) — Brunch de culto estilo Melbourne. Abierto en temporada.</li>
           <li><strong>Grava</strong> en Pals (25 min) — Café Right Side + pizzería + vinos naturales. Muy gravel-cycling.</li>
           <li><strong>La Fábrica</strong> en Girona (35 min) — El OG del specialty en Girona, fundado por el ciclista Christian Meier.</li>
         </ul>
@@ -158,7 +160,7 @@ const breadcrumbs = [
           <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
           <ul class="font-mono text-sm space-y-3">
             <li>☕ <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">El mejor café de especialidad en S'Agaró</a></li>
-            <li>🍵 <a href="/matcha" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
+            <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
             <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
             <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
             <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía 2026</a></li>
@@ -166,10 +168,7 @@ const breadcrumbs = [
         </div>
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">¿Vienes a vernos?</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
-            Abre la puerta, pide un café y quédate el rato que quieras.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-c7776c770c3a")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

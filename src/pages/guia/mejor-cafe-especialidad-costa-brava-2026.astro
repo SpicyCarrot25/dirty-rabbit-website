@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 
 const lang = 'es';
@@ -26,7 +27,7 @@ const faqSchema = {
       name: '¿Cuál es el mejor café de la Costa Brava?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Para extracción y origen único, Dirty Rabbit en S\'Agaró es el setup más completo de la zona. Para cultura espresso en Girona ciudad, La Fábrica. Para brunch con buen café, Dirty Rabbit, ANNNA o Fitzroy.'
+        text: 'Para extracción y origen único, Dirty Rabbit en S\'Agaró es el setup más completo de la zona. Para cultura espresso en Girona ciudad, La Fábrica. Para brunch con buen café, Dirty Rabbit, ANNNA o Fitzroy (cerrado por temporada).'
       }
     },
     {
@@ -66,6 +67,7 @@ const faqSchema = {
           Mejor café de especialidad en la Costa Brava y Platja d'Aro (2026)
         </h1>
       </header>
+<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy está cerrado por temporada; la fecha de reapertura no está confirmada. No es un cierre permanente. Consulta su web antes de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
 
       <div class="prose prose-lg max-w-none font-mono leading-relaxed">
         <p>
@@ -98,7 +100,7 @@ const faqSchema = {
             <tr><td><strong>Dirty Rabbit</strong></td><td>S'Agaró</td><td>Specialty coffee, matcha, chai, brunch</td><td>Origen único, KB90, agua RO</td><td>Ceremonial japonés (REQ)</td><td>Sí</td><td>Sí</td></tr>
             <tr><td><strong>La Maglia Coffee</strong></td><td>Platja d'Aro</td><td>Café y matcha</td><td>Specialty</td><td>Básico</td><td>Sí</td><td>Sí</td></tr>
             <tr><td><strong>ANNNA</strong></td><td>Sant Feliu de Guíxols</td><td>Brunch, café</td><td>Specialty</td><td>No</td><td>Sí</td><td>Limitado</td></tr>
-            <tr><td><strong>Fitzroy Café</strong></td><td>Begur</td><td>Brunch australiano</td><td>Specialty</td><td>No</td><td>Sí</td><td>Sí</td></tr>
+            <tr><td><strong>Fitzroy Café (cerrado por temporada)</strong></td><td>Begur</td><td>Brunch australiano</td><td>Specialty</td><td>No</td><td>Sí</td><td>Sí</td></tr>
             <tr><td><strong>La Fábrica</strong></td><td>Girona</td><td>Espresso, cultura ciclista</td><td>Specialty</td><td>No</td><td>Sí</td><td>Limitado</td></tr>
             <tr><td><strong>Grava</strong></td><td>Pals</td><td>Café y pastelería</td><td>Specialty</td><td>No</td><td>Sí</td><td>Sí</td></tr>
           </tbody>
@@ -111,11 +113,11 @@ const faqSchema = {
           y filtración por ósmosis inversa.
         </p>
         <ul>
-          <li><strong>Horario:</strong> Martes a domingo, 08:00-15:00</li>
-          <li><strong>Precio café:</strong> €2,50-4,00</li>
-          <li><strong>Comida:</strong> €4-15</li>
+          <li set:html={getFactCopy("copy-511481895b5c")} />
+          <li set:html={getFactCopy("copy-ee905d0ebb46")} />
+          <li set:html={getFactCopy("copy-6d32331c2776")} />
           <li><strong>Lo mejor:</strong> El café en sí.</li>
-          <li><strong>Lo menos bueno:</strong> Cierra a las 15:00 y los lunes no abre.</li>
+          <li set:html={getFactCopy("copy-5fdc1f168280")} />
         </ul>
 
         <h2 class="font-typewriter text-2xl">La Maglia Coffee - Platja d'Aro</h2>
@@ -132,7 +134,7 @@ const faqSchema = {
 
         <h2 class="font-typewriter text-2xl">Otras opciones en la Costa Brava</h2>
         <ul>
-          <li><strong>Fitzroy Café (Begur):</strong> Estilo australiano, buen brunch, café de especialidad. A 20 minutos.</li>
+          <li><strong>Fitzroy Café (cerrado por temporada) (Begur):</strong> Estilo australiano, buen brunch, café de especialidad. A 20 minutos.</li>
           <li><strong>Grava (Pals):</strong> Café con pastelería propia. Bonito pueblo, 20 minutos.</li>
           <li><strong>La Fábrica (Girona):</strong> Referencia para el mundo espresso en Girona. A 35 minutos.</li>
         </ul>
@@ -140,7 +142,7 @@ const faqSchema = {
         <h2 class="font-typewriter text-2xl">Cómo elegir</h2>
         <ol>
           <li><strong>Si te importa el café por encima de todo</strong> - Dirty Rabbit.</li>
-          <li><strong>Si buscas buen brunch + café</strong> - Dirty Rabbit, ANNNA o Fitzroy.</li>
+          <li><strong>Si buscas buen brunch + café</strong> - Dirty Rabbit, ANNNA o Fitzroy (cerrado por temporada).</li>
           <li><strong>Si estás en el centro de Platja d'Aro</strong> - La Maglia es lo más cómodo.</li>
           <li><strong>Si viajas con niños</strong> - Dirty Rabbit tiene sillas altas y menú infantil.</li>
           <li><strong>Si quieres matcha de verdad</strong> - Solo Dirty Rabbit tiene grado ceremonial japonés en esta zona.</li>
@@ -156,7 +158,7 @@ const faqSchema = {
         <h3 class="font-typewriter text-xl">¿Cuál es el mejor café de la Costa Brava?</h3>
         <p>
           Para extracción y origen único, Dirty Rabbit en S'Agaró es el setup más completo de la zona.
-          Para cultura espresso en Girona ciudad, La Fábrica. Para brunch con buen café, Dirty Rabbit, ANNNA o Fitzroy.
+          Para cultura espresso en Girona ciudad, La Fábrica. Para brunch con buen café, Dirty Rabbit, ANNNA o Fitzroy (cerrado por temporada).
         </p>
 
         <h3 class="font-typewriter text-xl">¿Hay buen matcha en la Costa Brava?</h3>
@@ -177,7 +179,7 @@ const faqSchema = {
       <div class="mt-12 mb-8 p-6 bg-cream rounded-xl">
         <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
         <ul class="font-mono text-sm space-y-3">
-          <li>🍵 <a href="/matcha" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
+          <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
           <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
           <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
           <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía 2026</a></li>

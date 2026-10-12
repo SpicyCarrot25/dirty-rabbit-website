@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 
 const lang = 'es';
@@ -46,7 +47,7 @@ const breadcrumbs = [
         <hr class="my-8 border-black/20">
 
         <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">🐇 Dirty Rabbit — Brunch en S'Agaró</h2>
-        <p class="mb-4"><strong>Avenida Platja d'Aro 275, S'Agaró · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></strong></p>
+        <p class="mb-4" set:html={getFactCopy("copy-1adfdec827e7")} />
 
         <h3 class="font-typewriter text-xl mt-8 mb-4">El café</h3>
         <p class="mb-4">Dirty Rabbit sirve <strong>La Cabra</strong>, el tostador danés que lleva años entre los mejores del mundo. Lo preparamos en una <strong>La Marzocco KB90</strong> con agua filtrada por <strong>ósmosis inversa</strong>. No es marketing — es la diferencia real que notas desde el primer sorbo.</p>
@@ -63,7 +64,7 @@ const breadcrumbs = [
           <li><strong>Matcha latte o chai</strong> — Como bebida principal o acompañamiento. El matcha orange merece especial atención en verano.</li>
         </ul>
 
-        <p class="mb-4"><strong>Precio medio:</strong> 15–22€ por persona (bebida + plato principal)</p>
+        <p class="mb-4" set:html={getFactCopy("copy-344fa78f5968")} />
         <p class="mb-4"><strong>¿Reserva necesaria?</strong> No — orden de llegada. En verano, si llegas entre las 11:00 y las 13:00 un fin de semana, puede haber algo de espera.</p>
 
         <h3 class="font-typewriter text-xl mt-8 mb-4">El ambiente</h3>
@@ -133,7 +134,7 @@ const breadcrumbs = [
         <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Preguntas frecuentes</h2>
 
         <h3 class="font-typewriter text-xl mt-8 mb-4">¿Hay brunch en S'Agaró durante todo el año?</h3>
-        <p class="mb-4">Sí. Dirty Rabbit está abierto todo el año, aunque el horario varía por temporada. En invierno el horario puede ser más reducido — consulta antes si vas en diciembre o enero.</p>
+        <p class="mb-4" set:html={getFactCopy("copy-cbab7af5b1db")} />
 
         <h3 class="font-typewriter text-xl mt-8 mb-4">¿Hace falta reservar para el brunch?</h3>
         <p class="mb-4">No. El sistema es de orden de llegada. No hay mesas guardadas. Si llegas pronto, tienes sitio; si llegas tarde un sábado en julio, puede que esperes un poco.</p>
@@ -172,7 +173,7 @@ const breadcrumbs = [
 <li><a href="https://perfectdailygrind.com/2016/11/what-is-brunch/" target="_blank" rel="noopener noreferrer" class="text-red hover:underline">Perfect Daily Grind — Coffee & Food Culture</a> — Publicación de referencia sobre cultura del café y hostelería</li>
 </ul>
 
-<p class="mb-4"><em>¿Vienes a S'Agaró? Dirty Rabbit está en la Avenida Platja d'Aro 275. Café La Cabra, tostada con salmón Benfumat y la Playa de Sant Pol a tres minutos. Tu casa lejos de casa.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-9ab6f851509c")} />
         <p class="mb-4"><em>Última actualización: marzo 2026</em></p>
 
       </div>
@@ -180,9 +181,7 @@ const breadcrumbs = [
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">¿Vienes a visitarnos?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-4fb00d6cad80")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

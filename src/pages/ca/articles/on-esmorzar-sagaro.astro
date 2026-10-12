@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'ca';
@@ -55,7 +56,7 @@ const breadcrumbs = [
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Les opcions per esmorzar a S&#39;Agaró</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">🐇 Dirty Rabbit</h3>
-<p class="mb-4"><strong>Avinguda Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-385e8285b0c0")} />
 <p class="mb-4">Dirty Rabbit és la cafeteria de referència de S&#39;Agaró. Sí, l&#39;escrivim nosaltres, així que el biaix és obvi. Però t&#39;explicarem què fem i per què.</p>
 <p class="mb-4"><strong>El cafè:</strong>
 Servim <strong>La Cabra</strong>, el torrador danès que consistentment està entre els millors del món. No és cafè &quot;bo&quot; — és cafè de finca única, traçable fins al productor, processat amb precisió i torrat a Copenhaguen. El preparem en una <strong>La Marzocco KB90</strong> amb aigua filtrada per <strong>osmosi inversa</strong> — cada variable controlada.</p>
@@ -240,10 +241,10 @@ Interior acollidor + terrassa per a dies de sol. A 3 minuts caminant de la Platj
 <h3 class="font-typewriter text-xl mt-8 mb-4">Hi ha opcions per a celíacs a S&#39;Agaró?</h3>
 <p class="mb-4">A Dirty Rabbit hi ha algunes opcions, però no som 100% gluten-free kitchen. Per a celíacs amb sensibilitat alta, ANNNA a Sant Feliu és la millor opció (100% sense gluten).</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Els llocs obren a l&#39;hivern?</h3>
-<p class="mb-4">Dirty Rabbit obre tot l&#39;any. Hostal de la Gavina té temporades (consulta). Villamás pot tancar o reduir a l&#39;hivern.</p>
+<p class="mb-4" set:html={getFactCopy("copy-c96aea5e1b14")} />
 <h3 class="font-typewriter text-xl mt-8 mb-4">Quant costa esmorzar a S&#39;Agaró?</h3>
 <ul class="space-y-2 mb-6 list-disc pl-6">
-<li><strong>Dirty Rabbit:</strong> 12–18€ per persona</li>
+<li set:html={getFactCopy("copy-097ebd49bc9c")} />
 <li><strong>Hostal de la Gavina:</strong> 40–70€ per persona</li>
 <li><strong>Villamás:</strong> Variable, 15–30€ per esmorzar/snack</li>
 </ul>
@@ -261,7 +262,7 @@ Interior acollidor + terrassa per a dies de sol. A 3 minuts caminant de la Platj
 <p class="mb-4">I si vols una experiència d&#39;hotel de luxe clàssic, hi ha la <strong>Gavina</strong>.</p>
 <p class="mb-4">Això és S&#39;Agaró. Poc, però bo.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Passa per Dirty Rabbit — Avinguda Platja d&#39;Aro 275, S&#39;Agaró. Cafè de La Cabra, torrades amb salmó Benfumat, a 3 minuts de Sant Pol. Obrim la porta i et quedes l&#39;estona que vulguis. Casa teva lluny de casa.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-e6518ea7721b")} />
 <p class="mb-4"><em>Última actualització: febrer 2026</em></p>
 
       </div>
@@ -269,9 +270,7 @@ Interior acollidor + terrassa per a dies de sol. A 3 minuts caminant de la Platj
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7e287ad1f6de")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

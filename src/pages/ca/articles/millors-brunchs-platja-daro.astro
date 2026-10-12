@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'ca';
@@ -16,7 +17,7 @@ const breadcrumbs = [
   title={title}
   description={description}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Article" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Article" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -46,7 +47,7 @@ const breadcrumbs = [
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Els millors brunchs a Platja d&#39;Aro i voltants</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">🐇 Dirty Rabbit — S&#39;Agaró (5 min de Platja d&#39;Aro)</h3>
-<p class="mb-4"><strong>Avinguda Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-385e8285b0c0")} />
 <p class="mb-4">Tècnicament no està a Platja d&#39;Aro, sinó a S&#39;Agaró (a 5 minuts en cotxe). Però si busques el millor brunch de la zona, val la pena el mínim desplaçament.</p>
 <p class="mb-4"><strong>Què fa diferent Dirty Rabbit:</strong></p>
 <p class="mb-4">El cafè és <strong>La Cabra</strong> — un torrador danès que consistentment està entre els millors del món. El preparem en una <strong>La Marzocco KB90</strong> amb aigua filtrada per <strong>osmosi inversa</strong>. No és un cafè &quot;bo&quot; — és cafè de finca única, traçable, processat amb precisió.</p>
@@ -85,18 +86,8 @@ const breadcrumbs = [
 <p class="mb-4"><strong>Reserva necessària?</strong> No normalment.</p>
 <p class="mb-4"><strong>El millor:</strong> Cafè local de qualitat, ambient actiu. Els caps de setmana hi ha bastant moviment ciclista.</p>
 <hr class="my-8 border-black/20">
-<h3 class="font-typewriter text-xl mt-8 mb-4">Grace Coffee — Platja d&#39;Aro</h3>
-<p class="mb-4"><strong>Carrer Pineda del Mar, 27, Platja d&#39;Aro</strong></p>
-<p class="mb-4">Cafè casual al centre de Platja d&#39;Aro. No és specialty coffee certificat, però les ressenyes són decents (4.6 a Google, 275 opinions).</p>
-<p class="mb-4"><strong>Què serveixen:</strong></p>
-<ul class="space-y-2 mb-6 list-disc pl-6">
-<li>Esmorzars variats</li>
-<li>Cafè espresso</li>
-<li>Opcions bàsiques de brunch</li>
-</ul>
-<p class="mb-4"><strong>Ambient:</strong> Casual, convenient.</p>
-<p class="mb-4"><strong>Preu mitjà:</strong> 10–15€ per persona</p>
-<p class="mb-4"><strong>El millor:</strong> Ubicació cèntrica, opció ràpida i accessible.</p>
+<h3 class="font-typewriter text-xl mt-8 mb-4">Grace Coffee — tancat permanentment</h3>
+<p class="mb-4">Grace Coffee, a Platja d’Aro, ha tancat permanentment i ja no forma part de les nostres recomanacions actuals. Estat comprovat el 5 d’octubre de 2026 a Google Maps. Com a alternatives properes, consulta La Maglia a Platja d’Aro, ANNNA a Sant Feliu de Guíxols i Dirty Rabbit a S’Agaró. Comprova els horaris actuals abans de desplaçar-te.</p>
 <hr class="my-8 border-black/20">
 <h3 class="font-typewriter text-xl mt-8 mb-4">ANNNA — Sant Feliu de Guíxols (7 min de Platja d&#39;Aro)</h3>
 <p class="mb-4"><strong>Carrer de l&#39;Hospital, 21, Sant Feliu de Guíxols</strong></p>
@@ -169,14 +160,6 @@ const breadcrumbs = [
 <td class="py-3 pr-4 border-b border-black/20">Centre</td>
 </tr>
 <tr>
-<td class="py-3 pr-4 border-b border-black/20"><strong>Grace Coffee</strong></td>
-<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐ Estàndard</td>
-<td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐ Bàsic</td>
-<td class="py-3 pr-4 border-b border-black/20">€</td>
-<td class="py-3 pr-4 border-b border-black/20">Casual</td>
-<td class="py-3 pr-4 border-b border-black/20">Centre</td>
-</tr>
-<tr>
 <td class="py-3 pr-4 border-b border-black/20"><strong>ANNNA</strong></td>
 <td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐ Specialty</td>
 <td class="py-3 pr-4 border-b border-black/20">⭐⭐⭐⭐⭐ Sense gluten</td>
@@ -212,7 +195,7 @@ const breadcrumbs = [
 <h3 class="font-typewriter text-xl mt-8 mb-4">&quot;Vull menjar amb els peus a la sorra&quot;</h3>
 <p class="mb-4">→ <strong>Villamás</strong> — A la platja de Sant Pol</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">&quot;Vull alguna cosa ràpida i cèntrica&quot;</h3>
-<p class="mb-4">→ <strong>Grace Coffee</strong> — Al centre de Platja d&#39;Aro</p>
+<p class="mb-4">Per prendre un cafè al centre de Platja d’Aro, consulta La Maglia Coffee &amp; Co, al carrer Juli Garreta 10. Comprova els horaris actuals abans d’anar-hi.</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">&quot;Vull un brunch complet amb productes de qualitat&quot;</h3>
 <p class="mb-4">→ <strong>Dirty Rabbit</strong> — Salmó Benfumat, brioixeria La Puntual, cafè La Cabra</p>
 <hr class="my-8 border-black/20">
@@ -234,11 +217,6 @@ const breadcrumbs = [
 <td class="py-3 pr-4 border-b border-black/20"><strong>La Maglia</strong></td>
 <td class="py-3 pr-4 border-b border-black/20">8:00–tarda</td>
 <td class="py-3 pr-4 border-b border-black/20">Obert</td>
-</tr>
-<tr>
-<td class="py-3 pr-4 border-b border-black/20"><strong>Grace Coffee</strong></td>
-<td class="py-3 pr-4 border-b border-black/20">Variable</td>
-<td class="py-3 pr-4 border-b border-black/20">Variable</td>
 </tr>
 <tr>
 <td class="py-3 pr-4 border-b border-black/20"><strong>ANNNA</strong></td>
@@ -309,7 +287,7 @@ const breadcrumbs = [
 <p class="mb-4">Si ets celíac:</p>
 <p class="mb-4"><strong>ANNNA</strong> — La millor (i gairebé única) opció seriosa de la zona.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Véns a Platja d&#39;Aro? El millor brunch és a 5 minuts: Dirty Rabbit — Avinguda Platja d&#39;Aro 275, S&#39;Agaró. Cafè de La Cabra, torrades amb salmó fumat Benfumat, i Sant Pol a un passeig. Casa teva lluny de casa.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-32d0aeb15355")} />
 <p class="mb-4"><em>Última actualització: febrer 2026</em></p>
 
       </div>
@@ -317,9 +295,7 @@ const breadcrumbs = [
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7e287ad1f6de")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

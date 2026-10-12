@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -19,88 +20,8 @@ const breadcrumbs = [
   articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Cafè d'especialitat a S'Agaró, Costa Brava. Matcha orgànic de REQ Matcha, cafè de La Cabra, pa d'Origo Bakery. Referència de matcha de cerimònia a la costa. Obert des del novembre 2024.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avinguda Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.7882,
-    "longitude": 3.0323
-  },
-  "url": "https://dirtyrabbit.es/matcha-latte-costa-brava",
-  "telephone": "+34872454264",
-  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
-  "priceRange": "€€",
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 41.7882,
-      "longitude": 3.0323
-    },
-    "geoRadius": "35000"
-  }
-}
-    </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "On puc prendre un bon matcha latte a la Costa Brava?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Dirty Rabbit a S'Agaró, Avinguda Platja d'Aro 275. Cafè d'especialitat amb matcha orgànic d'origen japonès, accessible des de la majoria de pobles del Baix Empordà en menys de 25 minuts."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Treballeu amb matcha tot l'any o només a l'estiu?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tot l'any. Vam obrir el 1 de novembre de 2024, fora de temporada. No tanquem a l'hivern. L'horari pot ajustar-se entre temporades, consulta a les xarxes o truca al +34 872 454 264."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Què és REQ Matcha?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Un projecte fundat a Barcelona per un japonès que viu al Japó. Seleccionen el te directament a les plantacions japoneses i l'importen. És el proveïdor que fem servir per al matcha de Dirty Rabbit."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Hi ha altres opcions d'especialitat a la Costa Brava?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, hi ha cafès d'especialitat en diversos punts de la costa. L'oferta creix cada temporada. Per al matcha en concret, la selecció és més reduïda, però existeix."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Es pot arribar a Dirty Rabbit en transport públic des d'altres pobles de la costa?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Hi ha línies d'autobús que connecten els municipis de la costa. Des de Platja d'Aro o Sant Feliu de Guíxols és fàcil. Per a altres localitats, el cotxe és més pràctic. Hi ha aparcament davant del local."
-      }
-    }
-  ]
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-ac3a437a6742", "ca"))} />
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-f37af67203d5", "ca"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -128,8 +49,8 @@ const breadcrumbs = [
   <li>Extra fort, amb més dosi, per una mica més</li>
 </ul>
 <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">On trobar bon matcha latte a la Costa Brava</h2>
-<p class="mb-4">Dirty Rabbit és a S'Agaró, Avinguda Platja d'Aro 275, un punt geogràficament central de la costa sud del Baix Empordà. Des de Tossa de Mar uns 20 minuts. Des de Palamós, uns 15. Des de Begur, uns 25. Des de Girona capital, 35 minuts per la C-65.</p>
-<p class="mb-4">Vam obrir el 1 de novembre de 2024, fora de temporada, a propòsit. No som un local d'estiu. El matcha és disponible tot l'any, calent o fred, amb llet de vaca o vegetal.</p>
+<p class="mb-4" set:html={getFactCopy("copy-f4c34c1bf362")} />
+<p class="mb-4" set:html={getFactCopy("copy-0de23e7d31dc")} />
 <p class="mb-4">A la resta de la Costa Brava hi ha locals que treballen bé el cafè. La majoria, però, no han posat el mateix rigor en el matcha. Si viatges per la costa i el matcha t'importa, val la pena tenir en compte la ubicació abans de demanar.</p>
 <h2 class="font-typewriter text-2xl md:text-3xl mb-6 mt-12">Per què el matcha latte és a tot arreu però ben fet en pocs llocs</h2>
 <p class="mb-4">A la Costa Brava el turisme internacional pressiona els locals a tenir a la carta el que els clients coneixen de casa, i el matcha latte ja és un estàndard al nord d'Europa, al Regne Unit, a Austràlia. El problema és que afegir la línia a la carta no garanteix que l'ingredient sigui l'adequat.</p>
@@ -139,11 +60,11 @@ const breadcrumbs = [
 <div class="space-y-6">
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">On puc prendre un bon matcha latte a la Costa Brava?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Dirty Rabbit a S'Agaró, Avinguda Platja d'Aro 275. El cafè d'especialitat més accessible de la costa sud amb matcha orgànic d'origen japonès. A menys de 25 minuts de la majoria de pobles del Baix Empordà.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-dde3accc17b8")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Treballeu amb matcha tot l'any o només a l'estiu?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Tot l'any. Vam obrir el 1 de novembre de 2024, fora de temporada. No tanquem a l'hivern. L'horari pot ajustar-se entre temporades, consulta a les xarxes o truca al +34 872 454 264.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-9a47ef1b2b9d")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Què és REQ Matcha?</p>
@@ -166,10 +87,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-69a3be74fc85")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

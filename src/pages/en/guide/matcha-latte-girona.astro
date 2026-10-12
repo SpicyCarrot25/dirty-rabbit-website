@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -19,31 +20,7 @@ const breadcrumbs = [
   articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Specialty café in S'Agaró, Costa Brava. Organic matcha from REQ Matcha, La Cabra coffee. 35 minutes from Girona along the C-65. Open since November 2024.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avinguda Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 41.7882,
-    "longitude": 3.0323
-  },
-  "url": "https://dirtyrabbit.es/matcha-latte-girona",
-  "telephone": "+34872454264",
-  "servesCuisine": ["Specialty Coffee", "Matcha", "Chai"],
-  "priceRange": "€€"
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-436536a29221", "en"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -74,7 +51,7 @@ const breadcrumbs = [
 </ul>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Where to find a good matcha latte near Girona</h3>
 <p class="mb-4">In Girona city: look for specialty cafés in the Barri Vell and Eixample. There are places working seriously with coffee that have also brought in quality matcha. Worth researching before you order anywhere.</p>
-<p class="mb-4">If you're planning a trip to the Costa Brava: Dirty Rabbit in S'Agaró, Avinguda Platja d'Aro 275. The matcha we use is from REQ Matcha — a Barcelona project run by a Japanese founder who lives in Japan and selects the tea at origin. We serve 2g of ceremonial grade, hot or cold, with plant milk available.</p>
+<p class="mb-4" set:html={getFactCopy("copy-b95531bef2f5")} />
 <p class="mb-4">35 minutes from Girona. Not for every day, but if the trip makes sense for other reasons, the matcha is here.</p>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Why matcha is everywhere but good matcha is rare</h3>
 <p class="mb-4">Girona was one of the first Catalan cities outside Barcelona to develop a serious specialty coffee culture. That gave matcha a head start compared to other parts of the province. But even in Girona, not every place that offers it changed supplier when they added it to the menu.</p>
@@ -122,10 +99,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-641e5275e080")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

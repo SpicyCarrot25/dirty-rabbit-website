@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../lib/business-facts';
 import Layout from '../../layouts/Layout.astro';
 
 const lang = 'es';
@@ -16,7 +17,7 @@ const breadcrumbs = [
   title={title}
   description={description}
   lang={lang}
-  articleMeta={{ datePublished: "2026-03-24", dateModified: "2026-03-24", section: "Article" }}
+  articleMeta={{ datePublished: "2026-03-24", dateModified: "2026-10-12", section: "Article" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -29,6 +30,7 @@ const breadcrumbs = [
           Desayunar después del Camí de Ronda
         </h1>
       </header>
+<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy está cerrado por temporada; la fecha de reapertura no está confirmada. No es un cierre permanente. Consulta su web antes de planificar una visita. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
 
       <!-- Main Content -->
       <div class="prose prose-lg max-w-none font-mono text-black/80 leading-relaxed">
@@ -99,7 +101,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Dónde desayunar después de cada tramo</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Si terminas en Sant Pol / S&#39;Agaró</h3>
 <h4>🐇 Dirty Rabbit — S&#39;Agaró</h4>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-d275a35fab67")} />
 <p class="mb-4">A 3 minutos andando de la Playa de Sant Pol. Perfecto para después de un tramo matutino.</p>
 <p class="mb-4"><strong>Por qué funciona para senderistas:</strong></p>
 <ul class="space-y-2 mb-6 list-disc pl-6">
@@ -140,7 +142,7 @@ const breadcrumbs = [
 <p class="mb-4"><strong>Horario:</strong> Todos los días 8:00–15:00.</p>
 <hr class="my-8 border-black/20">
 <h3 class="font-typewriter text-xl mt-8 mb-4">Si terminas en Begur / Pals</h3>
-<h4>Fitzroy Café — Begur</h4>
+<h4>Fitzroy Café (cerrado por temporada) — Begur</h4>
 <p class="mb-4"><strong>Carrer de Francesc Forgas, 1, Begur</strong></p>
 <p class="mb-4">El brunch más famoso de la zona. Banana bread, pancakes, smash avo toast. Después de un tramo largo, es una recompensa bien merecida.</p>
 <p class="mb-4"><strong>Ojo:</strong> Solo temporada alta. Verifica antes de ir.</p>
@@ -210,7 +212,7 @@ const breadcrumbs = [
 <li><a href="https://sca.coffee" target="_blank" rel="noopener noreferrer" class="text-red hover:underline">Specialty Coffee Association</a> — Por qué el café de especialidad es la mejor recompensa post-ruta</li>
 </ul>
 
-<p class="mb-4"><em>Después de caminar, pásate por Dirty Rabbit — Avenida Platja d&#39;Aro 275, S&#39;Agaró. Estamos a 3 minutos de Sant Pol. Café de La Cabra, tostadas con salmón Benfumat, y todo el tiempo que necesites para recuperarte. Tu casa lejos de casa.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-7ebf944a30dc")} />
 <p class="mb-4"><em>Última actualización: febrero 2026</em></p>
 
       </div>
@@ -220,7 +222,7 @@ const breadcrumbs = [
           <h2 class="font-typewriter text-2xl mb-4">También te puede interesar</h2>
           <ul class="font-mono text-sm space-y-3">
             <li>☕ <a href="/guia/mejor-cafe-sagaro" class="text-red hover:underline">El mejor café de especialidad en S'Agaró</a></li>
-            <li>🍵 <a href="/matcha" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
+            <li>🍵 <a href="/guia/matcha-latte-sagaro" class="text-red hover:underline">El mejor matcha de la Costa Brava — Grado ceremonial en S'Agaró</a></li>
             <li>🫖 <a href="/guia/chai-latte-sagaro" class="text-red hover:underline">Chai Latte en S'Agaró — Qué esperar</a></li>
             <li>🍳 <a href="/articulos/brunch-sagaro" class="text-red hover:underline">Brunch en S'Agaró — Dirty Rabbit · Café de Especialidad</a></li>
             <li>🌅 <a href="/articulos/desayunar-costa-brava" class="text-red hover:underline">Dónde desayunar en la Costa Brava — Guía completa 2026</a></li>
@@ -229,9 +231,7 @@ const breadcrumbs = [
 <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">¿Vienes a vernos?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-4fb00d6cad80")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

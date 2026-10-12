@@ -39,10 +39,12 @@ const googleMapsUrl = 'https://g.page/r/CZzyPK5naLS3EBE/review';
         </div>
         <p class="font-mono text-sm text-black/50">{t.tapStar}</p>
       </div>
-      <div id="step-5stars" class="hidden space-y-6">
-        <p class="font-typewriter text-4xl md:text-5xl text-black">{t.thanks5}</p>
+      <div id="public-review" class="space-y-3 my-6">
         <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" class="inline-block font-typewriter text-lg px-8 py-4 bg-red text-white hover:bg-red/90 transition-colors rounded-xl shadow-lg">{t.googleButton}</a>
         <p class="font-mono text-sm text-black/60">{t.googleSubtext}</p>
+      </div>
+      <div id="step-5stars" class="hidden space-y-6">
+        <p class="font-typewriter text-4xl md:text-5xl text-black">{t.thanks5}</p>
       </div>
       <div id="step-feedback" class="hidden space-y-6">
         <p class="font-typewriter text-2xl md:text-3xl text-black">{t.thanks14}</p>

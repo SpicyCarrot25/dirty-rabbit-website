@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'fr';
@@ -16,7 +17,7 @@ const breadcrumbs = [
   title={title}
   description={description}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Article" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Article" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -29,6 +30,7 @@ const breadcrumbs = [
           Cafés avec WiFi pour travailler sur la Costa Brava
         </h1>
       </header>
+<aside class="mb-8 p-4 bg-cream border-l-4 border-red" data-seasonal-status="fitzroy"><p>Fitzroy est fermé pour la saison ; la date de réouverture reste à confirmer. Il ne s’agit pas d’une fermeture définitive. Consultez son site avant de prévoir une visite. <a href="https://fitzroycafe.com/" class="text-red underline">Fitzroy</a> · 12/10/2026</p></aside>
 
       <!-- Main Content -->
       <div class="prose prose-lg max-w-none font-mono text-black/80 leading-relaxed">
@@ -96,7 +98,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Les meilleurs cafés pour travailler sur la Costa Brava</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Zone S&#39;Agaró — Platja d&#39;Aro — Sant Feliu</h3>
 <h4>🐇 Dirty Rabbit — S&#39;Agaró</h4>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-3fe8a49f7437")} />
 <div class="overflow-x-auto mb-8"><table class="w-full font-mono text-sm">
 <thead class="border-b-2 border-black">
 <tr>
@@ -455,7 +457,7 @@ const breadcrumbs = [
 <p class="mb-4"><strong>Carrer de la Font, 7, Pals</strong> · 20 min en voiture</p>
 <p class="mb-4">WiFi oui, ambiance détendue, patio extérieur. Fonctionne bien pour travailler un moment. Fermé mercredi.</p>
 <hr class="my-8 border-black/20">
-<h4>Fitzroy Café — Begur</h4>
+<h4>Fitzroy Café (fermé pour la saison) — Begur</h4>
 <p class="mb-4"><strong>Carrer de Francesc Forgas, 1, Begur</strong> · 20 min en voiture</p>
 <p class="mb-4">WiFi limité, pas le meilleur pour le travail. Venez pour le brunch, pas pour le laptop.</p>
 <hr class="my-8 border-black/20">
@@ -525,10 +527,10 @@ const breadcrumbs = [
 <p class="mb-4"><strong>Pour un travail sérieux (plusieurs jours, longues sessions) :</strong></p>
 <p class="mb-4"><strong>Gérone ville</strong> — Oniria, SHOTS Coffee, ou un coworking. Plus d&#39;options, plus d&#39;infrastructure, politique explicitement laptop-friendly.</p>
 <p class="mb-4"><strong>Pour combiner travail + plage (basse saison) :</strong></p>
-<p class="mb-4"><strong>Dirty Rabbit</strong> en hiver ou tôt le matin — WiFi, prises, café La Cabra, et Sant Pol à 3 minutes. Mais rappelez-vous : nous sommes un café, pas un coworking. En été aux heures de pointe, privilégiez profiter de votre café et laissez le laptop à la maison.</p>
+<p class="mb-4" set:html={getFactCopy("copy-193b66695bda")} />
 <p class="mb-4"><strong>Zero</strong> à Palamós est aussi une bonne option pour un travail calme.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Vous travaillez à distance depuis la Costa Brava ? En basse saison, passez au Dirty Rabbit — Avenida Platja d&#39;Aro 275, S&#39;Agaró. Café La Cabra et Sant Pol à 3 minutes. En été, profitez de votre café sans laptop.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-1a4b41a3ed65")} />
 <p class="mb-4"><em>Dernière mise à jour : février 2026</em></p>
 
       </div>
@@ -536,9 +538,7 @@ const breadcrumbs = [
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Vous venez nous voir?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-44a10ac1417d")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

@@ -1,4 +1,5 @@
 ---
+import { applyBusinessFacts, getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../lib/business-facts';
 import Layout from '../layouts/Layout.astro';
 import { getLocalizedPath } from '../i18n';
 
@@ -41,11 +42,11 @@ const menuHighlights = [
 const faqs = [
   {
     question: '¿Dónde hacer brunch en S\'Agaró cerca de la playa?',
-    answer: 'Dirty Rabbit está en S\'Agaró, en Avinguda Platja d\'Aro 275, a pocos minutos de Sant Pol. Es una parada cómoda si buscas brunch antes de la playa, después de pasear o de camino entre Sant Feliu y Platja d\'Aro.'
+    answer: getFactCopy("copy-71380380d481")
   },
   {
     question: '¿Dirty Rabbit sirve brunch todo el año?',
-    answer: 'Trabajamos con una dinámica estacional propia de la Costa Brava. La temporada fuerte va de junio a septiembre, pero también abrimos en meses intermedios. Antes de venir, conviene confirmar el horario actual en Google Maps.'
+    answer: getFactCopy("copy-254d5591faf5")
   },
   {
     question: '¿Qué tipo de brunch hay en Dirty Rabbit?',
@@ -72,26 +73,12 @@ const pageSchema = {
       mainEntityOfPage: pageUrl,
       image: 'https://dirtyrabbit.es/og-image.jpg',
       servesCuisine: ['Brunch', 'Breakfast', 'Specialty Coffee'],
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Avinguda Platja d\'Aro 275',
-        addressLocality: 'S\'Agaró',
-        addressRegion: 'Girona',
-        postalCode: '17248',
-        addressCountry: 'ES'
-      },
+      address: getBusinessField("schema-51defe117c7d", "address"),
       telephone: '+34 872 454 264',
       hasMap: mapsUrl,
       acceptsReservations: false,
       areaServed: ['S\'Agaró', 'Platja d\'Aro', 'Costa Brava'],
-      openingHoursSpecification: [
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-          opens: '08:00',
-          closes: '15:00'
-        }
-      ],
+      openingHoursSpecification: getBusinessField("schema-9683a508e35b", "openingHoursSpecification"),
       amenityFeature: [
         { '@type': 'LocationFeatureSpecification', name: 'Terraza con luz de mañana', value: true },
         { '@type': 'LocationFeatureSpecification', name: 'Aparcamiento cerca', value: true },
@@ -137,7 +124,7 @@ const pageSchema = {
   lang={lang}
   breadcrumbs={breadcrumbs}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} slot="head" />
+  <script type="application/ld+json" set:html={serializeSchema(applyBusinessFacts(pageSchema, lang))} slot="head" />
 
   <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -203,15 +190,9 @@ const pageSchema = {
       <div>
         <h2 class="font-typewriter text-3xl md:text-4xl font-bold text-red mb-4">Horarios y cómo llegar</h2>
         <div class="space-y-4 font-mono text-sm md:text-base text-black/80 leading-relaxed">
+          <p set:html={getFactCopy("copy-643dd236ae91")} />
           <p>
-            Dirty Rabbit está en <strong>Avinguda Platja d'Aro 275, S'Agaró 17248</strong>. La ubicación es práctica porque queda en un punto natural de paso
-            entre S'Agaró, Sant Feliu de Guíxols y Platja d'Aro. Si vienes en coche, llegas rápido desde cualquiera de los tres. Si estás alojado cerca de Sant Pol,
-            también puedes acercarte andando y convertir el desayuno en parte del paseo.
-          </p>
-          <p>
-            El horario base de brunch es de <strong>martes a domingo, de 8:00 a 15:00</strong>, con temporada alta de junio a septiembre y apertura en shoulder seasons.
-            Como cualquier negocio de costa, puede haber ajustes puntuales por época del año, así que el enlace de
-            <a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="text-red hover:underline"> Google Maps</a> es la forma más fiable de confirmar antes de venir.
+            El horario base de brunch es de <strong>{getFactCopy("copy-5df6ebddb2b9")}</strong>{getFactCopy("copy-d7bf5c985d41")}<a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="text-red hover:underline"> Google Maps</a> es la forma más fiable de confirmar antes de venir.
           </p>
           <p>
             Si tu referencia es "brunch en Platja d'Aro", piensa en Dirty Rabbit como la opción cercana que te saca un poco del ruido del centro sin mandarte lejos.
@@ -228,9 +209,9 @@ const pageSchema = {
       <aside class="border border-red rounded-lg p-6 bg-white">
         <h3 class="font-typewriter text-2xl text-red mb-4">Datos útiles</h3>
         <ul class="space-y-3 font-mono text-sm md:text-base text-black/80">
-          <li><strong>Dirección:</strong> Avinguda Platja d'Aro 275</li>
+          <li set:html={getFactCopy("copy-c847dfb51bbf")} />
           <li><strong>Pueblo:</strong> S'Agaró, Girona 17248</li>
-          <li><strong>Horario habitual:</strong> Mar-Dom · 8:00-15:00</li>
+          <li set:html={getFactCopy("copy-785525a8699f")} />
           <li><strong>Cerca de:</strong> Sant Pol y Platja d'Aro</li>
           <li><strong>Enlaces:</strong> <a href={getLocalizedPath('/', lang)} class="text-red hover:underline">Home</a> · <a href={getLocalizedPath('/carta', lang)} class="text-red hover:underline">Carta</a> · <a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="text-red hover:underline">Maps</a></li>
         </ul>
@@ -308,9 +289,7 @@ const pageSchema = {
         <a href={getLocalizedPath('/carta', lang)} class="underline underline-offset-4"> carta</a> o abrir directamente
         <a href={mapsUrl} target="_blank" rel="noopener noreferrer" class="underline underline-offset-4"> Google Maps</a> para venir.
       </p>
-      <p class="font-mono text-sm md:text-base leading-relaxed text-white/90 max-w-2xl mx-auto mb-8">
-        Avinguda Platja d'Aro 275, S'Agaró 17248. Costa Brava. Mañanas con luz, brunch sin teatro y café hecho con intención.
-      </p>
+      <p class="font-mono text-sm md:text-base leading-relaxed text-white/90 max-w-2xl mx-auto mb-8" set:html={getFactCopy("copy-6fee981333bf")} />
       <p class="font-mono text-sm md:text-base leading-relaxed text-white/90 max-w-2xl mx-auto mb-8">
         Si hoy buscabas un sitio para desayunar en S'Agaró, o estabas comparando opciones entre S'Agaró y Platja d'Aro, esta es la respuesta corta:
         buen café, brunch honesto y un espacio al que apetece volver. El resto ya lo decides tú cuando te sientes en la terraza.

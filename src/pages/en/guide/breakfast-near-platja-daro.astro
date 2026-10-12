@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations } from '../../../i18n';
 
@@ -19,7 +20,7 @@ const breadcrumbs = [
   title={`Where to have breakfast in ${locationName} — Guide 2026`}
   description={`The best spots for breakfast and brunch in ${locationName} and nearby, Costa Brava. Local guide.`}
   lang={lang}
-  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
+  articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-10-12", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
 
   <article class="py-16 md:py-24 bg-white">
@@ -51,10 +52,8 @@ const breadcrumbs = [
         </section>
 
         <section class="mb-16 p-8 bg-cream rounded-xl border-2 border-red">
-          <h2 class="font-typewriter text-2xl md:text-3xl mb-4 flex items-center gap-3">
-            <span class="text-3xl">🐇</span> Dirty Rabbit — The best breakfast (5 min)
-          </h2>
-          <p class="font-mono text-sm text-red mb-4">Avenida Platja d'Aro 275, S'Agaró · 5 min drive</p>
+          <h2 class="font-typewriter text-2xl md:text-3xl mb-4">Dirty Rabbit — S’Agaró</h2>
+          <p class="font-mono text-sm text-red mb-4" set:html={getFactCopy("copy-0eb018139a8d")} />
           
           <p class="mb-4">
             For the best breakfast in the area, make the 5-minute trip to S'Agaró. It's genuinely worth the detour.
@@ -134,10 +133,7 @@ const breadcrumbs = [
         </div>
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">We're waiting 5 minutes away</p>
-          <p class="font-mono mb-6">
-            Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró<br>
-            The best breakfast in the area. Worth the detour.
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-9746438792d1")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

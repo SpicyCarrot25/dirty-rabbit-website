@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'en';
@@ -55,7 +56,7 @@ const breadcrumbs = [
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Breakfast Options in S&#39;Agaró</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">🐇 Dirty Rabbit</h3>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-2a263e56ea85")} />
 <p class="mb-4">Dirty Rabbit is the go-to café in S&#39;Agaró. Yes, we&#39;re writing this, so the bias is obvious. But we&#39;ll explain what we do and why.</p>
 <p class="mb-4"><strong>The coffee:</strong>
 We serve <strong>La Cabra</strong>, the Danish roaster that&#39;s consistently among the best in the world. It&#39;s not just &quot;good&quot; coffee — it&#39;s single-origin coffee, traceable to the producer, processed with precision and roasted in Copenhagen. We prepare it on a <strong>La Marzocco KB90</strong> with <strong>reverse osmosis</strong> filtered water — every variable controlled.</p>
@@ -240,10 +241,10 @@ Cosy interior + terrace for sunny days. 3 minutes&#39; walk from Sant Pol Beach.
 <h3 class="font-typewriter text-xl mt-8 mb-4">Are there options for coeliacs in S&#39;Agaró?</h3>
 <p class="mb-4">At Dirty Rabbit there are some options, but we&#39;re not a 100% gluten-free kitchen. For coeliacs with high sensitivity, ANNNA in Sant Feliu is the best option (100% gluten-free).</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">Are places open in winter?</h3>
-<p class="mb-4">Dirty Rabbit is open year-round. Hostal de la Gavina has seasons (check). Villamás may close or reduce in winter.</p>
+<p class="mb-4" set:html={getFactCopy("copy-dcd5b36bbbd6")} />
 <h3 class="font-typewriter text-xl mt-8 mb-4">How much does breakfast in S&#39;Agaró cost?</h3>
 <ul class="space-y-2 mb-6 list-disc pl-6">
-<li><strong>Dirty Rabbit:</strong> €12–18 per person</li>
+<li set:html={getFactCopy("copy-e0f43e0eaa8c")} />
 <li><strong>Hostal de la Gavina:</strong> €40–70 per person</li>
 <li><strong>Villamás:</strong> Variable, €15–30 for breakfast/snack</li>
 </ul>
@@ -261,7 +262,7 @@ Cosy interior + terrace for sunny days. 3 minutes&#39; walk from Sant Pol Beach.
 <p class="mb-4">And if you want a classic luxury hotel experience, there&#39;s <strong>La Gavina</strong>.</p>
 <p class="mb-4">That&#39;s S&#39;Agaró. Not much, but good.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Pop into Dirty Rabbit — Avenida Platja d&#39;Aro 275, S&#39;Agaró. La Cabra coffee, toast with Benfumat salmon, 3 minutes from Sant Pol. We open the door and you stay as long as you like. Your home away from home.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-7a82e3a191ad")} />
 <p class="mb-4"><em>Last updated: February 2026</em></p>
 
       </div>
@@ -282,9 +283,7 @@ Cosy interior + terrace for sunny days. 3 minutes&#39; walk from Sant Pol Beach.
 <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Coming to visit?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7894039d7078")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

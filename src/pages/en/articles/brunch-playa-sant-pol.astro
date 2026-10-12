@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'en';
@@ -112,7 +113,7 @@ const breadcrumbs = [
 <hr class="my-8 border-black/20">
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Brunch near Sant Pol: Your Options</h2>
 <h3 class="font-typewriter text-xl mt-8 mb-4">🐇 Dirty Rabbit — 3 minutes&#39; walk</h3>
-<p class="mb-4"><strong>Avenida Platja d&#39;Aro 275, S&#39;Agaró</strong> · <a href="https://www.google.com/maps?cid=13237319999262880412">Google Maps</a></p>
+<p class="mb-4" set:html={getFactCopy("copy-2a263e56ea85")} />
 <p class="mb-4">Dirty Rabbit is literally a 3-minute walk from Sant Pol beach. Walk up the ramp towards Avenida Platja d&#39;Aro, turn right, and you&#39;re there.</p>
 <p class="mb-4"><strong>Why it&#39;s perfect after the beach:</strong></p>
 <p class="mb-4">We understand you&#39;re coming from the water, possibly with wet hair, sand on your feet, hungry. We&#39;re not a formal restaurant — come as you are. There&#39;s a terrace if you prefer staying outside.</p>
@@ -309,7 +310,7 @@ const breadcrumbs = [
 </li>
 </ol>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>After the beach (or before), pop into Dirty Rabbit — Avenida Platja d&#39;Aro 275. We&#39;re 3 minutes from Sant Pol. La Cabra coffee, Benfumat smoked salmon toast, terrace to dry off in the sun. Your home away from home.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-cdcdc18a74d8")} />
 <p class="mb-4"><em>Last updated: February 2026</em></p>
 
       </div>
@@ -330,9 +331,7 @@ const breadcrumbs = [
 <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Coming to visit?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7894039d7078")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"

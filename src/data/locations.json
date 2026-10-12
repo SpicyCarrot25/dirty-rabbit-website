@@ -10,7 +10,7 @@
     "distanceMinutes": 0,
     "type": "town",
     "lat": 41.7885,
-    "lng": 3.0380,
+    "lng": 3.038,
     "description": {
       "es": "Urbanización de lujo junto al mar con arquitectura noucentista y el famoso Camí de Ronda.",
       "en": "Luxury seaside enclave with Noucentista architecture and the famous Camí de Ronda coastal path.",
@@ -67,7 +67,7 @@
     "distanceMinutes": 15,
     "type": "town",
     "lat": 41.8484,
-    "lng": 3.1290,
+    "lng": 3.129,
     "description": {
       "es": "Puerto pesquero famoso por sus gambas rojas y su museo de la pesca.",
       "en": "Fishing port famous for its red prawns and fishing museum.",
@@ -124,7 +124,7 @@
     "distanceMinutes": 20,
     "type": "town",
     "lat": 41.9594,
-    "lng": 3.0430,
+    "lng": 3.043,
     "description": {
       "es": "Capital de la cerámica catalana, con tiendas artesanas y un castillo-palacio medieval.",
       "en": "Capital of Catalan pottery, with artisan shops and a medieval castle-palace.",
@@ -140,7 +140,7 @@
       "ca": "Begur",
       "fr": "Begur"
     },
-    "distanceMinutes": 30,
+    "distanceMinutes": 20,
     "type": "town",
     "lat": 41.9544,
     "lng": 3.2068,
@@ -237,8 +237,8 @@
     },
     "distanceMinutes": 2,
     "type": "beach",
-    "lat": 41.7920,
-    "lng": 3.0420,
+    "lat": 41.792,
+    "lng": 3.042,
     "description": {
       "es": "Pequeña cala rocosa entre S'Agaró y Sant Pol, accesible por el Camí de Ronda.",
       "en": "Small rocky cove between S'Agaró and Sant Pol, accessible via the Camí de Ronda.",

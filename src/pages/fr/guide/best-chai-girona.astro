@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 import { getTranslations, getLocalizedPath } from '../../../i18n';
 
@@ -19,25 +20,7 @@ const breadcrumbs = [
   articleMeta={{ datePublished: "2026-02-15", dateModified: "2026-03-06", section: "Coffee Guide" }}
   breadcrumbs={breadcrumbs}>
   <Fragment slot="head">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "CafeOrCoffeeShop"],
-  "name": "Dirty Rabbit",
-  "description": "Café de spécialité à S'Agaró (Costa Brava) avec masala chai bio d'Awachai (Isère, France). À 35 minutes de Gérone. Iced chai et dirty chai disponibles toute l'année.",
-  "foundingDate": "2024-11-01",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Avinguda Platja d'Aro 275",
-    "addressLocality": "S'Agaró",
-    "postalCode": "17248",
-    "addressCountry": "ES"
-  },
-  "url": "https://dirtyrabbit.es/best-chai-girona",
-  "telephone": "+34872454264",
-  "priceRange": "€€"
-}
-    </script>
+    <script type="application/ld+json" set:html={serializeSchema(getBusinessSchema("schema-c65dead5a41f", "fr"))} />
   </Fragment>
 
   <article class="py-16 md:py-24 bg-white">
@@ -57,13 +40,13 @@ const breadcrumbs = [
 <h3 class="font-typewriter text-xl mb-4 mt-8">Ce qui différencie un bon chai latte</h3>
 <ol class="list-decimal list-outside ml-6 space-y-2 mb-6">
   <li>Le vrai masala chai n'est pas un mélange de poudre générique — c'est de la cardamome, de la cannelle, du gingembre, du clou de girofle et du poivre en proportion précise. Awachai, le fournisseur que nous utilisons, élabore ce mélange en Isère, France, avec des ingrédients 100% bio. Pour les visiteurs français, c'est un produit fabriqué chez vous — ça mérite d'être dit. Le résultat est plus complexe et moins sucré que n'importe quelle version au sirop.</li>
-  <li>Le froid ne gâche pas le chai. Le chai glacé est une des versions les plus sous-estimées en Espagne — peu de cafés le proposent hors de l'été. Chez Dirty Rabbit il est disponible toute l'année parce que les épices du masala tiennent parfaitement en froid.</li>
+  <li set:html={getFactCopy("copy-9154d8e65655")} />
   <li>Le dirty chai n'est pas un caprice. C'est l'option la plus commandée parmi les gens qui découvrent le chai pour la première fois — l'espresso de La Cabra apporte de l'énergie et le masala apporte du goût. Ensemble ils fonctionnent mieux que la description sur le papier.</li>
 </ol>
 <h3 class="font-typewriter text-xl mb-4 mt-8">Où trouver un bon chai latte près de Gérone</h3>
 <p class="mb-4">À Gérone en ville, quelques cafés de spécialité se préoccupent de leurs ingrédients. Pour le masala chai spécifiquement, l'offre est plus restreinte — la majorité utilise du sirop.</p>
-<p class="mb-4">Dirty Rabbit se trouve Avinguda Platja d'Aro 275, S'Agaró — 35 minutes depuis Gérone. Si vous avez une raison d'être sur la Costa Brava, le détour est minime : nous sommes sur la route entre Sant Feliu de Guíxols et Platja d'Aro.</p>
-<p class="mb-4">Trois versions de chai toute l'année : classique chaud ou froid, chai glacé, dirty chai avec espresso. Lait végétal disponible. Entre 3,50€ et 5€.</p>
+<p class="mb-4" set:html={getFactCopy("copy-06d3e271da12")} />
+<p class="mb-4" set:html={getFactCopy("copy-3044d474c723")} />
 <h3 class="font-typewriter text-xl mb-4 mt-8">Pourquoi le chai latte est partout mais rarement bien fait</h3>
 <p class="mb-4">Gérone a une scène de cafés avec plus d'exigence que la moyenne des villes de cette taille. Même ainsi, le masala chai véritable reste minoritaire. Le schéma est prévisible : les établissements qui travaillent avec de vraies épices sont les mêmes qui travaillent avec du café de spécialité et du pain au levain. C'est une exigence qui traverse toute la carte, pas une décision isolée.</p>
 <p class="mb-4">La Costa Brava, étant plus touristique et saisonnière, a moins de densité de ce type de cafés. Ceux qui existent ont tendance à se distinguer par là.</p>
@@ -80,7 +63,7 @@ const breadcrumbs = [
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Servez-vous le chai froid en hiver ?</p>
-  <p class="font-mono text-sm text-black/70 leading-relaxed">Oui. Le chai glacé est disponible toute l'année chez Dirty Rabbit. Ce n'est pas une offre saisonnière.</p>
+  <p class="font-mono text-sm text-black/70 leading-relaxed" set:html={getFactCopy("copy-2c4af8815e3a")} />
 </div>
 <div class="border-b border-black/10 pb-5">
   <p class="font-typewriter font-bold mb-2">Le dirty chai convient-il à quelqu'un qui ne boit pas de café habituellement ?</p>
@@ -98,10 +81,7 @@ const breadcrumbs = [
 
         <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
           <p class="font-typewriter text-2xl mb-4">Dirty Rabbit</p>
-          <p class="font-mono mb-6">
-            Avinguda Platja d'Aro 275, S'Agaró<br>
-            +34 872 454 264
-          </p>
+          <p class="font-mono mb-6" set:html={getFactCopy("copy-f81927ed14a8")} />
           <a 
             href="https://www.google.com/maps?cid=13237319999262880412"
             target="_blank"

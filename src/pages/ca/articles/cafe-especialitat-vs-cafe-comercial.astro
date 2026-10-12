@@ -1,4 +1,5 @@
 ---
+import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../../../lib/business-facts';
 import Layout from '../../../layouts/Layout.astro';
 
 const lang = 'ca';
@@ -441,8 +442,7 @@ const breadcrumbs = [
 <h2 class="font-typewriter text-2xl md:text-3xl mb-4 mt-12">Cafè d&#39;especialitat a la Costa Brava</h2>
 <p class="mb-4">Si ets a la Costa Brava i vols provar cafè d&#39;especialitat real:</p>
 <h3 class="font-typewriter text-xl mt-8 mb-4">A S&#39;Agaró</h3>
-<p class="mb-4"><strong>Dirty Rabbit</strong> — Avinguda Platja d&#39;Aro 275
-Cafè de <strong>La Cabra</strong> (Dinamarca), consistentment entre els millors torradors del món. Preparat en <strong>La Marzocco KB90</strong> amb aigua d&#39;<strong>osmosi inversa</strong>. A 3 minuts de la Platja de Sant Pol.</p>
+<p class="mb-4" set:html={getFactCopy("copy-3ab9de1d2d90")} />
 <h3 class="font-typewriter text-xl mt-8 mb-4">A la zona</h3>
 <ul class="space-y-2 mb-6 list-disc pl-6">
 <li><strong>La Maglia</strong> (Platja d&#39;Aro) — Torrador propi, primer specialty de la Costa Brava</li>
@@ -469,7 +469,7 @@ Cafè de <strong>La Cabra</strong> (Dinamarca), consistentment entre els millors
 <p class="mb-4">La diferència entre un cafè comercial de 1,50€ i un d&#39;especialitat de 3€ és de 1,50€. Això és menys que un croissant industrial. Si prens un cafè al dia, són 45€/mes de diferència per a una experiència completament diferent.</p>
 <p class="mb-4">Prova&#39;l una vegada. Si no notes la diferència, segueix amb el de sempre. Però si la notes — i la majoria la nota — no hi ha marxa enrere.</p>
 <hr class="my-8 border-black/20">
-<p class="mb-4"><em>Vols provar cafè d&#39;especialitat a la Costa Brava? Passa per Dirty Rabbit — Avinguda Platja d&#39;Aro 275, S&#39;Agaró. Servim La Cabra, preparat com cal. Sense sucre. Sense excuses. Casa teva lluny de casa.</em></p>
+<p class="mb-4" set:html={getFactCopy("copy-5729ca795a7f")} />
 <p class="mb-4"><em>Última actualització: febrer 2026</em></p>
 
       </div>
@@ -477,9 +477,7 @@ Cafè de <strong>La Cabra</strong> (Dinamarca), consistentment entre els millors
       <!-- CTA -->
       <div class="mt-16 p-8 bg-black text-white rounded-xl text-center">
         <p class="font-typewriter text-2xl mb-4">Vens a veure'ns?</p>
-        <p class="font-mono mb-6">
-          Dirty Rabbit · Avenida Platja d'Aro 275, S'Agaró
-        </p>
+        <p class="font-mono mb-6" set:html={getFactCopy("copy-7e287ad1f6de")} />
         <a 
           href="https://www.google.com/maps?cid=13237319999262880412"
           target="_blank"
