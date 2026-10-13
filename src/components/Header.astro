@@ -90,272 +90,100 @@ const orderLabels: Record<Language, string> = {
   uk: 'Замовити',
   pl: 'Zamów'
 };
+
+const newsLabels: Record<Language, string> = {
+  es: 'Noticias', en: 'News', ca: 'Notícies', fr: 'Actualités', ru: 'Новости', uk: 'Новини', pl: 'Aktualności'
+};
+const guideLabels: Record<Language, string> = {
+  es: 'Guías locales', en: 'Local guides', ca: 'Guies locals', fr: 'Guides locaux', ru: 'Гиды', uk: 'Гіди', pl: 'Przewodniki'
+};
+const guideHubs: Record<Language, string> = {
+  es: '/guia/', en: '/en/guide/', ca: '/guia/', fr: '/en/guide/', ru: '/en/guide/', uk: '/en/guide/', pl: '/en/guide/'
+};
+const newsHref = getLocalizedPath('/news', lang);
+const path = Astro.url.pathname;
+const isCurrent = (href: string) => href !== '/' && path.startsWith(href.replace(/\/$/, '')) ? 'page' : undefined;
+const igIcon = 'M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z';
+const spIcon = 'M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z';
 ---
 
-<header id="main-header" class="fixed top-0 left-0 right-0 z-50 header-transparent header-transition border-b">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16 md:h-20">
-      
-      <!-- Secondary Nav (left) - small text -->
-      <nav class="hidden md:flex items-center gap-5">
-        <a 
-          href={getLocalizedPath('/about', lang)} 
-          class="nav-link font-mono text-sm tracking-wide transition-colors"
-        >
-          {historyLabelsDesktop[lang]}
-        </a>
-        <a 
-          href={getLocalizedPath('/proveedores', lang)} 
-          class="nav-link font-mono text-sm tracking-wide transition-colors"
-        >
-          {suppliersLabelsDesktop[lang]}
-        </a>
-        <a 
-          href={getLocalizedPath('/faq', lang)} 
-          class="nav-link font-mono text-sm tracking-wide transition-colors"
-        >
-          {contactLabelsDesktop[lang]}
-        </a>
-      </nav>
-      
-      <!-- Mobile Menu Button (left on mobile) -->
-      <button 
-        id="mobile-menu-btn"
-        class="menu-btn md:hidden p-2 -ml-2 hover:opacity-80 rounded-lg transition-opacity"
-        aria-label="Abrir menú"
-        aria-expanded="false"
-      >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-
-      <!-- Centered Logo -->
-      <a 
-        href={getLocalizedPath('/', lang)} 
-        class="absolute left-1/2 -translate-x-1/2 flex items-center hover:opacity-80 transition-opacity"
-      >
-        <img 
-          src="/logos/LOGO-HORIZONTAL-ROJO-DIRTYRABBIT.png" 
-          alt="Dirty Rabbit" 
-          class="logo-dark h-6 md:h-8 w-auto"
-        />
-        <img 
-          src="/logos/LOGO-HORIZONTAL-CREMA-DIRTYRABBIT.png" 
-          alt="Dirty Rabbit" 
-          class="logo-light h-6 md:h-8 w-auto hidden"
-        />
+<header id="main-header" class="mz-head">
+  <div class="mz-wrap">
+    <div class="mz-head-inner">
+      <a href={getLocalizedPath('/', lang)} class="mz-logo" aria-label="Dirty Rabbit">
+        <img src="/logos/LOGO-HORIZONTAL-ROJO-DIRTYRABBIT.png" alt="Dirty Rabbit" width="190" height="38" />
       </a>
-      
-      <!-- Primary Nav (right) - desktop -->
-      <nav class="hidden md:flex items-center gap-6">
-        <a 
-          href={getLocalizedPath('/carta', lang)} 
-          class="nav-link font-typewriter text-lg md:text-xl tracking-normal transition-colors font-bold"
-        >
-          {t.nav.menu}
-        </a>
-        <a 
-          href="https://order.dirtyrabbit.es" 
-          target="_blank"
-          rel="noopener noreferrer"
-          class="nav-cta font-typewriter text-lg md:text-xl tracking-normal px-6 py-3 transition-colors font-bold"
-        >
-          {t.nav.order}
-        </a>
-        <LanguageSelector lang={lang} />
+
+      <nav class="mz-nav" aria-label="Principal">
+        <a href={getLocalizedPath('/carta', lang)} aria-current={isCurrent(getLocalizedPath('/carta', lang))}>{t.nav.menu}</a>
+        <a href={getLocalizedPath('/about', lang)} aria-current={isCurrent(getLocalizedPath('/about', lang))}>{historyLabelsDesktop[lang]}</a>
+        <a href={getLocalizedPath('/proveedores', lang)} aria-current={isCurrent(getLocalizedPath('/proveedores', lang))}>{suppliersLabelsDesktop[lang]}</a>
+        <a href={newsHref} aria-current={isCurrent(newsHref)}>{newsLabels[lang]}</a>
+        <a href={guideHubs[lang]} aria-current={isCurrent(guideHubs[lang])}>{guideLabels[lang]}</a>
+        <a href={getLocalizedPath('/faq', lang)} aria-current={isCurrent(getLocalizedPath('/faq', lang))}>{contactLabelsDesktop[lang]}</a>
       </nav>
-      
-      <!-- Mobile: Language selector always visible on right -->
-      <div class="md:hidden">
+
+      <div class="mz-head-actions">
+        <a href="https://order.dirtyrabbit.es" target="_blank" rel="noopener noreferrer" class="mz-order">{orderLabels[lang]}</a>
         <LanguageSelector lang={lang} />
+        <button id="mobile-menu-btn" class="mz-menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu-overlay">
+          <svg width="26" height="26" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.5" d="M3 7h18M3 12h18M3 17h18"/></svg>
+        </button>
       </div>
     </div>
   </div>
 </header>
 
-<!-- Full-screen Mobile Menu Overlay (Big Mamma style) -->
-<div 
-  id="mobile-menu-overlay" 
-  class="mobile-menu-overlay hidden fixed inset-0 z-[100] bg-white flex flex-col"
->
-  <!-- Overlay Header: X (left), Logo (center), Lang (right) -->
-  <div class="flex items-center justify-between px-4 h-16 border-b border-[#1A1A1A]/10">
-    <!-- Close button (LEFT) -->
-    <button 
-      id="mobile-menu-close"
-      class="p-2 -ml-2 hover:bg-black/5 rounded-lg transition-colors"
-      aria-label="Cerrar menú"
-    >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
-      </svg>
-    </button>
-    
-    <!-- Logo (CENTER) -->
-    <img 
-      src="/logos/LOGO-HORIZONTAL-ROJO-DIRTYRABBIT.png" 
-      alt="Dirty Rabbit" 
-      class="h-6 w-auto absolute left-1/2 -translate-x-1/2"
-    />
-    
-    <!-- Language selector (RIGHT) -->
-    <LanguageSelector lang={lang} />
-  </div>
-  
-  <!-- Overlay Content -->
-  <div class="flex-1 flex flex-col justify-center px-8">
-    
-    <!-- Mascot illustration - BIGGER -->
-    <div class="mb-8">
-      <img 
-        src="/logos/SIMBOLO-ROJO-DIRTYRABBIT.png" 
-        alt="" 
-        class="h-32 w-auto"
-        aria-hidden="true"
-      />
+<div id="mobile-menu-overlay" class="mz-overlay hidden" role="dialog" aria-modal="true" aria-label="Menú">
+  <div class="mz-wrap">
+    <div class="mz-overlay-head mz-rule-double" style="border-top:0;border-bottom:3px double var(--mz-red)">
+      <img src="/logos/LOGO-HORIZONTAL-ROJO-DIRTYRABBIT.png" alt="Dirty Rabbit" />
+      <button id="mobile-menu-close" class="mz-overlay-close" aria-label="Cerrar menú">
+        <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
     </div>
-    
-    <!-- Primary Links - consistent spacing -->
-    <nav class="space-y-2 mb-6">
-      <a 
-        href={getLocalizedPath('/carta', lang)} 
-        class="block font-typewriter text-4xl tracking-normal text-red hover:text-red/80 transition-colors"
-      >
-        {t.nav.menu}
-      </a>
-      <a 
-        href={getLocalizedPath('/about', lang)} 
-        class="block font-typewriter text-4xl tracking-normal text-red hover:text-red/80 transition-colors"
-      >
-        {historyLabels[lang]}
-      </a>
-      <a 
-        href="https://order.dirtyrabbit.es" 
-        target="_blank"
-        rel="noopener noreferrer"
-        class="block font-typewriter text-4xl tracking-normal text-red hover:text-red/80 transition-colors"
-      >
-        {orderLabels[lang]}
-      </a>
-    </nav>
-    
-    <!-- Solid divider line - RED -->
-    <div class="w-full max-w-xs border-t border-[#CD202C] mb-6"></div>
-    
-    <!-- Secondary Links (small) - Left aligned, RED -->
-    <nav class="space-y-3">
-      <a 
-        href={getLocalizedPath('/proveedores', lang)} 
-        class="block font-mono text-base text-red hover:text-red/80 transition-colors"
-      >
-        {suppliersLabels[lang]}
-      </a>
-      <a 
-        href={getLocalizedPath('/trabajo', lang)} 
-        class="block font-mono text-base text-red hover:text-red/80 transition-colors"
-      >
-        {workLabels[lang]}
-      </a>
-      <a 
-        href={getLocalizedPath('/faq', lang)} 
-        class="block font-mono text-base text-red hover:text-red/80 transition-colors"
-      >
-        {contactLabels[lang]}
-      </a>
-    </nav>
-  </div>
-  
-  <!-- Overlay Footer: Stay in touch + social icons (no top border) -->
-  <div class="px-8 py-8">
-    <p class="font-mono text-sm text-red mb-4">Stay in touch</p>
-    <div class="flex items-center gap-6">
-      <!-- Instagram -->
-      <a 
-        href="https://instagram.com/dirtyrabbitcoffee" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="text-red hover:text-red/70 transition-colors"
-        aria-label="Instagram"
-      >
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-      </a>
-      <!-- Spotify Playlist -->
-      <a 
-        href="https://open.spotify.com/playlist/6mKSZ7yX8TRCoqUpuQGcVX" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        class="text-red hover:text-red/70 transition-colors"
-        aria-label="Dirty Rabbit Good Vibes Playlist"
-      >
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-      </a>
+    <div class="mz-overlay-main">
+      <p class="mz-kicker">Dirty Rabbit</p>
+      <nav class="mz-overlay-primary" aria-label="Principal">
+        <a href={getLocalizedPath('/carta', lang)}>{t.nav.menu}</a>
+        <a href="https://order.dirtyrabbit.es" target="_blank" rel="noopener noreferrer">{orderLabels[lang]}</a>
+        <a href={getLocalizedPath('/about', lang)}>{historyLabels[lang]}</a>
+        <a href={newsHref}>{newsLabels[lang]}</a>
+      </nav>
+      <nav class="mz-overlay-secondary" aria-label="Más">
+        <a href={guideHubs[lang]}>{guideLabels[lang]}</a>
+        <a href={getLocalizedPath('/proveedores', lang)}>{suppliersLabels[lang]}</a>
+        <a href={getLocalizedPath('/trabajo', lang)}>{workLabels[lang]}</a>
+        <a href={getLocalizedPath('/faq', lang)}>{contactLabels[lang]}</a>
+      </nav>
+      <div class="mz-overlay-social">
+        <a href="https://instagram.com/dirtyrabbitcoffee" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d={igIcon}/></svg></a>
+        <a href="https://open.spotify.com/playlist/6mKSZ7yX8TRCoqUpuQGcVX" target="_blank" rel="noopener noreferrer" aria-label="Dirty Rabbit Good Vibes Playlist"><svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d={spIcon}/></svg></a>
+      </div>
     </div>
   </div>
 </div>
-
-<!-- Spacer for fixed header -->
-<div class="h-16 md:h-20"></div>
 
 <script>
   const menuBtn = document.getElementById('mobile-menu-btn');
   const menuOverlay = document.getElementById('mobile-menu-overlay');
   const menuClose = document.getElementById('mobile-menu-close');
-  
+
   function openMenu() {
     menuOverlay?.classList.remove('hidden');
-    requestAnimationFrame(() => {
-      menuOverlay?.classList.add('visible');
-    });
     document.body.style.overflow = 'hidden';
     menuBtn?.setAttribute('aria-expanded', 'true');
+    menuClose?.focus();
   }
-  
   function closeMenu() {
-    menuOverlay?.classList.remove('visible');
-    setTimeout(() => {
-      menuOverlay?.classList.add('hidden');
-    }, 300);
+    menuOverlay?.classList.add('hidden');
     document.body.style.overflow = '';
     menuBtn?.setAttribute('aria-expanded', 'false');
   }
-  
   menuBtn?.addEventListener('click', openMenu);
   menuClose?.addEventListener('click', closeMenu);
-  
-  menuOverlay?.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
-  
+  menuOverlay?.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !menuOverlay?.classList.contains('hidden')) {
-      closeMenu();
-    }
-  });
-  
-  const header = document.getElementById('main-header');
-  
-  function updateHeader() {
-    const scrollY = window.scrollY;
-    if (scrollY > 50) {
-      header?.classList.remove('header-transparent');
-      header?.classList.add('header-solid');
-    } else {
-      header?.classList.remove('header-solid');
-      header?.classList.add('header-transparent');
-    }
-  }
-  
-  updateHeader();
-  
-  let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        updateHeader();
-        ticking = false;
-      });
-      ticking = true;
-    }
+    if (e.key === 'Escape' && !menuOverlay?.classList.contains('hidden')) closeMenu();
   });
 </script>

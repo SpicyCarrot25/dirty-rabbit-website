@@ -1,6 +1,7 @@
 ---
 import { getFactCopy, getBusinessSchema, getBusinessField, serializeSchema } from '../lib/business-facts';
 import '../styles/global.css';
+import '../styles/magazine.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import GuideLocationFAQ from '../components/GuideLocationFAQ.astro';
@@ -26,6 +27,7 @@ interface Props {
   isMenuPage?: boolean;
   articleMeta?: ArticleMeta;
   hasLocationFAQ?: boolean;
+  noindex?: boolean;
 }
 
 const { 
@@ -35,7 +37,8 @@ const {
   breadcrumbs,
   isMenuPage = false,
   articleMeta,
-  hasLocationFAQ = false
+  hasLocationFAQ = false,
+  noindex = false
 } = Astro.props;
 
 const currentLang = lang || getLangFromUrl(Astro.url);
@@ -116,6 +119,7 @@ const unifiedSchema = {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <meta name="generator" content={Astro.generator} />
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -224,7 +228,7 @@ const unifiedSchema = {
     <!-- End Meta Pixel -->
     <slot name="head" />
   </head>
-  <body class="min-h-screen flex flex-col bg-white text-black">
+  <body class="mag min-h-screen flex flex-col">
     <Header lang={navigationLang} />
     <main class="flex-1">
       <slot />

@@ -1,0 +1,56 @@
+{
+  "source": "Dirty Rabbit 2026 Summer Guide (Canva DAHNGE5HWkw), transcribed 13 Oct 2026",
+  "tagline": "No sponsors. No favours. Just what we'd send our friends to.",
+  "edition": "curated list · summer 2026 · v.1",
+  "handle": "@dirtyrabbitcoffee",
+  "sections": [
+    { "id": "coffee", "title": "Coffee", "items": [
+      { "name": "Dirty Rabbit", "what": "La Cabra, S'Agaró" },
+      { "name": "Fitzroy", "what": "Hola + veg, Begur", "seasonal": "fitzroy" },
+      { "name": "Annna", "what": "Three Marks, St Feliu" },
+      { "name": "La Maglia", "what": "own medium roast, PDA" },
+      { "name": "Grava", "what": "Hidden Coffee, Pals" },
+      { "name": "Tramuntana", "what": "multi-roast, Girona" },
+      { "name": "Oniria", "what": "multi-roast, Girona" }
+    ]},
+    { "id": "eat", "title": "Eat", "note": "med = mediterranean", "items": [
+      { "name": "Matsu", "what": "sushi, Palamós" },
+      { "name": "Smor", "what": "nordic/catalan, Palamós" },
+      { "name": "Funky Pizza", "what": "pizza, Palafrugell" },
+      { "name": "Pizzabar", "what": "pizza, St Feliu de Boada" },
+      { "name": "Italianini", "what": "pasta, Platja d'Aro" },
+      { "name": "Villa Mas", "what": "med + wine, Sant Pol" },
+      { "name": "Sidral", "what": "med, Platja d'Aro" },
+      { "name": "ReMei", "what": "med, Cadaqués" },
+      { "name": "Batalla", "what": "med, Cadaqués" },
+      { "name": "Clara", "what": "small plates, Begur" },
+      { "name": "Cap Sa Sal", "what": "med, views" },
+      { "name": "Can Roquet", "what": "catalan-french, Romanyà" },
+      { "name": "Margarita", "what": "med, Calella" },
+      { "name": "La Calma", "what": "chiringuito, family" },
+      { "name": "La Cometa", "what": "chiringuito, Palamós" },
+      { "name": "Mano", "what": "chiringuito, Marina" }
+    ]},
+    { "id": "swim", "title": "Swim", "items": [
+      { "name": "Cala Sa Conca", "what": "easy cove, walk" },
+      { "name": "Sant Pol", "what": "sandy, family" },
+      { "name": "Cala Ametller", "what": "snorkel, on foot" },
+      { "name": "Cala s'Alguer", "what": "fishermen's huts" },
+      { "name": "Cala Pedrosa", "what": "walk, Llafranc" },
+      { "name": "Cala Estreta", "what": "walk-only, Palamós" },
+      { "name": "Aiguablava", "what": "iconic, before 10am" },
+      { "name": "Sa Tuna", "what": "village cove, Begur" }
+    ]},
+    { "id": "explore", "title": "Explore", "items": [
+      { "name": "Camí de Ronda Sud", "what": "PDA–St Feliu" },
+      { "name": "Camí de Ronda Nord", "what": "Calella–Llafranc" },
+      { "name": "Far de Sant Sebastià", "what": "lighthouse" },
+      { "name": "Castell de Begur", "what": "ruins, 360°" },
+      { "name": "Pals", "what": "medieval village" },
+      { "name": "Peratallada", "what": "medieval village" },
+      { "name": "Monells", "what": "quiet village" },
+      { "name": "Cadaqués", "what": "Dalí country, day trip" },
+      { "name": "Empúries", "what": "Greek/Roman ruins" }
+    ]}
+  ]
+}

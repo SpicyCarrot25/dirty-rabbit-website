@@ -1,0 +1,32 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description?: string;
+  image?: string;
+  date?: Date;
+  draft?: boolean;
+  lead?: boolean;
+  kicker?: string;
+}
+const { href, title, description, image, date, draft, lead, kicker } = Astro.props;
+const dateLabel = date?.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
+const isSummer = /Summer Guide/.test(title);
+---
+<a href={href} class:list={['mz-story', lead && 'mz-story--lead']}>
+  {image ? (
+    <img src={image} alt={title} loading="lazy" />
+  ) : lead && (
+    <div class="mz-story-cover" aria-hidden="true">
+      <span>{kicker || 'News y Momentos'}</span>
+      <strong>{isSummer ? 'Coffee / Eat / Swim / Explore' : title}</strong>
+      {isSummer && <em>“No sponsors. No favours. Just what we'd send our friends to.”</em>}
+    </div>
+  )}
+  <div>
+    {dateLabel && <time datetime={date?.toISOString().slice(0, 10)}>{dateLabel}</time>}
+    {draft && <span class="mz-draft-flag">Borrador · demo</span>}
+    <h3>{title}</h3>
+    {description && <p>{description}</p>}
+  </div>
+</a>
