@@ -2,9 +2,10 @@
 import Layout from '../../layouts/Layout.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
+import { isVisiblePost } from '../../lib/demo';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('news', ({ data }) => data.lang === 'es' && !data.draft);
+  const posts = await getCollection('news', ({ data }) => data.lang === 'es' && isVisiblePost(data));
   return posts.map(post => ({
     params: { slug: post.slug },
     props: { post },
@@ -16,46 +17,46 @@ const { Content } = await post.render();
 
 const lang = post.data.lang || 'es';
 const t = getTranslations(lang);
+const dateLabel = post.data.date.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' });
 ---
 
-<Layout title={`${post.data.title} — Dirty Rabbit`} description={post.data.description} lang={lang}>
-  <article class="py-12 md:py-16 bg-cream">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Back link -->
-      <a 
-        href="/news" 
-        class="font-mono text-sm text-red hover:text-red/80 transition-colors inline-flex items-center gap-2 mb-8"
-      >
-        <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-        </svg>
-        Volver a noticias
-      </a>
-      
-      <!-- Header -->
-      <header class="mb-8">
-        <time class="font-mono text-sm text-red mb-4 block">
-          {post.data.date.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
-        </time>
-        <h1 class="font-typewriter text-4xl md:text-5xl font-bold mb-4">{post.data.title}</h1>
-        <p class="font-mono text-lg text-black/70">{post.data.description}</p>
-      </header>
-      
-      <!-- Featured image -->
-      {post.data.image && (
-        <div class="aspect-square rounded-xl overflow-hidden mb-12">
-          <img 
-            src={post.data.image} 
-            alt={post.data.title}
-            class="w-full h-full object-cover object-top"
-          />
-        </div>
-      )}
-      
-      <!-- Content -->
-      <div class="prose max-w-none">
-        <Content />
+<Layout title={`${post.data.title} — Dirty Rabbit`} description={post.data.description} lang={lang} noindex={post.data.draft}>
+  <article class="bg-cream">
+    <header class="mz-wrap mz-page-head">
+      <div class="mz-crumb">
+        <a href="/news">← Volver a noticias</a>
+        <span><time datetime={post.data.date.toISOString().slice(0, 10)}>{dateLabel}</time>{post.data.draft && <span class="mz-draft-flag">Borrador · demo</span>}</span>
       </div>
+      <h1 class="font-typewriter mz-page-title">{post.data.title}</h1>
+      <p class="mz-page-dek">{post.data.description}</p>
+    </header>
+
+    <div class="mz-wrap mz-article">
+      <div class="mz-article-body">
+        {post.data.image && (
+          <figure class="mz-article-photo">
+            <img src={post.data.image} alt={post.data.title} />
+          </figure>
+        )}
+        <div class="prose max-w-none" data-seasonal-status={post.body.includes('Fitzroy') ? 'fitzroy' : undefined}>
+          <Content />
+        </div>
+      </div>
+      <aside class="mz-aside">
+        <div class="mz-box">
+          <h2>Dirty Rabbit</h2>
+          <p>Café La Cabra, desayunos y brunch. Mar–Dom 8:00–15:00; lunes cerrado.</p>
+          <a class="mz-btn mz-btn--solid" href="https://www.google.com/maps?cid=13237319999262880412" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
+        </div>
+        <div class="mz-box">
+          <h2>Seguir leyendo</h2>
+          <ul>
+            <li><a href="/news">{t.news.title}</a></li>
+            <li><a href="/carta">Carta</a></li>
+            <li><a href="/guia/">Guías locales</a></li>
+          </ul>
+        </div>
+      </aside>
     </div>
   </article>
 </Layout>

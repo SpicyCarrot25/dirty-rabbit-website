@@ -1,0 +1,66 @@
+---
+// "Dirty Rabbit Curated List": the 2026 Summer Guide as a magazine spread.
+// Names and notes are the exact Canva transcription (src/data/curated-list-2026.json).
+import list from '../data/curated-list-2026.json';
+
+interface Props {
+  storyHref?: string;
+}
+const { storyHref } = Astro.props;
+
+const byId = Object.fromEntries(list.sections.map((s) => [s.id, s]));
+const columns = [
+  [byId.coffee, byId.swim],
+  [byId.eat],
+  [byId.explore],
+];
+---
+
+<section class="mz-curated" id="curated-list" aria-labelledby="curated-title">
+  <div class="mz-wrap">
+    <div class="mz-curated-inner">
+      <div class="mz-curated-top">
+        <span>Summer Guide 2026</span>
+        <span>{list.edition}</span>
+      </div>
+
+      <div class="mz-curated-head">
+        <h2 id="curated-title" class="mz-curated-title">Dirty Rabbit <em>Curated List</em></h2>
+        <div>
+          <p class="mz-curated-quote">“{list.tagline}”</p>
+          <p class="mz-curated-sub">Coffee / Eat / Swim / Explore · {list.handle}</p>
+        </div>
+      </div>
+
+      <div class="mz-curated-grid">
+        {columns.map((col) => (
+          <div class="mz-curated-col">
+            {col.map((section) => (
+              <div class="mz-list" data-list={section.id}>
+                <h3>{section.title} <small>{String(section.items.length).padStart(2, '0')}</small></h3>
+                <ol>
+                  {section.items.map((item) => (
+                    <li data-seasonal-status={item.seasonal}>
+                      <div class="mz-leader">
+                        <span class="n">{item.name}</span>
+                        <span class="d" aria-hidden="true"></span>
+                        <span class="w">{item.what}</span>
+                      </div>
+                      {item.seasonal === 'fitzroy' && <span class="mz-season">closed for the season</span>}
+                    </li>
+                  ))}
+                </ol>
+                {section.note && <p class="mz-curated-sub" style="margin-top:8px">{section.note}</p>}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+
+      <div class="mz-curated-foot">
+        <p>Horarios, cartas y temporadas cambian: consulta cada sitio antes de ir.</p>
+        {storyHref && <a class="mz-more" href={storyHref}>Leer la guía completa →</a>}
+      </div>
+    </div>
+  </div>
+</section>

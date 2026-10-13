@@ -1,66 +1,51 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import StoryCard from '../../components/StoryCard.astro';
 import { getTranslations } from '../../i18n';
 import { getCollection } from 'astro:content';
+import { isVisiblePost } from '../../lib/demo';
+import articles from '../../data/articles-es.json';
 
 const lang = 'es';
 const t = getTranslations(lang);
 
 const allPosts = await getCollection('news', ({ data }) => {
-  return data.lang === lang && !data.draft;
+  return data.lang === lang && isVisiblePost(data);
 });
 
 const posts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const lead = posts.find(post => post.slug === 'summer-guide-2026-es') || posts[0];
+const rest = posts.filter(post => post !== lead);
 ---
 
 <Layout title={`${t.news.title} — Dirty Rabbit`} lang={lang}>
-  <section class="pt-8 pb-12 md:pt-12 md:pb-16 bg-cream">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h1 class="font-typewriter text-5xl md:text-6xl font-bold text-red mb-6">{t.news.title}</h1>
-        <div class="w-16 h-px bg-red mx-auto mb-6"></div>
-        <p class="font-mono text-sm text-black/60">{t.news.subtitle}</p>
-      </div>
-      
+  <section class="bg-cream">
+    <div class="mz-wrap mz-page-head">
+      <div class="mz-crumb"><a href="/">Dirty Rabbit</a><span>{t.news.subtitle}</span></div>
+      <h1 class="font-typewriter mz-page-title text-red">{t.news.title}</h1>
+    </div>
+
+    <div class="mz-wrap">
       {posts.length === 0 ? (
-        <div class="text-center font-mono text-black/50 py-16">
-          No hay noticias todavía.
-        </div>
+        <p class="font-mono" style="padding:48px 0">No hay noticias todavía.</p>
       ) : (
-        <div class="grid md:grid-cols-2 gap-8">
-          {posts.map((post) => (
-            <article class="bg-white border border-black/10 rounded-2xl overflow-hidden card-lift">
-              <div class="aspect-[16/9] bg-cream overflow-hidden">
-                {post.data.image ? (
-                  <img src={post.data.image} alt={post.data.title} class="w-full h-full object-cover" />
-                ) : (
-                  <div class="w-full h-full flex items-center justify-center">
-                    <span class="font-mono text-sm text-black/30">[FOTO]</span>
-                  </div>
-                )}
-              </div>
-              <div class="p-6">
-                <time class="font-mono text-xs text-red mb-2 block">
-                  {post.data.date.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}
-                </time>
-                <h2 class="font-typewriter text-xl font-bold mb-3">{post.data.title}</h2>
-                <p class="font-mono text-sm text-black/70 leading-relaxed mb-4">
-                  {post.data.description}
-                </p>
-                <a 
-                  href={`/news/${post.slug}`}
-                  class="font-mono text-sm text-red hover:text-red/80 transition-colors inline-flex items-center gap-2"
-                >
-                  {t.news.readMore}
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                  </svg>
-                </a>
-              </div>
-            </article>
+        <div class="mz-newslist">
+          {lead && <StoryCard lead href={`/news/${lead.slug}`} title={lead.data.title} description={lead.data.description} image={lead.data.image} date={lead.data.date} draft={lead.data.draft} kicker="Summer Guide 2026" />}
+          {rest.map((post) => (
+            <StoryCard href={`/news/${post.slug}`} title={post.data.title} description={post.data.description} image={post.data.image} date={post.data.date} draft={post.data.draft} />
           ))}
         </div>
       )}
+
+      <div class="mz-section-head" style="margin-top:8px">
+        <h2 style="font-size:40px">Del archivo</h2>
+        <p>Artículos</p>
+      </div>
+      <div class="mz-hub" style="padding-top:0">
+        {articles.map(article => (
+          <a href={article.href}><span>Artículo</span><strong>{article.title}</strong></a>
+        ))}
+      </div>
     </div>
   </section>
 </Layout>

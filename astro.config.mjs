@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 
 // Use each article's editorial date. Non-article pages without a recorded date
 // omit lastmod; a build or a shared-template edit is not a new article revision.
@@ -27,6 +27,14 @@ const sitemapExcludedPaths = new Set([
   '/uk/carta',
 ]);
 
+// DEMO: approval-only news drafts can render on the demo preview (see src/lib/demo.ts);
+// they are noindex and must never enter the sitemap.
+const draftNewsPaths = new Set(
+  readdirSync(new URL('./src/content/news/', import.meta.url))
+    .filter(name => name.endsWith('.md') && /^draft: true$/m.test(readFileSync(new URL(`./src/content/news/${name}`, import.meta.url), 'utf8')))
+    .map(name => `/news/${name.replace(/\.md$/, '')}`)
+);
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://dirtyrabbit.es',
@@ -39,7 +47,8 @@ export default defineConfig({
       },
       filter: (page) => {
         const url = new URL(page);
-        return !sitemapExcludedPaths.has(url.pathname.replace(/\/$/, '') || '/');
+        const path = url.pathname.replace(/\/$/, '') || '/';
+        return !sitemapExcludedPaths.has(path) && !draftNewsPaths.has(path);
       },
     }),
   ],

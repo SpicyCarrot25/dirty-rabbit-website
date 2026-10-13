@@ -1,309 +1,94 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { getTranslations, getLocalizedPath } from '../i18n';
+import CuratedList from '../components/CuratedList.astro';
+import StoryCard from '../components/StoryCard.astro';
+import { getLocalizedPath } from '../i18n';
 import { getCollection } from 'astro:content';
+import { getFactCopy } from '../lib/business-facts';
+import { isVisiblePost, SHOW_DEMO_DRAFTS } from '../lib/demo';
 import proveedores from '../data/proveedores.json';
 
 const lang = 'es';
-const t = getTranslations(lang);
 
 // Featured providers for homepage (curated selection)
 const featuredIds = ['la-cabra', 'origo-bakery', 'la-puntual', 'buddy-buddy'];
 const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === id)).filter(Boolean);
 
-// Get latest news posts for this language
-const allNews = await getCollection('news', ({ data }) => data.lang === lang && !data.draft);
-const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
+// One featured story: the Summer Guide on the demo preview, otherwise the latest published post.
+const allNews = await getCollection('news', ({ data }) => data.lang === lang && isVisiblePost(data));
+const sortedNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const summerGuide = sortedNews.find(post => post.slug === 'summer-guide-2026-es');
+const leadPost = summerGuide || sortedNews[0];
+const storyHref = summerGuide && SHOW_DEMO_DRAFTS ? `/news/${summerGuide.slug}/` : undefined;
 ---
 
-<Layout 
+<Layout
   title="Dirty Rabbit: cafetería que admite perros en S’Agaró"
   description="Café La Cabra, desayuno y brunch en S’Agaró, Costa Brava. Perros bienvenidos, terraza de 56 plazas y WiFi gratis, a 2 minutos a pie de Sant Pol."
   lang={lang}>
-  
-  <!-- HERO SECTION: 100vh, full-bleed photo, centered tagline, NO scroll indicator -->
-  <section class="relative h-screen flex items-center justify-center overflow-hidden -mt-16 md:-mt-20">
-    <!-- Background: Video of La Marzocco (GIF-like behavior) -->
-    <div class="absolute inset-0 bg-black" id="hero-bg">
-      <video 
-        autoplay 
-        muted 
-        loop 
-        playsinline
-        webkit-playsinline
-        disablePictureInPicture
-        preload="auto"
-        class="w-full h-full object-cover pointer-events-none"
-      >
-        <source src="/photos/hero-video.mp4" type="video/mp4" />
-      </video>
-      <!-- Dark overlay for text readability -->
-      <div class="absolute inset-0 bg-black/40"></div>
+
+  <h1 class="sr-only">Dirty Rabbit — Specialty Coffee y Brunch en S'Agaró, Costa Brava</h1>
+
+  <!-- COVER: headline + photo, one intro line, hours + Carta + Pide Ahora -->
+  <section class="mz-wrap" aria-label="Portada">
+    <div class="mz-issue">
+      <span>Specialty coffee · Desayuno · Brunch</span>
+      <span>Perros bienvenidos</span>
     </div>
-    
-    <!-- Hero Content: Centered tagline only -->
-    <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
-      <p class="reveal font-typewriter text-3xl md:text-5xl lg:text-6xl leading-relaxed hero-text-shadow">
-        Mañanas tranquilas.<br class="hidden sm:block" /> 
-        Risas fáciles.<br class="hidden sm:block" /> 
-        Coffee in between.
-      </p>
-    </div>
-    
-    <!-- No scroll indicator per design spec -->
-  </section>
-  
-  
-  <!-- COMMUNITY SECTION: Post-hero, no headline, elegant typography -->
-  <section class="py-16 md:py-24 bg-white">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h1 class="sr-only">Dirty Rabbit — Specialty Coffee y Brunch en S'Agaró, Costa Brava</h1>
-      <p class="reveal font-typewriter text-xl md:text-2xl lg:text-3xl leading-relaxed text-black/80 mb-10">
-        La familia con el niño que no para. La pareja que viene desde el primer día. El que acaba de mudarse y no conoce a nadie todavía. Aquí se viene a desayunar bien, a tomar café de verdad, y a quedarse un rato. Desconocidos que se vuelven clientes que se vuelven amigos. <a href={getLocalizedPath('/carta', lang)} class="text-red hover:underline">Specialty coffee</a>, brunch y desayunos yummy en S'Agaró, en el corazón de la Costa Brava.
-      </p>
-      
-      <!-- CTA Buttons -->
-      <div class="reveal flex flex-col sm:flex-row gap-4 justify-center">
-        <a 
-          href={getLocalizedPath('/carta', lang)}
-          class="inline-block font-typewriter text-lg px-8 py-3 border-2 border-red text-red hover:bg-red hover:text-white transition-colors rounded-lg"
-        >
-          Carta
-        </a>
-        <a 
-          href="https://order.dirtyrabbit.es"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-block font-typewriter text-lg px-8 py-3 bg-red text-white hover:bg-red/90 transition-colors rounded-lg"
-        >
-          Pide Ahora
-        </a>
+    <div class="mz-cover">
+      <p class="mz-cover-title">Mañanas tranquilas. Risas fáciles. Coffee in between.</p>
+      <figure class="mz-cover-photo">
+        <img src="/gallery/elm.murcia_dirtyrabbit-207.jpg" alt="Interior de Dirty Rabbit cafetería specialty coffee Costa Brava" fetchpriority="high" />
+      </figure>
+      <div class="mz-cover-info">
+        <p class="mz-cover-dek">Café La Cabra, desayunos y brunch, con terraza de 56 plazas.</p>
+        <div class="mz-hours">
+          <b>Horario</b>
+          <span set:html={getFactCopy("copy-3e2ab0f46a17")} />
+          <small>Lunes cerrado.</small>
+        </div>
+        <div class="mz-btns">
+          <a href={getLocalizedPath('/carta', lang)} class="mz-btn">Carta</a>
+          <a href="https://order.dirtyrabbit.es" target="_blank" rel="noopener noreferrer" class="mz-btn mz-btn--solid">Pide Ahora</a>
+        </div>
       </div>
     </div>
   </section>
-  
-  
-  <!-- PHOTO GALLERY: edge-to-edge, no gaps, no rounding -->
-  <section class="bg-cream">
-    <div class="grid grid-cols-1 md:grid-cols-3">
-      <div class="reveal aspect-square overflow-hidden">
-        <img src="/gallery/elm.murcia_dirtyrabbit-44.jpg" alt="Croissant y latte con arte en Dirty Rabbit S'Agaró" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+
+  <!-- CURATED LIST (2026 Summer Guide) -->
+  <CuratedList storyHref={storyHref} />
+
+  <!-- ONE FEATURED STORY -->
+  {leadPost && (
+    <section class="mz-section" aria-labelledby="news-title">
+      <div class="mz-wrap">
+        <div class="mz-section-head">
+          <h2 id="news-title">News y Momentos</h2>
+          <a href={getLocalizedPath('/news', lang)} class="mz-more">Ver todas las noticias →</a>
+        </div>
+        <div class="mz-feature">
+          <StoryCard lead href={`/news/${leadPost.slug}/`} title={leadPost.data.title} description={leadPost.data.description} image={leadPost.data.image} date={leadPost.data.date} draft={leadPost.data.draft} kicker="Summer Guide 2026" />
+        </div>
       </div>
-      <div class="reveal aspect-square overflow-hidden">
-        <img src="/gallery/elm.murcia_dirtyrabbit-125.jpg" alt="Tostada de salmón y aguacate con matcha latte en Dirty Rabbit" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+    </section>
+  )}
+
+  <!-- COMPACT SUPPLIERS STRIP -->
+  <section class="mz-section mz-section--tight" aria-labelledby="providers-title">
+    <div class="mz-wrap">
+      <div class="mz-strip-head">
+        <h2 id="providers-title">Proveedores</h2>
+        <a href={getLocalizedPath('/proveedores', lang)} class="mz-more">Ver todos →</a>
       </div>
-      <div class="reveal aspect-square overflow-hidden">
-        <img src="/gallery/dirty-rabbit-cafe-interior-4.jpg" alt="Barra de café con La Marzocco KB90 en Dirty Rabbit S'Agaró" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-      </div>
-      <div class="reveal aspect-square overflow-hidden">
-        <img src="/gallery/dirty-rabbit-specialty-coffee-2.jpg" alt="Café de especialidad La Cabra servido en Dirty Rabbit" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-      </div>
-      <div class="reveal aspect-square overflow-hidden">
-        <img src="/gallery/dirty-rabbit-brunch-sagaro-2.jpg" alt="Bikini de queso fundido brunch en Dirty Rabbit S'Agaró" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-      </div>
-      <div class="reveal aspect-square overflow-hidden">
-        <img src="/gallery/elm.murcia_dirtyrabbit-207.jpg" alt="Interior de Dirty Rabbit cafetería specialty coffee Costa Brava" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
-      </div>
-    </div>
-  </section>
-  
-  
-  <!-- PROVIDERS: 4 cards grid, same style as news cards -->
-  <section class="py-12 md:py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Header -->
-      <div class="text-center mb-12 md:mb-16 reveal">
-        <h2 class="font-typewriter text-5xl md:text-6xl lg:text-7xl mb-4 section-headline">
-          Proveedores
-        </h2>
-        <p class="font-mono text-sm text-black/60 max-w-xl mx-auto">
-          La gente detrás de tu taza
-        </p>
-      </div>
-      
-      <!-- Horizontal Slider - Square cards with text overlay -->
-      <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
-        {featuredProviders.map((p, i) => {
-          return (
-          <article class="reveal card-lift relative aspect-square w-[70vw] md:w-[280px] rounded-xl overflow-hidden border border-[#1A1A1A]">
-            <!-- Background image -->
-            <div class="absolute inset-0 bg-cream">
-              <img 
-                src={p.image || `/images/proveedores/${p.id}.jpg`}
-                alt={`dirty-rabbit-proveedor-${p.id}-${p.origin?.toLowerCase().replace(/\s+/g, '-') || 'local'}`}
-                class="w-full h-full object-cover"
-                loading="lazy"
-              />
-            </div>
-            <!-- Text overlay at bottom -->
-            <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/50 to-transparent pt-16">
-              <p class="font-mono text-xs text-white/80 tracking-wider mb-1">
-                {(p.category as any)[lang]}
-              </p>
-              <h3 class="font-typewriter text-lg text-white">
-                {p.name}
-              </h3>
-              <p class="font-mono text-xs text-white/70">
-                {p.origin ? `${p.origin}` : ''}
-              </p>
-            </div>
-          </article>
-          );
-        })}
-      </div>
-      
-      <!-- View All Link -->
-      <div class="text-center mt-12 reveal">
-        <a 
-          href={getLocalizedPath('/proveedores', lang)}
-          class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
-        >
-          Ver todos los proveedores
-          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
-      </div>
-      
-    </div>
-  </section>
-  
-  
-  <!-- NEWS CARDS: Cream background, horizontal slider (Big Mamma style) -->
-  <section class="py-20 md:py-32 bg-cream">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Header - Large title hierarchy (Basora style) -->
-      <div class="text-center mb-12 md:mb-16 reveal">
-        <h2 class="font-typewriter text-5xl md:text-6xl lg:text-7xl mb-4 section-headline">
-          News y Momentos
-        </h2>
-        <p class="font-mono text-sm text-black/60 max-w-xl mx-auto">
-          Lo último de Dirty Rabbit
-        </p>
-      </div>
-      
-      <!-- Horizontal Slider -->
-      <div class="news-slider -mx-4 px-4 md:mx-0 md:px-0">
-        
-        {latestNews.map((post) => (
-          <a href={`/news/${post.slug}/`} class="block">
-            <article class="reveal card-lift bg-white border border-[#1A1A1A] rounded-xl overflow-hidden w-[80vw] md:w-[calc(33.333%-1rem)] max-w-[380px]">
-              <div class="aspect-square relative overflow-hidden">
-                {post.data.image && (
-                  <img 
-                    src={post.data.image}
-                    alt={`dirty-rabbit-news-${post.slug}`}
-                    class="w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                )}
-              </div>
-              <div class="p-6">
-                <time class="font-mono text-xs text-red tracking-wider">
-                  {post.data.date.toLocaleDateString('es-ES', { month: 'short', year: 'numeric' })}
-                </time>
-                <h3 class="font-typewriter text-xl md:text-2xl mt-3 mb-2 text-black">
-                  {post.data.title}
-                </h3>
-                <p class="font-mono text-sm text-black/60 line-clamp-2">
-                  {post.data.description}
-                </p>
-              </div>
-            </article>
-          </a>
+      <ul class="mz-strip">
+        {featuredProviders.map((p: any) => (
+          <li>
+            <img src={p.image || `/images/proveedores/${p.id}.jpg`} alt={`dirty-rabbit-proveedor-${p.id}-${p.origin?.toLowerCase().replace(/\s+/g, '-') || 'local'}`} loading="lazy" />
+            <span><strong>{p.name}</strong><small>{p.origin || ''}</small></span>
+          </li>
         ))}
-        
-      </div>
-      
-      <!-- View All Link -->
-      <div class="text-center mt-12 reveal">
-        <a 
-          href={getLocalizedPath('/news', lang)}
-          class="inline-flex items-center gap-2 font-typewriter text-red hover:text-red/80 transition-colors group"
-        >
-          Ver todas las noticias
-          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-          </svg>
-        </a>
-      </div>
-      
+      </ul>
+      <p class="mz-guides-link"><a href="/guia/" class="mz-more">Guías locales →</a></p>
     </div>
   </section>
-
-  <!-- AI-citable About Section -->
-  <section class="py-20 md:py-28 bg-white">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="sr-only">Dirty Rabbit — Specialty Coffee, Breakfast &amp; Brunch en S'Agaró, Costa Brava</h1>
-
-      <p class="reveal font-mono text-base md:text-lg leading-relaxed text-black/80 mb-6" data-speakable>
-        Dirty Rabbit es un café de especialidad en S'Agaró, en la Costa Brava, a dos minutos andando de la playa de Sant Pol. Abierto desde noviembre de 2024, servimos espresso de origen único tostado por La Cabra (Copenhague), matcha ceremonial japonés de REQ, chai orgánico de Awachai, y bollería artesana de Origo Bakery (Barcelona) y La Puntual (Girona). Preparado en una La Marzocco KB90 con agua filtrada por ósmosis inversa.
-      </p>
-
-      <p class="reveal font-mono text-base md:text-lg leading-relaxed text-black/80 mb-6">
-        Terraza familiar con 56 plazas, tronas, cambiador, y bienvenida a perros. WiFi gratis, pago con tarjeta, y todo disponible para llevar. El setup de café más completo de la Costa Brava.
-      </p>
-
-
-    </div>
-  </section>
-  
-  
-  </Layout>
-
-<script>
-  // Fade-in on scroll - Vanilla JS with IntersectionObserver
-  document.addEventListener('DOMContentLoaded', () => {
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    
-    if (prefersReducedMotion) {
-      // Show all elements immediately if reduced motion preferred
-      document.querySelectorAll('.reveal').forEach(el => {
-        el.classList.add('visible');
-      });
-      return;
-    }
-    
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
-            // Stagger the animation slightly
-            setTimeout(() => {
-              entry.target.classList.add('visible');
-            }, index * 100);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      }
-    );
-    
-    document.querySelectorAll('.reveal').forEach(el => {
-      observer.observe(el);
-    });
-    
-    // Simple parallax for hero background
-    const heroBg = document.getElementById('hero-bg');
-    if (heroBg) {
-      let ticking = false;
-      
-      window.addEventListener('scroll', () => {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            const scrolled = window.pageYOffset;
-            const rate = scrolled * 0.3;
-            heroBg.style.transform = `translateY(${rate}px)`;
-            ticking = false;
-          });
-          ticking = true;
-        }
-      });
-    }
-  });
-</script>
+</Layout>
