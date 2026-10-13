@@ -8,15 +8,17 @@ interface Props {
 const { lang } = Astro.props;
 
 const alternates = getAlternateUrls(Astro.url.pathname, 'https://dirtyrabbit.es');
+const activeLang = alternates.nl ? 'nl' : lang;
 
-const langNames: Record<Language, string> = {
+const langNames: Record<Language | 'nl', string> = {
   es: 'ES',
   en: 'EN',
   ca: 'CA',
   fr: 'FR',
   ru: 'RU',
   uk: 'UK',
-  pl: 'PL'
+  pl: 'PL',
+  nl: 'NL'
 };
 ---
 
@@ -27,7 +29,7 @@ const langNames: Record<Language, string> = {
     aria-label="Select language"
     aria-expanded="false"
   >
-    <span class="font-bold text-red">{langNames[lang]}</span>
+    <span class="font-bold text-red">{langNames[activeLang]}</span>
     <svg class="w-3 h-3 text-black/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
     </svg>
@@ -39,10 +41,10 @@ const langNames: Record<Language, string> = {
         href={href}
         class:list={[
           "block px-3 py-2 font-mono text-sm hover:bg-cream transition-colors text-center",
-          l === lang ? "text-red font-bold bg-cream/50" : "text-black"
+          l === activeLang ? "text-red font-bold bg-cream/50" : "text-black"
         ]}
       >
-        {langNames[l as Language]}
+        {langNames[l as Language | 'nl']}
       </a>
     ))}
   </div>

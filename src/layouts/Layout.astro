@@ -21,7 +21,7 @@ interface ArticleMeta {
 interface Props {
   title: string;
   description?: string;
-  lang?: Language;
+  lang?: Language | 'nl';
   breadcrumbs?: BreadcrumbItem[];
   isMenuPage?: boolean;
   articleMeta?: ArticleMeta;
@@ -39,7 +39,9 @@ const {
 } = Astro.props;
 
 const currentLang = lang || getLangFromUrl(Astro.url);
-const t = getTranslations(currentLang);
+// A Dutch guide uses English site navigation until a Dutch site exists.
+const navigationLang = currentLang === 'nl' ? 'en' : currentLang;
+const t = getTranslations(navigationLang);
 const alternates = getAlternateUrls(Astro.url.pathname, 'https://dirtyrabbit.es');
 
 // Build @graph array with all schema objects
@@ -75,6 +77,7 @@ if (articleMeta) {
     "@type": "Article",
     "@id": `https://dirtyrabbit.es${Astro.url.pathname}#article`,
     "headline": title,
+    "inLanguage": currentLang,
     "description": description,
     "datePublished": articleMeta.datePublished,
     "dateModified": articleMeta.dateModified || articleMeta.datePublished,
@@ -131,6 +134,7 @@ const unifiedSchema = {
     {alternates.fr && <link rel="alternate" hreflang="fr" href={alternates.fr} />}
     {alternates.ru && <link rel="alternate" hreflang="ru" href={alternates.ru} />}
     {alternates.uk && <link rel="alternate" hreflang="uk" href={alternates.uk} />}
+    {alternates.nl && <link rel="alternate" hreflang="nl" href={alternates.nl} />}
     {alternates.pl && <link rel="alternate" hreflang="pl" href={alternates.pl} />}
     {Object.keys(alternates).length > 0 && <link rel="alternate" hreflang="x-default" href={alternates.es || alternates.en || Object.values(alternates)[0]} />}
     
@@ -139,7 +143,7 @@ const unifiedSchema = {
     <meta property="og:type" content={articleMeta ? "article" : "website"} />
     <meta property="og:url" content={`https://dirtyrabbit.es${Astro.url.pathname}`} />
     <meta property="og:image" content="https://dirtyrabbit.es/og-image.jpg" />
-    <meta property="og:locale" content={({ es: 'es_ES', en: 'en_GB', ca: 'ca_ES', fr: 'fr_FR', ru: 'ru_RU', uk: 'uk_UA', pl: 'pl_PL' })[currentLang]} />
+    <meta property="og:locale" content={({ es: 'es_ES', en: 'en_GB', ca: 'ca_ES', fr: 'fr_FR', ru: 'ru_RU', uk: 'uk_UA', pl: 'pl_PL', nl: 'nl_NL' })[currentLang]} />
     {articleMeta && (
       <>
         <meta property="article:published_time" content={articleMeta.datePublished} />
@@ -221,11 +225,11 @@ const unifiedSchema = {
     <slot name="head" />
   </head>
   <body class="min-h-screen flex flex-col bg-white text-black">
-    <Header lang={currentLang} />
+    <Header lang={navigationLang} />
     <main class="flex-1">
       <slot />
-      {!hasLocationFAQ && /\/(guia|guide|guides)\//.test(Astro.url.pathname) && <GuideLocationFAQ lang={currentLang} />}
+      {!hasLocationFAQ && /\/(guia|guide|guides)\//.test(Astro.url.pathname) && <GuideLocationFAQ lang={navigationLang} />}
     </main>
-    <Footer lang={currentLang} />
+    <Footer lang={navigationLang} />
   </body>
 </html>

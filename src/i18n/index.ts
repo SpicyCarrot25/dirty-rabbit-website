@@ -212,7 +212,11 @@ for (const path of routes) {
   registerRoutes(group);
 }
 
-export function getAlternateUrls(currentPath: string, baseUrl: string) {
+export function getAlternateUrls(currentPath: string, baseUrl: string): Partial<Record<Language | 'nl', string>> {
+  // One complete Dutch guide, with no invented Dutch home or translation siblings.
+  if (currentPath.replace(/\/$/, '') === '/nl/gids/ontbijt-platja-d-aro') {
+    return { nl: `${baseUrl}/nl/gids/ontbijt-platja-d-aro/` };
+  }
   const path = currentPath.replace(/\/$/, '') || '/';
   const group = routeGroups.get(path) || {};
   return Object.fromEntries(Object.entries(group).map(([lang, route]) =>

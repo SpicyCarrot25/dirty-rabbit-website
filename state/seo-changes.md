@@ -121,3 +121,46 @@ Second PR:
 - Existing Platja breakfast title: `Dónde desayunar en el centro de Platja d'Aro — Guía 2026` → `Desayuno y brunch en Platja d’Aro: centro o S’Agaró`.
 - Existing children title: `Desayunar con niños en la Costa Brava` → `Desayunar con niños en la Costa Brava: prepara la visita`.
 - Existing laptop title: `Cafés con WiFi para trabajar en la Costa Brava` → `Café con Wi-Fi para trabajar en la Costa Brava` (verify baseline rendering if measuring this pair).
+
+
+## 13 October 2026 — five-topic page work and News y Momentos (draft PR #12)
+
+Owner brief: `CODEX-BRIEF-seo-pages-blog.md`. Franc's added facts on 13 October supersede the earlier missing-facts gate. This is preparation on `feat/seo-wave-2-2026-10-13`; deployment date and post-change outcomes are **not yet available**. Franc merges. No redesign work.
+
+Four topics already had intent-matching URLs. This revision improves those four and adds one Dutch URL, rather than creating five competing copies. This interpretation was presented for clarification; no answer was received during preparation.
+
+| URL | Change | Confirmed page-specific facts |
+|---|---|---|
+| `/articulos/mejores-brunchs-platja-daro/` | Replace long ranking copy with café-first brunch guide; short sourced La Maglia/ANNNA alternatives; new title and description. | La Cabra; Origo; La Puntual; 56 terrace seats; 2-minute Sant Pol walk; tronas/cambiador. |
+| `/guia/cafeteria-con-perro-costa-brava/` | Replace tentative dog-admission and call instructions with confirmed welcome; practical visit details, takeaway alternative and qualified La Maglia option. New title/description. | Dogs welcome; 56 seats; La Cabra; takeaway; card payment. |
+| `/en/articles/cafes-wifi-remote-work-costa-brava/` | Remove unsubstantiated speed/plug/ranking/test claims; café-first working-stop advice with free WiFi; short La Maglia/Fitzroy alternatives, seasonal closure retained. New title/description. | Free WiFi; La Cabra; 56 seats; cards; takeaway; Sant Pol walk. |
+| `/en/guide/breakfast-near-platja-sant-pol/` | Café-first S’Agaró/Sant Pol breakfast guide; remove unsupported fixed itinerary, travel times and dishes; sourced short ANNNA/La Maglia alternatives. New title/description. | Sant Pol 2-minute walk; La Cabra; Origo; La Puntual; high chairs/changing table. |
+| `/nl/gids/ontbijt-platja-d-aro/` | New complete Dutch article; S’Agaró locality explicit; self-canonical and NL/x-default only; incoming links from ES/EN hubs and relevant breakfast pages. English site navigation retained and linked resources labelled English; no fictional Dutch homepage. | Suppliers; 56 seats; family facilities; dogs; takeaway; cards; Sant Pol walk. |
+| `/` (query landing alias `/gmb`) | Improve homepage title/description for the actual ranking destination; preserve permanent `/gmb` redirect and tracking parameters. | Dogs welcome, La Cabra, terrace, WiFi and confirmed Sant Pol walk. |
+
+### Ranking-page metadata: exact before/after
+
+GSC complete final-data 13 September–10 October query/page export: `cafeterías que admiten mascotas cerca de mi` → `https://dirtyrabbit.es/gmb`: 0 clicks, 56 impressions, 0% CTR, position 2.8035714286. `/gmb` is a permanent redirect to the homepage, not a source page with independent metadata.
+
+- Old title: `Dirty Rabbit — Specialty Coffee, Breakfast & Brunch · S'Agaró`
+- New title: `Dirty Rabbit: cafetería que admite perros en S’Agaró`
+- Old description: `Dirty Rabbit: Café de especialidad en S'Agaró, Costa Brava. Brunch, desayunos y café de origen único con terraza. A 2 min de la playa de Sant Pol.`
+- New description: `Café La Cabra, desayuno y brunch en S’Agaró, Costa Brava. Perros bienvenidos, terraza de 56 plazas y WiFi gratis, a 2 minutos a pie de Sant Pol.`
+
+### Shared behavior and blog changes
+
+- Include the existing PR #11 no-call fix (original commit `5e5d6e2`): plain contact/footer phone text, telephone auto-link suppression and whole-build call-CTA checks. No `tel:` links. Schema phone values retained. This overlap is intentional so merging #12 alone meets the owner's preference.
+- `VisitGuide.astro` reuses existing page styles. Each of the five pages puts Dirty Rabbit first, gives at least three confirmed facts, an accurate S’Agaró address, confirmed closures and a Google Maps CTA. No homepage redesign, CSS redesign or mockup change.
+- Dutch document language, self-alternate and Article language added without invented translations. Article schema language now follows the page's language.
+- Keep News y Momentos. Exclude `draft: true` at all homepage news consumers and all three dynamic article route generators (indexes already filtered drafts). News articles use their own descriptions.
+- Summer Guide: introduction and Coffee / Eat / Swim / Explore structure in `docs/drafts/summer-guide-2026.md`, **incomplete** pending design DAHNGE5HWkw. CLI has no authentication; Chrome design link required login. No selections fabricated, no public article generated.
+- Approved Google post A: complete Spanish adaptation `src/content/news/pausa-cafe-sagaro-es.md`, `draft: true`, source/hash manifest in `docs/drafts/`. Awaiting Franc's separate blog approval; drafting date is not publication date.
+- Weekly routine: `plans/loop/blog-routine.md` and a new top section in the existing Monday task prompt; queue `state/blog-queue.json`. Weekly adaptations from explicitly approved Google posts; two publication slots/month; exact blog version approval required. PR copy: `docs/blog-routine.md`. No new cron, provider call or automatic send/publish.
+
+### Evidence, verification and future measurement
+
+Facts: Franc's last entry in marketing `FACTS-CONFIRMED.md`, dated 13 October; address uses the existing GBP-confirmed business-facts record. Brief-specific snapshot and external alternative sources: `docs/evidence/seo-pages-blog-sources-2026-10-13.md`. La Maglia and ANNNA official pages checked 13 October; neither dogs nor workspace facilities are inferred for them. Fitzroy's seasonal closure is owner-confirmed 12 October.
+
+Build 279 pages. SEO/internal-link checks pass. Hreflang 1,406 links, zero broken/nonreciprocal. Review-access 128 checks pass. New build integration checks: all five target pages, facts-first order, at least three facts, Maps, self-canonical/sitemap, NL language/alternates, preserved `/gmb` redirect and no draft routes/links pass. Whole-suite result 93 pass / 3 existing ES/EN/CA pillar failures at `tests/pages.test.ts:162`; test file and translation JSON are unchanged from main. Browser preview inspection unavailable after browser disconnected; no visual QA claim. Logs: marketing `reports/2026-10-13-seo-pages-blog-*`.
+
+All 65 matcha/chai routes and their source files are retained unchanged. Existing wave-1 baselines remain frozen. The dog guide is a revised wave-1 page: on deployment, record its new treatment date and separate it from unchanged wave-1 pages. Revised EN WiFi, brunch, Sant Pol and homepage metrics must also use their own deployment annotation. NL is a new-page cohort with no same-URL pre-period. Do not attribute any change to wave 2 before release and complete comparable observations. No uplift claimed.
