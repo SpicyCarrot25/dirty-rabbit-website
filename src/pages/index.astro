@@ -12,13 +12,13 @@ const featuredIds = ['la-cabra', 'origo-bakery', 'la-puntual', 'buddy-buddy'];
 const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === id)).filter(Boolean);
 
 // Get latest news posts for this language
-const allNews = await getCollection('news', ({ data }) => data.lang === lang);
+const allNews = await getCollection('news', ({ data }) => data.lang === lang && !data.draft);
 const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
 ---
 
 <Layout 
-  title="Dirty Rabbit — Specialty Coffee, Breakfast &amp; Brunch · S'Agaró" 
-  description="Dirty Rabbit: Café de especialidad en S'Agaró, Costa Brava. Brunch, desayunos y café de origen único con terraza. A 2 min de la playa de Sant Pol."
+  title="Dirty Rabbit: cafetería que admite perros en S’Agaró"
+  description="Café La Cabra, desayuno y brunch en S’Agaró, Costa Brava. Perros bienvenidos, terraza de 56 plazas y WiFi gratis, a 2 minutos a pie de Sant Pol."
   lang={lang}>
   
   <!-- HERO SECTION: 100vh, full-bleed photo, centered tagline, NO scroll indicator -->

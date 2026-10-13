@@ -1,0 +1,32 @@
+{
+  "status": "awaiting_Franc_approval",
+  "post_order": 1,
+  "source_id": "Canva DAHNGE5HWkw",
+  "source_file": "drafts/dr-2026-summer-guide-canva.md",
+  "source_provenance": "User supplied this file as the design text; header attributes transcription to Claude on 13 October. Canva not independently reread in this step.",
+  "source_sha256": "2559ac943aba9ccbbb369b1fc5f2d712df56458a28aed4d89bb287ccacca5e58",
+  "source_snapshot": "docs/evidence/dr-2026-summer-guide-canva.md",
+  "draft_file": "src/content/news/summer-guide-2026-es.md",
+  "draft_sha256": "d225f23d61c1cd41856e0bd67defeb55b258202e69a7a893e42fd72e98f9170f",
+  "category_counts": {
+    "Coffee": 7,
+    "Eat": 16,
+    "Swim": 8,
+    "Explore": 9
+  },
+  "total_selections": 40,
+  "language": "es",
+  "editorial_changes": [
+    "Expanded source abbreviations into Spanish; kept all 40 selections and four categories.",
+    "Retained summer-2026 context rather than claiming current menus or roasters.",
+    "Added owner-confirmed Fitzroy seasonal closure without removing it.",
+    "Added owner-confirmed Dirty Rabbit facts, closures, internal brunch link and Maps CTA."
+  ],
+  "uncertain_source_labels_preserved": [
+    "La Calma: no locality supplied",
+    "Mano: locality supplied only as Marina",
+    "Cap Sa Sal: no town supplied"
+  ],
+  "publication_date": "unset; frontmatter date is drafting date, to be replaced on publication",
+  "publication_approved": false
+}

@@ -1,0 +1,51 @@
+---
+import Layout from './Layout.astro';
+import { businessFacts } from '../lib/business-facts';
+interface Props {
+  title: string; description: string; intro: string; lang: 'es' | 'en' | 'nl';
+  facts: readonly string[];
+  sections: readonly { heading: string; paragraphs: readonly string[] }[];
+  alternatives: readonly { name: string; text: string; url: string }[];
+  related: readonly { title: string; url: string }[];
+  datePublished: string; dateModified: string;
+}
+const { title, description, intro, lang, facts, sections, alternatives, related, datePublished, dateModified } = Astro.props;
+const copy = {
+  es: { hub: 'Guías locales', own: 'Dirty Rabbit: nuestro café en S’Agaró', checked: 'Actualizado el 13 de octubre de 2026', map: 'Ver ubicación y horario en Google Maps', other: 'Otras opciones', related: 'Para preparar tu visita', location: 'Tenemos un único café, en S’Agaró.', closure: 'Cerramos los lunes, del 26 de octubre al 1 de noviembre de 2026 y del 21 al 27 de diciembre de 2026. Consulta el horario actualizado en Google Maps antes de venir.' },
+  en: { hub: 'Local guides', own: 'Dirty Rabbit: our café in S’Agaró', checked: 'Updated 13 October 2026', map: 'See location and hours on Google Maps', other: 'Other options', related: 'Plan your visit', location: 'Our one café is in S’Agaró.', closure: 'Closed Mondays, 26 October–1 November 2026 and 21–27 December 2026. Check our current hours on Google Maps before visiting.' },
+  nl: { hub: 'Lokale gidsen (Engels)', own: 'Dirty Rabbit: ons café in S’Agaró', checked: 'Bijgewerkt op 13 oktober 2026', map: 'Bekijk locatie en openingstijden op Google Maps', other: 'Andere mogelijkheden', related: 'Bereid je bezoek voor', location: 'We hebben één café, in S’Agaró.', closure: 'Gesloten op maandag, van 26 oktober tot en met 1 november 2026 en van 21 tot en met 27 december 2026. Bekijk vóór je bezoek de actuele openingstijden op Google Maps.' },
+}[lang];
+const hub = lang === 'es' ? '/guia/' : '/en/guide/';
+const address = businessFacts.confirmed.address!;
+---
+<Layout title={title} description={description} lang={lang} hasLocationFAQ articleMeta={{ datePublished, dateModified, section: copy.hub }} breadcrumbs={[{name: copy.hub, url: `https://dirtyrabbit.es${hub}`}, {name: title, url: `https://dirtyrabbit.es${Astro.url.pathname}`}]}>
+  <article class="bg-cream py-16 md:py-24" lang={lang}>
+    <div class="max-w-3xl mx-auto px-6 font-mono leading-relaxed">
+      <header class="mb-10">
+        <a href={hub} class="text-red underline">{copy.hub}</a>
+        <h1 class="font-typewriter text-4xl md:text-5xl my-6">{title}</h1>
+        <p class="text-lg">{intro}</p>
+        <p class="text-sm mt-4">{copy.checked}</p>
+      </header>
+      <section class="bg-white p-6 rounded-xl border-l-4 border-red mb-10" data-our-cafe>
+        <h2 class="font-typewriter text-2xl mb-4">{copy.own}</h2>
+        <ul class="list-disc pl-5 space-y-3">{facts.map(fact => <li data-confirmed-fact>{fact}</li>)}</ul>
+        <p class="mt-5">{copy.location} {address.streetAddress}, {address.postalCode} {address.addressLocality}.</p>
+        <p class="mt-3">{copy.closure}</p>
+        <a href="https://www.google.com/maps?cid=13237319999262880412" class="inline-block mt-5 bg-red text-white rounded-lg px-4 py-2">{copy.map}</a>
+      </section>
+      {sections.map(section => <section class="mb-10">
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-4">{section.heading}</h2>
+        {section.paragraphs.map(text => <p class="mb-4">{text}</p>)}
+      </section>)}
+      <section class="mb-10" data-alternatives>
+        <h2 class="font-typewriter text-2xl md:text-3xl mb-4">{copy.other}</h2>
+        {alternatives.map(item => <p class="mb-4" data-seasonal-status={item.name.includes('Fitzroy') ? 'fitzroy' : undefined}><a href={item.url} class="text-red underline">{item.name}</a> — {item.text}</p>)}
+      </section>
+      <nav aria-label={copy.related} class="border-t border-black/20 pt-6">
+        <h2 class="font-typewriter text-2xl mb-4">{copy.related}</h2>
+        <ul class="space-y-3">{related.map(link => <li><a href={link.url} class="text-red underline">{link.title}</a></li>)}</ul>
+      </nav>
+    </div>
+  </article>
+</Layout>

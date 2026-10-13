@@ -12,7 +12,7 @@ const featuredIds = ['la-cabra', 'origo-bakery', 'la-puntual', 'buddy-buddy'];
 const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === id)).filter(Boolean);
 
 // Get latest news posts for this language
-const allNews = await getCollection('news', ({ data }) => data.lang === lang);
+const allNews = await getCollection('news', ({ data }) => data.lang === lang && !data.draft);
 const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
 ---
 
