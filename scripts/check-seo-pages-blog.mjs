@@ -5,14 +5,14 @@ import { JSDOM } from 'jsdom';
 
 // Integration checks against the actual production build, including draft leakage.
 const routes = [
-  ['articulos/mejores-brunchs-platja-daro', 'es'],
-  ['guia/cafeteria-con-perro-costa-brava', 'es'],
-  ['en/articles/cafes-wifi-remote-work-costa-brava', 'en'],
-  ['en/guide/breakfast-near-platja-sant-pol', 'en'],
-  ['nl/gids/ontbijt-platja-d-aro', 'nl'],
+  ['articulos/mejores-brunchs-platja-daro', 'es', '2026-03-24'],
+  ['guia/cafeteria-con-perro-costa-brava', 'es', '2026-10-12'],
+  ['en/articles/cafes-wifi-remote-work-costa-brava', 'en', '2026-02-15'],
+  ['en/guide/breakfast-near-platja-sant-pol', 'en', '2026-02-15'],
+  ['nl/gids/ontbijt-platja-d-aro', 'nl', '2026-10-13'],
 ];
 const sitemap = fs.readFileSync('dist/sitemap-0.xml', 'utf8');
-for (const [route, lang] of routes) {
+for (const [route, lang, published] of routes) {
   const dom = new JSDOM(fs.readFileSync(`dist/${route}/index.html`, 'utf8'));
   const doc = dom.window.document;
   assert.equal(doc.documentElement.lang, lang, route);
@@ -27,6 +27,7 @@ for (const [route, lang] of routes) {
   assert(sitemap.includes(`https://dirtyrabbit.es/${route}/`), route);
   const graph = JSON.parse(doc.querySelector('script[type="application/ld+json"]').textContent)['@graph'];
   assert.equal(graph.find(item => item['@type'] === 'Article').inLanguage, lang);
+  assert.equal(graph.find(item => item['@type'] === 'Article').datePublished, published);
   if (lang === 'nl') {
     assert.deepEqual([...doc.querySelectorAll('link[hreflang]')].map(el => el.hreflang).sort(), ['nl', 'x-default']);
     assert(doc.querySelector('.lang-btn').textContent.includes('NL'));
