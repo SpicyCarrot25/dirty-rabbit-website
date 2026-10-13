@@ -85,7 +85,7 @@ const newsLinks: Record<string, string> = {
 
 const mapsUrl = 'https://www.google.com/maps?cid=13237319999262880412';
 const mapsBar: Record<string, [string, string]> = { es: ['Ver en Google Maps', 'Mar–Dom 8:00–15:00'], en: ['Open in Google Maps', 'Tue–Sun 8:00–15:00'], ca: ['Veure a Google Maps', 'Dt–Dg 8:00–15:00'], fr: ['Voir sur Google Maps', 'Mar–Dim 8:00–15:00'] };
-const [mapsLabel, mapsHours] = mapsBar[lang] || mapsBar.en;
+const [mapsLabel] = mapsBar[lang] || mapsBar.en;
 const findUs: Record<string, string> = { es: 'Encuéntranos', en: 'Find us', ca: 'On som', fr: 'Nous trouver', ru: 'Как нас найти', uk: 'Як нас знайти', pl: 'Jak nas znaleźć' };
 
 const privacyLinkText: Record<string, string> = {
@@ -236,6 +236,6 @@ const privacyPrefix: Record<string, string> = {
 
 <div class="mz-mapsbar">
   <a href={mapsUrl} target="_blank" rel="noopener noreferrer">
-    <span aria-hidden="true">↗</span> {mapsLabel} <small>· {mapsHours}</small>
+    <span aria-hidden="true">↗</span> {mapsLabel}
   </a>
 </div>

@@ -10,9 +10,9 @@ const { storyHref } = Astro.props;
 
 const byId = Object.fromEntries(list.sections.map((s) => [s.id, s]));
 const columns = [
-  [byId.coffee, byId.explore],
+  [byId.coffee, byId.swim],
   [byId.eat],
-  [byId.swim],
+  [byId.explore],
 ];
 ---
 
@@ -33,7 +33,7 @@ const columns = [
       </div>
 
       <div class="mz-curated-grid">
-        {columns.map((col, i) => (
+        {columns.map((col) => (
           <div class="mz-curated-col">
             {col.map((section) => (
               <div class="mz-list" data-list={section.id}>
@@ -53,12 +53,6 @@ const columns = [
                 {section.note && <p class="mz-curated-sub" style="margin-top:8px">{section.note}</p>}
               </div>
             ))}
-            {i === 2 && (
-              <figure class="mz-curated-photo">
-                <img src="/gallery/elm.murcia_dirtyrabbit-44.jpg" alt="Croissant y latte en Dirty Rabbit" loading="lazy" />
-                <figcaption>Start here: coffee at Dirty Rabbit.</figcaption>
-              </figure>
-            )}
           </div>
         ))}
       </div>
