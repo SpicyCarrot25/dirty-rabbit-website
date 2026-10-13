@@ -18,6 +18,6 @@ Marketing `evidence/seo-wave-2/2026-10-13/gsc-final28-query-pages.json`: exact p
 
 ## Blog source status
 
-[Canva DAHNGE5HWkw](https://www.canva.com/design/DAHNGE5HWkw/view): attempted 13 October; CLI unauthenticated, browser redirected to login. Only the brief-supplied title/line/categories are available. The named selections remain missing.
+[Canva DAHNGE5HWkw](https://www.canva.com/design/DAHNGE5HWkw/view): initial direct read was blocked by authentication. Franc then supplied `drafts/dr-2026-summer-guide-canva.md`; [exact source snapshot](dr-2026-summer-guide-canva.md). This resolves the source gap. The transcription is attributed to Claude on 13 October; it was supplied by the user, not independently reread from Canva in this step. The completed draft retains all 40 named selections; source/draft hashes are in `docs/drafts/summer-guide-2026-manifest.json`.
 
 Google post A source and approval evidence are identified in `docs/drafts/pausa-cafe-sagaro-manifest.json`. All resulting blog copy awaits Franc's separate approval. The source's scheduled readback is not a publication receipt.

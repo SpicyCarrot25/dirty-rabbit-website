@@ -17,7 +17,7 @@ No new scheduler, API collector, paid-model call or outbound delivery was added.
 
 ## Initial queue
 
-- Post 1: Summer Guide 2026 — source access blocked; intro/structure prepared in the PR, named selections pending Canva/Franc. No publication slot is committed.
+- Post 1: Summer Guide 2026 — complete Spanish draft with all 40 selections from `drafts/dr-2026-summer-guide-canva.md`; awaiting Franc’s exact-text approval. PR draft: `src/content/news/summer-guide-2026-es.md`. Source-access blocker resolved. No publication slot is committed.
 - A-coffee-break: explicitly approved Google source; complete Spanish blog adaptation prepared for Franc. Proposed next available slot after post 1, within two posts/month.
 - B-autumn-closing: explicitly approved Google source; eligible for a short timely blog adaptation only before 26 October, subject to the two-post cap and Franc's choice. Expire instead of publishing a stale closure notice.
 - C–H: source packets and scheduled readbacks exist; verify exact approval evidence before adapting under this routine.

@@ -1,36 +1,11 @@
----
-title: "Dirty Rabbit 2026 Summer Guide: Coffee / Eat / Swim / Explore"
-description: "Nuestra selección para un verano en la Costa Brava: café, sitios para comer, baños y excursiones."
-draft: true
-lang: es
-status: blocked_source_access
-source: "https://www.canva.com/design/DAHNGE5HWkw/view"
----
+# Summer Guide 2026 — ready for Franc’s review
 
-# Dirty Rabbit 2026 Summer Guide
+[Read the complete Spanish blog draft](../../src/content/news/summer-guide-2026-es.md).
 
-*No sponsors. No favours. Just what we'd send our friends to.*
+All 40 selections are included: Coffee 7, Eat 16, Swim 8, Explore 9. Source: the [Canva transcription supplied by Franc](../evidence/dr-2026-summer-guide-canva.md), from design DAHNGE5HWkw. The original tagline is retained. Fitzroy stays listed with its owner-confirmed seasonal closure.
 
-Un café antes de salir, un sitio para comer, una parada para bañarse y algo que descubrir. Así hemos organizado nuestra guía de verano de 2026: Coffee, Eat, Swim y Explore. Una selección para tener a mano cuando alguien nos pide ideas para la Costa Brava.
+The earlier Canva-login blocker is resolved by the supplied transcription. No login or further source text is needed. The draft is `draft: true`, excluded from all public routes, homepages, news indexes and sitemap. It awaits Franc’s approval of the exact text; no publication has occurred.
 
-## Coffee
+The source gives no locality for La Calma and only “Marina” for Mano; those labels are preserved without guessing a town or linking to an unverified business. This is the summer-2026 curation, not a claim that seasonal venues are open now.
 
-[Pendiente de transcribir la selección exacta del diseño de Canva.]
-
-## Eat
-
-[Pendiente de transcribir la selección exacta del diseño de Canva.]
-
-## Swim
-
-[Pendiente de transcribir la selección exacta del diseño de Canva.]
-
-## Explore
-
-[Pendiente de transcribir la selección exacta del diseño de Canva.]
-
-¿Empiezas la mañana en S’Agaró? En Dirty Rabbit servimos café La Cabra, pan de Origo Bakery y bollería de La Puntual, a 2 minutos a pie de Sant Pol. [Ubicación y horario en Google Maps](https://www.google.com/maps?cid=13237319999262880412).
-
----
-
-Nota de revisión para Franc: borrador incompleto, fuera de la colección pública. El CLI de Canva no está autenticado y el enlace del diseño abre un login en Chrome. No se han podido leer sus selecciones. Hace falta acceder al diseño o recibir su texto; no se ha inventado la lista. Después: confirmar nombres y enlaces, conservar el contexto de verano de 2026, revisar cierres estacionales y aprobar el texto exacto antes de publicarlo.
+[Source/draft hashes and editorial notes](summer-guide-2026-manifest.json). The frontmatter date is the drafting date; set the actual publication date if approved for release.
