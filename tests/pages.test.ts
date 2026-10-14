@@ -159,9 +159,12 @@ describe('i18n translations', () => {
         );
         expect(translations.historia).toBeDefined();
         expect(translations.historia.pillars).toBeDefined();
-        expect(translations.historia.pillars.care).toBeDefined();
-        expect(translations.historia.pillars.connection).toBeDefined();
-        expect(translations.historia.pillars.rhythm).toBeDefined();
+        for (const pillar of ['wildComfort', 'belonging', 'intentional']) {
+          expect(translations.historia.pillars[pillar].title).toEqual(expect.any(String));
+          expect(translations.historia.pillars[pillar].text).toEqual(expect.any(String));
+          expect(translations.historia.pillars[pillar].title.trim().length).toBeGreaterThan(0);
+          expect(translations.historia.pillars[pillar].text.trim().length).toBeGreaterThan(0);
+        }
       });
 
       it('should have nav.faq entry', () => {
