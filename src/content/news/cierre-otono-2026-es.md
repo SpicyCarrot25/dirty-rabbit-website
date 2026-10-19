@@ -4,6 +4,8 @@ description: "Dirty Rabbit, en S’Agaró, cierra por vacaciones del 26 de octub
 date: 2026-10-19
 draft: false
 lang: es
+image: "/images/news/autumn-closing-2026.jpg"
+imageAlt: "Mesas y flores en el interior de Dirty Rabbit, S’Agaró."
 ---
 
 Si estás preparando una visita a S’Agaró a finales de octubre, apunta estas fechas: Dirty Rabbit estará cerrado por vacaciones del **26 de octubre al 1 de noviembre de 2026, ambos incluidos**. También descansamos los lunes, nuestro día habitual de cierre.

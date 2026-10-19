@@ -4,6 +4,8 @@ description: "Nuestra lista para el verano de 2026 en la Costa Brava: siete caf�
 date: 2026-10-13
 draft: false
 lang: es
+image: "/gallery/elm.murcia_dirtyrabbit-44.jpg"
+imageAlt: "Café y croissant en una mesa de Dirty Rabbit, S’Agaró."
 ---
 
 *No sponsors. No favours. Just what we'd send our friends to.*

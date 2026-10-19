@@ -98,7 +98,7 @@ assert.deepEqual(categories, { Coffee: 7, Eat: 16, Swim: 8, Explore: 9 });
 assert(articleDoc.body.textContent.includes('Cerrado por temporada'));
 articleDom.window.close();
 
-// Franc approved these exact versions. Only the recorded date/draft fields may differ.
+// Franc approved exact article text; recorded date/draft/photo metadata may differ.
 const approval = JSON.parse(fs.readFileSync('docs/approvals/october-2026-blogs.json', 'utf8'));
 // Astro applies smart punctuation; source hashes above still require exact bytes.
 const normalizeText = text => text.replace(/[’‘]/g, "'").replace(/\s+/g, ' ').trim();
@@ -108,7 +108,8 @@ for (const post of approval.posts) {
   assert.equal(sha(content), post.file_sha256, post.file);
   assert.equal(sha(content.split('---').slice(2).join('---')), post.body_sha256, post.file);
   const original = content.replace(/^draft: false$/m, 'draft: true')
-    .replace(/^date: .+$/m, `date: ${post.approved_source_date}`);
+    .replace(/^date: .+$/m, `date: ${post.approved_source_date}`)
+    .replace(/^image(?:Alt)?: .+\n/gm, '');
   assert.equal(sha(original), post.approved_source_sha256, `Approved wording: ${post.file}`);
   assert(content.includes(`date: ${post.publication_date}\n`), post.file);
   const route = `/news/${path.basename(post.file, '.md')}/`;
@@ -116,10 +117,18 @@ for (const post of approval.posts) {
   const expected = new JSDOM(marked.parse(content.replace(/^---[\s\S]*?---\s*/, '')));
   assert.equal(normalizeText(dom.window.document.querySelector('.prose').textContent),
     normalizeText(expected.window.document.body.textContent), `Rendered approved text: ${route}`);
+  const hero = dom.window.document.querySelector('article img');
+  assert.equal(hero?.getAttribute('src'), post.image.path, `Hero: ${route}`);
+  assert.equal(hero?.getAttribute('alt'), post.image.alt, `Image description: ${route}`);
+  assert.equal(createHash('sha256').update(fs.readFileSync('public'+post.image.path)).digest('hex'), post.image.sha256);
   assert.equal(dom.window.document.querySelector('link[rel="canonical"]').href, `https://dirtyrabbit.es${route}`);
   assert(sitemap.includes(`https://dirtyrabbit.es${route}`), route);
   for (const index of ['dist/index.html', 'dist/news/index.html']) {
     assert(fs.readFileSync(index, 'utf8').includes(route.replace(/\/$/, '')), `Listed: ${route} in ${index}`);
+    const listing = new JSDOM(fs.readFileSync(index, 'utf8'));
+    const link = [...listing.window.document.querySelectorAll('a')].find(el => el.getAttribute('href')?.replace(/\/$/, '') === route.replace(/\/$/, ''));
+    assert.equal((link?.closest('article') || link?.querySelector('article'))?.querySelector('img')?.getAttribute('src'), post.image.path, `Listing image: ${route} in ${index}`);
+    listing.window.close();
   }
   dom.window.close(); expected.window.close(); approvedRoutes.push(route);
 }
