@@ -252,20 +252,26 @@ function toRenderBlock(block: MenuBlockSource, lang: Language): MenuRenderBlock 
   };
 }
 
-function getSchemaPrice(price: string) {
-  const match = price.match(/\d+(?:[.,]\d+)?/);
-  return match ? match[0].replace(',', '.') : undefined;
+// Preserve every visible size price and ranges; never silently take the first number.
+export function getSchemaOffers(price: string) {
+  const amount = String.raw`\d+(?:[.,]\d+)?`;
+  const fixed = new RegExp(`^\\+?(${amount})$`).exec(price.trim());
+  if (fixed) return { '@type': 'Offer', price: fixed[1].replace(',', '.'), priceCurrency: 'EUR' };
+  if (new RegExp(`^${amount}(?:\\s*/\\s*${amount})+$`).test(price.trim())) {
+    return price.split('/').map(value => ({ '@type': 'Offer', price: value.trim().replace(',', '.'), priceCurrency: 'EUR' }));
+  }
+  const range = new RegExp(`^(${amount})\\s*[-–]\\s*(${amount})$`).exec(price.trim());
+  if (range && Number(range[1].replace(',', '.')) <= Number(range[2].replace(',', '.'))) {
+    return { '@type': 'AggregateOffer', lowPrice: range[1].replace(',', '.'), highPrice: range[2].replace(',', '.'), priceCurrency: 'EUR' };
+  }
+  throw new Error(`Unsupported menu price: ${price}`);
 }
 
 function createSchemaItem(item: MenuRenderItem) {
   const schemaItem: Record<string, unknown> = {
     '@type': 'MenuItem',
     name: item.name,
-    offers: {
-      '@type': 'Offer',
-      price: getSchemaPrice(item.price),
-      priceCurrency: 'EUR'
-    }
+    offers: getSchemaOffers(item.price)
   };
 
   if (item.desc) {
@@ -317,12 +323,14 @@ export function getMenuPageView(lang: Language): MenuPageView {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Menu',
+    '@id': `${canonicalUrl}#menu`,
+    inLanguage: lang,
     name: page.title,
     url: canonicalUrl,
     hasMenuSection: sections.map((section) => ({
       '@type': 'MenuSection',
       name: section.title,
-      hasPart: section.blocks.map(createSchemaSection)
+      hasMenuSection: section.blocks.map(createSchemaSection)
     }))
   };
 
