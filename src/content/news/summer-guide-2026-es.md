@@ -2,7 +2,7 @@
 title: "Dirty Rabbit 2026 Summer Guide: Coffee / Eat / Swim / Explore"
 description: "Nuestra lista para el verano de 2026 en la Costa Brava: siete cafés, dieciséis sitios para comer, ocho paradas para bañarse y nueve lugares que explorar."
 date: 2026-10-13
-draft: true
+draft: false
 lang: es
 ---
 

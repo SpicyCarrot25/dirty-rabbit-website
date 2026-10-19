@@ -1,0 +1,35 @@
+{
+  "approved_by": "Franc",
+  "approval_date": "2026-10-19",
+  "approval": "Both named archived drafts approved word for word by Franc, relayed by Claude orchestrator. PR only; Franc merges.",
+  "source_archive": "dirty-rabbit-marketing/evidence/reruns/2026-10-19/20261019T160202-ae0a9be2/briefs/v3/2026-10-19/drafts/blog/",
+  "base_commit": "315709aaaaa0dd7589ace41a715c530810c86e83",
+  "october_published_posts_before": 0,
+  "october_published_posts_after": 2,
+  "monthly_cap": 2,
+  "posts": [
+    {
+      "file": "src/content/news/cierre-otono-2026-es.md",
+      "approved_source_sha256": "e12860fa9770794d5656af2909e2aada7c830717e6e53659cb5e03bfd06237a6",
+      "approved_source_date": "2026-10-19",
+      "publication_date": "2026-10-19",
+      "file_sha256": "46474bbdf37036c1e7d0a374cf6519029018e0953d4694c7d77d233eacd8a86b",
+      "body_sha256": "64d1aa19dee277e5c95bfff5299b0bb1d6120c37d33095cd9eab58389271260b",
+      "allowed_changes": [
+        "draft: true -> false",
+        "closure date: today (2026-10-19)"
+      ]
+    },
+    {
+      "file": "src/content/news/summer-guide-2026-es.md",
+      "approved_source_sha256": "d225f23d61c1cd41856e0bd67defeb55b258202e69a7a893e42fd72e98f9170f",
+      "approved_source_date": "2026-10-13",
+      "publication_date": "2026-10-13",
+      "file_sha256": "af2f402586e5aa5e140ff8eb5a6843896a1ed97918661fb669c16b3e4f24f19c",
+      "body_sha256": "dee9ce8bb3d84ff299f7047a2f5c82c429bde2122ddfccbb100cab40fb5fd2eb",
+      "allowed_changes": [
+        "draft: true -> false"
+      ]
+    }
+  ]
+}
