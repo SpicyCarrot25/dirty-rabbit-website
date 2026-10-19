@@ -76,6 +76,7 @@ const pageSchema = {
       address: getBusinessField("schema-51defe117c7d", "address"),
       telephone: '+34 872 454 264',
       hasMap: mapsUrl,
+      hasMenu: 'https://dirtyrabbit.es/carta',
       acceptsReservations: false,
       areaServed: ['S\'Agaró', 'Platja d\'Aro', 'Costa Brava'],
       openingHoursSpecification: getBusinessField("schema-9683a508e35b", "openingHoursSpecification"),
@@ -96,23 +97,6 @@ const pageSchema = {
           text: faq.answer
         }
       }))
-    },
-    {
-      '@type': 'Menu',
-      '@id': `${pageUrl}#menu`,
-      name: 'Brunch en S\'Agaró - Selección Dirty Rabbit',
-      url: pageUrl,
-      hasMenuSection: [
-        {
-          '@type': 'MenuSection',
-          name: 'Brunch Highlights',
-          hasMenuItem: menuHighlights.map((item) => ({
-            '@type': 'MenuItem',
-            name: item.name,
-            description: item.description
-          }))
-        }
-      ]
     }
   ]
 };
