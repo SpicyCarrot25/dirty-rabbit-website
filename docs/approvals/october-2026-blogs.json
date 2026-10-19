@@ -32,18 +32,24 @@
       "approved_source_sha256": "d225f23d61c1cd41856e0bd67defeb55b258202e69a7a893e42fd72e98f9170f",
       "approved_source_date": "2026-10-13",
       "publication_date": "2026-10-13",
-      "file_sha256": "5b8142cf4561b678df1ffaa6e59c95c29de956bb82bfd57bae6ed3bdcd6dd2cc",
-      "body_sha256": "dee9ce8bb3d84ff299f7047a2f5c82c429bde2122ddfccbb100cab40fb5fd2eb",
+      "file_sha256": "5979f98a009aeadaf19021f1e896116a8af725ecb67938195dccc89d5cb1f382",
+      "body_sha256": "0486e3a445e5bcc959367bf01e5d6747a5fbf399e16e7a7b23aff901a5730a38",
       "allowed_changes": [
         "draft: true -> false",
-        "Add image and descriptive imageAlt metadata; owner requested photos on 19 October"
+        "Add image and descriptive imageAlt metadata; owner requested photos on 19 October",
+        "Franc 19 October: past-summer introduction and coming-winter ending, exact additions recorded"
       ],
       "image": {
         "path": "/gallery/elm.murcia_dirtyrabbit-44.jpg",
         "alt": "Café y croissant en una mesa de Dirty Rabbit, S’Agaró.",
         "sha256": "987e7a968849d8f3e2b126d2826f0cd9d60aeef2d542201ae0333a28f17849f4",
         "source": "Existing published site gallery photo, reused for the guide starting point"
-      }
+      },
+      "approved_additions": [
+        "Esta fue nuestra guía del verano 2026: nuestra selección de Coffee, Eat, Swim y Explore por la Costa Brava.",
+        "Nuestra guía de invierno llegará pronto."
+      ],
+      "hero_replacement_pending": "Owned Costa Brava landscape not found locally; no stock authorized"
     }
   ],
   "photo_update": "19 October follow-up: add photos to PR #14 using approved packet/site assets; exact approved article text unchanged."

@@ -107,9 +107,13 @@ for (const post of approval.posts) {
   const content = fs.readFileSync(post.file, 'utf8');
   assert.equal(sha(content), post.file_sha256, post.file);
   assert.equal(sha(content.split('---').slice(2).join('---')), post.body_sha256, post.file);
-  const original = content.replace(/^draft: false$/m, 'draft: true')
+  let original = content.replace(/^draft: false$/m, 'draft: true')
     .replace(/^date: .+$/m, `date: ${post.approved_source_date}`)
     .replace(/^image(?:Alt)?: .+\n/gm, '');
+  for (const addition of post.approved_additions || []) {
+    assert.equal(original.split(addition).length, 2);
+    original = original.replace(addition + '\n\n', '').replace('\n' + addition + '\n', '');
+  }
   assert.equal(sha(original), post.approved_source_sha256, `Approved wording: ${post.file}`);
   assert(content.includes(`date: ${post.publication_date}\n`), post.file);
   const route = `/news/${path.basename(post.file, '.md')}/`;

@@ -8,6 +8,8 @@ image: "/gallery/elm.murcia_dirtyrabbit-44.jpg"
 imageAlt: "Café y croissant en una mesa de Dirty Rabbit, S’Agaró."
 ---
 
+Esta fue nuestra guía del verano 2026: nuestra selección de Coffee, Eat, Swim y Explore por la Costa Brava.
+
 *No sponsors. No favours. Just what we'd send our friends to.*
 
 Un café antes de salir, un sitio para comer, una cala y algo que descubrir. Así organizamos nuestra selección para el verano de 2026, con S’Agaró como punto de partida y planes por la Costa Brava y Girona. Es la lista de Dirty Rabbit: cuarenta paradas repartidas en Coffee, Eat, Swim y Explore.
@@ -83,3 +85,5 @@ Cerramos los lunes. Los cierres previstos para lo que queda de 2026 son del 26 d
 [Ver ubicación y horario en Google Maps](https://www.google.com/maps?cid=13237319999262880412).
 
 *Selección original: Dirty Rabbit 2026 Summer Guide, verano de 2026, v.1 · @dirtyrabbitcoffee. Revisión del texto: 13 de octubre de 2026.*
+
+Nuestra guía de invierno llegará pronto.
