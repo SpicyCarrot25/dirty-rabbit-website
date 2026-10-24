@@ -12,6 +12,6 @@ Puedes quedarte a desayunar o pedir para llevar. Todo está disponible para llev
 
 Sant Pol está a dos minutos a pie del café. Eso permite combinar la visita con un rato junto al mar sin organizar toda la mañana alrededor del desayuno. Si vienes con niños, disponemos de tronas y cambiador. Los perros también son bienvenidos.
 
-Antes de salir, mira [nuestra carta](/carta) y consulta el horario actualizado en Google Maps. Cerramos los lunes y tenemos dos cierres previstos para 2026: del 26 de octubre al 1 de noviembre y del 21 al 27 de diciembre, ambos incluidos.
+Antes de salir, mira [nuestra carta](/carta) y consulta el horario actualizado en Google Maps. Cerramos los lunes y tenemos dos cierres previstos para 2026: del 26 de octubre al 9 de noviembre, por vacaciones y pequeñas reformas, y del 21 al 27 de diciembre, ambos incluidos.
 
 [Ver Dirty Rabbit en Google Maps](https://www.google.com/maps?cid=13237319999262880412).
