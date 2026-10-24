@@ -86,4 +86,4 @@ Cerramos los lunes. Los cierres previstos para lo que queda de 2026 son del 26 d
 
 Y para los meses de abrigo estamos preparando la Winter Guide 2026–27: Coffee, Eat, Explore y lo que apetece cuando el mar se mira desde dentro. Llegará pronto; si quieres enterarte el primer día, síguenos en Instagram: @dirtyrabbitcoffee.
 
-*Selección original: Dirty Rabbit 2026 Summer Guide, verano de 2026, v.1 · @dirtyrabbitcoffee. Revisión del texto: 19 de octubre de 2026.*
+*Selección original: Dirty Rabbit 2026 Summer Guide, verano de 2026, v.1 · @dirtyrabbitcoffee. Revisión del texto: 24 de octubre de 2026.*
