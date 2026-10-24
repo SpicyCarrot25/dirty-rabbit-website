@@ -1,5 +1,5 @@
 {
-  "status": "awaiting_Franc_approval",
+  "status": "Franc_approved_PR_pending_merge",
   "post_order": 1,
   "source_id": "Canva DAHNGE5HWkw",
   "source_file": "drafts/dr-2026-summer-guide-canva.md",
@@ -7,7 +7,7 @@
   "source_sha256": "2559ac943aba9ccbbb369b1fc5f2d712df56458a28aed4d89bb287ccacca5e58",
   "source_snapshot": "docs/evidence/dr-2026-summer-guide-canva.md",
   "draft_file": "src/content/news/summer-guide-2026-es.md",
-  "draft_sha256": "d225f23d61c1cd41856e0bd67defeb55b258202e69a7a893e42fd72e98f9170f",
+  "draft_sha256": "5b8142cf4561b678df1ffaa6e59c95c29de956bb82bfd57bae6ed3bdcd6dd2cc",
   "category_counts": {
     "Coffee": 7,
     "Eat": 16,
@@ -27,6 +27,8 @@
     "Mano: locality supplied only as Marina",
     "Cap Sa Sal: no town supplied"
   ],
-  "publication_date": "unset; frontmatter date is drafting date, to be replaced on publication",
-  "publication_approved": false
+  "publication_date": "2026-10-13 (retained from approved frontmatter)",
+  "publication_approved": true,
+  "approved_draft_sha256": "d225f23d61c1cd41856e0bd67defeb55b258202e69a7a893e42fd72e98f9170f",
+  "approval_record": "docs/approvals/october-2026-blogs.json"
 }

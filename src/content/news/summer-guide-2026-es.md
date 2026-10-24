@@ -1,12 +1,16 @@
 ---
 title: "Dirty Rabbit 2026 Summer Guide: Coffee / Eat / Swim / Explore"
-description: "Nuestra lista para el verano de 2026 en la Costa Brava: siete cafés, dieciséis sitios para comer, ocho paradas para bañarse y nueve lugares que explorar."
+description: "Nuestra guía del verano 2026 en la Costa Brava, para guardar: 7 cafés, 16 sitios para comer, 8 playas y calas y 9 lugares que explorar. Winter Guide 2026–27: pronto."
 date: 2026-10-13
-draft: true
+draft: false
 lang: es
+image: "/gallery/elm.murcia_dirtyrabbit-44.jpg"
+imageAlt: "Café y croissant en una mesa de Dirty Rabbit, S’Agaró."
 ---
 
 *No sponsors. No favours. Just what we'd send our friends to.*
+
+Esta fue nuestra guía para el verano de 2026, la misma que repartimos en papel en el café. La dejamos aquí tal cual para que la guardes y la recuperes cuando vuelva el calor: muchos de estos sitios cambian de horario con la temporada, así que lo que lees es la foto de aquel verano.
 
 Un café antes de salir, un sitio para comer, una cala y algo que descubrir. Así organizamos nuestra selección para el verano de 2026, con S’Agaró como punto de partida y planes por la Costa Brava y Girona. Es la lista de Dirty Rabbit: cuarenta paradas repartidas en Coffee, Eat, Swim y Explore.
 
@@ -76,8 +80,10 @@ Para los días en que apetece caminar, recorrer un pueblo o hacer una excursión
 
 Si tu ruta pasa por aquí, puedes empezar con [brunch en Dirty Rabbit](/guia/brunch-platja-daro/) o pedir para llevar. Tenemos una terraza de 56 plazas, tronas y cambiador; los perros son bienvenidos.
 
-Cerramos los lunes. Los cierres previstos para lo que queda de 2026 son del 26 de octubre al 1 de noviembre y del 21 al 27 de diciembre, ambos incluidos.
+Cerramos los lunes. Los cierres previstos para lo que queda de 2026 son del 26 de octubre al 9 de noviembre, por vacaciones y pequeñas reformas, y del 21 al 27 de diciembre, ambos incluidos.
 
 [Ver ubicación y horario en Google Maps](https://www.google.com/maps?cid=13237319999262880412).
 
-*Selección original: Dirty Rabbit 2026 Summer Guide, verano de 2026, v.1 · @dirtyrabbitcoffee. Revisión del texto: 13 de octubre de 2026.*
+Y para los meses de abrigo estamos preparando la Winter Guide 2026–27: Coffee, Eat, Explore y lo que apetece cuando el mar se mira desde dentro. Llegará pronto; si quieres enterarte el primer día, síguenos en Instagram: @dirtyrabbitcoffee.
+
+*Selección original: Dirty Rabbit 2026 Summer Guide, verano de 2026, v.1 · @dirtyrabbitcoffee. Revisión del texto: 24 de octubre de 2026.*

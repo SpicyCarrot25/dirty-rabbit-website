@@ -96,7 +96,13 @@ for (const [route, { doc }] of pages) {
     if (doc.querySelector('meta[name="format-detection"]')?.content !== 'telephone=no') errors.push({ kind: 'automatic-phone-links', route });
   }
   const article = doc.querySelector('article');
-  if (article?.textContent.includes('Fitzroy') && !article.querySelector('[data-seasonal-status="fitzroy"]')) errors.push({ kind: 'missing-seasonal-status', route });
+  // The approved Markdown guide states this visibly, without an Astro data attribute.
+  const approvedGuideStatus = route === '/news/summer-guide-2026-es' &&
+    [...(article?.querySelectorAll('li') || [])].some(item =>
+      item.querySelector('strong')?.textContent.startsWith('Fitzroy · Begur') &&
+      item.textContent.includes('Cerrado por temporada') &&
+      item.textContent.includes('fecha de reapertura sin confirmar'));
+  if (article?.textContent.includes('Fitzroy') && !article.querySelector('[data-seasonal-status="fitzroy"]') && !approvedGuideStatus) errors.push({ kind: 'missing-seasonal-status', route });
 }
 if (sagaro !== "Qué ver en S'Agaró: Sant Pol y Camí de Ronda") errors.push({ kind: 'sagaro-approved-title' });
 for (const [route, { doc }] of pages) {

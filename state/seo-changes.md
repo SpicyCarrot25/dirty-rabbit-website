@@ -1,5 +1,7 @@
 # SEO change log — baseline captured 13 October 2026
 
+**24 October 2026 correction (Franc approved):** the autumn closure is now 26 October–9 November 2026 inclusive; reopening Tuesday 10 November. Earlier date references below are historical evidence.
+
 **Wave 1 is LIVE since 12 October, confirmed by Franc.** This supersedes the old preparation-only status. All 13 guides returned HTTP 200 on 13 October; zero tel: links in those live pages. The exact release time is not recorded.
 
 ## Measurement windows
