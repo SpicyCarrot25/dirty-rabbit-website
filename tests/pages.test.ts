@@ -159,9 +159,13 @@ describe('i18n translations', () => {
         );
         expect(translations.historia).toBeDefined();
         expect(translations.historia.pillars).toBeDefined();
-        expect(translations.historia.pillars.care).toBeDefined();
-        expect(translations.historia.pillars.connection).toBeDefined();
-        expect(translations.historia.pillars.rhythm).toBeDefined();
+        // These are the keys consumed by the current About/Historia templates.
+        for (const pillar of ['wildComfort', 'belonging', 'intentional']) {
+          expect(translations.historia.pillars[pillar].title).toEqual(expect.any(String));
+          expect(translations.historia.pillars[pillar].text).toEqual(expect.any(String));
+          expect(translations.historia.pillars[pillar].title.trim()).not.toBe('');
+          expect(translations.historia.pillars[pillar].text.trim()).not.toBe('');
+        }
       });
 
       it('should have nav.faq entry', () => {
