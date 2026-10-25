@@ -1,5 +1,7 @@
 # Approved facts and editorial sources — 13 October 2026
 
+**24 October 2026 correction (Franc approved):** the autumn closure is now 26 October–9 November 2026 inclusive; reopening Tuesday 10 November. Earlier date references below are historical evidence.
+
 ## Owner facts
 
 Source: marketing `FACTS-CONFIRMED.md`, Franc's 13 October addition: 2 minutes' walk from Sant Pol beach; terrace with 56 seats; high chairs and baby changing table; dogs welcome; free WiFi; card payment; everything available to take away; coffee La Cabra (Copenhagen), matcha REQ, bread Origo Bakery (Barcelona), pastries La Puntual (Girona).

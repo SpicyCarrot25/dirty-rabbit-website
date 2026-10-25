@@ -76,7 +76,7 @@ Para los días en que apetece caminar, recorrer un pueblo o hacer una excursión
 
 Si tu ruta pasa por aquí, puedes empezar con [brunch en Dirty Rabbit](/guia/brunch-platja-daro/) o pedir para llevar. Tenemos una terraza de 56 plazas, tronas y cambiador; los perros son bienvenidos.
 
-Cerramos los lunes. Los cierres previstos para lo que queda de 2026 son del 26 de octubre al 1 de noviembre y del 21 al 27 de diciembre, ambos incluidos.
+Cerramos los lunes. Los cierres previstos para lo que queda de 2026 son del 26 de octubre al 9 de noviembre, por vacaciones y pequeñas reformas, y del 21 al 27 de diciembre, ambos incluidos.
 
 [Ver ubicación y horario en Google Maps](https://www.google.com/maps?cid=13237319999262880412).
 
