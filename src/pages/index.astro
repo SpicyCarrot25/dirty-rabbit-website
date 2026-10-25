@@ -12,13 +12,13 @@ const featuredIds = ['la-cabra', 'origo-bakery', 'la-puntual', 'buddy-buddy'];
 const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === id)).filter(Boolean);
 
 // Get latest news posts for this language
-const allNews = await getCollection('news', ({ data }) => data.lang === lang);
+const allNews = await getCollection('news', ({ data }) => data.lang === lang && !data.draft);
 const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
 ---
 
 <Layout 
-  title="Dirty Rabbit — Specialty Coffee, Breakfast &amp; Brunch · S'Agaró" 
-  description="Dirty Rabbit: Café de especialidad en S'Agaró, Costa Brava. Brunch, desayunos y café de origen único con terraza. A 2 min de la playa de Sant Pol."
+  title="Dirty Rabbit: cafetería que admite perros en S’Agaró"
+  description="Café La Cabra, desayuno y brunch en S’Agaró, Costa Brava. Perros bienvenidos, terraza de 56 plazas y WiFi gratis, a 2 minutos a pie de Sant Pol."
   lang={lang}>
   
   <!-- HERO SECTION: 100vh, full-bleed photo, centered tagline, NO scroll indicator -->
@@ -194,7 +194,7 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
                 {post.data.image && (
                   <img 
                     src={post.data.image}
-                    alt={`dirty-rabbit-news-${post.slug}`}
+                    alt={post.data.imageAlt || post.data.title}
                     class="w-full h-full object-cover"
                     loading="lazy"
                   />
@@ -243,7 +243,7 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
       </p>
 
       <p class="reveal font-mono text-base md:text-lg leading-relaxed text-black/80 mb-6">
-        Terraza familiar con 56 plazas, tronas, cambiador, y bienvenida a perros. WiFi gratis, pago con tarjeta, y todo disponible para llevar. El setup de café más completo de la Costa Brava.
+        Terraza familiar con 56 plazas, tronas, cambiador, y bienvenida a perros. WiFi gratis, pago con tarjeta, y todo disponible para llevar.
       </p>
 
 

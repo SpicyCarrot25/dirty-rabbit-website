@@ -85,12 +85,24 @@ for (const route of ['/guia/mejor-cafe-begur', '/en/guide/best-coffee-begur', '/
 }
 const sagaro = pages.get('/guia/que-hacer-en-sagaro')?.doc.title;
 for (const route of ['/contacto', '/en/contact', '/ca/contacte', '/fr/contact', '/pl/contact', '/ru/contact', '/uk/contact']) {
-  const link = pages.get(route)?.doc.querySelector('a[href="tel:+34872454264"]');
-  if (!link?.textContent.includes('+34 872 454 264')) errors.push({ kind: 'visible-contact-phone', route });
+  const phone = pages.get(route)?.doc.querySelector('main [data-contact-phone]');
+  if (phone?.tagName !== 'P' || phone.textContent.trim() !== '+34 872 454 264' || phone.closest('a, button')) errors.push({ kind: 'plain-contact-phone', route });
 }
 for (const [route, { doc }] of pages) {
+  if (doc.querySelector('a[href^="tel:" i], [onclick*="tel:" i]')) errors.push({ kind: 'call-cta', route });
+  if (!doc.querySelector('meta[http-equiv="refresh"]')) {
+    const phone = doc.querySelector('footer [data-contact-phone]');
+    if (phone?.tagName !== 'P' || phone.textContent.trim() !== '+34 872 454 264' || phone.closest('a, button')) errors.push({ kind: 'plain-footer-phone', route });
+    if (doc.querySelector('meta[name="format-detection"]')?.content !== 'telephone=no') errors.push({ kind: 'automatic-phone-links', route });
+  }
   const article = doc.querySelector('article');
-  if (article?.textContent.includes('Fitzroy') && !article.querySelector('[data-seasonal-status="fitzroy"]')) errors.push({ kind: 'missing-seasonal-status', route });
+  // The approved Markdown guide states this visibly, without an Astro data attribute.
+  const approvedGuideStatus = route === '/news/summer-guide-2026-es' &&
+    [...(article?.querySelectorAll('li') || [])].some(item =>
+      item.querySelector('strong')?.textContent.startsWith('Fitzroy · Begur') &&
+      item.textContent.includes('Cerrado por temporada') &&
+      item.textContent.includes('fecha de reapertura sin confirmar'));
+  if (article?.textContent.includes('Fitzroy') && !article.querySelector('[data-seasonal-status="fitzroy"]') && !approvedGuideStatus) errors.push({ kind: 'missing-seasonal-status', route });
 }
 if (sagaro !== "Qué ver en S'Agaró: Sant Pol y Camí de Ronda") errors.push({ kind: 'sagaro-approved-title' });
 for (const [route, { doc }] of pages) {

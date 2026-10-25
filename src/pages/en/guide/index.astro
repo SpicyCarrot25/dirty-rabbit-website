@@ -14,4 +14,5 @@ const guides = Object.entries(sources).filter(([file]) => !file.endsWith('/index
     <p class="font-mono mb-10">Coffee, breakfast and places to explore. Our café is in S’Agaró; each guide explains where the other stops are.</p>
     <ul class="grid md:grid-cols-2 gap-4">{guides.map(guide => <li><a class="block bg-white rounded-xl p-6 font-typewriter text-2xl text-red hover:underline" href={guide.href}>{guide.title}</a></li>)}</ul>
   </div></main>
+<p class="max-w-5xl mx-auto px-6 pb-10 font-mono"><a class="text-red underline" href="/nl/gids/ontbijt-platja-d-aro/" lang="nl">Ontbijt bij Platja d’Aro — Dutch breakfast guide</a></p>
 </Layout>

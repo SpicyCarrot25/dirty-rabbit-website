@@ -23,7 +23,7 @@
     "winterClosure": [
       {
         "from": "2026-10-26",
-        "through": "2026-11-01"
+        "through": "2026-11-09"
       },
       {
         "from": "2026-12-21",
@@ -4843,7 +4843,7 @@
           "https://g.page/dirtyrabbitcoffee",
           "https://www.tripadvisor.es/Restaurant_Review-g642223-d34222403-Reviews-Dirty_Rabbit-S_Agaro_Costa_Brava_Province_of_Girona_Catalonia.html",
           "https://www.facebook.com/dirtyrabbitcoffee",
-          "https://untappd.com/v/dirty-rabbit/10322710"
+          "https://europeancoffeetrip.com/cafe/dirtyrabbit-sagaro/"
         ],
         "aggregateRating": {
           "@type": "AggregateRating",
@@ -9660,14 +9660,6 @@
         ],
         "html": true
       },
-      "copy-cb28c00bc513": {
-        "value": "~56 personas (26 interior + ~30 terraza)",
-        "lang": "es",
-        "kinds": [
-          "reference"
-        ],
-        "html": true
-      },
       "copy-e097f9a21295": {
         "value": "Efectivo y tarjeta",
         "lang": "es",
@@ -9677,7 +9669,7 @@
         "html": true
       },
       "copy-57436ae3131d": {
-        "value": "Inglés, castellano, catalán, polaco",
+        "value": "Inglés, castellano, catalán",
         "lang": "es",
         "kinds": [
           "reference"
@@ -9716,14 +9708,6 @@
         ],
         "html": true
       },
-      "copy-58f45f674ebd": {
-        "value": "Awachai — orgánico, Reino Unido",
-        "lang": "es",
-        "kinds": [
-          "reference"
-        ],
-        "html": true
-      },
       "copy-72f55c670d32": {
         "value": "La Cabra — tostadores de origen único, Copenhague",
         "lang": "es",
@@ -9741,7 +9725,7 @@
         "html": true
       },
       "copy-19c3bf1e3336": {
-        "value": "\n          Sillas altas, menú infantil, espacio accesible con carrito. Terraza con vistas a la calle tranquila.\n        ",
+        "value": "\n          Sillas altas, espacio accesible con carrito. Terraza con vistas a la calle tranquila.\n        ",
         "lang": "es",
         "kinds": [
           "reference"
@@ -9852,14 +9836,6 @@
         ],
         "html": true
       },
-      "copy-f72bcc4021b8": {
-        "value": "~56 seats (26 indoor + ~30 terrace)",
-        "lang": "en",
-        "kinds": [
-          "reference"
-        ],
-        "html": true
-      },
       "copy-c6be3a729666": {
         "value": "Cash and card",
         "lang": "en",
@@ -9869,7 +9845,7 @@
         "html": true
       },
       "copy-9696d1f772d0": {
-        "value": "English, Spanish, Catalan, Polish",
+        "value": "English, Spanish, Catalan",
         "lang": "en",
         "kinds": [
           "reference"
@@ -9908,14 +9884,6 @@
         ],
         "html": true
       },
-      "copy-ca30a3535cf3": {
-        "value": "Awachai — organic, UK",
-        "lang": "en",
-        "kinds": [
-          "reference"
-        ],
-        "html": true
-      },
       "copy-12908b00c39a": {
         "value": "La Cabra — single-origin roasters, Copenhagen",
         "lang": "en",
@@ -9933,7 +9901,7 @@
         "html": true
       },
       "copy-32b1b2f9f824": {
-        "value": "\n          High chairs, kids menu, stroller-accessible. Terrace overlooking a quiet street.\n        ",
+        "value": "\n          High chairs, stroller-accessible. Terrace overlooking a quiet street.\n        ",
         "lang": "en",
         "kinds": [
           "reference"
@@ -9981,7 +9949,7 @@
         "html": true
       },
       "copy-c2dcdf6a0ae7": {
-        "value": "\n          Dirty Rabbit és una cafeteria de especialitat a S'Agaró, Costa Brava, oberta el novembre del 2024.\n          Serveix espresso d'origen únic torrat per La Cabra (Copenhaguen), matcha japonès cerimonial de REQ Matcha\n          i chai orgànic d'Awachai. A dos minuts a peu de la platja de Sant Pol, a cinc minuts de Platja d'Aro.\n        ",
+        "value": "\n          Dirty Rabbit és una cafeteria de especialitat a S'Agaró, Costa Brava, oberta el novembre del 2024.\n          Serveix espresso d'origen únic torrat per La Cabra (Copenhaguen), matcha japonès cerimonial de REQ Matcha. A dos minuts a peu de la platja de Sant Pol, a cinc minuts de Platja d'Aro.\n        ",
         "lang": "ca",
         "kinds": [
           "reference"
@@ -10036,14 +10004,6 @@
         ],
         "html": true
       },
-      "copy-6c9bc45140ff": {
-        "value": "~56 persones (26 interior + ~30 terrassa)",
-        "lang": "ca",
-        "kinds": [
-          "reference"
-        ],
-        "html": true
-      },
       "copy-d32c5980fcce": {
         "value": "Efectiu i targeta",
         "lang": "ca",
@@ -10053,7 +10013,7 @@
         "html": true
       },
       "copy-77179a45c9f5": {
-        "value": "Anglès, castellà, català, polonès",
+        "value": "Anglès, castellà, català",
         "lang": "ca",
         "kinds": [
           "reference"
@@ -10100,14 +10060,6 @@
         ],
         "html": true
       },
-      "copy-0bc96abe1c5e": {
-        "value": "Awachai - orgànic, Regne Unit",
-        "lang": "ca",
-        "kinds": [
-          "reference"
-        ],
-        "html": true
-      },
       "copy-e34c9ea731e6": {
         "value": "Origo Bakery - pa de massa mare artesà, Barcelona",
         "lang": "ca",
@@ -10117,7 +10069,7 @@
         "html": true
       },
       "copy-9753ec783b6e": {
-        "value": "\n          Terrassa exterior, cadires altes per a nadons, carta infantil, accessible per a cotxets. Wi-Fi disponible.\n        ",
+        "value": "\n          Terrassa exterior, cadires altes per a nadons, accessible per a cotxets. Wi-Fi disponible.\n        ",
         "lang": "ca",
         "kinds": [
           "reference"
@@ -10149,7 +10101,7 @@
         "html": true
       },
       "copy-c83eb40cb993": {
-        "value": "\n          Dirty Rabbit est un café spécialisé à S'Agaró, Costa Brava, ouvert en novembre 2024.\n          Il propose des espressos mono-origine torréfiés par La Cabra (Copenhague), du matcha japonais\n          de grade cérémoniel par REQ Matcha, et du chaï bio d'Awachai.\n          À deux minutes à pied de la plage de Sant Pol, à cinq minutes de Platja d'Aro.\n        ",
+        "value": "\n          Dirty Rabbit est un café spécialisé à S'Agaró, Costa Brava, ouvert en novembre 2024.\n          Il propose des espressos mono-origine torréfiés par La Cabra (Copenhague), du matcha japonais\n          de grade cérémoniel par REQ Matcha.\n          À deux minutes à pied de la plage de Sant Pol, à cinq minutes de Platja d'Aro.\n        ",
         "lang": "fr",
         "kinds": [
           "reference"
@@ -10204,14 +10156,6 @@
         ],
         "html": true
       },
-      "copy-3c0bdc032df5": {
-        "value": "~56 places (26 intérieur + ~30 terrasse)",
-        "lang": "fr",
-        "kinds": [
-          "reference"
-        ],
-        "html": true
-      },
       "copy-c91f022253a2": {
         "value": "Espèces et carte",
         "lang": "fr",
@@ -10221,7 +10165,7 @@
         "html": true
       },
       "copy-c7d77d5bc2ac": {
-        "value": "Anglais, espagnol, catalan, polonais",
+        "value": "Anglais, espagnol, catalan",
         "lang": "fr",
         "kinds": [
           "reference"
@@ -10268,14 +10212,6 @@
         ],
         "html": true
       },
-      "copy-991dc854d292": {
-        "value": "Awachai - bio, Royaume-Uni",
-        "lang": "fr",
-        "kinds": [
-          "reference"
-        ],
-        "html": true
-      },
       "copy-a55ca5f30bc8": {
         "value": "Origo Bakery - pain au levain artisanal, Barcelone",
         "lang": "fr",
@@ -10285,7 +10221,7 @@
         "html": true
       },
       "copy-dd9e7ad0faf5": {
-        "value": "\n          Terrasse extérieure, chaises hautes, menu enfant, accessible poussettes. Wi-Fi disponible.\n        ",
+        "value": "\n          Terrasse extérieure, chaises hautes, accessible poussettes. Wi-Fi disponible.\n        ",
         "lang": "fr",
         "kinds": [
           "reference"
@@ -10368,8 +10304,7 @@
         "matcha": true,
         "chai": true,
         "brunch": true,
-        "bakery": true,
-        "kids_menu": true
+        "bakery": true
       },
       "equipment": [
         "La Marzocco KB90",
@@ -10379,7 +10314,6 @@
       "suppliers": {
         "coffee": "La Cabra (single-origin roasters, Copenhagen)",
         "matcha": "REQ Matcha (ceremonial grade, Japan)",
-        "chai": "Awachai (organic, UK)",
         "bakery": "Origo Bakery (artisan sourdough, Barcelona)"
       },
       "priceRange": {
@@ -10387,7 +10321,6 @@
         "food": "€4-15",
         "symbol": "€€"
       },
-      "capacity": 56,
       "amenities": [
         "wifi",
         "terrace",
@@ -10398,8 +10331,7 @@
       "languages": [
         "en",
         "es",
-        "ca",
-        "pl"
+        "ca"
       ],
       "payment": [
         "cash",
@@ -12047,7 +11979,7 @@
         "closed": "Понеділок — вихідний"
       }
     },
-    "llms": "# Dirty Rabbit\n\n> Specialty coffee shop in S'Agaró, Costa Brava. Open since November 2024.\n\nDirty Rabbit is a specialty coffee shop located in S'Agaró, Girona, on the Costa Brava coast of Catalonia, Spain. It serves single-origin espresso roasted by La Cabra (Copenhagen), ceremonial-grade Japanese matcha from REQ Matcha, and organic chai from Awachai. Two minutes walk from Sant Pol Beach, five minutes from Platja d'Aro.\n\n## Key facts\n\n- **Address:** Avinguda de Platja d'Aro, 275, S'Agaró, 17248 Girona, Spain\n- **Hours:** Tuesday–Sunday, 08:00–15:00. Closed Monday.\n- **Phone:** +34 872 454 264\n- **Email:** hola@dirtyrabbit.es\n- **Price range:** €2.50–4.00 (coffee), €4–15 (food)\n- **Capacity:** ~56 seats (26 indoor + ~30 terrace)\n- **Languages:** English, Spanish, Catalan, Polish\n\n## Equipment & suppliers\n\n- **Espresso machine:** La Marzocco KB90\n- **Grinder:** Mahlkönig\n- **Water:** Reverse osmosis filtration\n- **Coffee:** La Cabra (single-origin roasters, Copenhagen)\n- **Matcha:** REQ Matcha (ceremonial grade, Japan)\n- **Chai:** Awachai (organic, UK)\n- **Bakery:** Origo Bakery (artisan sourdough, Barcelona)\n\n## What makes it different\n\nThe most complete specialty coffee setup on the Costa Brava. The only place in the area serving ceremonial-grade Japanese matcha. Family-friendly: high chairs, kids menu, stroller-accessible terrace.\n\n## Pages\n\n- [Brand Facts](https://dirtyrabbit.es/brand-facts/): Verified factual data about the business\n- [Brand Facts EN](https://dirtyrabbit.es/en/brand-facts/): English version\n- [Answer Hub](https://dirtyrabbit.es/guia/mejor-cafe-especialidad-costa-brava-2026/): Best specialty coffee on the Costa Brava 2026\n- [Answer Hub EN](https://dirtyrabbit.es/en/guide/best-specialty-coffee-costa-brava-2026/): English version\n- [Menu](https://dirtyrabbit.es/carta): Full menu\n- [Machine-readable data](https://dirtyrabbit.es/.well-known/brand-facts.json): JSON brand facts for AI ingestion\n",
+    "llms": "# Dirty Rabbit\n\n> Specialty coffee shop in S'Agaró, Costa Brava. Open since November 2024.\n\nDirty Rabbit is a specialty coffee shop located in S'Agaró, Girona, on the Costa Brava coast of Catalonia, Spain. It serves single-origin espresso roasted by La Cabra (Copenhagen), ceremonial-grade Japanese matcha from REQ Matcha. Two minutes walk from Sant Pol Beach, five minutes from Platja d'Aro.\n\n## Key facts\n\n- **Address:** Avinguda de Platja d'Aro, 275, S'Agaró, 17248 Girona, Spain\n- **Hours:** Tuesday–Sunday, 08:00–15:00. Closed Monday.\n- **Phone:** +34 872 454 264\n- **Email:** hola@dirtyrabbit.es\n- **Price range:** €2.50–4.00 (coffee), €4–15 (food)\n- **Languages:** English, Spanish, Catalan\n\n## Equipment & suppliers\n\n- **Espresso machine:** La Marzocco KB90\n- **Grinder:** Mahlkönig\n- **Water:** Reverse osmosis filtration\n- **Coffee:** La Cabra (single-origin roasters, Copenhagen)\n- **Matcha:** REQ Matcha (ceremonial grade, Japan)\n- **Bakery:** Origo Bakery (artisan sourdough, Barcelona)\n\n## What makes it different\n\nFamily-friendly: high chairs, stroller-accessible terrace.\n\n## Pages\n\n- [Brand Facts](https://dirtyrabbit.es/brand-facts/): Verified factual data about the business\n- [Brand Facts EN](https://dirtyrabbit.es/en/brand-facts/): English version\n- [Answer Hub](https://dirtyrabbit.es/guia/mejor-cafe-especialidad-costa-brava-2026/): Best specialty coffee on the Costa Brava 2026\n- [Answer Hub EN](https://dirtyrabbit.es/en/guide/best-specialty-coffee-costa-brava-2026/): English version\n- [Menu](https://dirtyrabbit.es/carta): Full menu\n- [Machine-readable data](https://dirtyrabbit.es/.well-known/brand-facts.json): JSON brand facts for AI ingestion\n",
     "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.9654578374!2d3.0619444!3d41.7986111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb1b9c8c8c8c8c%3A0x0!2sAvinguda%20de%20Platja%20d'Aro%2C%20275%2C%2017248%20S'Agar%C3%B3%2C%20Girona!5e0!3m2!1sen!2ses!4v1234567890",
     "liveOnlyMenuItems": [
       {

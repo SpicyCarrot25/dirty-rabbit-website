@@ -1,0 +1,13 @@
+{
+  "status": "awaiting_Franc_approval",
+  "source_id": "A-coffee-break",
+  "source_file": "drafts/gbp-posts-2026-10/posts.json",
+  "source_es_sha256": "a5bf141ece4e65ca0f3dfe117bcb770b740d02fda83ca21ba2f1a0ede8ff0e39",
+  "approval_evidence": "Coffee break (approved Post A)",
+  "draft_sha256": "e77e1f73a5af00b4c0e0378458592c8f25e84d98cd3de8a7072317bf3f40531e",
+  "draft_file": "src/content/news/pausa-cafe-sagaro-es.md",
+  "facts_source": "FACTS-CONFIRMED.md, Franc 13 October 2026",
+  "proposed_slot": "next available after Summer Guide; maximum two per calendar month",
+  "photo": "none; no unverified asset added",
+  "publication_date": "unset; frontmatter date is drafting date and must be reset on approval"
+}

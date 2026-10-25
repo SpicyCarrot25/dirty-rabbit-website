@@ -12,7 +12,7 @@ const featuredIds = ['la-cabra', 'origo-bakery', 'la-puntual', 'buddy-buddy'];
 const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === id)).filter(Boolean);
 
 // Get latest news posts (fallback to English content for these languages)
-const allNews = await getCollection('news', ({ data }) => data.lang === 'en');
+const allNews = await getCollection('news', ({ data }) => data.lang === 'en' && !data.draft);
 const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
 ---
 
@@ -215,7 +215,7 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
       Dirty Rabbit — спешелті кав'ярня у С'Агаро на узбережжі Коста-Брава, за дві хвилини пішки від пляжу Сант-Пол. Відкриті з листопада 2024 року. Подаємо еспресо з зерен одного походження, обсмажених La Cabra (Копенгаген), церемоніальний японський матча від REQ, органічний чай від Awachai, та ремісничу випічку від Origo Bakery (Барселона) і La Puntual (Жирона).
     </p>
     <p class="reveal font-mono text-base md:text-lg leading-relaxed text-black/80 mb-6">
-      Сімейна тераса на 56 місць, дитячі стільчики, пеленальний столик, з собаками можна. Безкоштовний WiFi, оплата карткою, все доступне на винос. Найповніший спешелті-кава сетап на Коста-Браві.
+      Сімейна тераса на 56 місць, дитячі стільчики, пеленальний столик, з собаками можна. Безкоштовний WiFi, оплата карткою, все доступне на винос.
     </p>
   </div>
 </section>

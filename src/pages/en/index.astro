@@ -12,7 +12,7 @@ const featuredIds = ['la-cabra', 'origo-bakery', 'la-puntual', 'buddy-buddy'];
 const featuredProviders = featuredIds.map(id => proveedores.find(p => p.id === id)).filter(Boolean);
 
 // Get latest news posts for this language
-const allNews = await getCollection('news', ({ data }) => data.lang === lang);
+const allNews = await getCollection('news', ({ data }) => data.lang === lang && !data.draft);
 const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.getTime()).slice(0, 4);
 ---
 
@@ -239,7 +239,7 @@ const latestNews = allNews.sort((a, b) => b.data.date.getTime() - a.data.date.ge
       Dirty Rabbit is a specialty coffee shop in S'Agaró, on the Costa Brava coast, a two-minute walk from Sant Pol Beach. Open since November 2024, we serve single-origin espresso roasted by La Cabra (Copenhagen), ceremonial-grade Japanese matcha from REQ, organic chai from Awachai, and artisan pastries from Origo Bakery (Barcelona) and La Puntual (Girona). Brewed on a La Marzocco KB90 with reverse osmosis filtered water.
     </p>
     <p class="reveal font-mono text-base md:text-lg leading-relaxed text-black/80 mb-6">
-      Family-friendly terrace with 56 seats, high chairs, changing table, and dogs welcome. Free WiFi, card payment, and everything available to take away. The most complete specialty coffee setup on the Costa Brava.
+      Family-friendly terrace with 56 seats, high chairs, changing table, and dogs welcome. Free WiFi, card payment, and everything available to take away.
     </p>
   </div>
 </section>

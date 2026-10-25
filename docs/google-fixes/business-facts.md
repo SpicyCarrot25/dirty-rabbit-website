@@ -1,5 +1,7 @@
 # One business-facts source
 
+**24 October 2026 correction (Franc approved):** the autumn closure is now 26 October–9 November 2026 inclusive; reopening Tuesday 10 November. Earlier date references below are historical evidence.
+
 **12 October update:** address verified read-only on the live GBP/Google Maps listing (see `../evidence/gbp-address-2026-10-12.json`). Franc’s closures are 26 October–1 November / 21–27 December 2026. The live holiday-week hours differ from the old API snapshot, so regularHours remains null pending clarification. See [the current implementation note](../seo-geo-2026-10-12.md). Other confirmation fields remain null. The preparation notes below describe the earlier snapshot and its preservation tests.
 
 Visitors retain the currently published facts while address, opening times, winter notices, menu data and facts-page content are prepared for correction through one source file.
