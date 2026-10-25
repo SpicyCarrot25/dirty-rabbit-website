@@ -54,7 +54,7 @@ const view = getMenuPageView(lang);
 
                 <div class:list={[block.descriptionStyle === 'stacked' ? 'space-y-5' : 'space-y-4']}>
                   {block.items.map((item) => (
-                    <div class:list={[
+                    <div data-menu-item={item.name} class:list={[
                       block.descriptionStyle === 'stacked' ? 'flex items-start justify-between gap-4' : 'flex items-baseline justify-between gap-4'
                     ]}>
                       <div class="flex-1 min-w-0">
@@ -73,7 +73,7 @@ const view = getMenuPageView(lang);
                           </>
                         )}
                       </div>
-                      <span class:list={[
+                      <span data-menu-price class:list={[
                         'font-typewriter text-lg font-bold text-red tabular-nums shrink-0',
                         block.descriptionStyle === 'stacked' && 'mt-0.5'
                       ]}>{item.price}</span>
@@ -85,7 +85,7 @@ const view = getMenuPageView(lang);
                 {block.secondaryItems && (
                   <div class:list={[block.secondaryDescriptionStyle === 'stacked' ? 'space-y-5' : 'space-y-4']}>
                     {block.secondaryItems.map((item) => (
-                      <div class:list={[
+                      <div data-menu-item={item.name} class:list={[
                         block.secondaryDescriptionStyle === 'stacked' ? 'flex items-start justify-between gap-4' : 'flex items-baseline justify-between gap-4'
                       ]}>
                         <div class="flex-1 min-w-0">
@@ -104,7 +104,7 @@ const view = getMenuPageView(lang);
                             </>
                           )}
                         </div>
-                        <span class:list={[
+                        <span data-menu-price class:list={[
                           'font-typewriter text-lg font-bold text-red tabular-nums shrink-0',
                           block.secondaryDescriptionStyle === 'stacked' && 'mt-0.5'
                         ]}>{item.price}</span>
@@ -133,7 +133,7 @@ const view = getMenuPageView(lang);
                       <p class={`font-mono text-sm text-cream ${block.align === 'center' ? 'text-center' : 'text-left'} ${group.title ? 'mt-1' : ''}`}>
                         {group.items.map((item, itemIndex) => (
                           <>
-                            {item.label}{'\u00A0'}{item.price}
+                            <span data-menu-item={group.title ? `${group.title}: ${item.label}` : item.label}>{item.label}{'\u00A0'}<span data-menu-price>{item.price}</span></span>
                             {itemIndex < group.items.length - 1 && <br />}
                           </>
                         ))}
