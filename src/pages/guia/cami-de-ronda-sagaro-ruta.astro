@@ -1,0 +1,66 @@
+---
+import { createHash } from 'node:crypto';
+import { marked } from 'marked';
+import Layout from '../../layouts/Layout.astro';
+import approved from '../../../docs/approved-copy/spi102-A1-final.md?raw';
+
+// Exact Fable final approved by Franc through the orchestrator, 4 November 2026.
+const sourceHash = '6c23ea8eba19c5edbd451a9921944cc687c582924cc48a1f9dc173af351ad109';
+if (createHash('sha256').update(approved).digest('hex') !== sourceHash) {
+  throw new Error('SPI-102 approved guide changed: obtain a new exact-text approval before building');
+}
+const title = approved.match(/^\*\*Title:\*\* (.+)$/m)![1];
+const description = approved.match(/^\*\*Meta description:\*\* (.+)$/m)![1];
+const body = approved.slice(
+  approved.indexOf("# Camí de Ronda de S'Agaró: la ruta a pie desde Sant Pol\n"),
+  approved.indexOf('\n---\n\n## Fuentes'),
+);
+const sourceLines = approved.slice(approved.indexOf('\n## Fuentes'));
+const sources = [...sourceLines.matchAll(/^\d\. (.+?): (https:\/\/\S+) /gm)]
+  .map((match) => ({ title: match[1], url: match[2] }));
+if (!body || sources.length !== 4 || /\[(VERIFY|FRANC|CODEX)(:|\])/.test(body)) {
+  throw new Error('SPI-102 public-copy boundaries or source list are invalid');
+}
+const html = marked.parse(body, { async: false });
+const route = '/guia/cami-de-ronda-sagaro-ruta/';
+---
+<Layout title={title} description={description} lang="es" hasLocationFAQ
+  articleMeta={{ datePublished: '2026-11-10', dateModified: '2026-11-10', section: 'Guías locales' }}
+  breadcrumbs={[{ name: 'Guías locales', url: 'https://dirtyrabbit.es/guia/' }, { name: title, url: `https://dirtyrabbit.es${route}` }]}>
+  <article class="bg-cream py-16 md:py-24" lang="es" data-approved-copy={sourceHash}>
+    <div class="max-w-3xl mx-auto px-6 font-mono leading-relaxed">
+      <div class="approved-guide" data-approved-body set:html={html} />
+      <section class="mt-12 border-t border-black/20 pt-6" data-guide-sources>
+        <h2 class="font-typewriter text-2xl mb-4">Fuentes</h2>
+        <ol class="list-decimal pl-5 space-y-3 text-sm">
+          {sources.map(source => <li><a href={source.url} class="text-red underline">{source.title}</a></li>)}
+        </ol>
+      </section>
+    </div>
+  </article>
+</Layout>
+
+<style>
+  /* This text-only guide has no dark hero behind the shared fixed navigation. */
+  :global(#main-header) { background: var(--color-white); border-color: #1a1a1a1a; }
+  :global(#main-header .logo-dark) { display: block; }
+  :global(#main-header .logo-light) { display: none; }
+  :global(#main-header .nav-link) { color: var(--color-red); }
+  :global(#main-header .menu-btn) { color: var(--color-black); }
+  :global(#main-header .nav-cta) { background: var(--color-red); color: var(--color-white); }
+  .approved-guide :global(h1), .approved-guide :global(h2) { font-family: var(--font-typewriter); }
+  .approved-guide :global(h1) { font-size: clamp(2.1rem, 5vw, 3rem); line-height: 1.2; margin-bottom: 1.5rem; }
+  .approved-guide :global(h2) { font-size: 1.7rem; line-height: 1.3; margin: 2.5rem 0 1rem; }
+  .approved-guide :global(p) { margin: 0 0 1rem; }
+  .approved-guide :global(ul) { list-style: disc; padding-left: 1.25rem; margin-bottom: 1.5rem; }
+  .approved-guide :global(li) { margin-bottom: .65rem; }
+  .approved-guide :global(table) { width: 100%; border-collapse: collapse; margin: 1rem 0 2rem; font-size: .875rem; table-layout: fixed; }
+  .approved-guide :global(th), .approved-guide :global(td) { padding: .65rem; border-bottom: 1px solid #0003; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+  .approved-guide :global(th) { background: #fff; }
+  .approved-guide :global(th:first-child), .approved-guide :global(td:first-child) { width: 25%; }
+  @media (max-width: 480px) {
+    .approved-guide :global(th), .approved-guide :global(td) { padding: .65rem .4rem; }
+    .approved-guide :global(th:first-child), .approved-guide :global(td:first-child) { width: 30%; }
+  }
+  .approved-guide :global(a) { color: var(--color-red); text-decoration: underline; }
+</style>
